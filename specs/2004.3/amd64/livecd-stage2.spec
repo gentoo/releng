@@ -10,7 +10,7 @@ livecd/cdfstype: squashfs
 livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
-livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041026.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041029.iso
 livecd/splash_type: gensplash
 livecd/splash_theme: livecd-2004.3
 
@@ -20,7 +20,7 @@ livecd/modblacklist:
 
 #livecd/overlay: /root/livecd/overlay-minimal
 
-livecd/devmanager: udev
+#livecd/devmanager: udev
 
 livecd/rcadd:
 	syslog-ng:default
@@ -31,16 +31,16 @@ boot/kernel/gentoo/sources: gentoo-dev-sources
 boot/kernel/gentoo/config: kconfig/kernel-2.6.9-amd64-smp
 boot/kernel/gentoo/use: pcmcia usb -X
 
-#boot/kernel/gentoo/postconf:
-#	splashutils
-#	splash-themes-livecd
+boot/kernel/gentoo/postconf:
+	splashutils
+	splash-themes-livecd
 
 boot/kernel/gentoo/packages:
 	pcmcia-cs
 	speedtouch
-	globespan-adsl
-	hostap-driver
-	hostap-utils
+#	globespan-adsl
+#	hostap-driver
+#	hostap-utils
 	ipw2100
 #	madwifi-driver
 
