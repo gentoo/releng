@@ -3,14 +3,15 @@ version_stamp: 2004.3
 target: livecd-stage2
 rel_type: default
 profile: default-linux/x86/2004.3
-snapshot: 20041020
+snapshot: 20041022
 distcc_hosts: localhost/3 gravity/3 orion/3
 source_subpath: default/livecd-stage1-x86-2004.3
 
 livecd/cdfstype: squashfs
-livecd/archscript: /var/cvsroot/gentoo/src/catalyst/livecd/runscript/x86-archscript.sh
-livecd/runscript: /var/cvsroot/gentoo/src/catalyst/livecd/runscript/default-runscript.sh
-livecd/cdtar: /var/cvsroot/gentoo/src/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
+livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
+livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
+livecd/fsscript: /root/livecd/fsscript.sh
 livecd/iso: /tmp/livecd.iso
 livecd/splash_type: gensplash
 livecd/splash_theme: livecd-2004.3
@@ -42,6 +43,7 @@ boot/kernel/gentoo/postconf:
 boot/kernel/gentoo/packages:
 	pcmcia-cs
 	speedtouch
+	slmodem
 	globespan-adsl
 	hostap-driver
 	hostap-utils
@@ -278,3 +280,4 @@ livecd/rm:
 	/etc/bootsplash/livecd-2004.2/images/silent-8*
 	/etc/make.conf.example
 	/etc/make.globals
+	/etc/resolv.conf

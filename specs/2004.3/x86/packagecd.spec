@@ -1,11 +1,11 @@
 subarch: x86
-version_stamp: 2004.2
+version_stamp: 2004.3
 target: grp
 rel_type: default
 profile: default-linux/x86/2004.3
-snapshot: 20041020
+snapshot: 20041022
 distcc_hosts: localhost/3 gravity/3 orion/3
-source_subpath: default/stage3-x86-2004.2
+source_subpath: default/stage3-x86-2004.3
 grp: src cd2
 
 grp/use: 
@@ -39,7 +39,6 @@ grp/src/packages:
 	rp-pppoe
 	speedtouch
 	fcpci
-	fcdsl
 	globespan-adsl
 	pptpclient
 	slmodem
@@ -67,7 +66,6 @@ grp/src/packages:
 	nvidia-glx
 	ati-drivers
 	wireless-tools
-	madwifi
 	pcmcia-cs
 	genkernel
 	
