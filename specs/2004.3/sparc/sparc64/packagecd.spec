@@ -113,6 +113,7 @@ grp/cd2/packages:
 	app-cdr/cdrtools
 	gnome
 	kde
+	koffice
 	evolution
 	cups
 	dev-db/mysql
