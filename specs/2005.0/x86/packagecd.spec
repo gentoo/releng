@@ -81,8 +81,10 @@ grp/cd2/packages:
 	dante
 	tsocks
 	sys-apps/eject
+#	=opengl-update-1*
+#	=x11-base/xorg-x11-6.7.0-r3
+	opengl-update
 	xorg-x11
-	=x11-base/xorg-x11-6.7.0-r3
 	minicom
 	links
 	lynx
