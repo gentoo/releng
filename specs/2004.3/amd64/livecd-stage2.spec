@@ -3,7 +3,7 @@ version_stamp: 2004.3
 target: livecd-stage2
 rel_type: default
 profile: default-linux/amd64/2004.3
-snapshot: 20041025
+snapshot: 20041022
 source_subpath: default/livecd-stage1-amd64-2004.3
 
 livecd/cdfstype: squashfs
@@ -11,8 +11,8 @@ livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041026.iso
-#livecd/splash_type: gensplash
-#livecd/splash_theme: livecd-2004.3
+livecd/splash_type: gensplash
+livecd/splash_theme: livecd-2004.3
 
 livecd/type: gentoo-release-minimal
 livecd/modblacklist:
@@ -28,7 +28,7 @@ livecd/rcadd:
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-dev-sources
-boot/kernel/gentoo/config: kconfig/kernel-2.6.8-amd64-smp
+boot/kernel/gentoo/config: kconfig/kernel-2.6.9-amd64-smp
 boot/kernel/gentoo/use: pcmcia usb -X
 
 #boot/kernel/gentoo/postconf:

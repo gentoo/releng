@@ -3,8 +3,8 @@ version_stamp: 2004.3
 target: livecd-stage1
 rel_type: default
 profile: default-linux/amd64/2004.3
-snapshot: 20041025
-source_subpath: default/stage3-amd64-20041025
+snapshot: 20041022
+source_subpath: default/stage3-amd64-2004.3
 livecd/use:
 	-*
 	ipv6
