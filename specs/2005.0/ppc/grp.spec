@@ -2,7 +2,6 @@ grp: src cd2
 grp/use: 
 	pam
 	accessibility 
-	alsa
 	apache2 
 	apm 
 	arts 
