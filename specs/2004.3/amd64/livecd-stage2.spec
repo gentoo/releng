@@ -1,36 +1,44 @@
-# $Id: livecd-stage2.spec,v 1.7 2004-10-25 22:45:10 jhuebel Exp $
-
 subarch: amd64
 version_stamp: 2004.3
 target: livecd-stage2
 rel_type: default
 profile: default-linux/amd64/2004.3
-snapshot: 20041011
+snapshot: 20041025
 source_subpath: default/livecd-stage1-amd64-2004.3
 
-livecd/cdfstype: zisofs
+livecd/cdfstype: squashfs
 livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
-livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041013.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041026.iso
+#livecd/splash_type: gensplash
+#livecd/splash_theme: livecd-2004.3
 
 livecd/type: gentoo-release-minimal
 livecd/modblacklist:
 	8139cp
 
+#livecd/overlay: /root/livecd/overlay-minimal
+
+livecd/devmanager: udev
+
 livecd/rcadd:
 	syslog-ng:default
+	gpm:default
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-dev-sources
-
 boot/kernel/gentoo/config: kconfig/kernel-2.6.8-amd64-smp
+boot/kernel/gentoo/use: pcmcia usb -X
 
-boot/kernel/gentoo/use: pcmcia usb
+#boot/kernel/gentoo/postconf:
+#	splashutils
+#	splash-themes-livecd
 
 boot/kernel/gentoo/packages:
 	pcmcia-cs
 	speedtouch
+	globespan-adsl
 	hostap-driver
 	hostap-utils
 	ipw2100
@@ -69,7 +77,6 @@ livecd/unmerge:
 	bc
 	lcms
 	libmng
-	libpng
 	genkernel
 	diffutils
 	file
@@ -85,7 +92,6 @@ livecd/unmerge:
 	grub
 	help2man
 	libtool
-	which
 
 livecd/empty:
 	/var/tmp
@@ -266,6 +272,5 @@ livecd/rm:
 	/etc/bootsplash/livecd-2004.2/images/silent-12*
 	/etc/bootsplash/livecd-2004.2/images/silent-16*
 	/etc/bootsplash/livecd-2004.2/images/silent-8*
-	/etc/bootsplash/livecd-2004.2/images/bootplash*
 	/etc/make.conf.example
 	/etc/make.globals
