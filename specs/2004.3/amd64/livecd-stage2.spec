@@ -1,26 +1,26 @@
 subarch: amd64
-version_stamp: 2004.2
+version_stamp: 20041011
 target: livecd-stage2
 rel_type: default
-profile: default-amd64-2004.2
-snapshot: 20040710
-source_subpath: default/livecd-stage1-amd64-2004.2
+profile: default-linux/amd64/2004.3
+snapshot: 20041011
+source_subpath: default/livecd-stage1-amd64-20041011
 
 livecd/cdfstype: squashfs
 livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
-livecd/iso: /tmp/install-amd64-minimal-2004.2.iso
-livecd/bootsplash: livecd-2004.2
+livecd/iso: /mnt/cuda/install-amd64-minimal-20041003.iso
+livecd/bootsplash: livecd-2004.3
 
 livecd/type: gentoo-release-minimal
 livecd/modblacklist: siimage 8139cp
 
-boot/kernel: gentoo smp emachines
+boot/kernel: gentoo
 
 # gentoo livecd kernel
 boot/kernel/gentoo/sources: sys-kernel/gentoo-dev-sources
-boot/kernel/gentoo/config: /root/livecd/kconfig/20040713-gentoo-dev-sources-2.6.7-up-amd64.config
+boot/kernel/gentoo/config: kconfig/kernel-config-2.6
 boot/kernel/gentoo/use: pcmcia usb -X
 boot/kernel/gentoo/extraversion: up
 boot/kernel/gentoo/packages:
@@ -29,23 +29,23 @@ boot/kernel/gentoo/packages:
 	xfsdump
 
 # smp livecd kernel
-boot/kernel/smp/sources: sys-kernel/gentoo-dev-sources
-boot/kernel/smp/config: /root/livecd/kconfig/20040713-gentoo-dev-sources-2.6.7-smp-amd64.config
-boot/kernel/smp/use: pcmcia usb -X
-boot/kernel/smp/extraversion: smp
-boot/kernel/smp/packages:
-	pcmcia-cs
-	iptables
+# boot/kernel/smp/sources: sys-kernel/gentoo-dev-sources
+# boot/kernel/smp/config: /root/livecd/kconfig/20040713-gentoo-dev-sources-2.6.7-smp-amd64.config
+# boot/kernel/smp/use: pcmcia usb -X
+# boot/kernel/smp/extraversion: smp
+# boot/kernel/smp/packages:
+#	pcmcia-cs
+#	iptables
 
 # emachines livecd kernel
-boot/kernel/emachines/sources: =sys-kernel/gentoo-dev-sources-2.6.3-r1
-boot/kernel/emachines/config: /root/livecd/kconfig/20040710-gentoo-dev-sources-2.6.3-emachines-amd64.config
-boot/kernel/emachines/kernelopts: pci=noacpi noapic
-boot/kernel/emachines/use: pcmcia usb -X
-boot/kernel/emachines/extraversion: emachines
-boot/kernel/emachines/packages:
-	pcmcia-cs
-	iptables
+# boot/kernel/emachines/sources: =sys-kernel/gentoo-dev-sources-2.6.3-r1
+# boot/kernel/emachines/config: /root/livecd/kconfig/20040710-gentoo-dev-sources-2.6.3-emachines-amd64.config
+# boot/kernel/emachines/kernelopts: pci=noacpi noapic
+# boot/kernel/emachines/use: pcmcia usb -X
+# boot/kernel/emachines/extraversion: emachines
+# boot/kernel/emachines/packages:
+#	pcmcia-cs
+#	iptables
 
 livecd/unmerge:
 	autoconf

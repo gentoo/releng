@@ -1,4 +1,4 @@
-# $Id: snapshot.spec,v 1.3 2004-09-26 20:30:38 jhuebel Exp $
+# $Id: snapshot.spec,v 1.4 2004-10-11 17:20:00 jhuebel Exp $
 
 target: snapshot
-version_stamp: 20040926
+version_stamp: 20041011

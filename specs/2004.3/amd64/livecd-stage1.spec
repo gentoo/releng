@@ -1,10 +1,10 @@
 subarch: amd64
-version_stamp: 2004.2
+version_stamp: 20041011
 target: livecd-stage1
 rel_type: default
-profile: default-amd64-2004.2
-snapshot: 20040710
-source_subpath: default/stage3-amd64-2004.2
+profile: default-linux/amd64/2004.3
+snapshot: 20041011
+source_subpath: default/stage3-amd64-20041011
 livecd/use:
 	-X
 	-gtk
