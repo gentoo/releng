@@ -3,7 +3,7 @@ version_stamp: 2004.3
 target: livecd-stage1
 rel_type: default
 profile: default-linux/x86/2004.3
-snapshot: 20041016
+snapshot: 20041020
 distcc_hosts: localhost/3 gravity/3 orion/3
 source_subpath: default/stage3-x86-2004.3
 livecd/use:
@@ -28,6 +28,8 @@ livecd/packages:
 	kudzu-knoppix
 	hotplug
 	fxload
+	irssi
+	gpm
 	syslog-ng
 	parted
 	links

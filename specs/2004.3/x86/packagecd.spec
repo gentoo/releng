@@ -3,7 +3,7 @@ version_stamp: 2004.2
 target: grp
 rel_type: default
 profile: default-linux/x86/2004.3
-snapshot: 20041016
+snapshot: 20041020
 distcc_hosts: localhost/3 gravity/3 orion/3
 source_subpath: default/stage3-x86-2004.2
 grp: src cd2

@@ -3,14 +3,14 @@ version_stamp: 2004.3
 target: livecd-stage2
 rel_type: default
 profile: default-linux/x86/2004.3
-snapshot: 20041016
+snapshot: 20041020
 distcc_hosts: localhost/3 gravity/3 orion/3
 source_subpath: default/livecd-stage1-x86-2004.3
 
 livecd/cdfstype: squashfs
-livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
-livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
+livecd/archscript: /var/cvsroot/gentoo/src/catalyst/livecd/runscript/x86-archscript.sh
+livecd/runscript: /var/cvsroot/gentoo/src/catalyst/livecd/runscript/default-runscript.sh
+livecd/cdtar: /var/cvsroot/gentoo/src/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
 livecd/iso: /tmp/livecd.iso
 livecd/splash_type: gensplash
 livecd/splash_theme: livecd-2004.3
@@ -20,16 +20,20 @@ livecd/modblacklist:
 	8139cp
 
 livecd/overlay: /root/livecd/overlay-minimal
+
+livecd/devmanager: udev
+
 livecd/rcadd:
 	syslog-ng:default
+	gpm:default
 
 boot/kernel: gentoo
 #boot/kernel/gentoo/sources: =gentoo-dev-sources-2.6.7-r14
 boot/kernel/gentoo/sources: gentoo-dev-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/2004.3/x86/2.6.8-smp.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2004.3/x86/2.6.9-smp.config
 
-boot/kernel/gentoo/use: pcmcia usb
+boot/kernel/gentoo/use: pcmcia usb -X
 
 boot/kernel/gentoo/postconf:
 	splashutils
@@ -38,6 +42,7 @@ boot/kernel/gentoo/postconf:
 boot/kernel/gentoo/packages:
 	pcmcia-cs
 	speedtouch
+	globespan-adsl
 	hostap-driver
 	hostap-utils
 	ipw2100
