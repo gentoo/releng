@@ -3,8 +3,9 @@ version_stamp: 2004.3
 target: grp
 rel_type: default
 profile: default-linux/amd64/2004.3
-snapshot: 20041022-r1
+snapshot: 20041022
 source_subpath: default/stage3-amd64-2004.3
+
 grp: src cd2
 
 grp/use: 
@@ -68,6 +69,10 @@ grp/src/packages:
 #	madwifi
 	pcmcia-cs
 	genkernel
+	hotplug
+	pciutils
+	usbutils
+	slocate
 	
 grp/cd2/type: pkgset
 grp/cd2/packages:
