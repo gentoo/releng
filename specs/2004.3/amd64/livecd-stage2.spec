@@ -10,13 +10,12 @@ livecd/cdfstype: squashfs
 livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
-livecd/iso: /mnt/cuda/install-amd64-minimal-20041003.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041011-r1.iso
 livecd/bootsplash: livecd-2004.3
-
 livecd/type: gentoo-release-minimal
 livecd/modblacklist: siimage 8139cp
 
-boot/kernel: gentoo
+boot/kernel: gentoo smp
 
 # gentoo livecd kernel
 boot/kernel/gentoo/sources: sys-kernel/gentoo-dev-sources
@@ -29,13 +28,13 @@ boot/kernel/gentoo/packages:
 	xfsdump
 
 # smp livecd kernel
-# boot/kernel/smp/sources: sys-kernel/gentoo-dev-sources
-# boot/kernel/smp/config: /root/livecd/kconfig/20040713-gentoo-dev-sources-2.6.7-smp-amd64.config
-# boot/kernel/smp/use: pcmcia usb -X
-# boot/kernel/smp/extraversion: smp
-# boot/kernel/smp/packages:
-#	pcmcia-cs
-#	iptables
+boot/kernel/smp/sources: sys-kernel/gentoo-dev-sources
+boot/kernel/smp/config: /root/livecd/kconfig/20040713-gentoo-dev-sources-2.6.7-smp-amd64.config
+boot/kernel/smp/use: pcmcia usb -X
+boot/kernel/smp/extraversion: smp
+boot/kernel/smp/packages:
+	pcmcia-cs
+	iptables
 
 # emachines livecd kernel
 # boot/kernel/emachines/sources: =sys-kernel/gentoo-dev-sources-2.6.3-r1
