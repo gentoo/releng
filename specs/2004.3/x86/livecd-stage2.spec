@@ -3,17 +3,17 @@ version_stamp: 2004.3
 target: livecd-stage2
 rel_type: default
 profile: default-linux/x86/2004.3
-#profile: default-x86-2004.2
-snapshot: 20041009
+snapshot: 20041016
 distcc_hosts: localhost/3 gravity/3 orion/3
 source_subpath: default/livecd-stage1-x86-2004.3
 
 livecd/cdfstype: squashfs
 livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
 livecd/iso: /tmp/livecd.iso
-#livecd/bootsplash: livecd-2004.2
+livecd/splash_type: gensplash
+livecd/splash_theme: livecd-2004.3
 
 livecd/type: gentoo-release-minimal
 livecd/modblacklist:
@@ -30,6 +30,10 @@ boot/kernel/gentoo/sources: gentoo-dev-sources
 boot/kernel/gentoo/config: /root/livecd/kconfig/2004.3/x86/2.6.8-smp.config
 
 boot/kernel/gentoo/use: pcmcia usb
+
+boot/kernel/gentoo/postconf:
+	splashutils
+	splash-themes-livecd
 
 boot/kernel/gentoo/packages:
 	pcmcia-cs
@@ -72,7 +76,6 @@ livecd/unmerge:
 	bc
 	lcms
 	libmng
-	libpng
 	genkernel
 	diffutils
 	file
@@ -88,7 +91,6 @@ livecd/unmerge:
 	grub
 	help2man
 	libtool
-	which
 
 livecd/empty:
 	/var/tmp
@@ -269,6 +271,5 @@ livecd/rm:
 	/etc/bootsplash/livecd-2004.2/images/silent-12*
 	/etc/bootsplash/livecd-2004.2/images/silent-16*
 	/etc/bootsplash/livecd-2004.2/images/silent-8*
-	/etc/bootsplash/livecd-2004.2/images/bootplash*
 	/etc/make.conf.example
 	/etc/make.globals
