@@ -149,3 +149,4 @@ grp/cd2/packages:
 	gnumeric
 	xscreensaver
 	gimp
+	openoffice-ximian
