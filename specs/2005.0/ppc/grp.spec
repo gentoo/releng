@@ -158,7 +158,6 @@ grp/cd2/packages:
 	vixie-cron
 	whois
 	windowmaker
-	xcdroast
 	xchat
 	xfce4
 	xfsprogs
