@@ -67,10 +67,13 @@ grp/src/packages:
 	wireless-tools
 	pcmcia-cs
 	genkernel
+	slocate
+	dhcpcd
+	pciutils
+	usbutils
 	
 grp/cd2/type: pkgset
 grp/cd2/packages:
-	pciutils
 	hotplug
 	dante
 	tsocks
