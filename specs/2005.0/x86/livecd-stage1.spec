@@ -3,7 +3,7 @@ version_stamp: 2005.0
 target: livecd-stage1
 rel_type: default
 profile: default-linux/x86/2005.0
-snapshot: 20050121
+snapshot: 20050303
 source_subpath: default/stage3-x86-2005.0
 livecd/use:
 	-*
@@ -27,6 +27,7 @@ livecd/packages:
 	hotplug
 	coldplug
 	fxload
+#	tsocks
 	irssi
 	gpm
 	syslog-ng
@@ -40,7 +41,7 @@ livecd/packages:
 	xfsprogs
 	e2fsprogs
 	reiserfsprogs
-	cryptsetup
+#	cryptsetup
 	pwgen
 	popt
 	dialog
@@ -62,3 +63,5 @@ livecd/packages:
 	ntfsprogs
 	dosfstools
 	prism54-firmware
+	wpa_supplicant
+	genkernel

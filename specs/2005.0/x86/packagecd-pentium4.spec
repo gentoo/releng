@@ -1,11 +1,11 @@
-subarch: x86
+subarch: pentium4
 version_stamp: 2005.0
 target: grp
 rel_type: default
 profile: default-linux/x86/2005.0
-snapshot: 20050121
-source_subpath: default/stage3-x86-2005.0
-grp: src cd2
+snapshot: 20050303
+source_subpath: default/stage3-pentium4-2005.0
+grp: cd2 
 
 grp/use: 
 	gtk2 
@@ -27,53 +27,51 @@ grp/use:
 	tcpd
 	-svga
 
-grp/src/type: srcset
-grp/src/packages:
-	ucl
-	udev
-	gentoo-sources
-#	gentoo-dev-sources
-	vanilla-sources
-#	development-sources
-	rp-pppoe
-	speedtouch
-	fcpci
-	globespan-adsl
-	pptpclient
-	slmodem
-	lvm2
-	iputils
-	vixie-cron
-	fcron
-	dcron
-	sysklogd
-	metalog
-	syslog-ng
-	raidtools
-	jfsutils
-	xfsprogs
-	reiserfsprogs
-	lvm2
-	dosfstools
-	lilo
-	grub
-	gentoolkit
-	chkrootkit
-	isdn4k-utils
-	iproute2
-	nvidia-kernel
-	nvidia-glx
-	ati-drivers
-	wireless-tools
-	pcmcia-cs
-        slocate
-	dhcpcd
-	pciutils
-	usbutils
-	genkernel
-	fcdsl
-	fritzcapi
-				
+#grp/src/type: srcset
+#grp/src/packages:
+#	ucl
+#	udev
+#	gentoo-sources
+#	vanilla-sources
+#	rp-pppoe
+#	speedtouch
+#	fcpci
+#	globespan-adsl
+#	pptpclient
+#	slmodem
+#	lvm2
+#	iputils
+#	vixie-cron
+#	fcron
+#	dcron
+#	sysklogd
+#	metalog
+#	syslog-ng
+#	raidtools
+#	jfsutils
+#	xfsprogs
+#	reiserfsprogs
+#	lvm2
+#	dosfstools
+#	lilo
+#	grub
+#	gentoolkit
+#	chkrootkit
+#	isdn4k-utils
+#	iproute2
+#	nvidia-kernel
+#	nvidia-glx
+#	ati-drivers
+#	wireless-tools
+#	pcmcia-cs
+ #       slocate
+#	dhcpcd
+#	pciutils
+#	usbutils
+#	genkernel
+#	fcdsl
+#	fritzcapi
+#				
 grp/cd2/type: pkgset
 grp/cd2/packages:
 	hotplug

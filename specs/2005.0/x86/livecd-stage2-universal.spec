@@ -1,37 +1,39 @@
 subarch: x86
-version_stamp: 2004.3
+version_stamp: 2005.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/x86/2004.3
-snapshot: 20041022
-distcc_hosts: localhost/3 gravity/3 orion/3
-source_subpath: default/livecd-stage1-x86-2004.3
+profile: default-linux/x86/2005.0
+snapshot: 20050303
+source_subpath: default/livecd-stage1-x86-2005.0
 
 livecd/cdfstype: squashfs
 livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
-livecd/fsscript: /home/beejay/2005.0/fsscript.sh
-livecd/iso: /tmp/universal-livecd.iso
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.13-memtest86+-cdtar.tar.bz2
+# This fsscript removes serial and not necessary in catalyst > 1.1.7
+#ivecd/fsscript: /home/beejay/2005.0/fsscript.sh
+#ivecd/iso: /home/beejay/2005.0/move/install-x86-2005.0-universal.iso
+livecd/iso: /home/beejay/2005.0/move/install-x86-2005.0-universal.iso
 livecd/splash_type: gensplash
-livecd/splash_theme: livecd-2004.3
-
-livecd/type: gentoo-release-universal
+livecd/splash_theme: livecd-2005.0
+livecd/gk_mainargs: --lvm2 --dmraid  
+livecd/type: gentoo-release-minimal
 livecd/modblacklist:
 	8139cp
 
-livecd/overlay: /root/livecd/overlay-universal
-
+#livecd/overlay: /root/livecd/overlay-minimal
+livecd/overlay: /home/beejay/2005.0/overlay
 livecd/devmanager: udev
 
-livecd/rcadd:
-	syslog-ng:default
-	gpm:default
+# Commented by Chris Gianelloni
+#livecd/rcadd:
+#	syslog-ng:default
+#	gpm:default
 
 boot/kernel: gentoo
-boot/kernel/gentoo/sources: gentoo-dev-sources
+boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /home/beejay/2005.0/2.6.10-smp.config
+boot/kernel/gentoo/config: /home/beejay/2005.0/2.6.11-smp.config
 
 boot/kernel/gentoo/use: pcmcia usb -X
 
@@ -47,9 +49,11 @@ boot/kernel/gentoo/packages:
 	hostap-driver
 	hostap-utils
 	ipw2100
-	# fcdsl
+	ipw2200
+	acpid
+	cryptsetup
+	#fcdsl
 	#fritzcapi
-#	madwifi-driver
 
 livecd/unmerge:
 	acl
@@ -273,12 +277,24 @@ livecd/rm:
 	/usr/share/consolefonts/s*
 	/usr/share/consolefonts/t*
 	/usr/share/consolefonts/v*
-	/etc/bootsplash/livecd-2004.2/images/bootsplash-12*
-	/etc/bootsplash/livecd-2004.2/images/bootsplash-16*
-	/etc/bootsplash/livecd-2004.2/images/bootsplash-8*
-	/etc/bootsplash/livecd-2004.2/images/silent-12*
-	/etc/bootsplash/livecd-2004.2/images/silent-16*
-	/etc/bootsplash/livecd-2004.2/images/silent-8*
+	/etc/bootsplash/livecd-2005.0/images/bootsplash-12*
+	/etc/bootsplash/livecd-2005.0/images/bootsplash-16*
+	/etc/bootsplash/livecd-2005.0/images/bootsplash-8*
+	/etc/bootsplash/livecd-2005.0/images/silent-12*
+	/etc/bootsplash/livecd-2005.0/images/silent-16*
+	/etc/bootsplash/livecd-2005.0/images/silent-8*
+	/etc/splash/livecd-2005.0/16*
+	/etc/splash/livecd-2005.0/12*
+	/etc/splash/livecd-2005.0/6*
+	/etc/splash/livecd-2005.0/8*
+	/etc/splash/livecd-2005.0/images/silent-16*
+	/etc/splash/livecd-2005.0/images/silent-12*
+	/etc/splash/livecd-2005.0/images/silent-6*
+	/etc/splash/livecd-2005.0/images/silent-8*
+	/etc/splash/livecd-2005.0/images/verbose-16*
+	/etc/splash/livecd-2005.0/images/verbose-12*
+	/etc/splash/livecd-2005.0/images/verbose-6*
+	/etc/splash/livecd-2005.0/images/verbose-8*
 	/etc/make.conf.example
 	/etc/make.globals
 	/etc/resolv.conf
