@@ -1,5 +1,11 @@
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2005.0/ppc/livecd-stage1.spec,v 1.3 2005-03-19 06:15:00 pylon Exp $
+subarch: ppc
+version_stamp: 2005.0
 target: livecd-stage1
+rel_type: default
 profile: default-linux/ppc/2005.0
+snapshot: 20050303
+default_subpath: default/stage3-ppc-20050303
 
 livecd/use: 
 	-* 
@@ -19,14 +25,17 @@ livecd/packages:
 	coldplug
 	curl
 	cvs
+	devfsd
 	device-mapper
 	dhcpcd
 	distcc
 	e2fsprogs
+	eject
 	ethtool
 	ftp
 	gentoolkit
 	gentoo-sources
+	pegasos-sources
 	gpm
 	hdparm
 	hfsplusutils
@@ -56,6 +65,7 @@ livecd/packages:
 	ntp
 	openssh
 	parted
+	pbbuttonsd
 	pciutils
 	popt
 	ppp

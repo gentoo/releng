@@ -1,41 +1,53 @@
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2005.0/ppc/livecd-stage2-minimal.spec,v 1.1 2005-03-19 06:15:00 pylon Exp $
+subarch: ppc
+version_stamp: 2005.0
 target: livecd-stage2
+rel_type: default
+profile: default-linux/ppc/2005.0
+snapshot: 20050303
+default_subpath: default/livecd-stage1-ppc-20050303
 
+livecd/type: gentoo-release-minimal
 livecd/cdfstype: squashfs
 livecd/archscript: livecd/runscript/ppc-archscript.sh
 livecd/runscript: livecd/runscript/default-runscript.sh
 livecd/cdtar: livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
+livecd/overlay: /var/tmp/catalyst/overlay-minimal
+livecd/fsscript: livecd/fsscript/fsscript-ppc.sh
 
-boot/kernel: G3G4
+boot/kernel: G3G4 G5 Pegasos
 
 boot/kernel/G3G4/sources: sys-kernel/gentoo-sources
 boot/kernel/G3G4/use: extlib pcmcia usb -X
 boot/kernel/G3G4/config: /usr/src/configs/G3G4-SMP
-boot/kernel/G3G4/extraversion: G3G4-SMP-livecd
+boot/kernel/G3G4/extraversion: G3G4
 boot/kernel/G3G4/packages:
 	cryptsetup
+	pcmcia-cs
 
 boot/kernel/G5/sources: sys-kernel/gentoo-sources
 boot/kernel/G5/use: extlib usb -X
 boot/kernel/G5/config: /usr/src/configs/G5-SMP
-boot/kernel/G5/extraversion: G5-SMP-livecd
+boot/kernel/G5/extraversion: G5
 
 boot/kernel/Pegasos/sources: sys-kernel/pegasos-sources
-boot/kernel/Pegasos/config: /usr/src/configs/Pegasos-SMP
 boot/kernel/Pegasos/use: extlib usb -X
-boot/kernel/Pegasos/extraversion: Pegasos-SMP-livecd
+boot/kernel/Pegasos/config: /usr/src/configs/Pegasos-SMP
+boot/kernel/Pegasos/extraversion: Pegasos
+boot/kernel/Pegasos/gk_kernargs: --no-initrdmodules
+
+livecd/gk_mainargs: --makeopts=-j4 --lvm2 
+livecd/devmanager: udev
 
 livecd/iso: install-ppc-minimal-2005.0.iso
 livecd/volid: Gentoo Linux 2005.0 ppc
 
-livecd/devmanager: udev
-
 livecd/rcadd:
 	syslog-ng:default
 	gpm:default
+	pbbuttonsd:default
 
 livecd/unmerge:
-	acl
-	attr
 	autoconf
 	automake
 	binutils
@@ -54,16 +66,12 @@ livecd/unmerge:
 	gettext
 	sys-apps/texinfo
 	ccache
-	addpatches
 	man
 	groff
-	lib-compat
 	python
 	miscfiles
 	rsync
 	bc
-	lcms
-	libmng
 	genkernel
 	diffutils
 	libperl

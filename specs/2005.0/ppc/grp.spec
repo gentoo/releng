@@ -1,4 +1,14 @@
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2005.0/ppc/grp.spec,v 1.4 2005-03-19 06:15:00 pylon Exp $
+subarch: ppc
+version_stamp: 2005.0
+target: grp
+rel_type: default
+profile: default-linux/ppc/2005.0
+snapshot: 20050303
+default_subpath: default/stage3-ppc-20050303
+
 grp: src cd2
+
 grp/use: 
 	pam
 	accessibility 
