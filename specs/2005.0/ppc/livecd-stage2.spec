@@ -3,22 +3,29 @@ target: livecd-stage2
 livecd/cdfstype: squashfs
 livecd/archscript: livecd/runscript/ppc-archscript.sh
 livecd/runscript: livecd/runscript/default-runscript.sh
-livecd/cdtar: livecd/cdtar/yaboot-1.3.11-cdtar.tar.bz2
+livecd/cdtar: livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 
-boot/kernel: G4-SMP
-boot/kernel/G4/use: extlib usb -X
-boot/kernel/G4/extraversion: G4-SMP
+boot/kernel: G3G4
+
+boot/kernel/G3G4/sources: sys-kernel/gentoo-sources
+boot/kernel/G3G4/use: extlib pcmcia usb -X
+boot/kernel/G3G4/config: /usr/src/configs/G3G4-SMP
+boot/kernel/G3G4/extraversion: G3G4-SMP-livecd
+boot/kernel/G3G4/packages:
+	cryptsetup
+
 boot/kernel/G5/sources: sys-kernel/gentoo-sources
 boot/kernel/G5/use: extlib usb -X
 boot/kernel/G5/config: /usr/src/configs/G5-SMP
-boot/kernel/G5/extraversion: G5-SMP
+boot/kernel/G5/extraversion: G5-SMP-livecd
+
 boot/kernel/Pegasos/sources: sys-kernel/pegasos-sources
 boot/kernel/Pegasos/config: /usr/src/configs/Pegasos-SMP
 boot/kernel/Pegasos/use: extlib usb -X
-boot/kernel/Pegasos/extraversion: Pegasos-SMP
+boot/kernel/Pegasos/extraversion: Pegasos-SMP-livecd
 
-livecd/iso:
-	gentoo.iso
+livecd/iso: install-ppc-minimal-2005.0.iso
+livecd/volid: Gentoo Linux 2005.0 ppc
 
 livecd/devmanager: udev
 
@@ -36,7 +43,6 @@ livecd/unmerge:
 	m4
 	bison
 	ccache
-	distcc
 	make
 	perl
 	patch
@@ -55,7 +61,6 @@ livecd/unmerge:
 	python
 	miscfiles
 	rsync
-	sysklogd
 	bc
 	lcms
 	libmng
@@ -209,6 +214,7 @@ livecd/rm:
 	/etc/man.conf
 	/etc/*.old
 	/root/.viminfo
+	/root/.bash_history
 	/usr/sbin/bootsplash*
 	/usr/sbin/fb*
 	/usr/sbin/fsck.cramfs

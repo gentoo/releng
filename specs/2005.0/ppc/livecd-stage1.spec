@@ -1,4 +1,5 @@
 target: livecd-stage1
+profile: default-linux/ppc/2005.0
 
 livecd/use: 
 	-* 
@@ -16,7 +17,6 @@ livecd/packages:
 	baselayout
 	bind-tools
 	coldplug
-	cryptsetup
 	curl
 	cvs
 	device-mapper
@@ -26,10 +26,11 @@ livecd/packages:
 	ethtool
 	ftp
 	gentoolkit
+	gentoo-sources
 	gpm
 	hdparm
 	hfsplusutils
-	hfsutils	
+	hfsutils
 	host
 	hotplug
 	iptables
@@ -41,14 +42,12 @@ livecd/packages:
 	less
 	links
 	livecd-tools
-	logrotate
 	lsof
 	lvm2
 	lynx
 	lzo 
 	mac-fdisk
 	memtester
-	metalog
 	mingetty
 	mirrorselect
 	module-init-tools
@@ -66,10 +65,8 @@ livecd/packages:
 	pwgen
 	raidtools
 	reiserfsprogs
-	reiserfsprogs
 	rp-pppoe
 	screen
-	snmp
 	syslog-ng
 	ucl
 	udev
@@ -82,3 +79,4 @@ livecd/packages:
 	wireless-tools
 	xfsprogs
 	yaboot
+	genkernel
