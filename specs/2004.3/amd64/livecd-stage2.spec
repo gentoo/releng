@@ -15,7 +15,7 @@ livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041011-r1.i
 livecd/type: gentoo-release-minimal
 livecd/modblacklist: siimage 8139cp
 
-boot/kernel: gentoo smp
+boot/kernel: smp
 
 # gentoo livecd kernel
 boot/kernel/gentoo/sources: sys-kernel/gentoo-dev-sources
@@ -29,7 +29,7 @@ boot/kernel/gentoo/packages:
 
 # smp livecd kernel
 boot/kernel/smp/sources: sys-kernel/gentoo-dev-sources
-boot/kernel/smp/config: /root/livecd/kconfig/20040713-gentoo-dev-sources-2.6.7-smp-amd64.config
+boot/kernel/smp/config: kconfig/kernel-config-2.6-smp
 boot/kernel/smp/use: pcmcia usb -X
 boot/kernel/smp/extraversion: smp
 boot/kernel/smp/packages:
