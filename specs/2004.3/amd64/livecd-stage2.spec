@@ -1,3 +1,5 @@
+# $Id: livecd-stage2.spec,v 1.7 2004-10-25 22:45:10 jhuebel Exp $
+
 subarch: amd64
 version_stamp: 2004.3
 target: livecd-stage2

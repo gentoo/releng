@@ -1,11 +1,10 @@
-subarch: x86
-version_stamp: 2004.2
+subarch: amd64
+version_stamp: 2004.3
 target: grp
 rel_type: default
-profile: default-linux/x86/2004.3
-snapshot: 20041009
-distcc_hosts: localhost/3 gravity/3 orion/3
-source_subpath: default/stage3-x86-2004.2
+profile: default-linux/amd64/2004.3
+snapshot: 20041022
+source_subpath: default/stage3-amd64-20041011
 grp: src cd2
 
 grp/use: 
@@ -32,16 +31,16 @@ grp/src/type: srcset
 grp/src/packages:
 	ucl
 	udev
-	gentoo-sources
+#	gentoo-sources
 	gentoo-dev-sources
-	vanilla-sources
-	development-sources
+#	vanilla-sources
+#	development-sources
 	rp-pppoe
 	speedtouch
-	fcpci
-	fcdsl
+#	fcpci
+#	fcdsl
 	pptpclient
-	slmodem
+#	slmodem
 	lvm2
 	iputils
 	vixie-cron
@@ -56,7 +55,7 @@ grp/src/packages:
 	reiserfsprogs
 	lvm2
 	dosfstools
-	lilo
+#	lilo
 	grub
 	gentoolkit
 	chkrootkit
@@ -64,9 +63,9 @@ grp/src/packages:
 	iproute2
 	nvidia-kernel
 	nvidia-glx
-	ati-drivers
+#	ati-drivers
 	wireless-tools
-	madwifi
+#	madwifi
 	pcmcia-cs
 	genkernel
 	
@@ -88,7 +87,7 @@ grp/cd2/packages:
 	unzip
 	zip
 	netcat
-	partimage
+#	partimage
 	DirectFB
 	apache
 	app-cdr/cdrtools
@@ -121,6 +120,6 @@ grp/cd2/packages:
 	k3b
 	samba
 	nmap
-	gradm
-	ettercap
+#	gradm
+#	ettercap
 	logrotate
