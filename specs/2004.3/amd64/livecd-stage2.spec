@@ -10,15 +10,15 @@ livecd/cdfstype: squashfs
 livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
-livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041029.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-universal-2004.3.iso
 livecd/splash_type: gensplash
 livecd/splash_theme: livecd-2004.3
 
-livecd/type: gentoo-release-minimal
+livecd/type: gentoo-release-universal
 livecd/modblacklist:
 	8139cp
 
-#livecd/overlay: /root/livecd/overlay-minimal
+livecd/overlay: overlay-universal/
 
 #livecd/devmanager: udev
 
@@ -41,7 +41,7 @@ boot/kernel/gentoo/packages:
 #	globespan-adsl
 #	hostap-driver
 #	hostap-utils
-	ipw2100
+#	ipw2100
 #	madwifi-driver
 
 livecd/unmerge:
