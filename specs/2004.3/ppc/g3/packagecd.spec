@@ -2,7 +2,7 @@ version_stamp: 20040926
 rel_version: 2004.3
 snapshot: 20040926 
 profile: default-linux/ppc/2004.3
-source_subpath: default/stage3-ppc-20040926
+source_subpath: default/stage3-g3-20040926
 subarch: g3
 target: grp
 rel_type: default
