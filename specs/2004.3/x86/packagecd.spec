@@ -4,7 +4,6 @@ target: grp
 rel_type: default
 profile: default-linux/x86/2004.3
 snapshot: 20041022
-distcc_hosts: localhost/3 gravity/3 orion/3
 source_subpath: default/stage3-x86-2004.3
 grp: src cd2
 
@@ -77,6 +76,7 @@ grp/cd2/packages:
 	tsocks
 	sys-apps/eject
 	xorg-x11
+	=x11-base/xorg-x11-6.7.0-r1
 	minicom
 	links
 	lynx
