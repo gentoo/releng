@@ -11,7 +11,7 @@ livecd/archscript: /usr/lib/catalyst/livecd/runscript/x86-archscript.sh
 livecd/runscript: /usr/lib/catalyst/livecd/runscript/default-runscript.sh
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-2.08-memtest86+-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-20041011-r1.iso
-livecd/bootsplash: livecd-2004.3
+# livecd/bootsplash: livecd-2004.3
 livecd/type: gentoo-release-minimal
 livecd/modblacklist: siimage 8139cp
 

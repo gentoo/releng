@@ -19,7 +19,7 @@ livecd/packages:
 	baselayout
 	livecd-tools
 	genkernel
-	bootsplash-themes-livecd
+#	bootsplash-themes-livecd
 	ucl
 	kudzu-knoppix
 	module-init-tools
