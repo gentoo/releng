@@ -172,6 +172,7 @@ livecd/empty:
 	/usr/share/zoneinfo
 	/usr/sparc-unknown-linux-gnu
 	/usr/src
+	/usr/x86_64-pc-linux-gnu
 	/var/cache
 	/var/db
 	/var/empty
@@ -273,6 +274,7 @@ livecd/rm:
 	/usr/bin/sparc64-unknown-linux-gnu-*
 	/usr/bin/strings
 	/usr/bin/strip
+	/usr/bin/x86_64-pc-linux-gnu-*
 	/usr/lib*/*.a
 	/usr/lib*/*.la
 	/usr/lib*/*.so
