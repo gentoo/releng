@@ -3,7 +3,7 @@ version_stamp: 2006.0
 target: livecd-stage1
 rel_type: default
 profile: default-linux/x86/no-nptl
-snapshot: 20060121
+snapshot: 20060123
 source_subpath: default/stage3-x86-2006.0
 livecd/use:
 	-*
