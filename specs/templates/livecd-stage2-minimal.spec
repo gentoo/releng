@@ -11,7 +11,7 @@ livecd/cdtar: /usr/lib/catalyst2/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar
 
 livecd/iso: /tmp/installcd-x86-minimal-2006.0.iso
 livecd/splash_type: gensplash
-livecd/splash_theme: livecd-2005.1
+livecd/splash_theme: livecd-2006.0
 
 livecd/volid: Gentoo Linux x86 2006.0
 livecd/type: gentoo-release-minimal
@@ -38,7 +38,7 @@ boot/kernel/gentoo/packages:
 #	ipw2200
 	fritzcapi
 	fcdsl
-	cryptsetup
+	cryptsetup-luks
 # These were not stable at time of snapshot/release.
 #	at76c503a
 #	rt2500
@@ -117,8 +117,10 @@ livecd/empty:
 	/etc/skel
 	/etc/splash/emergence
 	/etc/splash/gentoo
-	/lib*/dev-state
-	/lib*/udev-state
+	/lib/dev-state
+	/lib/udev-state
+	/lib64/dev-state
+	/lib64/udev-state
 	/root/.ccache
 	/tmp
 	/usr/diet/include
@@ -127,19 +129,32 @@ livecd/empty:
 	/usr/i386-pc-linux-gnu
 	/usr/i386-pc-linux-uclibc
 	/usr/include
-	/usr/lib*/X11/config
-	/usr/lib*/X11/doc
-	/usr/lib*/X11/etc
-	/usr/lib*/awk
-	/usr/lib*/ccache
-	/usr/lib*/gcc-config
-	/usr/lib*/gconv
-	/usr/lib*/nfs
-	/usr/lib*/perl5
-	/usr/lib*/portage
-	/usr/lib*/python2.2
-	/usr/lib*/python2.3
-	/usr/lib*/python2.4/tests
+	/usr/lib/X11/config
+	/usr/lib/X11/doc
+	/usr/lib/X11/etc
+	/usr/lib/awk
+	/usr/lib/ccache
+	/usr/lib/gcc-config
+	/usr/lib/gconv
+	/usr/lib/nfs
+	/usr/lib/perl5
+	/usr/lib/portage
+	/usr/lib/python2.2
+	/usr/lib/python2.3
+	/usr/lib/python2.4/tests
+	/usr/lib64/X11/config
+	/usr/lib64/X11/doc
+	/usr/lib64/X11/etc
+	/usr/lib64/awk
+	/usr/lib64/ccache
+	/usr/lib64/gcc-config
+	/usr/lib64/gconv
+	/usr/lib64/nfs
+	/usr/lib64/perl5
+	/usr/lib64/portage
+	/usr/lib64/python2.2
+	/usr/lib64/python2.3
+	/usr/lib64/python2.4/tests
 	/usr/local
 	/usr/portage
 	/usr/share/aclocal
@@ -204,24 +219,24 @@ livecd/rm:
 	/etc/make.profile
 	/etc/man.conf
 	/etc/resolv.conf
-	/etc/splash/livecd-2005.1/12*
-	/etc/splash/livecd-2005.1/14*
-	/etc/splash/livecd-2005.1/16*
-	/etc/splash/livecd-2005.1/19*
-	/etc/splash/livecd-2005.1/6*
-	/etc/splash/livecd-2005.1/8*
-	/etc/splash/livecd-2005.1/images/background-12*
-	/etc/splash/livecd-2005.1/images/background-14*
-	/etc/splash/livecd-2005.1/images/background-16*
-	/etc/splash/livecd-2005.1/images/background-19*
-	/etc/splash/livecd-2005.1/images/background-6*
-	/etc/splash/livecd-2005.1/images/background-8*
-	/etc/splash/livecd-2005.1/images/verbose-12*
-	/etc/splash/livecd-2005.1/images/verbose-14*
-	/etc/splash/livecd-2005.1/images/verbose-16*
-	/etc/splash/livecd-2005.1/images/verbose-19*
-	/etc/splash/livecd-2005.1/images/verbose-6*
-	/etc/splash/livecd-2005.1/images/verbose-8*
+	/etc/splash/livecd-2006.0/12*
+	/etc/splash/livecd-2006.0/14*
+	/etc/splash/livecd-2006.0/16*
+	/etc/splash/livecd-2006.0/19*
+	/etc/splash/livecd-2006.0/6*
+	/etc/splash/livecd-2006.0/8*
+	/etc/splash/livecd-2006.0/images/background-12*
+	/etc/splash/livecd-2006.0/images/background-14*
+	/etc/splash/livecd-2006.0/images/background-16*
+	/etc/splash/livecd-2006.0/images/background-19*
+	/etc/splash/livecd-2006.0/images/background-6*
+	/etc/splash/livecd-2006.0/images/background-8*
+	/etc/splash/livecd-2006.0/images/verbose-12*
+	/etc/splash/livecd-2006.0/images/verbose-14*
+	/etc/splash/livecd-2006.0/images/verbose-16*
+	/etc/splash/livecd-2006.0/images/verbose-19*
+	/etc/splash/livecd-2006.0/images/verbose-6*
+	/etc/splash/livecd-2006.0/images/verbose-8*
 	/lib*/*.a
 	/lib*/*.la
 	/lib*/cpp
@@ -277,7 +292,6 @@ livecd/rm:
 	/usr/bin/x86_64-pc-linux-gnu-*
 	/usr/lib*/*.a
 	/usr/lib*/*.la
-	/usr/lib*/*.so
 	/usr/lib*/gcc-lib/*/*/libgcj*
 	/usr/sbin/bootsplash*
 	/usr/sbin/fb*
