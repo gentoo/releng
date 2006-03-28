@@ -1,5 +1,5 @@
 subarch: i686
-version_stamp: installer-20060123
+version_stamp: 20060123
 target: livecd-stage2
 rel_type: default
 profile: default-linux/x86/2006.0
@@ -11,7 +11,7 @@ livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar.
 #livecd/fsscript: /root/livecd/scripts/livecd-fsscript2.sh
 livecd/iso: /tmp/livecd-i686-installer-20060123.iso
 livecd/splash_type: gensplash
-livecd/splash_theme: livecd-2005.1
+livecd/splash_theme: livecd-2006.0
 livecd/xdm: gdm
 livecd/xsession: gnome
 
@@ -23,7 +23,8 @@ livecd/overlay: /root/livecd/overlays/livecd/2006.0
 livecd/root_overlay: /root/livecd/overlays/root-livecd
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm2 --dmraid --evms2 --unionfs-dev
+livecd/gk_mainargs: --lvm2 --dmraid --evms2
+#--unionfs-dev
 
 #livecd/rcadd: x-setup|default spind|default xdm|default famd|default
 
