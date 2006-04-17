@@ -15,6 +15,10 @@ livecd/splash_theme: livecd-2006.0
 livecd/xdm: gdm
 livecd/xsession: gnome
 
+# DO NOT USE livecd/type: gentoo-release-livecd unless you are duplicating a
+# Gentoo release and understand what this means.  We will not support broken
+# builds if you use this and don't know what you're doing.  Please use
+# generic-livecd instead for any builds.
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
 livecd/volid: Gentoo Linux 2006.0 x86 LiveCD
