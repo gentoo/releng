@@ -12,14 +12,10 @@ livecd/use:
 	ipv6
 	livecd
 	ncurses
-	-nls
-	-nptl
-	-nptlonly
 	pam
 	readline
 	socks5
 	ssl
-	-unicode
 	userlocales
 
 livecd/packages:
@@ -62,6 +58,7 @@ livecd/packages:
 	sys-apps/hwstup
 	sys-apps/iproute2
 	sys-apps/memtester
+	sys-apps/netplug
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils

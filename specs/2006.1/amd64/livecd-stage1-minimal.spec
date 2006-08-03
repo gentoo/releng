@@ -20,7 +20,6 @@ livecd/use:
 	socks5
 	ssl
 	unicode
-	userlocales
 
 livecd/packages:
 	app-admin/passook
@@ -62,6 +61,7 @@ livecd/packages:
 	sys-apps/hwsetup
 	sys-apps/iproute2
 	sys-apps/memtester
+	sys-apps/netplug
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils

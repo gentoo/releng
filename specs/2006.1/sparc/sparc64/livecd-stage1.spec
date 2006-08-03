@@ -5,7 +5,6 @@ rel_type: default
 profile: default-linux/sparc/sparc64/2006.1/2.4
 snapshot: 2006.1
 source_subpath: default/stage3-sparc64-2006.1
-
 livecd/use:
 	-*
 	ipv6
@@ -56,6 +55,7 @@ livecd/packages:
 	sys-apps/hwsetup
 	sys-apps/iproute2
 	sys-apps/memtester
+	sys-apps/netplug
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
