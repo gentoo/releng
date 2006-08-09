@@ -37,7 +37,7 @@ boot/kernel/gentoo/packages:
 	media-gfx/splashutils
 	media-gfx/splash-themes-livecd
 	sys-apps/pcmciautils
-	sys-apps/acpid
+	sys-power/acpid
 	sys-fs/cryptsetup-luks
 	net-wireless/rt2500
 	net-wireless/ipw3945

@@ -40,7 +40,7 @@ boot/kernel/gentoo/packages:
 	net-wireless/hostap-utils
 	net-dialup/fritzcapi
 	net-dialup/fcdsl
-	sys-apps/acpid
+	sys-power/acpid
 	sys-fs/cryptsetup-luks
 #	net-wireless/at76c503a
 #	net-wireless/rt2500
