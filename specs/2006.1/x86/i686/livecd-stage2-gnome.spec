@@ -48,7 +48,7 @@ boot/kernel/gentoo/packages:
 #	net-wireless/adm8211
 	net-wireless/rt2500
 	net-wireless/acx
-	net-wireless/ipw3945
+#	net-wireless/ipw3945
 # These three are removed for licensing reasons.
 #	media-video/nvidia-kernel
 #	media-video/nvidia-glx

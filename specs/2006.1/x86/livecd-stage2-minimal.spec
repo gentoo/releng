@@ -43,7 +43,7 @@ boot/kernel/gentoo/packages:
 #	net-wireless/adm8211
 	net-wireless/rt2500
 	net-wireless/acx
-	net-wireless/ipw3945
+#	net-wireless/ipw3945
 
 livecd/unmerge:
 #	acl
