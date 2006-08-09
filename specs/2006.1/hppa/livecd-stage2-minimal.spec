@@ -7,9 +7,9 @@ snapshot: 2006.1
 source_subpath: default/livecd-stage1-hppa1.1-2006.1
 
 livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst2/livecd/cdtar/palo-1.5_pre20040515-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/palo-1.5_pre20040515-cdtar.tar.bz2
 
-livecd/iso: /var/tmp/catalyst2/builds/default/install-hppa-minimal-2006.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-2006.1.iso
 livecd/devmanager: udev
 
 livecd/type: gentoo-release-minimal

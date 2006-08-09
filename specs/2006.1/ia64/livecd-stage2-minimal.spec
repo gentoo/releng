@@ -7,9 +7,9 @@ snapshot: 2006.1
 source_subpath: default/livecd-stage1-ia64-2006.1
 
 livecd/cdfstype: squashfs
-livecd/cdtar: /usr/lib/catalyst2/livecd/cdtar/elilo-3.4-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/elilo-3.4-cdtar.tar.bz2
 
-livecd/iso: /var/tmp/catalyst2/builds/default/install-ia64-minimal-2006.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-ia64-minimal-2006.1.iso
 
 livecd/volid: Gentoo Linux IA64 2006.1
 livecd/type: gentoo-release-minimal

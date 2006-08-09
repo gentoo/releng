@@ -7,9 +7,9 @@ snapshot: 2006.1
 source_subpath: default/livecd-stage1-ppc-2006.1
 
 livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst2/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 
-livecd/iso: /var/tmp/catalyst2/builds/default/install-ppc-universal-2006.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-ppc-universal-2006.1.iso
 
 livecd/volid: Gentoo Linux 2006.1 PPC
 livecd/type: gentoo-release-universal
