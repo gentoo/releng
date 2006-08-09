@@ -49,14 +49,14 @@ livecd/packages:
 	media-sound/audacious
 	media-sound/rhythmbox
 	media-video/mplayer
-	net-analyzer/ettercap
+#	net-analyzer/ettercap
 	net-analyzer/netcat
 	net-analyzer/nmap
 	net-analyzer/tcpdump
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-analyzer/wireshark
-	net-dialup/bpalogin
+#	net-dialup/bpalogin
 	net-dialup/mingetty
 	net-dialup/minicom
 #	net-dialup/penggy
@@ -72,20 +72,20 @@ livecd/packages:
 	net-misc/iputils
 	net-misc/rdate
 	net-misc/vconfig
-	net-misc/vpnc
+#	net-misc/vpnc
 	net-misc/whois
 	net-nntp/pan
 	net-p2p/bittorrent
 	net-proxy/dante
 	net-proxy/tsocks
-	net-wireless/airsnort
-	net-wireless/ipw2100-firmware
-	net-wireless/ipw2200-firmware
+#	net-wireless/airsnort
+#	net-wireless/ipw2100-firmware
+#	net-wireless/ipw2200-firmware
 	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	net-wireless/zd1201-firmware
-	sys-apps/apmd
+#	net-wireless/zd1201-firmware
+#	sys-apps/apmd
 	sys-apps/coldplug
 	sys-apps/eject
 	sys-apps/ethtool
@@ -103,8 +103,8 @@ livecd/packages:
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/slocate
 	sys-apps/smartmontools
-	sys-block/gpart
-	sys-block/partimage
+#	sys-block/gpart
+#	sys-block/partimage
 #	sys-boot/aboot
 	sys-boot/grub
 	sys-boot/lilo
@@ -141,6 +141,8 @@ livecd/packages:
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver
+	x11-themes/gdm-themes-livecd
+	x11-themes/gentoo-artwork-livecd
 #	x11-wm/enlightenment
 #	x11-wm/fluxbox
 #	xfce-base/xfce4

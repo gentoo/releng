@@ -38,18 +38,9 @@ boot/kernel/gentoo/packages:
 	media-gfx/splash-themes-livecd
 	sys-apps/pcmciautils
 	sys-apps/acpid
-	sys-fs/cryptsetup
-#	net-wireless/at76c503a
-#	net-wireless/rt2500
-#	net-wireless/rtl8180
-#	net-wireless/adm8211
-#	net-wireless/acx
+	sys-fs/cryptsetup-luks
 	net-wireless/rt2500
 	net-wireless/ipw3945
-# These three are removed for licensing reasons.
-#	media-video/nvidia-kernel
-#	media-video/nvidia-glx
-#	x11-drivers/ati-drivers
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
