@@ -40,7 +40,7 @@ boot/kernel/gentoo/packages:
 	sys-power/acpid
 	sys-fs/cryptsetup-luks
 	net-wireless/rt2500
-	net-wireless/ipw3945
+#	net-wireless/ipw3945
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
