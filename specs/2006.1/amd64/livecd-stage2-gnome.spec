@@ -8,12 +8,12 @@ source_subpath: default/livecd-stage1-amd64-installer-2006.1
 
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar.bz2
-
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-2006.1.iso
 livecd/splash_type: gensplash
 livecd/splash_theme: livecd-2006.1
 livecd/xdm: gdm
 livecd/xsession: gnome
+livecd/fsscript: /root/livecd/scripts/2006.1/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo

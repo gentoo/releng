@@ -13,6 +13,7 @@ livecd/splash_type: gensplash
 livecd/splash_theme: livecd-2006.1
 livecd/xdm: gdm
 livecd/xsession: gnome
+livecd/fsscript: /root/livecd/scripts/2006.1/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
