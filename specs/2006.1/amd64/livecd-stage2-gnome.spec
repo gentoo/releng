@@ -2,7 +2,7 @@ subarch: amd64
 version_stamp: 2006.1
 target: livecd-stage2
 rel_type: default
-profile: default-linux/amd64/2006.1
+profile: default-linux/amd64/2006.1/desktop
 snapshot: 2006.1
 source_subpath: default/livecd-stage1-amd64-installer-2006.1
 
