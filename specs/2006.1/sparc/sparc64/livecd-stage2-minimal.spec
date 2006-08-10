@@ -2,62 +2,37 @@ subarch: sparc64
 version_stamp: 2006.1
 target: livecd-stage2
 rel_type: default
-profile: default-linux/sparc/sparc64/2006.1/2.4
+profile: default-linux/sparc/sparc64/2006.1
 snapshot: 2006.1
 source_subpath: default/livecd-stage1-sparc64-2006.1
 
 livecd/fstype: squashfs
-livecd/cdtar: /root/sparc64-2006.1/silo-1.2.6-sparc-cdtar.tar.bz2
-livecd/iso: install-sparc64-minimal-2006.1.iso
+livecd/cdtar: /root/sparc64-2006.1/silo-1.4.13-sparc-cdtar.tar.bz2
 
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux SPARC64 2006.1
+livecd/iso: install-sparc64-minimal-2006.1.iso
 
-#livecd/overlay: /root/livecd/overlays/sparc-minimal
-
-boot/kernel: gentoo
-boot/kernel/gentoo/sources: sparc-sources
-boot/kernel/gentoo/config: 2.4.32-sparc64-generic.config
-boot/kernel/gentoo/use: livecd ultra1
+boot/kernel: 2616 2617
+boot/kernel/2616/sources: ~sys-kernel/gentoo-sources-2.6.16
+boot/kernel/2616/config: 2.6.16-sparc64-generic.config
+boot/kernel/2616/use: ultra1
+boot/kernel/2617/sources: ~sys-kernel/gentoo-sources-2.6.17
+boot/kernel/2617/config: 2.6.17-sparc64-generic.config
+boot/kernel/2617/use: ultra1
 
 livecd/unmerge:
-#	acl
-#	addpatches
-#	attr
-	alsa-headers
 	autoconf
-	autoconf-wrapper
 	automake
-	automake-wrapper
-#	bc
-#	bin86
 	binutils
-	binutils-config
 	bison
 	busybox
-#	ccache
-	cpio
-#	cronbase
-#	devfsd
-	diffutils
-#	distcc
-#	ed
-	expat
+	ccache
 	flex
 	gcc
-	gcc-config
-#	gcc-sparc64
-	genkernel
-	gentoo-sources
+	gcc-sparc64
 	gettext
-	gnuconfig
 	groff
-#	grub
-	help2man
-#	lcms
-#	ld.so
-#	lib-compat
-#	libmng
 	libperl
 	libtool
 	linux-headers
@@ -65,80 +40,32 @@ livecd/unmerge:
 	make
 	man
 	man-pages
-	miscfiles
-	pax-utils
 	patch
 	perl
-	perl-cleaner
-	perl-Test-Simple
-	PodParser
-	pycrypto
-	rsync
 	sandbox
-#	sash
-#	sysklogd
-#	tcp-wrappers
-	Test-Harness
 	texinfo
-#	ucl
-#	vanilla-sources
 
 livecd/empty:
-	/etc/bootsplash/gentoo
-	/etc/bootsplash/gentoo-highquality
 	/etc/cron.daily
 	/etc/cron.hourly
 	/etc/cron.monthly
 	/etc/cron.weekly
-	/etc/logrotate.d
-	/etc/modules.autoload.d
 	/etc/rsync
-	/etc/runlevels/single
 	/etc/skel
-	/etc/splash/emergence
-	/etc/splash/gentoo
-	/lib/dev-state
-	/lib/udev-state
-	/lib64/dev-state
-	/lib64/udev-state
 	/root/.ccache
 	/tmp
-	/usr/diet/include
-	/usr/diet/man
-	/usr/i386-gentoo-linux-uclibc
-	/usr/i386-pc-linux-gnu
-	/usr/i386-pc-linux-uclibc
-	/usr/include
-	/usr/lib/X11/config
-	/usr/lib/X11/doc
-	/usr/lib/X11/etc
-	/usr/lib/awk
-	/usr/lib/ccache
-	/usr/lib/gcc-config
+	/usr/lib/binutils
+	/usr/lib/gcc
 	/usr/lib/gconv
-	/usr/lib/nfs
 	/usr/lib/perl5
 	/usr/lib/portage
-	/usr/lib/python2.2
-	/usr/lib/python2.3
-	/usr/lib/python2.4/tests
-	/usr/lib64/X11/config
-	/usr/lib64/X11/doc
-	/usr/lib64/X11/etc
-	/usr/lib64/awk
-	/usr/lib64/ccache
-	/usr/lib64/gcc-config
-	/usr/lib64/gconv
-	/usr/lib64/nfs
-	/usr/lib64/perl5
-	/usr/lib64/portage
-	/usr/lib64/python2.2
-	/usr/lib64/python2.3
-	/usr/lib64/python2.4/tests
+	/usr/lib/python2.4/test
 	/usr/local
 	/usr/portage
-	/usr/powerpc-unknown-linux-gnu
-	/usr/powerpc64-unknown-linux-gnu
+	/usr/share/man
+	/usr/share/info
+	/usr/share/unimaps
+	/usr/include
 	/usr/share/aclocal
 	/usr/share/baselayout
 	/usr/share/binutils-data
@@ -148,15 +75,13 @@ livecd/empty:
 	/usr/share/doc
 	/usr/share/emacs
 	/usr/share/et
-	/usr/share/gcc-data
 	/usr/share/genkernel
 	/usr/share/gettext
+	/usr/share/gcc-data
 	/usr/share/glib-2.0
 	/usr/share/gnuconfig
 	/usr/share/gtk-doc
 	/usr/share/i18n
-	/usr/share/info
-	/usr/share/lcms
 	/usr/share/libtool
 	/usr/share/locale
 	/usr/share/man
@@ -165,11 +90,10 @@ livecd/empty:
 	/usr/share/ss
 	/usr/share/state
 	/usr/share/texinfo
-	/usr/share/unimaps
 	/usr/share/zoneinfo
 	/usr/sparc-unknown-linux-gnu
 	/usr/src
-	/usr/x86_64-pc-linux-gnu
+	/usr/X11R6
 	/var/cache
 	/var/db
 	/var/empty
@@ -177,23 +101,14 @@ livecd/empty:
 	/var/lock
 	/var/log
 	/var/run
-	/var/spool
-	/var/state
 	/var/tmp
 
 livecd/rm:
-	/boot/System*
-	/boot/initr*
-	/boot/kernel*
 	/etc/*-
 	/etc/*.old
 	/etc/default/audioctl
 	/etc/dispatch-conf.conf
-	/etc/env.d/05binutils
-	/etc/env.d/05gcc
 	/etc/etc-update.conf
-	/etc/hosts.bck
-	/etc/issue*
 	/etc/genkernel.conf
 	/etc/make.conf
 	/etc/make.conf.example
@@ -201,40 +116,7 @@ livecd/rm:
 	/etc/make.profile
 	/etc/man.conf
 	/etc/resolv.conf
-	/etc/splash/livecd-2006.1/12*
-	/etc/splash/livecd-2006.1/14*
-	/etc/splash/livecd-2006.1/16*
-	/etc/splash/livecd-2006.1/19*
-	/etc/splash/livecd-2006.1/6*
-	/etc/splash/livecd-2006.1/8*
-	/etc/splash/livecd-2006.1/images/background-12*
-	/etc/splash/livecd-2006.1/images/background-14*
-	/etc/splash/livecd-2006.1/images/background-16*
-	/etc/splash/livecd-2006.1/images/background-19*
-	/etc/splash/livecd-2006.1/images/background-6*
-	/etc/splash/livecd-2006.1/images/background-8*
-	/etc/splash/livecd-2006.1/images/verbose-12*
-	/etc/splash/livecd-2006.1/images/verbose-14*
-	/etc/splash/livecd-2006.1/images/verbose-16*
-	/etc/splash/livecd-2006.1/images/verbose-19*
-	/etc/splash/livecd-2006.1/images/verbose-6*
-	/etc/splash/livecd-2006.1/images/verbose-8*
-	/lib*/*.a
-	/lib*/*.la
-	/lib*/cpp
-	/lib*/security/pam_access.so
-	/lib*/security/pam_chroot.so
-	/lib*/security/pam_debug.so
-	/lib*/security/pam_ftp.so
-	/lib*/security/pam_issue.so
-	/lib*/security/pam_mail.so
-	/lib*/security/pam_mkhomedir.so
-	/lib*/security/pam_motd.so
-	/lib*/security/pam_postgresok.so
-	/lib*/security/pam_rhosts_auth.so
-	/lib*/security/pam_userdb.so
-	/root/.bash_history
-	/root/.viminfo
+	/lib/*.a
 	/sbin/fsck.cramfs
 	/sbin/fsck.minix
 	/sbin/mkfs.bfs
@@ -249,52 +131,28 @@ livecd/rm:
 	/usr/bin/cjpeg
 	/usr/bin/cpp
 	/usr/bin/djpeg
-	/usr/bin/ebuild
-	/usr/bin/emerge
 	/usr/bin/elftoaout
 	/usr/bin/f77
 	/usr/bin/g++*
 	/usr/bin/g77
 	/usr/bin/gcc*
-	/usr/bin/genkernel
 	/usr/bin/gprof
-	/usr/bin/i386-gentoo-linux-uclibc-*
-	/usr/bin/i386-pc-linux-*
 	/usr/bin/jpegtran
-	/usr/bin/ld
 	/usr/bin/libpng*
+	/usr/bin/ld
 	/usr/bin/nm
 	/usr/bin/objcopy
 	/usr/bin/objdump
-	/usr/bin/piggyback*
-	/usr/bin/portageq
+	/usr/bin/piggyback
+	/usr/bin/piggyback64
 	/usr/bin/ranlib
 	/usr/bin/readelf
-	/usr/bin/repoman
 	/usr/bin/size
-	/usr/bin/powerpc-unknown-linux-gnu-*
-	/usr/bin/powerpc64-unknown-linux-gnu-*
 	/usr/bin/sparc-unknown-linux-gnu-*
 	/usr/bin/sparc64-unknown-linux-gnu-*
 	/usr/bin/strings
 	/usr/bin/strip
-	/usr/bin/tbz2tool
-	/usr/bin/x86_64-pc-linux-gnu-*
-	/usr/bin/xpak
-	/usr/bin/yacc
-	/usr/lib*/*.a
-	/usr/lib*/*.la
-	/usr/lib*/gcc-lib/*/*/libgcj*
-	/usr/sbin/archive-conf
-	/usr/sbin/bootsplash*
-	/usr/sbin/dispatch-conf
-	/usr/sbin/emaint
-	/usr/sbin/emerge-webrsync
-	/usr/sbin/env-update
-	/usr/sbin/fb*
-	/usr/sbin/fixpackages
-	/usr/sbin/quickpkg
-	/usr/sbin/regenworld
+	/usr/lib/*.a
 	/usr/share/consolefonts/1*
 	/usr/share/consolefonts/7*
 	/usr/share/consolefonts/8*
@@ -317,4 +175,3 @@ livecd/rm:
 	/usr/share/consolefonts/s*
 	/usr/share/consolefonts/t*
 	/usr/share/consolefonts/v*
-	/usr/share/misc/*.old
