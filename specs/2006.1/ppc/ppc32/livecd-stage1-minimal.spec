@@ -2,7 +2,7 @@ subarch: ppc
 version_stamp: 2006.1
 target: livecd-stage1
 rel_type: default
-profile: default-linux/ppc/ppc32/2006.1
+profile: default-linux/ppc/ppc32
 snapshot: 2006.1
 source_subpath: default/stage3-ppc-2006.1
 livecd/use:
@@ -22,7 +22,6 @@ livecd/use:
 	unicode
 
 livecd/packages:
-	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
@@ -32,6 +31,8 @@ livecd/packages:
 	app-misc/vlock
 	app-portage/mirrorselect
 	dev-lang/python
+	dev-libs/popt
+	dev-util/dialog
 	media-gfx/fbgrab
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
@@ -63,7 +64,7 @@ livecd/packages:
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/parted
-#	sys-apps/powerpc-utils
+	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-block/partimage
@@ -71,6 +72,7 @@ livecd/packages:
 #	sys-devel/binutils-hppa64
 #	sys-devel/gcc-hppa64
 #	sys-fs/dmraid
+	sys-fs/device-mapper
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms

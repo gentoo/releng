@@ -19,18 +19,18 @@ livecd/type: gentoo-release-minimal
 livecd/bootargs: dokeymap
 livecd/gk_mainargs: --lvm2 --evms2
 
-boot/kernel: ppc32 pegasos
+boot/kernel: apple pegasos
 
-boot/kernel/ppc32/config: /root/livecd/kconfig/releases/2006.1/ppc/ppc32/installcd-2.6.16-ppc32.config
-boot/kernel/ppc32/sources: sys-kernel/gentoo-sources
-boot/kernel/ppc32/use: pcmcia usb -X png truetype
-boot/kernel/ppc32/extraversion: ppc32
-boot/kernel/ppc32/packages:
+boot/kernel/apple/config: /root/livecd/kconfig/releases/2006.1/ppc/ppc32/installcd-2.6.17-apple.config
+boot/kernel/apple/sources: sys-kernel/gentoo-sources
+boot/kernel/apple/use: pcmcia usb -X png truetype
+boot/kernel/apple/extraversion: apple
+boot/kernel/apple/packages:
 	pbbuttonsd
 	cryptsetup-luks
 	pcmcia-cs
 
-boot/kernel/pegasos/config: /root/livecd/kconfig/releases/2006.1/ppc/ppc32/installcd-2.6.15-pegasos.config
+boot/kernel/pegasos/config: /root/livecd/kconfig/releases/2006.1/ppc/ppc32/installcd-2.6.17-pegasos.config
 boot/kernel/pegasos/sources: =sys-kernel/gentoo-sources-2.6.15*
 boot/kernel/pegasos/use: usb -X png truetype
 boot/kernel/pegasos/extraversion: pegasos
