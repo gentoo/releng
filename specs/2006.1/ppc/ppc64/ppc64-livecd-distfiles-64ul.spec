@@ -1,10 +1,10 @@
 subarch: ppc64
-version_stamp: 2006.1-distfiles
+version_stamp: 2006.1-distfiles-64ul
 target: grp
 rel_type: default
-profile: default-linux/ppc/ppc64/2006.1/32bit-userland
+profile: default-linux/ppc/ppc64/2006.1/64bit-userland/
 snapshot: 2006.1
-source_subpath: default/stage3-ppc64-2006.1-32ul
+source_subpath: default/stage3-ppc64-64ul-2006.1
 grp: src
 
 grp/use: 
@@ -23,7 +23,6 @@ grp/src/packages:
 	slocate
 	udev
 	dcron
-	fcron
 	vixie-cron
 	gentoo-sources
 	vanilla-sources
@@ -38,19 +37,16 @@ grp/src/packages:
 	reiserfsprogs
 	iputils
 	lvm2
-	evms
 	mdadm
 	ethtool
 	genkernel
-	yaboot
-	pcmcia-cs
 	yaboot-static
 	usbutils
 	pciutils
-	powerpc-utils
 	iprutils
 	ssmtp
-	
+	ibm-powerpc-utils-papr
+	rp-pppoe
 
 
 
