@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2006.1/ppc/ppc64/grp/ppc64-livecd-grp-src-64ul.spec,v 1.1 2006-08-31 17:57:10 dostrow Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2006.1/ppc/ppc64/ppc64-livecd-grp-src-64ul.spec,v 1.1 2006-08-31 18:04:11 wolf31o2 Exp $
 subarch: ppc64
 version_stamp: src-64ul-2006.1
 target: grp
