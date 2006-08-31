@@ -1,5 +1,17 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.1 2006-08-31 16:43:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.2 2006-08-31 18:20:10 wolf31o2 Exp $
+
+  31 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +ppc/ppc64/distfiles-32ul.spec, +ppc/ppc64/packages-32ul.spec,
+  ppc/ppc64/stage1-32ul.spec, -ppc/ppc64/distfiles.spec,
+  sparc/sparc64/livecd-stage1.spec, ppc/ppc64/livecd-stage1-32ul.spec,
+  ppc/ppc64/stage2-32ul.spec, ppc/ppc64/stage3-32ul.spec,
+  +ppc/ppc64/livecd-stage2-32ul-minimal.spec,
+  +ppc/ppc64/livecd-stage2-32ul-universal.spec,
+  +ppc/ppc64/distfiles-64ul.spec, +ppc/ppc64/packages-64ul.spec,
+  ppc/ppc64/stage1-64ul.spec:
+  Updated ppc64 spec files with the actual ones used to build 2006.1, added
+  net-misc/iproute2 to the sparc64 InstallCD specs.
 
   31 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +ppc/ppc64/stage2-32ul.spec, +ppc/ppc64/stage3-32ul.spec,
