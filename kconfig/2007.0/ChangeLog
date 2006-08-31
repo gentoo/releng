@@ -1,5 +1,14 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.1 2006-08-31 15:08:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.2 2006-08-31 15:11:12 wolf31o2 Exp $
+
+  31 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/installcd-2.4.30.config, alpha/installcd-2.6.15.1.config,
+  hppa/installcd-2.6.16-hppa32.config, hppa/installcd-2.6.16-hppa64.config,
+  ppc/ppc32/installcd-2.6.17-apple.config,
+  sparc/sparc64/2.6.16-sparc64-generic.config,
+  ppc/ppc32/installcd-2.6.17-pegasos.config,
+  sparc/sparc64/2.6.17-sparc64-generic.config:
+  Made CONFIG_BLK_DEV_MD=y on alpha/hppa/ppc32/ppc64/sparc for bug #112962.
 
   31 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +alpha/installcd-2.4.30.config, +ppc/ppc64/installcd-2.6.15-G5.config,
