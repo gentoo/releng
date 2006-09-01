@@ -110,6 +110,7 @@ livecd/packages:
 	sys-apps/slocate
 	sys-apps/smartmontools
 	sys-block/gpart
+	sys-block/gparted
 	sys-block/partimage
 	sys-boot/grub
 	sys-boot/lilo

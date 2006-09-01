@@ -1,5 +1,12 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.5 2006-09-01 19:26:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.6 2006-09-01 19:46:55 wolf31o2 Exp $
+
+  01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/livecd-stage1-gnome.spec, amd64/livecd-stage1-gnome.spec,
+  amd64/livecd-stage1-large.spec, ppc/ppc32/livecd-stage1-gnome.spec,
+  x86/i686/livecd-stage1-gnome.spec, x86/i686/livecd-stage1-large.spec:
+  Added sys-block/gparted to the list of packages to install for the LiveCD
+  images for bug #125274.
 
   01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +amd64/livecd-stage1-large.spec, +amd64/livecd-stage2-large.spec,
