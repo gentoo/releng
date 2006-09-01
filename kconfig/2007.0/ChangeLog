@@ -1,5 +1,12 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.6 2006-09-01 20:35:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.7 2006-09-01 23:36:13 wolf31o2 Exp $
+
+  01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -sparc/sparc64/2.6.16-sparc64-generic.config,
+  +sparc/sparc64/installcd-2.6.17.config,
+  -sparc/sparc64/2.6.17-sparc64-generic.config:
+  Renamed the sparc kernel config file to match our naming conventions and
+  removed the unused config.
 
   01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ppc/ppc64/installcd-2.6.17-G5.config:
