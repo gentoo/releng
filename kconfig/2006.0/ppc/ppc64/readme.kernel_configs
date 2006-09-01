@@ -1,10 +1,7 @@
 This just explains briefly what each config is for:
 
-G5 - the kernel the release media was built with
+installcd-2.6.15.3-G5.config - the kernel the release media was built with
 new-G5 - an updated config of the above.  Use this for subsequent releases
-power_merged - ibm hardware (all)
+installcd-2.6.15.3-power.config - ibm hardware (all)
 xserv - deprecated. keeping only for historical
-
-
-
 
