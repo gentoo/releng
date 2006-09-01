@@ -44,7 +44,6 @@ boot/kernel/gentoo/packages:
 	sys-power/acpid
 	sys-fs/cryptsetup-luks
 #	net-wireless/at76c503a
-#	net-wireless/rt2500
 #	net-wireless/rtl8180
 #	net-wireless/adm8211
 	net-wireless/rt2500

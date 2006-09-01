@@ -1,5 +1,9 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.3 2006-09-01 18:43:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.4 2006-09-01 19:11:22 wolf31o2 Exp $
+
+  01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  x86/i686/livecd-stage2-gnome.spec:
+  Removed duplicated and commented net-wireless/rt2500 entry.
 
   01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ppc/ppc64/packages-32ul.spec, ppc/ppc64/stage1-32ul.spec,
