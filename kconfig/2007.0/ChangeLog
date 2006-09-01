@@ -1,5 +1,9 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.5 2006-09-01 19:51:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.6 2006-09-01 20:35:39 wolf31o2 Exp $
+
+  01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ppc/ppc64/installcd-2.6.17-G5.config:
+  Changed CONFIG_IEEE1394_ETH1394=y to CONFIG_IEEE1394_ETH1394=m.
 
   01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   hppa/installcd-2.6.16-hppa32.config, hppa/installcd-2.6.16-hppa64.config:
