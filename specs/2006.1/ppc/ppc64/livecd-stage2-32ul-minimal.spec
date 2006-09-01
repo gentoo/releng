@@ -29,7 +29,7 @@ boot/kernel: ibmpower G5
 ## IBM hardware
 boot/kernel/ibmpower/sources: sys-kernel/gentoo-sources
 boot/kernel/ibmpower/use: usb extlib
-boot/kernel/ibmpower/config: /2006.1/kernel_configs/installcd-power-gentoo.config
+boot/kernel/ibmpower/config: /2006.1/kernel_configs/installcd-2.6.17-power.config
 boot/kernel/ibmpower/console: ttyS0,9600 hvc0 hvsi0
 boot/kernel/ibmpower/machine_type: ibm
 boot/kernel/ibmpower/extraversion: ibm
@@ -37,7 +37,7 @@ boot/kernel/ibmpower/extraversion: ibm
 ## Apple hardware
 boot/kernel/G5/sources: sys-kernel/gentoo-sources
 boot/kernel/G5/use: usb extlib
-boot/kernel/G5/config: /2006.1/kernel_configs/installcd-G5-gentoo.config
+boot/kernel/G5/config: /2006.1/kernel_configs/installcd-2.6.17-G5.config
 boot/kernel/G5/console: ttyS0,57600
 boot/kernel/G5/extraversion: G5
 
