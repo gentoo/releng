@@ -1,16 +1,17 @@
-subarch: i686
+subarch: ppc
 version_stamp: installer-2007.0
 target: livecd-stage1
 rel_type: default
-profile: default-linux/x86/2007.0
+profile: default-linux/ppc/ppc32/2007.0
 snapshot: 2007.0
-source_subpath: default/stage3-i686-2007.0
+portage_overlay: /root/livecd/overlays/portage
+source_subpath: default/stage3-ppc-2007.0
 livecd/use:
 	atm
 	branding
 	livecd
 	socks5
-	
+
 livecd/packages:
 	app-admin/ide-smart
 	app-admin/logrotate
@@ -21,7 +22,7 @@ livecd/packages:
 	app-arch/mt-st
 	app-arch/unrar
 	app-arch/unzip
-	app-benchmarks/cpuburn
+#	app-benchmarks/cpuburn
 	app-cdr/cdrtools
 #	app-cdr/k3b
 	app-crypt/gnupg
@@ -49,17 +50,17 @@ livecd/packages:
 	media-sound/audacious
 	media-sound/rhythmbox
 	media-video/mplayer
-	net-analyzer/ettercap
+#	net-analyzer/ettercap
 	net-analyzer/netcat
 	net-analyzer/nmap
 	net-analyzer/tcpdump
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
-	net-analyzer/wireshark
-	net-dialup/bpalogin
+#	net-analyzer/wireshark
+#	net-dialup/bpalogin
 	net-dialup/mingetty
 	net-dialup/minicom
-	net-dialup/penggy
+#	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-fs/nfs-utils
@@ -71,21 +72,21 @@ livecd/packages:
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/rdate
-	net-misc/vconfig
-	net-misc/vpnc
+#	net-misc/vconfig
+#	net-misc/vpnc
 	net-misc/whois
-	net-nntp/pan
+#	net-nntp/pan
 	net-p2p/bittorrent
 	net-proxy/dante
 	net-proxy/tsocks
-	net-wireless/airsnort
-	net-wireless/ipw2100-firmware
-	net-wireless/ipw2200-firmware
-	net-wireless/prism54-firmware
+#	net-wireless/airsnort
+#	net-wireless/ipw2100-firmware
+#	net-wireless/ipw2200-firmware
+#	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	net-wireless/zd1201-firmware
-	sys-apps/apmd
+#	net-wireless/zd1201-firmware
+#	sys-apps/apmd
 	sys-apps/coldplug
 	sys-apps/eject
 	sys-apps/ethtool
@@ -93,23 +94,20 @@ livecd/packages:
 	sys-apps/gli
 	sys-apps/gradm
 	sys-apps/hdparm
-	sys-apps/hwsetup
 	sys-apps/iproute2
 	sys-apps/memtester
-	sys-apps/netplug
 	sys-apps/parted
-#	sys-apps/powerpc-utils
+	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/slocate
 	sys-apps/smartmontools
-	sys-block/gpart
-	sys-block/partimage
-#	sys-boot/aboot
-	sys-boot/grub
-	sys-boot/lilo
-	sys-boot/syslinux
-#	sys-boot/yaboot
+#	sys-block/gpart
+#	sys-block/partimage
+#	sys-boot/grub
+#	sys-boot/lilo
+#	sys-boot/syslinux
+	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
 	sys-devel/distcc
 #	sys-devel/gcc-hppa64
@@ -117,14 +115,14 @@ livecd/packages:
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms
-#	sys-fs/hfsplusutils
-#	sys-fs/hfsutils
+	sys-fs/hfsplusutils
+	sys-fs/hfsutils
 #	sys-fs/iprutils
 	sys-fs/jfsutils
-	sys-fs/lsscsi
+#	sys-fs/lsscsi
 	sys-fs/lvm2
 #	sys-fs/lvm-user
-#	sys-fs/mac-fdisk
+	sys-fs/mac-fdisk
 	sys-fs/mdadm
 #	sys-fs/multipath-tools
 	sys-fs/ntfsprogs
@@ -133,10 +131,10 @@ livecd/packages:
 	sys-fs/xfsprogs
 	sys-kernel/genkernel
 	sys-libs/gpm
-	sys-power/acpid
+#	sys-power/acpid
 #	sys-power/apmd
 	sys-process/vixie-cron
-	www-client/links
+#	www-client/links
 	www-client/mozilla-firefox
 	x11-base/xorg-x11
 	x11-drivers/synaptics

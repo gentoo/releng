@@ -1,18 +1,18 @@
 subarch: ppc64
 target: livecd-stage2
 rel_type: default
-snapshot: 2006.1
-version_stamp: minimal-2006.1
-profile: default-linux/ppc/ppc64/2006.1/32bit-userland
-source_subpath: default/livecd-stage1-ppc64-32ul-2006.1/
+snapshot: 2007.0
+version_stamp: minimal-2007.0
+profile: default-linux/ppc/ppc64/2007.0/32bit-userland
+source_subpath: default/livecd-stage1-ppc64-32ul-2007.0/
 
 
 chost: powerpc-unknown-linux-gnu
 cflags: -O2 -pipe
 cxxflags: -O2 -pipe
 
-livecd/readme: /2006.1/overlay/README.txt
-livecd/overlay: /2006.1/minimal-overlay/
+livecd/readme: /2007.0/overlay/README.txt
+livecd/overlay: /2007.0/minimal-overlay/
 
 livecd/type: gentoo-release-minimal
 
@@ -20,7 +20,7 @@ livecd/gk_mainargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu- --utils-
 
 livecd/fstype: squashfs 
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
-livecd/iso: /root/install-ppc64-minimal-2006.1.iso
+livecd/iso: /root/install-ppc64-minimal-2007.0.iso
 
 livecd/devmanager: udev
 
@@ -29,7 +29,7 @@ boot/kernel: ibmpower G5
 ## IBM hardware
 boot/kernel/ibmpower/sources: sys-kernel/gentoo-sources
 boot/kernel/ibmpower/use: usb extlib
-boot/kernel/ibmpower/config: /2006.1/kernel_configs/installcd-power-gentoo.config
+boot/kernel/ibmpower/config: /2007.0/kernel_configs/installcd-power-gentoo.config
 boot/kernel/ibmpower/console: ttyS0,9600 hvc0 hvsi0
 boot/kernel/ibmpower/machine_type: ibm
 boot/kernel/ibmpower/extraversion: ibm
@@ -37,7 +37,7 @@ boot/kernel/ibmpower/extraversion: ibm
 ## Apple hardware
 boot/kernel/G5/sources: sys-kernel/gentoo-sources
 boot/kernel/G5/use: usb extlib
-boot/kernel/G5/config: /2006.1/kernel_configs/installcd-G5-gentoo.config
+boot/kernel/G5/config: /2007.0/kernel_configs/installcd-G5-gentoo.config
 boot/kernel/G5/console: ttyS0,57600
 boot/kernel/G5/extraversion: G5
 

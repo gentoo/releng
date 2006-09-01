@@ -1,25 +1,25 @@
 subarch: amd64
-version_stamp: 2006.1
+version_stamp: 2007.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/amd64/2006.1/desktop
-snapshot: 2006.1
-source_subpath: default/livecd-stage1-amd64-installer-2006.1
+profile: default-linux/amd64/2007.0/desktop
+snapshot: 2007.0
+source_subpath: default/livecd-stage1-amd64-installer-2007.0
 
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar.bz2
-livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-2006.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-2007.0.iso
 livecd/splash_type: gensplash
-livecd/splash_theme: livecd-2006.1
+livecd/splash_theme: livecd-2007.0
 livecd/xdm: gdm
 livecd/xsession: gnome
-livecd/fsscript: /root/livecd/scripts/2006.1/livecd.sh
+livecd/fsscript: /root/livecd/scripts/2007.0/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
-livecd/volid: Gentoo Linux 2006.1 amd64 LiveCD
+livecd/volid: Gentoo Linux 2007.0 amd64 LiveCD
 
-livecd/overlay: /root/livecd/overlays/livecd/2006.1
+livecd/overlay: /root/livecd/overlays/livecd/2007.0
 livecd/root_overlay: /root/livecd/overlays/root-livecd
 
 livecd/bootargs: dokeymap
@@ -29,7 +29,7 @@ livecd/gk_mainargs: --makeopts=-j16 --lvm2 --dmraid --evms2
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2006.1/amd64/livecd-2.6.17.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/amd64/livecd-2.6.17.config
 
 boot/kernel/gentoo/use: pcmcia usb oss atm
 

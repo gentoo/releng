@@ -1,10 +1,10 @@
 subarch: ppc
-version_stamp: 2006.1
+version_stamp: 2007.0
 target: grp
 rel_type: default
-profile: default-linux/ppc/ppc32/2006.1
-snapshot: 2006.1
-source_subpath: default/stage3-ppc-2006.1
+profile: default-linux/ppc/ppc32/2007.0
+snapshot: 2007.0
+source_subpath: default/stage3-ppc-2007.0
 grp: src
 
 grp/use:

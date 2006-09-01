@@ -1,17 +1,17 @@
 subarch: alpha
-version_stamp: 2006.1
+version_stamp: 2007.0
 target: livecd-stage2
 rel_type: default
 profile: default-linux/alpha/no-nptl
-snapshot: 2006.1
-source_subpath: default/livecd-stage1-alpha-2006.1
+snapshot: 2007.0
+source_subpath: default/livecd-stage1-alpha-2007.0
 
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/aboot-0.9-r1-cdtar.tar.bz2
 
-livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-2006.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-2007.0.iso
 
-livecd/volid: Gentoo Linux alpha 2006.1
+livecd/volid: Gentoo Linux alpha 2007.0
 livecd/type: gentoo-release-minimal
 
 #livecd/overlay: /root/livecd/overlays/alpha-minimal
@@ -21,13 +21,13 @@ livecd/gk_mainargs: --lvm2 --dmraid --evms2
 
 boot/kernel: gentoo gentoo2.4
 boot/kernel/gentoo/sources: vanilla-sources
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2006.1/alpha/installcd-2.6.15.1.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/alpha/installcd-2.6.15.1.config
 boot/kernel/gentoo/use: usb -X png truetype
 boot/kernel/gentoo/packages:
 	cryptsetup-luks
 
 boot/kernel/gentoo2.4/sources: =vanilla-sources-2.4*
-boot/kernel/gentoo2.4/config: /root/livecd/kconfig/releases/2006.1/alpha/installcd-2.4.30.config
+boot/kernel/gentoo2.4/config: /root/livecd/kconfig/releases/2007.0/alpha/installcd-2.4.30.config
 boot/kernel/gentoo2.4/use: usb -X png truetype
 boot/kernel/gentoo2.4/packages:
 	devfsd
@@ -217,24 +217,24 @@ livecd/rm:
 	/etc/make.profile
 	/etc/man.conf
 	/etc/resolv.conf
-	/etc/splash/livecd-2006.1/12*
-	/etc/splash/livecd-2006.1/14*
-	/etc/splash/livecd-2006.1/16*
-	/etc/splash/livecd-2006.1/19*
-	/etc/splash/livecd-2006.1/6*
-	/etc/splash/livecd-2006.1/8*
-	/etc/splash/livecd-2006.1/images/background-12*
-	/etc/splash/livecd-2006.1/images/background-14*
-	/etc/splash/livecd-2006.1/images/background-16*
-	/etc/splash/livecd-2006.1/images/background-19*
-	/etc/splash/livecd-2006.1/images/background-6*
-	/etc/splash/livecd-2006.1/images/background-8*
-	/etc/splash/livecd-2006.1/images/verbose-12*
-	/etc/splash/livecd-2006.1/images/verbose-14*
-	/etc/splash/livecd-2006.1/images/verbose-16*
-	/etc/splash/livecd-2006.1/images/verbose-19*
-	/etc/splash/livecd-2006.1/images/verbose-6*
-	/etc/splash/livecd-2006.1/images/verbose-8*
+	/etc/splash/livecd-2007.0/12*
+	/etc/splash/livecd-2007.0/14*
+	/etc/splash/livecd-2007.0/16*
+	/etc/splash/livecd-2007.0/19*
+	/etc/splash/livecd-2007.0/6*
+	/etc/splash/livecd-2007.0/8*
+	/etc/splash/livecd-2007.0/images/background-12*
+	/etc/splash/livecd-2007.0/images/background-14*
+	/etc/splash/livecd-2007.0/images/background-16*
+	/etc/splash/livecd-2007.0/images/background-19*
+	/etc/splash/livecd-2007.0/images/background-6*
+	/etc/splash/livecd-2007.0/images/background-8*
+	/etc/splash/livecd-2007.0/images/verbose-12*
+	/etc/splash/livecd-2007.0/images/verbose-14*
+	/etc/splash/livecd-2007.0/images/verbose-16*
+	/etc/splash/livecd-2007.0/images/verbose-19*
+	/etc/splash/livecd-2007.0/images/verbose-6*
+	/etc/splash/livecd-2007.0/images/verbose-8*
 	/lib*/*.a
 	/lib*/*.la
 	/lib*/cpp

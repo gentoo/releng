@@ -1,10 +1,10 @@
 subarch: ppc
-version_stamp: 2006.1
+version_stamp: 2007.0
 target: livecd-stage1
 rel_type: default
 profile: default-linux/ppc/ppc32
-snapshot: 2006.1
-source_subpath: default/stage3-ppc-2006.1
+snapshot: 2007.0
+source_subpath: default/stage3-ppc-2007.0
 livecd/use:
 	-*
 	atm

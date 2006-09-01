@@ -1,17 +1,17 @@
 subarch: ppc
-version_stamp: 2006.1
+version_stamp: 2007.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/ppc/ppc32/2006.1
-snapshot: 2006.1
-source_subpath: default/livecd-stage1-ppc-2006.1
+profile: default-linux/ppc/ppc32/2007.0
+snapshot: 2007.0
+source_subpath: default/livecd-stage1-ppc-2007.0
 
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 
-livecd/iso: /var/tmp/catalyst/builds/default/install-ppc-universal-2006.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-ppc-universal-2007.0.iso
 
-livecd/volid: Gentoo Linux 2006.1 PPC
+livecd/volid: Gentoo Linux 2007.0 PPC
 livecd/type: gentoo-release-universal
 
 livecd/overlay: /root/livecd/overlays/ppc32-universal
@@ -21,7 +21,7 @@ livecd/gk_mainargs: --lvm2 --evms2
 
 boot/kernel: ppc32 pegasos
 
-boot/kernel/ppc32/config: /root/livecd/kconfig/releases/2006.1/ppc/ppc32/installcd-2.6.16-ppc32.config
+boot/kernel/ppc32/config: /root/livecd/kconfig/releases/2007.0/ppc/ppc32/installcd-2.6.16-ppc32.config
 boot/kernel/ppc32/sources: sys-kernel/gentoo-sources
 boot/kernel/ppc32/use: pcmcia usb -X png truetype
 boot/kernel/ppc32/extraversion: ppc32
@@ -30,7 +30,7 @@ boot/kernel/ppc32/packages:
 	cryptsetup-luks
 	pcmcia-cs
 
-boot/kernel/pegasos/config: /root/livecd/kconfig/releases/2006.1/ppc/ppc32/installcd-2.6.15-pegasos.config
+boot/kernel/pegasos/config: /root/livecd/kconfig/releases/2007.0/ppc/ppc32/installcd-2.6.15-pegasos.config
 boot/kernel/pegasos/sources: =sys-kernel/gentoo-sources-2.6.15*
 boot/kernel/pegasos/use: usb -X png truetype
 boot/kernel/pegasos/extraversion: pegasos
@@ -219,24 +219,24 @@ livecd/rm:
 	/etc/make.profile
 	/etc/man.conf
 	/etc/resolv.conf
-	/etc/splash/livecd-2006.1/12*
-	/etc/splash/livecd-2006.1/14*
-	/etc/splash/livecd-2006.1/16*
-	/etc/splash/livecd-2006.1/19*
-	/etc/splash/livecd-2006.1/6*
-	/etc/splash/livecd-2006.1/8*
-	/etc/splash/livecd-2006.1/images/background-12*
-	/etc/splash/livecd-2006.1/images/background-14*
-	/etc/splash/livecd-2006.1/images/background-16*
-	/etc/splash/livecd-2006.1/images/background-19*
-	/etc/splash/livecd-2006.1/images/background-6*
-	/etc/splash/livecd-2006.1/images/background-8*
-	/etc/splash/livecd-2006.1/images/verbose-12*
-	/etc/splash/livecd-2006.1/images/verbose-14*
-	/etc/splash/livecd-2006.1/images/verbose-16*
-	/etc/splash/livecd-2006.1/images/verbose-19*
-	/etc/splash/livecd-2006.1/images/verbose-6*
-	/etc/splash/livecd-2006.1/images/verbose-8*
+	/etc/splash/livecd-2007.0/12*
+	/etc/splash/livecd-2007.0/14*
+	/etc/splash/livecd-2007.0/16*
+	/etc/splash/livecd-2007.0/19*
+	/etc/splash/livecd-2007.0/6*
+	/etc/splash/livecd-2007.0/8*
+	/etc/splash/livecd-2007.0/images/background-12*
+	/etc/splash/livecd-2007.0/images/background-14*
+	/etc/splash/livecd-2007.0/images/background-16*
+	/etc/splash/livecd-2007.0/images/background-19*
+	/etc/splash/livecd-2007.0/images/background-6*
+	/etc/splash/livecd-2007.0/images/background-8*
+	/etc/splash/livecd-2007.0/images/verbose-12*
+	/etc/splash/livecd-2007.0/images/verbose-14*
+	/etc/splash/livecd-2007.0/images/verbose-16*
+	/etc/splash/livecd-2007.0/images/verbose-19*
+	/etc/splash/livecd-2007.0/images/verbose-6*
+	/etc/splash/livecd-2007.0/images/verbose-8*
 	/lib*/*.a
 	/lib*/*.la
 	/lib*/cpp
