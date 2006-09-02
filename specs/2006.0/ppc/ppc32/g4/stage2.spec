@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2006.0/ppc/ppc32/stage2-G4.spec,v 1.1 2006-02-22 23:09:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2006.0/ppc/ppc32/g4/stage2.spec,v 1.1 2006-09-02 00:00:46 wolf31o2 Exp $
 subarch: g4
 target: stage2
 version_stamp: 2006.0
