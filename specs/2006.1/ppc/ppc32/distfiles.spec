@@ -9,7 +9,16 @@ grp: src
 
 grp/use:
 	-java
+	nptl
+	nptlonly
 	dvdr
+	samba
+	xorg
+	dri
+	dbus
+	hal
+	bzip2
+	qt3
 
 grp/src/type: srcset
 grp/src/packages:
