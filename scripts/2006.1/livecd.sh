@@ -12,3 +12,6 @@ gconftool-2 --direct \
 	--config-source xml:readwrite:/usr/livecd/gconf/gconf.xml.defaults \
 	--type string --set /desktop/gnome/background/picture_filename \
 	/usr/share/pixmaps/gentoo-livecd-2006.1/gentoo-livecd-2006.1-1024x768.png
+
+sed -i '/^PORTDIR_OVERLAY/d' /etc/make.conf
+rm -rf /root/catalyst
