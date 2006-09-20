@@ -1,5 +1,9 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.7 2006-09-01 23:36:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.8 2006-09-20 13:53:54 wolf31o2 Exp $
+
+  20 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  x86/livecd-2.6.17.config:
+  Added AGPGART support to the LiveCD kernel for x86.
 
   01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -sparc/sparc64/2.6.16-sparc64-generic.config,
