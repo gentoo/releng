@@ -1,0 +1,9 @@
+#!/bin/bash
+
+INSTALL_DIR=/opt/installer
+export PYTHONPATH="${INSTALL_DIR}"
+
+cd ${INSTALL_DIR}/fe/gtk
+./gtkfe.py
+
+

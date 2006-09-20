@@ -1,0 +1,35 @@
+diff -urN livecd-tools-1.0.33.orig/openglify livecd-tools-1.0.33/openglify
+--- livecd-tools-1.0.33.orig/openglify	2006-07-19 16:55:42.000000000 -0400
++++ livecd-tools-1.0.33/openglify	2006-07-20 17:42:38.000000000 -0400
+@@ -9,14 +9,25 @@
+ #move symlinks to a malleable /etc/opengl directory.
+ install -d test/lib/modules/extensions
+ 
+-rm /usr/lib/libGL{,core}.{a,so}* > /dev/null 2>&1
+-rm /usr/lib/modules/extensions/libglx* > /dev/null 2>&1
++rm -f /usr/lib/libGL{,core}.{a,so}* > /dev/null 2>&1
++rm -f /usr/lib/modules/extensions/libglx* > /dev/null 2>&1
++rm -f /usr/lib/xorg/modules/extensions/libglx* > /dev/null 2>&1
+ 
+ ln -sf /etc/opengl/lib/libGL.so /usr/lib/libGL.so
+ ln -sf /etc/opengl/lib/libGL.so.1 /usr/lib/libGL.so.1
+ ln -sf /etc/opengl/lib/libGLcore.so /usr/lib/libGLcore.so
+ ln -sf /etc/opengl/lib/libGLcore.so.1 /usr/lib/libGLcore.so.1
+-ln -sf /etc/opengl/lib/modules/extensions/libglx.so \
+-	/usr/lib/modules/extensions/libglx.so
+-ln -sf /etc/opengl/lib/modules/extensions/libglx.a \
+-	/usr/lib/modules/extensions/libglx.a
++if [ -d /usr/lib/modules/extensions ]
++then
++	ln -sf /etc/opengl/lib/modules/extensions/libglx.so \
++		/usr/lib/modules/extensions/libglx.so
++	ln -sf /etc/opengl/lib/modules/extensions/libglx.a \
++		/usr/lib/modules/extensions/libglx.a
++elif [ -d /usr/lib/xorg/modules/extensions ]
++then
++	ln -sf /etc/opengl/lib/modules/extensions/libglx.so \
++		/usr/lib/xorg/modules/extensions/libglx.so
++	ln -sf /etc/opengl/lib/modules/extensions/libglx.a \
++		/usr/lib/xorg/modules/extensions/libglx.a
++fi
++

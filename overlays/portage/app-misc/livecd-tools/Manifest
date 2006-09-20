@@ -1,0 +1,6 @@
+MD5 462ab771e09cf550c4758f18dea991bd ChangeLog 15051
+MD5 3637cb30d2050017d6b921bbcd0e0031 files/digest-livecd-tools-1.0.33-r2 70
+MD5 6bfa5757a1946c189abf2dfc7d16b009 files/livecd-tools-1.0.33-eselect.patch 742
+MD5 a78751d8b4f5392c021399bc2890d090 files/livecd-tools-1.0.33-openglify.patch 1536
+MD5 cafb9cecadb1105bbd3ba8b8dcb8276b livecd-tools-1.0.33-r2.ebuild 1407
+MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
