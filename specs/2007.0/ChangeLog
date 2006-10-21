@@ -1,5 +1,15 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.6 2006-09-01 19:46:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.7 2006-10-21 12:36:01 wolf31o2 Exp $
+
+  21 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/livecd-stage1-gnome.spec, alpha/livecd-stage1-minimal.spec,
+  amd64/livecd-stage1-gnome.spec, amd64/livecd-stage1-large.spec,
+  amd64/livecd-stage1-minimal.spec, hppa/livecd-stage1-minimal.spec,
+  ia64/livecd-stage1-minimal.spec, ppc/ppc32/livecd-stage1-gnome.spec,
+  ppc/ppc32/livecd-stage1-minimal.spec, sparc/sparc64/livecd-stage1.spec,
+  x86/i686/livecd-stage1-gnome.spec, ppc/ppc64/livecd-stage1-32ul.spec,
+  x86/i686/livecd-stage1-large.spec, x86/livecd-stage1-minimal.spec:
+  Added sys-apps/sdparm to livecd-stage1 on all arches for bug #152183.
 
   01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/livecd-stage1-gnome.spec, amd64/livecd-stage1-gnome.spec,

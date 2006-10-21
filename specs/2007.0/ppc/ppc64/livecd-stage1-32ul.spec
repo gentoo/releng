@@ -59,6 +59,7 @@ livecd/packages:
 	sys-apps/parted
 	sys-apps/ibm-powerpc-utils
 	sys-apps/ibm-powerpc-utils-papr
+	sys-apps/sdparm
 	sys-block/partimage
 	sys-boot/yaboot
 	sys-fs/dosfstools

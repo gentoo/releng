@@ -100,6 +100,7 @@ livecd/packages:
 	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
+	sys-apps/sdparm
 	sys-apps/slocate
 	sys-apps/smartmontools
 #	sys-block/gpart
