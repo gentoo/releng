@@ -1,5 +1,17 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.7 2006-10-21 12:36:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.8 2006-10-23 15:58:21 wolf31o2 Exp $
+
+  23 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/livecd-stage2-minimal.spec,
+  ppc/ppc64/livecd-stage2-32ul-minimal.spec,
+  alpha/livecd-stage2-universal.spec, amd64/livecd-stage2-minimal.spec,
+  hppa/livecd-stage2-minimal.spec, hppa/livecd-stage2-universal.spec,
+  ia64/livecd-stage2-minimal.spec, ppc/ppc32/livecd-stage2-minimal.spec,
+  ppc/ppc32/livecd-stage2-universal.spec,
+  sparc/sparc64/livecd-stage2-minimal.spec, x86/livecd-stage2-minimal.spec,
+  ppc/ppc64/livecd-stage2-32ul-universal.spec,
+  sparc/sparc64/livecd-stage2-universal.spec:
+  Added kgcc64 to unmerge on minimal/universal on all arches.
 
   21 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/livecd-stage1-gnome.spec, alpha/livecd-stage1-minimal.spec,

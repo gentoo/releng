@@ -34,6 +34,7 @@ livecd/unmerge:
 	gcc-sparc64
 	gettext
 	groff
+	kgcc64
 	libperl
 	libtool
 	linux-headers

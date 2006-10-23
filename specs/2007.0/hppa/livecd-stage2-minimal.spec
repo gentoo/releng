@@ -63,6 +63,7 @@ livecd/unmerge:
 	groff
 #	grub
 	help2man
+	kgcc64
 #	lcms
 #	ld.so
 #	lib-compat
