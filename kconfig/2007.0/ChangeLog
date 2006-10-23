@@ -1,5 +1,9 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.8 2006-09-20 13:53:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.9 2006-10-23 15:38:33 wolf31o2 Exp $
+
+  23 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livecd-2.6.17.config:
+  Updated kernel config to 2.6.17-gentoo-r7.
 
   20 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   x86/livecd-2.6.17.config:
