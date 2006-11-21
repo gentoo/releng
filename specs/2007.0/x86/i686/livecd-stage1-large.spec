@@ -22,6 +22,7 @@ livecd/packages:
 	app-arch/unzip
 	app-benchmarks/cpuburn
 	app-cdr/cdrtools
+	app-cdr/gnomebaker
 	app-cdr/k3b
 	app-crypt/gnupg
 	app-editors/bluefish
@@ -47,10 +48,11 @@ livecd/packages:
 	mail-client/mozilla-thunderbird
 	mail-client/sylpheed
 	mail-client/sylpheed-claws
+	media-gfx/blender
 	media-gfx/fbgrab
 	media-gfx/gimp
 	media-gfx/gtkam
-#	media-gfx/inkscape
+	media-gfx/inkscape
 	media-sound/audacious
 	media-sound/easytag
 	media-sound/rhythmbox
