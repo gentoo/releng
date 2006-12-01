@@ -1,5 +1,10 @@
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.10 2006-12-01 18:59:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.11 2006-12-01 19:08:45 gustavoz Exp $
+
+  01 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc/sparc64/livecd-stage1.spec:
+  Commented out for sparc since they're not yet stable or even ~sparc
+  keyworded: jfsutils netplug pptpclient fbgrab ntfsprogs xfsprogs vconfig
 
   01 Dec 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   alpha/livecd-stage1-gnome.spec, alpha/livecd-stage1-minimal.spec,

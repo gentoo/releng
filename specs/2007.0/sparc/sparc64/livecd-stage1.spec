@@ -32,20 +32,20 @@ livecd/packages:
 	app-misc/vlock
 	app-portage/mirrorselect
 	dev-lang/python
-	media-gfx/fbgrab
+#	media-gfx/fbgrab
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 #	net-dialup/bpalogin
 	net-dialup/mingetty
 #	net-dialup/penggy
-	net-dialup/pptpclient
+#	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-fs/nfs-utils
 	net-irc/irssi
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/rdate
-	net-misc/vconfig
+#	net-misc/vconfig
 #	net-wireless/ipw2100-firmware
 #	net-wireless/ipw2200-firmware
 #	net-wireless/prism54-firmware
@@ -62,7 +62,7 @@ livecd/packages:
 	sys-apps/iproute2
 	sys-apps/memtester
 	sys-apps/lssbus
-	sys-apps/netplug
+#	sys-apps/netplug
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
@@ -79,7 +79,7 @@ livecd/packages:
 #	sys-fs/hfsplusutils
 #	sys-fs/hfsutils
 #	sys-fs/iprutils
-	sys-fs/jfsutils
+#	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
 #	sys-fs/lvm-user
@@ -89,7 +89,7 @@ livecd/packages:
 	sys-fs/ntfsprogs
 	sys-fs/raidtools
 	sys-fs/reiserfsprogs
-	sys-fs/xfsprogs
+#	sys-fs/xfsprogs
 	sys-libs/gpm
 #	sys-power/acpid
 #	sys-power/apmd
