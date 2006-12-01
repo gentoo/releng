@@ -95,6 +95,7 @@ livecd/packages:
 	sys-apps/gradm
 	sys-apps/hdparm
 	sys-apps/iproute2
+#	sys-apps/lssbus
 	sys-apps/memtester
 	sys-apps/parted
 	sys-apps/powerpc-utils

@@ -60,6 +60,7 @@ livecd/packages:
 	sys-apps/hdparm
 	sys-apps/hwsetup
 	sys-apps/iproute2
+#	sys-apps/lssbus
 #	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/parted
