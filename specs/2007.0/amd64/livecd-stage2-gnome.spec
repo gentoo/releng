@@ -7,7 +7,7 @@ snapshot: 2007.0
 source_subpath: default/livecd-stage1-amd64-installer-2007.0
 
 livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-2007.0.iso
 livecd/splash_type: gensplash
 livecd/splash_theme: livecd-2007.0
@@ -23,27 +23,33 @@ livecd/overlay: /root/livecd/overlays/livecd/2007.0
 livecd/root_overlay: /root/livecd/overlays/root-livecd
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --lvm2 --dmraid --evms2
-#--unionfs-dev
+livecd/gk_mainargs: --makeopts=-j16 --lvm2 --dmraid --evms2 --unionfs-dev
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/amd64/livecd-2.6.17.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/amd64/livecd-2.6.19.config
 
 boot/kernel/gentoo/use: pcmcia usb oss atm
 
 boot/kernel/gentoo/packages:
 	media-gfx/splashutils
 	media-gfx/splash-themes-livecd
-	sys-apps/pcmciautils
-	sys-power/acpid
-	sys-fs/cryptsetup-luks
-	net-wireless/rt2500
-#	net-wireless/ipw3945
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
+#	net-dialup/fcdsl
+#	net-dialup/fritzcapi
+#	net-dialup/globespan-adsl
+#	net-dialup/slmodem
+#	net-wireless/acx
+	net-wireless/hostap-utils
+	net-wireless/ipw3945
+	net-wireless/madwifi-ng-tools
+	net-wireless/rt2500
+#	net-wireless/rtl8187
+	sys-apps/pcmciautils
+	sys-fs/cryptsetup-luks
 
 livecd/unmerge:
 	sys-kernel/gentoo-sources
