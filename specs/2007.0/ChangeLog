@@ -1,5 +1,45 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.20 2007-02-09 23:03:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.21 2007-02-09 23:18:43 wolf31o2 Exp $
+
+  09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +alpha/installcd-stage1-minimal.spec,
+  +alpha/installcd-stage2-minimal.spec,
+  +alpha/installcd-stage2-universal.spec, -alpha/livecd-stage1-minimal.spec,
+  -alpha/livecd-stage2-minimal.spec, -alpha/livecd-stage2-universal.spec,
+  +amd64/installcd-stage1-minimal.spec,
+  +amd64/installcd-stage2-minimal.spec, -amd64/livecd-stage1-large.spec,
+  -amd64/livecd-stage1-minimal.spec, -amd64/livecd-stage2-large.spec,
+  -amd64/livecd-stage2-minimal.spec, +amd64/livedvd-stage1-large.spec,
+  +amd64/livedvd-stage2-large.spec, +hppa/installcd-stage1-minimal.spec,
+  +hppa/installcd-stage2-minimal.spec,
+  +hppa/installcd-stage2-universal.spec, -hppa/livecd-stage1-minimal.spec,
+  -hppa/livecd-stage2-minimal.spec, -hppa/livecd-stage2-universal.spec,
+  +ia64/installcd-stage1-minimal.spec, +ia64/installcd-stage2-minimal.spec,
+  -ia64/livecd-stage1-minimal.spec, -ia64/livecd-stage2-minimal.spec,
+  +ppc/ppc32/installcd-stage1-minimal.spec,
+  +ppc/ppc32/installcd-stage2-minimal.spec,
+  +ppc/ppc32/installcd-stage2-universal.spec,
+  -ppc/ppc32/livecd-stage1-minimal.spec,
+  -ppc/ppc32/livecd-stage2-minimal.spec,
+  -ppc/ppc32/livecd-stage2-universal.spec,
+  +ppc/ppc64/installcd-stage1-minimal.spec,
+  +ppc/ppc64/installcd-stage2-minimal.spec,
+  +ppc/ppc64/installcd-stage2-universal.spec,
+  -ppc/ppc64/livecd-stage1-32ul.spec,
+  -ppc/ppc64/livecd-stage2-32ul-minimal.spec,
+  -ppc/ppc64/livecd-stage2-32ul-universal.spec,
+  +sparc/sparc64/installcd-stage1-minimal.spec,
+  +sparc/sparc64/installcd-stage2-minimal.spec,
+  +sparc/sparc64/installcd-stage2-universal.spec,
+  -sparc/sparc64/livecd-stage1.spec,
+  -sparc/sparc64/livecd-stage2-minimal.spec,
+  -sparc/sparc64/livecd-stage2-universal.spec,
+  -x86/i686/livecd-stage1-large.spec, -x86/i686/livecd-stage2-large.spec,
+  +x86/i686/livedvd-stage1-large.spec, +x86/i686/livedvd-stage2-large.spec,
+  +x86/installcd-stage1-minimal.spec, +x86/installcd-stage2-minimal.spec,
+  -x86/livecd-stage1-minimal.spec, -x86/livecd-stage2-minimal.spec:
+  Rename the various livecd-stage* spec files to installcd-stage*,
+  livecd-stage*, and livedvd-stage* depending on which one it fits.
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/livecd-stage1-gnome.spec, amd64/livecd-stage2-gnome.spec:
