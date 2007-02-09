@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.18 2007-02-09 22:47:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.19 2007-02-09 22:49:56 wolf31o2 Exp $
+
+  09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/livecd-stage2-gnome.spec:
+  Update Alpha LiveCD livecd-stage2 to use 2.6.19 kernel config.
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/livecd-stage1-gnome.spec:

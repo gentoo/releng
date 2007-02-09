@@ -5,7 +5,6 @@ rel_type: default
 profile: default-linux/alpha/2007.0/desktop
 snapshot: 2007.0
 source_subpath: default/livecd-stage1-alpha-installer-2007.0
-portage_overlay: /root/livecd/overlays/alpha-portage
 
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/aboot-0.9-r1-cdtar.tar.bz2
@@ -28,25 +27,17 @@ livecd/bootargs: dokeymap
 livecd/gk_mainargs: --lvm2 --dmraid --evms2
 
 boot/kernel: gentoo
-#gentoo2.4
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/alpha/livecd-2.6.16.19.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/alpha/livecd-2.6.19.config
 boot/kernel/gentoo/use: usb oss atm
 boot/kernel/gentoo/packages:
-	sys-fs/cryptsetup-luks
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-
-#boot/kernel/gentoo2.4/sources: =vanilla-sources-2.4*
-#boot/kernel/gentoo2.4/config: /root/livecd/kconfig/releases/2007.0/alpha/livecd-2.4.32.config
-#boot/kernel/gentoo2.4/use: usb -X png truetype
-#boot/kernel/gentoo2.4/packages:
-#	sys-fs/devfsd
-#	sys-fs/cryptsetup-luks
+	sys-fs/cryptsetup-luks
 
 livecd/unmerge:
-	sys-kernel/vanilla-sources
+	sys-kernel/gentoo-sources
 
 livecd/empty:
 	/var/tmp
