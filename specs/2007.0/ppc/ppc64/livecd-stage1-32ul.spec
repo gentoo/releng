@@ -49,7 +49,6 @@ livecd/packages:
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/apmd
-	sys-apps/coldplug
 	sys-apps/eject
 	sys-apps/ethtool
 	sys-apps/fxload

@@ -86,7 +86,6 @@ livecd/packages:
 	net-wireless/wpa_supplicant
 	net-wireless/zd1201-firmware
 	sys-apps/apmd
-	sys-apps/coldplug
 	sys-apps/eject
 	sys-apps/ethtool
 	sys-apps/fxload
