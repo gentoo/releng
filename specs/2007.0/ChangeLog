@@ -1,5 +1,15 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.14 2007-02-09 18:00:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.15 2007-02-09 20:20:11 wolf31o2 Exp $
+
+  09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  x86/i686/livecd-stage1-gnome.spec, x86/i686/livecd-stage2-gnome.spec:
+  Removed all lines where a commented package was commented due to space
+  constraints from livecd-stage1, changed Mozilla products and Openoffice to
+  use the binary versions for both licensing and compile-time reasons, added
+  net-firewall/iptables for bug #165109, added sys-apps/sg3_utils, changed to
+  use the correct profile, changed livecd-stage2 to use the elilo-enabled
+  cdtar, changed to use a 2.6.19 kernel config, and alphabetized the external
+  kernel modules packages.
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +alpha/stage2-desktop.spec, +alpha/stage3-desktop.spec,
