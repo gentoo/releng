@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.16 2007-02-09 20:55:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.17 2007-02-09 22:37:25 wolf31o2 Exp $
+
+  09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  x86/i686/livecd-stage1-gnome.spec, x86/i686/livecd-stage1-large.spec:
+  Removed x11-misc/xdialog from livecd-stage1, since it wasn't supposed to be
+  there.
 
   09 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   x86/i686/livecd-stage1-gnome.spec, x86/i686/livecd-stage1-large.spec,

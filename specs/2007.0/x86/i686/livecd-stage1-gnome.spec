@@ -123,7 +123,6 @@ livecd/packages:
 	www-client/mozilla-firefox-bin
 	x11-base/xorg-x11
 	x11-drivers/synaptics
-	x11-misc/xdialog
 	x11-misc/xscreensaver
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
