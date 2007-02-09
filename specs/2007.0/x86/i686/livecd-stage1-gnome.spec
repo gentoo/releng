@@ -78,13 +78,13 @@ livecd/packages:
 	sys-apps/gli
 	sys-apps/hdparm
 	sys-apps/hwsetup
+#	sys-apps/ibm-powerpc-utils
+#	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/parted
 #	sys-apps/powerpc-utils
-#	sys-apps/ibm-powerpc-utils
-#	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
 	sys-apps/sg3_utils
 	sys-apps/slocate
