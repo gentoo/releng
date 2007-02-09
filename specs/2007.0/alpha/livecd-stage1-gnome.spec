@@ -4,8 +4,7 @@ target: livecd-stage1
 rel_type: default
 profile: default-linux/alpha/2007.0/desktop
 snapshot: 2007.0
-source_subpath: default/stage3-alpha-2007.0
-portage_overlay: /root/livecd/overlays/alpha-portage
+source_subpath: default/stage3-alpha-desktop-2007.0
 livecd/use:
 	atm
 	branding
@@ -24,47 +23,34 @@ livecd/packages:
 	app-arch/unzip
 #	app-benchmarks/cpuburn
 	app-cdr/cdrtools
-#	app-cdr/k3b
 	app-crypt/gnupg
 	app-editors/emacs
 	app-editors/vim
-#	app-editors/xemacs
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/vlock
-#	app-office/koffice
-#	app-office/openoffice
 #	app-office/openoffice-bin
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed
-#	app-text/tetex
 	dev-util/ccache
 	gnome-base/gnome
-#	kde-base/kde-meta
 	mail-client/evolution
-#	mail-client/mozilla-thunderbird
-#	mail-client/sylpheed
-#	media-gfx/gimp
+	mail-client/mozilla-thunderbird
 #	media-gfx/fbgrab
 	media-sound/audacious
-#	media-sound/rhythmbox
-	media-video/mplayer
-#	net-analyzer/ettercap
 	net-analyzer/netcat
 	net-analyzer/nmap
 	net-analyzer/tcpdump
-#	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
-	net-analyzer/wireshark
 #	net-dialup/bpalogin
 	net-dialup/mingetty
 	net-dialup/minicom
 #	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
+	net-firewall/iptables
 	net-fs/nfs-utils
-	net-fs/samba
 	net-im/gaim
 	net-irc/irssi
 	net-irc/xchat
@@ -75,11 +61,9 @@ livecd/packages:
 #	net-misc/vconfig
 #	net-misc/vpnc
 	net-misc/whois
-#	net-nntp/pan
 	net-p2p/bittorrent
 	net-proxy/dante
 	net-proxy/tsocks
-#	net-wireless/airsnort
 #	net-wireless/ipw2100-firmware
 #	net-wireless/ipw2200-firmware
 #	net-wireless/prism54-firmware
@@ -91,21 +75,20 @@ livecd/packages:
 	sys-apps/ethtool
 #	sys-apps/fxload
 	sys-apps/gli
-	sys-apps/gradm
 	sys-apps/hdparm
 	sys-apps/hwsetup
+#	sys-apps/ibm-powerpc-utils
+#	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2
 #	sys-apps/lssbus
 #	sys-apps/memtester
 	sys-apps/parted
 #	sys-apps/powerpc-utils
-#	sys-apps/ibm-powerpc-utils
-#	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
+#	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
 #	sys-block/gpart
-	sys-block/gparted
 #	sys-block/partimage
 	sys-boot/aboot
 #	sys-boot/grub
@@ -114,9 +97,7 @@ livecd/packages:
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
 	sys-devel/distcc
-#	=sys-devel/gcc-3.3*
 #	sys-devel/gcc-hppa64
-#	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 #	sys-fs/evms
@@ -124,12 +105,11 @@ livecd/packages:
 #	sys-fs/hfsutils
 #	sys-fs/iprutils
 #	sys-fs/jfsutils
-#	sys-fs/lsscsi
+	sys-fs/lsscsi
 	sys-fs/lvm2
 #	sys-fs/lvm-user
 #	sys-fs/mac-fdisk
 	sys-fs/mdadm
-#	sys-fs/multipath-tools
 #	sys-fs/ntfsprogs
 	sys-fs/raidtools
 	sys-fs/reiserfsprogs
@@ -137,15 +117,11 @@ livecd/packages:
 	sys-kernel/genkernel
 	sys-libs/gpm
 #	sys-power/acpid
-#	sys-power/apmd
 	sys-process/vixie-cron
-#	www-client/links
-#	www-client/mozilla-firefox
+	www-client/links
+	www-client/mozilla-firefox
 	x11-base/xorg-x11
 #	x11-drivers/synaptics
 	x11-misc/xscreensaver
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
-#	x11-wm/enlightenment
-#	x11-wm/fluxbox
-#	xfce-base/xfce4
