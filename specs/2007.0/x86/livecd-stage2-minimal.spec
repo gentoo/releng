@@ -7,7 +7,7 @@ snapshot: 2007.0
 source_subpath: default/livecd-stage1-x86-2007.0
 
 livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 
 livecd/iso: /var/tmp/catalyst/builds/default/install-x86-minimal-2007.0.iso
 livecd/splash_type: gensplash
@@ -22,7 +22,7 @@ livecd/gk_mainargs: --lvm2 --dmraid --evms2
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/x86/installcd-2.6.17.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/x86/installcd-2.6.19.config
 
 boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt -qt3 -qt4
 
@@ -36,11 +36,6 @@ boot/kernel/gentoo/packages:
 	net-dialup/fritzcapi
 	net-dialup/fcdsl
 	sys-fs/cryptsetup-luks
-# These were not stable at time of snapshot/release.
-#	net-wireless/at76c503a
-#	net-wireless/rtl8180
-#	net-wireless/rtl8187
-#	net-wireless/adm8211
 	net-wireless/rt2500
 	net-wireless/acx
 #	net-wireless/ipw3945
