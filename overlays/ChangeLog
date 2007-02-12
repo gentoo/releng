@@ -1,5 +1,17 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/overlays/ChangeLog,v 1.1 2007-02-12 16:44:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/overlays/ChangeLog,v 1.2 2007-02-12 21:26:55 wolf31o2 Exp $
+
+  12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +2007.0/common/overlay/installcd/docs/README,
+  +2007.0/common/overlay/installcd/snapshots/README,
+  +2007.0/common/overlay/installcd/stages/README,
+  +2007.0/common/overlay/livecd/docs/README,
+  +2007.0/common/overlay/livecd/snapshots/README,
+  +2007.0/common/overlay/livedvd/docs/README,
+  +2007.0/common/overlay/livedvd/snapshots/README,
+  +2007.0/common/overlay/livedvd/stages/README:
+  Added some initial README templates for all architectures for the various
+  release media types.
 
   12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +2007.0/common/root_overlay/home/gentoo/.nautilus/metafiles/file:%2F%2F%2F
