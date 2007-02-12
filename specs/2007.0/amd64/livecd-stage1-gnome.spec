@@ -113,7 +113,6 @@ livecd/packages:
 #	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/ntfsprogs
-	sys-fs/raidtools
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-kernel/genkernel

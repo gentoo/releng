@@ -129,7 +129,6 @@ livecd/packages:
 	sys-fs/mdadm
 #	sys-fs/multipath-tools
 	sys-fs/ntfsprogs
-	sys-fs/raidtools
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-kernel/genkernel

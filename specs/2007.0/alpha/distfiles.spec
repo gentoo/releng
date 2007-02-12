@@ -46,7 +46,6 @@ grp/src/packages:
 	sysklogd
 	metalog
 	syslog-ng
-	raidtools
 	xfsprogs
 	reiserfsprogs
 	dosfstools

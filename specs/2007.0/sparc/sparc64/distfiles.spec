@@ -32,7 +32,6 @@ grp/src/packages:
 	metalog
 	syslog-ng
 	logrotate
-	raidtools
 	mdadm
 	device-mapper
 	lvm2

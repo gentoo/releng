@@ -26,7 +26,6 @@ grp/src/packages:
 	fxload
 	syslog-ng
 	logrotate
-	raidtools
 	nfs-utils
 	jfsutils
 	xfsprogs

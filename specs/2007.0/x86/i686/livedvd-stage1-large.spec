@@ -221,7 +221,6 @@ livecd/packages:
 	sys-fs/mdadm
 	sys-fs/ntfsprogs
 	sys-fs/quota
-	sys-fs/raidtools
 	sys-fs/reiserfsprogs
 	sys-fs/xfsdump
 	sys-fs/xfsprogs

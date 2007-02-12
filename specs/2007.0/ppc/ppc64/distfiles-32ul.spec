@@ -30,7 +30,6 @@ grp/src/packages:
 	coldplug
 	syslog-ng
 	logrotate
-	raidtools
 	nfs-utils
 	jfsutils
 	xfsprogs
