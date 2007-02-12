@@ -7,5 +7,5 @@ snapshot: 2007.0
 source_subpath: default/stage1-mips4-2007.0
 
 chost: mips-unknown-linux-gnu
-cflags: -O2 -march=mips4 -pipe -fomit-frame-pointer -ftracer -fforce-addr
+cflags: -O2 -march=mips4 -pipe -mabi=32
 makeopts: -j3
