@@ -45,14 +45,14 @@ grp/src/packages:
 	bootcreator
 	dante
 	tsocks
-	pcmcia-cs
+	pcmciautils
 	pbbuttonsd
 	pciutils
 	powerpc-utils
 	powerprefs
 	cryptsetup
-        alsa-driver
-        alsa-lib
-        alsa-oss
-        alsa-utils
+	alsa-driver
+	alsa-lib
+	alsa-oss
+	alsa-utils
 	sys-apps/eject

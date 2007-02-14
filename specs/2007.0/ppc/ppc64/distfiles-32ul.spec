@@ -42,7 +42,6 @@ grp/src/packages:
 	ethtool
 	genkernel
 	yaboot
-	pcmcia-cs
 	yaboot
 	usbutils
 	pciutils

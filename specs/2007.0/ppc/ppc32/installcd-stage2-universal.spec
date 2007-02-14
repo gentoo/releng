@@ -28,7 +28,7 @@ boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/packages:
 	pbbuttonsd
 	cryptsetup-luks
-	pcmcia-cs
+	pcmciautils
 
 boot/kernel/pegasos/config: /root/livecd/kconfig/releases/2007.0/ppc/ppc32/installcd-2.6.15-pegasos.config
 boot/kernel/pegasos/sources: =sys-kernel/gentoo-sources-2.6.15*

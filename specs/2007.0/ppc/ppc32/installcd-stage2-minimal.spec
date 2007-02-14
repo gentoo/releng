@@ -28,7 +28,7 @@ boot/kernel/apple/extraversion: apple
 boot/kernel/apple/packages:
 	pbbuttonsd
 	cryptsetup-luks
-	pcmcia-cs
+	pcmciautils
 
 boot/kernel/pegasos/config: /root/livecd/kconfig/releases/2007.0/ppc/ppc32/installcd-2.6.17-pegasos.config
 boot/kernel/pegasos/sources: =sys-kernel/gentoo-sources-2.6.15*

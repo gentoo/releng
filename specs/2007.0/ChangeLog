@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.25 2007-02-14 21:34:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.26 2007-02-14 21:42:06 wolf31o2 Exp $
+
+  14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  ppc/ppc32/distfiles.spec, ppc/ppc32/installcd-stage2-minimal.spec,
+  ppc/ppc32/installcd-stage2-universal.spec, ppc/ppc64/distfiles-32ul.spec:
+  Change pcmcia-cs to pcmciautils for ppc32 and remove pcmcia-cs for ppc64.
 
   14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ppc/ppc32/installcd-stage1-minimal.spec:
