@@ -1,5 +1,8 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.23 2007-02-14 00:00:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.24 2007-02-14 19:03:08 wolf31o2 Exp $
+
+  14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> x86/stage1.spec:
+  Make sure our CHOST on the stage1 is i486-pc-linux-gnu for glibc-2.5 support.
 
   14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/installcd-stage1-minimal.spec, amd64/livecd-stage1-gnome.spec,
