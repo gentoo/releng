@@ -35,7 +35,7 @@ livecd/packages:
 	media-gfx/fbgrab
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
-#	net-dialup/bpalogin
+	net-dialup/bpalogin
 	net-dialup/mingetty
 #	net-dialup/penggy
 	net-dialup/pptpclient

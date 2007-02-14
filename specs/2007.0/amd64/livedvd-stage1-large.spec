@@ -65,7 +65,7 @@ livecd/packages:
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-analyzer/wireshark
-#	net-dialup/bpalogin
+	net-dialup/bpalogin
 	net-dialup/mingetty
 	net-dialup/minicom
 #	net-dialup/penggy
