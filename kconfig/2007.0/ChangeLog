@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.11 2007-02-12 16:35:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.12 2007-03-05 21:08:12 wolf31o2 Exp $
+
+  05 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  x86/installcd-2.6.19.config, x86/livecd-2.6.19.config:
+  Added SATA support back into the x86 configs.
 
   12 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -x86/installcd-2.6.17.config, -x86/livecd-2.6.17.config,
