@@ -25,3 +25,6 @@ case `uname -m` in
 	;;
 esac
 
+sed -i -e "/^# SPLASH_TTYS=/ s/^#//" /etc/conf.d/splash
+sed -i -e 's/type" cachedir "${spl_/type" tmpfs "${spl_/' /sbin/splash-functions.sh
+
