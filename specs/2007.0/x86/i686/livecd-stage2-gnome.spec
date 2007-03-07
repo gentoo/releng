@@ -50,9 +50,6 @@ boot/kernel/gentoo/packages:
 	sys-apps/pcmciautils
 	sys-fs/cryptsetup-luks
 
-livecd/unmerge:
-	sys-kernel/gentoo-sources
-
 livecd/empty:
 	/var/tmp
 	/var/empty

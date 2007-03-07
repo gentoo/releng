@@ -66,9 +66,6 @@ boot/kernel/pegasos/gk_kernargs: --no-initrdmodules --genzimage
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
 
-livecd/unmerge:
-	gentoo-sources
-
 livecd/empty:
 	/var/tmp
 	/var/empty

@@ -1,5 +1,13 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.27 2007-02-24 17:34:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.28 2007-03-07 01:26:46 wolf31o2 Exp $
+
+  07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/livecd-stage2-gnome.spec, amd64/livecd-stage2-gnome.spec,
+  ppc/ppc32/livecd-stage2-gnome.spec, x86/i686/livecd-stage2-gnome.spec:
+  Removed the livecd/unmerge section from the LiveCD builds since it isn't
+  nececssary, at all, and newer portage versions recreate /var/db on unmerge
+  and not just on merge, causing problems with how we were doing the LiveCD's
+  /var/db rearranging.
 
   24 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> amd64/stage1.spec:
   Changed amd64 seed to be 2006.1 instead of 2006.0.

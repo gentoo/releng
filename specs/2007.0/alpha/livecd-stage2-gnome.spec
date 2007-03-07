@@ -36,9 +36,6 @@ boot/kernel/gentoo/packages:
 	media-sound/alsa-utils
 	sys-fs/cryptsetup-luks
 
-livecd/unmerge:
-	sys-kernel/gentoo-sources
-
 livecd/empty:
 	/var/tmp
 	/var/empty
