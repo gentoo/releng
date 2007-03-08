@@ -1,5 +1,11 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.32 2007-03-08 16:37:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.33 2007-03-08 19:45:09 wolf31o2 Exp $
+
+  08 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  ppc/ppc32/livecd-stage1-gnome.spec, ppc/ppc32/livecd-stage2-gnome.spec,
+  +ppc/ppc32/stage2-desktop.spec, +ppc/ppc32/stage3-desktop.spec:
+  Added stage2 and stage3 desktop spec files, since PPC now has a desktop
+  profile.
 
   08 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/stage2-desktop.spec, amd64/stage3-desktop.spec:

@@ -2,9 +2,8 @@ subarch: ppc
 version_stamp: 2007.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/ppc/ppc32/2007.0
+profile: default-linux/ppc/ppc32/2007.0/desktop
 snapshot: 2007.0
-portage_overlay: /root/livecd/overlays/portage
 source_subpath: default/livecd-stage1-ppc-installer-2007.0
 
 livecd/fstype: squashfs
