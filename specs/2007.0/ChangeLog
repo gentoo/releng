@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.29 2007-03-08 12:07:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.30 2007-03-08 16:20:09 wolf31o2 Exp $
+
+  08 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livedvd-stage1-large.spec, x86/i686/livedvd-stage1-large.spec:
+  Added app-misc/beagle to LiveDVD specs.
 
   08 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ppc/ppc32/distfiles.spec, ppc/ppc64/distfiles-64ul.spec,

@@ -31,6 +31,7 @@ livecd/packages:
 	app-editors/emacs
 	app-editors/vim
 	app-editors/xemacs
+	app-misc/beagle
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/vlock
