@@ -24,7 +24,7 @@ livecd/gk_mainargs: --makeopts=-j16 --lvm2 --dmraid --evms2
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/amd64/installcd-2.6.17.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2007.0/amd64/installcd-2.6.19.config
 
 boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt
 
