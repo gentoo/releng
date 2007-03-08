@@ -21,7 +21,6 @@ grp/src/packages:
 	vixie-cron
 	gentoo-sources
 	vanilla-sources
-	coldplug
 	hotplug
 	fxload
 	syslog-ng

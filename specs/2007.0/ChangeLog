@@ -1,5 +1,12 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.28 2007-03-07 01:26:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.29 2007-03-08 12:07:02 wolf31o2 Exp $
+
+  08 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  ppc/ppc32/distfiles.spec, ppc/ppc64/distfiles-64ul.spec,
+  ppc/ppc32/installcd-stage1-minimal.spec,
+  ppc/ppc32/livecd-stage1-gnome.spec, sparc/sparc64/distfiles.spec,
+  ppc/ppc64/distfiles-32ul.spec:
+  Removed coldplug for everyone, since everybody has a newer udev stable now.
 
   07 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/livecd-stage2-gnome.spec, amd64/livecd-stage2-gnome.spec,

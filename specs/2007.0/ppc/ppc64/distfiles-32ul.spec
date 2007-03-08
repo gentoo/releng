@@ -27,7 +27,6 @@ grp/src/packages:
 	vixie-cron
 	gentoo-sources
 	vanilla-sources
-	coldplug
 	syslog-ng
 	logrotate
 	nfs-utils

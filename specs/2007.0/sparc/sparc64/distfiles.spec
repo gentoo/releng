@@ -21,7 +21,6 @@ grp/src/packages:
 	usbutils
 	hdparm
 	hotplug
-	coldplug
 	aumix
 	afbinit
 	xorg-x11
