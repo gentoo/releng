@@ -1,5 +1,8 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.36 2007-03-10 02:54:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.37 2007-03-10 02:56:18 wolf31o2 Exp $
+
+  10 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> ia64/stage1.spec:
+  Fix ia64 stage1 seed.
 
   10 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> ia64/stage2.spec:
   Fix the seed on ia64 stage2.
