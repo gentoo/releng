@@ -1,5 +1,12 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.37 2007-03-10 02:56:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.38 2007-03-10 02:59:39 wolf31o2 Exp $
+
+  10 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/livecd-stage1-gnome.spec, amd64/livecd-stage1-gnome.spec,
+  amd64/livedvd-stage1-large.spec, ia64/livecd-stage1-gnome.spec,
+  ppc/ppc32/livecd-stage1-gnome.spec, x86/i686/livecd-stage1-gnome.spec,
+  x86/i686/livedvd-stage1-large.spec:
+  Added sys-boot/elilo for ia64.
 
   10 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> ia64/stage1.spec:
   Fix ia64 stage1 seed.

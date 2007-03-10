@@ -91,6 +91,7 @@ livecd/packages:
 #	sys-block/gpart
 #	sys-block/partimage
 	sys-boot/aboot
+#	sys-boot/elilo
 #	sys-boot/grub
 #	sys-boot/lilo
 #	sys-boot/syslinux
