@@ -6,7 +6,6 @@ profile: default-linux/x86/2007.0/desktop
 snapshot: 2007.0
 source_subpath: default/stage3-i686-desktop-2007.0
 livecd/use:
-	atm
 	branding
 	livecd
 	socks5
@@ -53,7 +52,7 @@ livecd/packages:
 	app-office/gnucash
 	app-office/gnumeric
 	app-office/koffice
-	app-office/openoffice-bin
+	app-office/openoffice
 	app-office/scribus
 	app-pda/gtkpod
 	app-pda/ipodslave
@@ -89,7 +88,7 @@ livecd/packages:
 	kde-base/kde-meta
 	kde-base/kooka
 	mail-client/evolution
-	mail-client/mozilla-thunderbird-bin
+	mail-client/mozilla-thunderbird
 	mail-client/sylpheed
 	mail-client/sylpheed-claws
 	media-gfx/blender
@@ -189,7 +188,7 @@ livecd/packages:
 	sys-apps/qtparted
 	sys-apps/rsbac-admin
 	sys-apps/sdparm
-	sys-apps/sg3_utils
+#	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
 	sys-apps/suspend2-userui
@@ -235,7 +234,7 @@ livecd/packages:
 	www-client/epiphany-extensions
 	www-client/galeon
 	www-client/links
-	www-client/mozilla-firefox-bin
+	www-client/mozilla-firefox
 	www-client/opera
 	www-client/seamonkey
 	x11-base/xorg-x11

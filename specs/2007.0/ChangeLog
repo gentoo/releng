@@ -1,5 +1,19 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.39 2007-03-12 19:14:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.40 2007-03-12 21:03:23 wolf31o2 Exp $
+
+  12 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/livecd-stage1-gnome.spec, amd64/installcd-stage1-minimal.spec,
+  amd64/livecd-stage1-gnome.spec, amd64/livedvd-stage1-large.spec,
+  ia64/livecd-stage1-gnome.spec, ppc/ppc32/livecd-stage1-gnome.spec,
+  x86/i686/livecd-stage1-gnome.spec, x86/i686/livecd-stage2-gnome.spec,
+  x86/i686/livedvd-stage1-large.spec, x86/i686/livedvd-stage2-large.spec,
+  x86/installcd-stage1-minimal.spec, x86/installcd-stage2-minimal.spec:
+  Lots of cleanup in the specs. Removed USE=atm since linux-atm is broken,
+  removed fcdsl/fritzcapi since they're broken. I also commented out stuff
+  known to eaither not build or that had to be changed due to size
+  restrictions on the LiveCD. Changed from using the -bin packages for
+  OpenOffice.org/Firefox/Thunderbird, which means we'll be getting that 'Bon
+  Echo' crap.
 
   12 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org> alpha/stage1.spec,
   alpha/stage2-desktop.spec, alpha/stage3-desktop.spec:

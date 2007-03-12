@@ -6,7 +6,6 @@ profile: default-linux/x86/2007.0/desktop
 snapshot: 2007.0
 source_subpath: default/stage3-i686-desktop-2007.0
 livecd/use:
-	atm
 	branding
 	livecd
 	socks5
@@ -24,19 +23,18 @@ livecd/packages:
 	app-benchmarks/cpuburn
 	app-cdr/cdrkit
 	app-crypt/gnupg
-	app-editors/emacs
+#	app-editors/emacs
 	app-editors/vim
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/vlock
-	app-office/openoffice-bin
+	app-office/openoffice
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed
 	dev-util/ccache
 	gnome-base/gnome
-	mail-client/evolution
-	mail-client/mozilla-thunderbird-bin
+	mail-client/mozilla-thunderbird
 	media-gfx/fbgrab
 	media-sound/audacious
 	net-analyzer/netcat
@@ -86,7 +84,7 @@ livecd/packages:
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 	sys-apps/sdparm
-	sys-apps/sg3_utils
+#	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
 	sys-block/gpart
@@ -120,7 +118,7 @@ livecd/packages:
 	sys-power/acpid
 	sys-process/vixie-cron
 	www-client/links
-	www-client/mozilla-firefox-bin
+	www-client/mozilla-firefox
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver

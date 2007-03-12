@@ -19,7 +19,7 @@ livecd/type: gentoo-release-livecd
 livecd/users: gentoo
 livecd/volid: Gentoo Linux 2007.0 x86 LiveDVD
 
-livecd/overlay: /root/livecd/overlays/livedvd/2007.0
+livecd/overlay: /root/livecd/overlays/2007.0/common/overlay/livecd
 livecd/root_overlay: /root/livecd/overlays/root-livecd
 
 livecd/bootargs: dokeymap
@@ -28,7 +28,7 @@ livecd/gk_mainargs: --makeopts=-j16 --lvm2 --dmraid --evms2 --unionfs-dev
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/x86/livecd-2.6.19.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2007.0/x86/livecd-2.6.19.config
 
 boot/kernel/gentoo/use: pcmcia usb oss atm
 
@@ -38,8 +38,8 @@ boot/kernel/gentoo/packages:
 	media-gfx/splash-themes-livecd
 	media-libs/alsa-lib
 	media-sound/alsa-utils
-	net-dialup/fcdsl
-	net-dialup/fritzcapi
+#	net-dialup/fcdsl
+#	net-dialup/fritzcapi
 	net-dialup/globespan-adsl
 	net-dialup/slmodem
 	net-wireless/acx
@@ -48,7 +48,7 @@ boot/kernel/gentoo/packages:
 	net-wireless/ipw3945
 	net-wireless/madwifi-ng-tools
 	net-wireless/rt2500
-	net-wireless/rtl8187
+#	net-wireless/rtl8187
 	sys-apps/pcmciautils
 	sys-fs/cryptsetup-luks
 

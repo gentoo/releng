@@ -6,7 +6,6 @@ profile: default-linux/alpha/2007.0/desktop
 snapshot: 2007.0
 source_subpath: default/stage3-alpha-desktop-2007.0
 livecd/use:
-	atm
 	branding
 	livecd
 	socks5
@@ -19,8 +18,6 @@ livecd/packages:
 	app-admin/sudo
 	app-admin/syslog-ng
 	app-arch/mt-st
-	app-arch/unrar
-	app-arch/unzip
 #	app-benchmarks/cpuburn
 	app-cdr/cdrtools
 	app-crypt/gnupg

@@ -6,7 +6,6 @@ profile: default-linux/amd64/2007.0/desktop
 snapshot: 2007.0
 source_subpath: default/stage3-amd64-desktop-2007.0
 livecd/use:
-	atm
 	branding
 	livecd
 	socks5
@@ -19,30 +18,27 @@ livecd/packages:
 	app-admin/sudo
 	app-admin/syslog-ng
 	app-arch/mt-st
-	app-arch/unrar
-	app-arch/unzip
 	app-benchmarks/cpuburn
 	app-cdr/cdrkit
 	app-crypt/gnupg
-	app-editors/emacs
+#	app-editors/emacs
 	app-editors/vim
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/vlock
-	app-office/openoffice-bin
+	app-office/openoffice
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed
 	dev-util/ccache
 	gnome-base/gnome
-	mail-client/evolution
-	mail-client/mozilla-thunderbird-bin
+	mail-client/mozilla-thunderbird
 	media-gfx/fbgrab
 	media-sound/audacious
 	net-analyzer/netcat
 	net-analyzer/nmap
 	net-analyzer/tcpdump
-	net-analyzer/tcptraceroute
+#	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/bpalogin
 	net-dialup/mingetty
@@ -95,7 +91,7 @@ livecd/packages:
 #	sys-boot/aboot
 #	sys-boot/elilo
 	sys-boot/grub
-	sys-boot/lilo
+#	sys-boot/lilo
 	sys-boot/syslinux
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
@@ -121,7 +117,7 @@ livecd/packages:
 	sys-power/acpid
 	sys-process/vixie-cron
 	www-client/links
-	www-client/mozilla-firefox-bin
+	www-client/mozilla-firefox
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver

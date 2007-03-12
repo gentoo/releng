@@ -7,7 +7,6 @@ snapshot: 2007.0
 source_subpath: default/stage3-x86-2007.0
 livecd/use:
 	-*
-	atm
 	fbcon
 	ipv6
 	livecd

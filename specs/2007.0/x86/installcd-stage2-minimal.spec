@@ -22,7 +22,7 @@ livecd/gk_mainargs: --lvm2 --dmraid --evms2
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/x86/installcd-2.6.19.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2007.0/x86/installcd-2.6.19.config
 
 boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt -qt3 -qt4
 
@@ -33,12 +33,12 @@ boot/kernel/gentoo/packages:
 	net-dialup/slmodem
 	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
-	net-dialup/fritzcapi
-	net-dialup/fcdsl
+#	net-dialup/fritzcapi
+#	net-dialup/fcdsl
 	sys-fs/cryptsetup-luks
 	net-wireless/rt2500
 	net-wireless/acx
-#	net-wireless/ipw3945
+	net-wireless/ipw3945
 
 livecd/unmerge:
 #	acl

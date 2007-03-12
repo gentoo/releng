@@ -7,7 +7,6 @@ snapshot: 2007.0
 source_subpath: default/stage3-amd64-2007.0
 portage_overlay: /root/livecd/overlays/amd64-portage
 livecd/use:
-	atm
 	branding
 	livecd
 	socks5
@@ -31,13 +30,12 @@ livecd/packages:
 	app-editors/emacs
 	app-editors/vim
 	app-editors/xemacs
-	app-misc/beagle
+#	app-misc/beagle
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/vlock
 	app-office/koffice
-#	app-office/openoffice
-	app-office/openoffice-bin
+	app-office/openoffice
 	app-office/scribus
 	app-portage/gentoolkit
 	app-portage/mirrorselect
