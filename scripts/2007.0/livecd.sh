@@ -1,6 +1,6 @@
 #!/bin/bash
  
-if [ -e /etc/X11/gdm/custom.conf ]
+if [[ -e /etc/X11/gdm/custom.conf ]]
 then
 	sed -e '/^[^#]\+=.\+$/d' /etc/X11/gdm/custom.conf > \
  	/etc/X11/gdm/custom.conf.old
@@ -8,10 +8,21 @@ then
 	/etc/X11/gdm/custom.conf
 fi
 
-if [ -e /etc/X11/gdm/gdm.conf ]
+if [[ -e /etc/X11/gdm/gdm.conf ]]
 then
 	sed -i -e 's/gentoo-emergence/gentoo-livecd-2007.0/' \
 	/etc/X11/gdm/gdm.conf
+fi
+
+if [[ -e /etc/conf.d/splash ]]
+then
+	sed -i -e "/^# SPLASH_TTYS=/ s/^#//" /etc/conf.d/splash
+fi
+
+if [[ -e /sbin/splash-functions.sh ]]
+then
+	sed -i -e 's/type" cachedir "${spl_/type" tmpfs "${spl_/' \
+	/sbin/splash-functions.sh
 fi
 
 gconftool-2 --direct \
@@ -24,7 +35,4 @@ case `uname -m` in
 		sed -i 's/DRIVER fbdev/DRIVER vesa/' /usr/share/hwdata/Cards
 	;;
 esac
-
-sed -i -e "/^# SPLASH_TTYS=/ s/^#//" /etc/conf.d/splash
-sed -i -e 's/type" cachedir "${spl_/type" tmpfs "${spl_/' /sbin/splash-functions.sh
 
