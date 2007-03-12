@@ -196,7 +196,7 @@ livecd/packages:
 	sys-block/gparted
 	sys-block/mpt-status
 	sys-block/partimage
-	sys-block/qla-fc-firmware
+#	sys-block/qla-fc-firmware
 #	sys-boot/aboot
 #	sys-boot/elilo
 	sys-boot/grub

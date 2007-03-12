@@ -89,6 +89,7 @@ livecd/packages:
 	sys-apps/smartmontools
 	sys-block/gpart
 	sys-block/partimage
+#	sys-block/qla-fc-firmware
 #	sys-boot/aboot
 #	sys-boot/elilo
 	sys-boot/grub

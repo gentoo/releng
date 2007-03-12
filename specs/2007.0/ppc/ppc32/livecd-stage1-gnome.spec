@@ -102,6 +102,7 @@ livecd/packages:
 #	sys-block/gpart
 	sys-block/gparted
 #	sys-block/partimage
+#	sys-block/qla-fc-firmware
 #	sys-boot/aboot
 #	sys-boot/elilo
 #	sys-boot/grub
