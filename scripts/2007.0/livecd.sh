@@ -33,6 +33,9 @@ gconftool-2 --direct \
 case `uname -m` in
 	i?86|x86_64)
 		sed -i 's/DRIVER fbdev/DRIVER vesa/' /usr/share/hwdata/Cards
+		sed -e 's/CONSOLEFONT="default8x16"/CONSOLEFONT="lat1-16"/' \
+			-e '/^#CONSOLETRANSLATION="8859-1_to_uni"/ s/^#//' \
+			-i /etc/conf.d/consolefont
 	;;
 esac
 
