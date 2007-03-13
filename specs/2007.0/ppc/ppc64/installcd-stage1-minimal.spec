@@ -8,7 +8,6 @@ source_subpath: default/stage3-ppc64-32ul-2007.0
 chost: powerpc-unknown-linux-gnu
 livecd/use:
 	-*
-	atm
 	fbcon
 	ipv6
 	livecd
@@ -22,7 +21,6 @@ livecd/use:
 	socks5
 	ssl
 	unicode
-	userlocales
 	
 livecd/packages:
 	app-admin/passook

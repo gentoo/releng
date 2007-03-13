@@ -1,5 +1,12 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.42 2007-03-13 00:33:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.43 2007-03-13 00:37:54 wolf31o2 Exp $
+
+  13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/installcd-stage1-minimal.spec, hppa/installcd-stage1-minimal.spec,
+  ia64/installcd-stage1-minimal.spec,
+  ppc/ppc32/installcd-stage1-minimal.spec,
+  ppc/ppc64/installcd-stage1-minimal.spec:
+  Removing atm and userlocales USE flags.
 
   13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ia64/stage3-desktop.spec:

@@ -7,7 +7,6 @@ snapshot: 2007.0
 source_subpath: default/stage3-alpha-2007.0-no-nptl
 livecd/use:
 	-*
-	atm
 	fbcon
 	ipv6
 	livecd
@@ -18,7 +17,6 @@ livecd/use:
 	socks5
 	ssl
 	unicode
-	userlocales
 
 livecd/packages:
 	=sys-devel/gcc-3.3*

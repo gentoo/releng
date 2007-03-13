@@ -7,7 +7,6 @@ snapshot: 2007.0
 source_subpath: default/stage3-hppa1.1-2007.0
 livecd/use:
 	-*
-	atm
 	fbcon
 	ipv6
 	livecd
@@ -20,7 +19,6 @@ livecd/use:
 	socks5
 	ssl
 	unicode
-	userlocales
 
 livecd/packages:
 	app-admin/passook
