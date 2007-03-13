@@ -2,19 +2,20 @@ subarch: ppc
 version_stamp: 2007.0
 target: grp
 rel_type: default
-profile: default-linux/ppc/ppc32/2007.0
+profile: default-linux/ppc/ppc32/2007.0/desktop
 snapshot: 2007.0
 source_subpath: default/stage3-ppc-2007.0
 grp: cd2
 
-grp/use: 
-	-java
-	dvdr
+grp/use:
+	branding
 
 grp/cd2/type: pkgset
 grp/cd2/packages:
 	xorg-x11
 	Xorgautoconfig
+	xac
+	openofficce
 	gentoo-sources
 	irssi
 	gpm
@@ -35,13 +36,12 @@ grp/cd2/packages:
 	whois
 	tcpdump
 	cvs
-	zip
 	unzip
 	partimage
 	samba
 	cups
 	app-admin/sudo
-	app-cdr/cdrtools
+	app-cdr/cdrkit
 	cdrdao
 	emacs
 	xemacs
@@ -50,21 +50,17 @@ grp/cd2/packages:
 	mozilla-firefox
 	mozilla-thunderbird
 	xfce4
-	openbox
 	fluxbox
 	sylpheed
 	openoffice
 	gnome
 	kde-meta
 	koffice-meta
-	xmms
 	abiword
 	gaim
 	xchat
 	tetex
-	kile
 	k3b
 	nmap
 	ettercap
 	mplayer
-

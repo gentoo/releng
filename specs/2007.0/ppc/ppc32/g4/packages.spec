@@ -2,19 +2,20 @@ subarch: g4
 version_stamp: 2007.0
 target: grp
 rel_type: default
-profile: default-linux/ppc/ppc32/2007.0/G4
+profile: default-linux/ppc/ppc32/2007.0/desktop/G4
 snapshot: 2007.0
 source_subpath: default/stage3-g4-2007.0
 grp: cd2
 
 grp/use: 
-	-java
-	dvdr
+	branding
 
 grp/cd2/type: pkgset
 grp/cd2/packages:
 	xorg-x11
 	Xorgautoconfig
+	xac
+	openofficce
 	gentoo-sources
 	irssi
 	gpm
@@ -35,13 +36,12 @@ grp/cd2/packages:
 	whois
 	tcpdump
 	cvs
-	zip
 	unzip
 	partimage
 	samba
 	cups
 	app-admin/sudo
-	app-cdr/cdrtools
+	app-cdr/cdrkit
 	cdrdao
 	emacs
 	xemacs
@@ -56,17 +56,12 @@ grp/cd2/packages:
 	openoffice
 	gnome
 	kde-meta
-	kde-i18n
 	koffice-meta
-	koffice-i18n
-	xmms
 	abiword
 	gaim
 	xchat
 	tetex
-	kile
 	k3b
 	nmap
 	ettercap
 	mplayer
-
