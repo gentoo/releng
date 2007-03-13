@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.45 2007-03-13 00:59:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.46 2007-03-13 01:55:04 wolf31o2 Exp $
+
+  13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livecd-stage2-gnome.spec, amd64/livedvd-stage2-large.spec:
+  Fixing kernel config location and cleaning up the package list on the
+  LiveDVD spec.
 
   13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ppc/ppc32/g4/packages.spec, ppc/ppc32/packages.spec:

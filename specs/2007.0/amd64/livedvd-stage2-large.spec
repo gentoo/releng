@@ -19,35 +19,37 @@ livecd/type: gentoo-release-livecd
 livecd/users: gentoo
 livecd/volid: Gentoo Linux AMD64 LiveDVD
 
-livecd/overlay: /root/livecd/overlays/livecd/amd64-2007.0
+livecd/overlay: /root/livecd/overlays/2007.0/common/overlay/livecd
 livecd/root_overlay: /root/livecd/overlays/root-livecd
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --lvm2 --dmraid --evms2
-#--unionfs-dev
-
-#livecd/rcadd: x-setup|default spind|default xdm|default famd|default
+livecd/gk_mainargs: --makeopts=-j16 --lvm2 --dmraid --evms2 --unionfs-dev
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/amd64/livecd-2.6.17.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2007.0/amd64/livecd-2.6.19.config
 
 boot/kernel/gentoo/use: pcmcia usb oss atm truetype png
 
 boot/kernel/gentoo/packages:
 	media-gfx/splashutils
 	media-gfx/splash-themes-livecd
-	sys-apps/pcmciautils
-	sys-power/acpid
-	sys-fs/cryptsetup-luks
-	net-wireless/rt2500
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-
-livecd/unmerge:
-	sys-kernel/gentoo-sources
+#	net-dialup/fcdsl
+#	net-dialup/fritzcapi
+#	net-dialup/globespan-adsl
+#	net-dialup/slmodem
+#	net-wireless/acx
+	net-wireless/hostap-utils
+	net-wireless/ipw3945
+	net-wireless/madwifi-ng-tools
+	net-wireless/rt2500
+#	net-wireless/rtl8187
+	sys-apps/pcmciautils
+	sys-fs/cryptsetup-luks
 
 livecd/empty:
 	/var/tmp
