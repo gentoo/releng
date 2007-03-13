@@ -17,7 +17,7 @@ livecd/use:
 	ssl
 
 livecd/packages:
-	app-admin/passook
+#	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
@@ -27,41 +27,41 @@ livecd/packages:
 	app-misc/vlock
 	app-portage/mirrorselect
 	dev-lang/python
-	media-gfx/fbgrab
-	net-analyzer/tcptraceroute
+#	media-gfx/fbgrab
+#	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
-	net-dialup/bpalogin
+#	net-dialup/bpalogin
 	net-dialup/mingetty
-	net-dialup/penggy
-	net-dialup/pptpclient
-	net-dialup/rp-pppoe
+#	net-dialup/penggy
+#	net-dialup/pptpclient
+#	net-dialup/rp-pppoe
 	net-fs/nfs-utils
 	net-irc/irssi
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/rdate
-	net-misc/vconfig
-	net-wireless/ipw2100-firmware
-	net-wireless/ipw2200-firmware
-	net-wireless/prism54-firmware
-	net-wireless/wireless-tools
-	net-wireless/wpa_supplicant
-	net-wireless/zd1201-firmware
-	sys-apps/apmd
+#	net-misc/vconfig
+#	net-wireless/ipw2100-firmware
+#	net-wireless/ipw2200-firmware
+#	net-wireless/prism54-firmware
+#	net-wireless/wireless-tools
+#	net-wireless/wpa_supplicant
+#	net-wireless/zd1201-firmware
+#	sys-apps/apmd
 	sys-apps/eject
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
-	sys-apps/hwstup
+	sys-apps/hwsetup
 	sys-apps/iproute2
 #	sys-apps/lssbus
-	sys-apps/memtester
-	sys-apps/netplug
+#	sys-apps/memtester
+#	sys-apps/netplug
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
-	sys-apps/sdparm
+#	sys-apps/sdparm
 #	sys-block/partimage
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
@@ -74,13 +74,13 @@ livecd/packages:
 #	sys-fs/hfsutils
 #	sys-fs/iprutils
 	sys-fs/jfsutils
-	sys-fs/lsscsi
-	sys-fs/lvm2
+#	sys-fs/lsscsi
+#	sys-fs/lvm2
 #	sys-fs/lvm-user
 #	sys-fs/mac-fdisk
 	sys-fs/mdadm
 #	sys-fs/multipath-tools
-	sys-fs/ntfsprogs
+#	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-libs/gpm
