@@ -179,6 +179,7 @@ livecd/packages:
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2
 	sys-apps/ivman
+#	sys-apps/lssbus
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/parted

@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.46 2007-03-13 01:55:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.47 2007-03-14 16:36:25 wolf31o2 Exp $
+
+  14 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livedvd-stage1-large.spec, x86/i686/livedvd-stage1-large.spec:
+  Sync up the LiveDVD builds for amd64/x86.
 
   13 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/livecd-stage2-gnome.spec, amd64/livedvd-stage2-large.spec:
