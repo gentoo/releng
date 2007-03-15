@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.15 2007-03-12 16:56:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.16 2007-03-15 13:54:42 wolf31o2 Exp $
+
+  15 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/installcd-2.6.19.config:
+  Added ZD1211 support for bug #152311.
 
   12 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +ia64/installcd-2.6.18.config:

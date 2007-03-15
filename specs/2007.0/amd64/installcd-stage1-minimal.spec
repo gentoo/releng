@@ -49,8 +49,9 @@ livecd/packages:
 #	net-wireless/ipw2200-firmware
 	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
-#	net-wireless/wpa_supplicant
+	net-wireless/wpa_supplicant
 #	net-wireless/zd1201-firmware
+	net-wireless/zd1211-firmware
 	sys-apps/apmd
 	sys-apps/eject
 	sys-apps/ethtool
