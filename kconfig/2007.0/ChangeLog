@@ -1,5 +1,5 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.16 2007-03-15 13:54:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.0/ChangeLog,v 1.17 2007-03-15 16:25:05 kugelfang Exp $
 
   15 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/installcd-2.6.19.config:
@@ -9,6 +9,10 @@
   +ia64/installcd-2.6.18.config:
   Added an initial IA64 installcd kernel config for 2.6.18, which is the
   current stable in the snapshot.
+
+  15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org>
+  amd64/installcd-2.6.19.config:
+  Use correct config this time.
 
   11 Mar 2007; Danny van Dyk <kugelfang@gentoo.org>
   -amd64/livecd-2.6.17.config, +amd64/livecd-2.6.19.config:
