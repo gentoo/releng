@@ -8,8 +8,7 @@ source_subpath: default/stage3-ppc-2007.0
 grp: src
 
 grp/use:
-	-java
-	dvdr
+	branding
 
 grp/src/type: srcset
 grp/src/packages:
@@ -21,7 +20,6 @@ grp/src/packages:
 	vixie-cron
 	gentoo-sources
 	vanilla-sources
-	hotplug
 	fxload
 	syslog-ng
 	logrotate
@@ -49,7 +47,7 @@ grp/src/packages:
 	pciutils
 	powerpc-utils
 	powerprefs
-	cryptsetup
+	cryptsetup-luks
 	alsa-driver
 	alsa-lib
 	alsa-oss
