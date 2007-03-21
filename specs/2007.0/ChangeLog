@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.49 2007-03-21 13:24:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.50 2007-03-21 13:43:20 wolf31o2 Exp $
+
+  21 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livecd-stage1-gnome.spec, amd64/livedvd-stage1-large.spec:
+  Updated amd64 specs to match what I'm building.
 
   21 Mar 2007; <wolf31o2@gentoo.org> ppc/ppc32/distfiles.spec,
   ppc/ppc32/packages.spec, ppc/ppc32/stage1.spec:

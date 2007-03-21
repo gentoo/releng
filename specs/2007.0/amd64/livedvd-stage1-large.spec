@@ -20,7 +20,7 @@ livecd/packages:
 	app-admin/sudo
 	app-admin/superadduser
 	app-admin/syslog-ng
-	app-admin/testdisk
+#	app-admin/testdisk
 	app-arch/alien
 	app-arch/mt-st
 	app-arch/unrar
@@ -41,12 +41,12 @@ livecd/packages:
 	app-editors/xemacs
 	app-forensics/chkrootkit
 	app-laptop/i8kutils
-	app-misc/beagle
+#	app-misc/beagle
 	app-misc/livecd-tools
 	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
-	app-misc/splitvt
+#	app-misc/splitvt
 	app-misc/vlock
 	app-office/dia
 	app-office/gnucash
@@ -83,7 +83,7 @@ livecd/packages:
 	dev-util/valgrind
 	gnome-base/gnome
 	gnome-extra/evolution-exchange
-	gnome-extra/gsynaptics
+#	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
 	kde-base/kde-meta
 	kde-base/kooka
@@ -101,7 +101,7 @@ livecd/packages:
 	media-gfx/xsane
 	media-sound/amarok
 	media-sound/audacious
-	media-sound/audacity
+#	media-sound/audacity
 	media-sound/easytag
 	media-sound/gnomeradio
 	media-sound/grip
@@ -153,9 +153,9 @@ livecd/packages:
 	net-print/cups
 	net-proxy/dante
 	net-proxy/tsocks
-	net-wireless/aircrack-ng
+#	net-wireless/aircrack-ng
 #	net-wireless/airsnort
-net-wireless/gnome-bluetooth
+#	net-wireless/gnome-bluetooth
 #	net-wireless/ipw2100-firmware
 #	net-wireless/ipw2200-firmware
 	net-wireless/kdebluetooth
@@ -186,16 +186,17 @@ net-wireless/gnome-bluetooth
 	sys-apps/pcsc-lite
 	sys-apps/pmount
 #	sys-apps/powerpc-utils
-	sys-apps/qtparted
+#	sys-apps/qtparted
 	sys-apps/rsbac-admin
 	sys-apps/sdparm
 #	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
-	sys-apps/suspend2-userui
-	sys-block/gpart
+#	sys-apps/suspend2-userui
+#	sys-block/gpart
 	sys-block/gparted
-	sys-block/mpt-status
+### TODO: compile failuire
+#	sys-block/mpt-status
 #	sys-block/partimage
 #	sys-block/qla-fc-firmware
 #	sys-boot/aboot
@@ -219,7 +220,8 @@ net-wireless/gnome-bluetooth
 	sys-fs/lsscsi
 	sys-fs/lvm2
 #	sys-fs/lvm-user
-	sys-fs/mac-fdisk
+### TODO: unmask
+#	sys-fs/mac-fdisk
 	sys-fs/mdadm
 #	sys-fs/multipath-tools
 	sys-fs/ntfsprogs
@@ -242,7 +244,7 @@ net-wireless/gnome-bluetooth
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver
-	x11-plugins/gkrellm-plugins
+#	x11-plugins/gkrellm-plugins
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
 	x11-wm/afterstep

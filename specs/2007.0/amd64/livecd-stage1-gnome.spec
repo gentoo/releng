@@ -84,7 +84,7 @@ livecd/packages:
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 	sys-apps/sdparm
-	sys-apps/sg3_utils
+#	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
 #	sys-block/gpart
