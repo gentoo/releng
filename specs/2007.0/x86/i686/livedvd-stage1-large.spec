@@ -41,7 +41,7 @@ livecd/packages:
 	app-editors/xemacs
 	app-forensics/chkrootkit
 	app-laptop/i8kutils
-	app-misc/beagle
+#	app-misc/beagle
 	app-misc/livecd-tools
 	app-misc/mc
 	app-misc/pax-utils
@@ -195,7 +195,7 @@ livecd/packages:
 	sys-apps/suspend2-userui
 	sys-block/gpart
 	sys-block/gparted
-	sys-block/mpt-status
+#	sys-block/mpt-status
 	sys-block/partimage
 #	sys-block/qla-fc-firmware
 #	sys-boot/aboot
@@ -241,7 +241,7 @@ livecd/packages:
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver
-	x11-plugins/gkrellm-plugins
+#	x11-plugins/gkrellm-plugins
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
 	x11-wm/afterstep
