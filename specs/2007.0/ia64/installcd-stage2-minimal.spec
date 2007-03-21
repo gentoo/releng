@@ -7,7 +7,7 @@ snapshot: 2007.0
 source_subpath: default/livecd-stage1-ia64-2007.0
 
 livecd/cdfstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/elilo-3.4-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/elilo-3.6-cdtar.tar.bz2
 
 livecd/iso: /var/tmp/catalyst/builds/default/install-ia64-minimal-2007.0.iso
 
@@ -17,12 +17,12 @@ livecd/type: gentoo-release-minimal
 #livecd/overlay: /root/livecd/overlays/ia64-minimal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm2
+livecd/gk_mainargs: --makeopts=-j16 --evms2 --dmraid
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/ia64/installcd-2.6.15.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2007.0/ia64/installcd-2.6.18.config
 
 livecd/unmerge:
 #	acl
