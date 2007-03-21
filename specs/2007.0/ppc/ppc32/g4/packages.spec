@@ -15,7 +15,7 @@ grp/cd2/packages:
 	xorg-x11
 	Xorgautoconfig
 	xac
-	openofficce
+	openoffice
 	gentoo-sources
 	irssi
 	gpm
@@ -43,25 +43,24 @@ grp/cd2/packages:
 	app-admin/sudo
 	app-cdr/cdrkit
 	cdrdao
-	emacs
-	xemacs
-	dev-lang/ruby
+#	emacs
+#	xemacs
+#	dev-lang/ruby
 	enlightenment
 	mozilla-firefox
 	mozilla-thunderbird
 	xfce4
-	openbox
+#	openbox
 	fluxbox
-	sylpheed
-	openoffice
+#	sylpheed
 	gnome
 	kde-meta
 	koffice-meta
-	abiword
+#	abiword
 	gaim
 	xchat
-	tetex
+#	tetex
 	k3b
 	nmap
-	ettercap
-	mplayer
+#	ettercap
+#	mplayer
