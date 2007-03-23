@@ -66,6 +66,7 @@ livecd/packages:
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
 #	sys-block/partimage
+#	sys-block/qla-fc-firmware
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
 #	sys-devel/gcc-hppa64

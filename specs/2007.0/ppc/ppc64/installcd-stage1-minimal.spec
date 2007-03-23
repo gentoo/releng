@@ -59,6 +59,7 @@ livecd/packages:
 	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
 	sys-block/partimage
+#	sys-block/qla-fc-firmware
 	sys-boot/yaboot
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs

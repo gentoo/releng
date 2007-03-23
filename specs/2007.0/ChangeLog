@@ -1,5 +1,15 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.54 2007-03-23 17:01:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.55 2007-03-23 17:41:15 gustavoz Exp $
+
+  23 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  alpha/installcd-stage1-minimal.spec, amd64/installcd-stage1-minimal.spec,
+  hppa/installcd-stage1-minimal.spec, ia64/installcd-stage1-minimal.spec,
+  ppc/ppc32/installcd-stage1-minimal.spec,
+  ppc/ppc64/installcd-stage1-minimal.spec,
+  sparc/sparc64/installcd-stage1-minimal.spec,
+  x86/installcd-stage1-minimal.spec:
+  Adding sys-block/qla-fc-firmware across the board, only enabled for sparc
+  though
 
   23 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   -sparc/sparc32/stage1.spec, -sparc/sparc32/stage2.spec,
