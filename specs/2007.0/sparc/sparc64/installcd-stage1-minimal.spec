@@ -11,15 +11,16 @@ livecd/use:
 	fbcon
 	gpm
 	ipv6
-	jpeg
 	livecd
 	ncurses
-	nocxx
+	nls
+	nptl
+	nptlonly
 	pam
-	png
 	readline
 	socks5
 	ssl
+	unicode
 
 livecd/packages:
 #	~sys-apps/baselayout-1.11.15
