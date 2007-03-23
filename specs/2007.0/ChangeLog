@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.53 2007-03-21 14:12:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.54 2007-03-23 17:01:26 gustavoz Exp $
+
+  23 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  -sparc/sparc32/stage1.spec, -sparc/sparc32/stage2.spec,
+  -sparc/sparc32/stage3.spec:
+  Removing sparc32 specfiles - it won't ship
 
   21 Mar 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   x86/i686/livedvd-stage1-large.spec:
