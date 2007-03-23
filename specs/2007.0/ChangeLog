@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.59 2007-03-23 18:00:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.60 2007-03-23 18:03:55 gustavoz Exp $
+
+  23 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  +sparc/sparc64/packages.spec:
+  Adding packages CD specfile for sparc
 
   23 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc/sparc64/installcd-stage1-minimal.spec:
