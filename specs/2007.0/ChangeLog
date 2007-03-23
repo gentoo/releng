@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.55 2007-03-23 17:41:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.56 2007-03-23 17:44:32 gustavoz Exp $
+
+  23 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc/sparc64/installcd-stage2-minimal.spec,
+  sparc/sparc64/installcd-stage2-universal.spec:
+  Switch sparc64 CDs to use 2.6.17 and 2.6.20
 
   23 Mar 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   alpha/installcd-stage1-minimal.spec, amd64/installcd-stage1-minimal.spec,

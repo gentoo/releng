@@ -13,13 +13,12 @@ livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux SPARC64 2007.0
 livecd/iso: install-sparc64-minimal-2007.0.iso
 
-boot/kernel: 2616 2617
-boot/kernel/2616/sources: ~sys-kernel/gentoo-sources-2.6.16
-boot/kernel/2616/config: 2.6.16-sparc64-generic.config
-boot/kernel/2616/use: ultra1
+boot/kernel: 2617 2620
 boot/kernel/2617/sources: ~sys-kernel/gentoo-sources-2.6.17
-boot/kernel/2617/config: 2.6.17-sparc64-generic.config
+boot/kernel/2617/config: installcd-2.6.17.config
 boot/kernel/2617/use: ultra1
+boot/kernel/2620/sources: ~sys-kernel/gentoo-sources-2.6.20
+boot/kernel/2620/config: installcd-2.6.20.config
 
 livecd/unmerge:
 	autoconf
