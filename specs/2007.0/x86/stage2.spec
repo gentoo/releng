@@ -5,4 +5,4 @@ rel_type: default
 profile: default-linux/x86/no-nptl
 snapshot: 2007.0
 source_subpath: default/stage1-x86-2007.0
-chost: i686-pc-linux-gnu
+chost: i486-pc-linux-gnu
