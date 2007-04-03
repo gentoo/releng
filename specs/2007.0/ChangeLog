@@ -1,5 +1,12 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.63 2007-04-03 13:30:30 agaffney Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.64 2007-04-03 16:15:56 wolf31o2 Exp $
+
+  03 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  ppc/ppc64/stage1-32ul.spec, ppc/ppc64/stage3-32ul.spec,
+  ppc/ppc64/g5/stage2-32ul.spec, ppc/ppc64/g5/stage3-32ul.spec,
+  ppc/ppc64/stage1-64ul.spec, ppc/ppc64/g5/stage2-64ul.spec,
+  ppc/ppc64/g5/stage3-64ul.spec:
+  Changed g5 subarch to 970 and made sure chost is set for 32-bit profiles.
 
   03 Apr 2007; Andrew Gaffney <agaffney@gentoo.org>
   x86/installcd-stage1-minimal.spec, x86/installcd-stage2-minimal.spec,
