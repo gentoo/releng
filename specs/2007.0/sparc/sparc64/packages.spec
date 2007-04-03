@@ -57,7 +57,6 @@ grp/cd2/packages:
 	gnome
 	koffice-meta
 	cups
-	emacs
 	mc
 	dnsmasq
 	ncftp
@@ -73,7 +72,6 @@ grp/cd2/packages:
 	openbox
 	blackbox
 	sylpheed
-	xemacs
 	mozilla-firefox
 	mozilla-thunderbird
 	abiword

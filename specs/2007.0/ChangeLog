@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.61 2007-04-02 20:35:29 agaffney Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.62 2007-04-03 13:03:06 gustavoz Exp $
+
+  03 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc/sparc64/packages.spec:
+  Removing emacs and xemacs from sparc packages since it doesn't fit in a CD
 
   02 Apr 2007; Andrew Gaffney <agaffney@gentoo.org>
   x86/stage2.spec:
