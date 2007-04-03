@@ -2,7 +2,7 @@ subarch: x86
 version_stamp: 2007.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/x86/no-nptl
+profile: default-linux/x86/2007.0
 snapshot: 2007.0
 source_subpath: default/livecd-stage1-x86-2007.0
 

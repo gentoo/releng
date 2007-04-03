@@ -1,5 +1,11 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.62 2007-04-03 13:03:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.63 2007-04-03 13:30:30 agaffney Exp $
+
+  03 Apr 2007; Andrew Gaffney <agaffney@gentoo.org>
+  x86/installcd-stage1-minimal.spec, x86/installcd-stage2-minimal.spec,
+  x86/stage2.spec, x86/stage3.spec:
+  change profile in stage2, stage3, and installcd specs to
+  default-linux/x86/2007.0 instead of default-linux/x86/no-nptl
 
   03 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   sparc/sparc64/packages.spec:
