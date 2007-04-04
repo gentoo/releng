@@ -1,5 +1,16 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.64 2007-04-03 16:15:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.65 2007-04-04 16:41:25 phreak Exp $
+
+  04 Apr 2007; Christian Heim <phreak@gentoo.org>
+  x86/hardened/stage1-2.4.spec, x86/hardened/stage1-2.6.spec, 
+  x86/hardened/stage2-2.4.spec, x86/hardened/stage2-2.6.spec, 
+  x86/hardened/stage3-2.4.spec, x86/hardened/stage3-2.6.spec,
+  x86/i686/hardened/stage2-2.4.spec, x86/i686/hardened/stage2-2.6.spec,
+  x86/i686/hardened/stage3-2.4.spec, x86/i686/hardened/stage3-2.6.spec,
+  amd64/hardened/stage1-multilib.spec, amd64/hardened/stage1.spec,
+  amd64/hardened/stage2-multilib.spec, amd64/hardened/stage2.spec,
+  amd64/hardened/stage3-multilib.spec, amd64/hardened/stage3.spec
+  Initial specs for the hardened stages.
 
   03 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ppc/ppc64/stage1-32ul.spec, ppc/ppc64/stage3-32ul.spec,
