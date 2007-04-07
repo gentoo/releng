@@ -1,5 +1,5 @@
 subarch: x86
-target: stage2
+target: stage1
 version_stamp: hardened-2.6-2007.0
 rel_type: default
 profile: hardened/x86/2.6
