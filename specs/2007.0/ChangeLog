@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.66 2007-04-05 22:48:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.67 2007-04-07 10:23:43 phreak Exp $
+
+  07 Apr 2007; Christian Heim <phreak@gentoo.org>
+  x86/hardened/stage1-2.6.spec:
+  Fixing the source_subpath for stage1-2.6.
 
   05 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   x86/i686/stage3-desktop.spec:
