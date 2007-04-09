@@ -25,6 +25,11 @@ then
 	/sbin/splash-functions.sh
 fi
 
+if [[ -e /etc/conf.d/clock ]]
+then
+	sed -i -e 's/#TIMEZONE="Factory"/TIMEZONE="UTC"/' /etc/conf.d/clock
+fi
+
 gconftool-2 --direct \
 	--config-source xml:readwrite:/usr/livecd/gconf/gconf.xml.defaults \
 	--type string --set /desktop/gnome/background/picture_filename \
