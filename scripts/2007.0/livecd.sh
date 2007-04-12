@@ -33,7 +33,7 @@ fi
 gconftool-2 --direct \
 	--config-source xml:readwrite:/usr/livecd/gconf/gconf.xml.defaults \
 	--type string --set /desktop/gnome/background/picture_filename \
-	/usr/share/pixmaps/gentoo-livecd-2007.0/gentoo-livecd-2007.0-1024x768.png
+	/usr/share/pixmaps/gentoo-livecd-2007.0/1024x768.png
 
 case `uname -m` in
 	i?86|x86_64)
