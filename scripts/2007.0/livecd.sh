@@ -35,6 +35,11 @@ gconftool-2 --direct \
 	--type string --set /desktop/gnome/background/picture_filename \
 	/usr/share/pixmaps/gentoo-livecd-2007.0/1024x768.png
 
+# We remove genkernel to save some space on the LiveCD
+ln -sf /usr/livecd/db /var/db
+emerge -C genkernel
+rm /var/db
+
 case `uname -m` in
 	i?86|x86_64)
 		sed -i 's/DRIVER fbdev/DRIVER vesa/' /usr/share/hwdata/Cards
