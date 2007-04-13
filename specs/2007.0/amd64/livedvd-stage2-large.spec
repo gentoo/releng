@@ -19,7 +19,9 @@ livecd/type: gentoo-release-livecd
 livecd/users: gentoo
 livecd/volid: Gentoo Linux AMD64 LiveDVD
 
-livecd/overlay: /root/livecd/overlays/2007.0/common/overlay/livecd
+livecd/overlay:
+	/root/livecd/overlays/2007.0/common/overlay/livedvd
+	/root/livecd/overlays/2007.0/amd64/overlay/livedvd
 livecd/root_overlay: /root/livecd/overlays/root-livecd
 
 livecd/bootargs: dokeymap

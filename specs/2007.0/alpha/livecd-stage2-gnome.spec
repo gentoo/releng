@@ -20,8 +20,8 @@ livecd/volid: Gentoo Linux alpha LiveCD 2007.0
 livecd/users: gentoo
 livecd/type: gentoo-release-livecd
 
-livecd/overlay: /root/livecd/overlays/livecd/2007.0
-livecd/root_overlay: /root/livecd/overlays/root-livecd
+livecd/overlay: /root/livecd/overlays/livecd/2007.0/common/overlay/livecd
+livecd/root_overlay: /root/livecd/overlays/2007.0/common/root_overlay
 
 livecd/bootargs: dokeymap
 livecd/gk_mainargs: --lvm2 --dmraid --evms2
