@@ -34,10 +34,10 @@ livecd/packages:
 	gnome-base/gnome
 	mail-client/mozilla-thunderbird
 	media-gfx/fbgrab
-	media-sound/audacious
+#	media-sound/audacious
 	net-analyzer/netcat
 	net-analyzer/nmap
-	net-analyzer/tcpdump
+#	net-analyzer/tcpdump
 #	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/bpalogin
@@ -46,7 +46,7 @@ livecd/packages:
 #	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
-	net-firewall/iptables
+#	net-firewall/iptables
 	net-fs/nfs-utils
 	net-im/gaim
 	net-irc/irssi
@@ -86,7 +86,7 @@ livecd/packages:
 	sys-apps/sdparm
 #	sys-apps/sg3_utils
 	sys-apps/slocate
-	sys-apps/smartmontools
+#	sys-apps/smartmontools
 #	sys-block/gpart
 #	sys-block/partimage
 #	sys-block/qla-fc-firmware

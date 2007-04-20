@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.69 2007-04-13 14:19:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.70 2007-04-20 14:03:24 agaffney Exp $
+
+  20 Apr 2007; Andrew Gaffney <agaffney@gentoo.org>
+  amd64/livecd-stage1-gnome.spec, x86/i686/livecd-stage1-gnome.spec:
+  commented out audacious, tcpdump, tcptraceroute, smartmontools, and iptables
+  from i686 and amd64 livecd specs
 
   13 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/livecd-stage2-gnome.spec, amd64/livecd-stage2-gnome.spec,
