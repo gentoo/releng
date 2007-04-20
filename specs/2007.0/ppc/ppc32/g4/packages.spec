@@ -38,7 +38,7 @@ grp/cd2/packages:
 	cvs
 	unzip
 	partimage
-	samba
+#	samba
 	cups
 	app-admin/sudo
 	app-cdr/cdrkit
