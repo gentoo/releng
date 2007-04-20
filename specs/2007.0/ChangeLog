@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.70 2007-04-20 14:03:24 agaffney Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.71 2007-04-20 14:21:20 wolf31o2 Exp $
+
+  20 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  x86/i686/livedvd-stage1-large.spec:
+  Commented out ajunta since I couldn't get it to compile and it isn't a vital
+  package.
 
   20 Apr 2007; Andrew Gaffney <agaffney@gentoo.org>
   amd64/livecd-stage1-gnome.spec, x86/i686/livecd-stage1-gnome.spec:
