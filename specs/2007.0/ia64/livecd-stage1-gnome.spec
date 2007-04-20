@@ -11,14 +11,14 @@ livecd/use:
 	socks5
 
 livecd/packages:
-	app-admin/ide-smart
+#	app-admin/ide-smart
 	app-admin/logrotate
-	app-admin/passook
+#	app-admin/passook
 	app-admin/pwgen
 	app-admin/sudo
 	app-admin/syslog-ng
 	app-arch/mt-st
-	app-benchmarks/cpuburn
+#	app-benchmarks/cpuburn
 	app-cdr/cdrkit
 	app-crypt/gnupg
 	app-editors/emacs
@@ -26,27 +26,26 @@ livecd/packages:
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/vlock
-	app-office/openoffice
+#	app-office/openoffice
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed
 	dev-util/ccache
 	gnome-base/gnome
-	mail-client/evolution
 	mail-client/mozilla-thunderbird
-	media-gfx/fbgrab
-	media-sound/audacious
+#	media-gfx/fbgrab
+#	media-sound/audacious
 	net-analyzer/netcat
 	net-analyzer/nmap
 	net-analyzer/tcpdump
-	net-analyzer/tcptraceroute
+#	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
-	net-dialup/bpalogin
+#	net-dialup/bpalogin
 	net-dialup/mingetty
 	net-dialup/minicom
 #	net-dialup/penggy
-	net-dialup/pptpclient
-	net-dialup/rp-pppoe
+#	net-dialup/pptpclient
+#	net-dialup/rp-pppoe
 	net-firewall/iptables
 	net-fs/nfs-utils
 	net-im/gaim
@@ -56,17 +55,17 @@ livecd/packages:
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/rdate
-	net-misc/vconfig
+#	net-misc/vconfig
 #	net-misc/vpnc
 	net-misc/whois
-	net-p2p/bittorrent
+#	net-p2p/bittorrent
 	net-proxy/dante
-	net-proxy/tsocks
+#	net-proxy/tsocks
 #	net-wireless/ipw2100-firmware
 #	net-wireless/ipw2200-firmware
-	net-wireless/prism54-firmware
-	net-wireless/wireless-tools
-	net-wireless/wpa_supplicant
+#	net-wireless/prism54-firmware
+#	net-wireless/wireless-tools
+#	net-wireless/wpa_supplicant
 #	net-wireless/zd1201-firmware
 #	sys-apps/apmd
 	sys-apps/eject
@@ -79,22 +78,22 @@ livecd/packages:
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2
 #	sys-apps/lssbus
-	sys-apps/memtester
-	sys-apps/netplug
+#	sys-apps/memtester
+#	sys-apps/netplug
 	sys-apps/parted
 #	sys-apps/powerpc-utils
-	sys-apps/sdparm
-	sys-apps/sg3_utils
+#	sys-apps/sdparm
+#	sys-apps/sg3_utils
 	sys-apps/slocate
-	sys-apps/smartmontools
+#	sys-apps/smartmontools
 #	sys-block/gpart
 #	sys-block/partimage
 #	sys-block/qla-fc-firmware
 #	sys-boot/aboot
 	sys-boot/elilo
-	sys-boot/grub
-	sys-boot/lilo
-	sys-boot/syslinux
+#	sys-boot/grub
+#	sys-boot/lilo
+#	sys-boot/syslinux
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
 	sys-devel/distcc
@@ -106,12 +105,12 @@ livecd/packages:
 #	sys-fs/hfsutils
 #	sys-fs/iprutils
 	sys-fs/jfsutils
-	sys-fs/lsscsi
-	sys-fs/lvm2
+#	sys-fs/lsscsi
+#	sys-fs/lvm2
 #	sys-fs/lvm-user
 #	sys-fs/mac-fdisk
 	sys-fs/mdadm
-	sys-fs/ntfsprogs
+#	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-kernel/genkernel
@@ -121,7 +120,7 @@ livecd/packages:
 	www-client/links
 	www-client/mozilla-firefox
 	x11-base/xorg-x11
-	x11-drivers/synaptics
+#	x11-drivers/synaptics
 	x11-misc/xscreensaver
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd

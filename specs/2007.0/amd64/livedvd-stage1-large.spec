@@ -5,6 +5,7 @@ rel_type: default
 profile: default-linux/amd64/2007.0/desktop
 snapshot: 2007.0
 source_subpath: default/stage3-amd64-2007.0
+distcc_hosts: localhost/7 192.168.0.239/3
 livecd/use:
 	branding
 	livecd
@@ -70,7 +71,7 @@ livecd/packages:
 	app-shells/zsh
 	app-shells/zsh-completion
 	app-text/tetex
-	dev-util/anjuta
+#	dev-util/anjuta
 	dev-util/ccache
 	dev-util/cvs
 	dev-util/indent
@@ -149,7 +150,7 @@ livecd/packages:
 	net-misc/whois
 	net-nntp/pan
 	net-p2p/bittorrent
-	net-p2p/limewire
+#	net-p2p/limewire
 	net-print/cups
 	net-proxy/dante
 	net-proxy/tsocks
@@ -202,7 +203,7 @@ livecd/packages:
 #	sys-boot/aboot
 #	sys-boot/elilo
 	sys-boot/grub
-	sys-boot/lilo
+#	sys-boot/lilo
 	sys-boot/syslinux
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64

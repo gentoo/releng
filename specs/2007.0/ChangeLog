@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.72 2007-04-20 14:31:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.73 2007-04-20 14:57:59 wolf31o2 Exp $
+
+  20 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  ia64/livecd-stage2-gnome.spec:
+  Fixing the overlays for the IA64 LiveCD.
 
   20 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ppc/ppc32/g4/packages.spec:
