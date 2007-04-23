@@ -94,7 +94,7 @@ livecd/packages:
 #	sys-boot/elilo
 	sys-boot/grub
 #	sys-boot/lilo
-	sys-boot/syslinux
+#	sys-boot/syslinux
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
 	sys-devel/distcc
@@ -122,6 +122,6 @@ livecd/packages:
 	www-client/mozilla-firefox
 	x11-base/xorg-x11
 	x11-drivers/synaptics
-	x11-misc/xscreensaver
+#	x11-misc/xscreensaver
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd

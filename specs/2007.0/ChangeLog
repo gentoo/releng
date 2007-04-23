@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.73 2007-04-20 14:57:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.74 2007-04-23 15:36:34 wolf31o2 Exp $
+
+  23 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livecd-stage1-gnome.spec:
+  Commented out syslinux and xscreensaver for amd64 to try to save some space.
 
   20 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   ia64/livecd-stage2-gnome.spec:
