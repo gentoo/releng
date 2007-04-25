@@ -9,7 +9,6 @@ grp: src
 
 grp/src/type: srcset
 grp/src/packages:
-	sparc-sources
 	vanilla-sources
 	gentoo-sources
 	iptables
@@ -20,10 +19,7 @@ grp/src/packages:
 	pciutils
 	usbutils
 	hdparm
-	hotplug
-	aumix
 	afbinit
-	xorg-x11
 	iputils
 	vixie-cron
 	fcron
@@ -34,7 +30,6 @@ grp/src/packages:
 	mdadm
 	device-mapper
 	lvm2
-	lvm-user
 	silo
 	superadduser
 	gentoolkit
@@ -53,4 +48,7 @@ grp/src/packages:
 	iproute2
 	genkernel
 	udev
-	devfsd
+	qla-fc-firmware
+	nfs-utils
+	alsa-utils
+	sys-apps/eject

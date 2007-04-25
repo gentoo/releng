@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.74 2007-04-23 15:36:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.0/ChangeLog,v 1.75 2007-04-25 15:33:16 gustavoz Exp $
+
+  25 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org>
+  sparc/sparc64/distfiles.spec:
+  distfiles update, remove lvm-user hotplug sparc-sources devfsd aumix
+  xorg-x11, add qla-fc-firmware nfs-utils alsa-utils sys-apps/eject
 
   23 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/livecd-stage1-gnome.spec:
