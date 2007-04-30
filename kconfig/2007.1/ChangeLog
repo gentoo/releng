@@ -1,0 +1,8 @@
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.1 2007-04-30 15:57:54 wolf31o2 Exp $
+
+  30 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +amd64/installcd-2.6.20.config, +amd64/livecd-2.6.20.config,
+  +x86/installcd-2.6.20.config, +x86/livecd-2.6.20.config:
+  Initial 2007.1 kernel configs using 2.6.20 as a base.
+
