@@ -23,12 +23,13 @@ livecd/overlay: /root/livecd/overlays/2007.0/common/overlay/livecd
 livecd/root_overlay: /root/livecd/overlays/2007.0/common/root_overlay
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --dmraid --evms2 --unionfs-dev
+livecd/gk_mainargs: --makeopts=-j16 --dmraid --evms2
+#--unionfs-dev
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.0/ia64/livecd-2.6.19.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2007.0/ia64/livecd-2.6.18.config
 
 boot/kernel/gentoo/use: pcmcia usb oss atm
 
@@ -43,12 +44,12 @@ boot/kernel/gentoo/packages:
 #	net-dialup/globespan-adsl
 #	net-dialup/slmodem
 #	net-wireless/acx
-	net-wireless/hostap-utils
-	net-wireless/ipw3945
-	net-wireless/madwifi-ng-tools
-	net-wireless/rt2500
+#	net-wireless/hostap-utils
+#	net-wireless/ipw3945
+#	net-wireless/madwifi-ng-tools
+#	net-wireless/rt2500
 #	net-wireless/rtl8187
-	sys-apps/pcmciautils
+#	sys-apps/pcmciautils
 	sys-fs/cryptsetup-luks
 
 livecd/empty:
