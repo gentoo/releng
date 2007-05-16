@@ -1,5 +1,10 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.1 2007-04-30 15:57:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.2 2007-05-16 13:52:40 agaffney Exp $
+
+  16 May 2007; Andrew Gaffney <agaffney@gentoo.org>
+  amd64/installcd-2.6.20.config, amd64/livecd-2.6.20.config,
+  x86/installcd-2.6.20.config, x86/livecd-2.6.20.config:
+  enable support for ext4dev
 
   30 Apr 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +amd64/installcd-2.6.20.config, +amd64/livecd-2.6.20.config,
