@@ -1,10 +1,10 @@
 subarch: ppc64
-version_stamp: 2007.0-distfiles-64ul
+version_stamp: 2007.1-distfiles-64ul
 target: grp
 rel_type: default
-profile: default-linux/ppc/ppc64/2007.0/64bit-userland/
-snapshot: 2007.0
-source_subpath: default/stage3-ppc64-64ul-2007.0
+profile: default-linux/ppc/ppc64/2007.1/64bit-userland/
+snapshot: 2007.1
+source_subpath: default/stage3-ppc64-64ul-2007.1
 grp: src
 
 grp/use: 

@@ -1,18 +1,18 @@
 subarch: sparc64
-version_stamp: 2007.0
+version_stamp: 2007.1
 target: livecd-stage2
 rel_type: default
-profile: default-linux/sparc/sparc64/2007.0
-snapshot: 2007.0
-source_subpath: default/livecd-stage1-sparc64-2007.0
+profile: default-linux/sparc/sparc64/2007.1
+snapshot: 2007.1
+source_subpath: default/livecd-stage1-sparc64-2007.1
 
 livecd/fstype: squashfs
-livecd/cdtar: /root/sparc64-2007.0/silo-1.4.13-sparc-cdtar.tar.bz2
-livecd/overlay: /root/sparc64-2007.0/overlay
+livecd/cdtar: /root/sparc64-2007.1/silo-1.4.13-sparc-cdtar.tar.bz2
+livecd/overlay: /root/sparc64-2007.1/overlay
 
 livecd/type: gentoo-release-universal
-livecd/volid: Gentoo Linux SPARC64 2007.0
-livecd/iso: install-sparc64-universal-2007.0.iso
+livecd/volid: Gentoo Linux SPARC64 2007.1
+livecd/iso: install-sparc64-universal-2007.1.iso
 
 boot/kernel: 2617 2620
 boot/kernel/2617/sources: ~sys-kernel/gentoo-sources-2.6.17

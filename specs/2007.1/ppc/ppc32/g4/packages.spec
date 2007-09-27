@@ -1,10 +1,10 @@
 subarch: g4
-version_stamp: 2007.0
+version_stamp: 2007.1
 target: grp
 rel_type: default
-profile: default-linux/ppc/ppc32/2007.0/desktop/G4
-snapshot: 2007.0
-source_subpath: default/stage3-g4-2007.0
+profile: default-linux/ppc/ppc32/2007.1/desktop/G4
+snapshot: 2007.1
+source_subpath: default/stage3-g4-2007.1
 grp: cd2
 
 grp/use: 

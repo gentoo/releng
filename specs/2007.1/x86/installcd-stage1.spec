@@ -1,10 +1,10 @@
 subarch: x86
-version_stamp: 2007.0
+version_stamp: 2007.1
 target: livecd-stage1
 rel_type: default
-profile: default-linux/x86/2007.0
-snapshot: 2007.0
-source_subpath: default/stage3-x86-2007.0
+profile: default-linux/x86/2007.1
+snapshot: 2007.1
+source_subpath: default/stage3-x86-2007.1
 livecd/use:
 	-*
 	fbcon

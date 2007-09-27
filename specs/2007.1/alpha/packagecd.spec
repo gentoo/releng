@@ -1,10 +1,10 @@
 subarch: alpha
-version_stamp: 2007.0
+version_stamp: 2007.1
 target: grp
 rel_type: default
-profile: default-linux/alpha/2007.0
-snapshot: 2007.0
-source_subpath: default/stage3-alpha-2007.0
+profile: default-linux/alpha/2007.1
+snapshot: 2007.1
+source_subpath: default/stage3-alpha-2007.1
 grp: cd2
 
 grp/use: 

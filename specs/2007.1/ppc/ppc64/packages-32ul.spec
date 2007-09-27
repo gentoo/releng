@@ -1,11 +1,11 @@
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ppc/ppc64/packages-32ul.spec,v 1.1 2007-09-27 17:22:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ppc/ppc64/packages-32ul.spec,v 1.2 2007-09-27 17:28:18 wolf31o2 Exp $
 subarch: ppc64
-version_stamp: 32ul-2007.0
+version_stamp: 32ul-2007.1
 target: grp
 rel_type: default 
-profile:  default-linux/ppc/ppc64/2007.0/32bit-userland
-snapshot: 2007.0
-source_subpath: default/stage3-ppc64-32ul-2007.0
+profile:  default-linux/ppc/ppc64/2007.1/32bit-userland
+snapshot: 2007.1
+source_subpath: default/stage3-ppc64-32ul-2007.1
 grp: cd2
 
 chost: powerpc-unknownlinux-gnu

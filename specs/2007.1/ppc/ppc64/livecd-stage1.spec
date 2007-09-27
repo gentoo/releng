@@ -1,10 +1,10 @@
 subarch: ppc64
-version_stamp: installer-32ul-2007.0
+version_stamp: installer-32ul-2007.1
 target: livecd-stage1
 rel_type: default
-profile: default-linux/ppc/ppc64/2007.0/32bit-userland/desktop
-snapshot: 2007.0
-source_subpath: default/stage3-ppc64-32ul-desktop-2007.0
+profile: default-linux/ppc/ppc64/2007.1/32bit-userland/desktop
+snapshot: 2007.1
+source_subpath: default/stage3-ppc64-32ul-desktop-2007.1
 chost: powerpc-unknown-linux-gnu
 livecd/use:
 	branding
