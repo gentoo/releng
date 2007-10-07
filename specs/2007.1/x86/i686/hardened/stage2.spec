@@ -1,6 +1,6 @@
 subarch: i686
 target: stage2
-version_stamp: hardened-2.6-2007.1
+version_stamp: hardened-2007.1
 rel_type: default
 profile: hardened/x86/2.6
 snapshot: 2007.1
