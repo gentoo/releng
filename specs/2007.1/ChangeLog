@@ -1,5 +1,5 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.5 2007-10-12 19:16:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.6 2007-10-12 20:26:57 phreak Exp $
 
   12 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/installcd-stage2-minimal.spec, ppc/ppc64/livecd-stage2.spec:
@@ -25,6 +25,14 @@
   x86/i686/livecd-stage1-gnome.spec, x86/i686/livedvd-stage1-large.spec,
   x86/installcd-stage1.spec:
   Removed net-dialup/bpalogin since it is masked and no longer needed.
+
+  07 Oct 2007; Christian Heim <phreak@gentoo.org>
+  x86/hardened/stage1-2.4.spec, x86/hardened/stage2-2.4.spec,
+  x86/hardened/stage3-2.4.spec, x86/hardened/stage1-2.6.spec,
+  x86/hardened/stage2-2.6.spec, x86/hardened/stage3-2.6.spec,
+  x86/i686/hardened/stage2-2.4.spec, x86/i686/hardened/stage3-2.4.spec,
+  x86/i686/hardened/stage2-2.6.spec, x86/i686/hardened/stage3-2.6.spec:
+  Deprecate 2.4 for this release and rename the specs accordingly.
 
   27 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   x86/hardened/stage1-2.4.spec, ppc/ppc64/distfiles-32ul.spec,
