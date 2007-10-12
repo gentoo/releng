@@ -40,7 +40,6 @@ livecd/packages:
 	net-analyzer/nmap
 	net-analyzer/tcpdump
 	net-analyzer/traceroute
-#	net-dialup/bpalogin
 	net-dialup/mingetty
 	net-dialup/minicom
 #	net-dialup/penggy

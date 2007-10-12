@@ -1,5 +1,15 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.2 2007-09-27 17:28:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.3 2007-10-12 17:42:43 wolf31o2 Exp $
+
+  12 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/installcd-stage1.spec, alpha/livecd-stage1.spec,
+  amd64/installcd-stage1.spec, amd64/livecd-stage1.spec,
+  amd64/livedvd-stage1.spec, hppa/installcd-stage1.spec,
+  ia64/installcd-stage1.spec, ia64/livecd-stage1.spec,
+  ppc/ppc64/livecd-stage1.spec, sparc/sparc64/installcd-stage1.spec,
+  x86/i686/livecd-stage1-gnome.spec, x86/i686/livedvd-stage1-large.spec,
+  x86/installcd-stage1.spec:
+  Removed net-dialup/bpalogin since it is masked and no longer needed.
 
   27 Sep 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   x86/hardened/stage1-2.4.spec, ppc/ppc64/distfiles-32ul.spec,
