@@ -1,5 +1,5 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.7 2007-10-12 20:28:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.8 2007-10-12 20:34:23 phreak Exp $
 
   12 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/installcd-stage2-minimal.spec,
@@ -34,6 +34,15 @@
   x86/i686/livecd-stage1-gnome.spec, x86/i686/livedvd-stage1-large.spec,
   x86/installcd-stage1.spec:
   Removed net-dialup/bpalogin since it is masked and no longer needed.
+
+  11 Oct 2007; Christian Heim <phreak@gentoo.org>
+  amd64/hardened/stage1.spec, amd64/hardened/stage1-nomultilib.spec,
+  amd64/hardened/stage2.spec, amd64/hardened/stage2-nomultilib.spec,
+  amd64/hardened/stage3.spec, amd64/hardened/stage3-nomultilib.spec,
+  amd64/hardened/stage1-multilib.spec, amd64/hardened/stage2-multilib.spec,
+  amd64/hardened/stage3-multilib.spec:
+  Standard release is going to be multilib (should have been last year
+  already), non-multilib is going to be the secondary choice.
 
   07 Oct 2007; Christian Heim <phreak@gentoo.org>
   x86/hardened/stage1-2.4.spec, x86/hardened/stage2-2.4.spec,
