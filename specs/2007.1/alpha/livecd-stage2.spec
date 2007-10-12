@@ -24,7 +24,7 @@ livecd/overlay: /root/livecd/overlays/livecd/2007.1/common/overlay/livecd
 livecd/root_overlay: /root/livecd/overlays/2007.1/common/root_overlay
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm2 --dmraid --evms2
+livecd/gk_mainargs: --lvm --dmraid --emvs
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources

@@ -19,12 +19,12 @@ livecd/type: gentoo-release-minimal
 #livecd/overlay: /root/livecd/overlays/amd64-minimal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --lvm2 --dmraid --evms2
+livecd/gk_mainargs: --makeopts=-j16 --lvm --dmraid --emvs
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/2007.1/amd64/installcd-2.6.19.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2007.1/amd64/installcd-2.6.20.config
 
 boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt
 
