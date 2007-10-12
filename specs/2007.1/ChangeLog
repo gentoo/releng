@@ -1,5 +1,5 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.8 2007-10-12 20:34:23 phreak Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.9 2007-10-12 20:38:34 wolf31o2 Exp $
 
   12 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/installcd-stage2-minimal.spec,
@@ -23,7 +23,8 @@
   ppc/ppc64/installcd-stage2-universal.spec, ppc/ppc64/livecd-stage2.spec,
   x86/i686/livecd-stage2-gnome.spec, x86/i686/livedvd-stage2-large.spec,
   x86/installcd-stage2-minimal.spec:
-  Change all instances of --lvm2 to --lvm and all instances of --evms2 to --evms.
+  Change all instances of --lvm2 to --lvm and all instances of --evms2 to
+  --evms.
 
   12 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/installcd-stage1.spec, alpha/livecd-stage1.spec,
@@ -33,7 +34,8 @@
   ppc/ppc64/livecd-stage1.spec, sparc/sparc64/installcd-stage1.spec,
   x86/i686/livecd-stage1-gnome.spec, x86/i686/livedvd-stage1-large.spec,
   x86/installcd-stage1.spec:
-  Removed net-dialup/bpalogin since it is masked and no longer needed.
+  Removed net-dialup/bpalogin since it is masked and no longer needed for bug
+  #191067.
 
   11 Oct 2007; Christian Heim <phreak@gentoo.org>
   amd64/hardened/stage1.spec, amd64/hardened/stage1-nomultilib.spec,
