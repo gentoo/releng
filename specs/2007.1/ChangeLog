@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.4 2007-10-12 18:51:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.5 2007-10-12 19:16:10 wolf31o2 Exp $
+
+  12 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/installcd-stage2-minimal.spec, ppc/ppc64/livecd-stage2.spec:
+  Removing net-wireless/at76c503a since it is provided in-kernel now, anyway.
 
   12 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/installcd-stage2-minimal.spec,

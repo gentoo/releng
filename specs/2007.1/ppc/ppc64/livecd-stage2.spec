@@ -51,7 +51,6 @@ boot/kernel/ppc32/packages:
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
 	sys-fs/cryptsetup-luks
-#	net-wireless/at76c503a
 #	net-wireless/rt2500
 #	net-wireless/rtl8180
 #	net-wireless/adm8211

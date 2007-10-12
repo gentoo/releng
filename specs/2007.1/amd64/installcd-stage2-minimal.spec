@@ -34,7 +34,6 @@ boot/kernel/gentoo/packages:
 	sys-apps/pcmciautils
 	sys-fs/cryptsetup-luks
 # These were not stable at time of snapshot/release.
-#	net-wireless/at76c503a
 #	net-wireless/rtl8180
 #	net-wireless/rtl8187
 #	net-wireless/adm8211
