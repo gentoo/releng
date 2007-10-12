@@ -24,14 +24,14 @@ boot/kernel/gentoo/sources: vanilla-sources
 boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2007.1/alpha/installcd-2.6.15.1.config
 boot/kernel/gentoo/use: usb -X png truetype
 boot/kernel/gentoo/packages:
-	cryptsetup-luks
+	cryptsetup
 
 boot/kernel/gentoo2.4/sources: =vanilla-sources-2.4*
 boot/kernel/gentoo2.4/config: /root/livecd/kconfig/releases/2007.1/alpha/installcd-2.4.30.config
 boot/kernel/gentoo2.4/use: usb -X png truetype
 boot/kernel/gentoo2.4/packages:
 	devfsd
-	cryptsetup-luks
+	cryptsetup
 
 livecd/unmerge:
 #	acl

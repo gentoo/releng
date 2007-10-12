@@ -34,7 +34,7 @@ boot/kernel/gentoo/packages:
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-	sys-fs/cryptsetup-luks
+	sys-fs/cryptsetup
 
 livecd/empty:
 	/var/tmp
