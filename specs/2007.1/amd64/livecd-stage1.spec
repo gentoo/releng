@@ -26,7 +26,7 @@ livecd/packages:
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/vlock
-	app-office/openoffice
+	app-office/openoffice-bin
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed

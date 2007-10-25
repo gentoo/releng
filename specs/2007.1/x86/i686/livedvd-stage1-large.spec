@@ -52,7 +52,7 @@ livecd/packages:
 	app-office/gnucash
 	app-office/gnumeric
 	app-office/koffice
-	app-office/openoffice
+	app-office/openoffice-bin
 	app-office/scribus
 	app-pda/gtkpod
 	app-pda/ipodslave
