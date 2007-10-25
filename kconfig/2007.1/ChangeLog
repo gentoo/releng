@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.6 2007-10-25 19:00:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.7 2007-10-25 19:03:34 wolf31o2 Exp $
+
+  25 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  x86/installcd-2.6.22.config:
+  Making sure we have EFI partition support enabled for bug #151475.
 
   25 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -amd64/installcd-2.6.20.config, -amd64/livecd-2.6.20.config,
