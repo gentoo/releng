@@ -37,7 +37,7 @@ livecd/packages:
 	app-portage/ufed
 #	app-text/tetex
 	dev-util/ccache
-	gnome-base/gnome
+	xfce-base/xfce4
 #	kde-base/kde-meta
 	mail-client/evolution
 	mail-client/mozilla-thunderbird

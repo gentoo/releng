@@ -31,7 +31,7 @@ livecd/packages:
 	app-portage/mirrorselect
 	app-portage/ufed
 	dev-util/ccache
-	gnome-base/gnome
+	xfce-base/xfce4
 	mail-client/mozilla-thunderbird
 	media-gfx/fbgrab
 #	media-sound/audacious

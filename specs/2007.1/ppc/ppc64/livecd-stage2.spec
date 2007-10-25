@@ -16,7 +16,7 @@ livecd/xsession: gnome
 livecd/fsscript: /root/livecd/scripts/2007.1/livecd.sh
 
 livecd/type: gentoo-release-livecd
-livecd/users: gentoo
+livecd/users: Xfce4
 livecd/volid: Gentoo Linux 2007.1 PPC LiveCD
 
 livecd/overlay: /root/livecd/overlays/livecd/2007.1/common/overlay/livecd
