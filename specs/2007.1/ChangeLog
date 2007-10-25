@@ -1,5 +1,12 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.13 2007-10-25 18:20:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.14 2007-10-25 18:41:29 wolf31o2 Exp $
+
+  25 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  -x86/i686/livecd-stage1-gnome.spec, +x86/i686/livecd-stage1.spec,
+  -x86/i686/livecd-stage2-gnome.spec, +x86/i686/livecd-stage2.spec,
+  -x86/i686/livedvd-stage1-large.spec, +x86/i686/livedvd-stage1.spec,
+  -x86/i686/livedvd-stage2-large.spec, +x86/i686/livedvd-stage2.spec:
+  Rename x86 specs to match the current naming scheme.
 
   25 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/livecd-stage1.spec, alpha/livecd-stage2.spec,
