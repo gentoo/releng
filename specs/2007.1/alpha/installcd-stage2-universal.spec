@@ -17,7 +17,7 @@ livecd/type: gentoo-release-universal
 livecd/overlay: /root/livecd/overlays/alpha-universal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --emvs
+livecd/gk_mainargs: --lvm --dmraid --evms
 
 boot/kernel: gentoo gentoo2.4
 boot/kernel/gentoo/sources: vanilla-sources

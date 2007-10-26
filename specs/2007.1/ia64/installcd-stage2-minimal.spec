@@ -17,7 +17,7 @@ livecd/type: gentoo-release-minimal
 #livecd/overlay: /root/livecd/overlays/ia64-minimal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --emvs --dmraid
+livecd/gk_mainargs: --makeopts=-j16 --evms --dmraid
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources

@@ -1,5 +1,15 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.14 2007-10-25 18:41:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.15 2007-10-26 21:06:21 agaffney Exp $
+
+  26 Oct 2007; Andrew Gaffney <agaffney@gentoo.org>
+  alpha/installcd-stage2-minimal.spec,
+  alpha/installcd-stage2-universal.spec, alpha/livecd-stage2.spec,
+  amd64/livecd-stage2.spec, amd64/livedvd-stage2.spec,
+  ia64/installcd-stage2-minimal.spec, ia64/livecd-stage2.spec,
+  ppc/ppc64/livecd-stage2.spec, x86/hardened/installcd-stage2-minimal.spec,
+  x86/i686/livecd-stage2.spec, x86/i686/livedvd-stage2.spec,
+  x86/installcd-stage2-minimal.spec:
+  change --emvs to --evms
 
   25 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   -x86/i686/livecd-stage1-gnome.spec, +x86/i686/livecd-stage1.spec,

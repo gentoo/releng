@@ -25,7 +25,7 @@ livecd/overlay:
 livecd/root_overlay: /root/livecd/overlays/root-livecd
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --lvm --dmraid --emvs --unionfs-dev
+livecd/gk_mainargs: --makeopts=-j16 --lvm --dmraid --evms --unionfs-dev
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources

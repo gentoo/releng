@@ -17,7 +17,7 @@ livecd/volid: Gentoo Linux x86 2007.1
 livecd/type: gentoo-release-minimal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --emvs
+livecd/gk_mainargs: --lvm --dmraid --evms
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources

@@ -17,7 +17,7 @@ livecd/type: gentoo-release-minimal
 #livecd/overlay: /root/livecd/overlays/alpha-minimal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --emvs
+livecd/gk_mainargs: --lvm --dmraid --evms
 
 boot/kernel: gentoo gentoo2.4
 boot/kernel/gentoo/sources: vanilla-sources

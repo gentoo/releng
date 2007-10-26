@@ -23,7 +23,7 @@ livecd/overlay: /root/livecd/overlays/livecd/2007.1/common/overlay/livecd
 livecd/root_overlay: /root/livecd/overlays/2007.1/common/root_overlay
 
 #livecd/bootargs: dokeymap
-livecd/gk_mainargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu- --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --emvs --unionfs-dev
+livecd/gk_mainargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu- --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms --unionfs-dev
 
 livecd/rcadd: pbbuttonsd|default
 

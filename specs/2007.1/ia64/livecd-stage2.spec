@@ -23,7 +23,7 @@ livecd/overlay: /root/livecd/overlays/2007.1/common/overlay/livecd
 livecd/root_overlay: /root/livecd/overlays/2007.1/common/root_overlay
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --dmraid --emvs
+livecd/gk_mainargs: --makeopts=-j16 --dmraid --evms
 #--unionfs-dev
 
 boot/kernel: gentoo
