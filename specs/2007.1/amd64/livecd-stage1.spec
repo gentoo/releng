@@ -11,6 +11,7 @@ livecd/use:
 	socks5
 
 livecd/packages:
+	x11-base/xorg-server
 	app-admin/ide-smart
 	app-admin/logrotate
 	app-admin/passook

@@ -41,7 +41,7 @@ livecd/packages:
 	app-editors/xemacs
 	app-forensics/chkrootkit
 	app-laptop/i8kutils
-#	app-misc/beagle
+	app-misc/beagle
 	app-misc/livecd-tools
 	app-misc/mc
 	app-misc/pax-utils
@@ -70,7 +70,7 @@ livecd/packages:
 	app-shells/zsh
 	app-shells/zsh-completion
 	app-text/tetex
-#	dev-util/anjuta
+	dev-util/anjuta
 	dev-util/ccache
 	dev-util/cvs
 	dev-util/indent
@@ -90,7 +90,7 @@ livecd/packages:
 	mail-client/evolution
 	mail-client/mozilla-thunderbird
 	mail-client/sylpheed
-	mail-client/sylpheed-claws
+	mail-client/claws-mail
 	media-gfx/blender
 	media-gfx/digikam
 	media-gfx/fbgrab
@@ -188,15 +188,15 @@ livecd/packages:
 	sys-apps/qtparted
 	sys-apps/rsbac-admin
 	sys-apps/sdparm
-#	sys-apps/sg3_utils
+	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
 	sys-apps/suspend2-userui
 	sys-block/gpart
 	sys-block/gparted
-#	sys-block/mpt-status
+	sys-block/mpt-status
 	sys-block/partimage
-#	sys-block/qla-fc-firmware
+	sys-block/qla-fc-firmware
 #	sys-boot/aboot
 #	sys-boot/elilo
 	sys-boot/grub
@@ -240,7 +240,7 @@ livecd/packages:
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver
-#	x11-plugins/gkrellm-plugins
+	x11-plugins/gkrellm-plugins
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
 	x11-wm/afterstep

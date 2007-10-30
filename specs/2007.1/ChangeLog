@@ -1,5 +1,11 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.16 2007-10-30 18:41:26 agaffney Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.17 2007-10-30 21:09:02 wolf31o2 Exp $
+
+  30 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livecd-stage1.spec, amd64/livedvd-stage1.spec,
+  x86/i686/livedvd-stage1.spec:
+  Change sylpheed-claws to claws-mail and also unmask all packages which were
+  masked last release for compile failures in the LiveDVD spec files.
 
   30 Oct 2007; Andrew Gaffney <agaffney@gentoo.org>
   alpha/livecd-stage1.spec, alpha/packagecd.spec, amd64/livecd-stage1.spec,
