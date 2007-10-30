@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ppc/ppc64/packages-32ul.spec,v 1.2 2007-09-27 17:28:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ppc/ppc64/packages-32ul.spec,v 1.3 2007-10-30 18:41:30 agaffney Exp $
 subarch: ppc64
 version_stamp: 32ul-2007.1
 target: grp
@@ -59,7 +59,7 @@ grp/cd2/packages:
 	sylpheed
 	gnome
 	xmms
-	gaim
+	pidgin
 	xchat
 	tetex
 	kile

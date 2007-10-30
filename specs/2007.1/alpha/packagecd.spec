@@ -71,7 +71,7 @@ grp/cd2/packages:
 	mozilla-firefox
 	mozilla-thunderbird
 	abiword
-	gaim
+	pidgin
 	xchat
 	tetex
 	samba

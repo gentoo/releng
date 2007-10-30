@@ -57,7 +57,7 @@ grp/cd2/packages:
 	kde-meta
 	koffice-meta
 #	abiword
-	gaim
+	pidgin
 	xchat
 #	tetex
 	k3b

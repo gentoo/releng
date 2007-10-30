@@ -135,7 +135,7 @@ livecd/packages:
 	net-ftp/ncftp
 	net-fs/nfs-utils
 	net-fs/samba
-	net-im/gaim
+	net-im/pidgin
 	net-irc/irssi
 	net-irc/xchat
 	net-misc/bridge-utils

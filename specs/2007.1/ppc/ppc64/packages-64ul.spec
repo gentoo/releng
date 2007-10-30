@@ -51,7 +51,7 @@ grp/cd2/packages:
 	sylpheed
 	kde
 	xmms
-	gaim
+	pidgin
 	xchat
 	tetex
 	nmap

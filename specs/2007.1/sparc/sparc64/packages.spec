@@ -76,7 +76,7 @@ grp/cd2/packages:
 	mozilla-thunderbird
 	abiword
 	gnumeric
-	gaim
+	pidgin
 	tetex
 	samba
 	nmap

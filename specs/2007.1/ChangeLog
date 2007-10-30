@@ -1,5 +1,14 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.15 2007-10-26 21:06:21 agaffney Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.16 2007-10-30 18:41:26 agaffney Exp $
+
+  30 Oct 2007; Andrew Gaffney <agaffney@gentoo.org>
+  alpha/livecd-stage1.spec, alpha/packagecd.spec, amd64/livecd-stage1.spec,
+  amd64/livedvd-stage1.spec, ia64/livecd-stage1.spec,
+  ppc/ppc32/g4/packages.spec, ppc/ppc64/livecd-stage1.spec,
+  x86/i686/livecd-stage1.spec, ppc/ppc64/packages-32ul.spec,
+  x86/i686/livedvd-stage1.spec, ppc/ppc64/packages-64ul.spec,
+  sparc/sparc64/packages.spec:
+  s/gaim/pidgin/
 
   26 Oct 2007; Andrew Gaffney <agaffney@gentoo.org>
   alpha/installcd-stage2-minimal.spec,
