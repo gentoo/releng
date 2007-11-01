@@ -37,7 +37,7 @@ boot/kernel/gentoo/packages:
 #	net-dialup/fcdsl
 	sys-fs/cryptsetup
 	net-wireless/rt2500
-	net-wireless/acx
+#	net-wireless/acx
 	net-wireless/ipw3945
 
 livecd/unmerge:

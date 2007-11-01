@@ -23,7 +23,7 @@ livecd/overlay: /root/livecd/overlays/2007.1/common/overlay/livecd
 livecd/root_overlay: /root/livecd/overlays/2007.1/common/root_overlay
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms --unionfs-dev
+livecd/gk_mainargs: --lvm --dmraid --evms
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
@@ -41,7 +41,7 @@ boot/kernel/gentoo/packages:
 #	net-dialup/fritzcapi
 	net-dialup/globespan-adsl
 	net-dialup/slmodem
-	net-wireless/acx
+#	net-wireless/acx
 	net-wireless/hostap-utils
 	net-wireless/ipw3945
 	net-wireless/madwifi-ng-tools
