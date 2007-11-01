@@ -1,5 +1,11 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.19 2007-11-01 18:54:13 agaffney Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.20 2007-11-01 20:07:54 agaffney Exp $
+
+  01 Nov 2007; Andrew Gaffney <agaffney@gentoo.org>
+  alpha/livecd-stage2.spec, amd64/livecd-stage2.spec,
+  ia64/livecd-stage2.spec, ppc/ppc64/livecd-stage2.spec,
+  x86/i686/livecd-stage2.spec:
+  change Xfce4 to XFce4 for livecd/session...hurray consistency :/
 
   01 Nov 2007; Andrew Gaffney <agaffney@gentoo.org>
   x86/i686/livecd-stage2.spec, x86/installcd-stage2-minimal.spec:
