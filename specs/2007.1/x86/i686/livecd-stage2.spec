@@ -12,7 +12,7 @@ livecd/iso: /var/tmp/catalyst/builds/default/livecd-i686-installer-2007.1.iso
 livecd/splash_type: gensplash
 livecd/splash_theme: livecd-2007.1
 livecd/xdm: gdm
-livecd/xsession: XFce4
+livecd/xsession: xfce
 livecd/fsscript: /root/livecd/scripts/2007.1/livecd.sh
 
 livecd/type: gentoo-release-livecd
