@@ -9,11 +9,10 @@ source_subpath: default/livecd-stage1-amd64-installer-2007.1
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-2007.1.iso
-livecd/splash_type: gensplash
-livecd/splash_theme: livecd-2007.1
-livecd/xdm: gdm
+#livecd/splash_type: gensplash
+#livecd/splash_theme: livecd-2007.1
 livecd/xsession: xfce
-livecd/fsscript: /root/livecd/scripts/2007.1/livecd.sh
+#livecd/fsscript: /root/livecd/scripts/2007.1/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
@@ -23,12 +22,12 @@ livecd/overlay: /root/livecd/overlays/2007.1/common/overlay/livecd
 livecd/root_overlay: /root/livecd/overlays/2007.1/common/root_overlay
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --lvm --dmraid --evms --unionfs-dev
+livecd/gk_mainargs: --makeopts=-j16 --lvm --dmraid --evms --mdadm
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/2007.1/amd64/livecd-2.6.19.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2007.1/amd64/livecd-2.6.22.config
 
 boot/kernel/gentoo/use: pcmcia usb oss atm
 
@@ -38,18 +37,23 @@ boot/kernel/gentoo/packages:
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
+### Masked
 #	net-dialup/fcdsl
+### Masked
 #	net-dialup/fritzcapi
+### Masked
 #	net-dialup/globespan-adsl
+### Masked
 #	net-dialup/slmodem
+### Masked
 #	net-wireless/acx
 	net-wireless/hostap-utils
 	net-wireless/ipw3945
 	net-wireless/madwifi-ng-tools
 	net-wireless/rt2500
+### Masked
 #	net-wireless/rtl8187
 	sys-apps/pcmciautils
-	sys-fs/cryptsetup
 
 livecd/empty:
 	/var/tmp

@@ -20,7 +20,8 @@ livecd/packages:
 	app-admin/sudo
 	app-admin/superadduser
 	app-admin/syslog-ng
-	app-admin/testdisk
+### Masked
+#	app-admin/testdisk
 	app-arch/alien
 	app-arch/mt-st
 	app-arch/unrar
@@ -46,7 +47,8 @@ livecd/packages:
 	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
-	app-misc/splitvt
+### Masked
+#	app-misc/splitvt
 	app-misc/vlock
 	app-office/dia
 	app-office/gnucash
@@ -83,7 +85,8 @@ livecd/packages:
 	dev-util/valgrind
 	gnome-base/gnome
 	gnome-extra/evolution-exchange
-	gnome-extra/gsynaptics
+### Masked
+#	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
 	kde-base/kde-meta
 	kde-base/kooka
@@ -91,7 +94,8 @@ livecd/packages:
 	mail-client/mozilla-thunderbird
 	mail-client/sylpheed
 	mail-client/claws-mail
-	media-gfx/blender
+### Masked
+#	media-gfx/blender
 	media-gfx/digikam
 	media-gfx/fbgrab
 	media-gfx/gimp
@@ -126,7 +130,8 @@ livecd/packages:
 	net-analyzer/wireshark
 	net-dialup/mingetty
 	net-dialup/minicom
-	net-dialup/penggy
+### Masked
+#	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables

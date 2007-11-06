@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.21 2007-11-01 20:24:03 agaffney Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.22 2007-11-06 21:15:17 wolf31o2 Exp $
+
+  06 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livecd-stage2.spec, amd64/livedvd-stage1.spec:
+  Commenting a few packages which are masked on amd64.
 
   01 Nov 2007; Andrew Gaffney <agaffney@gentoo.org>
   alpha/livecd-stage2.spec, amd64/livecd-stage2.spec,
