@@ -11,7 +11,6 @@ livecd/use:
 	socks5
 
 livecd/packages:
-	x11-base/xorg-server
 	app-admin/ide-smart
 	app-admin/logrotate
 	app-admin/passook
@@ -87,6 +86,7 @@ livecd/packages:
 #	sys-apps/sg3_utils
 	sys-apps/slocate
 #	sys-apps/smartmontools
+	sys-block/disktype
 #	sys-block/gpart
 #	sys-block/partimage
 #	sys-block/qla-fc-firmware
@@ -120,6 +120,7 @@ livecd/packages:
 	sys-process/vixie-cron
 	www-client/links
 	www-client/mozilla-firefox
+	x11-base/xorg-server
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 #	x11-misc/xscreensaver

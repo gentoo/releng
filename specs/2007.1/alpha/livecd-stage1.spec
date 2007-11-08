@@ -19,7 +19,7 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/mt-st
 #	app-benchmarks/cpuburn
-	app-cdr/cdrtools
+	app-cdr/cdrkit
 	app-crypt/gnupg
 	app-editors/emacs
 	app-editors/vim
@@ -84,6 +84,7 @@ livecd/packages:
 #	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
+#	sys-block/disktype
 #	sys-block/gpart
 #	sys-block/partimage
 #	sys-block/qla-fc-firmware
