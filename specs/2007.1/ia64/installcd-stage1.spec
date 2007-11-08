@@ -36,6 +36,7 @@ livecd/packages:
 #	net-dialup/rp-pppoe
 	net-fs/nfs-utils
 	net-irc/irssi
+#	net-misc/br2684ctl
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/rdate

@@ -1,5 +1,17 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.24 2007-11-08 01:17:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.25 2007-11-08 01:38:55 wolf31o2 Exp $
+
+  08 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/installcd-stage1.spec, alpha/livecd-stage1.spec,
+  amd64/installcd-stage1.spec, amd64/livecd-stage1.spec,
+  amd64/livedvd-stage1.spec, hppa/installcd-stage1.spec,
+  ia64/installcd-stage1.spec, ia64/livecd-stage1.spec,
+  ppc/ppc64/installcd-stage1.spec, ppc/ppc64/livecd-stage1.spec,
+  sparc/sparc64/installcd-stage1.spec, x86/hardened/installcd-stage1.spec,
+  x86/i686/livecd-stage1.spec, x86/i686/livedvd-stage1.spec,
+  x86/installcd-stage1.spec:
+  Added net-misc/br2684ctl for bug #191619 and commenting airsnort on amd64's
+  LiveDVD spec.
 
   08 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/livecd-stage1.spec, amd64/livecd-stage1.spec,

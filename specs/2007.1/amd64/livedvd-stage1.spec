@@ -142,6 +142,7 @@ livecd/packages:
 	net-im/pidgin
 	net-irc/irssi
 	net-irc/xchat
+	net-misc/br2684ctl
 	net-misc/bridge-utils
 	net-misc/dhcpcd
 	net-misc/iputils
@@ -158,7 +159,8 @@ livecd/packages:
 	net-proxy/tsocks
 ### Masked
 #	net-wireless/aircrack-ng
-	net-wireless/airsnort
+### Masked
+#	net-wireless/airsnort
 	net-wireless/gnome-bluetooth
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
