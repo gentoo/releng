@@ -192,6 +192,7 @@ livecd/packages:
 	sys-apps/slocate
 	sys-apps/smartmontools
 	sys-apps/suspend2-userui
+	sys-block/disktype
 	sys-block/gpart
 	sys-block/gparted
 	sys-block/mpt-status

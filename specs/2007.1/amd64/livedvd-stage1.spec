@@ -135,7 +135,6 @@ livecd/packages:
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables
-	net-firewall/firestarter
 	net-firewall/kmyfirewall
 	net-ftp/ncftp
 	net-fs/nfs-utils
@@ -157,7 +156,8 @@ livecd/packages:
 	net-print/cups
 	net-proxy/dante
 	net-proxy/tsocks
-	net-wireless/aircrack-ng
+### Masked
+#	net-wireless/aircrack-ng
 	net-wireless/airsnort
 	net-wireless/gnome-bluetooth
 	net-wireless/ipw2100-firmware
@@ -197,6 +197,7 @@ livecd/packages:
 	sys-apps/slocate
 	sys-apps/smartmontools
 #	sys-apps/suspend2-userui
+	sys-block/disktype
 	sys-block/gpart
 	sys-block/gparted
 	sys-block/mpt-status
