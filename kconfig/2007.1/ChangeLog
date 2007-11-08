@@ -1,5 +1,11 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.9 2007-11-06 17:27:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.10 2007-11-08 01:30:41 wolf31o2 Exp $
+
+  08 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/installcd-2.6.22.config, amd64/livecd-2.6.22.config,
+  x86/installcd-2.6.22.config, x86/livecd-2.6.22.config:
+  Enabled CONFIG_ATM_BR2684 on x86's InstallCD kernel config for bug #191619
+  and made sure all amd64/x86 configs are relocatable.
 
   06 Nov 2007; Raúl Porcel <armin76@gentoo.org>
   +alpha/installcd-2.6.22.config:
