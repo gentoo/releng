@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.25 2007-11-08 01:38:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.26 2007-11-08 17:46:03 agaffney Exp $
+
+  08 Nov 2007; Andrew Gaffney <agaffney@gentoo.org> x86/stage1.spec:
+  stage1 can now build against the 2007.1 profile instead of no-nptl since
+  we're using CHOST=i486
 
   08 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/installcd-stage1.spec, alpha/livecd-stage1.spec,
