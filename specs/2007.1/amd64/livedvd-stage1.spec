@@ -147,6 +147,7 @@ livecd/packages:
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/rdate
+	net-misc/rdesktop
 	net-misc/tightvnc
 	net-misc/vconfig
 	net-misc/vpnc

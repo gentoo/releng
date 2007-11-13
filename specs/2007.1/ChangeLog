@@ -1,5 +1,12 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.26 2007-11-08 17:46:03 agaffney Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.27 2007-11-13 21:00:54 wolf31o2 Exp $
+
+  13 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/livecd-stage1.spec, amd64/livecd-stage1.spec,
+  amd64/livedvd-stage1.spec, ia64/livecd-stage1.spec,
+  ppc/ppc64/livecd-stage1.spec, x86/i686/livecd-stage1.spec,
+  x86/i686/livedvd-stage1.spec:
+  Added net-misc/rdesktop to Live*D media specs for bug #188258.
 
   08 Nov 2007; Andrew Gaffney <agaffney@gentoo.org> x86/stage1.spec:
   stage1 can now build against the 2007.1 profile instead of no-nptl since
