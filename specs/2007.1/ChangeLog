@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.28 2007-11-14 02:06:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.29 2007-11-14 02:09:37 wolf31o2 Exp $
+
+  14 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livedvd-stage1.spec, x86/i686/livedvd-stage1.spec:
+  Removed sys-fs/ext2resize since it is no longer in the tree.
 
   14 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/livedvd-stage1.spec:

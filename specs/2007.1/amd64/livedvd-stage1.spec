@@ -227,7 +227,6 @@ livecd/packages:
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms
-	sys-fs/ext2resize
 	sys-fs/hfsplusutils
 	sys-fs/hfsutils
 #	sys-fs/iprutils
