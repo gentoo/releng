@@ -163,16 +163,20 @@ livecd/packages:
 ### Masked
 #	net-wireless/airsnort
 	net-wireless/gnome-bluetooth
-	net-wireless/ipw2100-firmware
-	net-wireless/ipw2200-firmware
+### Masked
+#	net-wireless/ipw2100-firmware
+### Masked
+#	net-wireless/ipw2200-firmware
 	net-wireless/kdebluetooth
 	net-wireless/prism54-firmware
 	net-wireless/wepattack
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	net-wireless/zd1201-firmware
+### Masked
+#	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	rox-base/rox
+### Masked
 #	sys-apps/apmd
 	sys-apps/dmidecode
 	sys-apps/eject
@@ -193,18 +197,22 @@ livecd/packages:
 	sys-apps/pcsc-lite
 	sys-apps/pmount
 #	sys-apps/powerpc-utils
-	sys-apps/qtparted
+### Masked
+#	sys-apps/qtparted
 	sys-apps/rsbac-admin
 	sys-apps/sdparm
 	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
+### Masked
 #	sys-apps/suspend2-userui
 	sys-block/disktype
-	sys-block/gpart
+### Masked
+#	sys-block/gpart
 	sys-block/gparted
 	sys-block/mpt-status
-	sys-block/partimage
+### Masked
+#	sys-block/partimage
 	sys-block/qla-fc-firmware
 #	sys-boot/aboot
 #	sys-boot/elilo

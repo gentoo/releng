@@ -1,5 +1,12 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.27 2007-11-13 21:00:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.28 2007-11-14 02:06:48 wolf31o2 Exp $
+
+  14 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livedvd-stage1.spec:
+  Commented a few packages which are masked on amd64:
+  net-wireless/ipw2100-firmware net-wireless/ipw2200-firmware
+  net-wireless/zd1201-firmware sys-apps/qtparted sys-block/gpart
+  sys-block/partimage
 
   13 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   alpha/livecd-stage1.spec, amd64/livecd-stage1.spec,
