@@ -1,5 +1,22 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.29 2007-11-14 02:09:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/specs/2007.1/ChangeLog,v 1.30 2007-11-14 02:17:51 wolf31o2 Exp $
+
+  14 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  alpha/installcd-stage1.spec, alpha/livecd-stage1.spec,
+  alpha/livecd-stage2.spec, amd64/installcd-stage1.spec,
+  amd64/livecd-stage1.spec, amd64/livecd-stage2.spec,
+  amd64/livedvd-stage1.spec, amd64/livedvd-stage2.spec,
+  hppa/installcd-stage1.spec, ia64/installcd-stage1.spec,
+  ia64/livecd-stage1.spec, ia64/livecd-stage2.spec,
+  ppc/ppc64/installcd-stage1.spec, ppc/ppc64/livecd-stage1.spec,
+  ppc/ppc64/livecd-stage2.spec, sparc/sparc64/installcd-stage1.spec,
+  x86/hardened/installcd-stage1.spec, x86/i686/livecd-stage1.spec,
+  x86/i686/livecd-stage2.spec, x86/i686/livedvd-stage1.spec,
+  x86/i686/livedvd-stage2.spec, x86/installcd-stage1.spec:
+  Removed net-misc/br2684ctl from livecd-stage1 spec files and moved to
+  livecd-stage2 spec files. I also removed sys-fs/cryptsetup if it was listed,
+  since it is safe to pull into livecd-stage1 now and we should be getting the
+  correct version/package on each architecture.
 
   14 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/livedvd-stage1.spec, x86/i686/livedvd-stage1.spec:

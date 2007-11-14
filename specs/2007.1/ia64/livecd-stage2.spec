@@ -43,6 +43,7 @@ boot/kernel/gentoo/packages:
 #	net-dialup/fritzcapi
 #	net-dialup/globespan-adsl
 #	net-dialup/slmodem
+#	net-misc/br2684ctl
 #	net-wireless/acx
 #	net-wireless/hostap-utils
 #	net-wireless/ipw3945
@@ -50,7 +51,6 @@ boot/kernel/gentoo/packages:
 #	net-wireless/rt2500
 #	net-wireless/rtl8187
 #	sys-apps/pcmciautils
-	sys-fs/cryptsetup
 
 livecd/empty:
 	/var/tmp

@@ -50,7 +50,7 @@ boot/kernel/ppc32/packages:
 #	net-wireless/hostap-utils
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
-	sys-fs/cryptsetup
+	net-misc/br2684ctl
 #	net-wireless/rt2500
 #	net-wireless/rtl8180
 #	net-wireless/adm8211

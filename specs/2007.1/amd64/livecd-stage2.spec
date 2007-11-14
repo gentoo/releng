@@ -45,6 +45,7 @@ boot/kernel/gentoo/packages:
 #	net-dialup/globespan-adsl
 ### Masked
 #	net-dialup/slmodem
+	net-misc/br2684ctl
 ### Masked
 #	net-wireless/acx
 	net-wireless/hostap-utils

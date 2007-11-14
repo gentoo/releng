@@ -34,7 +34,7 @@ boot/kernel/gentoo/packages:
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-	sys-fs/cryptsetup
+	net-misc/br2684ctl
 
 livecd/empty:
 	/var/tmp

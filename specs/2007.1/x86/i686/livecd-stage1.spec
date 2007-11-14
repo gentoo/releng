@@ -52,7 +52,6 @@ livecd/packages:
 	net-im/pidgin
 	net-irc/irssi
 	net-irc/xchat
-	net-misc/br2684ctl
 	net-misc/bridge-utils
 	net-misc/dhcpcd
 	net-misc/iputils
