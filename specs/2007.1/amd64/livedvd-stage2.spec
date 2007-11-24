@@ -42,7 +42,7 @@ boot/kernel/gentoo/packages:
 	media-sound/alsa-utils
 #	net-dialup/fcdsl
 #	net-dialup/fritzcapi
-#	net-dialup/globespan-adsl
+	net-dialup/globespan-adsl
 #	net-dialup/slmodem
 	net-misc/br2684ctl
 #	net-wireless/acx

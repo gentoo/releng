@@ -33,6 +33,7 @@ boot/kernel/gentoo/packages:
 	media-gfx/splash-themes-livecd
 	sys-apps/pcmciautils
 	sys-fs/cryptsetup
+	net-dialup/globespan-adsl
 # These were not stable at time of snapshot/release.
 #	net-wireless/rtl8180
 #	net-wireless/rtl8187
