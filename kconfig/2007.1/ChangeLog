@@ -1,5 +1,11 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.10 2007-11-08 01:30:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/ChangeLog,v 1.11 2007-11-24 06:04:17 wolf31o2 Exp $
+
+  24 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  amd64/livecd-2.6.22.config, x86/installcd-2.6.22.config,
+  x86/livecd-2.6.22.config:
+  Make sure we have the ATA over Ethernet driver enabled on amd64/x86 for bug
+  #199444.
 
   08 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   amd64/installcd-2.6.22.config, amd64/livecd-2.6.22.config,
