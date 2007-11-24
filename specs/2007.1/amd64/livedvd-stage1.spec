@@ -205,6 +205,7 @@ livecd/packages:
 	sys-apps/smartmontools
 ### Masked
 #	sys-apps/suspend2-userui
+	sys-block/aoetools
 	sys-block/disktype
 ### Masked
 #	sys-block/gpart

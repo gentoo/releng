@@ -100,6 +100,7 @@ livecd/packages:
 	sys-apps/sdparm
 	sys-apps/slocate
 	sys-apps/smartmontools
+	sys-block/aoetools
 	sys-block/disktype
 #	sys-block/gpart
 	sys-block/gparted
