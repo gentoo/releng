@@ -10,12 +10,13 @@ livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/palo-1.5_pre20040515-cdtar.tar.bz2
 
 livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-universal-2007.1.iso
-livecd/devmanager: udev
 
 livecd/type: gentoo-release-universal
 livecd/bootargs: dokeymap
 
-livecd/overlay: /root/livecd/overlays/hppa-universal
+livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2007.1/common/overlay/installcd
+
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: livecd32 livecd64
 

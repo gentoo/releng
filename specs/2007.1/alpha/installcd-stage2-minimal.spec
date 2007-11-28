@@ -14,10 +14,8 @@ livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-2007.1.iso
 livecd/volid: Gentoo Linux alpha 2007.1
 livecd/type: gentoo-release-minimal
 
-#livecd/overlay: /root/livecd/overlays/alpha-minimal
-
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: gentoo gentoo2.4
 boot/kernel/gentoo/sources: vanilla-sources

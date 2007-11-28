@@ -10,25 +10,21 @@ livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 
 livecd/iso: /var/tmp/catalyst/builds/default/install-x86-minimal-2007.1.iso
-livecd/splash_type: gensplash
-livecd/splash_theme: livecd-2007.1
 
 livecd/volid: Gentoo Linux x86 2007.1
 livecd/type: gentoo-release-minimal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: hardened-sources
 
-boot/kernel/gentoo/config: /cvs/releng/kconfig/2007.1/x86/hardened/installcd-2.6.20.config
+boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/x86/hardened/installcd-2.6.20.config
 
 boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt -qt3 -qt4
 
 boot/kernel/gentoo/packages:
-	media-gfx/splashutils
-	media-gfx/splash-themes-livecd
 	sys-apps/pcmciautils
 	net-dialup/slmodem
 	net-dialup/globespan-adsl

@@ -9,34 +9,28 @@ source_subpath: default/livecd-stage1-amd64-installer-2007.1
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/livedvd-amd64-installer-2007.1.iso
-livecd/splash_type: gensplash
-livecd/splash_theme: livecd-2007.1
 livecd/xdm: gdm
-livecd/xsession: gnome
-livecd/fsscript: /root/livecd/scripts/2007.1/livecd.sh
+livecd/xsession: xfce
+livecd/fsscript: /var/cvsroot/gentoo/src/releng/scripts/2007.1/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
 livecd/volid: Gentoo Linux AMD64 LiveDVD
 
-livecd/overlay:
-	/root/livecd/overlays/2007.1/common/overlay/livedvd
-	/root/livecd/overlays/2007.1/amd64/overlay/livedvd
-livecd/root_overlay: /root/livecd/overlays/root-livecd
+livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2007.1/common/overlay/livedvd
+livecd/root_overlay: /var/cvsroot/gentoo/src/releng/overlays/root-livecd
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --lvm --dmraid --evms --unionfs-dev
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/2007.1/amd64/livecd-2.6.19.config
+boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/amd64/livecd-2.6.22.config
 
 boot/kernel/gentoo/use: pcmcia usb oss atm truetype png
 
 boot/kernel/gentoo/packages:
-	media-gfx/splashutils
-	media-gfx/splash-themes-livecd
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils

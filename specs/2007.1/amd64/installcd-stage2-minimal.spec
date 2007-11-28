@@ -10,16 +10,14 @@ livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar.bz2
 
 livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-2007.1.iso
-livecd/splash_type: gensplash
-livecd/splash_theme: livecd-2007.0
 
 livecd/volid: Gentoo Linux amd64 2007.1
 livecd/type: gentoo-release-minimal
 
-#livecd/overlay: /root/livecd/overlays/amd64-minimal
+#livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2007.1/common/overlay/installcd
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --makeopts=-j16 --lvm --dmraid
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
@@ -29,8 +27,6 @@ boot/kernel/gentoo/config: /root/livecd/kconfig/2007.1/amd64/installcd-2.6.22.co
 boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt
 
 boot/kernel/gentoo/packages:
-	media-gfx/splashutils
-	media-gfx/splash-themes-livecd
 	sys-apps/pcmciautils
 	sys-fs/cryptsetup
 	net-dialup/globespan-adsl
