@@ -1,5 +1,9 @@
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo/src/releng/overlays/ChangeLog,v 1.3 2007-10-30 23:46:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo/src/releng/overlays/ChangeLog,v 1.4 2007-12-07 00:52:31 wolf31o2 Exp $
+
+  07 Dec 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  +2007.1/common/overlay/installcd/distfiles/README:
+  Adding distfiles dir for the Universal CD and adding a README.
 
   30 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   +2007.1/common/overlay/installcd/docs/README,
