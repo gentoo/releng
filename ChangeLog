@@ -2,6 +2,36 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> ++, ++, ++, ++,
+  -overlays/2007.0/amd64/overlay/livedvd/distfiles/README,
+  -overlays/2007.0/amd64/overlay/livedvd/stages/README,
+  -overlays/2007.0/common/overlay/installcd/docs/README,
+  -overlays/2007.0/common/overlay/installcd/snapshots/README,
+  -overlays/2007.0/common/overlay/installcd/stages/README,
+  -overlays/2007.0/common/overlay/livecd/docs/README,
+  -overlays/2007.0/common/overlay/livecd/snapshots/README,
+  -overlays/2007.0/common/overlay/livedvd/docs/README,
+  -overlays/2007.0/common/overlay/livedvd/snapshots/README,
+  -overlays/2007.0/common/root_overlay/home/gentoo/.nautilus/metafiles/file:
+  %2F%2F%2Fhome%2Fgentoo%2FDesktop.xml,
+  -overlays/2007.0/common/root_overlay/home/gentoo/.xscreensaver,
+  -overlays/2007.0/x86/overlay/livedvd/distfiles/README,
+  -overlays/2007.0/x86/overlay/livedvd/stages/README,
+  -overlays/2007.1/common/overlay/installcd/distfiles/README,
+  -overlays/2007.1/common/overlay/installcd/docs/README,
+  -overlays/2007.1/common/overlay/installcd/snapshots/README,
+  -overlays/2007.1/common/overlay/installcd/stages/README,
+  -overlays/2007.1/common/overlay/livecd/docs/README,
+  -overlays/2007.1/common/overlay/livecd/snapshots/README,
+  -overlays/2007.1/common/overlay/livedvd/distfiles/README,
+  -overlays/2007.1/common/overlay/livedvd/docs/README,
+  -overlays/2007.1/common/overlay/livedvd/snapshots/README,
+  -overlays/2007.1/common/overlay/livedvd/stages/README,
+  -overlays/2007.1/common/root_overlay/home/gentoo/.nautilus/metafiles/file:
+  %2F%2F%2Fhome%2Fgentoo%2FDesktop.xml,
+  -overlays/2007.1/common/root_overlay/home/gentoo/.xscreensaver:
+  Moving overlays under versioned subdirectories in releases.
+
   01 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -kconfig/2004.1/kconfigs/x86/2.4.24-gentoo.config,
   -kconfig/2004.1/kconfigs/x86/2.6.3-smp.config,
