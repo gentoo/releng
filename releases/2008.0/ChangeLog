@@ -1,0 +1,29 @@
+# ChangeLog for releng repo
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +kconfig/x86/livecd-2.6.22.config, +kconfig/amd64/livecd-2.6.22.config,
+  +kconfig/amd64/livecd-2.6.24.config,
+  +overlays/common/overlay/installcd/distfiles/README,
+  +overlays/common/overlay/installcd/docs/README,
+  +overlays/common/overlay/installcd/snapshots/README,
+  +overlays/common/overlay/installcd/stages/README,
+  +overlays/common/overlay/livecd/docs/README,
+  +overlays/common/overlay/livecd/snapshots/README,
+  +overlays/common/overlay/livedvd/distfiles/README,
+  +overlays/common/overlay/livedvd/docs/README,
+  +overlays/common/overlay/livedvd/snapshots/README,
+  +overlays/common/overlay/livedvd/stages/README,
+  +overlays/common/root_overlay/home/gentoo/.nautilus/metafiles/file:%2F%2F%
+  2Fhome%2Fgentoo%2FDesktop.xml,
+  +overlays/common/root_overlay/home/gentoo/.xscreensaver,
+  +scripts/livecd.sh, +specs/amd64/installcd-stage1.spec,
+  +specs/amd64/installcd-stage2-minimal.spec,
+  +specs/amd64/livecd-stage1.spec, +specs/amd64/livecd-stage2.spec,
+  +specs/amd64/livedvd-stage1.spec, +specs/amd64/livedvd-stage2.spec,
+  +specs/amd64/stage1.spec, +specs/amd64/stage2-desktop.spec,
+  +specs/amd64/stage2.spec, +specs/amd64/stage3-desktop.spec,
+  +specs/amd64/stage3.spec:
+  Initial 2008.0 import.
+
