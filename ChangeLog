@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> ++, ++, ++,
+  -scripts/2006.1/livecd.sh, -scripts/2007.0/livecd.sh,
+  -scripts/2007.1/livecd.sh:
+  Moving scripts under versioned subdirectories in releases.
+
   01 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> -overlays/ChangeLog:
   Removing empty overlays directory.
 
