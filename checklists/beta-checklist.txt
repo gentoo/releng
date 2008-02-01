@@ -1,0 +1,1 @@
+# This checklist is for the Beta releases of Gentoo Linux.

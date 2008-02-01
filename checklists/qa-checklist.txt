@@ -1,0 +1,2 @@
+# This checklist is for the releases of Gentoo Linux.  This checklist should
+# be completed in its entirety for each release.
