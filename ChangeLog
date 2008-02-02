@@ -2,6 +2,34 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> -+, -+, -+, -+, -+,
+  -+, -+, -+, -+, -+, -kconfig/experimental/mips/sgimips/ip22r4k.cf,
+  -kconfig/experimental/mips/sgimips/ip22r5k.cf,
+  -kconfig/experimental/mips/sgimips/ip27r10k.cf,
+  -kconfig/experimental/mips/sgimips/ip28r10k.cf,
+  -kconfig/experimental/mips/sgimips/ip30r10k.cf,
+  -kconfig/experimental/mips/sgimips/ip32r5k.cf,
+  -specs/dolphin/dolphin-iso-stage1.spec,
+  -specs/dolphin/dolphin-iso-stage2.spec,
+  -specs/experimental/freebsd/6.2/x86/stage1-r1.spec,
+  -specs/experimental/freebsd/6.2/x86/stage1.spec,
+  -specs/experimental/freebsd/6.2/x86/stage2-r1.spec,
+  -specs/experimental/freebsd/6.2/x86/stage2.spec,
+  -specs/experimental/freebsd/6.2/x86/stage3-r1.spec,
+  -specs/experimental/freebsd/6.2/x86/stage3.spec,
+  -specs/experimental/freebsd/6.2_beta2/x86/stage1.spec,
+  -specs/experimental/freebsd/6.2_beta2/x86/stage2.spec,
+  -specs/experimental/freebsd/6.2_beta2/x86/stage3.spec,
+  -specs/experimental/freebsd/6.2_beta3/x86/stage1.spec,
+  -specs/experimental/freebsd/6.2_rc2/sparc/stage1.spec,
+  -specs/experimental/freebsd/6.2_rc2/x86/stage1.spec,
+  -specs/experimental/freebsd/6.2_rc2/x86/stage2.spec,
+  -specs/experimental/freebsd/6.2_rc2/x86/stage3-r1.spec,
+  -specs/experimental/freebsd/6.2_rc2/x86/stage3.spec,
+  -specs/experimental/mips/sgimips/livecd-stage1.spec,
+  -specs/experimental/mips/sgimips/livecd-stage2.spec:
+  Moving specs and kconfig under old.
+
   02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -specs/2007.0/specs/ChangeLog, -specs/2007.1/specs/ChangeLog:
   Removing unused 200X.Y directories and creating an old directory to store
