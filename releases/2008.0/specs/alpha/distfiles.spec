@@ -7,31 +7,11 @@ snapshot: 2008.0
 source_subpath: default/stage3-alpha-2008.0
 grp: src
 
-grp/use: 
-	gtk2 
-	gnome 
-	kde 
-	qt 
-	bonobo 
-	cdr 
-	esd 
-	gtkhtml 
-	mozilla
-	mysql
-	perl
-	ruby
-	tcltk
-	cups
-	ldap
-	ssl
-	tcpd
-	-svga
-	-tiff
-	-directfb
+grp/use:
+	bindist
 
 grp/src/type: srcset
 grp/src/packages:
-	ucl
 	udev
 	devfsd
 	=vanilla-sources-2.4*
@@ -39,7 +19,6 @@ grp/src/packages:
 	rp-pppoe
 	speedtouch
 	pptpclient
-	lvm-user
 	iputils
 	vixie-cron
 	dcron

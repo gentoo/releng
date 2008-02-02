@@ -4,6 +4,11 @@
 
   02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   releases/2008.0/specs/alpha/distfiles.spec,
+  releases/2008.0/specs/amd64/stage1.spec:
+  Use 2007.0 as the seed stage.
+
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  releases/2008.0/specs/alpha/distfiles.spec,
   releases/2008.0/specs/alpha/installcd-stage1.spec,
   releases/2008.0/specs/alpha/installcd-stage2-minimal.spec,
   releases/2008.0/specs/alpha/installcd-stage2-universal.spec,
