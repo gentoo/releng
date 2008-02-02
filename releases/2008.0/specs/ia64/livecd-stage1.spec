@@ -1,10 +1,10 @@
 subarch: ia64
-version_stamp: installer-2007.1
+version_stamp: installer-2008.0
 target: livecd-stage1
 rel_type: default
-profile: default-linux/ia64/2007.1/desktop
-snapshot: 2007.1
-source_subpath: default/stage3-ia64-desktop-2007.1
+profile: default-linux/ia64/2008.0/desktop
+snapshot: 2008.0
+source_subpath: default/stage3-ia64-desktop-2008.0
 livecd/use:
 	branding
 	livecd

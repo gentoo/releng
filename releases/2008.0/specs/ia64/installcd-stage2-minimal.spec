@@ -1,17 +1,17 @@
 subarch: ia64
-version_stamp: 2007.1
+version_stamp: 2008.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/ia64/2007.1
-snapshot: 2007.1
-source_subpath: default/livecd-stage1-ia64-2007.1
+profile: default-linux/ia64/2008.0
+snapshot: 2008.0
+source_subpath: default/livecd-stage1-ia64-2008.0
 
 livecd/cdfstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/elilo-3.6-cdtar.tar.bz2
 
-livecd/iso: /var/tmp/catalyst/builds/default/install-ia64-minimal-2007.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-ia64-minimal-2008.0.iso
 
-livecd/volid: Gentoo Linux IA64 2007.1
+livecd/volid: Gentoo Linux IA64 2008.0
 livecd/type: gentoo-release-minimal
 
 #livecd/overlay: /root/livecd/overlays/ia64-minimal
@@ -22,7 +22,7 @@ livecd/gk_mainargs: --lvm --evms --dmraid --mdadm
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /root/livecd/kconfig/2007.1/ia64/installcd-2.6.18.config
+boot/kernel/gentoo/config: /root/livecd/kconfig/2008.0/ia64/installcd-2.6.18.config
 
 livecd/unmerge:
 #	acl
@@ -206,24 +206,24 @@ livecd/rm:
 	/etc/make.profile
 	/etc/man.conf
 	/etc/resolv.conf
-	/etc/splash/livecd-2007.1/12*
-	/etc/splash/livecd-2007.1/14*
-	/etc/splash/livecd-2007.1/16*
-	/etc/splash/livecd-2007.1/19*
-	/etc/splash/livecd-2007.1/6*
-	/etc/splash/livecd-2007.1/8*
-	/etc/splash/livecd-2007.1/images/background-12*
-	/etc/splash/livecd-2007.1/images/background-14*
-	/etc/splash/livecd-2007.1/images/background-16*
-	/etc/splash/livecd-2007.1/images/background-19*
-	/etc/splash/livecd-2007.1/images/background-6*
-	/etc/splash/livecd-2007.1/images/background-8*
-	/etc/splash/livecd-2007.1/images/verbose-12*
-	/etc/splash/livecd-2007.1/images/verbose-14*
-	/etc/splash/livecd-2007.1/images/verbose-16*
-	/etc/splash/livecd-2007.1/images/verbose-19*
-	/etc/splash/livecd-2007.1/images/verbose-6*
-	/etc/splash/livecd-2007.1/images/verbose-8*
+	/etc/splash/livecd-2008.0/12*
+	/etc/splash/livecd-2008.0/14*
+	/etc/splash/livecd-2008.0/16*
+	/etc/splash/livecd-2008.0/19*
+	/etc/splash/livecd-2008.0/6*
+	/etc/splash/livecd-2008.0/8*
+	/etc/splash/livecd-2008.0/images/background-12*
+	/etc/splash/livecd-2008.0/images/background-14*
+	/etc/splash/livecd-2008.0/images/background-16*
+	/etc/splash/livecd-2008.0/images/background-19*
+	/etc/splash/livecd-2008.0/images/background-6*
+	/etc/splash/livecd-2008.0/images/background-8*
+	/etc/splash/livecd-2008.0/images/verbose-12*
+	/etc/splash/livecd-2008.0/images/verbose-14*
+	/etc/splash/livecd-2008.0/images/verbose-16*
+	/etc/splash/livecd-2008.0/images/verbose-19*
+	/etc/splash/livecd-2008.0/images/verbose-6*
+	/etc/splash/livecd-2008.0/images/verbose-8*
 	/lib*/*.a
 	/lib*/*.la
 	/lib*/cpp

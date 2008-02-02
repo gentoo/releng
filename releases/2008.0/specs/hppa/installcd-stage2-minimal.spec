@@ -1,30 +1,30 @@
 subarch: hppa1.1
-version_stamp: 2007.1
+version_stamp: 2008.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/hppa/2007.1
-snapshot: 2007.1
-source_subpath: default/livecd-stage1-hppa1.1-2007.1
+profile: default-linux/hppa/2008.0
+snapshot: 2008.0
+source_subpath: default/livecd-stage1-hppa1.1-2008.0
 
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/palo-1.5_pre20040515-cdtar.tar.bz2
 
-livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-2007.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-2008.0.iso
 
 livecd/type: gentoo-release-minimal
 livecd/bootargs: dokeymap
 
-#livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2007.1/common/overlay/installcd
+#livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/installcd
 
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: livecd32 livecd64
 
 boot/kernel/livecd32/sources: sys-kernel/hppa-sources
-boot/kernel/livecd32/config: /root/livecd/kconfig/releases/2007.1/hppa/installcd-2.6.15-hppa32.config
+boot/kernel/livecd32/config: /root/livecd/kconfig/releases/2008.0/hppa/installcd-2.6.15-hppa32.config
 
 boot/kernel/livecd64/sources: sys-kernel/hppa-sources
-boot/kernel/livecd64/config: /root/livecd/kconfig/releases/2007.1/hppa/installcd-2.6.15-hppa64.config
+boot/kernel/livecd64/config: /root/livecd/kconfig/releases/2008.0/hppa/installcd-2.6.15-hppa64.config
 boot/kernel/livecd64/gk_kernargs:  --kernel-cc=hppa64-linux-gcc --kernel-ld=hppa64-linux-ld 
 
 boot/kernel/livecd32/extraversion: livecd32
@@ -212,24 +212,24 @@ livecd/rm:
 	/etc/make.profile
 	/etc/man.conf
 	/etc/resolv.conf
-	/etc/splash/livecd-2007.1/12*
-	/etc/splash/livecd-2007.1/14*
-	/etc/splash/livecd-2007.1/16*
-	/etc/splash/livecd-2007.1/19*
-	/etc/splash/livecd-2007.1/6*
-	/etc/splash/livecd-2007.1/8*
-	/etc/splash/livecd-2007.1/images/background-12*
-	/etc/splash/livecd-2007.1/images/background-14*
-	/etc/splash/livecd-2007.1/images/background-16*
-	/etc/splash/livecd-2007.1/images/background-19*
-	/etc/splash/livecd-2007.1/images/background-6*
-	/etc/splash/livecd-2007.1/images/background-8*
-	/etc/splash/livecd-2007.1/images/verbose-12*
-	/etc/splash/livecd-2007.1/images/verbose-14*
-	/etc/splash/livecd-2007.1/images/verbose-16*
-	/etc/splash/livecd-2007.1/images/verbose-19*
-	/etc/splash/livecd-2007.1/images/verbose-6*
-	/etc/splash/livecd-2007.1/images/verbose-8*
+	/etc/splash/livecd-2008.0/12*
+	/etc/splash/livecd-2008.0/14*
+	/etc/splash/livecd-2008.0/16*
+	/etc/splash/livecd-2008.0/19*
+	/etc/splash/livecd-2008.0/6*
+	/etc/splash/livecd-2008.0/8*
+	/etc/splash/livecd-2008.0/images/background-12*
+	/etc/splash/livecd-2008.0/images/background-14*
+	/etc/splash/livecd-2008.0/images/background-16*
+	/etc/splash/livecd-2008.0/images/background-19*
+	/etc/splash/livecd-2008.0/images/background-6*
+	/etc/splash/livecd-2008.0/images/background-8*
+	/etc/splash/livecd-2008.0/images/verbose-12*
+	/etc/splash/livecd-2008.0/images/verbose-14*
+	/etc/splash/livecd-2008.0/images/verbose-16*
+	/etc/splash/livecd-2008.0/images/verbose-19*
+	/etc/splash/livecd-2008.0/images/verbose-6*
+	/etc/splash/livecd-2008.0/images/verbose-8*
 	/lib*/*.a
 	/lib*/*.la
 	/lib*/cpp
