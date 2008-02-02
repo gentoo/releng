@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -specs/2007.0/specs/ChangeLog, -specs/2007.1/specs/ChangeLog:
+  Removing unused 200X.Y directories and creating an old directory to store
+  the things that don't fit under a release.
+
   02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> ++, ++, ++, ++, ++,
   ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++,
   ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++, ++,
