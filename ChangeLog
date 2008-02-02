@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Removing unused directories.
+
   01 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   +checklists/2008.0/global-checklist.txt, +checklists/beta-checklist.txt,
   +checklists/qa-checklist.txt, +checklists/release-checklist.txt:
