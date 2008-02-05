@@ -20,7 +20,8 @@ livecd/packages:
 	app-admin/sudo
 	app-admin/superadduser
 	app-admin/syslog-ng
-	app-admin/testdisk
+### Masked (~amd64)
+#	app-admin/testdisk
 	app-arch/alien
 	app-arch/mt-st
 	app-arch/unrar
@@ -43,10 +44,12 @@ livecd/packages:
 	app-laptop/i8kutils
 	app-misc/beagle
 	app-misc/livecd-tools
-	app-misc/mc
+### Compile fails
+#	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
-	app-misc/splitvt
+### Masked (~amd64)
+#	app-misc/splitvt
 	app-misc/vlock
 	app-office/dia
 	app-office/gnucash
@@ -83,7 +86,8 @@ livecd/packages:
 	dev-util/valgrind
 	gnome-base/gnome
 	gnome-extra/evolution-exchange
-	gnome-extra/gsynaptics
+### Masked (~amd64)
+#	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
 	kde-base/kde-meta
 	kde-base/kooka
@@ -92,7 +96,8 @@ livecd/packages:
 	mail-client/mozilla-thunderbird-bin
 	mail-client/sylpheed
 	mail-client/claws-mail
-	media-gfx/blender
+### Masked (~amd64)
+#	media-gfx/blender
 	media-gfx/digikam
 	media-gfx/fbgrab
 	media-gfx/gimp
@@ -127,7 +132,8 @@ livecd/packages:
 	net-analyzer/wireshark
 	net-dialup/mingetty
 	net-dialup/minicom
-	net-dialup/penggy
+### Masked (no keyword)
+#	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables
@@ -153,11 +159,15 @@ livecd/packages:
 	net-print/cups
 	net-proxy/dante
 	net-proxy/tsocks
-	net-wireless/aircrack-ng
-	net-wireless/airsnort
+### Masked (~amd64)
+#	net-wireless/aircrack-ng
+### Masked (~amd64)
+#	net-wireless/airsnort
 	net-wireless/gnome-bluetooth
-	net-wireless/ipw2100-firmware
-	net-wireless/ipw2200-firmware
+### Masked (no keyword)
+#	net-wireless/ipw2100-firmware
+### Masked (~amd64)
+#	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode
 	net-wireless/iwl4965-ucode
 	net-wireless/kdebluetooth
@@ -165,7 +175,8 @@ livecd/packages:
 	net-wireless/wepattack
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	net-wireless/zd1201-firmware
+### Masked (~amd64)
+#	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	rox-base/rox
 ### Masked
@@ -174,64 +185,70 @@ livecd/packages:
 	sys-apps/eject
 	sys-apps/ethtool
 	sys-apps/fxload
-	sys-apps/gli
+#	sys-apps/gli
 	sys-apps/gradm
 	sys-apps/hdparm
 	sys-apps/hwsetup
-### Masked (arch)
+### Masked (no keyword)
 #	sys-apps/ibm-powerpc-utils
-### Masked (arch)
+### Masked (no keyword)
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2
 	sys-apps/ivman
-### Masked (arch)
+### Masked (no keyword)
 #	sys-apps/lssbus
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/parted
 	sys-apps/pcsc-lite
 	sys-apps/pmount
-### Masked (arch)
+### Masked (no keyword)
 #	sys-apps/powerpc-utils
-	sys-apps/qtparted
-	sys-apps/rsbac-admin
+### Masked (~amd64)
+#	sys-apps/qtparted
+### Compile fails
+#	sys-apps/rsbac-admin
 	sys-apps/sdparm
 	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
-	sys-apps/tuxonince-userui
+### Masked (~amd64)
+#	sys-apps/tuxonice-userui
 	sys-block/aoetools
 	sys-block/disktype
-	sys-block/gpart
+### Masked (-amd64)
+#	sys-block/gpart
 	sys-block/gparted
 	sys-block/mpt-status
-	sys-block/partimage
+### Masked (~amd64)
+#	sys-block/partimage
 	sys-block/qla-fc-firmware
-### Masked (arch)
+### Masked (no keyword)
 #	sys-boot/aboot
-	sys-boot/elilo
+### Masked (no keyword)
+#	sys-boot/elilo
 	sys-boot/grub
 	sys-boot/lilo
 	sys-boot/syslinux
-### Masked (arch)
+### Masked (no keyword)
 #	sys-boot/yaboot
-### Masked (arch)
+### Masked (no keyword)
 #	sys-devel/binutils-hppa64
 	sys-devel/distcc
-### Masked (arch)
+### Masked (no keyword)
 #	sys-devel/gcc-hppa64
 	sys-devel/gdb
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms
-	sys-fs/hfsplusutils
+### Masked (~amd64)
+#	sys-fs/hfsplusutils
 	sys-fs/hfsutils
-### Masked (arch)
+### Masked (no keyword)
 #	sys-fs/iprutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
-#	sys-fs/lvm-user
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/multipath-tools
@@ -256,7 +273,8 @@ livecd/packages:
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver
-	x11-plugins/gkrellm-plugins
+### Masked (no keyword)
+#	x11-plugins/gkrellm-plugins
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
 	x11-wm/afterstep

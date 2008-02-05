@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  releases/2008.0/specs/amd64/livedvd-stage1.spec:
+  Added masks to livedvd-stage1.spec for amd64.
+
   02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   releases/2008.0/specs/alpha/distfiles.spec,
   releases/2008.0/specs/amd64/stage1.spec:
