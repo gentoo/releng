@@ -16,10 +16,10 @@ boot/kernel/ip30r10k/sources: =mips-sources-2.6.16.27
 boot/kernel/ip32r5k/sources: =mips-sources-2.6.16.27
 boot/kernel/ip32rm5k/sources: =mips-sources-2.6.16.27
 
-boot/kernel/ip28r10k/config: /usr/catalyst/2008.0/ip28r10k-2007.1.cf
-boot/kernel/ip30r10k/config: /usr/catalyst/2008.0/ip30r10k-2007.1.cf
-boot/kernel/ip32r5k/config: /usr/catalyst/2008.0/ip32r5k-2007.1.cf
-boot/kernel/ip32rm5k/config: /usr/catalyst/2008.0/ip32rm5k-2007.1.cf
+boot/kernel/ip28r10k/config: /usr/catalyst/2008.0/ip28r10k-2008.0.cf
+boot/kernel/ip30r10k/config: /usr/catalyst/2008.0/ip30r10k-2008.0.cf
+boot/kernel/ip32r5k/config: /usr/catalyst/2008.0/ip32r5k-2008.0.cf
+boot/kernel/ip32rm5k/config: /usr/catalyst/2008.0/ip32rm5k-2008.0.cf
 
 boot/kernel/ip28r10k/use: -doc ip28
 boot/kernel/ip30r10k/use: -doc ip30

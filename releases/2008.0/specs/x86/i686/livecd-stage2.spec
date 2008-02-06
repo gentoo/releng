@@ -1,24 +1,24 @@
 subarch: i686
-version_stamp: 2007.1
+version_stamp: 2008.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/x86/2007.1/desktop
-snapshot: 2007.1
-source_subpath: default/livecd-stage1-i686-installer-2007.1
+profile: default-linux/x86/2008.0/desktop
+snapshot: 2008.0
+source_subpath: default/livecd-stage1-i686-installer-2008.0
 
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-livecd/iso: /var/tmp/catalyst/builds/default/livecd-i686-installer-2007.1.iso
+livecd/iso: /var/tmp/catalyst/builds/default/livecd-i686-installer-2008.0.iso
 livecd/xdm: gdm
 livecd/xsession: xfce
-livecd/fsscript: /var/cvsroot/gentoo/src/releng/scripts/2007.1/livecd.sh
+livecd/fsscript: /var/cvsroot/gentoo/src/releng/scripts/2008.0/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
-livecd/volid: Gentoo Linux 2007.1 x86 LiveCD
+livecd/volid: Gentoo Linux 2008.0 x86 LiveCD
 
-livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2007.1/common/overlay/livecd
-livecd/root_overlay: /var/cvsroot/gentoo/src/releng/overlays/2007.1/common/root_overlay
+livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/livecd
+livecd/root_overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/root_overlay
 
 livecd/bootargs: dokeymap
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
@@ -26,7 +26,7 @@ livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
-boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2007.1/x86/livecd-2.6.19.config
+boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2008.0/x86/livecd-2.6.19.config
 
 boot/kernel/gentoo/use: pcmcia usb oss atm
 

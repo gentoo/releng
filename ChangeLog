@@ -2,6 +2,39 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  releases/2008.0/specs/ppc/ppc64/packages-32ul.spec,
+  releases/2008.0/specs/mips/mips3/netboot.spec,
+  releases/2008.0/specs/sparc/sparc64/distfiles.spec,
+  releases/2008.0/specs/sparc/sparc64/installcd-stage1.spec,
+  releases/2008.0/specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  releases/2008.0/specs/sparc/sparc64/installcd-stage2-universal.spec,
+  releases/2008.0/specs/sparc/sparc64/packages.spec,
+  releases/2008.0/specs/sparc/sparc64/stage1.spec,
+  releases/2008.0/specs/sparc/sparc64/stage2.spec,
+  releases/2008.0/specs/sparc/sparc64/stage3.spec,
+  releases/2008.0/specs/x86/hardened/installcd-stage1.spec,
+  releases/2008.0/specs/x86/hardened/installcd-stage2-minimal.spec,
+  releases/2008.0/specs/x86/hardened/stage1.spec,
+  releases/2008.0/specs/x86/hardened/stage2.spec,
+  releases/2008.0/specs/x86/hardened/stage3.spec,
+  releases/2008.0/specs/x86/i686/hardened/stage2.spec,
+  releases/2008.0/specs/x86/i686/hardened/stage3.spec,
+  releases/2008.0/specs/x86/i686/livecd-stage1.spec,
+  releases/2008.0/specs/x86/i686/livecd-stage2.spec,
+  releases/2008.0/specs/x86/i686/livedvd-stage1.spec,
+  releases/2008.0/specs/x86/i686/livedvd-stage2.spec,
+  releases/2008.0/specs/x86/i686/stage2-desktop.spec,
+  releases/2008.0/specs/x86/i686/stage2.spec,
+  releases/2008.0/specs/x86/i686/stage3-desktop.spec,
+  releases/2008.0/specs/x86/i686/stage3.spec,
+  releases/2008.0/specs/x86/installcd-stage1.spec,
+  releases/2008.0/specs/x86/installcd-stage2-minimal.spec,
+  releases/2008.0/specs/x86/stage1.spec,
+  releases/2008.0/specs/x86/stage2.spec,
+  releases/2008.0/specs/x86/stage3.spec:
+  Changed 2007.1 to 2008.0 on the remaining 2008.0 specs.
+
   05 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   releases/2008.0/specs/amd64/livedvd-stage1.spec:
   Added masks to livedvd-stage1.spec for amd64.
