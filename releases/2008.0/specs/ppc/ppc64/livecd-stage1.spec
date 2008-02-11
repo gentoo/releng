@@ -9,6 +9,7 @@ chost: powerpc-unknown-linux-gnu
 livecd/use:
 	branding
 	livecd
+	loop-aes
 	socks5
 
 livecd/packages:

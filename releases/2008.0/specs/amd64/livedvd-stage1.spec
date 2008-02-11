@@ -8,6 +8,7 @@ source_subpath: default/stage3-amd64-2008.0
 livecd/use:
 	branding
 	livecd
+	loop-aes
 	socks5
 
 livecd/packages:

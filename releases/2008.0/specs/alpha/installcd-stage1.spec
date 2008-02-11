@@ -10,6 +10,7 @@ livecd/use:
 	fbcon
 	ipv6
 	livecd
+	loop-aes
 	ncurses
 	nls
 	pam
