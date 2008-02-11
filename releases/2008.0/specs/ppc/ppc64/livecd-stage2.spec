@@ -2,7 +2,7 @@ subarch: ppc64
 version_stamp: 32ul-2008.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/ppc/ppc64/2008.0/32bit-userland/desktop
+profile: default/linux/ppc/ppc64/2008.0/32bit-userland/desktop
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-ppc64-installer-32ul-2008.0
 

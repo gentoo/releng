@@ -2,7 +2,7 @@ subarch: ppc64
 version_stamp: installer-32ul-2008.0
 target: livecd-stage1
 rel_type: default
-profile: default-linux/ppc/ppc64/2008.0/32bit-userland/desktop
+profile: default/linux/ppc/ppc64/2008.0/32bit-userland/desktop
 snapshot: 2008.0
 source_subpath: default/stage3-ppc64-32ul-desktop-2008.0
 chost: powerpc-unknown-linux-gnu

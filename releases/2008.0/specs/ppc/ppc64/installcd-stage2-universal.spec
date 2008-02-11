@@ -3,15 +3,8 @@ target: livecd-stage2
 rel_type: default
 snapshot: 2008.0
 version_stamp: 2008.0
-profile: default-linux/ppc/ppc64/2008.0/32bit-userland
+profile: default/linux/ppc/ppc64/2008.0/32bit-userland
 source_subpath: default/livecd-stage1-ppc64-32ul-2008.0/
-
-chost: powerpc-unknown-linux-gnu
-cflags: -O2 -pipe
-cxxflags: -O2 -pipe
-
-livecd/readme: /2008.0/overlay/README.txt
-livecd/overlay: /2008.0/minimal-overlay/
 
 livecd/type: gentoo-release-universal
 livecd/overlay: /2008.0/overlay/
