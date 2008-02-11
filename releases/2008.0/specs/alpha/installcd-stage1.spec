@@ -2,9 +2,9 @@ subarch: alpha
 version_stamp: 2008.0
 target: livecd-stage1
 rel_type: default
-profile: default-linux/alpha/no-nptl
+profile: default-linux/alpha/2008.0
 snapshot: 2008.0
-source_subpath: default/stage3-alpha-2008.0-no-nptl
+source_subpath: default/stage3-alpha-2008.0
 livecd/use:
 	-*
 	fbcon
@@ -19,8 +19,7 @@ livecd/use:
 	unicode
 
 livecd/packages:
-	=sys-devel/gcc-3.3*
-#	app-admin/passook
+	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip

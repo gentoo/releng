@@ -2,7 +2,7 @@ subarch: alpha
 version_stamp: 2008.0
 target: livecd-stage2
 rel_type: default
-profile: default-linux/alpha/no-nptl
+profile: default-linux/alpha/2008.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-alpha-2008.0
 
@@ -17,18 +17,11 @@ livecd/type: gentoo-release-minimal
 livecd/bootargs: dokeymap
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
-boot/kernel: gentoo gentoo2.4
-boot/kernel/gentoo/sources: vanilla-sources
+boot/kernel: gentoo
+boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /root/livecd/kconfig/releases/2008.0/alpha/installcd-2.6.15.1.config
 boot/kernel/gentoo/use: usb -X png truetype
 boot/kernel/gentoo/packages:
-	cryptsetup
-
-boot/kernel/gentoo2.4/sources: =vanilla-sources-2.4*
-boot/kernel/gentoo2.4/config: /root/livecd/kconfig/releases/2008.0/alpha/installcd-2.4.30.config
-boot/kernel/gentoo2.4/use: usb -X png truetype
-boot/kernel/gentoo2.4/packages:
-	devfsd
 	cryptsetup
 
 livecd/unmerge:
