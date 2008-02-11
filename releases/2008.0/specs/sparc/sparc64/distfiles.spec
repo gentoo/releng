@@ -9,6 +9,7 @@ grp: src
 
 grp/src/type: srcset
 grp/src/packages:
+	app-accessibility/brltty
 	vanilla-sources
 	gentoo-sources
 	iptables

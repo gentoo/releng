@@ -12,6 +12,7 @@ livecd/use:
 	socks5
 
 livecd/packages:
+	app-accessibility/brltty
 #	app-admin/ide-smart
 	app-admin/logrotate
 #	app-admin/passook

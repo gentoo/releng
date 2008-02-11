@@ -9,6 +9,7 @@ grp: cd2
 
 grp/cd2/type: pkgset
 grp/cd2/packages:
+	app-accessibility/brltty
 	gpm
 	rp-pppoe
 	dhcpcd

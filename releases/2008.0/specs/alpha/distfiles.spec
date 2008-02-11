@@ -9,6 +9,7 @@ grp: src
 
 grp/src/type: srcset
 grp/src/packages:
+	app-accessibility/brltty
 	udev
 	vanilla-sources
 	gentoo-sources

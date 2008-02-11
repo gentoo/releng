@@ -7,30 +7,9 @@ snapshot: 2008.0
 source_subpath: default/stage3-alpha-2008.0
 grp: cd2
 
-grp/use: 
-	gtk2 
-	gnome 
-	kde 
-	qt 
-	bonobo 
-	cdr 
-	esd 
-	gtkhtml 
-	mozilla
-	mysql
-	perl
-	ruby
-	tcltk
-	cups
-	ldap
-	ssl
-	tcpd
-	-svga
-	-tiff
-	-directfb
-
 grp/cd2/type: pkgset
 grp/cd2/packages:
+	app-accessibility/brltty
 	pciutils
 	hotplug
 	dante

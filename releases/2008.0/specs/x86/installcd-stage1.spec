@@ -20,6 +20,7 @@ livecd/use:
 	unicode
 
 livecd/packages:
+	app-accessibility/brltty
 	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
