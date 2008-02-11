@@ -3,6 +3,12 @@
 # $Header: $
 
   11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/distfiles.spec:
+  Removed devfsd and vanilla-sources-2.4 from distfiles and changed
+  vanilla-sources to gentoo-sources, since it'll pull in vanilla's distfiles,
+  anyway.
+
+  11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage1.spec,
   specs/alpha/installcd-stage2-minimal.spec,
   specs/alpha/installcd-stage2-universal.spec:

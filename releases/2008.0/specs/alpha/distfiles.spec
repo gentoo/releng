@@ -13,9 +13,8 @@ grp/use:
 grp/src/type: srcset
 grp/src/packages:
 	udev
-	devfsd
-	=vanilla-sources-2.4*
-	=vanilla-sources-2.6*
+	vanilla-sources
+	gentoo-sources
 	rp-pppoe
 	speedtouch
 	pptpclient
