@@ -3,6 +3,11 @@
 # $Header: $
 
   11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/distfiles.spec:
+  Removing USE=bindist from alpha/distfiles, since this is done automatically
+  by catalyst.
+
+  11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
   specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
   specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,

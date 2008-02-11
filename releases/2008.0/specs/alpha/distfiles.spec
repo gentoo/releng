@@ -7,9 +7,6 @@ snapshot: 2008.0
 source_subpath: default/stage3-alpha-2008.0
 grp: src
 
-grp/use:
-	bindist
-
 grp/src/type: srcset
 grp/src/packages:
 	udev
