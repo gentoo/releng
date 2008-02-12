@@ -17,7 +17,7 @@ livecd/iso: install-sparc64-universal-2008.0.iso
 boot/kernel: 2617 2620
 boot/kernel/2617/sources: ~sys-kernel/gentoo-sources-2.6.17
 boot/kernel/2617/config: installcd-2.6.17.config
-boot/kernel/2617/use: ultra1
+boot/kernel/2617/use: atm fbcondecor mng png truetype ultra1 usb -qt3 -qt4 -X
 boot/kernel/2620/sources: ~sys-kernel/gentoo-sources-2.6.20
 boot/kernel/2620/config: installcd-2.6.20.config
 

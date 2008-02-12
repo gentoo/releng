@@ -23,9 +23,7 @@ boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
 boot/kernel/gentoo/config: /root/livecd/2008.0/kconfig/amd64/installcd-2.6.24.config
-
-boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt
-
+boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/gentoo/packages:
 	sys-apps/pcmciautils
 	sys-fs/cryptsetup

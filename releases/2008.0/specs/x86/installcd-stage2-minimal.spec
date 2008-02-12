@@ -21,9 +21,7 @@ boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 
 boot/kernel/gentoo/config: /root/livecd/kconfig/2008.0/x86/installcd-2.6.19.config
-
-boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt -qt3 -qt4
-
+boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/gentoo/packages:
 	sys-apps/pcmciautils
 	net-dialup/slmodem

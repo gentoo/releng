@@ -2,6 +2,20 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage2-minimal.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage2.spec,
+  specs/ia64/installcd-stage2-minimal.spec, specs/ia64/livecd-stage2.spec,
+  specs/ppc/ppc64/livecd-stage2.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Make sure everybody is using the same USE for kernel builds, except where
+  additional USE are necessary for a given architecture.
+
   11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/distfiles.spec, specs/alpha/installcd-stage1.spec,
   specs/alpha/livecd-stage1.spec, specs/alpha/packagecd.spec,

@@ -25,11 +25,8 @@ livecd/gk_mainargs: --dmraid --evms --lvm --mdadm
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-
 boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2008.0/ia64/livecd-2.6.18.config
-
-boot/kernel/gentoo/use: pcmcia usb oss atm
-
+boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 	media-libs/alsa-lib
 	media-libs/alsa-oss
