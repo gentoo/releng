@@ -3,6 +3,16 @@
 # $Header: $
 
   13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/sparc/sparc64/distfiles.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/packages.spec, specs/sparc/sparc64/stage1.spec,
+  specs/sparc/sparc64/stage2.spec, specs/sparc/sparc64/stage3.spec:
+  It helps if I actually commit the changes that I make. Removing sparc64 from
+  sparc profile links.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/amd64/installcd-stage2-minimal.spec,
   specs/hppa/installcd-stage2-minimal.spec,
   specs/ia64/installcd-stage2-minimal.spec:
