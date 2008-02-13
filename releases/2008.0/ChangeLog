@@ -3,6 +3,30 @@
 # $Header: $
 
   13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/ppc/ppc64/power5/stage2-32ul.spec,
+  specs/ppc/ppc64/power6/stage3-32ul.spec,
+  specs/ppc/ppc64/g5/stage2-32ul.spec,
+  specs/ppc/ppc64/installcd-stage1.spec,
+  specs/ppc/ppc64/g5/stage3-32ul.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/ppc/ppc64/power5/stage3-32ul.spec,
+  specs/ppc/ppc64/power6/stage2-32ul.spec,
+  specs/ppc/ppc64/packages-32ul.spec,
+  specs/ppc/ppc64/power5/stage2-64ul.spec,
+  specs/ppc/ppc64/power5/stage3-64ul.spec,
+  specs/ppc/ppc64/power6/stage2-64ul.spec,
+  specs/ppc/ppc64/power6/stage3-64ul.spec,
+  specs/ppc/ppc64/packages-64ul.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/ppc/ppc64/livecd-stage2.spec, specs/ppc/ppc64/stage1-32ul.spec,
+  specs/ppc/ppc64/stage2-32ul.spec, specs/ppc/ppc64/distfiles-32ul.spec,
+  specs/ppc/ppc64/stage3-32ul.spec, specs/ppc/ppc64/stage1-64ul.spec,
+  specs/ppc/ppc64/stage2-64ul.spec, specs/ppc/ppc64/distfiles-64ul.spec,
+  specs/ppc/ppc64/stage3-64ul.spec, specs/ppc/ppc64/g5/stage2-64ul.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/g5/stage3-64ul.spec:
+  Fixing up all of the ppc64 profile links.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec,
   specs/alpha/installcd-stage2-universal.spec,
   specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,

@@ -3,7 +3,7 @@ target: livecd-stage2
 rel_type: default
 snapshot: 2008.0
 version_stamp: 2008.0
-profile: default/linux/ppc/ppc64/2008.0/32bit-userland
+profile: default/linux/powerpc/ppc64/2008.0/32bit-userland
 source_subpath: default/livecd-stage1-ppc64-32ul-2008.0/
 
 livecd/type: gentoo-release-universal
