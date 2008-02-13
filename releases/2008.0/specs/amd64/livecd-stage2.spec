@@ -10,7 +10,7 @@ livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-2008.0.iso
 livecd/xsession: xfce
-livecd/fsscript: /var/cvsroot/gentoo/src/releng/scripts/2008.0/livecd.sh
+livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
@@ -30,16 +30,21 @@ boot/kernel/gentoo/packages:
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-	net-dialup/fcdsl
-	net-dialup/fritzcapi
+### Masked (~amd64)
+#	net-dialup/fcdsl
+### Masked (~amd64)
+#	net-dialup/fritzcapi
 	net-dialup/globespan-adsl
-	net-dialup/slmodem
+### Masked (~amd64)
+#	net-dialup/slmodem
 	net-misc/br2684ctl
-	net-wireless/acx
+### Masked (~amd64)
+#	net-wireless/acx
 	net-wireless/hostap-utils
 	net-wireless/madwifi-ng-tools
 	net-wireless/rt2500
-	net-wireless/rtl8187
+### Masked (~amd64)
+#	net-wireless/rtl8187
 	sys-apps/pcmciautils
 
 livecd/empty:

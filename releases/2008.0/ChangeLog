@@ -3,6 +3,17 @@
 # $Header: $
 
   13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage1.spec,
+  specs/amd64/livecd-stage1.spec, specs/amd64/livecd-stage2.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec:
+  Added some masking information to the amd64 specs, changed the fsscript
+  location to point to the new location, and fixing kconfig locations on specs
+  that pointed to my own /root/livecd directory.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/ppc/ppc64/power5/stage2-32ul.spec,
   specs/ppc/ppc64/power6/stage3-32ul.spec,
   specs/ppc/ppc64/g5/stage2-32ul.spec,

@@ -65,15 +65,19 @@ livecd/packages:
 	net-p2p/bittorrent
 	net-proxy/dante
 	net-proxy/tsocks
-	net-wireless/ipw2100-firmware
-	net-wireless/ipw2200-firmware
+### Masked (no keywords)
+#	net-wireless/ipw2100-firmware
+### Masked (~amd64)
+#	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode
 	net-wireless/iwl4965-ucode
 	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	net-wireless/zd1201-firmware
+### Masked (~amd64)
+#	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
+### Masked (no keywords)
 #	sys-apps/apmd
 	sys-apps/eject
 	sys-apps/ethtool
@@ -81,13 +85,17 @@ livecd/packages:
 	sys-apps/gli
 	sys-apps/hdparm
 	sys-apps/hwsetup
+### Masked (no keywords)
 #	sys-apps/ibm-powerpc-utils
+### Masked (no keywords)
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2
+### Masked (no keywords)
 #	sys-apps/lssbus
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/parted
+### Masked (no keywords)
 #	sys-apps/powerpc-utils
 	sys-apps/sdparm
 	sys-apps/sg3_utils
@@ -95,23 +103,31 @@ livecd/packages:
 	sys-apps/smartmontools
 	sys-block/aoetools
 	sys-block/disktype
-	sys-block/gpart
-	sys-block/partimage
+### Masked (-amd64)
+#	sys-block/gpart
+### Masked (~amd64)
+#	sys-block/partimage
 	sys-block/qla-fc-firmware
+### Masked (no keywords)
 #	sys-boot/aboot
-	sys-boot/elilo
+### Masked (no keywords)
+#	sys-boot/elilo
 	sys-boot/grub
 	sys-boot/lilo
 	sys-boot/syslinux
+### Masked (no keywords)
 #	sys-boot/yaboot
+### Masked (no keywords)
 #	sys-devel/binutils-hppa64
 	sys-devel/distcc
+### Masked (no keywords)
 #	sys-devel/gcc-hppa64
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms
 	sys-fs/hfsplusutils
 	sys-fs/hfsutils
+### Masked (no keywords)
 #	sys-fs/iprutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi
