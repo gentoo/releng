@@ -31,7 +31,6 @@ boot/kernel/gentoo/packages:
 	net-wireless/hostap-utils
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
-	sys-fs/cryptsetup
 	net-wireless/rt2500
 	net-wireless/acx
 	net-wireless/ipw3945

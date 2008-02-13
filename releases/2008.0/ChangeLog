@@ -2,6 +2,19 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage1.spec,
+  specs/amd64/livedvd-stage2.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Masking net-dialup/penggy, app-misc/beagle, and several kernel module
+  packages on AMD64, fixed kconfig location on AMD64, and removed
+  sys-fs/cryptsetup from all spec files since it is pulled in as a dependency
+  and doesn't need to be explicitly listed.
+
   12 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec,
   specs/alpha/installcd-stage2-universal.spec,

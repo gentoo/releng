@@ -11,7 +11,7 @@ livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-3.09-memtest86+-cdtar.tar.
 livecd/iso: /var/tmp/catalyst/builds/default/livedvd-amd64-installer-2008.0.iso
 livecd/xdm: gdm
 livecd/xsession: xfce
-livecd/fsscript: /var/cvsroot/gentoo/src/releng/scripts/2008.0/livecd.sh
+livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
@@ -25,22 +25,27 @@ livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /root/livecd/2008.0/kconfig/amd64/livecd-2.6.24.config
+boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/livecd-2.6.24.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-	net-dialup/fcdsl
-	net-dialup/fritzcapi
+### Masked (no keyword)
+#	net-dialup/fcdsl
+### Masked (~amd64)
+#	net-dialup/fritzcapi
 	net-dialup/globespan-adsl
-	net-dialup/slmodem
+### Masked (~amd64)
+#	net-dialup/slmodem
 	net-misc/br2684ctl
-	net-wireless/acx
+### Masked (~amd64)
+#	net-wireless/acx
 	net-wireless/hostap-utils
-	net-wireless/madwifi-ng-tools
+#	net-wireless/madwifi-ng-tools
 	net-wireless/rt2500
-	net-wireless/rtl8187
+### Masked (~amd64)
+#	net-wireless/rtl8187
 	sys-apps/pcmciautils
 
 livecd/empty:

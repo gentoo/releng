@@ -44,7 +44,8 @@ livecd/packages:
 	app-editors/xemacs
 	app-forensics/chkrootkit
 	app-laptop/i8kutils
-	app-misc/beagle
+### Compile fails
+#	app-misc/beagle
 	app-misc/livecd-tools
 ### Compile fails
 #	app-misc/mc

@@ -26,7 +26,6 @@ boot/kernel/gentoo/config: /root/livecd/2008.0/kconfig/amd64/installcd-2.6.24.co
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/gentoo/packages:
 	sys-apps/pcmciautils
-	sys-fs/cryptsetup
 	net-dialup/globespan-adsl
 # These were not stable at time of snapshot/release.
 #	net-wireless/rtl8180
