@@ -14,8 +14,6 @@ livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-2008.0.iso
 livecd/volid: Gentoo Linux amd64 2008.0
 livecd/type: gentoo-release-minimal
 
-#livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/installcd
-
 livecd/bootargs: dokeymap
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 

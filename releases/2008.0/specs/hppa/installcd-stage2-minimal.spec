@@ -14,8 +14,6 @@ livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/bootargs: dokeymap
 
-#livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/installcd
-
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: livecd32 livecd64

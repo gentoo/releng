@@ -14,8 +14,6 @@ livecd/iso: /var/tmp/catalyst/builds/default/install-ia64-minimal-2008.0.iso
 livecd/volid: Gentoo Linux IA64 2008.0
 livecd/type: gentoo-release-minimal
 
-#livecd/overlay: /root/livecd/overlays/ia64-minimal
-
 livecd/bootargs: dokeymap
 livecd/gk_mainargs: --lvm --evms --dmraid --mdadm
 

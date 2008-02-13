@@ -3,6 +3,12 @@
 # $Header: $
 
   13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/ia64/installcd-stage2-minimal.spec:
+  Removed the commented livecd/overlay key from the affected specs.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec,
   specs/alpha/installcd-stage2-universal.spec,
   specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage1.spec,
