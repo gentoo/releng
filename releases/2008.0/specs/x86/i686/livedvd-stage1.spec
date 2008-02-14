@@ -242,7 +242,8 @@ livecd/packages:
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver
-	x11-plugins/gkrellm-plugins
+### Masked (no stable keywords)
+#	x11-plugins/gkrellm-plugins
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
 	x11-wm/afterstep
