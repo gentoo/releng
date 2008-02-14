@@ -132,7 +132,6 @@ livecd/packages:
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables
-	net-firewall/firestarter
 	net-firewall/kmyfirewall
 	net-ftp/ncftp
 	net-fs/nfs-utils

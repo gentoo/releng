@@ -3,6 +3,10 @@
 # $Header: $
 
   14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/x86/i686/livedvd-stage1.spec:
+  Removing net-firewall/firestarter as it is no longer in the tree.
+
+  14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage1.spec, specs/amd64/installcd-stage1.spec,
   specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
   specs/ppc/ppc64/installcd-stage1.spec,
