@@ -8,6 +8,14 @@
   specs/ppc/ppc64/installcd-stage1.spec,
   specs/sparc/sparc64/installcd-stage1.spec,
   specs/x86/hardened/installcd-stage1.spec, specs/x86/installcd-stage1.spec:
+  Added lvm1 to livecd/use for installcd-stage1.spec on all arches.
+
+  14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/amd64/installcd-stage1.spec,
+  specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec, specs/x86/installcd-stage1.spec:
   Added deprecated to livecd/use for installcd-stage1.spec on all arches.
 
   13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>

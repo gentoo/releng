@@ -13,6 +13,7 @@ livecd/use:
 	ipv6
 	livecd
 	loop-aes
+	lvm1
 	ncurses
 	-nls
 	-nocxx
