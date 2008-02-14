@@ -7,6 +7,7 @@ snapshot: 2008.0
 source_subpath: default/stage3-hppa1.1-2008.0
 livecd/use:
 	-*
+	deprecated
 	fbcon
 	ipv6
 	livecd

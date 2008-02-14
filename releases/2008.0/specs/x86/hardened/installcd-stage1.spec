@@ -7,6 +7,7 @@ snapshot: 2008.0
 source_subpath: hardened/stage3-x86-hardened-2008.0
 livecd/use:
 	-*
+	deprecated
 	fbcon
 	ipv6
 	livecd

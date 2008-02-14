@@ -8,6 +8,7 @@ source_subpath: default/stage3-sparc64-2008.0
 
 livecd/use:
 	-*
+	deprecated
 	fbcon
 	gpm
 	ipv6
