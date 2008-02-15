@@ -133,7 +133,8 @@ livecd/packages:
 	net-dialup/rp-pppoe
 	net-firewall/iptables
 	net-firewall/kmyfirewall
-	net-ftp/ncftp
+### Compile failure (bug #146214)
+#	net-ftp/ncftp
 	net-fs/nfs-utils
 	net-fs/samba
 	net-im/pidgin
