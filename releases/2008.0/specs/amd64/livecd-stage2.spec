@@ -7,7 +7,7 @@ snapshot: 2008.0
 source_subpath: default/livecd-stage1-amd64-installer-2008.0
 
 livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-2008.0.iso
 livecd/xsession: xfce
 livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
@@ -46,6 +46,8 @@ boot/kernel/gentoo/packages:
 ### Masked (~amd64)
 #	net-wireless/rtl8187
 	sys-apps/pcmciautils
+
+livecd/unmerge: gentoo-sources
 
 livecd/empty:
 	/var/tmp

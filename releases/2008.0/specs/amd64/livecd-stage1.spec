@@ -21,9 +21,9 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/mt-st
 	app-benchmarks/cpuburn
-	app-cdr/cdrkit
+#	app-cdr/cdrkit
 	app-crypt/gnupg
-	app-editors/emacs
+#	app-editors/emacs
 	app-editors/vim
 	app-misc/livecd-tools
 	app-misc/screen
@@ -34,14 +34,14 @@ livecd/packages:
 	app-portage/ufed
 	dev-util/ccache
 	xfce-base/xfce4
-	mail-client/mozilla-thunderbird
+#	mail-client/mozilla-thunderbird
 	mail-client/mozilla-thunderbird-bin
 	media-gfx/fbgrab
-	media-sound/audacious
+#	media-sound/audacious
 	net-analyzer/netcat
 	net-analyzer/nmap
 	net-analyzer/tcpdump
-	net-analyzer/tcptraceroute
+#	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/mingetty
 	net-dialup/minicom
@@ -113,7 +113,7 @@ livecd/packages:
 ### Masked (no keywords)
 #	sys-boot/elilo
 	sys-boot/grub
-	sys-boot/lilo
+#	sys-boot/lilo
 	sys-boot/syslinux
 ### Masked (no keywords)
 #	sys-boot/yaboot
@@ -144,7 +144,7 @@ livecd/packages:
 	sys-process/vixie-cron
 	www-client/links
 	www-client/mozilla-firefox
-	www-client/mozilla-firefox-bin
+#	www-client/mozilla-firefox-bin
 	x11-base/xorg-server
 	x11-base/xorg-x11
 	x11-drivers/synaptics
