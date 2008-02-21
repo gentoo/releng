@@ -3,6 +3,10 @@
 # $Header: $
 
   21 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livedvd-stage1.spec:
+  Uncomment mc since it just needs a package.use entry
+
+  21 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage1.spec,
   specs/x86/i686/livedvd-stage2.spec,
   specs/x86/installcd-stage2-minimal.spec:
