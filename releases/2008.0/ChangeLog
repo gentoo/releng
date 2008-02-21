@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Comment out beagle and mc. Update path to kconfigs
+
   20 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
   specs/x86/installcd-stage2-minimal.spec:

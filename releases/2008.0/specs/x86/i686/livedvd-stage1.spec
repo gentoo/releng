@@ -43,9 +43,11 @@ livecd/packages:
 	app-editors/xemacs
 	app-forensics/chkrootkit
 	app-laptop/i8kutils
-	app-misc/beagle
+### Can't emerge with profile USE
+#	app-misc/beagle
 	app-misc/livecd-tools
-	app-misc/mc
+### Won't build
+#	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
 	app-misc/splitvt
