@@ -5,7 +5,6 @@ rel_type: default
 profile: default/linux/powerpc/ppc64/2008.0/32bit-userland/desktop
 snapshot: 2008.0
 source_subpath: default/stage3-ppc64-32ul-desktop-2008.0
-chost: powerpc-unknown-linux-gnu
 livecd/use:
 	branding
 	livecd
