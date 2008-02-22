@@ -27,7 +27,7 @@ livecd/use:
 	
 livecd/packages:
 	app-accessibility/brltty
-	app-admin/passook
+	#app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
@@ -47,6 +47,7 @@ livecd/packages:
 	net-irc/irssi
 	net-misc/dhcpcd
 	net-misc/iputils
+	net-misc/ntp
 	net-misc/rdate
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant

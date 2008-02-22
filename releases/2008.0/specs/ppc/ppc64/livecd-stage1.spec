@@ -16,7 +16,7 @@ livecd/packages:
 	app-accessibility/brltty
 	app-admin/ide-smart
 	app-admin/logrotate
-	app-admin/passook
+	#app-admin/passook
 	app-admin/pwgen
 	app-admin/sudo
 	app-admin/syslog-ng
@@ -69,6 +69,7 @@ livecd/packages:
 	net-misc/bridge-utils
 	net-misc/dhcpcd
 	net-misc/iputils
+	net-misc/ntp
 	net-misc/rdate
 	net-misc/rdesktop
 #	net-misc/vconfig
