@@ -38,6 +38,9 @@ livecd/packages:
 	app-portage/ufed
 #	app-text/tetex
 	dev-util/ccache
+	dev-util/cvs
+	dev-util/git
+	dev-util/subversion
 	xfce-base/xfce4
 #	kde-base/kde-meta
 	mail-client/evolution

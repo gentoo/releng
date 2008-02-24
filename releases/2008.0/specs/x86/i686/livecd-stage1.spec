@@ -35,6 +35,9 @@ livecd/packages:
 	app-portage/mirrorselect
 	app-portage/ufed
 	dev-util/ccache
+	dev-util/cvs
+	dev-util/git
+	dev-util/subversion
 	xfce-base/xfce4
 	mail-client/mozilla-thunderbird
 	media-gfx/fbgrab

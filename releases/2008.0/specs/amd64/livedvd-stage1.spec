@@ -79,6 +79,7 @@ livecd/packages:
 	dev-util/anjuta
 	dev-util/ccache
 	dev-util/cvs
+	dev-util/git
 	dev-util/indent
 	dev-util/kdbg
 	dev-util/kdesvn
