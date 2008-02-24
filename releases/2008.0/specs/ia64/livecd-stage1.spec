@@ -55,6 +55,7 @@ livecd/packages:
 	net-misc/bridge-utils
 	net-misc/dhcpcd
 	net-misc/iputils
+	net-misc/ntp
 	net-misc/rdate
 	net-misc/rdesktop
 #	net-misc/vconfig

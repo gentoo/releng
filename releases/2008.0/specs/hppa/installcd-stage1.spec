@@ -46,6 +46,7 @@ livecd/packages:
 	net-irc/irssi
 	net-misc/dhcpcd
 	net-misc/iputils
+	net-misc/ntp
 	net-misc/rdate
 	net-misc/vconfig
 #	net-wireless/ipw2100-firmware

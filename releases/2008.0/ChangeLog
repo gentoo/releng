@@ -2,15 +2,28 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  21 Feb 2008; Brent Baude <ranger@gentoo.org>
-  specs/ppc/ppc64/livecd-stage1.spec
-  specs/ppc/ppc64/stage2-32ul-desktop.spec, specs/ppc/ppc64/stage3-32ul-desktop.spec
-  Removing chost definition from livecd-stage1 and adding 32ul stage2|3 specs for livecd
+  24 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Added net-misc/ntp to release media for bug #210280.
 
   21 Feb 2008; Brent Baude <ranger@gentoo.org>
-  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec
-  Commenting out passook from the above specs as it lacks ppc keywords and adding
-  net-misc/ntp for bug#210280
+  specs/ppc/ppc64/livecd-stage1.spec
+  specs/ppc/ppc64/stage2-32ul-desktop.spec,
+  specs/ppc/ppc64/stage3-32ul-desktop.spec:
+  Removing chost definition from livecd-stage1 and adding 32ul stage2|3 specs
+  for livecd
+
+  21 Feb 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec:
+  Commenting out passook from the above specs as it lacks ppc keywords and
+  adding net-misc/ntp for bug #210280
   
   21 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
@@ -46,7 +59,8 @@
 
   15 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/livedvd-stage1.spec:
-  Comment out net-ftp/ncftp for i686 livedvd due to compile failure (bug #146214)
+  Comment out net-ftp/ncftp for i686 livedvd due to compile failure
+  (bug #146214)
 
   14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/amd64/installcd-stage2-minimal.spec:
