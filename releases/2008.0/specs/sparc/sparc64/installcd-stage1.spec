@@ -26,7 +26,8 @@ livecd/use:
 	unicode
 
 livecd/packages:
-	app-accessibility/brltty
+# Masked (not keyworded, use.masked as well)
+#	app-accessibility/brltty
 	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
