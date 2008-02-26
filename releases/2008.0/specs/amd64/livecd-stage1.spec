@@ -28,7 +28,8 @@ livecd/packages:
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/vlock
-	app-office/openoffice-bin
+#	app-office/openoffice-bin
+	app-office/openoffice
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed
@@ -37,8 +38,8 @@ livecd/packages:
 	dev-util/git
 	dev-util/subversion
 	xfce-base/xfce4
-#	mail-client/mozilla-thunderbird
-	mail-client/mozilla-thunderbird-bin
+	mail-client/mozilla-thunderbird
+#	mail-client/mozilla-thunderbird-bin
 	media-gfx/fbgrab
 #	media-sound/audacious
 	net-analyzer/netcat

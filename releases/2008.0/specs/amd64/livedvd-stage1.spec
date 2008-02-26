@@ -58,6 +58,7 @@ livecd/packages:
 	app-office/gnucash
 	app-office/gnumeric
 	app-office/koffice
+	app-office/openoffice
 	app-office/openoffice-bin
 	app-office/scribus
 	app-pda/gtkpod
@@ -122,6 +123,7 @@ livecd/packages:
 	media-video/gxine
 	media-video/lsdvd
 	media-video/mplayer
+	media-video/mplayer-bin
 	media-video/ogle-gui
 	media-video/vlc
 	media-video/xine-ui
@@ -275,6 +277,7 @@ livecd/packages:
 	www-client/mozilla-firefox-bin
 	www-client/opera
 	www-client/seamonkey
+	www-client/seamonkey-bin
 	x11-base/xorg-x11
 	x11-drivers/synaptics
 	x11-misc/xscreensaver
