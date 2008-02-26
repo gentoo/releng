@@ -3,6 +3,11 @@
 # $Header: $
 
   26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/ppc/ppc64/stage2-32ul.spec,
+  specs/ppc/ppc64/stage2-32ul-desktop.spec:
+  Added chost: powerpc-unknown-linux-gnu to stage2-32ul specs.
+
+  26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/amd64/livecd-stage1.spec, specs/amd64/livedvd-stage1.spec:
   Changed from -bin versions on the LiveCD, and adding -bin versions to the
   LiveDVD.
