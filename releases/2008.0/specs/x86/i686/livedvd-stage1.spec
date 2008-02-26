@@ -163,6 +163,8 @@ livecd/packages:
 	net-wireless/gnome-bluetooth
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
+	net-wireless/iwl3945-ucode
+	net-wireless/iwl4965-ucode
 	net-wireless/kdebluetooth
 	net-wireless/prism54-firmware
 	net-wireless/wepattack
@@ -214,6 +216,7 @@ livecd/packages:
 	sys-devel/distcc
 #	sys-devel/gcc-hppa64
 	sys-devel/gdb
+	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms

@@ -69,17 +69,14 @@ livecd/packages:
 	net-p2p/bittorrent
 	net-proxy/dante
 	net-proxy/tsocks
-### Masked (no keywords)
-#	net-wireless/ipw2100-firmware
-### Masked (~amd64)
-#	net-wireless/ipw2200-firmware
+	net-wireless/ipw2100-firmware
+	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode
 	net-wireless/iwl4965-ucode
 	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-### Masked (~amd64)
-#	net-wireless/zd1201-firmware
+	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 ### Masked (no keywords)
 #	sys-apps/apmd
@@ -126,6 +123,7 @@ livecd/packages:
 	sys-devel/distcc
 ### Masked (no keywords)
 #	sys-devel/gcc-hppa64
+	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms

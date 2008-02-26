@@ -47,6 +47,8 @@ livecd/packages:
 	net-misc/vconfig
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
+	net-wireless/iwl3945-ucode
+	net-wireless/iwl4965-ucode
 	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
@@ -72,7 +74,7 @@ livecd/packages:
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
 #	sys-devel/gcc-hppa64
-#	sys-fs/dmraid
+	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms

@@ -50,17 +50,14 @@ livecd/packages:
 	net-misc/ntp
 	net-misc/rdate
 	net-misc/vconfig
-### Masked (no keywords)
-#	net-wireless/ipw2100-firmware
-### Masked (~amd64)
-#	net-wireless/ipw2200-firmware
+	net-wireless/ipw2100-firmware
+	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode
 	net-wireless/iwl4965-ucode
 	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-### Masked (~amd64)
-#	net-wireless/zd1201-firmware
+	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	sys-apps/apmd
 	sys-apps/eject
@@ -90,8 +87,7 @@ livecd/packages:
 #	sys-devel/binutils-hppa64
 ### Masked (no keywords)
 #	sys-devel/gcc-hppa64
-### Masked (~amd64)
-#	sys-fs/dmraid
+	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms

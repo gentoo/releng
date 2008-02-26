@@ -41,7 +41,8 @@ boot/kernel/gentoo/packages:
 ### Masked (~amd64)
 #	net-wireless/acx
 	net-wireless/hostap-utils
-	net-wireless/madwifi-ng-tools
+	net-wireless/ipw3945
+#	net-wireless/madwifi-ng-tools
 	net-wireless/rt2500
 ### Masked (~amd64)
 #	net-wireless/rtl8187
