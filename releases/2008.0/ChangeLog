@@ -3,6 +3,13 @@
 # $Header: $
 
   26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/ppc/ppc64/installcd-stage1.spec,
+  specs/ppc/ppc64/livecd-stage1.spec, specs/x86/i686/livecd-stage1.spec,
+  specs/x86/i686/livedvd-stage1.spec, specs/x86/installcd-stage1.spec:
+  Added net-wireless/b43-fwcutter and net-wireless/bcm43xx-fwcutter.
+
+  26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/amd64/installcd-stage1.spec,
   specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
   specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage1.spec,
@@ -10,7 +17,7 @@
   specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livecd-stage2.spec,
   specs/x86/i686/livedvd-stage1.spec, specs/x86/i686/livedvd-stage2.spec,
   specs/x86/installcd-stage1.spec:
-  Added sys-fs/dmraid for bug #102736, commenting
+  Added sys-fs/dmraid for bug #102736, commenting out
   net-wireless/madwifi-ng-tools due to licensing on net-wireless/madwifi-ng,
   added net-wireless/iwl3945-ucode and net-wireless/iwl4965-ucode, and adding
   net-wireless/ipw3945.

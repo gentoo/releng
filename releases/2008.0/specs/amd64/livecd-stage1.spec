@@ -69,6 +69,8 @@ livecd/packages:
 	net-p2p/bittorrent
 	net-proxy/dante
 	net-proxy/tsocks
+	net-wireless/b43-fwcutter
+	net-wireless/bcm43xx-fwcutter
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode

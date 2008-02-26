@@ -82,6 +82,8 @@ livecd/packages:
 	net-proxy/dante
 	net-proxy/tsocks
 #	net-wireless/airsnort
+	net-wireless/b43-fwcutter
+	net-wireless/bcm43xx-fwcutter
 #	net-wireless/ipw2100-firmware
 #	net-wireless/ipw2200-firmware
 #	net-wireless/prism54-firmware
