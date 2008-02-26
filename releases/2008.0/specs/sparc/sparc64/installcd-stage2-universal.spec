@@ -34,7 +34,6 @@ livecd/unmerge:
 	gettext
 	groff
 	kgcc64
-	libperl
 	libtool
 	linux-headers
 	m4
@@ -42,7 +41,6 @@ livecd/unmerge:
 	man
 	man-pages
 	patch
-	perl
 	sandbox
 	texinfo
 

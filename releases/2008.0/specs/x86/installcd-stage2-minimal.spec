@@ -72,7 +72,6 @@ livecd/unmerge:
 #	ld.so
 #	lib-compat
 #	libmng
-	libperl
 	libstdc++-v3
 	libtool
 	linux-headers
@@ -83,10 +82,7 @@ livecd/unmerge:
 	miscfiles
 	pax-utils
 	patch
-	perl
 	perl-cleaner
-	perl-Test-Simple
-	PodParser
 	pycrypto
 	python-fchksum
 	rpm2targz

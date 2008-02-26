@@ -33,7 +33,7 @@ boot/kernel/G5/console: ttyS0,57600
 boot/kernel/G5/extraversion: G5
 
 livecd/unmerge:
-	autoconf automake binutils libtool m4 bison  make perl patch 
+	autoconf automake binutils libtool m4 bison  make patch 
 	linux-headers man-pages sandbox gcc kgcc64
 	sash bison flex gettext sys-apps/texinfo ccache addpatches 
 	man groff lib-compat miscfiles devfsd

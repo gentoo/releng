@@ -21,7 +21,7 @@ livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/li
 livecd/root_overlay: /var/cvsroot/gentoo/src/releng/overlays/root-livecd
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources

@@ -14,7 +14,7 @@ livecd/volid: Gentoo Linux amd64 2008.0
 livecd/type: gentoo-release-minimal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
@@ -70,7 +70,6 @@ livecd/unmerge:
 #	ld.so
 #	lib-compat
 #	libmng
-	libperl
 	libtool
 	linux-headers
 	m4
@@ -80,10 +79,7 @@ livecd/unmerge:
 	miscfiles
 	pax-utils
 	patch
-	perl
 	perl-cleaner
-	perl-Test-Simple
-	PodParser
 	pycrypto
 	rsync
 	sandbox

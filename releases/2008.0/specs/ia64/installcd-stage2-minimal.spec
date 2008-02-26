@@ -62,7 +62,6 @@ livecd/unmerge:
 #	ld.so
 #	lib-compat
 #	libmng
-	libperl
 	libtool
 	linux-headers
 	m4
@@ -72,10 +71,7 @@ livecd/unmerge:
 	miscfiles
 	pax-utils
 	patch
-	perl
 	perl-cleaner
-	perl-Test-Simple
-	PodParser
 	pycrypto
 	rsync
 	sandbox

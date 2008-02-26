@@ -170,7 +170,8 @@ livecd/packages:
 #	net-wireless/aircrack-ng
 ### Masked (~amd64)
 #	net-wireless/airsnort
-	net-wireless/b43-fwcutter
+### Masked (~amd64)
+#	net-wireless/b43-fwcutter
 	net-wireless/bcm43xx-fwcutter
 	net-wireless/gnome-bluetooth
 	net-wireless/ipw2100-firmware
