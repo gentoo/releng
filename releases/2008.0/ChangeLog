@@ -2,6 +2,14 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/amd64/livecd-2.6.24.config, specs/alpha/livecd-stage1.spec,
+  specs/amd64/livecd-stage1.spec, specs/amd64/livedvd-stage1.spec,
+  specs/ia64/livecd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec:
+  Added gnome-base/gdm to LiveCD/LiveDVD specs for graphical bootup and enable
+  ACPI proc Event support for acpid.
+
   26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec,
   specs/alpha/installcd-stage2-universal.spec,

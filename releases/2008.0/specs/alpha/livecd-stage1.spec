@@ -36,6 +36,7 @@ livecd/packages:
 	dev-util/cvs
 	dev-util/git
 	dev-util/subversion
+	gnome-base/gdm
 	xfce-base/xfce4
 	mail-client/evolution
 	mail-client/mozilla-thunderbird

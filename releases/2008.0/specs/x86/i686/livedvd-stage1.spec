@@ -85,6 +85,7 @@ livecd/packages:
 	dev-util/strace
 	dev-util/subversion
 	dev-util/valgrind
+	gnome-base/gdm
 	gnome-base/gnome
 	gnome-extra/evolution-exchange
 	gnome-extra/gsynaptics

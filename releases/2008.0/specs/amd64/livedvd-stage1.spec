@@ -91,6 +91,7 @@ livecd/packages:
 	dev-util/valgrind
 	gnome-base/gnome
 	gnome-extra/evolution-exchange
+	gnome-base/gdm
 ### Masked (~amd64)
 #	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
