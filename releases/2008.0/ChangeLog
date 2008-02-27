@@ -2,6 +2,18 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+
+
+  27 Feb 2008; Brent Baude <ranger@gentoo.org>
+  kconfig/powerpc/
+  kconfig/powerpc/installcd-ibm-2.6.23.config
+  kconfig/powerpc/installcd-pegasos-2.6.23.config
+  kconfig/powerpc/installcd-ppc32apple-2.6.23.config
+  kconfig/powerpc/installcd-ppc64apple-2.6.23.config
+  kconfig/powerpc/livecd-ppc32apple-2.6.23.config
+  Adding powerpc kernel specs
+
+
   27 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   kconfig/amd64/livecd-2.6.24.config, specs/alpha/livecd-stage1.spec,
   specs/amd64/livecd-stage1.spec, specs/amd64/livedvd-stage1.spec,
