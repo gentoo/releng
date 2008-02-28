@@ -20,10 +20,8 @@ livecd/packages:
 	app-admin/sudo
 	app-admin/syslog-ng
 	app-arch/mt-st
-	app-arch/unrar
-	app-arch/unzip
 	app-benchmarks/cpuburn
-	app-cdr/cdrkit
+#	app-cdr/cdrkit
 	app-crypt/gnupg
 #	app-editors/emacs
 	app-editors/vim
@@ -44,7 +42,7 @@ livecd/packages:
 #	media-sound/audacious
 	net-analyzer/netcat
 	net-analyzer/nmap
-#	net-analyzer/tcpdump
+	net-analyzer/tcpdump
 #	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/mingetty
@@ -52,7 +50,7 @@ livecd/packages:
 	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
-#	net-firewall/iptables
+	net-firewall/iptables
 	net-fs/nfs-utils
 	net-im/pidgin
 	net-irc/irssi
@@ -96,19 +94,19 @@ livecd/packages:
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 	sys-apps/sdparm
-#	sys-apps/sg3_utils
+	sys-apps/sg3_utils
 	sys-apps/slocate
-#	sys-apps/smartmontools
+	sys-apps/smartmontools
 	sys-block/aoetools
 	sys-block/disktype
 	sys-block/gpart
 	sys-block/partimage
-#	sys-block/qla-fc-firmware
+	sys-block/qla-fc-firmware
 #	sys-boot/aboot
 #	sys-boot/elilo
 	sys-boot/grub
-	sys-boot/lilo
-#	sys-boot/syslinux
+#	sys-boot/lilo
+	sys-boot/syslinux
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
 	sys-devel/distcc
@@ -117,14 +115,14 @@ livecd/packages:
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms
-#	sys-fs/hfsplusutils
-#	sys-fs/hfsutils
+	sys-fs/hfsplusutils
+	sys-fs/hfsutils
 #	sys-fs/iprutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
 #	sys-fs/lvm-user
-#	sys-fs/mac-fdisk
+	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
@@ -135,9 +133,9 @@ livecd/packages:
 	sys-process/vixie-cron
 	www-client/links
 	www-client/mozilla-firefox
+	x11-base/xorg-server
 	x11-base/xorg-x11
 	x11-drivers/synaptics
-	x11-misc/xscreensaver
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
 	xfce-base/xfce4

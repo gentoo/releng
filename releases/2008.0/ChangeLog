@@ -4,6 +4,10 @@
 
   28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/livecd-stage1.spec:
+  Update livecd-stage1 to be closer to amd64
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage1.spec:
   Move xfce4 to be in order
 
   28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
