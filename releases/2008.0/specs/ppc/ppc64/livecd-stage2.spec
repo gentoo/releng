@@ -41,7 +41,17 @@ boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/ppc32/packages:
 	sys-apps/pcmciautils
+#       net-dialup/speedtouch
+#       net-dialup/slmodem
+#       net-dialup/globespan-adsl
+#       net-wireless/hostap-utils
+#       net-dialup/fritzcapi
+#       net-dialup/fcdsl
 #	net-misc/br2684ctl  # package is ppc masked
+#       net-wireless/rt2500
+#       net-wireless/rtl8180
+#       net-wireless/adm8211
+#       net-wireless/acx
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils

@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Feb 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/livecd-stage2.spec
+  Adding commented packages back to specs; sorry Chris
+
   28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> scripts/livecd.sh:
   Added code to disable UAC on Alpha for bug #210282 and also enforcing a
   Unicode-enabled console font across the board.
