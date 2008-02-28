@@ -150,6 +150,7 @@ livecd/packages:
 	sys-kernel/genkernel
 	sys-libs/gpm
 	sys-power/acpid
+	sys-process/htop
 	sys-process/vixie-cron
 	www-client/links
 	www-client/mozilla-firefox

@@ -270,6 +270,7 @@ livecd/packages:
 	sys-libs/gpm
 	sys-power/acpid
 	sys-power/apcupsd
+	sys-process/htop
 	sys-process/lsof
 	sys-process/vixie-cron
 	www-client/epiphany-extensions

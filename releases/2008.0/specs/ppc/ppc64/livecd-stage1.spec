@@ -146,6 +146,7 @@ livecd/packages:
 	sys-libs/gpm
 #	sys-power/acpid
 #	sys-power/apmd
+	sys-process/htop
 	sys-process/vixie-cron
 #	www-client/links
 	www-client/mozilla-firefox
