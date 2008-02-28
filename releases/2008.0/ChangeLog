@@ -3,6 +3,11 @@
 # $Header: $
 
   28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec:
+  Update livecd/livedvd specs to match what's being used to build (kconfig and
+  genkernel opts)
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/installcd-stage2-minimal.spec:
   Update minimal CD specs to match what's being used to build the release
   (kconfig and genkernel opts)

@@ -11,7 +11,7 @@ livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/livedvd-i686-installer-2008.0.iso
 livecd/xdm: gdm
 livecd/xsession: xfce
-livecd/fsscript: /var/cvsroot/gentoo/src/releng/scripts/2008.0/livecd.sh
+livecd/fsscript: /home/agaffney/release/2008.0/scripts/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: gentoo
@@ -21,11 +21,11 @@ livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/li
 livecd/root_overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/root_overlay
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2008.0/x86/livecd-2.6.23.config
+boot/kernel/gentoo/config: /home/agaffney/release/2008.0/kconfig/livecd-2.6.23.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 	app-laptop/laptop-mode-tools
