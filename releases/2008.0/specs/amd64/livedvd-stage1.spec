@@ -46,9 +46,7 @@ livecd/packages:
 	app-laptop/i8kutils
 ### Compile fails
 #	app-misc/beagle
-	app-misc/livecd-tools
-### Compile fails
-#	app-misc/mc
+	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
 ### Masked (~amd64)

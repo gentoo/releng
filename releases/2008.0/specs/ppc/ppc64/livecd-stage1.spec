@@ -27,7 +27,7 @@ livecd/packages:
 	app-editors/emacs
 	app-editors/vim
 #	app-editors/xemacs
-	app-misc/livecd-tools
+	app-misc/mc
 	app-misc/screen
 	app-misc/vlock
 #	app-office/koffice
