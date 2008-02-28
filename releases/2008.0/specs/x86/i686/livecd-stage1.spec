@@ -39,7 +39,6 @@ livecd/packages:
 	dev-util/git
 	dev-util/subversion
 	gnome-base/gdm
-	xfce-base/xfce4
 	mail-client/mozilla-thunderbird
 	media-gfx/fbgrab
 #	media-sound/audacious
@@ -141,3 +140,4 @@ livecd/packages:
 	x11-misc/xscreensaver
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
+	xfce-base/xfce4
