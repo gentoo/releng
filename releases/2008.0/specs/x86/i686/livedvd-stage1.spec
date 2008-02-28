@@ -14,6 +14,7 @@ livecd/use:
 livecd/packages:
 	app-accessibility/brltty
 	app-admin/gkrellm
+	app-admin/hddtemp
 	app-admin/ide-smart
 	app-admin/logrotate
 	app-admin/passook

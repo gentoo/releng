@@ -28,6 +28,7 @@ livecd/use:
 livecd/packages:
 # Masked (not keyworded, use.masked as well)
 #	app-accessibility/brltty
+	app-admin/hddtemp
 	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng

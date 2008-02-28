@@ -15,8 +15,8 @@ livecd/use:
 	loop-aes
 	lvm1
 	ncurses
-	-nls
-	-nocxx
+	nls
+	nocxx
 	nptl
 	nptlonly
 	pam
@@ -27,6 +27,7 @@ livecd/use:
 	
 livecd/packages:
 	app-accessibility/brltty
+	app-admin/hddtemp
 #	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
