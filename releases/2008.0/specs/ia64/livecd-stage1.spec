@@ -68,6 +68,7 @@ livecd/packages:
 	net-misc/whois
 #	net-p2p/bittorrent
 	net-proxy/dante
+	net-proxy/ntlmaps
 #	net-proxy/tsocks
 #	net-wireless/ipw2100-firmware
 #	net-wireless/ipw2200-firmware

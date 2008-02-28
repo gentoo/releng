@@ -51,6 +51,7 @@ livecd/packages:
 	net-misc/rdate
 	net-misc/vconfig
 	net-proxy/dante
+	net-proxy/ntlmaps
 	net-proxy/tsocks
 	net-wireless/b43-fwcutter
 	net-wireless/bcm43xx-fwcutter

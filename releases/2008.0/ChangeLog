@@ -12,6 +12,18 @@
   specs/x86/hardened/installcd-stage1.spec,
   specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
   specs/x86/installcd-stage1.spec:
+  Added net-proxy/ntlmaps for bug #58634.
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
   Added app-text/wgetpaste to all ISO media and removing explicit
   dev-lang/python, since we use --newuse and there's no need for it listed
   here.

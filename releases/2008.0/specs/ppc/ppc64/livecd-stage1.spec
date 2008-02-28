@@ -82,6 +82,7 @@ livecd/packages:
 #	net-nntp/pan
 	net-p2p/bittorrent
 	net-proxy/dante
+	net-proxy/ntlmaps
 	net-proxy/tsocks
 #	net-wireless/airsnort
 	net-wireless/b43-fwcutter
