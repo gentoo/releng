@@ -7,13 +7,20 @@ then
 fi
 
 case `uname -m` in
+	alpha)
+		echo >> /etc/sysctl.conf
+		echo "# Disable UAC on Alpha" >> /etc/sysctl.conf
+		echo "uac.noprint = 1" >> /etc/sysctl.conf
+	;;
 	i?86|x86_64)
 		sed -i 's/DRIVER fbdev/DRIVER vesa/' /usr/share/hwdata/Cards
-		sed -e 's/CONSOLEFONT="default8x16"/CONSOLEFONT="lat1-16"/' \
-			-e '/^#CONSOLETRANSLATION="8859-1_to_uni"/ s/^#//' \
-			-i /etc/conf.d/consolefont
 	;;
 esac
+
+# Enforce a unicode font by default
+sed -e 's/CONSOLEFONT="default8x16"/CONSOLEFONT="lat1-16"/' \
+	-e '/^#CONSOLETRANSLATION="8859-1_to_uni"/ s/^#//' \
+	-i /etc/conf.d/consolefont
 
 # This is necessary because /home/gentoo in the squashfs ends up getting owned
 # by whoever the owner of the overlay files were on the build box. This causes
