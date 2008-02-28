@@ -36,7 +36,8 @@ boot/kernel/gentoo/packages:
 	net-dialup/globespan-adsl
 	net-dialup/slmodem
 	net-misc/br2684ctl
-	net-wireless/acx
+### Compile failure
+#	net-wireless/acx
 	net-wireless/hostap-utils
 	net-wireless/kismet
 	net-wireless/ipw3945

@@ -3,6 +3,10 @@
 # $Header: $
 
   28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec:
+  Comment out net-wireless/acx due to compile failure
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/installcd-stage1.spec:
   Comment out b43-fwcutter and bcm43xx-fwcutter in minimal spec since they're
   ~x86
