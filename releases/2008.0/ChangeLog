@@ -3,6 +3,10 @@
 # $Header: $
 
 
+  27 Feb 2008; Brent Baude <ranger@gentoo.org>
+  ppc/ppc64/installcd-stage2-minimal.spec
+  Cleaning up spec, references to kernel specs, adding ppc32 apple kernel 
+
 
   27 Feb 2008; Brent Baude <ranger@gentoo.org>
   kconfig/powerpc/
