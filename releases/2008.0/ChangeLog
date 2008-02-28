@@ -2,6 +2,8 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
+  Add code to livecd.sh to make sure /home/gentoo is owned by the 'gentoo' user
 
   28 Feb 2008; Brent Baude <ranger@gentoo.org>
   specs/ppc/ppc64/livecd-stage2.spec

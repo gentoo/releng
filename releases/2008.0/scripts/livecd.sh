@@ -15,3 +15,11 @@ case `uname -m` in
 	;;
 esac
 
+# This is necessary because /home/gentoo in the squashfs ends up getting owned
+# by whoever the owner of the overlay files were on the build box. This causes
+# weird stuff to happen like X failing to start because it doesn't have the
+# ability to write the .Xauthority file
+if [[ -d /home/gentoo ]]
+then
+	chown -R gentoo:users /home/gentoo
+fi
