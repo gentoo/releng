@@ -120,6 +120,7 @@ livecd/packages:
 #	sys-fs/lvm-user
 #	sys-fs/mac-fdisk
 	sys-fs/mdadm
+#	sys-fs/ntfs3g
 #	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs

@@ -78,6 +78,7 @@ livecd/packages:
 	sys-fs/lvm2
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
+	sys-fs/ntfs3g
 	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
