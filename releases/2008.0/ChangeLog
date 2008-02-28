@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Feb 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/installcd-stage2-universal.spec, 
+  specs/ppc/ppc64/livecd-stage2.spec
+  Cleaning up spec references to kernel configs and gk args
+
   28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/livecd-stage1.spec:
   Update livecd-stage1 to be closer to amd64

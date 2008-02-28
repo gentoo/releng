@@ -9,28 +9,47 @@ source_subpath: default/livecd-stage1-ppc64-32ul-2008.0/
 livecd/type: gentoo-release-universal
 livecd/overlay: /2008.0/overlay/
 
-livecd/gk_mainargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu- --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --evms --mdadm --dmraid
+livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms
+
 
 livecd/fstype: squashfs 
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 livecd/iso: /root/install-ppc64-universal-2008.0.iso
+livecd/rcadd: pbbuttonsd|default
 
-boot/kernel: ibmpower G5 
+
+boot/kernel: ibmpower G5 ppc32
 
 ## IBM hardware
 boot/kernel/ibmpower/sources: sys-kernel/gentoo-sources
 boot/kernel/ibmpower/use: usb extlib
-boot/kernel/ibmpower/config: /2008.0/kernel_configs/installcd-power-gentoo.config
+boot/kernel/ibmpower/config: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/kconfig/powerpc/installcd-ibm-2.6.23.config
 boot/kernel/ibmpower/console: ttyS0,9600 hvc0 hvsi0
 boot/kernel/ibmpower/machine_type: ibm
 boot/kernel/ibmpower/extraversion: ibm
+boot/kernel/ibmpower/gk_kernargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu-
+
 
 ## Apple hardware
 boot/kernel/G5/sources: sys-kernel/gentoo-sources
 boot/kernel/G5/use: usb extlib
-boot/kernel/G5/config: /2008.0/kernel_configs/installcd-G5-gentoo.config
+boot/kernel/G5/config: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/kconfig/powerpc/installcd-ppc64apple-2.6.23.config
 boot/kernel/G5/console: ttyS0,57600
 boot/kernel/G5/extraversion: G5
+boot/kernel/G5/gk_kernargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu-
+
+## ppc32 hardware
+boot/kernel/ppc32/config: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/kconfig/powerpc/installcd-ppc32apple-2.6.23.config
+boot/kernel/ppc32/sources: gentoo-sources
+boot/kernel/ppc32/extraversion: ppc32
+boot/kernel/ppc32/use: pcmcia usb oss atm truetype -qt -qt3 -qt4 -ibam
+boot/kernel/ppc32/packages:
+        #media-gfx/splashutils
+        #media-gfx/splash-themes-livecd
+        sys-apps/pcmciautils
+        sys-fs/cryptsetup
+        app-laptop/pbbuttonsd
+
 
 livecd/unmerge:
 	autoconf automake binutils libtool m4 bison  make patch 
