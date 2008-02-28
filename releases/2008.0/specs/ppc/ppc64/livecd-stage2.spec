@@ -11,14 +11,14 @@ livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-ppc64-32ul-2008.0.iso
 livecd/xdm: gdm
 livecd/xsession: xfce
-livecd/fsscript: /var/cvsroot/gentoo/src/releng/scripts/2008.0/livecd.sh
+livecd/fsscript: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/scripts/livecd.sh
 
 livecd/type: gentoo-release-livecd
 livecd/users: xfce
 livecd/volid: Gentoo Linux 2008.0 PPC LiveCD
 
-livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/livecd/2008.0/common/overlay/livecd
-livecd/root_overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/root_overlay
+livecd/overlay: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/overlays/common/livecd
+livecd/root_overlay: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/overlays/common/livecd/root_overlay/
 
 #livecd/bootargs: dokeymap
 livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms
@@ -41,7 +41,7 @@ boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/ppc32/packages:
 	sys-apps/pcmciautils
-	net-misc/br2684ctl
+#	net-misc/br2684ctl  # package is ppc masked
 	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
