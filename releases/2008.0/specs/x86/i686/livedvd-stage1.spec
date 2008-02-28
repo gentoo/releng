@@ -161,9 +161,9 @@ livecd/packages:
 	net-proxy/tsocks
 	net-wireless/aircrack-ng
 	net-wireless/airsnort
-	### Masked by ~x86
-	#net-wireless/b43-fwcutter
-	#net-wireless/bcm43xx-fwcutter
+### Masked by ~x86
+#	net-wireless/b43-fwcutter
+#	net-wireless/bcm43xx-fwcutter
 	net-wireless/gnome-bluetooth
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware

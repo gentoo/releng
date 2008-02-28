@@ -3,6 +3,10 @@
 # $Header: $
 
   28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec:
+  Update comments to match amd64 format
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec:
   Update overlay/root_overlay paths to match what's being used to build
 

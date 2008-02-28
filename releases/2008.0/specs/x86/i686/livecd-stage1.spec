@@ -70,9 +70,9 @@ livecd/packages:
 	net-p2p/bittorrent
 	net-proxy/dante
 	net-proxy/tsocks
-	### Masked by ~x86
-	#net-wireless/b43-fwcutter
-	#net-wireless/bcm43xx-fwcutter
+### Masked by ~x86
+#	net-wireless/b43-fwcutter
+#	net-wireless/bcm43xx-fwcutter
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode
