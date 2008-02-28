@@ -17,8 +17,8 @@ livecd/type: gentoo-release-livecd
 livecd/users: gentoo
 livecd/volid: Gentoo Linux 2008.0 x86 LiveDVD
 
-livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/livedvd
-livecd/root_overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/root_overlay
+livecd/overlay: /home/agaffney/release/2008.0/overlays/common/overlay/livedvd
+livecd/root_overlay: /home/agaffney/release/2008.0/overlays/common/root_overlay
 
 livecd/bootargs: dokeymap
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
