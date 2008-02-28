@@ -4,7 +4,7 @@ target: livecd-stage2
 rel_type: default
 profile: default/linux/powerpc/ppc64/2008.0/32bit-userland/desktop
 snapshot: 2008.0
-source_subpath: default/livecd-stage1-ppc64-32ul-2008.0
+source_subpath: default/livecd-stage1-ppc64-installer-32ul-2008.0
 
 livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
