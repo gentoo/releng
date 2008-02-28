@@ -32,6 +32,7 @@ livecd/packages:
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed
+	app-text/wgetpaste
 	dev-util/ccache
 	dev-util/cvs
 	dev-util/git

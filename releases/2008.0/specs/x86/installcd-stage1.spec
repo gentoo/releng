@@ -32,7 +32,7 @@ livecd/packages:
 	app-misc/screen
 	app-misc/vlock
 	app-portage/mirrorselect
-	dev-lang/python
+	app-text/wgetpaste
 	media-gfx/fbgrab
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute

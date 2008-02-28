@@ -27,7 +27,7 @@ livecd/use:
 	
 livecd/packages:
 	app-accessibility/brltty
-	#app-admin/passook
+#	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
@@ -36,7 +36,7 @@ livecd/packages:
 	app-misc/screen
 	app-misc/vlock
 	app-portage/mirrorselect
-	dev-lang/python
+	app-text/wgetpaste
 	media-gfx/fbgrab
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute

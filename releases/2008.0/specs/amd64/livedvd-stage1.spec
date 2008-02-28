@@ -77,6 +77,7 @@ livecd/packages:
 	app-shells/zsh
 	app-shells/zsh-completion
 	app-text/tetex
+	app-text/wgetpaste
 	dev-util/anjuta
 	dev-util/ccache
 	dev-util/cvs
