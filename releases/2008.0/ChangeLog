@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Feb 2008; Raúl Porcel <armin76@gentoo.org> kconfig/alpha,
+  kconfig/ia64/installcd-2.6.23.config, kconfig/sparc/installcd-2.6.23.config:
+  Add kconfigs for ia64 and sparc, alpha to follow
+
   28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
   specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
