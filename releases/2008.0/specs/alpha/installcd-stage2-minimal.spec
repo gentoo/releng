@@ -7,15 +7,17 @@ snapshot: 2008.0
 source_subpath: default/livecd-stage1-alpha-2008.0
 
 livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/aboot-0.9-r1-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/aboot-1.0_pre20040408-r2-cdtar.tar.bz2
 
 livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-2008.0.iso
+
+livecd/fsscript: ../../scripts/livecd.sh
 
 livecd/volid: Gentoo Linux alpha 2008.0
 livecd/type: gentoo-release-minimal
 
 livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
+livecd/gk_mainargs: --lvm --dmraid --mdadm
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources

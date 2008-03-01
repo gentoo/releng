@@ -3,6 +3,11 @@
 # $Header: $
 
   01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage1.spec,
+  specs/alpha/installcd-stage2-minimal.spec:
+  Some changes to the specs for alpha, by Tobias Klausmann
+
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   +kconfig/alpha/installcd-2.6.23.config,
   specs/alpha/installcd-stage2-minimal.spec:
   Add kconfig for alpha, thanks to Tobias Klausmann

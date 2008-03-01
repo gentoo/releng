@@ -24,7 +24,8 @@ livecd/use:
 livecd/packages:
 	app-accessibility/brltty
 #	app-admin/hddtemp
-	app-admin/passook
+# No keywords on alpha
+#	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
@@ -65,7 +66,8 @@ livecd/packages:
 	sys-apps/iproute2
 #	sys-apps/lssbus
 #	sys-apps/memtester
-	sys-apps/netplug
+# no keywords on alpha
+#	sys-apps/netplug
 	sys-apps/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
@@ -95,6 +97,7 @@ livecd/packages:
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-libs/gpm
-	sys-power/acpid
+# No ACPI on alphas, not keyworded. 
+#	sys-power/acpid
 #	sys-power/apmd
 	www-client/links
