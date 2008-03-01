@@ -47,7 +47,8 @@ livecd/packages:
 #	net-misc/vconfig
 	net-proxy/dante
 	net-proxy/ntlmaps
-	net-proxy/tsocks
+# Not keyworded
+#	net-proxy/tsocks
 #	net-wireless/ipw2100-firmware
 #	net-wireless/ipw2200-firmware
 #	net-wireless/prism54-firmware
@@ -88,7 +89,8 @@ livecd/packages:
 #	sys-fs/mac-fdisk
 	sys-fs/mdadm
 #	sys-fs/multipath-tools
-	sys-fs/ntfs3g
+# Not keyworded
+#	sys-fs/ntfs3g
 #	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs

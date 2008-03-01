@@ -3,6 +3,10 @@
 # $Header: $
 
   01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/ia64/installcd-stage1.spec:
+  Comment not keyworded packages on ia64
+
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   specs/alpha/installcd-stage1.spec,
   specs/alpha/installcd-stage2-minimal.spec:
   Some changes to the specs for alpha, by Tobias Klausmann
