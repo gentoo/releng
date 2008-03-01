@@ -3,6 +3,11 @@
 # $Header: $
 
   01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  +kconfig/alpha/installcd-2.6.23.config,
+  specs/alpha/installcd-stage2-minimal.spec:
+  Add kconfig for alpha, thanks to Tobias Klausmann
+
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   specs/sparc/sparc64/distfiles.spec, specs/sparc/sparc64/packages.spec:
   Fix sparc specs for not keyworded packages
 
