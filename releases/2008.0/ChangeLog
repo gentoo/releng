@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/sparc/sparc64/distfiles.spec, specs/sparc/sparc64/packages.spec:
+  Fix sparc specs for not keyworded packages
+
   29 Feb 2008; Raúl Porcel <armin76@gentoo.org> kconfig/alpha,
   kconfig/ia64/installcd-2.6.23.config, kconfig/sparc/installcd-2.6.23.config:
   Add kconfigs for ia64 and sparc, alpha to follow

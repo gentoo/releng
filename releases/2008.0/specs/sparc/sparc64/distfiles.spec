@@ -9,7 +9,8 @@ grp: src
 
 grp/src/type: srcset
 grp/src/packages:
-	app-accessibility/brltty
+# Masked (not keyworded, use.masked as well)
+#       app-accessibility/brltty
 	vanilla-sources
 	gentoo-sources
 	iptables

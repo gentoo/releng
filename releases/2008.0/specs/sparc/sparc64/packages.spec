@@ -9,7 +9,8 @@ grp: cd2
 
 grp/cd2/type: pkgset
 grp/cd2/packages:
-	app-accessibility/brltty
+# Masked (not keyworded)
+#	app-accessibility/brltty
 	gpm
 	rp-pppoe
 	dhcpcd
@@ -53,7 +54,8 @@ grp/cd2/packages:
 	ufed	
 	dev-lang/tcl
 	dev-lang/tk
-	app-cdr/cdrtools
+# Masked (blocks with cdrkit, which is a dep of some package)
+#	app-cdr/cdrtools
 	kde-meta
 	gnome
 	koffice-meta
