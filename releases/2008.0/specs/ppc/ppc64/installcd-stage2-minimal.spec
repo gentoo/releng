@@ -45,7 +45,7 @@ boot/kernel/ppc32/packages:
         #media-gfx/splashutils
         #media-gfx/splash-themes-livecd
         sys-apps/pcmciautils
-        sys-fs/cryptsetup
+		sys-fs/ntfs3g
         app-laptop/pbbuttonsd
 
 livecd/unmerge:

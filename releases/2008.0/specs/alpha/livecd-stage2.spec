@@ -34,6 +34,7 @@ boot/kernel/gentoo/packages:
 	media-libs/alsa-oss
 	media-sound/alsa-utils
 	net-misc/br2684ctl
+	sys-fs/ntfs3g
 
 livecd/empty:
 	/var/tmp

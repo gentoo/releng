@@ -20,10 +20,16 @@ boot/kernel: livecd32 livecd64
 
 boot/kernel/livecd32/sources: sys-kernel/hppa-sources
 boot/kernel/livecd32/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/hppa/installcd-2.6.15-hppa32.config
+boot/kernel/livecd32/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
+boot/kernel/livecd32/packages:
+	sys-fs/ntfs3g
 
 boot/kernel/livecd64/sources: sys-kernel/hppa-sources
 boot/kernel/livecd64/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/hppa/installcd-2.6.15-hppa64.config
 boot/kernel/livecd64/gk_kernargs:  --kernel-cc=hppa64-linux-gcc --kernel-ld=hppa64-linux-ld 
+boot/kernel/livecd64/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
+boot/kernel/livecd64/packages:
+	sys-fs/ntfs3g
 
 boot/kernel/livecd32/extraversion: livecd32
 boot/kernel/livecd64/extraversion: livecd64

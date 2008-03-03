@@ -19,13 +19,9 @@ livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: hardened-sources
-
 boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2008.0/x86/hardened/installcd-2.6.20.config
-
-boot/kernel/gentoo/use: pcmcia usb -X png truetype -qt -qt3 -qt4
-
+boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/gentoo/packages:
-	sys-apps/pcmciautils
 	net-dialup/slmodem
 	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
@@ -34,6 +30,8 @@ boot/kernel/gentoo/packages:
 	net-wireless/rt2500
 	net-wireless/acx
 	net-wireless/ipw3945
+	sys-apps/pcmciautils
+	sys-fs/ntfs3g
 
 livecd/unmerge:
 #	acl

@@ -16,6 +16,9 @@ livecd/iso: /var/tmp/catalyst/builds/default/install-sparc64-minimal-2008.0.iso
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: ~sys-kernel/gentoo-sources-2.6.23
 boot/kernel/gentoo/config: ../../../kconfig/sparc/installcd-2.6.23.config
+boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
+boot/kernel/gentoo/packages:
+	sys-fs/ntfs3g
 
 livecd/unmerge:
 	autoconf

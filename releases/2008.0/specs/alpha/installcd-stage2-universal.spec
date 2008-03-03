@@ -22,6 +22,9 @@ livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/alpha/installcd-2.6.15.1.config
+boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
+boot/kernel/gentoo/packages:
+	sys-fs/ntfs3g
 
 livecd/unmerge:
 #	acl

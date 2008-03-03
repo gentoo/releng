@@ -45,6 +45,7 @@ boot/kernel/gentoo/packages:
 	net-wireless/rt2500
 #	net-wireless/rtl8187
 	sys-apps/pcmciautils
+	sys-fs/ntfs3g
 
 livecd/unmerge:
 	sys-kernel/gentoo-sources

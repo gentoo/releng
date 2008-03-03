@@ -32,6 +32,7 @@ boot/kernel/gentoo/packages:
 	net-wireless/rt2500
 #	net-wireless/acx
 	net-wireless/ipw3945
+	sys-fs/ntfs3g
 
 livecd/unmerge:
 #	acl

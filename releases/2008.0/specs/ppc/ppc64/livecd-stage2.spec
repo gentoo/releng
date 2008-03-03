@@ -56,6 +56,7 @@ boot/kernel/ppc32/packages:
 	media-libs/alsa-oss
 	media-sound/alsa-utils
 	app-laptop/pbbuttonsd
+	sys-fs/ntfs3g
 
 boot/kernel/G5/sources: sys-kernel/gentoo-sources
 boot/kernel/G5/use: atm extlib fbcondecor mng png truetype usb -qt3 -qt4 -X

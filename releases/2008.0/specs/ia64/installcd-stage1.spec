@@ -90,7 +90,6 @@ livecd/packages:
 	sys-fs/mdadm
 #	sys-fs/multipath-tools
 # Not keyworded
-#	sys-fs/ntfs3g
 #	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
