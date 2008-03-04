@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/ppc/ppc32/stage1.spec, specs/ppc/ppc32/stage2.spec,
+  specs/ppc/ppc32/stage3.spec:
+  Fixing the profiles for ppc32 to point to default/linux/powerpc/ppc32 rather
+  than default/linux/ppc/ppc32.
+
   03 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage1.spec,
   specs/alpha/installcd-stage2-minimal.spec,
