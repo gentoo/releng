@@ -2,6 +2,13 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec:
+  More masking on sparc
+
   04 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/ppc/ppc32/stage1.spec, specs/ppc/ppc32/stage2.spec,
   specs/ppc/ppc32/stage3.spec:
