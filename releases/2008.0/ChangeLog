@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec:
+  Mask ntfs3g on alpha, not keyworded, thanks to Tobias Klausmann
+
   04 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   specs/ia64/installcd-stage2-minimal.spec,
   specs/sparc/sparc64/installcd-stage1.spec,

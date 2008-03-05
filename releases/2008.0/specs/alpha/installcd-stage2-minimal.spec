@@ -23,8 +23,9 @@ boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-2.6.23.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
-boot/kernel/gentoo/packages:
-	sys-fs/ntfs3g
+# Not keyworded on alpha
+#boot/kernel/gentoo/packages:
+#	sys-fs/ntfs3g
 
 livecd/unmerge:
 #	acl
