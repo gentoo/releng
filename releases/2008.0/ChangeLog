@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  kconfig/ia64/installcd-2.6.23.config,
+  specs/ia64/installcd-stage2-minimal.spec:
+  Disable PREEMPT on ia64 kernel
+
   05 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec:
   Mask ntfs3g on alpha, not keyworded, thanks to Tobias Klausmann
