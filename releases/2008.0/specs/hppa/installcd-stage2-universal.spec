@@ -6,17 +6,14 @@ profile: default/linux/hppa/2008.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-hppa1.1-2008.0
 
-livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/palo-1.5_pre20040515-cdtar.tar.bz2
-
-livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-universal-2008.0.iso
-
-livecd/type: gentoo-release-universal
 livecd/bootargs: dokeymap
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/palo-1.5_pre20040515-cdtar.tar.bz2
+livecd/fstype: squashfs
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
+livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-universal-2008.0.iso
+livecd/type: gentoo-release-universal
 
 livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/installcd
-
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
 
 boot/kernel: livecd32 livecd64
 

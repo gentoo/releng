@@ -6,20 +6,17 @@ profile: default/linux/alpha/2008.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-alpha-2008.0
 
-livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/aboot-1.0_pre20040408-r2-cdtar.tar.bz2
-
-livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-2008.0.iso
-
-livecd/fsscript: ../../scripts/livecd.sh
-
-livecd/volid: Gentoo Linux alpha 2008.0
-livecd/type: gentoo-release-minimal
-
 livecd/bootargs: dokeymap
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/aboot-1.0_pre20040408-r2-cdtar.tar.bz2
+livecd/fsscript: ../../scripts/livecd.sh
+livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm
+livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-2008.0.iso
+livecd/type: gentoo-release-minimal
+livecd/volid: Gentoo Linux alpha 2008.0
 
 boot/kernel: gentoo
+
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-2.6.23.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X

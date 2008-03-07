@@ -58,7 +58,7 @@ livecd/packages:
 	app-office/gnumeric
 	app-office/koffice
 	app-office/openoffice
-	app-office/openoffice-bin
+#	app-office/openoffice-bin
 	app-office/scribus
 	app-pda/gtkpod
 	app-pda/ipodslave
@@ -124,7 +124,8 @@ livecd/packages:
 	media-video/gxine
 	media-video/lsdvd
 	media-video/mplayer
-	media-video/mplayer-bin
+### Masked (~amd64)
+#	media-video/mplayer-bin
 	media-video/ogle-gui
 	media-video/vlc
 	media-video/xine-ui
@@ -174,7 +175,8 @@ livecd/packages:
 #	net-wireless/airsnort
 ### Masked (~amd64)
 #	net-wireless/b43-fwcutter
-	net-wireless/bcm43xx-fwcutter
+### Masked (~amd64)
+#	net-wireless/bcm43xx-fwcutter
 	net-wireless/gnome-bluetooth
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware

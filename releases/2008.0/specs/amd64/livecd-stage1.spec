@@ -40,6 +40,7 @@ livecd/packages:
 	dev-util/git
 	dev-util/subversion
 	gnome-base/gdm
+#	gnome-base/gnome
 	xfce-base/xfce4
 	mail-client/mozilla-thunderbird
 #	mail-client/mozilla-thunderbird-bin
@@ -76,7 +77,8 @@ livecd/packages:
 	net-proxy/tsocks
 ### Masked (~amd64)
 #	net-wireless/b43-fwcutter
-	net-wireless/bcm43xx-fwcutter
+### Masked (~amd64)
+#	net-wireless/bcm43xx-fwcutter
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode

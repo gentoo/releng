@@ -2,6 +2,32 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage2-minimal.spec,
+  specs/amd64/livecd-stage1.spec, specs/amd64/livecd-stage2.spec,
+  specs/amd64/livedvd-stage1.spec, specs/amd64/livedvd-stage2.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec, specs/ia64/livecd-stage2.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/ppc/ppc64/livecd-stage2.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Quite a few changes here, but nothing too drastic. First, I alphabetized
+  some of the livecd-stage2 specs to make them easier to compare. Please keep
+  your specs in the same order. Second, I removed alsa-lib from livecd-stage2,
+  since it wasn't necessary and just increased our livecd-stage2 build time. I
+  masked a few items on the AMD64 specs that I had recently added. I added
+  back the splash stuff to livecd-stage2 for testing. Also, I removed
+  livecd/users where it existed, since it is now redundant with livecd/type:
+  gentoo-release-livecd on newer catalyst versions.
+
   06 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   kconfig/ia64/installcd-2.6.23.config,
   specs/ia64/installcd-stage2-minimal.spec:

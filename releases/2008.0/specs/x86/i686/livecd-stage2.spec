@@ -6,29 +6,27 @@ profile: default/linux/x86/2008.0/desktop
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-i686-installer-2008.0
 
-livecd/fstype: squashfs
+livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
+livecd/fsscript: /home/agaffney/release/2008.0/scripts/livecd.sh
+livecd/fstype: squashfs
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-i686-installer-2008.0.iso
+livecd/type: gentoo-release-livecd
+livecd/volid: Gentoo Linux 2008.0 x86 LiveCD
 livecd/xdm: gdm
 livecd/xsession: xfce
-livecd/fsscript: /home/agaffney/release/2008.0/scripts/livecd.sh
-
-livecd/type: gentoo-release-livecd
-livecd/users: gentoo
-livecd/volid: Gentoo Linux 2008.0 x86 LiveCD
 
 livecd/overlay: /home/agaffney/release/2008.0/overlays/common/overlay/livecd
 livecd/root_overlay: /home/agaffney/release/2008.0/overlays/common/root_overlay
 
-livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
-
 boot/kernel: gentoo
+
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /home/agaffney/release/2008.0/kconfig/livecd-2.6.23.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
-	media-libs/alsa-lib
+	media-libs/alsa-oss
 	media-sound/alsa-utils
 #	net-dialup/fcdsl
 #	net-dialup/fritzcapi

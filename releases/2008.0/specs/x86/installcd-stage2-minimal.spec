@@ -6,24 +6,20 @@ profile: default/linux/x86/2008.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-x86-2008.0
 
-livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
-
-livecd/iso: /var/tmp/catalyst/builds/default/install-x86-minimal-2008.0.iso
-
-livecd/volid: Gentoo Linux x86 2008.0
-livecd/type: gentoo-release-minimal
-
 livecd/bootargs: dokeymap
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
+livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
+livecd/iso: /var/tmp/catalyst/builds/default/install-x86-minimal-2008.0.iso
+livecd/type: gentoo-release-minimal
+livecd/volid: Gentoo Linux x86 2008.0
 
 boot/kernel: gentoo
-boot/kernel/gentoo/sources: gentoo-sources
 
+boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /home/agaffney/release/2008.0/kconfig/installcd-2.6.23.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/gentoo/packages:
-	sys-apps/pcmciautils
 	net-dialup/slmodem
 	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
@@ -32,6 +28,7 @@ boot/kernel/gentoo/packages:
 	net-wireless/rt2500
 #	net-wireless/acx
 	net-wireless/ipw3945
+	sys-apps/pcmciautils
 	sys-fs/ntfs3g
 
 livecd/unmerge:

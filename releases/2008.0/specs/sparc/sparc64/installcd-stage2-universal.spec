@@ -6,15 +6,17 @@ profile: default/linux/sparc/2008.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-sparc64-2008.0
 
+livecd/cdtar: /root/sparc64-2008.0/silo-1.4.13-sparc-cdtar.tar.bz2
 livecd/fstype: squashfs
+livecd/iso: install-sparc64-universal-2008.0.iso
 livecd/cdtar: /home/armin76/tmp/silo-1.4.13-sparc-cdtar-2008.0.tar.bz2
-livecd/overlay: /root/sparc64-2008.0/overlay
-
 livecd/type: gentoo-release-universal
 livecd/volid: Gentoo Linux SPARC64 2008.0
-livecd/iso: /var/tmp/catalyst/builds/default/install-sparc64-universal-2008.0.iso
+
+livecd/overlay: /root/sparc64-2008.0/overlay
 
 boot/kernel: gentoo
+
 boot/kernel/gentoo/sources: ~sys-kernel/gentoo-sources-2.6.23
 boot/kernel/gentoo/config: ../../../kconfig/sparc/installcd-2.6.23.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X

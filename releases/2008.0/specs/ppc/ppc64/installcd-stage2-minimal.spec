@@ -6,13 +6,12 @@ version_stamp: minimal-2008.0
 profile: default/linux/powerpc/ppc64/2008.0/32bit-userland
 source_subpath: default/livecd-stage1-ppc64-32ul-2008.0
 
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
+livecd/fstype: squashfs 
+livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms --mdadm
+livecd/iso: /root/install-ppc64-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 
-livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms
-
-livecd/fstype: squashfs 
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
-livecd/iso: /root/install-ppc64-minimal-2008.0.iso
 livecd/rcadd: pbbuttonsd|default
 
 boot/kernel: ibmpower G5 ppc32

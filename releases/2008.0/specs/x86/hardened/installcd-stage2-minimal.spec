@@ -6,18 +6,16 @@ profile: hardened/linux/x86
 snapshot: 2008.0
 source_subpath: hardened/livecd-stage1-x86-hardened-2008.0
 
-livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-
-livecd/iso: /var/tmp/catalyst/builds/default/install-x86-minimal-2008.0.iso
-
-livecd/volid: Gentoo Linux x86 2008.0
-livecd/type: gentoo-release-minimal
-
 livecd/bootargs: dokeymap
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
+livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
+livecd/iso: /var/tmp/catalyst/builds/default/install-x86-minimal-2008.0.iso
+livecd/type: gentoo-release-minimal
+livecd/volid: Gentoo Linux x86 2008.0
 
 boot/kernel: gentoo
+
 boot/kernel/gentoo/sources: hardened-sources
 boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2008.0/x86/hardened/installcd-2.6.20.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X

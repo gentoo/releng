@@ -6,29 +6,26 @@ profile: default/linux/amd64/2008.0/desktop
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-amd64-installer-2008.0
 
-livecd/fstype: squashfs
+livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
+livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
+livecd/fstype: squashfs
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 livecd/iso: /var/tmp/catalyst/builds/default/livedvd-amd64-installer-2008.0.iso
+livecd/type: gentoo-release-livecd
+livecd/volid: Gentoo Linux AMD64 LiveDVD
 livecd/xdm: gdm
 livecd/xsession: xfce
-livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
 
-livecd/type: gentoo-release-livecd
-livecd/users: gentoo
-livecd/volid: Gentoo Linux AMD64 LiveDVD
-
-livecd/overlay: /var/cvsroot/gentoo/src/releng/overlays/2008.0/common/overlay/livedvd
-livecd/root_overlay: /var/cvsroot/gentoo/src/releng/overlays/root-livecd
-
-livecd/bootargs: dokeymap
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
+livecd/overlay: /var/svnroot/releng/trunk/release/2008.0/overlays/common/overlay/livedvd
+livecd/root_overlay: /var/svnroot/releng/trunk/release/2008.0/overlays/common/root_overlay
 
 boot/kernel: gentoo
+
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/livecd-2.6.24.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
-	media-libs/alsa-lib
 	media-libs/alsa-oss
 	media-sound/alsa-utils
 ### Masked (no keyword)

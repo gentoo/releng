@@ -6,22 +6,19 @@ profile: default/linux/powerpc/ppc64/2008.0/32bit-userland/desktop
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-ppc64-installer-32ul-2008.0
 
-livecd/fstype: squashfs
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
+livecd/fsscript: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/scripts/livecd.sh
+livecd/fstype: squashfs
+livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-ppc64-32ul-2008.0.iso
+livecd/type: gentoo-release-livecd
+livecd/volid: Gentoo Linux 2008.0 PPC LiveCD
 livecd/xdm: gdm
 livecd/xsession: xfce
-livecd/fsscript: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/scripts/livecd.sh
-
-livecd/type: gentoo-release-livecd
-livecd/users: xfce
-livecd/volid: Gentoo Linux 2008.0 PPC LiveCD
 
 livecd/overlay: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/overlays/common/livecd
 livecd/root_overlay: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/overlays/common/livecd/root_overlay/
 
-#livecd/bootargs: dokeymap
-livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms
 
 livecd/rcadd: pbbuttonsd|default
 
@@ -40,22 +37,21 @@ boot/kernel/ppc32/sources: gentoo-sources
 boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/ppc32/packages:
-	sys-apps/pcmciautils
-#       net-dialup/speedtouch
-#       net-dialup/slmodem
-#       net-dialup/globespan-adsl
-#       net-wireless/hostap-utils
-#       net-dialup/fritzcapi
-#       net-dialup/fcdsl
-#	net-misc/br2684ctl  # package is ppc masked
-#       net-wireless/rt2500
-#       net-wireless/rtl8180
-#       net-wireless/adm8211
-#       net-wireless/acx
-	media-libs/alsa-lib
+	app-laptop/pbbuttonsd
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-	app-laptop/pbbuttonsd
+#	net-dialup/speedtouch
+#	net-dialup/slmodem
+#	net-dialup/globespan-adsl
+#	net-wireless/hostap-utils
+#	net-dialup/fritzcapi
+#	net-dialup/fcdsl
+#	net-misc/br2684ctl  # package is ppc masked
+#	net-wireless/rt2500
+#	net-wireless/rtl8180
+#	net-wireless/adm8211
+#	net-wireless/acx
+	sys-apps/pcmciautils
 	sys-fs/ntfs3g
 
 boot/kernel/G5/sources: sys-kernel/gentoo-sources

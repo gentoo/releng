@@ -6,22 +6,20 @@ profile: default/linux/amd64/2008.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-amd64-2008.0
 
-livecd/fstype: squashfs
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
-livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-2008.0.iso
-
-livecd/volid: Gentoo Linux amd64 2008.0
-livecd/type: gentoo-release-minimal
-
 livecd/bootargs: dokeymap
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
+livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
+livecd/iso: /var/tmp/catalyst/builds/default/install-amd64-minimal-2008.0.iso
+livecd/type: gentoo-release-minimal
+livecd/volid: Gentoo Linux amd64 2008.0
 
 boot/kernel: gentoo
+
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/installcd-2.6.24.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
 boot/kernel/gentoo/packages:
-	sys-apps/pcmciautils
 	net-dialup/globespan-adsl
 # These were not stable at time of snapshot/release.
 #	net-wireless/rtl8180
@@ -30,6 +28,7 @@ boot/kernel/gentoo/packages:
 #	net-wireless/acx
 	net-wireless/ipw3945
 	net-wireless/rt2500
+	sys-apps/pcmciautils
 
 livecd/unmerge:
 #	acl

@@ -6,19 +6,17 @@ profile: default/linux/ia64/2008.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-ia64-2008.0
 
-livecd/cdfstype: squashfs
+livecd/bootargs: dokeymap
 #livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/elilo-3.6-cdtar.tar.bz2
 livecd/cdtar: /home/armin76/tmp/elilo-3.6-cdtar.tar.bz2
-
-livecd/iso: /var/tmp/catalyst/builds/default/install-ia64-minimal-2008.0.iso
-
-livecd/volid: Gentoo Linux IA64 2008.0
-livecd/type: gentoo-release-minimal
-
-livecd/bootargs: dokeymap
+livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --evms --dmraid --mdadm
+livecd/iso: /var/tmp/catalyst/builds/default/install-ia64-minimal-2008.0.iso
+livecd/type: gentoo-release-minimal
+livecd/volid: Gentoo Linux IA64 2008.0
 
 boot/kernel: gentoo
+
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: ../../kconfig/ia64/installcd-2.6.23.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
