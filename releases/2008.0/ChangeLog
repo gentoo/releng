@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage1.spec:
+  Masking b43-fwcutter and bcm43xx-fwcutter on amd64.
+
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec,
   specs/alpha/installcd-stage2-universal.spec,
