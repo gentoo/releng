@@ -3,6 +3,11 @@
 # $Header: $
 
   10 Mar 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc32/g4,
+  specs/ppc/ppc32/g4:
+  Adding g4 ppc32 specs
+
+  10 Mar 2008; Brent Baude <ranger@gentoo.org>
   specs/ppc/ppc64/power5/stage2-32ul.spec, 
   specs/ppc/ppc64/power5/stage3-64ul.spec,
   specs/ppc/ppc64/power5/stage2-64ul.spec:
