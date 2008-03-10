@@ -3,6 +3,10 @@
 # $Header: $
 
   10 Mar 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/g5/stage2.spec:
+  Correcting typo in source_subpath 
+
+  10 Mar 2008; Brent Baude <ranger@gentoo.org>
   specs/ppc/ppc32/g4,
   specs/ppc/ppc32/g4:
   Adding g4 ppc32 specs
