@@ -2,6 +2,16 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Mar 2008; Andrew Gaffney <agaffney@gentoo.org>
+  kconfig/amd64/livecd-2.6.22.config,
+  kconfig/powerpc/installcd-ppc64apple-2.6.23.config,
+  kconfig/powerpc/installcd-ibm-2.6.23.config,
+  kconfig/ia64/installcd-2.6.23.config, kconfig/x86/livecd-2.6.23.config,
+  kconfig/x86/installcd-2.6.23.config,
+  kconfig/alpha/installcd-2.6.23.config,
+  kconfig/sparc/installcd-2.6.23.config, kconfig/amd64/livecd-2.6.24.config:
+  Enable the fuse module in all kconfigs
+
   10 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/amd64/installcd-stage1.spec:
   Masking b43-fwcutter and bcm43xx-fwcutter on amd64.
