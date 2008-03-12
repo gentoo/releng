@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> ++,
+  specs/amd64/installcd-stage2-minimal.spec:
+  Added installcd-2.6.22.config from 2007.1 for testing.
+
   10 Mar 2008; Brent Baude <ranger@gentoo.org>
   specs/ppc/ppc64/g5/stage2.spec:
   Correcting typo in source_subpath 
