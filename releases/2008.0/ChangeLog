@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage1.spec,
+  specs/amd64/installcd-stage2-minimal.spec:
+  Change the profile for the amd64 minimal to no-multilib and cleaning up
+  livecd/unmerge, livecd/rm, and livecd/empty quite a bit.
+
   12 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> ++,
   specs/amd64/installcd-stage2-minimal.spec:
   Added installcd-2.6.22.config from 2007.1 for testing.

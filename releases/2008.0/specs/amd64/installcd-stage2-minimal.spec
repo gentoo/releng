@@ -2,7 +2,7 @@ subarch: amd64
 version_stamp: 2008.0
 target: livecd-stage2
 rel_type: default
-profile: default/linux/amd64/2008.0
+profile: default/linux/amd64/2008.0/no-multilib
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-amd64-2008.0
 
@@ -18,7 +18,7 @@ boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
 #boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/installcd-2.6.24.config
-boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/livecd-2.6.24.config
+boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/installcd-2.6.22.config
 boot/kernel/gentoo/use:
 	-*
 	atm
@@ -137,10 +137,11 @@ livecd/empty:
 	/usr/lib/gcc-config
 	/usr/lib/gconv
 	/usr/lib/nfs
+	/usr/lib/perl5/site_perl
 	/usr/lib/portage
 	/usr/lib/python2.2
 	/usr/lib/python2.3
-	/usr/lib/python2.4/tests
+	/usr/lib/python2.4/test
 	/usr/lib64/X11/config
 	/usr/lib64/X11/doc
 	/usr/lib64/X11/etc
@@ -149,10 +150,11 @@ livecd/empty:
 	/usr/lib64/gcc-config
 	/usr/lib64/gconv
 	/usr/lib64/nfs
+	/usr/lib64/perl5/site_perl
 	/usr/lib64/portage
 	/usr/lib64/python2.2
 	/usr/lib64/python2.3
-	/usr/lib64/python2.4/tests
+	/usr/lib64/python2.4/test
 	/usr/local
 	/usr/portage
 	/usr/powerpc-unknown-linux-gnu
@@ -250,6 +252,7 @@ livecd/rm:
 	/lib*/security/pam_userdb.so
 	/root/.bash_history
 	/root/.viminfo
+	/sbin/*.static
 	/sbin/fsck.cramfs
 	/sbin/fsck.minix
 	/sbin/mkfs.bfs
@@ -299,6 +302,7 @@ livecd/rm:
 	/usr/bin/yacc
 	/usr/lib*/*.a
 	/usr/lib*/*.la
+	/usr/lib*/perl5/site_perl
 	/usr/lib*/gcc-lib/*/*/libgcj*
 	/usr/sbin/archive-conf
 	/usr/sbin/bootsplash*
