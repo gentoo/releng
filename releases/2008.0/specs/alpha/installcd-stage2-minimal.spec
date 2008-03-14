@@ -19,73 +19,81 @@ boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-2.6.23.config
-boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb -qt3 -qt4 -X
+boot/kernel/gentoo/use:
+	-*
+	atm
+	deprecated
+	fbcon
+	fbcondecor
+	ipv6
+	livecd
+	loop-aes
+	lvm1
+	mng
+	ncurses
+	nls
+	nptl
+	nptlonly
+	pam
+	png
+	readline
+	socks5
+	ssl
+	truetype
+	unicode
+	usb
+
 # Not keyworded on alpha
 #boot/kernel/gentoo/packages:
 #	sys-fs/ntfs3g
 
 livecd/unmerge:
-#	acl
-#	addpatches
-#	attr
-	alsa-headers
-	autoconf
-	autoconf-wrapper
-	automake
-	automake-wrapper
-#	bc
-#	bin86
-	binutils
-	binutils-config
-	bison
-	busybox
-#	ccache
-	cpio
-#	cronbase
-#	devfsd
-	diffutils
-#	distcc
-#	ed
-	expat
-	flex
-	gcc
-	gcc-config
-#	gcc-sparc64
-	genkernel
-	gentoo-sources
-	gettext
-	gnuconfig
-	groff
-#	grub
-	help2man
-	kgcc64
-#	lcms
-#	ld.so
-#	lib-compat
-#	libmng
-	libstdc++-v3
-	libtool
-	linux-headers
-	m4
-	make
-	man
-	man-pages
-	miscfiles
-	pax-utils
-	patch
-	perl-cleaner
-	pycrypto
-	python-fchksum
-	rpm2targz
-	rsync
-	sandbox
-#	sash
-#	sysklogd
-#	tcp-wrappers
-	Test-Harness
-	texinfo
-#	ucl
-#	vanilla-sources
+	app-admin/eselect
+	app-admin/eselect-ctags
+	app-admin/eselect-vi
+	app-admin/perl-cleaner
+	app-admin/python-updater
+	app-arch/cpio
+	dev-libs/gmp
+	dev-libs/libxml2
+	dev-libs/mpfr
+	dev-libs/popt
+	dev-python/pycrypto
+	dev-util/pkgconfig
+	net-misc/rsync
+	perl-core/PodParser
+	perl-core/Test-Harness
+	sys-apps/debianutils
+	sys-apps/diffutils
+	sys-apps/file
+	sys-apps/groff
+	sys-apps/man
+	sys-apps/man-pages
+	sys-apps/miscfiles
+#	sys-apps/portage
+#	sys-apps/sandbox
+	sys-apps/texinfo
+	sys-devel/autoconf
+	sys-devel/autoconf-wrapper
+	sys-devel/automake
+	sys-devel/automake-wrapper
+	sys-devel/binutils
+	sys-devel/binutils-config
+	sys-devel/bison
+	sys-devel/flex
+	sys-devel/gcc
+	sys-devel/gcc-config
+	sys-devel/gettext
+	sys-devel/gnuconfig
+	sys-devel/libtool
+	sys-deve/m4
+	sys-devel/make
+	sys-devel/patch
+	sys-libs/db
+	sys-libs/gdbm
+	sys-libs/libkudzu
+	sys-kernel/genkernel
+	sys-kernel/linux-headers
 
 livecd/empty:
 	/etc/bootsplash/gentoo
@@ -121,11 +129,11 @@ livecd/empty:
 	/usr/lib/gcc-config
 	/usr/lib/gconv
 	/usr/lib/nfs
-	/usr/lib/perl5
+	/usr/lib/perl5/site_perl
 	/usr/lib/portage
 	/usr/lib/python2.2
 	/usr/lib/python2.3
-	/usr/lib/python2.4/tests
+	/usr/lib/python2.4/test
 	/usr/lib64/X11/config
 	/usr/lib64/X11/doc
 	/usr/lib64/X11/etc
@@ -134,11 +142,11 @@ livecd/empty:
 	/usr/lib64/gcc-config
 	/usr/lib64/gconv
 	/usr/lib64/nfs
-	/usr/lib64/perl5
+	/usr/lib64/perl5/site_perl
 	/usr/lib64/portage
 	/usr/lib64/python2.2
 	/usr/lib64/python2.3
-	/usr/lib64/python2.4/tests
+	/usr/lib64/python2.4/test
 	/usr/local
 	/usr/portage
 	/usr/powerpc-unknown-linux-gnu
@@ -164,7 +172,6 @@ livecd/empty:
 	/usr/share/libtool
 	/usr/share/locale
 	/usr/share/man
-	/usr/share/perl
 	/usr/share/rfc
 	/usr/share/ss
 	/usr/share/state
@@ -175,7 +182,6 @@ livecd/empty:
 	/usr/src
 	/usr/x86_64-pc-linux-gnu
 	/var/cache
-	/var/db
 	/var/empty
 	/var/lib/portage
 	/var/lock
@@ -199,8 +205,7 @@ livecd/rm:
 	/etc/hosts.bck
 	/etc/issue*
 	/etc/genkernel.conf
-	/etc/make.conf
-	/etc/make.conf.example
+	/etc/make.conf*
 	/etc/make.globals
 	/etc/make.profile
 	/etc/man.conf
@@ -239,6 +244,7 @@ livecd/rm:
 	/lib*/security/pam_userdb.so
 	/root/.bash_history
 	/root/.viminfo
+	/sbin/*.static
 	/sbin/fsck.cramfs
 	/sbin/fsck.minix
 	/sbin/mkfs.bfs
@@ -288,6 +294,7 @@ livecd/rm:
 	/usr/bin/yacc
 	/usr/lib*/*.a
 	/usr/lib*/*.la
+	/usr/lib*/perl5/site_perl
 	/usr/lib*/gcc-lib/*/*/libgcj*
 	/usr/sbin/archive-conf
 	/usr/sbin/bootsplash*

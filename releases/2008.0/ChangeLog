@@ -2,6 +2,21 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Copied livecd/unmerge, livecd/rm, livecd/empty and boot/kernel/*/use from
+  amd64 specs.
+
   13 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/amd64/installcd-stage1.spec,
   specs/amd64/installcd-stage2-minimal.spec:
