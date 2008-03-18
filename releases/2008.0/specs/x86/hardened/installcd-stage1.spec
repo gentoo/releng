@@ -13,12 +13,12 @@ livecd/use:
 	livecd
 	lvm1
 	ncurses
-	nls
+#	nls
 	pam
 	readline
 	socks5
 	ssl
-	unicode
+#	unicode
 
 livecd/packages:
 	app-accessibility/brltty

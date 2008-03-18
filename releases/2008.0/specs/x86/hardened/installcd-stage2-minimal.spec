@@ -30,7 +30,7 @@ boot/kernel/gentoo/use:
 	lvm1
 	mng
 	ncurses
-	nls
+#	nls
 	nptl
 	nptlonly
 	pam
@@ -39,7 +39,7 @@ boot/kernel/gentoo/use:
 	socks5
 	ssl
 	truetype
-	unicode
+#	unicode
 	usb
 
 boot/kernel/gentoo/packages:
