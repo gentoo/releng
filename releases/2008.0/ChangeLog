@@ -14,6 +14,11 @@
   specs/ppc/ppc32/uclibc/stage3.spec:
   Add uClibc specs for 32bit PPC targets.
 
+  15 Mar 2008; Christian Heim <phreak@gentoo.org>
+  specs/x86/uclibc/stage1.spec, specs/x86/uclibc/stage2.spec,
+  specs/x86/uclibc/stage3.spec:
+  Adding initial specs for the uClibc stages (experimental ?).
+
   18 Mar 2008; Christian Heim <phreak@gentoo.org>
   specs/x86/hardened/installcd-stage1.spec,
   specs/x86/hardened/installcd-stage2-minimal.spec:
