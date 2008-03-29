@@ -94,7 +94,7 @@ livecd/unmerge:
 	sys-devel/gettext
 	sys-devel/gnuconfig
 	sys-devel/libtool
-	sys-deve/m4
+	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch
 	sys-libs/db

@@ -2,6 +2,21 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/amd64/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Fix typo, sys-deve/m4 by sys-devel/m4
+
   27 Mar 2008; Christian Heim <phreak@gentoo.org>
   specs/x86/uclibc/hardened/stage1.spec, specs/x86/uclibc/hardened/stage2.spec
   specs/x86/uclibc/hardened/stage3.spec:
