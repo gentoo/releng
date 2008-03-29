@@ -3,7 +3,8 @@
 # $Header: $
 
   29 Mar 2008; Raúl Porcel <armin76@gentoo.org>
-  specs/sparc/sparc64/installcd-stage2-minimal.spec:
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec:
   Add qla2xxx firmware loading
 
   29 Mar 2008; Raúl Porcel <armin76@gentoo.org>

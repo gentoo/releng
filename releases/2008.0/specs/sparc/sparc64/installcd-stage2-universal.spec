@@ -12,6 +12,7 @@ livecd/iso: install-sparc64-universal-2008.0.iso
 livecd/cdtar: /home/armin76/tmp/silo-1.4.13-sparc-cdtar-2008.0.tar.bz2
 livecd/type: gentoo-release-universal
 livecd/volid: Gentoo Linux SPARC64 2008.0
+livecd/gk_mainargs: --firmware-files=/lib/firmware/ql2200_fw.bin --makeopts=-j33
 
 livecd/overlay: /root/sparc64-2008.0/overlay
 
