@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Apr 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/amd64/livedvd-stage1.spec:
+  Uncomment sys-apps/gli in livedvd-stage1.spec for amd64
+
   29 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   specs/sparc/sparc64/installcd-stage2-minimal.spec,
   specs/sparc/sparc64/installcd-stage2-universal.spec:
