@@ -2,6 +2,13 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  overlays/common/overlay/installcd/docs/README,
+  overlays/common/overlay/livecd/docs/README,
+  overlays/common/overlay/livedvd/docs/README:
+  Changed Handbook link from 2007.0 to 2008.0. Thanks to Carles Pagès
+  <page@cubata.homelinux.net> in bug #215956 for pointing it out.
+
   03 Apr 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/amd64/livedvd-stage1.spec:
   Uncomment sys-apps/gli in livedvd-stage1.spec for amd64
