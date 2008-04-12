@@ -5,6 +5,13 @@
   12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   kconfig/powerpc/installcd-ppc64apple-2.6.23.config,
   kconfig/powerpc/installcd-pegasos-2.6.23.config,
+  kconfig/powerpc/installcd-ibm-2.6.23.config,
+  kconfig/powerpc/installcd-ppc32apple-2.6.23.config:
+  Enabled aec62xx support on PPC kernels for bug #180656.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/powerpc/installcd-ppc64apple-2.6.23.config,
+  kconfig/powerpc/installcd-pegasos-2.6.23.config,
   kconfig/powerpc/livecd-ppc32apple-2.6.23.config,
   kconfig/powerpc/installcd-ppc32apple-2.6.23.config:
   Enable vfat and codepages as built-in for USB booting support for bug #193097.
