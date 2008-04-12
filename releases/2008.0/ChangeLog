@@ -3,6 +3,11 @@
 # $Header: $
 
   12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/x86/installcd-2.6.24.config,
+  kconfig/amd64/installcd-2.6.24.config:
+  Sync amd64 and x86 installcd configs and enable a good bit of debugging code.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   +kconfig/x86/livecd-2.6.24.config, +kconfig/x86/installcd-2.6.24.config:
   Initial 2.6.24 kconfig for x86.
 
