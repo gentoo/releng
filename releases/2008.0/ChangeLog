@@ -3,6 +3,10 @@
 # $Header: $
 
   12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> 
+  kconfig/amd64/installcd-2.6.24.config:
+  It helps if I commit the correct config.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> 
   +kconfig/amd64/installcd-2.6.24.config:
   Updated installcd kconfig for amd64 for 2.6.24 kernel.
 
