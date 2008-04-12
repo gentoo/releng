@@ -3,6 +3,12 @@
 # $Header: $
 
   12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Updated kernel config locations to use new 2.6.24 kernel configs.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -kconfig/amd64/livecd-2.6.22.config,
   -kconfig/amd64/installcd-2.6.22.config, -kconfig/x86/livecd-2.6.23.config,
   -kconfig/x86/installcd-2.6.23.config, kconfig/x86/livecd-2.6.24.config,

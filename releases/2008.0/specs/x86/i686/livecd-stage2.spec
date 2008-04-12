@@ -23,7 +23,7 @@ livecd/root_overlay: /home/agaffney/release/2008.0/overlays/common/root_overlay
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /home/agaffney/release/2008.0/kconfig/livecd-2.6.23.config
+boot/kernel/gentoo/config: /home/agaffney/release/2008.0/kconfig/livecd-2.6.24.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 	media-libs/alsa-oss

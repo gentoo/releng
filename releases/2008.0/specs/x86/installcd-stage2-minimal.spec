@@ -17,7 +17,7 @@ livecd/volid: Gentoo Linux x86 2008.0
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /home/agaffney/release/2008.0/kconfig/installcd-2.6.23.config
+boot/kernel/gentoo/config: /home/agaffney/release/2008.0/kconfig/installcd-2.6.24.config
 boot/kernel/gentoo/use:
 	-*
 	atm
