@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/x86/livecd-2.6.24.config:
+  Updated x86 LiveCD/DVD kernel config.
+
   15 Apr 2008; Christian Heim <phreak@gentoo.org>
   specs/x86/hardened/installcd-stage1.spec,
   specs/x86/hardened/installcd-stage2-minimal.spec,
