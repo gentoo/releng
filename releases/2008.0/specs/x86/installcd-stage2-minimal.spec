@@ -43,7 +43,8 @@ boot/kernel/gentoo/use:
 	usb
 
 boot/kernel/gentoo/packages:
-	net-dialup/slmodem
+### Compile failure w/ 2.6.24
+#	net-dialup/slmodem
 	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
 #	net-dialup/fritzcapi
