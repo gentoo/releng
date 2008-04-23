@@ -32,7 +32,8 @@ boot/kernel/gentoo/packages:
 #	net-dialup/fcdsl
 #	net-dialup/fritzcapi
 	net-dialup/globespan-adsl
-	net-dialup/slmodem
+### Compile failure w/ 2.6.24
+#	net-dialup/slmodem
 	net-misc/br2684ctl
 ### Compile failure
 #	net-wireless/acx
