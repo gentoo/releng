@@ -2,6 +2,13 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage1.spec,
+  specs/amd64/livedvd-stage2.spec:
+  Sync amd64 specs with the copies that I've been working with which are
+  updated for kernel 2.6.24 and fixes the overlays.
+
   17 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   kconfig/x86/livecd-2.6.24.config:
   Updated x86 LiveCD/DVD kernel config.

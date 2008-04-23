@@ -17,8 +17,8 @@ livecd/volid: Gentoo Linux AMD64 LiveDVD
 livecd/xdm: gdm
 livecd/xsession: xfce
 
-livecd/overlay: /var/svnroot/releng/trunk/release/2008.0/overlays/common/overlay/livedvd
-livecd/root_overlay: /var/svnroot/releng/trunk/release/2008.0/overlays/common/root_overlay
+livecd/overlay: /var/svnroot/releng/trunk/releases/2008.0/overlays/common/overlay/livedvd
+livecd/root_overlay: /var/svnroot/releng/trunk/releases/2008.0/overlays/common/root_overlay
 
 boot/kernel: gentoo
 
@@ -39,9 +39,9 @@ boot/kernel/gentoo/packages:
 ### Masked (~amd64)
 #	net-wireless/acx
 	net-wireless/hostap-utils
-	net-wireless/ipw3945
+#	net-wireless/ipw3945
 #	net-wireless/madwifi-ng-tools
-	net-wireless/rt2500
+#	net-wireless/rt2500
 ### Masked (~amd64)
 #	net-wireless/rtl8187
 	sys-apps/pcmciautils

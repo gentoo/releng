@@ -30,7 +30,7 @@ livecd/packages:
 	app-misc/screen
 	app-misc/vlock
 #	app-office/openoffice-bin
-	app-office/openoffice
+#	app-office/openoffice
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed

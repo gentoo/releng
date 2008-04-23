@@ -121,7 +121,7 @@ livecd/packages:
 	media-sound/rhythmbox
 	media-video/dvdrip
 	media-video/gqcam
-	media-video/gxine
+#	media-video/gxine
 	media-video/lsdvd
 	media-video/mplayer
 ### Masked (~amd64)
