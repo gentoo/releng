@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Apr 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Comment out net-wireless/ipw3945 and net-wireless/rt2500 since both are
+  replaced by in-kernel stuff
+
   23 Apr 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/installcd-stage2-minimal.spec:
   Comment out slmodem due to compile failure against 2.6.24

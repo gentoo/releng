@@ -39,9 +39,11 @@ boot/kernel/gentoo/packages:
 #	net-wireless/acx
 	net-wireless/hostap-utils
 	net-wireless/kismet
-	net-wireless/ipw3945
+### In-kernel
+#	net-wireless/ipw3945
 #	net-wireless/madwifi-ng-tools
-	net-wireless/rt2500
+### Compile failure and in-kernel
+#	net-wireless/rt2500
 #	net-wireless/rtl8187
 	sys-apps/pcmciautils
 	sys-fs/ntfs3g
