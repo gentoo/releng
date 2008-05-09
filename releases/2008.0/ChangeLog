@@ -3,6 +3,10 @@
 # $Header: $
 
   09 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/x86/livecd-2.6.24.config, kconfig/x86/installcd-2.6.24.config:
+  Added the PATA drivers to our kernel config for x86.
+
+  09 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   kconfig/amd64/livecd-2.6.24.config, kconfig/amd64/installcd-2.6.24.config:
   Added the PATA drivers to our kernel config for amd64.
 
