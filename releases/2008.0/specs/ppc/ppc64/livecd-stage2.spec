@@ -10,7 +10,7 @@ livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 livecd/fsscript: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms
-livecd/iso: /var/tmp/catalyst/builds/default/livecd-ppc64-32ul-2008.0.iso
+/var/tmp/catalyst/builds/default/livecd-powerpc-2008.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 2008.0 PPC LiveCD
 livecd/xdm: gdm

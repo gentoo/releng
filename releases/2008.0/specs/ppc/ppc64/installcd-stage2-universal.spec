@@ -9,10 +9,10 @@ source_subpath: default/livecd-stage1-ppc64-32ul-2008.0/
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 livecd/fstype: squashfs 
 livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms
-livecd/iso: /root/install-ppc64-universal-2008.0.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-universal-2008.0.iso
 livecd/type: gentoo-release-universal
 
-livecd/overlay: /2008.0/overlay/
+livecd/overlay: /home/ranger/2008.0/ppcuniversal/
 
 livecd/rcadd: pbbuttonsd|default
 
