@@ -2,6 +2,13 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  
+  11 May 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc64/livecd-stage2.spec
+  specs/ppc64/installcd-stage2-universal.spec
+  specs/ppc64/installcd-stage2-minimal.spec
+  Minor tweaks to iso names and overlay references
+
   09 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   kconfig/x86/livecd-2.6.24.config:
   Change from CONFIG_HIGHMEM64G to CONFIG_HIGHMEM4G for bug #220058.
