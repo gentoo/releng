@@ -10,7 +10,7 @@ case `uname -m` in
 	alpha)
 		echo >> /etc/sysctl.conf
 		echo "# Disable UAC on Alpha" >> /etc/sysctl.conf
-		echo "uac.noprint = 1" >> /etc/sysctl.conf
+		echo "kernel.uac.noprint = 1" >> /etc/sysctl.conf
 	;;
 	i?86|x86_64)
 		sed -i 's/DRIVER fbdev/DRIVER vesa/' /usr/share/hwdata/Cards
