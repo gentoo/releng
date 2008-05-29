@@ -139,6 +139,7 @@ livecd/packages:
 	net-firewall/kmyfirewall
 ### Compile failure (bug #146214)
 #	net-ftp/ncftp
+	net-fs/mount-cifs
 	net-fs/nfs-utils
 	net-fs/samba
 	net-im/pidgin

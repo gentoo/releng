@@ -66,6 +66,7 @@ livecd/packages:
 #	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
+	net-fs/mount-cifs
 	net-fs/nfs-utils
 #	net-fs/samba
 	net-im/pidgin
