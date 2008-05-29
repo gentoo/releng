@@ -7,7 +7,7 @@ snapshot: 2008.0
 source_subpath: default/livecd-stage1-amd64-installer-2008.0
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/grub-memtest86+-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
