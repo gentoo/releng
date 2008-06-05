@@ -42,8 +42,6 @@ boot/kernel/ppc32/sources: gentoo-sources
 boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use: pcmcia usb oss atm truetype -qt -qt3 -qt4 -ibam
 boot/kernel/ppc32/packages:
-        #media-gfx/splashutils
-        #media-gfx/splash-themes-livecd
         sys-apps/pcmciautils
         sys-fs/ntfs3g
         app-laptop/pbbuttonsd
@@ -97,8 +95,6 @@ livecd/unmerge:
 	sys-kernel/linux-headers
 
 livecd/empty:
-	/etc/bootsplash/gentoo
-	/etc/bootsplash/gentoo-highquality
 	/etc/cron.daily
 	/etc/cron.hourly
 	/etc/cron.monthly
@@ -108,8 +104,6 @@ livecd/empty:
 	/etc/rsync
 	/etc/runlevels/single
 	/etc/skel
-	/etc/splash/emergence
-	/etc/splash/gentoo
 	/lib/dev-state
 	/lib/udev-state
 	/lib64/dev-state
@@ -211,24 +205,6 @@ livecd/rm:
 	/etc/make.profile
 	/etc/man.conf
 	/etc/resolv.conf
-	/etc/splash/livecd-2008.0/12*
-	/etc/splash/livecd-2008.0/14*
-	/etc/splash/livecd-2008.0/16*
-	/etc/splash/livecd-2008.0/19*
-	/etc/splash/livecd-2008.0/6*
-	/etc/splash/livecd-2008.0/8*
-	/etc/splash/livecd-2008.0/images/background-12*
-	/etc/splash/livecd-2008.0/images/background-14*
-	/etc/splash/livecd-2008.0/images/background-16*
-	/etc/splash/livecd-2008.0/images/background-19*
-	/etc/splash/livecd-2008.0/images/background-6*
-	/etc/splash/livecd-2008.0/images/background-8*
-	/etc/splash/livecd-2008.0/images/verbose-12*
-	/etc/splash/livecd-2008.0/images/verbose-14*
-	/etc/splash/livecd-2008.0/images/verbose-16*
-	/etc/splash/livecd-2008.0/images/verbose-19*
-	/etc/splash/livecd-2008.0/images/verbose-6*
-	/etc/splash/livecd-2008.0/images/verbose-8*
 	/lib*/*.a
 	/lib*/*.la
 	/lib*/cpp
@@ -298,7 +274,6 @@ livecd/rm:
 	/usr/lib*/perl5/site_perl
 	/usr/lib*/gcc-lib/*/*/libgcj*
 	/usr/sbin/archive-conf
-	/usr/sbin/bootsplash*
 	/usr/sbin/dispatch-conf
 	/usr/sbin/emaint
 	/usr/sbin/emerge-webrsync

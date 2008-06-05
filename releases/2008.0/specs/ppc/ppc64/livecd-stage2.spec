@@ -83,8 +83,6 @@ livecd/empty:
 	/usr/portage
 	/usr/src
 	/root/.ccache
-	/etc/splash/gentoo
-	/etc/splash/emergence
 	/usr/share/genkernel/pkg/x86/cpio
 
 livecd/rm:

@@ -2,6 +2,28 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/amd64/livecd-2.6.24.config,
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage2-minimal.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage2.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec, specs/ia64/livecd-stage2.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  kconfig/amd64/installcd-2.6.24.config, specs/ppc/ppc64/livecd-stage2.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Remove all splash-related items from the specs since we don't have a new
+  splash theme for 2008.0 to use. Also, removed CONFIG_ATA_GENERIC from the
+  AMD64 specs, since it tends to cause problems when it binds to a controller
+  before the non-generic drivers.
+
   29 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage2.spec,
   specs/amd64/livedvd-stage2.spec, specs/x86/i686/livecd-stage2.spec,
