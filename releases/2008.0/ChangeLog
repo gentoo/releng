@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org> scripts/livecd.sh:
+  Re-create /etc/fstab in the fsscript and add code to local.start to copy the
+  kernel/initramfs from the CD's root and rename it to what was built by
+  genkernel and expected.
+
   05 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   kconfig/amd64/livecd-2.6.24.config,
   specs/alpha/installcd-stage2-minimal.spec,

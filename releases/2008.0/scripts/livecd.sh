@@ -30,3 +30,29 @@ if [[ -d /home/gentoo ]]
 then
 	chown -R gentoo:users /home/gentoo
 fi
+
+echo "#####################################################" > /etc/fstab
+echo "## ATTENTION: THIS IS THE FSTAB ON THE LIVECD      ##" >> /etc/fstab
+echo "## PLEASE EDIT THE FSTAB at /mnt/gentoo/etc/fstab  ##" >> /etc/fstab
+echo "#####################################################" >> /etc/fstab
+
+# fstab tweaks
+echo "tmpfs	/		tmpfs	defaults	0 0" >> /etc/fstab
+echo "tmpfs	/lib/firmware	tmpfs	defaults	0 0" >> /etc/fstab
+echo "tmpfs	/usr/portage	tmpfs	defaults	0 0" >> /etc/fstab
+echo "tmpfs	/boot		tmpfs	defaults	0 0" >> /etc/fstab
+
+# pull /boot from the CD
+cd /boot && ls -1 | grep -v boot > /usr/livecd/bootfiles.txt
+mv -f System.map* /usr/livecd
+cat << EOF >> /etc/conf.d/local.start
+INITR_TMP=`ls -1 /mnt/cdrom/*/*.gz | head -n 1`
+INITRAMFS=`basename ${INITR_TMP}`
+KERNEL=${INITRAMFS/.gz/}
+initramfs=`grep initr /usr/livecd/bootfiles.txt | head -n 1`
+kernel=`grep kernel /usr/livecd/bootfiles.txt | head -n 1`
+cp -f /mnt/cdrom/*/${INITRAMFS} /boot/${initramfs}
+cp -f /mnt/cdrom/*/${KERNEL} /boot/${kernel}
+mv -f /usr/livecd/System.map* /boot
+EOF
+
