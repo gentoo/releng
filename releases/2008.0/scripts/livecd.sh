@@ -46,13 +46,16 @@ echo "tmpfs	/boot		tmpfs	defaults	0 0" >> /etc/fstab
 cd /boot && ls -1 | grep -v boot > /usr/livecd/bootfiles.txt
 mv -f System.map* /usr/livecd
 cat << EOF >> /etc/conf.d/local.start
-INITR_TMP=`ls -1 /mnt/cdrom/*/*.gz | head -n 1`
-INITRAMFS=`basename ${INITR_TMP}`
-KERNEL=${INITRAMFS/.gz/}
-initramfs=`grep initr /usr/livecd/bootfiles.txt | head -n 1`
-kernel=`grep kernel /usr/livecd/bootfiles.txt | head -n 1`
-cp -f /mnt/cdrom/*/${INITRAMFS} /boot/${initramfs}
-cp -f /mnt/cdrom/*/${KERNEL} /boot/${kernel}
-mv -f /usr/livecd/System.map* /boot
+if [ -n "$(ls /mnt/cdrom)" ]
+then
+	INITR_TMP=`ls -1 /mnt/cdrom/*/*.gz | head -n 1`
+	INITRAMFS=`basename ${INITR_TMP}`
+	KERNEL=${INITRAMFS/.gz/}
+	initramfs=`grep initr /usr/livecd/bootfiles.txt | head -n 1`
+	kernel=`grep kernel /usr/livecd/bootfiles.txt | head -n 1`
+	cp -f /mnt/cdrom/*/${INITRAMFS} /boot/${initramfs}
+	cp -f /mnt/cdrom/*/${KERNEL} /boot/${kernel}
+	mv -f /usr/livecd/System.map* /boot
+fi
 EOF
 
