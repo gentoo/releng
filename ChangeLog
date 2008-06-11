@@ -3,6 +3,17 @@
 # $Header: $
 
   11 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
+  releases/2008.0/specs/alpha/livecd-stage1.spec,
+  releases/2008.0/specs/amd64/installcd-stage1.spec,
+  releases/2008.0/specs/amd64/livecd-stage1.spec,
+  releases/2008.0/specs/amd64/livedvd-stage1.spec,
+  releases/2008.0/specs/hppa/installcd-stage1.spec,
+  releases/2008.0/specs/ia64/installcd-stage1.spec,
+  releases/2008.0/specs/ia64/livecd-stage1.spec,
+  releases/2008.0/specs/x86/installcd-stage1.spec:
+  sys-fs/cryptsetup is needed to install on crypted root partitions.
+
+  11 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
   releases/2008.0/specs/alpha/installcd-stage2-minimal.spec:
   Actually *use* the fancy new kconfig for alpha
 

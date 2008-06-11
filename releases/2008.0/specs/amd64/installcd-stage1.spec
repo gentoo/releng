@@ -94,6 +94,7 @@ livecd/packages:
 #	sys-devel/binutils-hppa64
 ### Masked (no keywords)
 #	sys-devel/gcc-hppa64
+	sys-fs/cryptsetup
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs

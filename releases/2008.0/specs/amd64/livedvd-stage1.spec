@@ -250,6 +250,7 @@ livecd/packages:
 ### Masked (no keyword)
 #	sys-devel/gcc-hppa64
 	sys-devel/gdb
+	sys-fs/cryptsetup
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs

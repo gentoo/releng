@@ -134,6 +134,7 @@ livecd/packages:
 	sys-devel/distcc
 ### Masked (no keywords)
 #	sys-devel/gcc-hppa64
+	sys-fs/cryptsetup
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
