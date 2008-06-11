@@ -2,6 +2,14 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/sparc/sparc64/distfiles.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec
+  specs/sparc/sparc64/installcd-stage2-universal.spec:
+  Fix kconfig path, make minimal and universal ordered the same way,
+  comment removal of pam files, since it makes the cd's useless, see 2006.1
+  add more packages to distfiles.spec
+
   11 Jun 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/livecd-stage1.spec:
   Comment out thunderbird and openoffice on i686 livecd for space reasons
