@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Jun 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage1.spec:
+  Comment out thunderbird and openoffice on i686 livecd for space reasons
+
   11 Jun 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
   Clear out /boot in the squashfs
   Copy System.map instead of moving from /usr/livecd

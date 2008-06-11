@@ -29,7 +29,8 @@ livecd/packages:
 	app-misc/mc
 	app-misc/screen
 	app-misc/vlock
-	app-office/openoffice-bin
+### Removed for space reasons
+#	app-office/openoffice-bin
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/ufed
@@ -39,7 +40,8 @@ livecd/packages:
 	dev-util/git
 	dev-util/subversion
 	gnome-base/gdm
-	mail-client/mozilla-thunderbird
+### Removed for space reasons
+#	mail-client/mozilla-thunderbird
 	media-gfx/fbgrab
 #	media-sound/audacious
 	net-analyzer/netcat
