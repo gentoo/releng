@@ -3,6 +3,10 @@
 # $Header: $
 
   11 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
+  releases/2008.0/specs/alpha/installcd-stage2-minimal.spec:
+  Actually *use* the fancy new kconfig for alpha
+
+  11 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
   releases/2008.0/specs/alpha/installcd-stage1.spec:
   We need sys-fs/cryptsetup to support installation on crypted root.
 
