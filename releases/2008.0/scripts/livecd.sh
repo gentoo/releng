@@ -45,6 +45,7 @@ echo "tmpfs	/boot		tmpfs	defaults	0 0" >> /etc/fstab
 # pull /boot from the CD
 cd /boot && ls -1 | grep -v boot > /usr/livecd/bootfiles.txt
 mv -f System.map* /usr/livecd
+rm -rf /boot/*
 cat << EOF >> /etc/conf.d/local.start
 if [ -n "$(ls /mnt/cdrom)" ]
 then
@@ -55,7 +56,7 @@ then
 	kernel=`grep kernel /usr/livecd/bootfiles.txt | head -n 1`
 	cp -f /mnt/cdrom/*/${INITRAMFS} /boot/${initramfs}
 	cp -f /mnt/cdrom/*/${KERNEL} /boot/${kernel}
-	mv -f /usr/livecd/System.map* /boot
+	cp -f /usr/livecd/System.map* /boot
 fi
 EOF
 
