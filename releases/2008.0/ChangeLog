@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Jun 2008; <armin76@gentoo.org> 
+  specs/sparc/sparc64/installcd-stage2-minimal.spec:
+  Comment pam files removal on the minimal installcd, since it makes the cd
+  unusable on sparc
+
   11 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   specs/sparc/sparc64/distfiles.spec,
   specs/sparc/sparc64/installcd-stage2-minimal.spec
