@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  -kconfig/ia64/installcd-2.6.23.config,
+  specs/ia64/installcd-stage2-minimal.spec,
+  +kconfig/ia64/installcd-2.6.24.config:
+  Add SCSI cdrom support to ia64 installcd, rename the kconfig to 2.6.24
+
   13 Jun 2008; <ranger@gentoo.org> 
   kconfigs/powerpc/
   Updating kernel configs to 2.6.24 and fixing pcmcia borkage
