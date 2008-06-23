@@ -2,6 +2,14 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Jun 2008; <ranger@gentoo.org> 
+  specs/ppc/ppc64/power5, specs/ppc/ppc64/g5
+  Updating chost reference on 32ul for power5 and minor typos for g5 64UL stages
+
+  13 Jun 2008; <ranger@gentoo.org> 
+  specs/ppc/ppc64/installcd-stage2-universal.spec 
+  Updating kernel references to 2.6.24
+
   18 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   -kconfig/ia64/installcd-2.6.23.config,
   specs/ia64/installcd-stage2-minimal.spec,
