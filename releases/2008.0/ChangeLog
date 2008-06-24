@@ -2,12 +2,16 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org> scripts/livecd.sh:
+  Added a sed to remove DefaultColorDepth from the xorg.conf.in provided by
+  mkxf86config for bug #222691.
+
   13 Jun 2008; <ranger@gentoo.org> 
-  specs/ppc/ppc64/power5, specs/ppc/ppc64/g5
+  specs/ppc/ppc64/power5, specs/ppc/ppc64/g5:
   Updating chost reference on 32ul for power5 and minor typos for g5 64UL stages
 
   13 Jun 2008; <ranger@gentoo.org> 
-  specs/ppc/ppc64/installcd-stage2-universal.spec 
+  specs/ppc/ppc64/installcd-stage2-universal.spec :
   Updating kernel references to 2.6.24
 
   18 Jun 2008; Raúl Porcel <armin76@gentoo.org>
@@ -17,7 +21,7 @@
   Add SCSI cdrom support to ia64 installcd, rename the kconfig to 2.6.24
 
   13 Jun 2008; <ranger@gentoo.org> 
-  kconfigs/powerpc/
+  kconfigs/powerpc/:
   Updating kernel configs to 2.6.24 and fixing pcmcia borkage
 
   12 Jun 2008; <armin76@gentoo.org> 

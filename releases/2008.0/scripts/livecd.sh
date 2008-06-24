@@ -60,3 +60,9 @@ then
 fi
 EOF
 
+#[ -x /usr/bin/ktelnet ] && ln -sf /usr/bin/ktelnet /usr/bin/telnet
+#[ -x /usr/bin/kftp ] && ln -sf /usr/bin/kftp /usr/bin/ftp
+
+# Remove DefaultColorDepth
+[ -e /etc/X11/xorg.conf.in ] && sed -i -e '/DefaultColorDepth/d' /etc/X11/xorg.conf.in
+
