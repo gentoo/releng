@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  
+  13 Jun 2008; Brent Baude <ranger@gentoo.org> 
+  kconfig/powerpc/installcd-ibm-2.6.24.config, kconfig/powerpc/installcd-ppc32apple-2.6.24.config, 
+  kconfig/powerpc/installcd-ppc64apple-2.6.24.config
+  Updating kconfigs with some additional FB drivers
+  
   26 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   kconfig/x86/livecd-2.6.24.config, kconfig/amd64/livecd-2.6.24.config:
   Removing quite a few options for things that are not needed during install
