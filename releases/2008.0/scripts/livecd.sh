@@ -46,7 +46,7 @@ echo "tmpfs	/boot		tmpfs	defaults	0 0" >> /etc/fstab
 cd /boot && ls -1 | grep -v boot > /usr/livecd/bootfiles.txt
 mv -f System.map* /usr/livecd
 rm -rf /boot/*
-cat << EOF >> /etc/conf.d/local.start
+cat << 'EOF' >> /etc/conf.d/local.start
 if [ -n "$(ls /mnt/cdrom)" ]
 then
 	INITR_TMP=`ls -1 /mnt/cdrom/*/*.gz | head -n 1`
