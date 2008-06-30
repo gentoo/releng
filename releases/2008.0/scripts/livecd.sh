@@ -49,9 +49,9 @@ rm -rf /boot/*
 cat << 'EOF' >> /etc/conf.d/local.start
 if [ -n "$(ls /mnt/cdrom)" ]
 then
-	INITR_TMP=`ls -1 /mnt/cdrom/*/*.gz | head -n 1`
+	INITR_TMP=`ls -1 /mnt/cdrom/{boot,isolinux}/*.igz | head -n 1`
 	INITRAMFS=`basename ${INITR_TMP}`
-	KERNEL=${INITRAMFS/.gz/}
+	KERNEL=${INITRAMFS/.igz/}
 	initramfs=`grep initr /usr/livecd/bootfiles.txt | head -n 1`
 	kernel=`grep kernel /usr/livecd/bootfiles.txt | head -n 1`
 	cp -f /mnt/cdrom/*/${INITRAMFS} /boot/${initramfs}

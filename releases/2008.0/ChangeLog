@@ -3,6 +3,9 @@
 # $Header: $
 
   30 Jun 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
+  Look for a .igz extension on the initramfs instead of .gz
+
+  30 Jun 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
   Quote EOF in fsscript to prevent interpolation at build time
 
   13 Jun 2008; Brent Baude <ranger@gentoo.org> 
