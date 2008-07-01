@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Jun 2008; Brent Baude <ranger@gentoo.org> 
+  kconfig/powerpc/installcd-ppc32apple-2.6.24.config, kconfig/powerpc/installcd-ppc64apple-2.6.24.config
+  kconfig/powerpc/installcd-ibm-2.6.24.config
+  Unmangling kconfigs and ensuring bitness set properly on configs
+
   30 Jun 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
   Look for a .igz extension on the initramfs instead of .gz
 
