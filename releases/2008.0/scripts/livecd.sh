@@ -40,7 +40,7 @@ echo "#####################################################" >> /etc/fstab
 echo "tmpfs	/		tmpfs	defaults	0 0" >> /etc/fstab
 echo "tmpfs	/lib/firmware	tmpfs	defaults	0 0" >> /etc/fstab
 echo "tmpfs	/usr/portage	tmpfs	defaults	0 0" >> /etc/fstab
-echo "tmpfs	/boot		tmpfs	defaults	0 0" >> /etc/fstab
+#echo "tmpfs	/boot		tmpfs	defaults	0 0" >> /etc/fstab
 
 # pull /boot from the CD
 cd /boot && ls -1 | grep -v boot > /usr/livecd/bootfiles.txt
@@ -49,13 +49,15 @@ rm -rf /boot/*
 cat << 'EOF' >> /etc/conf.d/local.start
 if [ -n "$(ls /mnt/cdrom)" ]
 then
-	INITR_TMP=`ls -1 /mnt/cdrom/{boot,isolinux}/*.igz | head -n 1`
-	INITRAMFS=`basename ${INITR_TMP}`
+	rm /boot
+	mkdir /boot
+	mount -t tmpfs tmpfs /boot
+	INITRAMFS=`ls -1 /mnt/cdrom/{boot,isolinux}/*.igz 2>/dev/null | head -n 1`
 	KERNEL=${INITRAMFS/.igz/}
 	initramfs=`grep initr /usr/livecd/bootfiles.txt | head -n 1`
 	kernel=`grep kernel /usr/livecd/bootfiles.txt | head -n 1`
-	cp -f /mnt/cdrom/*/${INITRAMFS} /boot/${initramfs}
-	cp -f /mnt/cdrom/*/${KERNEL} /boot/${kernel}
+	cp -f ${INITRAMFS} /boot/${initramfs}
+	cp -f ${KERNEL} /boot/${kernel}
 	cp -f /usr/livecd/System.map* /boot
 fi
 EOF
