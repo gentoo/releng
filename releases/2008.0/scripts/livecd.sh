@@ -55,7 +55,7 @@ then
 	INITRAMFS=`ls -1 /mnt/cdrom/{boot,isolinux}/*.igz 2>/dev/null | head -n 1`
 	KERNEL=${INITRAMFS/.igz/}
 	initramfs=`grep initr /usr/livecd/bootfiles.txt | head -n 1`
-	kernel=`grep kernel /usr/livecd/bootfiles.txt | head -n 1`
+	kernel=`grep '^kernel-' /usr/livecd/bootfiles.txt | head -n 1`
 	cp -f ${INITRAMFS} /boot/${initramfs}
 	cp -f ${KERNEL} /boot/${kernel}
 	cp -f /usr/livecd/System.map* /boot
