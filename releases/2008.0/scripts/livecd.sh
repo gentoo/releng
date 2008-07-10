@@ -68,3 +68,7 @@ EOF
 # Remove DefaultColorDepth
 [ -e /etc/X11/xorg.conf.in ] && sed -i -e '/DefaultColorDepth/d' /etc/X11/xorg.conf.in
 
+# This is here so that the retval of the line above (which may be non-0
+# even if everything is ok) is not the retval of the script which would
+# make catalyst unhappy.
+exit 0                                                                          
