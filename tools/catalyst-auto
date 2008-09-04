@@ -2,6 +2,9 @@
 
 PID=$$
 
+config_file=
+verbose=0
+
 usage() {
   msg=$1
 
