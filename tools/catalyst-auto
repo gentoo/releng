@@ -37,10 +37,9 @@ run_cmd() {
 
   if [ $verbose = 1 ]; then
     echo "*** Running command: ${cmd}"
-#    ${cmd} 2>&1 | tee ${logfile}
+    ${cmd} 2>&1 | tee ${logfile}
   else
-#    ${cmd} &> ${logfile}
-    a=1
+    ${cmd} &> ${logfile}
   fi
 }
 
@@ -77,15 +76,6 @@ if [ -z "${config_file}" -o ! -e "${config_file}" ]; then
 fi
 
 source ${config_file}
-
-#if [ -z "${snapshot}" ]; then
-#  snapshot=`date +%Y%m%d`
-#  run_cmd "catalyst -c ${config} -s '${snapshot}'" "/tmp/catalyst_build_snapshot.${PID}.log"
-#  if [ $? != 0 ]; then
-#    send_email "Catalyst build error - snapshot" "$(</tmp/catalyst_build_snapshot.${PID}.log)"
-#    exit 1
-#  fi
-#fi
 
 TMPDIR=/tmp/catalyst-auto.${PID}
 DATESTAMP=$(date +%Y%m%d)

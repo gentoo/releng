@@ -3,6 +3,10 @@
 # $Id$
 
   04 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto,
+  catalyst-auto-amd64.conf:
+  Enable the build functionality
+
+  04 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto,
   catalyst-auto.conf:
   Remove globbing support as it can't guarantee ordering
 
