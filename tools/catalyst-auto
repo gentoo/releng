@@ -36,9 +36,10 @@ run_cmd() {
   logfile=$2
 
   if [ $verbose = 1 ]; then
-    ${cmd} 2>&1 | tee ${logfile}
+    echo "*** Running command: ${cmd}"
+#    ${cmd} 2>&1 | tee ${logfile}
   else
-    ${cmd} &> ${logfile}
+#    ${cmd} &> ${logfile}
   fi
 }
 
@@ -112,6 +113,26 @@ for i in $(ls -1 ${SPECS}); do
 done
 
 cd ${TMPDIR}/specs
+
+DATESTAMP=$(date +%Y%m%d)
+
+# Fix up specs with datestamp
+for i in $(find -name '*.spec'); do
+  # Grab current version_stamp and source_subpath
+  old_version_stamp=$(grep version_stamp ${i} | sed -e 's|^version_stamp: *||')
+  old_source_subpath=$(grep source_subpath ${i} | sed -e 's|^source_subpath: .\+-||')
+
+  sed -i 's|^version_stamp:.*$|version_stamp: '${DATESTAMP}'|' ${i}
+  sed -i 's|^snapshot:.*$|snapshot: '${DATESTAMP}'|' ${i}
+  if [ "${old_version_stamp}" = "${old_source_subpath}" ]; then
+    sed -i 's|^source_subpath: (.\+-).\+$|source_subpath: \1'${DATESTAMP}'|'
+  fi
+done
+
+# Create snapshot
+if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" ${TMPDIR}/log/snapshot-${DATESTAMP}.log"; then
+  send_email "Catalyst build error - snapshot" "$(tail -n 200 ${TMPDIR}/log/snapshot-${DATESTAMP}.log)"
+fi
 
 for i in $(ls -1 ${SPECS}); do
   LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
