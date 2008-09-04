@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  04 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto,
+  catalyst-auto.conf:
+  Remove globbing support as it can't guarantee ordering
+
   04 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Add a bit of extra verbosity
 

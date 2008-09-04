@@ -115,7 +115,7 @@ fi
 
 cd ${SPECS_DIR}
 
-for i in $(ls -1 ${SPECS}); do
+for i in ${SPECS}; do
   cp --parents ${i} ${TMPDIR}/specs/
 done
 
@@ -139,7 +139,7 @@ if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/sna
   send_email "Catalyst build error - snapshot" "$(tail -n 200 ${TMPDIR}/log/snapshot-${DATESTAMP}.log)"
 fi
 
-for i in $(ls -1 ${SPECS}); do
+for i in ${SPECS}; do
   LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
   run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
   if [ $? != 0 ]; then
