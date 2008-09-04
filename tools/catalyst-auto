@@ -1,0 +1,122 @@
+#!/bin/bash
+
+PID=$$
+
+usage() {
+  msg=$1
+
+  if [ -n "${msg}" ]; then
+    echo -e "${msg}\n";
+  fi
+
+  cat <<EOH
+Usage:
+  stage_build [-c|--config <config>] [--verbose] [-h|--help]
+
+Options:
+  -c|--config         Specifies the config file to use (required)
+  --verbose           Send output of commands to console as well as log
+  -h|--help           Show this message and quit
+
+EOH
+}
+
+send_email() {
+  subject="${EMAIL_SUBJECT_PREPEND} $1"
+  body=$2
+
+  echo -e "From: ${EMAIL_FROM}\r\nTo: ${EMAIL_TO}\r\nSubject: ${subject}\r\n\r\n${body}\r\n" | /usr/sbin/sendmail -f ${EMAIL_FROM} ${EMAIL_TO}
+}
+
+run_cmd() {
+  cmd=$1
+  logfile=$2
+
+  if [ $verbose = 1 ]; then
+    ${cmd} 2>&1 | tee ${logfile}
+  else
+    ${cmd} &> ${logfile}
+  fi
+}
+
+# Parse args
+params=${#}
+while [ ${#} -gt 0 ]
+do
+  a=${1}
+  shift
+  case "${a}" in
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    -c|--config)
+      config_file=$1
+      shift
+      ;;
+    --verbose)
+      verbose=1
+      ;;
+    -*)
+      echo "You have specified an invalid option: ${a}"
+      usage
+      exit 1
+      ;;
+    esac
+done
+
+# Make sure all required values were specified
+if [ -z "${config_file}" -o ! -e "${config_file}" ]; then
+  usage "You must specify a valid config file to use"
+  exit 1
+fi
+
+source ${config_file}
+
+#if [ -z "${snapshot}" ]; then
+#  snapshot=`date +%Y%m%d`
+#  run_cmd "catalyst -c ${config} -s '${snapshot}'" "/tmp/catalyst_build_snapshot.${PID}.log"
+#  if [ $? != 0 ]; then
+#    send_email "Catalyst build error - snapshot" "$(</tmp/catalyst_build_snapshot.${PID}.log)"
+#    exit 1
+#  fi
+#fi
+
+TMPDIR=/tmp/catalyst-auto.${PID}
+
+# Check if tmp directory exists and remove it
+if [ -d "${TMPDIR}" ]; then
+  if ! rm -rf "${TMPDIR}"; then
+    echo "Couldn't remove stale tmpdir ${TMPDIR}!"
+    exit 1
+  fi
+fi
+
+if ! mkdir -p "${TMPDIR}/specs"; then
+  echo "Couldn't create temp spec dir at ${TMPDIR}/specs!"
+  exit 1
+fi
+
+if ! mkdir -p "${TMPDIR}/log"; then
+  echo "Couldn't create log dir at ${TMPDIR}/log!"
+  exit 1
+fi
+
+cd ${SPECS_DIR}
+
+for i in $(ls -1 ${SPECS}); do
+  cp --parents ${i} ${TMPDIR}/specs/
+done
+
+cd ${TMPDIR}/specs
+
+for i in $(ls -1 ${SPECS}); do
+  LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+  run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
+  if [ $? != 0 ]; then
+    send_email "Catalyst build error - ${i}" "$(tail -n 200 ${LOGFILE})\r\n\r\nFull build log at ${LOGFILE}"
+    exit 1
+  fi
+done
+
+send_email "Catalyst build success" "Everything finished successfully."

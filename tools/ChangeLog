@@ -1,0 +1,8 @@
+# ChangeLog for releng repo
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Id$
+
+  04 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> +catalyst-auto,
+  +catalyst-auto.conf:
+  Initial commit of catalyst-auto script
+
