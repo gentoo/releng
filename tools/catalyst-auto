@@ -88,6 +88,12 @@ source ${config_file}
 #fi
 
 TMPDIR=/tmp/catalyst-auto.${PID}
+DATESTAMP=$(date +%Y%m%d)
+
+if [ ${verbose} = 1 ]; then
+  echo "TMPDIR = ${TMPDIR}"
+  echo "DATESTAMP = ${DATESTAMP}"
+fi
 
 # Check if tmp directory exists and remove it
 if [ -d "${TMPDIR}" ]; then
@@ -114,8 +120,6 @@ for i in $(ls -1 ${SPECS}); do
 done
 
 cd ${TMPDIR}/specs
-
-DATESTAMP=$(date +%Y%m%d)
 
 # Fix up specs with datestamp
 for i in $(find -name '*.spec'); do
