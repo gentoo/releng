@@ -127,6 +127,7 @@ done
 # Create snapshot
 if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/snapshot-${DATESTAMP}.log"; then
   send_email "Catalyst build error - snapshot" "$(tail -n 200 ${TMPDIR}/log/snapshot-${DATESTAMP}.log)"
+  exit 1 
 fi
 
 for i in ${SPECS}; do
