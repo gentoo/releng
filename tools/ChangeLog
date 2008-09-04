@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  04 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto,
+  catalyst-auto-amd64.conf:
+  Copy kconfigs and mangle path in spec
+
   04 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Exit if snapshot creation fails
 

@@ -93,21 +93,21 @@ if [ -d "${TMPDIR}" ]; then
   fi
 fi
 
-if ! mkdir -p "${TMPDIR}/specs"; then
-  echo "Couldn't create temp spec dir at ${TMPDIR}/specs!"
-  exit 1
-fi
-
-if ! mkdir -p "${TMPDIR}/log"; then
-  echo "Couldn't create log dir at ${TMPDIR}/log!"
-  exit 1
-fi
+for i in ${TMPDIR} ${TMPDIR}/specs ${TMPDIR}/kconfig ${TMPDIR}/log; do
+  if ! mkdir -p "${i}"; then
+    echo "Couldn't create dir ${i}!"
+    exit 1
+  fi
+done
 
 cd ${SPECS_DIR}
 
 for i in ${SPECS}; do
   cp --parents ${i} ${TMPDIR}/specs/
 done
+
+cd ${KCONFIG_DIR}
+find -type f -exec cp {} ${TMPDIR}/kconfig \;
 
 cd ${TMPDIR}/specs
 
@@ -121,6 +121,13 @@ for i in $(find -name '*.spec'); do
   sed -i 's|^snapshot:.*$|snapshot: '${DATESTAMP}'|' ${i}
   if [ "${old_version_stamp}" = "${old_source_subpath}" ]; then
     sed -i 's|^source_subpath: \(.\+-\).\+$|source_subpath: \1'${DATESTAMP}'|' ${i}
+  fi
+
+  kconfig_line=$(grep '^boot/kernel/[^/]\+/config:' ${i})
+  if [ -n "${kconfig_line}" ]; then
+    key=$(echo "${kconfig_line}" | cut -d: -f1)
+    filename=$(basename $(echo "${kconfig_line}" | cut -d: -f2))
+    sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" ${i}
   fi
 done
 
