@@ -94,11 +94,6 @@ source ${config_file}
 TMPDIR=/tmp/catalyst-auto.${PID}
 DATESTAMP=$(date +%Y%m%d)
 
-if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
-  send_email "Catalyst build error - pre_build" "$(echo -e "Your pre_build function sucks\n\n"; tail -n 200 "${TMPDIR}/log/pre_build.log")"
-  exit 1
-fi
-
 if [ ${verbose} = 1 ]; then
   echo "TMPDIR = ${TMPDIR}"
   echo "DATESTAMP = ${DATESTAMP}"
@@ -118,6 +113,11 @@ for i in ${TMPDIR} ${TMPDIR}/specs ${TMPDIR}/kconfig ${TMPDIR}/log; do
     exit 1
   fi
 done
+
+if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
+  send_email "Catalyst build error - pre_build" "$(echo -e "Your pre_build function sucks\n\n"; tail -n 200 "${TMPDIR}/log/pre_build.log")"
+  exit 1
+fi
 
 cd ${SPECS_DIR}
 

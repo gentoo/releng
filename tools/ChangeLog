@@ -3,6 +3,9 @@
 # $Id$
 
   28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Move pre_build() call after creation of dirs
+
+  28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Add pre_build() and post_build() support
 
   05 Sep 2008; Andrew Gaffney <agaffney@gentoo.org>
