@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Add another sed to add the datestamp to the ISO name
+
   28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org>
   catalyst-auto-amd64.conf:
   Change sample config to point to new releases/weekly dir in checkout
