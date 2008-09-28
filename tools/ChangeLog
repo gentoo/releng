@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Add pre_build() and post_build() support
+
   05 Sep 2008; Andrew Gaffney <agaffney@gentoo.org>
   catalyst-auto-amd64.conf:
   Change a few config values

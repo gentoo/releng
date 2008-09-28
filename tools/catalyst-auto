@@ -43,6 +43,20 @@ run_cmd() {
   fi
 }
 
+pre_build() {
+  # This is a skeleton function that you can override from the config file.
+  # It will be executed before the build is started. You can use this to
+  # update a svn checkout of spec files
+  local foo=bar
+}
+
+post_build() {
+  # This is a skeleton function that you can override from the config file.
+  # It will be executed after the build is successfully completed. You can
+  # use this to rsync the builds to another box
+  local foo=bar
+}
+
 # Parse args
 params=${#}
 while [ ${#} -gt 0 ]
@@ -79,6 +93,11 @@ source ${config_file}
 
 TMPDIR=/tmp/catalyst-auto.${PID}
 DATESTAMP=$(date +%Y%m%d)
+
+if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
+  send_email "Catalyst build error - pre_build" "$(echo -e "Your pre_build function sucks\n\n"; tail -n 200 "${TMPDIR}/log/pre_build.log")"
+  exit 1
+fi
 
 if [ ${verbose} = 1 ]; then
   echo "TMPDIR = ${TMPDIR}"
@@ -132,9 +151,9 @@ for i in $(find -name '*.spec'); do
 done
 
 # Create snapshot
-if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/snapshot-${DATESTAMP}.log"; then
-  send_email "Catalyst build error - snapshot" "$(tail -n 200 ${TMPDIR}/log/snapshot-${DATESTAMP}.log)"
-  exit 1 
+if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/snapshot.log"; then
+  send_email "Catalyst build error - snapshot" "$(tail -n 200 ${TMPDIR}/log/snapshot.log)"
+  exit 1
 fi
 
 for i in ${SPECS}; do
@@ -145,6 +164,11 @@ for i in ${SPECS}; do
     exit 1
   fi
 done
+
+if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
+  send_email "Catalyst build error - post_build" "$(echo -e "Your post_build function sucks\n\n"; tail -n 200 "${TMPDIR}/log/post_build.log")"
+  exit 1
+fi
 
 send_email "Catalyst build success" "Everything finished successfully."
 
