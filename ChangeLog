@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> ++:
+  Copy releases/2008.0 to releases/weekly for the automated builds
+
   03 Sep 2008; <agaffney@gentoo.org> ChangeLog:
   Create tools directory
   Initial commit of stage_build.sh script

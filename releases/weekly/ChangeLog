@@ -1,0 +1,943 @@
+# ChangeLog for releng repo
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  06 Jul 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
+  Be more specific in grep for kernel filename
+
+  06 Jul 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
+  Another attempt to fix this stupid /boot bait-and-switch
+
+  13 Jun 2008; Brent Baude <ranger@gentoo.org> 
+  kconfig/powerpc/installcd-ppc32apple-2.6.24.config, kconfig/powerpc/installcd-ppc64apple-2.6.24.config
+  kconfig/powerpc/installcd-ibm-2.6.24.config
+  Unmangling kconfigs and ensuring bitness set properly on configs
+
+  30 Jun 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
+  Look for a .igz extension on the initramfs instead of .gz
+
+  30 Jun 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
+  Quote EOF in fsscript to prevent interpolation at build time
+
+  13 Jun 2008; Brent Baude <ranger@gentoo.org> 
+  kconfig/powerpc/installcd-ibm-2.6.24.config, kconfig/powerpc/installcd-ppc32apple-2.6.24.config, 
+  kconfig/powerpc/installcd-ppc64apple-2.6.24.config
+  Updating kconfigs with some additional FB drivers
+  
+  26 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/x86/livecd-2.6.24.config, kconfig/amd64/livecd-2.6.24.config:
+  Removing quite a few options for things that are not needed during install
+  and changing a few things from modules to being built-in, which will cause
+  them to take up less space since many modules appear twice on the CD.
+
+  24 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org> scripts/livecd.sh:
+  Added a sed to remove DefaultColorDepth from the xorg.conf.in provided by
+  mkxf86config for bug #222691.
+
+  13 Jun 2008; <ranger@gentoo.org> 
+  specs/ppc/ppc64/power5, specs/ppc/ppc64/g5:
+  Updating chost reference on 32ul for power5 and minor typos for g5 64UL stages
+
+  13 Jun 2008; <ranger@gentoo.org> 
+  specs/ppc/ppc64/installcd-stage2-universal.spec :
+  Updating kernel references to 2.6.24
+
+  18 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  -kconfig/ia64/installcd-2.6.23.config,
+  specs/ia64/installcd-stage2-minimal.spec,
+  +kconfig/ia64/installcd-2.6.24.config:
+  Add SCSI cdrom support to ia64 installcd, rename the kconfig to 2.6.24
+
+  13 Jun 2008; <ranger@gentoo.org> 
+  kconfigs/powerpc/:
+  Updating kernel configs to 2.6.24 and fixing pcmcia borkage
+
+  12 Jun 2008; <armin76@gentoo.org> 
+  specs/sparc/sparc64/installcd-stage2-minimal.spec:
+  Comment pam files removal on the minimal installcd, since it makes the cd
+  unusable on sparc
+
+  11 Jun 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/sparc/sparc64/distfiles.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec
+  specs/sparc/sparc64/installcd-stage2-universal.spec:
+  Fix kconfig path, make minimal and universal ordered the same way,
+  comment removal of pam files, since it makes the cd's useless, see 2006.1
+  add more packages to distfiles.spec
+
+  11 Jun 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage1.spec:
+  Comment out thunderbird and openoffice on i686 livecd for space reasons
+
+  11 Jun 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
+  Clear out /boot in the squashfs
+  Copy System.map instead of moving from /usr/livecd
+
+  06 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org> scripts/livecd.sh:
+  Don't run the kernel copying code unless we're booting from CD.
+
+  06 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org> scripts/livecd.sh:
+  Re-create /etc/fstab in the fsscript and add code to local.start to copy the
+  kernel/initramfs from the CD's root and rename it to what was built by
+  genkernel and expected.
+
+  05 Jun 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/amd64/livecd-2.6.24.config,
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage2-minimal.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage2.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec, specs/ia64/livecd-stage2.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  kconfig/amd64/installcd-2.6.24.config, specs/ppc/ppc64/livecd-stage2.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Remove all splash-related items from the specs since we don't have a new
+  splash theme for 2008.0 to use. Also, removed CONFIG_ATA_GENERIC from the
+  AMD64 specs, since it tends to cause problems when it binds to a controller
+  before the non-generic drivers.
+
+  29 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage2.spec,
+  specs/amd64/livedvd-stage2.spec, specs/x86/i686/livecd-stage2.spec,
+  specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Switch from grub back to isolinux. As much as this sucks, it's our best bet
+  to fix a very large number of bugs in booting the media on AMD64/x86.
+
+  29 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/livecd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/livecd-stage1.spec, specs/x86/i686/livecd-stage1.spec,
+  specs/x86/i686/livedvd-stage1.spec:
+  Added net-fs/mount-cifs for mounting CIFS shares.
+
+  11 May 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc64/livecd-stage2.spec
+  specs/ppc64/installcd-stage2-universal.spec
+  specs/ppc64/installcd-stage2-minimal.spec:
+  Minor tweaks to iso names and overlay references
+
+  09 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/x86/livecd-2.6.24.config:
+  Change from CONFIG_HIGHMEM64G to CONFIG_HIGHMEM4G for bug #220058.
+
+  09 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/x86/livecd-2.6.24.config, kconfig/x86/installcd-2.6.24.config:
+  Added the PATA drivers to our kernel config for x86.
+
+  09 May 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/amd64/livecd-2.6.24.config, kconfig/amd64/installcd-2.6.24.config:
+  Added the PATA drivers to our kernel config for amd64.
+
+  24 Apr 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Comment out net-wireless/ipw3945 and net-wireless/rt2500 since both are
+  replaced by in-kernel stuff
+
+  23 Apr 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/installcd-stage2-minimal.spec:
+  Comment out slmodem due to compile failure against 2.6.24
+
+  23 Apr 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec:
+  Comment out slmodem due to compile failure against 2.6.24
+
+  23 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage1.spec,
+  specs/amd64/livedvd-stage2.spec:
+  Sync amd64 specs with the copies that I've been working with which are
+  updated for kernel 2.6.24 and fixes the overlays.
+
+  17 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/x86/livecd-2.6.24.config:
+  Updated x86 LiveCD/DVD kernel config.
+
+  15 Apr 2008; Christian Heim <phreak@gentoo.org>
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/hardened/stage1.spec, specs/x86/hardened/stage2.spec,
+  specs/x86/hardened/stage3.spec, specs/x86/i686/hardened/stage2.spec,
+  specs/x86/i686/hardened/stage3.spec:
+  Fix the profile path for said specs (yes, I know I suck) for the 2008.0
+  release.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/powerpc/installcd-ppc64apple-2.6.23.config,
+  kconfig/powerpc/installcd-pegasos-2.6.23.config,
+  kconfig/powerpc/installcd-ibm-2.6.23.config,
+  kconfig/powerpc/installcd-ppc32apple-2.6.23.config:
+  Enabled aec62xx support on PPC kernels for bug #180656.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/powerpc/installcd-ppc64apple-2.6.23.config,
+  kconfig/powerpc/installcd-pegasos-2.6.23.config,
+  kconfig/powerpc/livecd-ppc32apple-2.6.23.config,
+  kconfig/powerpc/installcd-ppc32apple-2.6.23.config:
+  Enable vfat and codepages as built-in for USB booting support for bug #193097.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Updated kernel config locations to use new 2.6.24 kernel configs.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  -kconfig/amd64/livecd-2.6.22.config,
+  -kconfig/amd64/installcd-2.6.22.config, -kconfig/x86/livecd-2.6.23.config,
+  -kconfig/x86/installcd-2.6.23.config, kconfig/x86/livecd-2.6.24.config,
+  kconfig/x86/installcd-2.6.24.config, kconfig/amd64/livecd-2.6.24.config,
+  kconfig/amd64/installcd-2.6.24.config:
+  Added more debugging information for bug #216789 and removing older kernel
+  configs.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/x86/installcd-2.6.24.config,
+  kconfig/amd64/installcd-2.6.24.config:
+  Sync amd64 and x86 installcd configs and enable a good bit of debugging code.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +kconfig/x86/livecd-2.6.24.config, +kconfig/x86/installcd-2.6.24.config:
+  Initial 2.6.24 kconfig for x86.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> 
+  kconfig/amd64/installcd-2.6.24.config:
+  It helps if I commit the correct config.
+
+  12 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org> 
+  +kconfig/amd64/installcd-2.6.24.config:
+  Updated installcd kconfig for amd64 for 2.6.24 kernel.
+
+  04 Apr 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  overlays/common/overlay/installcd/docs/README,
+  overlays/common/overlay/livecd/docs/README,
+  overlays/common/overlay/livedvd/docs/README:
+  Changed Handbook link from 2007.0 to 2008.0. Thanks to Carles Pagès
+  <page@cubata.homelinux.net> in bug #215956 for pointing it out.
+
+  03 Apr 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/amd64/livedvd-stage1.spec:
+  Uncomment sys-apps/gli in livedvd-stage1.spec for amd64
+
+  29 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec:
+  Add qla2xxx firmware loading
+
+  29 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/amd64/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Fix typo, sys-deve/m4 by sys-devel/m4
+
+  27 Mar 2008; Christian Heim <phreak@gentoo.org>
+  specs/x86/uclibc/hardened/stage1.spec, specs/x86/uclibc/hardened/stage2.spec
+  specs/x86/uclibc/hardened/stage3.spec:
+  Add uClibc/hardened specs for x86.
+
+  27 Mar 2008; Christian Heim <phreak@gentoo.org>
+  specs/ppc/ppc32/uclibc/hardened/stage1.spec,
+  specs/ppc/ppc32/uclibc/hardened/stage2.spec,
+  specs/ppc/ppc32/uclibc/hardened/stage3.spec,
+  specs/ppc/ppc32/uclibc/softfloat/stage1.spec,
+  specs/ppc/ppc32/uclibc/softfloat/stage2.spec,
+  specs/ppc/ppc32/uclibc/softfloat/stage3.spec,
+  specs/ppc/ppc32/uclibc/stage1.spec,
+  specs/ppc/ppc32/uclibc/stage2.spec,
+  specs/ppc/ppc32/uclibc/stage3.spec:
+  Add uClibc specs for 32bit PPC targets.
+
+  15 Mar 2008; Christian Heim <phreak@gentoo.org>
+  specs/x86/uclibc/stage1.spec, specs/x86/uclibc/stage2.spec,
+  specs/x86/uclibc/stage3.spec:
+  Adding initial specs for the uClibc stages (experimental ?).
+
+  18 Mar 2008; Christian Heim <phreak@gentoo.org>
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec:
+  Disable USE=nls and USE=unicode for the installcd.
+
+  14 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Copied livecd/unmerge, livecd/rm, livecd/empty and boot/kernel/*/use from
+  amd64 specs.
+
+  13 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage1.spec,
+  specs/amd64/installcd-stage2-minimal.spec:
+  Change the profile for the amd64 minimal to no-multilib and cleaning up
+  livecd/unmerge, livecd/rm, and livecd/empty quite a bit.
+
+  12 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> ++,
+  specs/amd64/installcd-stage2-minimal.spec:
+  Added installcd-2.6.22.config from 2007.1 for testing.
+
+  10 Mar 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/g5/stage2.spec:
+  Correcting typo in source_subpath 
+
+  10 Mar 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc32/g4,
+  specs/ppc/ppc32/g4:
+  Adding g4 ppc32 specs
+
+  10 Mar 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/power5/stage2-32ul.spec, 
+  specs/ppc/ppc64/power5/stage3-64ul.spec,
+  specs/ppc/ppc64/power5/stage2-64ul.spec:
+  Fixing minor typos in the specs
+  
+  10 Mar 2008; Andrew Gaffney <agaffney@gentoo.org>
+  kconfig/amd64/livecd-2.6.22.config,
+  kconfig/powerpc/installcd-ppc64apple-2.6.23.config,
+  kconfig/powerpc/installcd-ibm-2.6.23.config,
+  kconfig/ia64/installcd-2.6.23.config, kconfig/x86/livecd-2.6.23.config,
+  kconfig/x86/installcd-2.6.23.config,
+  kconfig/alpha/installcd-2.6.23.config,
+  kconfig/sparc/installcd-2.6.23.config, kconfig/amd64/livecd-2.6.24.config:
+  Enable the fuse module in all kconfigs
+
+  10 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage1.spec:
+  Masking b43-fwcutter and bcm43xx-fwcutter on amd64.
+
+  07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage2-minimal.spec,
+  specs/amd64/livecd-stage1.spec, specs/amd64/livecd-stage2.spec,
+  specs/amd64/livedvd-stage1.spec, specs/amd64/livedvd-stage2.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec, specs/ia64/livecd-stage2.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/ppc/ppc64/livecd-stage2.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Quite a few changes here, but nothing too drastic. First, I alphabetized
+  some of the livecd-stage2 specs to make them easier to compare. Please keep
+  your specs in the same order. Second, I removed alsa-lib from livecd-stage2,
+  since it wasn't necessary and just increased our livecd-stage2 build time. I
+  masked a few items on the AMD64 specs that I had recently added. I added
+  back the splash stuff to livecd-stage2 for testing. Also, I removed
+  livecd/users where it existed, since it is now redundant with livecd/type:
+  gentoo-release-livecd on newer catalyst versions.
+
+  06 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  kconfig/ia64/installcd-2.6.23.config,
+  specs/ia64/installcd-stage2-minimal.spec:
+  Disable PREEMPT on ia64 kernel
+
+  05 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec:
+  Mask ntfs3g on alpha, not keyworded, thanks to Tobias Klausmann
+
+  04 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec:
+  More masking on sparc
+
+  04 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/ppc/ppc32/stage1.spec, specs/ppc/ppc32/stage2.spec,
+  specs/ppc/ppc32/stage3.spec:
+  Fixing the profiles for ppc32 to point to default/linux/powerpc/ppc32 rather
+  than default/linux/ppc/ppc32.
+
+  03 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec,
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage1.spec, specs/alpha/livecd-stage2.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage1.spec,
+  specs/ia64/installcd-stage2-minimal.spec, specs/ia64/livecd-stage1.spec,
+  specs/ia64/livecd-stage2.spec, specs/ppc/ppc64/installcd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/ppc/ppc64/livecd-stage1.spec, specs/ppc/ppc64/livecd-stage2.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livecd-stage2.spec,
+  specs/x86/i686/livedvd-stage1.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage1.spec, specs/x86/installcd-stage2-minimal.spec:
+  Moved sys-fs/ntfs3g from livecd-stage1 targets to livecd-stage2 targets.
+
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/ia64/installcd-stage1.spec:
+  Comment not keyworded packages on ia64
+
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage1.spec,
+  specs/alpha/installcd-stage2-minimal.spec:
+  Some changes to the specs for alpha, by Tobias Klausmann
+
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  +kconfig/alpha/installcd-2.6.23.config,
+  specs/alpha/installcd-stage2-minimal.spec:
+  Add kconfig for alpha, thanks to Tobias Klausmann
+
+  01 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  specs/sparc/sparc64/distfiles.spec, specs/sparc/sparc64/packages.spec:
+  Fix sparc specs for not keyworded packages
+
+  29 Feb 2008; Raúl Porcel <armin76@gentoo.org> kconfig/alpha,
+  kconfig/ia64/installcd-2.6.23.config, kconfig/sparc/installcd-2.6.23.config:
+  Add kconfigs for ia64 and sparc, alpha to follow
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Added app-admin/hddtemp for bug #208510.
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Added sys-fs/ntfs3g to specs for bug #208491.
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec:
+  Uncomment sys-apps/sdparm for bug #208492 since we now have a stable version.
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/livecd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/livecd-stage1.spec, specs/x86/i686/livecd-stage1.spec,
+  specs/x86/i686/livedvd-stage1.spec:
+  Added sys-process/htop to the LiveCD/LiveDVD specs.
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Added app-misc/mc to LiveCD/LiveDVD for bug #208076 and removing
+  app-misc/livecd-tools from our specs, since it is enforced by catalyst.
+
+  28 Feb 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/livecd-stage2.spec:
+  Adding commented packages back to specs
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> scripts/livecd.sh:
+  Added code to disable UAC on Alpha for bug #210282 and also enforcing a
+  Unicode-enabled console font across the board.
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Added net-proxy/ntlmaps for bug #58634.
+
+  28 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Added app-text/wgetpaste to all ISO media and removing explicit
+  dev-lang/python, since we use --newuse and there's no need for it listed
+  here.
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec:
+  Comment out net-wireless/acx due to compile failure
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/installcd-stage1.spec:
+  Comment out b43-fwcutter and bcm43xx-fwcutter in minimal spec since they're
+  ~x86
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
+  Add code to livecd.sh to make sure /home/gentoo is owned by the 'gentoo' user
+
+  28 Feb 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/livecd-stage2.spec
+  Corrected references to overlays, fsscript, etc
+
+  28 Feb 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/installcd-stage2-universal.spec, 
+  specs/ppc/ppc64/livecd-stage2.spec
+  Cleaning up spec references to kernel configs and gk args
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage1.spec:
+  Update livecd-stage1 to be closer to amd64
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage1.spec:
+  Move xfce4 to be in order
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec:
+  Update comments to match amd64 format
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec:
+  Update overlay/root_overlay paths to match what's being used to build
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec:
+  Comment b43-fwcutter and bcm43xx-fwcutter since they're both ~x86
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec:
+  Update livecd/livedvd specs to match what's being used to build (kconfig and
+  genkernel opts)
+
+  28 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/installcd-stage2-minimal.spec:
+  Update minimal CD specs to match what's being used to build the release
+  (kconfig and genkernel opts)
+
+  27 Feb 2008; Brent Baude <ranger@gentoo.org>
+  ppc/ppc64/installcd-stage2-minimal.spec
+  Cleaning up spec, references to kernel specs, adding ppc32 apple kernel 
+
+
+  27 Feb 2008; Brent Baude <ranger@gentoo.org>
+  kconfig/powerpc/
+  kconfig/powerpc/installcd-ibm-2.6.23.config
+  kconfig/powerpc/installcd-pegasos-2.6.23.config
+  kconfig/powerpc/installcd-ppc32apple-2.6.23.config
+  kconfig/powerpc/installcd-ppc64apple-2.6.23.config
+  kconfig/powerpc/livecd-ppc32apple-2.6.23.config
+  Adding powerpc kernel specs
+
+
+  27 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  kconfig/amd64/livecd-2.6.24.config, specs/alpha/livecd-stage1.spec,
+  specs/amd64/livecd-stage1.spec, specs/amd64/livedvd-stage1.spec,
+  specs/ia64/livecd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec:
+  Added gnome-base/gdm to LiveCD/LiveDVD specs for graphical bootup and enable
+  ACPI proc Event support for acpid.
+
+  26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage1.spec,
+  specs/amd64/livedvd-stage2.spec, specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Commented net-wireless/b43-fwcutter on amd64, removing perl removal from
+  minimal/universal specs, and adding --makeopts to gk_mainargs.
+
+  26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/ppc/ppc64/stage2-32ul.spec,
+  specs/ppc/ppc64/stage2-32ul-desktop.spec:
+  Added chost: powerpc-unknown-linux-gnu to stage2-32ul specs.
+
+  26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/livecd-stage1.spec, specs/amd64/livedvd-stage1.spec:
+  Changed from -bin versions on the LiveCD, and adding -bin versions to the
+  LiveDVD.
+
+  26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/ppc/ppc64/installcd-stage1.spec,
+  specs/ppc/ppc64/livecd-stage1.spec, specs/x86/i686/livecd-stage1.spec,
+  specs/x86/i686/livedvd-stage1.spec, specs/x86/installcd-stage1.spec:
+  Added net-wireless/b43-fwcutter and net-wireless/bcm43xx-fwcutter.
+
+  26 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage1.spec,
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage1.spec,
+  specs/amd64/livedvd-stage2.spec, specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livecd-stage2.spec,
+  specs/x86/i686/livedvd-stage1.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage1.spec:
+  Added sys-fs/dmraid for bug #102736, commenting out
+  net-wireless/madwifi-ng-tools due to licensing on net-wireless/madwifi-ng,
+  added net-wireless/iwl3945-ucode and net-wireless/iwl4965-ucode, and adding
+  net-wireless/ipw3945.
+
+  24 Feb 2008; Raúl Porcel <armin76@gentoo.org> 
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec:
+  Update installcd specs for sparc, mask brltty since it's not keyworded and
+  fix the kernel config location
+
+  24 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/livecd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/livecd-stage1.spec, specs/x86/i686/livecd-stage1.spec,
+  specs/x86/i686/livedvd-stage1.spec:
+  Added dev-util/git for bug #208495.
+
+  24 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Added net-misc/ntp to release media for bug #210280.
+
+  21 Feb 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/livecd-stage1.spec
+  specs/ppc/ppc64/stage2-32ul-desktop.spec,
+  specs/ppc/ppc64/stage3-32ul-desktop.spec:
+  Removing chost definition from livecd-stage1 and adding 32ul stage2|3 specs
+  for livecd
+
+  21 Feb 2008; Brent Baude <ranger@gentoo.org>
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec:
+  Commenting out passook from the above specs as it lacks ppc keywords and
+  adding net-misc/ntp for bug #210280
+  
+  21 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage2.spec:
+  Masking some packages in the LiveCD to try to save some space so we can get
+  a snapshot on the CD, changing cdtar to grub, and adding an unmerge of
+  gentoo-sources to the LiveCD.
+
+  21 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livedvd-stage1.spec:
+  Uncomment mc since it just needs a package.use entry
+
+  21 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Comment out beagle and mc. Update path to kconfigs
+
+  20 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Switch to grub cdtar for x86
+
+  20 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  -kconfig/x86/livecd-2.6.22.config, -kconfig/x86/installcd-2.6.22.config,
+  +kconfig/x86/livecd-2.6.23.config, +kconfig/x86/installcd-2.6.23.config:
+  Remove 2.6.22 kconfigs and add updated 2.6.23 kconfigs for x86
+
+  20 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/ppc/ppc64/stage1-32ul.spec:
+  We need to set CHOST when it differs from the default one used by catalyst
+  for a given subarch.
+
+  15 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livedvd-stage1.spec:
+  Comment out net-ftp/ncftp for i686 livedvd due to compile failure
+  (bug #146214)
+
+  14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec:
+  Changing kconfig location on amd64 installcd-stage2 spec.
+
+  14 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livedvd-stage1.spec:
+  Comment gkrellm-plugins due to it not being stable
+
+  14 Feb 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/livedvd-stage1.spec:
+  Remove sys-apps/suspend2-userui since it's package.masked in the tree
+
+  14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/x86/i686/livedvd-stage1.spec:
+  Removing net-firewall/firestarter as it is no longer in the tree.
+
+  14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/amd64/installcd-stage1.spec,
+  specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec, specs/x86/installcd-stage1.spec:
+  Added lvm1 to livecd/use for installcd-stage1.spec on all arches.
+
+  14 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/amd64/installcd-stage1.spec,
+  specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/hardened/installcd-stage1.spec, specs/x86/installcd-stage1.spec:
+  Added deprecated to livecd/use for installcd-stage1.spec on all arches.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/sparc/sparc64/distfiles.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/packages.spec, specs/sparc/sparc64/stage1.spec,
+  specs/sparc/sparc64/stage2.spec, specs/sparc/sparc64/stage3.spec:
+  It helps if I actually commit the changes that I make. Removing sparc64 from
+  sparc profile links.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/ia64/installcd-stage2-minimal.spec:
+  Removed the commented livecd/overlay key from the affected specs.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage1.spec,
+  specs/amd64/livecd-stage1.spec, specs/amd64/livecd-stage2.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec:
+  Added some masking information to the amd64 specs, changed the fsscript
+  location to point to the new location, and fixing kconfig locations on specs
+  that pointed to my own /root/livecd directory.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/ppc/ppc64/power5/stage2-32ul.spec,
+  specs/ppc/ppc64/power6/stage3-32ul.spec,
+  specs/ppc/ppc64/g5/stage2-32ul.spec,
+  specs/ppc/ppc64/installcd-stage1.spec,
+  specs/ppc/ppc64/g5/stage3-32ul.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/ppc/ppc64/power5/stage3-32ul.spec,
+  specs/ppc/ppc64/power6/stage2-32ul.spec,
+  specs/ppc/ppc64/packages-32ul.spec,
+  specs/ppc/ppc64/power5/stage2-64ul.spec,
+  specs/ppc/ppc64/power5/stage3-64ul.spec,
+  specs/ppc/ppc64/power6/stage2-64ul.spec,
+  specs/ppc/ppc64/power6/stage3-64ul.spec,
+  specs/ppc/ppc64/packages-64ul.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/ppc/ppc64/livecd-stage2.spec, specs/ppc/ppc64/stage1-32ul.spec,
+  specs/ppc/ppc64/stage2-32ul.spec, specs/ppc/ppc64/distfiles-32ul.spec,
+  specs/ppc/ppc64/stage3-32ul.spec, specs/ppc/ppc64/stage1-64ul.spec,
+  specs/ppc/ppc64/stage2-64ul.spec, specs/ppc/ppc64/distfiles-64ul.spec,
+  specs/ppc/ppc64/stage3-64ul.spec, specs/ppc/ppc64/g5/stage2-64ul.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/g5/stage3-64ul.spec:
+  Fixing up all of the ppc64 profile links.
+
+  13 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage1.spec,
+  specs/amd64/livedvd-stage2.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Masking net-dialup/penggy, app-misc/beagle, and several kernel module
+  packages on AMD64, fixed kconfig location on AMD64, and removed
+  sys-fs/cryptsetup from all spec files since it is pulled in as a dependency
+  and doesn't need to be explicitly listed.
+
+  12 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage2.spec, specs/amd64/installcd-stage2-minimal.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage2.spec,
+  specs/ia64/installcd-stage2-minimal.spec, specs/ia64/livecd-stage2.spec,
+  specs/ppc/ppc64/livecd-stage2.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/x86/i686/livedvd-stage2.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Make sure everybody is using the same USE for kernel builds, except where
+  additional USE are necessary for a given architecture.
+
+  11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/distfiles.spec, specs/alpha/installcd-stage1.spec,
+  specs/alpha/livecd-stage1.spec, specs/alpha/packagecd.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/sparc/sparc64/distfiles.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/sparc/sparc64/packages.spec, specs/x86/i686/livecd-stage1.spec,
+  specs/x86/i686/livedvd-stage1.spec, specs/x86/installcd-stage1.spec:
+  Added app-accessibility/brltty to the default specs.
+
+  11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/distfiles.spec:
+  Removing USE=bindist from alpha/distfiles, since this is done automatically
+  by catalyst.
+
+  11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/hppa/installcd-stage1.spec,
+  specs/ia64/installcd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Added USE=loop-aes to ISO specs for loop-aes support.
+
+  11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> +, +, +, +, +, +, +,
+  specs/alpha/distfiles.spec, specs/alpha/installcd-stage1.spec,
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/alpha/livecd-stage1.spec, specs/alpha/livecd-stage2.spec,
+  specs/alpha/packagecd.spec, specs/alpha/stage1.spec,
+  specs/alpha/stage2-desktop.spec, specs/alpha/stage2.spec,
+  specs/alpha/stage3-desktop.spec, specs/alpha/stage3.spec,
+  specs/amd64/installcd-stage1.spec,
+  specs/amd64/installcd-stage2-minimal.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livecd-stage2.spec, specs/amd64/livedvd-stage1.spec,
+  specs/amd64/livedvd-stage2.spec, specs/amd64/stage1.spec,
+  specs/amd64/stage2-desktop.spec, specs/amd64/stage2.spec,
+  specs/amd64/stage3-desktop.spec, specs/amd64/stage3.spec,
+  specs/hppa/hppa1.1/stage1.spec, specs/hppa/hppa1.1/stage2.spec,
+  specs/hppa/hppa1.1/stage3.spec, specs/hppa/hppa2.0/stage1.spec,
+  specs/hppa/hppa2.0/stage2.spec, specs/hppa/hppa2.0/stage3.spec,
+  specs/hppa/installcd-stage1.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/hardened/stage1.spec, specs/ia64/hardened/stage2.spec,
+  specs/ia64/hardened/stage3.spec, specs/ia64/installcd-stage1.spec,
+  specs/ia64/installcd-stage2-minimal.spec, specs/ia64/livecd-stage1.spec,
+  specs/ia64/livecd-stage2.spec, specs/ia64/stage1.spec,
+  specs/ia64/stage2-desktop.spec, specs/ia64/stage2.spec,
+  specs/ia64/stage3-desktop.spec, specs/ia64/stage3.spec,
+  specs/mips/mips3/netboot.spec, specs/mips/mips3/stage1.spec,
+  specs/mips/mips3/stage2.spec, specs/mips/mips3/stage3.spec,
+  specs/mips/mips4/stage1.spec, specs/mips/mips4/stage2.spec,
+  specs/mips/mips4/stage3.spec, specs/ppc/ppc32/stage1.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/distfiles.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/packages.spec, specs/sparc/sparc64/stage1.spec,
+  specs/sparc/sparc64/stage2.spec, specs/sparc/sparc64/stage3.spec,
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/ppc/ppc64/power5/stage3-32ul.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec, specs/x86/stage1.spec,
+  specs/ppc/ppc64/power6/stage2-32ul.spec, specs/x86/hardened/stage1.spec,
+  specs/x86/stage2.spec, specs/ppc/ppc64/stage1-32ul.spec,
+  specs/ppc/ppc32/stage2.spec, specs/x86/hardened/stage2.spec,
+  specs/ppc/ppc64/stage2-32ul.spec, specs/ppc/ppc64/installcd-stage1.spec,
+  specs/x86/hardened/stage3.spec, specs/ppc/ppc64/power6/stage3-32ul.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/ppc/ppc64/packages-32ul.spec,
+  specs/x86/i686/livecd-stage2.spec, specs/ppc/ppc64/distfiles-32ul.spec,
+  specs/x86/i686/livedvd-stage1.spec, specs/ppc/ppc64/stage3-32ul.spec,
+  specs/x86/i686/livedvd-stage2.spec, specs/ppc/ppc64/g5/stage2-32ul.spec,
+  specs/x86/i686/stage2-desktop.spec, specs/ppc/ppc64/g5/stage3-32ul.spec,
+  specs/x86/i686/stage2.spec, specs/ppc/ppc64/power5/stage2-64ul.spec,
+  specs/ppc/ppc32/stage3.spec, specs/x86/i686/stage3-desktop.spec,
+  specs/ppc/ppc64/power5/stage2-32ul.spec, specs/x86/i686/stage3.spec,
+  specs/ppc/ppc64/power5/stage3-64ul.spec, specs/x86/installcd-stage1.spec,
+  specs/ppc/ppc64/power6/stage2-64ul.spec,
+  specs/x86/installcd-stage2-minimal.spec, specs/ppc/ppc64/stage1-64ul.spec,
+  specs/ppc/ppc64/livecd-stage1.spec, specs/x86/stage3.spec,
+  specs/ppc/ppc64/stage2-64ul.spec, specs/ppc/ppc64/livecd-stage2.spec,
+  specs/ppc/ppc64/power6/stage3-64ul.spec,
+  specs/ppc/ppc64/packages-64ul.spec, specs/ppc/ppc64/distfiles-64ul.spec,
+  specs/ppc/ppc64/stage3-64ul.spec, specs/ppc/ppc64/g5/stage2-64ul.spec,
+  specs/ppc/ppc64/g5/stage3-64ul.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec:
+  Added hardened/amd64 specs and made sure all of the profiles in the specs
+  point to the proper locations.
+
+  11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/distfiles.spec:
+  Removed devfsd and vanilla-sources-2.4 from distfiles and changed
+  vanilla-sources to gentoo-sources, since it'll pull in vanilla's distfiles,
+  anyway.
+
+  11 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  specs/alpha/installcd-stage1.spec,
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec:
+  Changed profile to 2008.0 from no-nptl, removed 2.4 kernel options, and
+  removed GCC 3.3, since it was only needed for 2.4 building.
+
+  01 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  +kconfig/x86/livecd-2.6.22.config, +kconfig/amd64/livecd-2.6.22.config,
+  +kconfig/amd64/livecd-2.6.24.config,
+  +overlays/common/overlay/installcd/distfiles/README,
+  +overlays/common/overlay/installcd/docs/README,
+  +overlays/common/overlay/installcd/snapshots/README,
+  +overlays/common/overlay/installcd/stages/README,
+  +overlays/common/overlay/livecd/docs/README,
+  +overlays/common/overlay/livecd/snapshots/README,
+  +overlays/common/overlay/livedvd/distfiles/README,
+  +overlays/common/overlay/livedvd/docs/README,
+  +overlays/common/overlay/livedvd/snapshots/README,
+  +overlays/common/overlay/livedvd/stages/README,
+  +overlays/common/root_overlay/home/gentoo/.nautilus/metafiles/file:%2F%2F%
+  2Fhome%2Fgentoo%2FDesktop.xml,
+  +overlays/common/root_overlay/home/gentoo/.xscreensaver,
+  +scripts/livecd.sh, +specs/amd64/installcd-stage1.spec,
+  +specs/amd64/installcd-stage2-minimal.spec,
+  +specs/amd64/livecd-stage1.spec, +specs/amd64/livecd-stage2.spec,
+  +specs/amd64/livedvd-stage1.spec, +specs/amd64/livedvd-stage2.spec,
+  +specs/amd64/stage1.spec, +specs/amd64/stage2-desktop.spec,
+  +specs/amd64/stage2.spec, +specs/amd64/stage3-desktop.spec,
+  +specs/amd64/stage3.spec:
+  Initial 2008.0 import.
+
