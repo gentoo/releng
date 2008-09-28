@@ -4,6 +4,7 @@ PID=$$
 
 config_file=
 verbose=0
+keep_tmpdir=0
 
 usage() {
   msg=$1
@@ -26,9 +27,16 @@ EOH
 
 send_email() {
   subject="${EMAIL_SUBJECT_PREPEND} $1"
-  body=$2
+  message=$2
+  logfile=$3
 
-  echo -e "From: ${EMAIL_FROM}\r\nTo: ${EMAIL_TO}\r\nSubject: ${subject}\r\n\r\n${body}\r\n" | /usr/sbin/sendmail -f ${EMAIL_FROM} ${EMAIL_TO}
+  if [ -n "${logfile}" ]; then
+    body=$(echo -e "${message}\n\n"; tail -n 200 "${logfile}"; echo -e "\n\n\nFull build log at ${logfile}")
+  else
+    body=${message}
+  fi
+
+  echo -e "From: ${EMAIL_FROM}\r\nTo: ${EMAIL_TO}\r\nSubject: ${subject}\r\n\r\n${body}" | /usr/sbin/sendmail -f ${EMAIL_FROM} ${EMAIL_TO}
 }
 
 run_cmd() {
@@ -75,6 +83,9 @@ do
     --verbose)
       verbose=1
       ;;
+    -k|--keep-tmpdir)
+      keep_tmpdir=1
+      ;;
     -*)
       echo "You have specified an invalid option: ${a}"
       usage
@@ -115,7 +126,7 @@ for i in ${TMPDIR} ${TMPDIR}/specs ${TMPDIR}/kconfig ${TMPDIR}/log; do
 done
 
 if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
-  send_email "Catalyst build error - pre_build" "$(echo -e "Your pre_build function sucks\n\n"; tail -n 200 "${TMPDIR}/log/pre_build.log")"
+  send_email "Catalyst build error - pre_build" "Your pre_build function sucks" "${TMPDIR}/log/pre_build.log"
   exit 1
 fi
 
@@ -153,7 +164,7 @@ done
 
 # Create snapshot
 if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/snapshot.log"; then
-  send_email "Catalyst build error - snapshot" "$(tail -n 200 ${TMPDIR}/log/snapshot.log)"
+  send_email "Catalyst build error - snapshot" "" "${TMPDIR}/log/snapshot.log"
   exit 1
 fi
 
@@ -161,19 +172,21 @@ for i in ${SPECS}; do
   LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
   run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
   if [ $? != 0 ]; then
-    send_email "Catalyst build error - ${i}" "$(tail -n 200 ${LOGFILE})\r\n\r\nFull build log at ${LOGFILE}"
+    send_email "Catalyst build error - ${i}" "" "${LOGFILE}"
     exit 1
   fi
 done
 
 if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
-  send_email "Catalyst build error - post_build" "$(echo -e "Your post_build function sucks\n\n"; tail -n 200 "${TMPDIR}/log/post_build.log")"
+  send_email "Catalyst build error - post_build" "Your post_build function sucks" "${TMPDIR}/log/post_build.log"
   exit 1
 fi
 
 send_email "Catalyst build success" "Everything finished successfully."
 
-if ! rm -rf "${TMPDIR}"; then
-  echo "Could not remove tmpdir ${TMPDIR}!"
-  exit 1
+if [ "${keep_tmpdir}" = 0 ]; then
+  if ! rm -rf "${TMPDIR}"; then
+    echo "Could not remove tmpdir ${TMPDIR}!"
+    exit 1
+  fi
 fi

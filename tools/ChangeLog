@@ -3,6 +3,9 @@
 # $Id$
 
   28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Add --keep-tmpdir option Move tailing of logfile to send_email() function
+
+  28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Add another sed to add the datestamp to the ISO name
 
   28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org>
