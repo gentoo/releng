@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Oct 2008; Andrew Gaffney <agaffney@gentoo.org>
+  releases/weekly/specs/amd64/installcd-stage2-minimal.spec,
+  releases/weekly/specs/amd64/livecd-stage2.spec,
+  releases/weekly/specs/amd64/livedvd-stage2.spec:
+  Change ISO paths to work on poseidon
+
   28 Sep 2008; Andrew Gaffney <agaffney@gentoo.org> ++:
   Copy releases/2008.0 to releases/weekly for the automated builds
 

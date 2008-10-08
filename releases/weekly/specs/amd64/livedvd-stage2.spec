@@ -11,7 +11,7 @@ livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar
 livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
-livecd/iso: /var/tmp/catalyst/builds/default/livedvd-amd64-installer-2008.0.iso
+livecd/iso: /release/buildroot/amd64-dev/builds/default/livedvd-amd64-installer-2008.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux AMD64 LiveDVD
 livecd/xdm: gdm
