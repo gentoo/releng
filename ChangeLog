@@ -3,6 +3,10 @@
 # $Header: $
 
   08 Oct 2008; Andrew Gaffney <agaffney@gentoo.org>
+  tools/catalyst-auto-amd64.conf:
+  Use absolute path for svn checkout on poseidon
+
+  08 Oct 2008; Andrew Gaffney <agaffney@gentoo.org>
   releases/weekly/specs/amd64/installcd-stage2-minimal.spec,
   releases/weekly/specs/amd64/livecd-stage2.spec,
   releases/weekly/specs/amd64/livedvd-stage2.spec:
