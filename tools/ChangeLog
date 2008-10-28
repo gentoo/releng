@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  28 Oct 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto-x86.conf:
+  Build i686 stage2/3 instead of x86
+
   26 Oct 2008; Andrew Gaffney <agaffney@gentoo.org>
   catalyst-auto-amd64.conf, +catalyst-auto-x86.conf:
   Add x86 config and change email to releng@
