@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Nov 2008; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/installcd-stage2-minimal.spec:
+  Change livecd/iso path for x86
+
   06 Jul 2008; Andrew Gaffney <agaffney@gentoo.org> scripts/livecd.sh:
   Be more specific in grep for kernel filename
 
