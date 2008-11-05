@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Nov 2008; Andrew Gaffney <agaffney@gentoo.org> specs/amd64/stage1.spec,
+  specs/x86/stage1.spec:
+  Change seed stage to 2008.0
+
   03 Nov 2008; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/installcd-stage2-minimal.spec:
   Change livecd/iso path for x86
