@@ -149,9 +149,12 @@ for i in $(find -name '*.spec'); do
 
   sed -i 's|^version_stamp:.*$|version_stamp: '${DATESTAMP}'|' ${i}
   sed -i 's|^snapshot:.*$|snapshot: '${DATESTAMP}'|' ${i}
-  if [ "${old_version_stamp}" = "${old_source_subpath}" ]; then
+
+  # We don't want to mangle the source_subpath for our stage1 spec
+  if ! grep -q '^target: *stage1$' ${i}; then
     sed -i 's|^source_subpath: \(.\+-\).\+$|source_subpath: \1'${DATESTAMP}'|' ${i}
   fi
+
   sed -i '/^livecd\/iso/s|'${old_version_stamp}'|'${DATESTAMP}'|' ${i}
 
   kconfig_line=$(grep '^boot/kernel/[^/]\+/config:' ${i})

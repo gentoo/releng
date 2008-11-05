@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  05 Nov 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Make sure we don't mangle the source_subpath on our stage1 spec
+
   31 Oct 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto-x86.conf:
   Add in x86 stage2/3 for minimal CD
 
