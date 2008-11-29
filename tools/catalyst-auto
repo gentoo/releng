@@ -132,7 +132,7 @@ fi
 
 cd ${SPECS_DIR}
 
-for i in ${SPECS}; do
+for i in ${SPECS} ${OPTIONAL_SPECS}; do
   cp --parents ${i} ${TMPDIR}/specs/
 done
 
@@ -175,17 +175,31 @@ for i in ${SPECS}; do
   LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
   run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
   if [ $? != 0 ]; then
-    send_email "Catalyst build error - ${i}" "" "${LOGFILE}"
+    send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
     exit 1
   fi
 done
+
+for i in ${OPTIONAL_SPECS}; do
+  LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+  run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
+  if [ $? != 0 ]; then
+    send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
+    break
+  fi
+done
+
+# We'll uncomment this section when there's a released version of catalyst with --purgeonly support
+#for i in ${SPECS} ${OPTIONAL_SPECS}; do
+#	run_cmd "catalyst -P -c ${CATALYST_CONFIG} -f ${i}" /dev/null
+#done
 
 if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
   send_email "Catalyst build error - post_build" "Your post_build function sucks" "${TMPDIR}/log/post_build.log"
   exit 1
 fi
 
-send_email "Catalyst build success" "Everything finished successfully."
+send_email "Catalyst build success" "Build process complete."
 
 if [ "${keep_tmpdir}" = 0 ]; then
   if ! rm -rf "${TMPDIR}"; then
