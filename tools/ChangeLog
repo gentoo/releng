@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  30 Nov 2008; Andrew Gaffney <agaffney@gentoo.org>
+  +catalyst-auto-sparc64.conf:
+  Add config file for sparc64
+
   29 Nov 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto,
   catalyst-auto-amd64.conf, catalyst-auto-x86.conf:
   Add support for OPTIONAL_SPECS and purging
