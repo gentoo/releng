@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  01 Dec 2008; Andrew Gaffney <agaffney@gentoo.org>
+  catalyst-auto-sparc64.conf:
+  Change paths for sparc64 to match bender setup
+
   30 Nov 2008; Andrew Gaffney <agaffney@gentoo.org>
   +catalyst-auto-sparc64.conf:
   Add config file for sparc64
