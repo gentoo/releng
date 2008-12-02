@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  02 Dec 2008; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Change the handling of version_stamp a bit to preserve the existing
+  prefix, such as hardened-
+
   01 Dec 2008; Andrew Gaffney <agaffney@gentoo.org>
   catalyst-auto-sparc64.conf:
   Change paths for sparc64 to match bender setup
