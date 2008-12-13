@@ -2,6 +2,12 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Dec 2008; Andrew Gaffney <agaffney@gentoo.org>
+  kconfig/x86/livecd-2.6.24.config, kconfig/x86/installcd-2.6.24.config,
+  kconfig/amd64/livecd-2.6.24.config, kconfig/amd64/installcd-2.6.24.config:
+  Enable all currently disabled crypto support as modules in x86/amd64
+  installcd/livecd kconfigs
+
   05 Nov 2008; Andrew Gaffney <agaffney@gentoo.org> specs/alpha/stage1.spec,
   specs/amd64/hardened/stage1.spec, specs/hppa/hppa1.1/stage1.spec,
   specs/hppa/hppa2.0/stage1.spec, specs/ia64/hardened/stage1.spec,
