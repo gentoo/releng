@@ -192,10 +192,9 @@ for i in ${OPTIONAL_SPECS}; do
   fi
 done
 
-# We'll uncomment this section when there's a released version of catalyst with --purgeonly support
-#for i in ${SPECS} ${OPTIONAL_SPECS}; do
-#	run_cmd "catalyst -P -c ${CATALYST_CONFIG} -f ${i}" /dev/null
-#done
+for i in ${SPECS} ${OPTIONAL_SPECS}; do
+	run_cmd "catalyst -P -c ${CATALYST_CONFIG} -f ${i}" /dev/null
+done
 
 if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
   send_email "Catalyst build error - post_build" "Your post_build function sucks" "${TMPDIR}/log/post_build.log"
