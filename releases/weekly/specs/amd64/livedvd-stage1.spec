@@ -174,8 +174,7 @@ livecd/packages:
 #	net-wireless/aircrack-ng
 ### Masked (~amd64)
 #	net-wireless/airsnort
-### Masked (~amd64)
-#	net-wireless/b43-fwcutter
+	net-wireless/b43-fwcutter
 ### Masked (~amd64)
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/gnome-bluetooth
@@ -232,8 +231,7 @@ livecd/packages:
 #	sys-block/gpart
 	sys-block/gparted
 	sys-block/mpt-status
-### Masked (~amd64)
-#	sys-block/partimage
+	sys-block/partimage
 	sys-block/qla-fc-firmware
 ### Masked (no keyword)
 #	sys-boot/aboot

@@ -50,8 +50,7 @@ livecd/packages:
 	net-proxy/dante
 	net-proxy/ntlmaps
 	net-proxy/tsocks
-### Masked (~x86)
-#	net-wireless/b43-fwcutter
+	net-wireless/b43-fwcutter
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
@@ -77,7 +76,7 @@ livecd/packages:
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
-#	sys-block/partimage
+	sys-block/partimage
 #	sys-block/qla-fc-firmware
 #	sys-boot/yaboot
 #	sys-devel/binutils-hppa64
