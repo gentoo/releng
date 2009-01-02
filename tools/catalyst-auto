@@ -193,7 +193,8 @@ for i in ${OPTIONAL_SPECS}; do
 done
 
 for i in ${SPECS} ${OPTIONAL_SPECS}; do
-	run_cmd "catalyst -P -c ${CATALYST_CONFIG} -f ${i}" /dev/null
+  LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"	
+  run_cmd "catalyst -P -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
 done
 
 if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
