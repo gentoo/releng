@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  02 Jan 2009; Andrew Gaffney <agaffney@gentoo.org>
+  catalyst-auto-sparc64.conf:
+  Change 'svn up' path for sparc
+
   02 Jan 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Log output of purge command
 
