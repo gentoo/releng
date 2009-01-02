@@ -20,6 +20,7 @@ Usage:
 Options:
   -c|--config         Specifies the config file to use (required)
   --verbose           Send output of commands to console as well as log
+  -k|--keep-tmpdir    Don't remove temp dir when build finishes
   -h|--help           Show this message and quit
 
 EOH
