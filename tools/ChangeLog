@@ -2,6 +2,12 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  02 Jan 2009; Andrew Gaffney <agaffney@gentoo.org>
+  catalyst-auto-alpha.conf, catalyst-auto-amd64.conf,
+  catalyst-auto-ia64.conf, catalyst-auto-sparc64.conf,
+  catalyst-auto-x86.conf:
+  Change post_build for all arches to only copy stage3/*.iso
+
   02 Jan 2009; Raúl Porcel <armin76@gentoo.org> +catalyst-auto-alpha.conf,
   +catalyst-auto-ia64.conf:
   Add alpha/ia64 configs
