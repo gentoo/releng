@@ -207,17 +207,6 @@ livecd/rm:
 	/lib*/*.a
 	/lib*/*.la
 	/lib*/cpp
-#	/lib*/security/pam_access.so
-#	/lib*/security/pam_chroot.so
-#	/lib*/security/pam_debug.so
-#	/lib*/security/pam_ftp.so
-#	/lib*/security/pam_issue.so
-#	/lib*/security/pam_mail.so
-#	/lib*/security/pam_mkhomedir.so
-#	/lib*/security/pam_motd.so
-#	/lib*/security/pam_postgresok.so
-#	/lib*/security/pam_rhosts_auth.so
-#	/lib*/security/pam_userdb.so
 	/root/.bash_history
 	/root/.viminfo
 	/sbin/*.static

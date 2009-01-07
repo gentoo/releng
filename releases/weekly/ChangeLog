@@ -2,6 +2,21 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/alpha/installcd-stage2-universal.spec,
+  specs/amd64/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-minimal.spec,
+  specs/hppa/installcd-stage2-universal.spec,
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-minimal.spec,
+  specs/ppc/ppc64/installcd-stage2-universal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-universal.spec,
+  specs/x86/hardened/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Don't remove pam files, needed by ssh
+
   04 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec:
   Fix path on alpha
