@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Jan 2009; Andrew Gaffney <agaffney@gentoo.org> specs/x86/stage1.spec,
+  specs/x86/stage2.spec, specs/x86/stage3.spec:
+  Change subarch to i486 for bug #256074
+
   07 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec,
   specs/alpha/installcd-stage2-universal.spec,
