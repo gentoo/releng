@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  23 Jan 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto-x86.conf:
+  Only sync stage3 tarballs and s/x86/i486/
+
   02 Jan 2009; Andrew Gaffney <agaffney@gentoo.org>
   catalyst-auto-alpha.conf, catalyst-auto-amd64.conf,
   catalyst-auto-ia64.conf, catalyst-auto-sparc64.conf,
