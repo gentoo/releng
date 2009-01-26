@@ -4,7 +4,7 @@ target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/2008.0
 snapshot: 2008.0
-source_subpath: default/stage3-x86-2008.0
+source_subpath: default/stage3-i486-2008.0
 livecd/use:
 	-*
 	deprecated
