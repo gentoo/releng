@@ -135,7 +135,6 @@ livecd/packages:
 	net-analyzer/nmap
 	net-analyzer/snort
 	net-analyzer/tcpdump
-	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-analyzer/wireshark
 	net-dialup/mingetty

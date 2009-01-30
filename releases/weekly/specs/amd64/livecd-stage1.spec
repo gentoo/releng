@@ -49,7 +49,6 @@ livecd/packages:
 	net-analyzer/netcat
 	net-analyzer/nmap
 	net-analyzer/tcpdump
-#	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/mingetty
 	net-dialup/minicom

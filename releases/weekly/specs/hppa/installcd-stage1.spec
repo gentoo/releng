@@ -36,7 +36,6 @@ livecd/packages:
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	media-gfx/fbgrab
-	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/mingetty
 #	net-dialup/penggy
