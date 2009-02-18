@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Feb 2009; Raúl Porcel <armin76@gentoo.org>
+  specs/ppc/ppc64/stage1-32ul.spec, specs/ppc/ppc64/stage1-64ul.spec:
+  Use 2008.0 stage3 as source for ppc64
+
   26 Jan 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/stage2-desktop.spec, specs/x86/i686/stage2.spec,
   specs/x86/installcd-stage1.spec:
