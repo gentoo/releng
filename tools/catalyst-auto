@@ -163,9 +163,11 @@ for i in $(find -name '*.spec'); do
 
   kconfig_line=$(grep '^boot/kernel/[^/]\+/config:' ${i})
   if [ -n "${kconfig_line}" ]; then
-    key=$(echo "${kconfig_line}" | cut -d: -f1)
-    filename=$(basename $(echo "${kconfig_line}" | cut -d: -f2))
-    sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" ${i}
+    echo "${kconfig_file}" | while read line; do
+      key=$(echo "${line}" | cut -d: -f1)
+      filename=$(basename $(echo "${line}" | cut -d: -f2))
+      sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" ${i}
+    done
   fi
 done
 
