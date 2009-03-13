@@ -5,6 +5,7 @@ PID=$$
 config_file=
 verbose=0
 keep_tmpdir=0
+testing=0
 
 usage() {
   msg=$1
@@ -21,6 +22,7 @@ Options:
   -c|--config         Specifies the config file to use (required)
   --verbose           Send output of commands to console as well as log
   -k|--keep-tmpdir    Don't remove temp dir when build finishes
+  -t|--test           Stop after mangling specs and copying files
   -h|--help           Show this message and quit
 
 EOH
@@ -86,6 +88,9 @@ do
       ;;
     -k|--keep-tmpdir)
       keep_tmpdir=1
+      ;;
+    -t|--test)
+      testing=1
       ;;
     -*)
       echo "You have specified an invalid option: ${a}"
@@ -170,6 +175,11 @@ for i in $(find -name '*.spec'); do
     done
   fi
 done
+
+if [ "${testing}" -eq 1 ]; then
+  echo "Exiting due to --test"
+  exit
+fi
 
 # Create snapshot
 if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/snapshot.log"; then

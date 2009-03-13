@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  13 Mar 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Add --test flag
+
   02 Mar 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Process kconfig lines in a loop to handle specs with multiple kernels
 
