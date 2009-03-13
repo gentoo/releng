@@ -3,6 +3,9 @@
 # $Id$
 
   13 Mar 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Fix typo with multiple kernel code
+
+  13 Mar 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Add --test flag
 
   02 Mar 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:

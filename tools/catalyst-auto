@@ -166,9 +166,9 @@ for i in $(find -name '*.spec'); do
 
   sed -i '/^livecd\/iso/s|'${old_version_stamp}'|'${new_version_stamp}'|' ${i}
 
-  kconfig_line=$(grep '^boot/kernel/[^/]\+/config:' ${i})
-  if [ -n "${kconfig_line}" ]; then
-    echo "${kconfig_file}" | while read line; do
+  kconfig_lines=$(grep '^boot/kernel/[^/]\+/config:' ${i})
+  if [ -n "${kconfig_lines}" ]; then
+    echo "${kconfig_lines}" | while read line; do
       key=$(echo "${line}" | cut -d: -f1)
       filename=$(basename $(echo "${line}" | cut -d: -f2))
       sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" ${i}
