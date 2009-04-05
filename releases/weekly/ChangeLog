@@ -2,6 +2,14 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  -kconfig/sparc/installcd-2.6.24.config,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec,
+  +kconfig/sparc/installcd-2.6.27.config,
+  specs/sparc/sparc64/installcd-stage2-universal.spec:
+  sparc: Unlock gentoo-sources version and add an updated 2.6.27 config to
+  include SUN LDOM support
+
   04 Apr 2009; Raúl Porcel <armin76@gentoo.org> +specs/sh/sh4/stage1.spec,
   +specs/sh/sh4/stage2.spec, +specs/sh/sh4/stage3.spec,
   +specs/sh/sh4a/stage1.spec, +specs/sh/sh4a/stage2.spec,
