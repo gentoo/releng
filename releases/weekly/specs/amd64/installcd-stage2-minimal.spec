@@ -17,7 +17,7 @@ livecd/volid: Gentoo Linux amd64 2008.0
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/installcd-2.6.24.config
+boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/installcd-2.6.28.config
 boot/kernel/gentoo/use:
 	-*
 	atm

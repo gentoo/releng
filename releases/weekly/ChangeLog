@@ -3,6 +3,11 @@
 # $Header: $
 
   03 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  +kconfig/amd64/installcd-2.6.28.config,
+  specs/amd64/installcd-stage2-minimal.spec:
+  update amd64 installcd kconfig to 2.6.28
+
+  03 May 2009; Andrew Gaffney <agaffney@gentoo.org>
   +kconfig/x86/installcd-2.6.28.config:
   Update x86 installcd kconfig to 2.6.28
 
