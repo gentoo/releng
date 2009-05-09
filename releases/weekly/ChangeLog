@@ -2,6 +2,14 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/amd64/installcd-stage1.spec,
+  specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec,
+  specs/sparc/sparc64/installcd-stage1.spec,
+  specs/x86/installcd-stage1.spec:
+  Add net-fs/mount-cifs to all installcd specs
+
   05 May 2009; Raúl Porcel <armin76@gentoo.org>
   -kconfig/ia64/installcd-2.6.24.config,
   specs/ia64/installcd-stage2-minimal.spec,
