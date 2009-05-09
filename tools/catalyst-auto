@@ -165,6 +165,7 @@ for i in $(find -name '*.spec'); do
   fi
 
   sed -i '/^livecd\/iso/s|'${old_version_stamp}'|'${new_version_stamp}'|' ${i}
+  sed -i '/^livecd\/volid/s|'${old_version_stamp}'|'${new_version_stamp}'|' ${i}
 
   kconfig_lines=$(grep '^boot/kernel/[^/]\+/config:' ${i})
   if [ -n "${kconfig_lines}" ]; then

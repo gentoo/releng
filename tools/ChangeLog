@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  09 May 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  replace the version_stamp in livecd/volid
+
   13 Mar 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Fix typo with multiple kernel code
 
