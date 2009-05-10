@@ -3,6 +3,10 @@
 # $Id$
 
   10 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  catalyst-auto-amd64-hardened.conf:
+  Add in -nomultilib stage specs
+
+  10 May 2009; Andrew Gaffney <agaffney@gentoo.org>
   catalyst-auto-amd64-hardened.conf, catalyst-auto-x86-hardened.conf:
   Update copy commands
 
