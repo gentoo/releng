@@ -3,6 +3,15 @@
 # $Header: $
 
   10 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/amd64/hardened/stage1-nomultilib.spec,
+  specs/amd64/hardened/stage1.spec,
+  specs/amd64/hardened/stage2-nomultilib.spec,
+  specs/amd64/hardened/stage2.spec,
+  specs/amd64/hardened/stage3-nomultilib.spec,
+  specs/amd64/hardened/stage3.spec:
+  Update amd64 hardened specs for weekly builds
+
+  10 May 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/hardened/stage1.spec, specs/x86/hardened/stage2.spec,
   specs/x86/hardened/stage3.spec:
   Switch x86 hardened specs to i686
