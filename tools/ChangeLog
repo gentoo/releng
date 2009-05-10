@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  10 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  +catalyst-auto-amd64-hardened.conf, +catalyst-auto-x86-hardened.conf:
+  Add config files for x86/amd64 hardened
+
   09 May 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   replace the version_stamp in livecd/volid
 
