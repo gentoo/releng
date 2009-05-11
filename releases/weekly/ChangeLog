@@ -3,6 +3,11 @@
 # $Header: $
 
   11 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/amd64/hardened/stage1-nomultilib.spec,
+  specs/amd64/hardened/stage1.spec:
+  Update source_subpath for amd64-hardened stages
+
+  11 May 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/hardened/stage1.spec:
   update source_subpath for x86-hardened stage1
 
