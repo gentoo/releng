@@ -3,6 +3,10 @@
 # $Id$
 
   11 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  -catalyst-auto-amd64-hardened.conf, -catalyst-auto-x86-hardened.conf:
+  Remove separate -hardened files
+
+  11 May 2009; Andrew Gaffney <agaffney@gentoo.org>
   catalyst-auto-amd64.conf:
   move amd64 hardened builds into normal amd64 build
 
