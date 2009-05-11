@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/hardened/stage1.spec:
+  update source_subpath for x86-hardened stage1
+
   10 May 2009; Raúl Porcel <armin76@gentoo.org>
   -kconfig/sparc/installcd-2.6.27.config,
   specs/sparc/sparc64/installcd-stage2-minimal.spec,
