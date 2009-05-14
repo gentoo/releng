@@ -142,8 +142,7 @@ for i in ${SPECS} ${OPTIONAL_SPECS}; do
   cp --parents ${i} ${TMPDIR}/specs/
 done
 
-cd ${KCONFIG_DIR}
-find -type f -exec cp {} ${TMPDIR}/kconfig \;
+find ${KCONFIG_DIR} -type f -exec cp {} ${TMPDIR}/kconfig \;
 
 cd ${TMPDIR}/specs
 
