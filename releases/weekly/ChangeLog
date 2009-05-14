@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/stage1.spec:
+  Use stage3-i686 as seed for stage1-i668
+
   11 May 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/amd64/hardened/stage1-nomultilib.spec,
   specs/amd64/hardened/stage1.spec:
