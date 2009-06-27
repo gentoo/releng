@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  27 Jun 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto,
+  catalyst-auto-amd64.conf, catalyst-auto-x86.conf:
+  Add concept of build sets to catalyst-auto
+
   14 May 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   run find specifically in KCONFIG_DIR
 

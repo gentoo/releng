@@ -138,8 +138,20 @@ fi
 
 cd ${SPECS_DIR}
 
-for i in ${SPECS} ${OPTIONAL_SPECS}; do
-  cp --parents ${i} ${TMPDIR}/specs/
+for a in "" ${SETS}; do
+  local specs_var, optional_specs_var;
+
+  if [ -z "${a}" ]; then
+    specs_var="SPECS"
+    optional_specs_var="OPTIONAL_SPECS"
+  else
+    specs_var="SET_${a}_SPECS"
+    optional_specs_var="SET_${a}_OPTIONAL_SPECS"
+  fi
+
+  for i in ${!specs_var} ${!optional_specs_var}; do
+    cp --parents ${i} ${TMPDIR}/specs/
+  done
 done
 
 find ${KCONFIG_DIR} -type f -exec cp {} ${TMPDIR}/kconfig \;
@@ -187,27 +199,41 @@ if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/sna
   exit 1
 fi
 
-for i in ${SPECS}; do
-  LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-  run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
-  if [ $? != 0 ]; then
-    send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
-    exit 1
-  fi
-done
+for a in "" ${SETS}; do
+  local specs_var
+  local optional_specs_var
 
-for i in ${OPTIONAL_SPECS}; do
-  LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-  run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
-  if [ $? != 0 ]; then
-    send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
-    break
+  if [ -z "${a}" ]; then
+    specs_var="SPECS"
+    optional_specs_var="OPTIONAL_SPECS"
+  else
+    specs_var="SET_${a}_SPECS"
+    optional_specs_var="SET_${a}_OPTIONAL_SPECS"
   fi
-done
 
-for i in ${SPECS} ${OPTIONAL_SPECS}; do
-  LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"	
-  run_cmd "catalyst -P -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
+  for i in ${!specs_var}; do
+    LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+    run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
+    if [ $? != 0 ]; then
+      send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
+      continue 2
+    fi
+  done
+
+  for i in ${!optional_specs_var}; do
+    LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+    run_cmd "catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
+    if [ $? != 0 ]; then
+      send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
+      break
+    fi
+  done
+
+  for i in ${!specs_var} ${!optional_specs_var}; do
+    LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"	
+    run_cmd "catalyst -P -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
+  done
+
 done
 
 if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
