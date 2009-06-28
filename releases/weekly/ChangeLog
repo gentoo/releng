@@ -3,6 +3,11 @@
 # $Header: $
 
   28 Jun 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/amd64/installcd-stage2-minimal.spec,
+  specs/x86/installcd-stage2-minimal.spec:
+  Apply installcd-stage2-minimal.spec patch from bug #267708
+
+  28 Jun 2009; Andrew Gaffney <agaffney@gentoo.org>
   kconfig/x86/installcd-2.6.28.config,
   kconfig/amd64/installcd-2.6.28.config:
   Enable alsa modules for bug #267708

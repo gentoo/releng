@@ -20,6 +20,34 @@ boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /home/agaffney/release/2008.0/kconfig/installcd-2.6.28.config
 boot/kernel/gentoo/use:
 	-*
+	alsa
+	alsa_pcm_plugins_adpcm
+	alsa_pcm_plugins_alaw
+	alsa_pcm_plugins_asym
+	alsa_pcm_plugins_copy
+	alsa_pcm_plugins_dmix
+	alsa_pcm_plugins_dshare
+	alsa_pcm_plugins_dsnoop
+	alsa_pcm_plugins_empty
+	alsa_pcm_plugins_extplug
+	alsa_pcm_plugins_file
+	alsa_pcm_plugins_hooks
+	alsa_pcm_plugins_iec958
+	alsa_pcm_plugins_ioplug
+	alsa_pcm_plugins_ladspa
+	alsa_pcm_plugins_lfloat
+	alsa_pcm_plugins_linear
+	alsa_pcm_plugins_meter
+	alsa_pcm_plugins_mmap_emul
+	alsa_pcm_plugins_mulaw
+	alsa_pcm_plugins_multi
+	alsa_pcm_plugins_null
+	alsa_pcm_plugins_plug
+	alsa_pcm_plugins_rate
+	alsa_pcm_plugins_route
+	alsa_pcm_plugins_share
+	alsa_pcm_plugins_shm
+	alsa_pcm_plugins_softvol
 	atm
 	deprecated
 	fbcon
@@ -28,6 +56,7 @@ boot/kernel/gentoo/use:
 	livecd
 	loop-aes
 	lvm1
+	midi
 	mng
 	ncurses
 	nls
@@ -35,6 +64,7 @@ boot/kernel/gentoo/use:
 	nptlonly
 	pam
 	png
+	portaudio
 	readline
 	socks5
 	ssl
@@ -43,6 +73,10 @@ boot/kernel/gentoo/use:
 	usb
 
 boot/kernel/gentoo/packages:
+### These need to be added for software speech.
+	app-accessibility/espeakup
+	media-libs/alsa-oss
+	media-sound/alsa-utils
 ### Compile failure w/ 2.6.24
 #	net-dialup/slmodem
 	net-dialup/globespan-adsl
@@ -91,7 +125,8 @@ livecd/unmerge:
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
-	sys-devel/gcc
+# This might be needed for software speech.
+#	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
