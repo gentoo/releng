@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Jun 2009; Andrew Gaffney <agaffney@gentoo.org>
+  kconfig/x86/installcd-2.6.28.config,
+  kconfig/amd64/installcd-2.6.28.config:
+  Enable alsa modules for bug #267708
+
   14 May 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/i686/stage1.spec:
   Use stage3-i686 as seed for stage1-i668
