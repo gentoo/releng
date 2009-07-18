@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Jul 2009; Raúl Porcel <armin76@gentoo.org>
+  +specs/arm/armv7l/stage1.spec, +specs/arm/armv7l/stage2.spec,
+  +specs/arm/armv7l/stage3.spec:
+  Add armv7l specs
+
   28 Jun 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/amd64/installcd-stage2-minimal.spec,
   specs/x86/installcd-stage2-minimal.spec:
