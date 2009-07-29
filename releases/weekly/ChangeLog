@@ -3,6 +3,10 @@
 # $Header: $
 
   29 Jul 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/i686/stage2-desktop.spec:
+  change seed for stage2-i686-desktop to stage1-686
+
+  29 Jul 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/alpha/livecd-stage1.spec, specs/amd64/livecd-stage1.spec,
   specs/amd64/livedvd-stage1.spec, specs/ia64/livecd-stage1.spec,
   specs/ppc/ppc64/livecd-stage1.spec, specs/x86/i686/livecd-stage1.spec,
