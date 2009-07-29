@@ -99,7 +99,6 @@ livecd/packages:
 	sys-apps/eject
 	sys-apps/ethtool
 	sys-apps/fxload
-	sys-apps/gli
 	sys-apps/gradm
 	sys-apps/hdparm
 	sys-apps/iproute2

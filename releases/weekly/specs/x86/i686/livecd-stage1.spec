@@ -89,7 +89,6 @@ livecd/packages:
 	sys-apps/eject
 	sys-apps/ethtool
 	sys-apps/fxload
-	sys-apps/gli
 	sys-apps/hdparm
 	sys-apps/hwsetup
 #	sys-apps/ibm-powerpc-utils

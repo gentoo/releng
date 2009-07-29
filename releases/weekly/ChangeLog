@@ -2,6 +2,13 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Jul 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/alpha/livecd-stage1.spec, specs/amd64/livecd-stage1.spec,
+  specs/amd64/livedvd-stage1.spec, specs/ia64/livecd-stage1.spec,
+  specs/ppc/ppc64/livecd-stage1.spec, specs/x86/i686/livecd-stage1.spec,
+  specs/x86/i686/livedvd-stage1.spec:
+  whack sys-apps/gli from livecd-stage1 specs because solar is lazy
+
   18 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   +specs/arm/armv7l/stage1.spec, +specs/arm/armv7l/stage2.spec,
   +specs/arm/armv7l/stage3.spec:
