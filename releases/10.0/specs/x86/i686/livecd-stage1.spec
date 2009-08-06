@@ -2,8 +2,8 @@ subarch: i686
 version_stamp: installer-10.0
 target: livecd-stage1
 rel_type: default
-profile: default/linux/x86/2008.0/desktop
-snapshot: 20090728
+profile: default/linux/x86/10.0/desktop
+snapshot: 20090806
 source_subpath: default/stage3-i686-10.0
 livecd/use:
 	branding
@@ -12,6 +12,41 @@ livecd/use:
 	socks5
 
 livecd/packages:
+# Start new packages
+	app-admin/eselect-esd
+	app-admin/localepurge
+	app-admin/paxtest
+	app-admin/sysstat
+	app-admin/testdisk
+	app-admin/usbview
+	#app-antivirus/bitdefender-console
+	app-antivirus/clamav
+	app-arch/afio
+	app-arch/arc
+	app-arch/arj
+	app-arch/deb2targz
+	app-arch/dump
+	app-arch/file-roller
+	app-arch/lha
+	app-arch/lrzip
+	app-arch/lzop
+	app-arch/mscompress
+	app-arch/ncompress
+	app-arch/par2cmdline
+	app-arch/rar
+	app-arch/rzip
+	app-arch/sharutils
+	app-arch/unace
+	app-arch/unarj
+	app-arch/unrar
+	app-arch/upx
+	app-arch/zoo
+	app-backup/dar
+	app-backup/duplicity
+	app-backup/rdiff-backup
+	app-backup/rsnapshot
+	app-cdr/bin2iso       
+# end new packages
 	app-accessibility/brltty
 	app-admin/hddtemp
 	app-admin/ide-smart
@@ -22,9 +57,9 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/mt-st
 	app-benchmarks/cpuburn
-#	app-cdr/cdrkit
+	app-cdr/cdrkit
 	app-crypt/gnupg
-#	app-editors/emacs
+	app-editors/emacs
 	app-editors/vim
 	app-misc/mc
 	app-misc/screen
@@ -43,11 +78,11 @@ livecd/packages:
 ### Removed for space reasons
 #	mail-client/mozilla-thunderbird
 	media-gfx/fbgrab
-#	media-sound/audacious
+	media-sound/audacious
 	net-analyzer/netcat
 	net-analyzer/nmap
 	net-analyzer/tcpdump
-#	net-analyzer/tcptraceroute
+	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/mingetty
 	net-dialup/minicom
@@ -80,7 +115,8 @@ livecd/packages:
 	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode
 	net-wireless/iwl4965-ucode
-	net-wireless/prism54-firmware
+# Failed to fetch.
+#	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	net-wireless/zd1201-firmware
@@ -142,7 +178,6 @@ livecd/packages:
 	www-client/mozilla-firefox
 	x11-base/xorg-server
 	x11-base/xorg-x11
-	x11-drivers/synaptics
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
 	xfce-base/xfce4
