@@ -26,6 +26,18 @@ boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/10.0/kconfig/x86/installcd-2.6.28.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
+# new packages
+	net-dialup/ppp
+	net-dialup/pppconfig
+	net-dialup/rp-pppoe
+	net-dialup/speedtouch-usb
+	net-firewall/iptables
+	net-wireless/ndiswrapper
+	sys-apps/lm_sensors
+# failed
+#	sys-apps/pcmcia-cs
+	sys-fs/sshfs-fuse
+# end new packages	
 	media-libs/alsa-oss
 	media-sound/alsa-utils
 #	net-dialup/fcdsl
@@ -44,7 +56,6 @@ boot/kernel/gentoo/packages:
 #	net-wireless/rtl8187
 	sys-apps/pcmciautils
 	sys-fs/ntfs3g
-
 livecd/empty:
 	/var/tmp
 	/var/empty

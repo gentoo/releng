@@ -46,6 +46,52 @@ livecd/packages:
 	app-backup/rdiff-backup
 	app-backup/rsnapshot
 	app-cdr/bin2iso       
+	app-cdr/ccd2iso
+	app-cdr/cdrdao
+	app-cdr/mdf2iso
+	app-cdr/nrg2iso 
+	app-crypt/johntheripper
+	app-editors/gedit
+	app-editors/gvim
+	app-editors/hexedit
+	app-forensics/cmospwd
+	app-forensics/foremost
+	app-forensics/magicrescue
+	app-forensics/sleuthkit
+	app-misc/ckermit
+	app-misc/wipe
+	app-text/a2ps
+	app-text/evince
+	dev-util/strace
+	dev-util/yacc
+	media-gfx/gimp
+	media-gfx/sane-frontends
+	media-gfx/xsane
+	media-plugins/gst-plugins-esd
+	media-sound/alsa-utils
+	media-sound/aumix
+	media-video/mplayer
+	media-video/rovclock
+	net-firewall/guarddog
+	net-ftp/gftp
+	net-ftp/ncftp
+	net-im/licq
+	net-im/ysm
+	net-misc/networkmanager
+	net-misc/putty		
+	net-wireless/ipw3945-ucode
+	net-wireless/ipw3945d
+	sys-apps/chpax
+	sys-apps/hwdata-gentoo
+	sys-apps/lshw
+	sys-apps/paxctl
+	sys-apps/readahead-list
+	sys-block/gparted
+	sys-fs/dd-rescue
+	sys-fs/ddrescue
+	sys-power/powernowd
+	sys-power/powertop
+	www-client/httrack
 # end new packages
 	app-accessibility/brltty
 	app-admin/hddtemp
