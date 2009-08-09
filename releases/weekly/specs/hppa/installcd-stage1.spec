@@ -30,6 +30,7 @@ livecd/packages:
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
+	app-crypt/gnupg
 	app-editors/vim
 	app-misc/screen
 	app-misc/vlock
