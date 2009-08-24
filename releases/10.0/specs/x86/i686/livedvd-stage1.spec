@@ -3,7 +3,7 @@ version_stamp: installer-10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090806
+snapshot: 20090822
 source_subpath: default/stage3-i686-desktop-10.0
 livecd/use:
 	branding
@@ -12,6 +12,182 @@ livecd/use:
 	socks5
 
 livecd/packages:
+	app-admin/eselect-esd
+	app-admin/localepurge
+	app-admin/paxtest
+	app-admin/sysstat
+	app-admin/usbview
+	app-antivirus/bitdefender-console
+	app-antivirus/clamav
+	app-arch/afio
+	app-arch/arc
+	app-arch/arj
+	app-arch/deb2targz
+	app-arch/dump
+	app-arch/file-roller
+	app-arch/lha
+	app-arch/lrzip
+	app-arch/lzop
+	app-arch/mscompress
+	app-arch/ncompress
+	app-arch/par2cmdline
+	app-arch/rar
+	app-arch/rzip
+	app-arch/sharutils
+	app-arch/unace
+	app-arch/unarj
+	app-arch/upx
+	app-arch/zoo
+	app-backup/dar
+	app-backup/duplicity
+	app-backup/rdiff-backup
+	app-backup/rsnapshot
+	app-cdr/ccd2iso
+	app-cdr/mdf2iso
+	app-crypt/johntheripper
+	app-editors/gedit
+	app-editors/hexedit
+	app-forensics/cmospwd
+	app-forensics/foremost
+	app-forensics/magicrescue
+	app-misc/ckermit
+	app-misc/wipe
+	app-text/a2ps
+	app-text/evince
+	dev-util/yacc
+	media-gfx/sane-frontends
+	media-plugins/gst-plugins-esd
+	media-sound/alsa-utils
+	media-sound/aumix
+	media-video/rovclock
+	net-firewall/guarddog
+	net-ftp/gftp
+	net-im/licq
+	net-im/ysm
+	net-misc/networkmanager
+	net-misc/putty
+	net-wireless/ipw3945-ucode
+	net-wireless/ipw3945d
+	sys-apps/chpax
+	sys-apps/hwdata-gentoo
+	sys-apps/lshw
+	sys-apps/paxctl
+	sys-apps/readahead-list
+	sys-fs/dd-rescue
+	sys-fs/ddrescue
+	sys-power/powernowd
+	sys-power/powertop
+	www-client/httrack
+	x11-apps/mesa-progs
+	x11-apps/xclock
+	x11-apps/xhost
+	x11-drivers/xf86-video-cirrus
+	x11-libs/gksu
+	x11-libs/vte
+	x11-misc/cairo-clock
+	x11-misc/grsync
+	x11-plugins/pidgin-encryption
+	x11-plugins/pidgin-extprefs
+	x11-terms/xterm
+	app-benchmarks/bonnie++
+	app-benchmarks/dbench
+	app-benchmarks/httperf
+	app-benchmarks/iozone
+	app-benchmarks/stress
+	app-benchmarks/tiobench
+	app-crypt/aespipe
+	app-crypt/aesutil
+	app-crypt/gnupg-pkcs11-scd
+	app-crypt/gpgme
+	app-crypt/hashalot
+	app-crypt/luks-tools
+	app-crypt/mcrypt
+	app-crypt/md5deep
+	app-editors/scite
+	app-forensics/autopsy
+	app-forensics/memdump
+	app-forensics/sleuthkit
+	app-text/agrep
+	app-admin/hwreport
+	app-arch/cabextract
+	app-arch/cfv
+	app-arch/lzip
+	app-arch/lzma-utils
+	app-arch/p7zip
+	app-arch/pbzip2
+	app-arch/pigz
+	app-arch/xarchiver	
+	xfce-extra/xfce4-diskperf
+	app-arch/zip	
+	app-backup/tob
+	app-cdr/cdw
+	app-cdr/xfburn
+	app-crypt/chntpw
+	app-crypt/pinentry
+	app-editors/hexcurse
+	app-editors/joe
+	app-editors/qemacs
+	app-editors/zile
+	app-misc/beep
+	app-misc/colordiff
+	app-misc/emelfm2
+	app-misc/symlinks
+	app-shells/ksh
+	app-text/dos2unix
+	app-text/epdfview
+	app-text/hunspell
+	app-text/unix2dos
+	dev-python/pexpect
+	dev-python/py-gnupg
+	dev-python/pylibacl
+	dev-python/pyparted
+	dev-python/pyxattr
+	net-analyzer/arping
+	net-analyzer/dnstracer
+	net-analyzer/httping
+	net-analyzer/ifstat
+	net-analyzer/iftop
+	net-analyzer/iptraf
+	net-analyzer/macchanger
+	net-analyzer/ngrep
+	net-analyzer/vnstat
+	net-dns/bind-tools
+	net-dns/libidn
+	net-ftp/ftp
+	net-misc/curl
+	net-misc/openvpn
+	net-misc/rsync
+	net-misc/telnet-bsd
+	net-misc/udpcast
+	net-misc/wput
+	sys-apps/cciss_vol_status
+	sys-apps/dcfldd
+	sys-apps/diffutils	
+	sys-apps/dmapi
+	sys-apps/ed
+	sys-apps/fbset
+	sys-apps/flashrom
+	sys-apps/groff
+	sys-apps/ipmitool
+	sys-apps/kbd
+	sys-apps/lshw
+	sys-apps/pciutils
+	sys-apps/pv
+	sys-apps/ren
+	sys-apps/rename
+	sys-apps/rescan-scsi-bus
+	sys-apps/setserial
+	sys-block/lsiutil	
+	sys-block/mbuffer
+	sys-block/ms-sys
+	sys-block/mtx
+	sys-block/nbd
+	sys-fs/btrfs-progs
+	sys-process/atop
+	sys-process/iotop
+	www-client/elinks
+	net-p2p/frostwire
+	www-client/lynx
 	app-accessibility/brltty
 	app-admin/gkrellm
 	app-admin/hddtemp
@@ -59,7 +235,6 @@ livecd/packages:
 	app-office/scribus
 	app-pda/gtkpod
 	app-pda/ipodslave
-	app-portage/herdstat
 	app-portage/genlop
 	app-portage/gentoolkit
 	app-portage/gentoolkit-dev
@@ -72,7 +247,6 @@ livecd/packages:
 	app-shells/tcsh
 	app-shells/zsh
 	app-shells/zsh-completion
-	app-text/tetex
 	app-text/wgetpaste
 	dev-util/anjuta
 	dev-util/ccache
@@ -101,7 +275,6 @@ livecd/packages:
 	media-gfx/digikam
 	media-gfx/fbgrab
 	media-gfx/gimp
-	media-gfx/gimp-print
 	media-gfx/gtkam
 	media-gfx/inkscape
 	media-gfx/xsane
@@ -114,7 +287,6 @@ livecd/packages:
 	media-sound/hydrogen
 	media-sound/rhythmbox
 	media-video/dvdrip
-	media-video/gqcam
 	media-video/gxine
 	media-video/lsdvd
 	media-video/mplayer
@@ -157,7 +329,6 @@ livecd/packages:
 	net-misc/whois
 	net-nntp/pan
 	net-p2p/bittorrent
-	net-p2p/limewire
 	net-print/cups
 	net-proxy/dante
 	net-proxy/ntlmaps
@@ -173,7 +344,8 @@ livecd/packages:
 	net-wireless/iwl3945-ucode
 	net-wireless/iwl4965-ucode
 	net-wireless/kdebluetooth
-	net-wireless/prism54-firmware
+# failed to fetch
+#	net-wireless/prism54-firmware
 	net-wireless/wepattack
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
@@ -201,7 +373,6 @@ livecd/packages:
 	sys-apps/pmount
 #	sys-apps/powerpc-utils
 	sys-apps/qtparted
-	sys-apps/rsbac-admin
 	sys-apps/sdparm
 	sys-apps/sg3_utils
 	sys-apps/slocate
@@ -255,7 +426,7 @@ livecd/packages:
 	www-client/opera
 	www-client/seamonkey
 	x11-base/xorg-x11
-	x11-drivers/synaptics
+	x11-drivers/xf86-input-synaptics
 	x11-misc/xscreensaver
 ### Masked (no stable keywords)
 #	x11-plugins/gkrellm-plugins

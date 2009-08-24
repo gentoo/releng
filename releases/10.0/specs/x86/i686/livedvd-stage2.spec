@@ -3,12 +3,12 @@ version_stamp: 10.0
 target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090806
+snapshot: 20090822
 source_subpath: default/livecd-stage1-i686-installer-10.0
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-livecd/fsscript: /home/agaffney/release/10.0/scripts/livecd.sh
+#livecd/fsscript: /home/agaffney/release/10.0/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 livecd/iso: /var/tmp/catalyst/builds/default/livedvd-i686-installer-10.0.iso
@@ -17,15 +17,34 @@ livecd/volid: Gentoo Linux 10.0 x86 LiveDVD
 livecd/xdm: gdm
 livecd/xsession: xfce
 
-livecd/overlay: /home/agaffney/release/10.0/overlays/common/overlay/livedvd
-livecd/root_overlay: /home/agaffney/release/10.0/overlays/common/root_overlay
+#livecd/overlay: /home/agaffney/release/10.0/overlays/common/overlay/livedvd
+#livecd/root_overlay: /home/agaffney/release/10.0/overlays/common/root_overlay
 
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /home/agaffney/release/10.0/kconfig/livecd-2.6.24.config
+boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/10.0/kconfig/x86/installcd-2.6.28.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
+        net-dialup/ppp
+	net-dialup/pppconfig
+        net-dialup/rp-pppoe
+        net-dialup/speedtouch-usb
+        net-firewall/iptables
+        net-wireless/ndiswrapper
+        sys-apps/lm_sensors
+        net-wireless/acx-firmware
+        net-wireless/atmel-firmware
+        net-wireless/b43-fwcutter
+        net-wireless/bcm43xx-fwcutter
+        net-wireless/zd1201-firmware
+        net-wireless/zd1211-firmware
+        sys-block/iscsitarget
+        sys-block/open-iscsi
+        net-misc/openswan
+# failed
+#       sys-apps/pcmcia-cs
+        sys-fs/sshfs-fuse
 	app-laptop/laptop-mode-tools
 	media-libs/alsa-lib
 	media-sound/alsa-utils
@@ -39,12 +58,6 @@ boot/kernel/gentoo/packages:
 #	net-wireless/acx
 	net-wireless/hostap-utils
 	net-wireless/kismet
-### In-kernel
-#	net-wireless/ipw3945
-#	net-wireless/madwifi-ng-tools
-### Compile failure and in-kernel
-#	net-wireless/rt2500
-#	net-wireless/rtl8187
 	sys-apps/pcmciautils
 	sys-fs/ntfs3g
 
