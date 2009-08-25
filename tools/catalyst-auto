@@ -139,8 +139,6 @@ fi
 cd ${SPECS_DIR}
 
 for a in "" ${SETS}; do
-  local specs_var, optional_specs_var;
-
   if [ -z "${a}" ]; then
     specs_var="SPECS"
     optional_specs_var="OPTIONAL_SPECS"
@@ -200,9 +198,6 @@ if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/sna
 fi
 
 for a in "" ${SETS}; do
-  local specs_var
-  local optional_specs_var
-
   if [ -z "${a}" ]; then
     specs_var="SPECS"
     optional_specs_var="OPTIONAL_SPECS"
