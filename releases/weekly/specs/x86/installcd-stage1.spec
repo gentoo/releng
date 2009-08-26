@@ -37,7 +37,8 @@ livecd/packages:
 	media-gfx/fbgrab
 	net-analyzer/traceroute
 	net-dialup/mingetty
-	net-dialup/penggy
+### Masked (for removal)
+#	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-fs/mount-cifs

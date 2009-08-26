@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Aug 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/installcd-stage1.spec:
+  Comment out net-dialup/penggy from the x86 installcd-stage1 spec now that
+  it's masked in the tree
+
   09 Aug 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/alpha/installcd-stage1.spec, specs/amd64/installcd-stage1.spec,
   specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
