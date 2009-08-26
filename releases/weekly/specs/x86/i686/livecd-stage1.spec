@@ -51,7 +51,8 @@ livecd/packages:
 	net-analyzer/traceroute
 	net-dialup/mingetty
 	net-dialup/minicom
-	net-dialup/penggy
+### Masked (for removal)
+#	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables

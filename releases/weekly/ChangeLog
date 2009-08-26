@@ -3,6 +3,12 @@
 # $Header: $
 
   26 Aug 2009; Andrew Gaffney <agaffney@gentoo.org>
+  specs/x86/hardened/installcd-stage1.spec,
+  specs/x86/i686/livecd-stage1.spec, specs/x86/i686/livedvd-stage1.spec:
+  Comment out net-dialup/penggy from the x86 installcd-stage1 specs now that
+  it's masked in the tree
+
+  26 Aug 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/x86/installcd-stage1.spec:
   Comment out net-dialup/penggy from the x86 installcd-stage1 spec now that
   it's masked in the tree
