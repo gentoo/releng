@@ -2,8 +2,8 @@ subarch: amd64
 version_stamp: installer-10.0
 target: livecd-stage1
 rel_type: default
-profile: default/linux/amd64/2008.0/desktop
-snapshot: 20090704
+profile: default/linux/amd64/10.0/desktop
+snapshot: 20090826
 source_subpath: default/stage3-amd64-desktop-10.0
 livecd/use:
 	branding

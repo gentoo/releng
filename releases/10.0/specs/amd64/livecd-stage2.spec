@@ -2,28 +2,28 @@ subarch: amd64
 version_stamp: 10.0
 target: livecd-stage2
 rel_type: default
-profile: default/linux/amd64/2008.0/desktop
-snapshot: 20090704
+profile: default/linux/amd64/10.0/desktop
+snapshot: 20090826
 source_subpath: default/livecd-stage1-amd64-installer-10.0
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-#livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
+#livecd/fsscript: /var/svnroot/releng/trunk/releases/10.0/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
-#livecd/iso: /release/buildroot/amd64-default/builds/default/livecd-amd64-installer-2008.0.iso
-livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-2008.0.iso
+#livecd/iso: /release/buildroot/amd64-default/builds/default/livecd-amd64-installer-10.0.iso
+livecd/iso: /var/tmp/catalyst/builds/default/livecd-amd64-installer-10.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 10.0 amd64 LiveCD
 livecd/xsession: xfce
 livecd/xdm: gdm
 
-#livecd/overlay: /var/svnroot/releng/trunk/releases/2008.0/overlays/common/overlay/livecd
-#livecd/root_overlay: /var/svnroot/releng/trunk/releases/2008.0/overlays/common/root_overlay
+#livecd/overlay: /var/svnroot/releng/trunk/releases/10.0/overlays/common/overlay/livecd
+#livecd/root_overlay: /var/svnroot/releng/trunk/releases/10.0/overlays/common/root_overlay
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-#boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/livecd-2.6.24.config
+#boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/10.0/kconfig/amd64/livecd-2.6.24.config
 boot/kernel/gentoo/config:  /var/svnroot/releng/trunk/releases/10.0/kconfig/amd64/installcd-2.6.28.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
