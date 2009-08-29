@@ -3,15 +3,22 @@ version_stamp: installer-10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090822
+snapshot: 20090829
 source_subpath: default/stage3-i686-desktop-10.0
+portage_confdir: /home/likewhoa/portage
+
 livecd/use:
 	branding
 	livecd
 	loop-aes
 	socks5
-
+	gnome
+	qt4
 livecd/packages:
+	kde-base/kdebase-meta
+	gnome-base/gnome
+	x11-proto/dri2proto
+	net-misc/wicd
 	app-admin/eselect-esd
 	app-admin/localepurge
 	app-admin/paxtest
@@ -117,7 +124,6 @@ livecd/packages:
 	app-arch/pbzip2
 	app-arch/pigz
 	app-arch/xarchiver	
-	xfce-extra/xfce4-diskperf
 	app-arch/zip	
 	app-backup/tob
 	app-cdr/cdw
@@ -230,7 +236,6 @@ livecd/packages:
 	app-office/dia
 	app-office/gnucash
 	app-office/gnumeric
-	app-office/koffice
 	app-office/openoffice-bin
 	app-office/scribus
 	app-pda/gtkpod
@@ -254,8 +259,6 @@ livecd/packages:
 	dev-util/git
 	dev-util/indent
 	dev-util/kdbg
-	dev-util/kdesvn
-	dev-util/kdevelop
 	dev-util/ltrace
 	dev-util/strace
 	dev-util/subversion
@@ -265,8 +268,6 @@ livecd/packages:
 	gnome-extra/evolution-exchange
 	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
-	kde-base/kde-meta
-	kde-base/kooka
 	mail-client/evolution
 	mail-client/mozilla-thunderbird
 	mail-client/sylpheed
@@ -278,9 +279,11 @@ livecd/packages:
 	media-gfx/gtkam
 	media-gfx/inkscape
 	media-gfx/xsane
-	media-sound/amarok
+# pulls in mysql, FIX ME
+#	media-sound/amarok
 	media-sound/audacious
-	media-sound/audacity
+# fails because of expat libs
+#	media-sound/audacity
 	media-sound/easytag
 	media-sound/gnomeradio
 	media-sound/grip
@@ -304,7 +307,6 @@ livecd/packages:
 	net-analyzer/wireshark
 	net-dialup/mingetty
 	net-dialup/minicom
-	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables
@@ -343,7 +345,6 @@ livecd/packages:
 	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode
 	net-wireless/iwl4965-ucode
-	net-wireless/kdebluetooth
 # failed to fetch
 #	net-wireless/prism54-firmware
 	net-wireless/wepattack
@@ -352,7 +353,6 @@ livecd/packages:
 	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	rox-base/rox
-	sys-apps/apmd
 	sys-apps/dmidecode
 	sys-apps/eject
 	sys-apps/ethtool
@@ -436,4 +436,4 @@ livecd/packages:
 	x11-wm/enlightenment
 	x11-wm/fluxbox
 	x11-wm/windowmaker
-	xfce-base/xfce4
+	xfce-base/xfce4-meta

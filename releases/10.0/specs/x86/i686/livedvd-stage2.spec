@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090822
+snapshot: 20090829
 source_subpath: default/livecd-stage1-i686-installer-10.0
 
 livecd/bootargs: dokeymap
@@ -15,10 +15,10 @@ livecd/iso: /var/tmp/catalyst/builds/default/livedvd-i686-installer-10.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 10.0 x86 LiveDVD
 livecd/xdm: gdm
-livecd/xsession: xfce
-
-#livecd/overlay: /home/agaffney/release/10.0/overlays/common/overlay/livedvd
-#livecd/root_overlay: /home/agaffney/release/10.0/overlays/common/root_overlay
+livecd/xsession: gnome
+livecd/rcadd: 
+	hald|default 
+	dbus|default
 
 boot/kernel: gentoo
 
