@@ -67,7 +67,6 @@ livecd/packages:
 	media-sound/alsa-utils
 	media-sound/aumix
 	media-video/rovclock
-	net-firewall/guarddog
 	net-ftp/gftp
 	net-im/licq
 	net-im/ysm
@@ -92,7 +91,7 @@ livecd/packages:
 	x11-libs/gksu
 	x11-libs/vte
 	x11-misc/cairo-clock
-# keywords
+# keywords.
 #	x11-misc/grsync
 	x11-plugins/pidgin-encryption
 	x11-plugins/pidgin-extprefs
@@ -127,7 +126,7 @@ livecd/packages:
 	app-arch/p7zip
 	app-arch/pbzip2
 # keywords.
-	app-arch/pigz
+#	app-arch/pigz
 	app-arch/xarchiver	
 	app-arch/zip
 # keywords.
@@ -170,7 +169,10 @@ livecd/packages:
 	net-misc/openvpn
 	net-misc/rsync
 	net-misc/telnet-bsd
+	net-misc/udpcast
+	net-misc/wput
 	sys-apps/cciss_vol_status
+	sys-apps/dcfldd
 	sys-apps/diffutils	
 	sys-apps/dmapi
 	sys-apps/ed
@@ -208,6 +210,7 @@ livecd/packages:
 	app-admin/sudo
 	app-admin/superadduser
 	app-admin/syslog-ng
+	app-admin/testdisk
 	app-arch/alien
 	app-arch/mt-st
 	app-arch/unrar
@@ -218,7 +221,7 @@ livecd/packages:
 	app-cdr/cdrkit
 	app-cdr/dvd+rw-tools
 	app-cdr/gnomebaker
-	app-cdr/k3b
+	#app-cdr/k3b
 	app-cdr/nrg2iso
 	app-crypt/gnupg
 	app-editors/bluefish
@@ -228,8 +231,7 @@ livecd/packages:
 	app-editors/xemacs
 	app-forensics/chkrootkit
 	app-laptop/i8kutils
-### Can't emerge with profile USE
-#	app-misc/beagle
+	app-misc/beagle
 	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
@@ -241,7 +243,6 @@ livecd/packages:
 	app-office/openoffice-bin
 	app-office/scribus
 	app-pda/gtkpod
-	app-pda/ipodslave
 	app-portage/genlop
 	app-portage/gentoolkit
 	app-portage/gentoolkit-dev
@@ -274,7 +275,7 @@ livecd/packages:
 	mail-client/sylpheed
 	mail-client/claws-mail
 	media-gfx/blender
-	media-gfx/digikam
+	#media-gfx/digikam
 	media-gfx/fbgrab
 	media-gfx/gimp
 	media-gfx/gtkam
@@ -296,7 +297,7 @@ livecd/packages:
 	media-video/ogle-gui
 	media-video/vlc
 	media-video/xine-ui
-	media-video/kmplayer
+	media-video/smplayer
 	net-analyzer/ettercap
 	net-analyzer/netcat
 	net-analyzer/nmap
@@ -334,7 +335,8 @@ livecd/packages:
 	net-proxy/ntlmaps
 	net-proxy/tsocks
 	net-wireless/aircrack-ng
-	net-wireless/b43-fwcutter
+	net-wireless/airsnort
+#	net-wireless/b43-fwcutter
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/gnome-bluetooth
 	net-wireless/ipw2100-firmware
@@ -353,7 +355,6 @@ livecd/packages:
 	sys-apps/eject
 	sys-apps/ethtool
 	sys-apps/fxload
-	#sys-apps/gli
 	sys-apps/gradm
 	sys-apps/hdparm
 	sys-apps/hwsetup
@@ -371,6 +372,8 @@ livecd/packages:
 	sys-apps/smartmontools
 	sys-block/aoetools
 	sys-block/disktype
+	sys-block/gpart
+	sys-block/gparted
 	sys-block/mpt-status
 	sys-block/partimage
 	sys-block/qla-fc-firmware
@@ -383,6 +386,7 @@ livecd/packages:
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms
+	sys-fs/hfsplusutils
 	sys-fs/hfsutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi
@@ -401,6 +405,7 @@ livecd/packages:
 	sys-process/htop
 	sys-process/lsof
 	sys-process/vixie-cron
+	www-client/epiphany-extensions
 	www-client/galeon
 	www-client/links
 	www-client/mozilla-firefox
@@ -417,4 +422,5 @@ livecd/packages:
 	x11-wm/enlightenment
 	x11-wm/fluxbox
 	x11-wm/windowmaker
+	x11-wm/openbox
 	xfce-base/xfce4-meta
