@@ -1,11 +1,11 @@
 subarch: i686
-version_stamp: installer-10.0
+version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090829
+snapshot: 20090830
 source_subpath: default/stage3-i686-desktop-10.0
-portage_confdir: /home/likewhoa/portage
+portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage
 
 livecd/use:
 	branding
@@ -21,10 +21,8 @@ livecd/packages:
 	net-misc/wicd
 	app-admin/eselect-esd
 	app-admin/localepurge
-	app-admin/paxtest
 	app-admin/sysstat
 	app-admin/usbview
-	app-antivirus/bitdefender-console
 	app-antivirus/clamav
 	app-arch/afio
 	app-arch/arc
@@ -33,7 +31,8 @@ livecd/packages:
 	app-arch/dump
 	app-arch/file-roller
 	app-arch/lha
-	app-arch/lrzip
+# keywords.
+#	app-arch/lrzip
 	app-arch/lzop
 	app-arch/mscompress
 	app-arch/ncompress
@@ -54,9 +53,10 @@ livecd/packages:
 	app-crypt/johntheripper
 	app-editors/gedit
 	app-editors/hexedit
-	app-forensics/cmospwd
-	app-forensics/foremost
-	app-forensics/magicrescue
+# keywords.
+#	app-forensics/cmospwd
+#	app-forensics/foremost
+#	app-forensics/magicrescue
 	app-misc/ckermit
 	app-misc/wipe
 	app-text/a2ps
@@ -67,7 +67,6 @@ livecd/packages:
 	media-sound/alsa-utils
 	media-sound/aumix
 	media-video/rovclock
-	net-firewall/guarddog
 	net-ftp/gftp
 	net-im/licq
 	net-im/ysm
@@ -92,7 +91,8 @@ livecd/packages:
 	x11-libs/gksu
 	x11-libs/vte
 	x11-misc/cairo-clock
-	x11-misc/grsync
+# keywords.
+#	x11-misc/grsync
 	x11-plugins/pidgin-encryption
 	x11-plugins/pidgin-extprefs
 	x11-terms/xterm
@@ -104,10 +104,12 @@ livecd/packages:
 	app-benchmarks/tiobench
 	app-crypt/aespipe
 	app-crypt/aesutil
-	app-crypt/gnupg-pkcs11-scd
+# keywords.
+#	app-crypt/gnupg-pkcs11-scd
 	app-crypt/gpgme
 	app-crypt/hashalot
-	app-crypt/luks-tools
+# keywords.
+#	app-crypt/luks-tools
 	app-crypt/mcrypt
 	app-crypt/md5deep
 	app-editors/scite
@@ -118,15 +120,18 @@ livecd/packages:
 	app-admin/hwreport
 	app-arch/cabextract
 	app-arch/cfv
-	app-arch/lzip
+# keywords.
+#	app-arch/lzip
 	app-arch/lzma-utils
 	app-arch/p7zip
 	app-arch/pbzip2
-	app-arch/pigz
+# keywords.
+#	app-arch/pigz
 	app-arch/xarchiver	
 	app-arch/zip	
-	app-backup/tob
-	app-cdr/cdw
+# keywords.
+#	app-backup/tob
+#	app-cdr/cdw
 	app-cdr/xfburn
 	app-crypt/chntpw
 	app-crypt/pinentry
@@ -216,7 +221,7 @@ livecd/packages:
 	app-cdr/cdrkit
 	app-cdr/dvd+rw-tools
 	app-cdr/gnomebaker
-	app-cdr/k3b
+	#app-cdr/k3b
 	app-cdr/nrg2iso
 	app-crypt/gnupg
 	app-editors/bluefish
@@ -226,8 +231,7 @@ livecd/packages:
 	app-editors/xemacs
 	app-forensics/chkrootkit
 	app-laptop/i8kutils
-### Can't emerge with profile USE
-#	app-misc/beagle
+	app-misc/beagle
 	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
@@ -239,7 +243,6 @@ livecd/packages:
 	app-office/openoffice-bin
 	app-office/scribus
 	app-pda/gtkpod
-	app-pda/ipodslave
 	app-portage/genlop
 	app-portage/gentoolkit
 	app-portage/gentoolkit-dev
@@ -258,13 +261,11 @@ livecd/packages:
 	dev-util/cvs
 	dev-util/git
 	dev-util/indent
-	dev-util/kdbg
 	dev-util/ltrace
 	dev-util/strace
 	dev-util/subversion
 	dev-util/valgrind
 	gnome-base/gdm
-	gnome-base/gnome
 	gnome-extra/evolution-exchange
 	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
@@ -273,14 +274,13 @@ livecd/packages:
 	mail-client/sylpheed
 	mail-client/claws-mail
 	media-gfx/blender
-	media-gfx/digikam
+	#media-gfx/digikam
 	media-gfx/fbgrab
 	media-gfx/gimp
 	media-gfx/gtkam
 	media-gfx/inkscape
 	media-gfx/xsane
-# pulls in mysql, FIX ME
-#	media-sound/amarok
+	media-sound/amarok
 	media-sound/audacious
 # fails because of expat libs
 #	media-sound/audacity
@@ -296,7 +296,7 @@ livecd/packages:
 	media-video/ogle-gui
 	media-video/vlc
 	media-video/xine-ui
-	media-video/kmplayer
+	media-video/smplayer
 	net-analyzer/ettercap
 	net-analyzer/netcat
 	net-analyzer/nmap
@@ -310,9 +310,7 @@ livecd/packages:
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables
-	net-firewall/kmyfirewall
-### Compile failure (bug #146214)
-#	net-ftp/ncftp
+	net-ftp/ncftp
 	net-fs/mount-cifs
 	net-fs/nfs-utils
 	net-fs/samba
@@ -357,21 +355,16 @@ livecd/packages:
 	sys-apps/eject
 	sys-apps/ethtool
 	sys-apps/fxload
-	#sys-apps/gli
 	sys-apps/gradm
 	sys-apps/hdparm
 	sys-apps/hwsetup
-#	sys-apps/ibm-powerpc-utils
-#	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2
 	sys-apps/ivman
-#	sys-apps/lssbus
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/parted
 	sys-apps/pcsc-lite
 	sys-apps/pmount
-#	sys-apps/powerpc-utils
 	sys-apps/qtparted
 	sys-apps/sdparm
 	sys-apps/sg3_utils
@@ -384,15 +377,10 @@ livecd/packages:
 	sys-block/mpt-status
 	sys-block/partimage
 	sys-block/qla-fc-firmware
-#	sys-boot/aboot
-#	sys-boot/elilo
 	sys-boot/grub
 	sys-boot/lilo
 	sys-boot/syslinux
-#	sys-boot/yaboot
-#	sys-devel/binutils-hppa64
 	sys-devel/distcc
-#	sys-devel/gcc-hppa64
 	sys-devel/gdb
 	sys-fs/dmraid
 	sys-fs/dosfstools
@@ -400,11 +388,9 @@ livecd/packages:
 	sys-fs/evms
 	sys-fs/hfsplusutils
 	sys-fs/hfsutils
-#	sys-fs/iprutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
-#	sys-fs/lvm-user
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/ntfsprogs
@@ -436,4 +422,5 @@ livecd/packages:
 	x11-wm/enlightenment
 	x11-wm/fluxbox
 	x11-wm/windowmaker
+	x11-wm/openbox
 	xfce-base/xfce4-meta

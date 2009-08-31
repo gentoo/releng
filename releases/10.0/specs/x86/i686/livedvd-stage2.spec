@@ -4,15 +4,14 @@ target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/10.0/desktop
 snapshot: 20090829
-source_subpath: default/livecd-stage1-i686-installer-10.0
+source_subpath: default/livecd-stage1-i686-10.0
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-#livecd/fsscript: /home/agaffney/release/10.0/scripts/livecd.sh
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
-livecd/iso: /var/tmp/catalyst/builds/default/livedvd-i686-installer-10.0.iso
-livecd/type: gentoo-release-livecd
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j10
+livecd/iso: /var/tmp/catalyst/builds/default/livedvd-i686-10.0.iso
+livecd/type: gentoo-release-livedvd
 livecd/volid: Gentoo Linux 10.0 x86 LiveDVD
 livecd/xdm: gdm
 livecd/xsession: gnome
@@ -63,7 +62,7 @@ boot/kernel/gentoo/packages:
 
 livecd/unmerge:
 	sys-kernel/gentoo-sources
-
+	
 livecd/empty:
 	/var/tmp
 	/var/empty
