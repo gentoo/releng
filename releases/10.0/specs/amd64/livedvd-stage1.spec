@@ -310,7 +310,6 @@ livecd/packages:
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables
-	net-firewall/kmyfirewall
 	net-ftp/ncftp
 	net-fs/mount-cifs
 	net-fs/nfs-utils
