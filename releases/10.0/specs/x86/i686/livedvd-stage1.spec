@@ -128,7 +128,7 @@ livecd/packages:
 # keywords.
 #	app-arch/pigz
 	app-arch/xarchiver	
-	app-arch/zip	
+	app-arch/zip
 # keywords.
 #	app-backup/tob
 #	app-cdr/cdw
@@ -266,6 +266,7 @@ livecd/packages:
 	dev-util/subversion
 	dev-util/valgrind
 	gnome-base/gdm
+	gnome-base/gnome
 	gnome-extra/evolution-exchange
 	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
