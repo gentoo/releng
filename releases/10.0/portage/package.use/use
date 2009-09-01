@@ -1,5 +1,4 @@
 net-dns/avahi qt3 dbus
-media-sound/amarok -mysql
 gnome-extra/evolution-data-server ldap kerberos
 gnome-extra/gnome-utils -ipv6 -hal
 app-office/akonadi-server -mysql sqlite
