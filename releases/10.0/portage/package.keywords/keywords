@@ -24,6 +24,7 @@ sys-apps/flashrom
 sys-apps/ipmitool
 sys-block/lsiutil
 sys-block/open-iscsi
+sys-block/partitionmanager
 sys-fs/btrfs-progs
 x11-libs/gtk+
 x11-libs/qtscriptgenerator
