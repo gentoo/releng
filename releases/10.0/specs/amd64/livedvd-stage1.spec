@@ -169,10 +169,12 @@ livecd/packages:
 	net-misc/openvpn
 	net-misc/rsync
 	net-misc/telnet-bsd
-	net-misc/udpcast
-	net-misc/wput
+# keywords.
+#	net-misc/udpcast
+#	net-misc/wput
 	sys-apps/cciss_vol_status
-	sys-apps/dcfldd
+# keywords.
+#	sys-apps/dcfldd
 	sys-apps/diffutils	
 	sys-apps/dmapi
 	sys-apps/ed
@@ -210,7 +212,8 @@ livecd/packages:
 	app-admin/sudo
 	app-admin/superadduser
 	app-admin/syslog-ng
-	app-admin/testdisk
+# keywords.
+#	app-admin/testdisk
 	app-arch/alien
 	app-arch/mt-st
 	app-arch/unrar
@@ -335,7 +338,8 @@ livecd/packages:
 	net-proxy/ntlmaps
 	net-proxy/tsocks
 	net-wireless/aircrack-ng
-	net-wireless/airsnort
+# keywords.
+#	net-wireless/airsnort
 #	net-wireless/b43-fwcutter
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/gnome-bluetooth
@@ -372,7 +376,8 @@ livecd/packages:
 	sys-apps/smartmontools
 	sys-block/aoetools
 	sys-block/disktype
-	sys-block/gpart
+# keywords.
+#	sys-block/gpart
 	sys-block/gparted
 	sys-block/mpt-status
 	sys-block/partimage
@@ -386,7 +391,8 @@ livecd/packages:
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/evms
-	sys-fs/hfsplusutils
+# keywords.
+#	sys-fs/hfsplusutils
 	sys-fs/hfsutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi
