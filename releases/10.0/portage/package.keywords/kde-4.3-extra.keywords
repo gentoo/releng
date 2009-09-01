@@ -1,7 +1,6 @@
 #net-wireless/bluez
 >=app-admin/eselect-python-20090804
 
-
 ~x11-libs/qt-4.5.2
 ~x11-libs/qt-assistant-4.5.2
 ~x11-libs/qt-core-4.5.2
@@ -16,4 +15,3 @@
 ~x11-libs/qt-test-4.5.2
 ~x11-libs/qt-webkit-4.5.2
 ~x11-libs/qt-xmlpatterns-4.5.2
-
