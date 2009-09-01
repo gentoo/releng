@@ -1,0 +1,8 @@
+media-sound/amarok ~x86
+x11-libs/qtscriptgenerator ~x86
+dev-db/mysql ~x86
+media-libs/taglib-extras ~x86
+media-sound/amarok-utils ~x86
+app-misc/mc ~x86
+net-wireless/atmel-firmware ~x86
+net-wireless/bcm43xx-fwcutter ~x86
