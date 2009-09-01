@@ -33,13 +33,16 @@ boot/kernel/gentoo/packages:
         net-wireless/ndiswrapper
         sys-apps/lm_sensors
         net-wireless/acx-firmware
-        net-wireless/atmel-firmware
+# keywords.
+#        net-wireless/atmel-firmware
         net-wireless/b43-fwcutter
-        net-wireless/bcm43xx-fwcutter
+# keywords.
+#        net-wireless/bcm43xx-fwcutter
         net-wireless/zd1201-firmware
         net-wireless/zd1211-firmware
         sys-block/iscsitarget
-        sys-block/open-iscsi
+# keywords.
+#        sys-block/open-iscsi
         net-misc/openswan
 # failed
 #       sys-apps/pcmcia-cs

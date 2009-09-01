@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090830
+snapshot: 20090831
 source_subpath: default/stage3-i686-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage
 
@@ -90,8 +90,8 @@ livecd/packages:
 	x11-drivers/xf86-video-cirrus
 	x11-libs/gksu
 	x11-libs/vte
-	x11-misc/cairo-clock
 # keywords.
+#	x11-misc/cairo-clock
 #	x11-misc/grsync
 	x11-plugins/pidgin-encryption
 	x11-plugins/pidgin-extprefs
@@ -128,12 +128,13 @@ livecd/packages:
 # keywords.
 #	app-arch/pigz
 	app-arch/xarchiver	
-	app-arch/zip
+	app-arch/zip	
 # keywords.
 #	app-backup/tob
 #	app-cdr/cdw
 	app-cdr/xfburn
-	app-crypt/chntpw
+# keywords.
+#	app-crypt/chntpw
 	app-crypt/pinentry
 	app-editors/hexcurse
 	app-editors/joe
@@ -177,9 +178,11 @@ livecd/packages:
 	sys-apps/dmapi
 	sys-apps/ed
 	sys-apps/fbset
-	sys-apps/flashrom
+# keywords.
+#	sys-apps/flashrom
 	sys-apps/groff
-	sys-apps/ipmitool
+# keywords.
+#	sys-apps/ipmitool
 	sys-apps/kbd
 	sys-apps/lshw
 	sys-apps/pciutils
@@ -188,16 +191,19 @@ livecd/packages:
 	sys-apps/rename
 	sys-apps/rescan-scsi-bus
 	sys-apps/setserial
-	sys-block/lsiutil	
+# keywords.
+#	sys-block/lsiutil	
 	sys-block/mbuffer
 	sys-block/ms-sys
 	sys-block/mtx
 	sys-block/nbd
-	sys-fs/btrfs-progs
+# keywords.
+#	sys-fs/btrfs-progs
 	sys-process/atop
 	sys-process/iotop
 	www-client/elinks
-	net-p2p/frostwire
+# keywords.
+#	net-p2p/frostwire
 	www-client/lynx
 	app-accessibility/brltty
 	app-admin/gkrellm
@@ -266,7 +272,6 @@ livecd/packages:
 	dev-util/subversion
 	dev-util/valgrind
 	gnome-base/gdm
-	gnome-base/gnome
 	gnome-extra/evolution-exchange
 	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
