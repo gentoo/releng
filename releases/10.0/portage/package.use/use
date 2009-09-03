@@ -5,24 +5,17 @@ app-office/akonadi-server -mysql sqlite
 # The one below should not be picked by emerge anyway, but this is the 'working' default
 dev-libs/soprano -redland java
 
-kde-base/kdelibs -zeroconf opengl spell
-kde-base/kdeplasma-addons opengl
+kde-base/kdelibs -zeroconf spell
 kde-base/kdm -consolekit pam
-kde-base/kinfocenter opengl
-kde-base/krunner opengl
-kde-base/kscreensaver opengl
-kde-base/kwin -xinerama opengl xcomposite
-kde-base/libplasmaclock opengl
+kde-base/kwin -xinerama xcomposite
 kde-base/phonon-kde -pulseaudio xine
 kde-base/plasma-workspace -google-gadgets -python -xinerama rss
 kde-base/solid -bluetooth -networkmanager -wicd
-kde-base/systemsettings opengl
 
 media-sound/phonon -gstreamer xcb xine
 
 x11-libs/qt-core -glib iconv
 x11-libs/qt-gui -glib -gtk
-x11-libs/qt-opengl
 x11-libs/qt-sql -firebird -odbc -mysql -postgres iconv sqlite
 x11-libs/qt-webkit kde
 
@@ -30,5 +23,5 @@ sys-auth/pambase consolekit
 
 dev-db/mysql embedded
 dev-libs/gmime mono
-#sys-block/gparted -dmraid -fat -hfs -jfs -ntfs reiserfs xfce xfs
+sys-block/gparted dmraid fat hfs jfs kde gnome ntfs reiserfs xfce xfs
 app-misc/mc slang samba
