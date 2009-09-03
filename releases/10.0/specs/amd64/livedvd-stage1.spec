@@ -234,7 +234,6 @@ livecd/packages:
 	app-editors/xemacs
 	app-forensics/chkrootkit
 	app-laptop/i8kutils
-	app-misc/beagle
 	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
