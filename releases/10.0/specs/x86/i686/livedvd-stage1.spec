@@ -135,7 +135,6 @@ livecd/packages:
 #	app-cdr/cdw
 	app-cdr/xfburn
 # keywords.
-#	app-crypt/chntpw
 	app-crypt/pinentry
 	app-editors/hexcurse
 	app-editors/joe
@@ -182,8 +181,7 @@ livecd/packages:
 # keywords.
 #	sys-apps/flashrom
 	sys-apps/groff
-# keywords.
-#	sys-apps/ipmitool
+	sys-apps/ipmitool
 	sys-apps/kbd
 	sys-apps/lshw
 	sys-apps/pciutils
@@ -296,7 +294,6 @@ livecd/packages:
 	media-sound/grip
 	media-sound/hydrogen
 	media-sound/rhythmbox
-	media-video/dvdrip
 	media-video/gxine
 	media-video/lsdvd
 	media-video/mplayer

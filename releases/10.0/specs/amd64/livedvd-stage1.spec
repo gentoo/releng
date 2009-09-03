@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/10.0/desktop
-snapshot: 20090826
+snapshot: 20090931
 source_subpath: default/stage3-amd64-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage/
 
@@ -15,6 +15,7 @@ livecd/use:
 	gnome
 	qt4
 livecd/packages:
+	sys-block/partitionmanager
 	kde-base/kdebase-meta
 	gnome-base/gnome
 	x11-proto/dri2proto
@@ -133,7 +134,6 @@ livecd/packages:
 #	app-backup/tob
 #	app-cdr/cdw
 	app-cdr/xfburn
-	app-crypt/chntpw
 	app-crypt/pinentry
 	app-editors/hexcurse
 	app-editors/joe
@@ -293,7 +293,6 @@ livecd/packages:
 	media-sound/grip
 	media-sound/hydrogen
 	media-sound/rhythmbox
-	media-video/dvdrip
 	media-video/gxine
 	media-video/lsdvd
 	media-video/mplayer

@@ -25,7 +25,8 @@ boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/10.0/kconfig/x86/installcd-2.6.28.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
-	net-wireless/rt73-firmware
+# keywords.
+#	net-wireless/rt73-firmware
         net-dialup/ppp
 	net-dialup/pppconfig
         net-dialup/rp-pppoe
