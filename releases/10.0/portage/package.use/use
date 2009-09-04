@@ -5,6 +5,7 @@ app-office/akonadi-server -mysql sqlite
 # The one below should not be picked by emerge anyway, but this is the 'working' default
 dev-libs/soprano -redland java
 
+dev-python/PyQt4 dbus sql svg webkit X
 kde-base/kdelibs -zeroconf spell
 kde-base/kdm -consolekit pam
 kde-base/kwin -xinerama xcomposite

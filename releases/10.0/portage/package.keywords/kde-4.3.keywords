@@ -113,7 +113,7 @@ kde-base/smoke:4.3
 >=dev-python/pycups-1.9.46
 app-misc/hal-cups-utils
 sys-auth/policykit-qt
-~app-office/akonadi-server-1.2.0
+~app-office/akonadi-server-1.2.1
 ~dev-libs/soprano-2.3.0
 kde-base/blinken:4.3
 kde-base/kalgebra:4.3
