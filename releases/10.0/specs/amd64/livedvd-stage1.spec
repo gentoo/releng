@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/10.0/desktop
-snapshot: 20090931
+snapshot: 20090903
 source_subpath: default/stage3-amd64-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage/
 
@@ -15,6 +15,19 @@ livecd/use:
 	gnome
 	qt4
 livecd/packages:
+        x11-terms/terminal
+        app-editors/mousepad
+        x11-themes/xfce4-icon-theme
+        x11-themes/tango-icon-theme
+        media-fonts/dejavu
+        xfce-extra/xfce4-places-plugin
+        xfce-extra/thunar-thumbnailers
+        xfce-extra/thunar-volman
+        xfce-extra/xfce4-screenshooter
+        xfce-extra/xfce4-xkb-plugin
+        xfce-extra/xfce4-clipman-plugin
+        xfce-extra/xfce4-notes-plugin
+        xfce-extra/xfce4-mixer
 	sys-block/partitionmanager
 	kde-base/kdebase-meta
 	gnome-base/gnome

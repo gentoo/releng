@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090901
+snapshot: 20090903
 source_subpath: default/livecd-stage1-i686-10.0
 
 livecd/bootargs: dokeymap
@@ -22,7 +22,7 @@ livecd/rcadd:
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/10.0/kconfig/x86/installcd-2.6.28.config
+boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/10.0/kconfig/x86/installcd-2.6.30.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 # keywords.
