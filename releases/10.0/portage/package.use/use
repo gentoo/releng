@@ -1,24 +1,24 @@
 net-dns/avahi qt3 dbus
 gnome-extra/evolution-data-server ldap kerberos
 gnome-extra/gnome-utils -ipv6 -hal
+
 app-office/akonadi-server -mysql sqlite
 # The one below should not be picked by emerge anyway, but this is the 'working' default
 dev-libs/soprano -redland java
-
 dev-python/PyQt4 dbus sql svg webkit X
+media-sound/phonon -gstreamer xcb xine
+
+x11-libs/qt-core -glib iconv
+x11-libs/qt-gui -glib -gtk mng
+x11-libs/qt-sql -firebird -odbc -mysql -postgres iconv sqlite
+x11-libs/qt-webkit kde
+
 kde-base/kdelibs -zeroconf spell
 kde-base/kdm -consolekit pam
 kde-base/kwin -xinerama xcomposite
 kde-base/phonon-kde -pulseaudio xine
 kde-base/plasma-workspace -google-gadgets -python -xinerama rss
 kde-base/solid -bluetooth -networkmanager -wicd
-
-media-sound/phonon -gstreamer xcb xine
-
-x11-libs/qt-core -glib iconv
-x11-libs/qt-gui -glib -gtk
-x11-libs/qt-sql -firebird -odbc -mysql -postgres iconv sqlite
-x11-libs/qt-webkit kde
 
 sys-auth/pambase consolekit
 
