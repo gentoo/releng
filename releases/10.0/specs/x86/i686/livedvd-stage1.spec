@@ -29,6 +29,7 @@ livecd/packages:
 	xfce-extra/xfce4-notes-plugin
 	xfce-extra/xfce4-mixer
 	sys-block/partitionmanager
+	sys-block/tw_cli
 	kde-base/kdebase-meta
 	gnome-base/gnome
 	x11-proto/dri2proto
@@ -203,7 +204,7 @@ livecd/packages:
 	sys-apps/rename
 	sys-apps/rescan-scsi-bus
 	sys-apps/setserial
-# keywords.
+# keywords AND license restricted. Must not be included in public media.
 #	sys-block/lsiutil	
 	sys-block/mbuffer
 	sys-block/ms-sys

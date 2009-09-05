@@ -120,6 +120,7 @@ livecd/packages:
 ### Masked (~amd64)
 #	sys-block/partimage
 	sys-block/qla-fc-firmware
+	sys-block/tw_cli
 ### Masked (no keywords)
 #	sys-boot/aboot
 ### Masked (no keywords)

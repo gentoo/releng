@@ -87,6 +87,7 @@ livecd/packages:
 	sys-apps/paxctl
 	sys-apps/readahead-list
 	sys-block/gparted
+	sys-block/tw_cli
 	sys-fs/dd-rescue
 	sys-fs/ddrescue
 	sys-power/powernowd
