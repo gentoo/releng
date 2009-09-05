@@ -382,7 +382,6 @@ livecd/packages:
 	sys-apps/parted
 	sys-apps/pcsc-lite
 	sys-apps/pmount
-	sys-apps/qtparted
 	sys-apps/sdparm
 	sys-apps/sg3_utils
 	sys-apps/slocate
