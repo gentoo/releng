@@ -44,6 +44,7 @@ livecd/packages:
 	xfce-extra/xfce4-mixer
 	sys-block/partitionmanager
 	sys-block/tw_cli
+	kde-base/kde-meta
 	kde-base/kdebase-meta
 	gnome-base/gnome
 	x11-proto/dri2proto

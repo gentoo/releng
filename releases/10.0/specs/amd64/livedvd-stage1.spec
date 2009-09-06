@@ -15,20 +15,20 @@ livecd/use:
 	gnome
 	qt4
 livecd/packages:
-        dev-util/qt-creator
-        dev-util/kdevelop
-        dev-util/kdesvn
-        dev-util/qgit
-        kde-misc/yakuake
-        net-irc/quassel
-        net-irc/konversation
-        net-im/kmess
-        www-client/arora
-        app-backup/luckybackup
-        net-im/qtwitter
-        media-sound/qmmp
-        app-cdr/k9copy
-        kde-misc/konq-plugins
+	dev-util/qt-creator
+	dev-util/kdevelop
+	dev-util/kdesvn
+	dev-util/qgit
+	kde-misc/yakuake
+	net-irc/quassel
+	net-irc/konversation
+	net-im/kmess
+	www-client/arora
+	app-backup/luckybackup
+	net-im/qtwitter
+	media-sound/qmmp
+	app-cdr/k9copy
+	kde-misc/konq-plugins
 	x11-terms/terminal
 	app-editors/mousepad
 	x11-themes/xfce4-icon-theme
@@ -44,6 +44,7 @@ livecd/packages:
 	xfce-extra/xfce4-mixer
 	sys-block/partitionmanager
 	sys-block/tw_cli
+	kde-base/kde-meta
 	kde-base/kdebase-meta
 	gnome-base/gnome
 	x11-proto/dri2proto
@@ -219,7 +220,7 @@ livecd/packages:
 	sys-apps/rescan-scsi-bus
 	sys-apps/setserial
 # keywords AND license restricted. Must not be included in public media.
-#	sys-block/lsiutil	
+#	sys-block/lsiutil
 	sys-block/mbuffer
 	sys-block/ms-sys
 	sys-block/mtx
