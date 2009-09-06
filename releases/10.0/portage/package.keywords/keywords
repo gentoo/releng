@@ -32,3 +32,14 @@ x11-misc/cairo-clock
 x11-misc/grsync
 www-client/epiphany
 www-client/epiphany-extensions
+net-irc/quassel
+app-backup/luckybackup
+app-cdr/k9copy
+kde-misc/konq-plugins
+net-im/kmess
+net-irc/konversation
+kde-misc/yakuake
+dev-util/kdesvn
+dev-util/kdevelop
+dev-util/kdevplatform
+net-im/licq

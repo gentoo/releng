@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090903
+snapshot: 20090905
 source_subpath: default/stage3-i686-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage
 
@@ -15,6 +15,20 @@ livecd/use:
 	gnome
 	qt4
 livecd/packages:
+	dev-util/qt-creator
+	dev-util/kdevelop
+	dev-util/kdesvn
+	dev-util/qgit
+	kde-misc/yakuake
+	net-irc/quassel
+	net-irc/konversation
+	net-im/kmess
+	www-client/arora
+	app-backup/luckybackup
+	net-im/qtwitter
+	media-sound/qmmp
+	app-cdr/k9copy
+	kde-misc/konq-plugins
 	x11-terms/terminal
 	app-editors/mousepad
 	x11-themes/xfce4-icon-theme

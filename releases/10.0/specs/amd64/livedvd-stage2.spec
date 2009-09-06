@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage2
 rel_type: default
 profile: default/linux/amd64/10.0/desktop
-snapshot: 20090903
+snapshot: 20090906
 source_subpath: default/livecd-stage1-amd64-10.0
 
 livecd/bootargs: dokeymap
