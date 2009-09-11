@@ -15,20 +15,20 @@ livecd/use:
 	gnome
 	qt4
 livecd/packages:
-        dev-util/qt-creator
-        dev-util/kdevelop
-        dev-util/kdesvn
-        dev-util/qgit
-        kde-misc/yakuake
-        net-irc/quassel
-        net-irc/konversation
-        net-im/kmess
-        www-client/arora
-        app-backup/luckybackup
-        net-im/qtwitter
-        media-sound/qmmp
-        app-cdr/k9copy
-        kde-misc/konq-plugins
+	dev-util/qt-creator
+	dev-util/kdevelop
+	dev-util/kdesvn
+	dev-util/qgit
+	kde-misc/yakuake
+	net-irc/quassel
+	net-irc/konversation
+	net-im/kmess
+	www-client/arora
+	app-backup/luckybackup
+	net-im/qtwitter
+	media-sound/qmmp
+	app-cdr/k9copy
+	kde-misc/konq-plugins
 	x11-terms/terminal
 	app-editors/mousepad
 	x11-themes/xfce4-icon-theme
