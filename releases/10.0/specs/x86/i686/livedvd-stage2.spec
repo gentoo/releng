@@ -15,7 +15,7 @@ livecd/iso: /var/tmp/catalyst/builds/default/livedvd-i686-10.0.iso
 livecd/type: gentoo-release-livedvd
 livecd/volid: Gentoo Linux 10.0 x86 LiveDVD
 livecd/xdm: kdm
-livecd/xsession: kde
+livecd/xsession: kde-4.3
 livecd/rcadd: 
 	hald|default 
 	dbus|default

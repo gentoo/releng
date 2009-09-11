@@ -14,14 +14,14 @@ livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 livecd/iso: /tmp/catalyst/builds/default/livedvd-amd64-10.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 10.0 amd64 LiveDVD
-livecd/xsession: gnome
-livecd/xdm: gdm
+livecd/xsession: kde-4.3
+livecd/xdm: kdm
 livecd/rcadd:
         hald|default
         dbus|default  
 
 #livecd/overlay: /var/svnroot/releng/trunk/releases/10.0/overlays/common/overlay/livecd
-#livecd/root_overlay: /var/svnroot/releng/trunk/releases/10.0/overlays/common/root_overlay
+livecd/root_overlay: /var/svnroot/releng/trunk/releases/10.0/overlays/common/root_overlay
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
