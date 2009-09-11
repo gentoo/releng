@@ -3,9 +3,10 @@ version_stamp: 10.0
 target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090905
+snapshot: 20090906
 source_subpath: default/livecd-stage1-i686-10.0
 
+livecd/root_overlay: /var/svnroot/releng/trunk/releases/10.0/livecd/root_overlay
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
@@ -13,8 +14,8 @@ livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j16
 livecd/iso: /var/tmp/catalyst/builds/default/livedvd-i686-10.0.iso
 livecd/type: gentoo-release-livedvd
 livecd/volid: Gentoo Linux 10.0 x86 LiveDVD
-livecd/xdm: gdm
-livecd/xsession: gnome
+livecd/xdm: kdm
+livecd/xsession: kde
 livecd/rcadd: 
 	hald|default 
 	dbus|default

@@ -43,3 +43,4 @@ dev-util/kdesvn
 dev-util/kdevelop
 dev-util/kdevplatform
 net-im/licq
+app-arch/libarchive

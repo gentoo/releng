@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090905
+snapshot: 20090910
 source_subpath: default/stage3-i686-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage
 
@@ -14,6 +14,12 @@ livecd/use:
 	socks5
 	gnome
 	qt4
+	atm
+	fbcondecor
+	mng
+	png
+	truetype
+	usb
 livecd/packages:
 	dev-util/qt-creator
 	dev-util/kdevelop
@@ -152,7 +158,6 @@ livecd/packages:
 	app-arch/cfv
 # keywords.
 #	app-arch/lzip
-	app-arch/lzma-utils
 	app-arch/p7zip
 	app-arch/pbzip2
 # keywords.
@@ -228,7 +233,6 @@ livecd/packages:
 # keywords.
 #	sys-fs/btrfs-progs
 	sys-process/atop
-	sys-process/iotop
 	www-client/elinks
 # keywords.
 #	net-p2p/frostwire
