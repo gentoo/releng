@@ -2,6 +2,7 @@ app-admin/eselect-python
 app-arch/lrzip
 app-arch/lzip
 app-arch/pigz
+app-arch/xz-utils
 app-crypt/chntpw
 app-crypt/gnupg-pkcs11-scd
 app-crypt/luks-tools

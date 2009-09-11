@@ -151,7 +151,6 @@ livecd/packages:
 	app-arch/cfv
 # keywords.
 #	app-arch/lzip
-	app-arch/lzma-utils
 	app-arch/p7zip
 	app-arch/pbzip2
 # keywords.
