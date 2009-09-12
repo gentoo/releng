@@ -8,7 +8,7 @@ app-crypt/gnupg-pkcs11-scd
 app-crypt/luks-tools
 app-misc/mc
 app-office/koffice
-=app-portage/eix/eix-0.17.1
+=app-portage/eix-0.17.1
 dev-db/mysql
 dev-libs/glib
 dev-util/gtk-doc-am
