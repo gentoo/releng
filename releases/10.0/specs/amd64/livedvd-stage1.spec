@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/10.0/desktop
-snapshot: 20090906
+snapshot: 20090913
 source_subpath: default/stage3-amd64-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage/
 
@@ -153,6 +153,7 @@ livecd/packages:
 #	app-arch/lzip
 	app-arch/p7zip
 	app-arch/pbzip2
+	app-arch/xz-utils
 # keywords.
 #	app-arch/pigz
 	app-arch/xarchiver	

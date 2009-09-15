@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090910
+snapshot: 20090913
 source_subpath: default/stage3-i686-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage
 
@@ -14,12 +14,6 @@ livecd/use:
 	socks5
 	gnome
 	qt4
-	atm
-	fbcondecor
-	mng
-	png
-	truetype
-	usb
 livecd/packages:
 	dev-util/qt-creator
 	dev-util/kdevelop
@@ -51,7 +45,6 @@ livecd/packages:
 	sys-block/partitionmanager
 	sys-block/tw_cli
 	kde-base/kde-meta
-	kde-base/kdebase-meta
 	gnome-base/gnome
 	x11-proto/dri2proto
 	net-misc/wicd
@@ -126,8 +119,8 @@ livecd/packages:
 	x11-drivers/xf86-video-cirrus
 	x11-libs/gksu
 	x11-libs/vte
+	x11-misc/cairo-clock
 # keywords.
-#	x11-misc/cairo-clock
 #	x11-misc/grsync
 	x11-plugins/pidgin-encryption
 	x11-plugins/pidgin-extprefs
@@ -160,15 +153,15 @@ livecd/packages:
 #	app-arch/lzip
 	app-arch/p7zip
 	app-arch/pbzip2
+	app-arch/xz-utils
 # keywords.
 #	app-arch/pigz
 	app-arch/xarchiver	
-	app-arch/zip	
+	app-arch/zip
 # keywords.
 #	app-backup/tob
 #	app-cdr/cdw
 	app-cdr/xfburn
-# keywords.
 	app-crypt/pinentry
 	app-editors/hexcurse
 	app-editors/joe
@@ -233,6 +226,7 @@ livecd/packages:
 # keywords.
 #	sys-fs/btrfs-progs
 	sys-process/atop
+	sys-process/iotop
 	www-client/elinks
 # keywords.
 #	net-p2p/frostwire
@@ -303,6 +297,7 @@ livecd/packages:
 	dev-util/subversion
 	dev-util/valgrind
 	gnome-base/gdm
+	gnome-base/gnome
 	gnome-extra/evolution-exchange
 	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
