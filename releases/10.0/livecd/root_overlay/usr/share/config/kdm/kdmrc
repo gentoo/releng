@@ -42,7 +42,7 @@ AllowClose=false
 ClientLogFile=.xsession-errors
 AutoLoginEnable=true
 AutoLoginAgain=true
-AutoLoginDelay=20
+AutoLoginDelay=10
 AutoLoginUser=gentoo
 [X-:0-Greeter]
 PreselectUser=Default

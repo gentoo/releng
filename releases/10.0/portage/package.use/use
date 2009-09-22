@@ -27,3 +27,6 @@ sys-block/gparted dmraid fat hfs jfs kde gnome ntfs reiserfs xfce xfs
 app-misc/mc slang samba
 xfce-extra/thunar-thumbnailers ffmpeg
 net-irc/quassel sqlite
+net-wireless/wpa_supplicant madwifi
+media-plugins/gst-plugins-meta -dvd -a52 -mad -mpeg
+app-cdr/gnomebaker -mp3

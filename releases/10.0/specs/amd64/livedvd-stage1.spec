@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/10.0/desktop
-snapshot: 20090913
+snapshot: 20090921
 source_subpath: default/stage3-amd64-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage/
 
@@ -15,6 +15,33 @@ livecd/use:
 	gnome
 	qt4
 livecd/packages:
+	dev-util/devhelp
+	net-p2p/transmission
+	net-p2p/linuxdcpp
+	dev-util/giggle
+	media-libs/gstreamer
+	media-libs/gst-plugins-base
+	media-libs/schroedinger
+	dev-libs/liboil
+	media-libs/gst-plugins-bad
+	media-libs/gst-plugins-good
+	media-plugins/gst-plugins-gconf
+	media-plugins/gst-plugins-jpeg
+	media-plugins/gst-plugins-libpng
+	media-plugins/gst-plugins-soup
+	media-plugins/gst-plugins-speex
+	media-plugins/gst-plugins-alsa
+	media-plugins/gst-plugins-cdparanoia
+	media-plugins/gst-plugins-gio
+	media-plugins/gst-plugins-libvisual
+	media-plugins/gst-plugins-ogg
+	media-plugins/gst-plugins-pango
+	media-plugins/gst-plugins-theora
+	media-plugins/gst-plugins-v4l
+	media-plugins/gst-plugins-v4l2
+	media-plugins/gst-plugins-vorbis
+	media-plugins/gst-plugins-x
+	media-plugins/gst-plugins-xvideo
 	dev-util/qt-creator
 	dev-util/kdevelop
 	dev-util/kdesvn
@@ -22,6 +49,16 @@ livecd/packages:
 	kde-misc/yakuake
 	net-irc/quassel
 	net-irc/konversation
+# keywords.
+#	net-irc/cwirc
+#	net-irc/irssi-otr
+	net-irc/ninja
+	net-irc/rhapsody
+# keywords.
+#	net-irc/sic
+#	net-irc/smuxi
+#	net-irc/telepathy-idle
+	net-irc/xchat-xsys
 	net-im/kmess
 	www-client/arora
 	app-backup/luckybackup
@@ -268,11 +305,25 @@ livecd/packages:
 	app-misc/screen
 	app-misc/splitvt
 	app-misc/vlock
+	app-office/abiword
+	app-office/abiword-plugins
+	app-office/dia2code
 	app-office/dia
+# keywords.
+#	app-office/eqe
 	app-office/gnucash
 	app-office/gnumeric
+	app-office/grisbi
 	app-office/openoffice-bin
 	app-office/scribus
+# keywords.
+#	app-office/koffice
+#	app-office/mozilla-sunbird-bin
+	app-office/orage
+# keywords.
+#	app-office/osmo
+	app-office/planner
+	app-office/texmaker
 	app-pda/gtkpod
 	app-portage/genlop
 	app-portage/gentoolkit

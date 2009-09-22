@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage2
 rel_type: default
 profile: default/linux/amd64/10.0/desktop
-snapshot: 20090913
+snapshot: 20090921
 source_subpath: default/livecd-stage1-amd64-10.0
 
 livecd/bootargs: dokeymap
@@ -14,20 +14,29 @@ livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 livecd/iso: /tmp/catalyst/builds/default/livedvd-amd64-10.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 10.0 amd64 LiveDVD
-livecd/xsession: kde 4.3
+livecd/xsession: default
 livecd/xdm: kdm
 livecd/rcadd:
-        hald|default
-        dbus|default  
+	hald|default
+	dbus|default
 
 #livecd/overlay: /var/svnroot/releng/trunk/releases/10.0/overlays/common/overlay/livecd
-livecd/root_overlay: /var/svnroot/releng/trunk/releases/10.0/overlays/common/root_overlay
+livecd/root_overlay: /var/svnroot/releng/trunk/releases/10.0/livecd/root_overlay
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config:  /var/svnroot/releng/trunk/releases/10.0/kconfig/amd64/installcd-2.6.30.config
+boot/kernel/gentoo/use:
+	atm
+	fbcondecor
+	mng
+	png
+	portaudio
+	truetype
+	usb
 boot/kernel/gentoo/use: atm fbcondecor mng png portaudio truetype usb
 boot/kernel/gentoo/packages:
+	app-accessibility/espeakup
 # keywords.
 #	net-wireless/rt73-firmware
         net-dialup/ppp
