@@ -17,6 +17,7 @@ media-gfx/digikam
 media-libs/taglib-extras
 media-sound/amarok
 media-sound/amarok-utils
+=media-video/ffmpeg-0.5_p19928
 net-p2p/frostwire
 net-wireless/atmel-firmware
 net-wireless/bcm43xx-fwcutter
