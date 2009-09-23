@@ -1,6 +1,3 @@
-releng_root_dir=/var/svnroot/releng/trunk
-build_root_dir=/tmp/catalyst/builds
-
 subarch: amd64
 version_stamp: 10.0
 target: livecd-stage2
@@ -11,7 +8,7 @@ source_subpath: default/livecd-stage1-amd64-10.0
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-#livecd/fsscript: ${releng_root_dir}/releases/10.0/scripts/livecd.sh
+#livecd/fsscript: /var/svnroot/releng/trunk/releases/10.0/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
 livecd/iso: ${build_root_dir}/default/livedvd-amd64-10.0.iso
@@ -23,12 +20,12 @@ livecd/rcadd:
 	hald|default
 	dbus|default
 
-#livecd/overlay: ${releng_root_dir}/releases/10.0/overlays/common/overlay/livecd
-livecd/root_overlay: ${releng_root_dir}/releases/10.0/livecd/root_overlay
+#livecd/overlay: /var/svnroot/releng/trunk/releases/10.0/overlays/common/overlay/livecd
+livecd/root_overlay: /var/svnroot/releng/trunk/releases/10.0/livecd/root_overlay
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config:  ${releng_root_dir}/releases/10.0/kconfig/amd64/installcd-2.6.30.config
+boot/kernel/gentoo/config:  /var/svnroot/releng/trunk/releases/10.0/kconfig/amd64/installcd-2.6.30.config
 boot/kernel/gentoo/use:
 	atm
 	fbcondecor

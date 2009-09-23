@@ -1,5 +1,3 @@
-releng_root_dir=/var/svnroot/releng/trunk/                                                                                   
-
 subarch: i686
 version_stamp: 10.0
 target: livecd-stage1
@@ -7,7 +5,7 @@ rel_type: default
 profile: default/linux/x86/10.0/desktop
 snapshot: 20090921
 source_subpath: default/stage3-i686-desktop-10.0
-portage_confdir: ${portage_root_dir}/releases/10.0/portage/
+portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage
 
 livecd/use:
 	branding
