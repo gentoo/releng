@@ -1,3 +1,5 @@
+releng_root_dir=/var/svnroot/releng/trunk/                                                                                   
+
 subarch: i686
 version_stamp: 10.0
 target: livecd-stage1
@@ -5,7 +7,7 @@ rel_type: default
 profile: default/linux/x86/10.0/desktop
 snapshot: 20090921
 source_subpath: default/stage3-i686-desktop-10.0
-portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage
+portage_confdir: ${portage_root_dir}/releases/10.0/portage/
 
 livecd/use:
 	branding
@@ -15,33 +17,33 @@ livecd/use:
 	gnome
 	qt4
 livecd/packages:
-        dev-util/devhelp
-        net-p2p/transmission
-        net-p2p/linuxdcpp  
-        dev-util/giggle
-        media-libs/gstreamer
-        media-libs/gst-plugins-base
-        media-libs/schroedinger
-        dev-libs/liboil
-        media-libs/gst-plugins-bad
-        media-libs/gst-plugins-good
-        media-plugins/gst-plugins-gconf
-        media-plugins/gst-plugins-jpeg
-        media-plugins/gst-plugins-libpng
-        media-plugins/gst-plugins-soup
-        media-plugins/gst-plugins-speex
-        media-plugins/gst-plugins-alsa
-        media-plugins/gst-plugins-cdparanoia
-        media-plugins/gst-plugins-gio
-        media-plugins/gst-plugins-libvisual
-        media-plugins/gst-plugins-ogg
-        media-plugins/gst-plugins-pango  
-        media-plugins/gst-plugins-theora
-        media-plugins/gst-plugins-v4l
-        media-plugins/gst-plugins-v4l2
-        media-plugins/gst-plugins-vorbis
-        media-plugins/gst-plugins-x
-        media-plugins/gst-plugins-xvideo
+	dev-util/devhelp
+	net-p2p/transmission
+	net-p2p/linuxdcpp
+	dev-util/giggle
+	media-libs/gstreamer
+	media-libs/gst-plugins-base
+	media-libs/schroedinger
+	dev-libs/liboil
+	media-libs/gst-plugins-bad
+	media-libs/gst-plugins-good
+	media-plugins/gst-plugins-gconf
+	media-plugins/gst-plugins-jpeg
+	media-plugins/gst-plugins-libpng
+	media-plugins/gst-plugins-soup
+	media-plugins/gst-plugins-speex
+	media-plugins/gst-plugins-alsa
+	media-plugins/gst-plugins-cdparanoia
+	media-plugins/gst-plugins-gio
+	media-plugins/gst-plugins-libvisual
+	media-plugins/gst-plugins-ogg
+	media-plugins/gst-plugins-pango
+	media-plugins/gst-plugins-theora
+	media-plugins/gst-plugins-v4l
+	media-plugins/gst-plugins-v4l2
+	media-plugins/gst-plugins-vorbis
+	media-plugins/gst-plugins-x
+	media-plugins/gst-plugins-xvideo
 	dev-util/qt-creator
 	dev-util/kdevelop
 	dev-util/kdesvn
@@ -51,14 +53,14 @@ livecd/packages:
 	net-irc/konversation
         net-irc/cwirc
 # keywords.
-#        net-irc/irssi-otr
-        net-irc/ninja
-        net-irc/rhapsody
+#	net-irc/irssi-otr
+	net-irc/ninja
+	net-irc/rhapsody
 # keywords.
-#        net-irc/sic
-#        net-irc/smuxi  
-#        net-irc/telepathy-idle
-        net-irc/xchat-xsys
+#	net-irc/sic
+#	net-irc/smuxi
+#	net-irc/telepathy-idle
+	net-irc/xchat-xsys
 	net-im/kmess
 	www-client/arora
 	app-backup/luckybackup
