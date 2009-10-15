@@ -2,6 +2,14 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Oct 2009; Raúl Porcel <armin76@gentoo.org>
+  -kconfig/alpha/installcd-2.6.23.config,
+  specs/alpha/installcd-stage2-minimal.spec,
+  -kconfig/alpha/installcd-2.6.24.2.config,
+  -kconfig/alpha/installcd-2.6.24.6.config,
+  +kconfig/alpha/installcd-2.6.30.config:
+  Update kconfig, add ext4 and some vga stuff for alpha
+
   28 Sep 2009; Raúl Porcel <armin76@gentoo.org>
   -kconfig/ia64/installcd-2.6.28.config,
   specs/ia64/installcd-stage2-minimal.spec,
