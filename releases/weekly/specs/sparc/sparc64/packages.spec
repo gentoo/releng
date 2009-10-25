@@ -2,7 +2,7 @@ subarch: sparc64
 version_stamp: 2008.0
 target: grp
 rel_type: default
-profile: default/linux/sparc/2008.0/desktop
+profile: default/linux/sparc/10.0/desktop
 snapshot: 2008.0
 source_subpath: default/stage3-sparc64-2008.0
 grp: cd2
