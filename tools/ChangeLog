@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
 
+  02 Nov 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
+  Detect build failure in one of the build sets and act accordingly
+
   01 Jul 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto-hppa.conf:
   Switch hppa config to use build sets
 
