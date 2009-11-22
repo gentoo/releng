@@ -27,30 +27,30 @@ livecd/rcadd:
 livecd/root_overlay: /var/svnroot/releng/trunk/releases/10.0/livecd/root_overlay
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config:  /var/svnroot/releng/trunk/releases/10.0/kconfig/amd64/installcd-2.6.30.config
+boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/10.0/kconfig/amd64/installcd-2.6.30.config
 boot/kernel/gentoo/use:
-        atm       
-        fbcondecor
-        mng
-        png      
-        portaudio
-        truetype   
-        usb           
-        -x264
-        -mp3
+	atm
+	fbcondecor
+	mng
+	png
+	portaudio
+	truetype
+	usb
+	-x264
+	-mp3
 	-mp4
-        -mpeg2
-        -mpeg4pt2
-        -xvid
-        -a52
-        -real
-        -dvdnav
-        -faac
-        -amr
-        nautilus
-        exif
-        cdda
-        avahi
+	-mpeg2
+	-mpeg4pt2
+	-xvid
+	-a52
+	-real
+	-dvdnav
+	-faac
+	-amr
+	nautilus
+	exif
+	cdda
+	avahi
 boot/kernel/gentoo/packages:
 	x11-drivers/linuxwacom
 	net-wireless/ipw2200-firmware
@@ -72,7 +72,7 @@ boot/kernel/gentoo/packages:
 	net-wireless/b43-fwcutter
 	net-wireless/bcm43xx-fwcutter
 	net-wireless/zd1201-firmware
-	net-wireless/zd1211-firmware                                                           
+	net-wireless/zd1211-firmware
 	sys-block/iscsitarget
 # failed
 #	sys-block/open-iscsi

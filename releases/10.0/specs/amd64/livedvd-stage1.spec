@@ -14,35 +14,35 @@ livecd/use:
 	socks5
 	gnome
 	qt4
-        -x264
-        -mp3
+	-x264
+	-mp3
 	-mp4
-        -mpeg2
-        -mpeg4pt2
-        -xvid
-        -a52
-        -real
-        -dvdnav
-        -faac
-        -amr
-        nautilus
-        exif
-        cdda
-        avahi
+	-mpeg2
+	-mpeg4pt2
+	-xvid
+	-a52
+	-real
+	-dvdnav
+	-faac
+	-amr
+	nautilus
+	exif
+	cdda
+	avahi
 livecd/packages:
 	media-tv/xbmc
 	sys-fs/nilfs-utils
 	x11-apps/xinput
 	x11-apps/xev
-        www-plugins/gecko-mediaplayer
-        media-video/gnome-mplayer
-        x11-themes/gtk-engines-qtcurve
-        x11-themes/gtk-engines-qt
-        x11-themes/qtcurve-qt4
+	www-plugins/gecko-mediaplayer
+	media-video/gnome-mplayer
+	x11-themes/gtk-engines-qtcurve
+	x11-themes/gtk-engines-qt
+	x11-themes/qtcurve-qt4
 	x11-misc/obconf
 	x11-misc/menumaker
-        app-admin/conky
-        media-gfx/scrot
+	app-admin/conky
+	media-gfx/scrot
 	app-misc/dtach
 	app-backup/flexbackup
 	net-dns/dnsmasq
