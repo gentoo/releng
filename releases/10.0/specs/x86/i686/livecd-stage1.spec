@@ -45,7 +45,7 @@ livecd/packages:
 	app-backup/duplicity
 	app-backup/rdiff-backup
 	app-backup/rsnapshot
-	app-cdr/bin2iso       
+	app-cdr/bin2iso
 	app-cdr/ccd2iso
 	app-cdr/cdrdao
 	app-cdr/mdf2iso

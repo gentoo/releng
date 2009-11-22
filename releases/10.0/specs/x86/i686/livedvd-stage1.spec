@@ -3,7 +3,7 @@ version_stamp: 10.0
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0/desktop
-snapshot: 20090921
+snapshot: 20091117
 source_subpath: default/stage3-i686-desktop-10.0
 portage_confdir: /var/svnroot/releng/trunk/releases/10.0/portage
 
@@ -14,8 +14,47 @@ livecd/use:
 	socks5
 	gnome
 	qt4
+	-x264
+	-mp3
+	-mp4
+	-mpeg2
+	-mpeg4pt2
+	-xvid
+	-a52
+	-real
+	-dvdnav
+	-faac
+	-amr
+	nautilus
+	exif
+	cdda
+	avahi
 livecd/packages:
-	dev-util/devhelp
+	media-tv/xbmc
+	sys-fs/nilfs-utils
+	x11-apps/xinput
+	x11-apps/xev
+	www-plugins/gecko-mediaplayer
+	media-video/gnome-mplayer
+	x11-themes/gtk-engines-qtcurve
+	x11-themes/gtk-engines-qt
+	x11-themes/qtcurve-qt4
+	x11-misc/obconf
+	x11-misc/menumaker
+	app-admin/conky
+	media-gfx/scrot
+	app-misc/dtach
+	app-backup/flexbackup
+	net-dns/dnsmasq
+	net-misc/bridge-utils
+	games-strategy/wesnoth
+	games-simulation/simutrans
+	games-action/supertuxkart
+	games-simulation/lincity-ng
+	games-arcade/lbreakout2
+	games-strategy/hedgewars
+	app-cdr/brasero
+#	dev-util/devhelp
 	net-p2p/transmission
 	net-p2p/linuxdcpp
 	dev-util/giggle
@@ -49,7 +88,7 @@ livecd/packages:
 	kde-misc/yakuake
 	net-irc/quassel
 	net-irc/konversation
-        net-irc/cwirc
+	net-irc/cwirc
 # keywords.
 #	net-irc/irssi-otr
 	net-irc/ninja
@@ -115,7 +154,6 @@ livecd/packages:
 	app-backup/rdiff-backup
 	app-backup/rsnapshot
 	app-cdr/ccd2iso
-	app-cdr/mdf2iso
 	app-crypt/johntheripper
 	app-editors/gedit
 	app-editors/hexedit
@@ -289,7 +327,6 @@ livecd/packages:
 	app-cdr/cdrdao
 	app-cdr/cdrkit
 	app-cdr/dvd+rw-tools
-	app-cdr/gnomebaker
 	#app-cdr/k3b
 	app-cdr/nrg2iso
 	app-crypt/gnupg
@@ -306,24 +343,24 @@ livecd/packages:
 	app-misc/splitvt
 	app-misc/vlock
 	app-office/abiword
-        app-office/abiword-plugins
-        app-office/dia2code
-        app-office/dia
+	app-office/abiword-plugins
+	app-office/dia2code
+	app-office/dia
 # keywords.
-#        app-office/eqe
-        app-office/gnucash 
-        app-office/gnumeric
-        app-office/grisbi
-        app-office/openoffice-bin
-        app-office/scribus
+#	app-office/eqe
+	app-office/gnucash 
+	app-office/gnumeric
+	app-office/grisbi
+	app-office/openoffice
+	app-office/scribus
 # keywords.
-#        app-office/koffice
-        app-office/mozilla-sunbird-bin
-        app-office/orage
+#	app-office/koffice
+	app-office/mozilla-sunbird-bin
+	app-office/orage
 # keywords
-#        app-office/osmo
-        app-office/planner
-        app-office/texmaker
+#	app-office/osmo
+	app-office/planner
+	app-office/texmaker
 	app-pda/gtkpod
 	app-portage/genlop
 	app-portage/gentoolkit
@@ -493,13 +530,13 @@ livecd/packages:
 	www-client/opera
 	www-client/seamonkey
 	x11-base/xorg-x11
+	x11-base/xorg-drivers
 	x11-drivers/xf86-input-synaptics
 	x11-misc/xscreensaver
 ### Masked (no stable keywords)
 #	x11-plugins/gkrellm-plugins
 	x11-themes/gdm-themes-livecd
 	x11-themes/gentoo-artwork-livecd
-	x11-wm/afterstep
 	x11-wm/enlightenment
 	x11-wm/fluxbox
 	x11-wm/windowmaker

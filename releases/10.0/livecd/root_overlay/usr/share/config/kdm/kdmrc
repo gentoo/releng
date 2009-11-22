@@ -19,6 +19,7 @@ AllowNullPasswd=false
 AllowShutdown=Root
 SessionsDirs=/usr/share/xsessions
 ClientLogFile=.xsession-errors-%d
+TerminateServer=true
 [X-*-Greeter]
 LogoArea=Logo
 LogoPixmap=/usr/share/apps/kdm/pics/kdelogo.png
