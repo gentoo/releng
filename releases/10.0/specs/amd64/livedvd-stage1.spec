@@ -456,7 +456,7 @@ livecd/packages:
 #	net-wireless/airsnort
 #	net-wireless/b43-fwcutter
 #	net-wireless/bcm43xx-fwcutter
-	net-wireless/gnome-bluetooth
+#	net-wireless/gnome-bluetooth
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode

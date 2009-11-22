@@ -21,6 +21,7 @@ dev-libs/glib
 dev-util/gtk-doc-am
 gnome-extra/evolution-webcal
 media-gfx/digikam
+=media-libs/taglib-1.6.1
 media-libs/taglib-extras
 media-sound/amarok
 media-sound/amarok-utils
