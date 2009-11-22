@@ -387,7 +387,6 @@ livecd/packages:
 	gnome-base/gdm
 	gnome-base/gnome
 	gnome-extra/evolution-exchange
-	gnome-extra/gsynaptics
 	gnome-extra/sensors-applet
 	mail-client/evolution
 	mail-client/mozilla-thunderbird
