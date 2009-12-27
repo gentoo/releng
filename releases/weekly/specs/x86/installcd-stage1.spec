@@ -30,6 +30,7 @@ livecd/packages:
 	app-arch/unzip
 	app-crypt/gnupg
 	app-editors/vim
+	app-editors/zile
 	app-misc/screen
 	app-misc/vlock
 	app-portage/mirrorselect
