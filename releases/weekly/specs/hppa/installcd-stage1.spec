@@ -31,7 +31,6 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
-	app-editors/vim
 	app-editors/zile
 	app-misc/screen
 	app-misc/vlock
