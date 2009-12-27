@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Dec 2009; Andrew Gaffney <agaffney@gentoo.org> ChangeLog:
+  remove app-editors/vim since we already have busybox vi
+
   27 Dec 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/alpha/installcd-stage1.spec, specs/amd64/installcd-stage1.spec,
   specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
