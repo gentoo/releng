@@ -2,6 +2,17 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  +specs/arm/armv6j/stage1.spec, +specs/arm/armv6j/stage2.spec,
+  +specs/arm/armv6j/stage3.spec, -specs/arm/armv6l/stage1.spec,
+  -specs/arm/armv6l/stage2.spec, -specs/arm/armv6l/stage3.spec,
+  +specs/arm/armv7a/stage1.spec, +specs/arm/armv7a/stage2.spec,
+  +specs/arm/armv7a/stage3.spec, -specs/arm/armv7al/stage1.spec,
+  -specs/arm/armv7al/stage2.spec, -specs/arm/armv7al/stage3.spec,
+  -specs/arm/armv7l/stage1.spec, -specs/arm/armv7l/stage2.spec,
+  -specs/arm/armv7l/stage3.spec:
+  armv6l -> armv6j, armv7al -> armv7a
+
   27 Dec 2009; Andrew Gaffney <agaffney@gentoo.org> ChangeLog:
   remove app-editors/vim since we already have busybox vi
 
