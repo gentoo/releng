@@ -31,7 +31,8 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
-	app-editors/zile
+# Not keyworded
+#	app-editors/zile
 	app-misc/screen
 	app-misc/vlock
 	app-portage/mirrorselect

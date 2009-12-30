@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
+  specs/ppc/ppc64/installcd-stage1.spec:
+  Remove app-editors/zile from hppa/ia64/ppc64 as its not keyworded
+
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   +specs/arm/armv6j/stage1.spec, +specs/arm/armv6j/stage2.spec,
   +specs/arm/armv6j/stage3.spec, -specs/arm/armv6l/stage1.spec,
