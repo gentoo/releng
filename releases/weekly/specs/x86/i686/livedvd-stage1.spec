@@ -173,6 +173,7 @@ livecd/packages:
 	net-wireless/ipw2200-firmware
 	net-wireless/iwl3945-ucode
 	net-wireless/iwl4965-ucode
+	net-wireless/iwl5000-ucode
 	net-wireless/kdebluetooth
 	net-wireless/prism54-firmware
 	net-wireless/wepattack
