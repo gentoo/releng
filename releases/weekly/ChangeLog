@@ -1,6 +1,11 @@
 # ChangeLog for releng repo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  10 Jan 2010; Andrew Gaffney <agaffney@gentoo.org>
+  kconfig/x86/installcd-2.6.28.config,
+  kconfig/amd64/installcd-2.6.28.config:
+  Add CONFIG_ATL1C=m for bug #300430
 
   31 Dec 2009; Andrew Gaffney <agaffney@gentoo.org>
   specs/amd64/installcd-stage1.spec, specs/amd64/livecd-stage1.spec,
