@@ -1,0 +1,6 @@
+media-plugins/gst-plugins-a52dec
+media-plugins/gst-plugins-dvdread
+media-plugins/gst-plugins-mad
+media-plugins/gst-plugins-mpeg2dec
+net-wireless/gnome-bluetooth
+=x11-base/xorg-server-1.7*

@@ -1,0 +1,42 @@
+net-dns/avahi dbus autoipd
+gnome-extra/evolution-data-server ldap kerberos
+gnome-extra/gnome-utils -ipv6 -hal
+app-office/akonadi-server -mysql sqlite
+# The one below should not be picked by emerge anyway, but this is the 'working' default
+dev-libs/soprano -redland java
+dev-python/PyQt4 dbus sql svg webkit X
+media-sound/phonon -gstreamer xcb xine
+x11-libs/qt-core -glib iconv
+x11-libs/qt-gui -glib -gtk mng
+x11-libs/qt-sql -firebird -odbc -mysql -postgres iconv sqlite
+x11-libs/qt-webkit kde
+kde-base/kdelibs -zeroconf spell
+kde-base/kdm -consolekit pam
+kde-base/kwin -xinerama xcomposite
+kde-base/phonon-kde -pulseaudio xine
+kde-base/plasma-workspace -google-gadgets -python -xinerama rss
+kde-base/solid -bluetooth -networkmanager -wicd
+sys-auth/pambase consolekit
+dev-db/mysql embedded
+sys-block/gparted dmraid fat hfs jfs kde gnome ntfs reiserfs xfce xfs
+app-misc/mc slang samba
+xfce-extra/thunar-thumbnailers ffmpeg
+net-irc/quassel sqlite
+net-wireless/wpa_supplicant madwifi
+media-plugins/gst-plugins-meta -dvd -a52 -mad -mpeg
+app-cdr/gnomebaker -mp3
+sys-devel/gcc -gtk
+media-gfx/splashutils fbcondecor
+media-libs/freetype bindist
+media-libs/libmng lcms
+app-admin/conky audacious hddtemp mpd nano-syntax vim-syntax wifi rss
+x11-themes/gtk-engines-qt
+x11-themes/gtk-engines-qtcurve firefox3 mozilla
+gnome-base/nautilus gnome-keyring
+gnome-base/gnome-volume-manager consolekit
+sys-apps/hal consolekit
+net-dns/avahi mdnsresponder-compat
+media-tv/xbmc joystick
+sys-fs/aufs2 kernel-patch ramfs inotify
+media-libs/taglib -mp4 -asf
+
