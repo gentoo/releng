@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  -kconfig/ia64/installcd-2.6.30.config,
+  specs/ia64/installcd-stage2-minimal.spec,
+  +kconfig/ia64/installcd-2.6.31.config:
+  Fix ia64 kconfig
+
   10 Jan 2010; Andrew Gaffney <agaffney@gentoo.org>
   kconfig/x86/installcd-2.6.28.config,
   kconfig/amd64/installcd-2.6.28.config:
