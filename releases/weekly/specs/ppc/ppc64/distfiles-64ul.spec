@@ -35,7 +35,7 @@ grp/src/packages:
 	pciutils
 	iprutils
 	ssmtp
-	ibm-powerpc-utils-papr
+	ibm-powerpc-utils
 	rp-pppoe
 
 

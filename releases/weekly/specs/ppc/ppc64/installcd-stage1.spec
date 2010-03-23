@@ -67,7 +67,7 @@ livecd/packages:
 	sys-apps/memtester
 	sys-apps/parted
 	sys-apps/ibm-powerpc-utils
-	sys-apps/ibm-powerpc-utils-papr
+#	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
 	sys-block/partimage
 #	sys-block/qla-fc-firmware
