@@ -18,7 +18,7 @@ livecd/volid: Gentoo Linux alpha 2008.0
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-2.6.30.config
+boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-2.6.31.config
 boot/kernel/gentoo/use:
 	-*
 	atm
