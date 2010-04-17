@@ -2,6 +2,13 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  +kconfig/x86/installcd-2.6.31.config,
+  specs/amd64/installcd-stage2-minimal.spec,
+  +kconfig/amd64/installcd-2.6.31.config,
+  specs/x86/installcd-stage2-minimal.spec:
+  Updated kconfigs for amd64/x86 to fix bug #315607
+
   31 Mar 2010; Raúl Porcel <armin76@gentoo.org>
   -kconfig/alpha/installcd-2.6.30.config,
   specs/alpha/installcd-stage2-minimal.spec,
