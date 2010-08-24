@@ -35,7 +35,7 @@ livecd/packages:
 	app-portage/ufed
 	app-text/wgetpaste
 	dev-util/ccache
-	dev-util/cvs
+	dev-vcs/cvs
 	dev-util/git
 	dev-util/subversion
 	gnome-base/gdm
