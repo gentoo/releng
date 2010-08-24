@@ -65,7 +65,7 @@ livecd/packages:
 	sys-apps/iproute2
 #	sys-apps/lssbus
 	sys-apps/memtester
-	sys-apps/parted
+	sys-block/parted
 	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm

@@ -209,7 +209,7 @@ livecd/packages:
 #	sys-apps/lssbus
 	sys-apps/memtester
 	sys-apps/netplug
-	sys-apps/parted
+	sys-block/parted
 	sys-apps/pcsc-lite
 	sys-apps/pmount
 ### Masked (no keyword)

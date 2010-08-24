@@ -98,7 +98,7 @@ livecd/packages:
 	sys-apps/iproute2
 	sys-apps/memtester
 	sys-apps/netplug
-	sys-apps/parted
+	sys-block/parted
 #	sys-apps/powerpc-utils
 	sys-apps/sdparm
 	sys-apps/sg3_utils

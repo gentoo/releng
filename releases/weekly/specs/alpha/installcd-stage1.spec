@@ -69,7 +69,7 @@ livecd/packages:
 #	sys-apps/memtester
 # no keywords on alpha
 #	sys-apps/netplug
-	sys-apps/parted
+	sys-block/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr

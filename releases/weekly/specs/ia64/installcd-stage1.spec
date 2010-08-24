@@ -67,7 +67,7 @@ livecd/packages:
 #	sys-apps/lssbus
 #	sys-apps/memtester
 #	sys-apps/netplug
-	sys-apps/parted
+	sys-block/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
