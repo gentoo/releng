@@ -47,7 +47,7 @@ livecd/packages:
 	xfce-base/xfce4
 #	kde-base/kde-meta
 	mail-client/evolution
-	mail-client/mozilla-thunderbird
+	mail-client/thunderbird
 #	mail-client/sylpheed
 #	media-gfx/gimp
 	media-gfx/fbgrab

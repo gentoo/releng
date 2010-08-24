@@ -41,7 +41,7 @@ livecd/packages:
 	dev-vcs/subversion
 	gnome-base/gdm
 ### Removed for space reasons
-#	mail-client/mozilla-thunderbird
+#	mail-client/thunderbird
 	media-gfx/fbgrab
 #	media-sound/audacious
 	net-analyzer/netcat

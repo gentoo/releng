@@ -98,8 +98,8 @@ livecd/packages:
 	kde-base/kde-meta
 	kde-base/kooka
 	mail-client/evolution
-	mail-client/mozilla-thunderbird
-	mail-client/mozilla-thunderbird-bin
+	mail-client/thunderbird
+	mail-client/thunderbird-bin
 	mail-client/sylpheed
 	mail-client/claws-mail
 ### Masked (~amd64)

@@ -41,7 +41,7 @@ livecd/packages:
 	gnome-base/gdm
 	xfce-base/xfce4
 	mail-client/evolution
-	mail-client/mozilla-thunderbird
+	mail-client/thunderbird
 #	media-gfx/fbgrab
 	media-sound/audacious
 	net-analyzer/netcat

@@ -94,7 +94,7 @@ livecd/packages:
 	kde-base/kde-meta
 	kde-base/kooka
 	mail-client/evolution
-	mail-client/mozilla-thunderbird
+	mail-client/thunderbird
 	mail-client/sylpheed
 	mail-client/claws-mail
 	media-gfx/blender
