@@ -48,7 +48,7 @@ grp/cd2/packages:
 	xemacs
 	xmms
 	mozilla-firefox
-	mozilla-thunderbird
+	thunderbird
 	abiword
 	pidgin
 	xchat

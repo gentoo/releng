@@ -76,7 +76,7 @@ grp/cd2/packages:
 	blackbox
 	sylpheed
 	mozilla-firefox
-	mozilla-thunderbird
+	thunderbird
 	abiword
 	gnumeric
 	pidgin
