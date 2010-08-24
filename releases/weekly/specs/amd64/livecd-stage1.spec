@@ -155,8 +155,8 @@ livecd/packages:
 	sys-process/htop
 	sys-process/vixie-cron
 	www-client/links
-	www-client/mozilla-firefox
-#	www-client/mozilla-firefox-bin
+	www-client/firefox
+#	www-client/firefox-bin
 	x11-base/xorg-server
 	x11-base/xorg-x11
 	x11-drivers/synaptics

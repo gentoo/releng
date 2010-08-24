@@ -252,7 +252,7 @@ livecd/packages:
 	www-client/epiphany-extensions
 	www-client/galeon
 	www-client/links
-	www-client/mozilla-firefox
+	www-client/firefox
 	www-client/opera
 	www-client/seamonkey
 	x11-base/xorg-x11

@@ -49,7 +49,7 @@ grp/cd2/packages:
 	xemacs
 	dev-lang/ruby
 	enlightenment
-	mozilla-firefox
+	firefox
 	xfce4
 	fluxbox
 	sylpheed

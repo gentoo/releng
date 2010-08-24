@@ -47,7 +47,7 @@ grp/cd2/packages:
 	vim
 	xemacs
 	xmms
-	mozilla-firefox
+	firefox
 	thunderbird
 	abiword
 	pidgin

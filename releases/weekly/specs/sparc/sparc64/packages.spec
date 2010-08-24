@@ -75,7 +75,7 @@ grp/cd2/packages:
 	openbox
 	blackbox
 	sylpheed
-	mozilla-firefox
+	firefox
 	thunderbird
 	abiword
 	gnumeric

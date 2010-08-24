@@ -278,8 +278,8 @@ livecd/packages:
 	www-client/epiphany-extensions
 	www-client/galeon
 	www-client/links
-	www-client/mozilla-firefox
-	www-client/mozilla-firefox-bin
+	www-client/firefox
+	www-client/firefox-bin
 	www-client/opera
 	www-client/seamonkey
 	www-client/seamonkey-bin
