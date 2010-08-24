@@ -80,7 +80,7 @@ livecd/packages:
 	dev-vcs/git
 	dev-util/indent
 	dev-util/kdbg
-	dev-util/kdesvn
+	dev-vcs/kdesvn
 	dev-util/kdevelop
 	dev-util/ltrace
 	dev-util/strace
