@@ -84,7 +84,7 @@ livecd/packages:
 	dev-util/kdevelop
 	dev-util/ltrace
 	dev-util/strace
-	dev-util/subversion
+	dev-vcs/subversion
 	dev-util/valgrind
 	gnome-base/gdm
 	gnome-base/gnome

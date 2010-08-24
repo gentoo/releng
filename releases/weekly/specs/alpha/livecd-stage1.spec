@@ -37,7 +37,7 @@ livecd/packages:
 	dev-util/ccache
 	dev-vcs/cvs
 	dev-vcs/git
-	dev-util/subversion
+	dev-vcs/subversion
 	gnome-base/gdm
 	xfce-base/xfce4
 	mail-client/evolution
