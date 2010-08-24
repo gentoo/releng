@@ -36,7 +36,7 @@ livecd/packages:
 	app-text/wgetpaste
 	dev-util/ccache
 	dev-vcs/cvs
-	dev-util/git
+	dev-vcs/git
 	dev-util/subversion
 	gnome-base/gdm
 	xfce-base/xfce4
