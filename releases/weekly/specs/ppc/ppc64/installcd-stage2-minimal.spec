@@ -19,7 +19,7 @@ boot/kernel: ibmpower G5 ppc32
 
 ## IBM hardware
 boot/kernel/ibmpower/sources: sys-kernel/gentoo-sources
-boot/kernel/ibmpower/config: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/kconfig/powerpc/installcd-ibm-2.6.24.config
+boot/kernel/ibmpower/config: ../../../kconfig/powerpc/installcd-ibm-2.6.34.config
 boot/kernel/ibmpower/console: ttyS0,9600 hvc0 hvsi0
 boot/kernel/ibmpower/machine_type: ibm
 boot/kernel/ibmpower/extraversion: ibm
@@ -50,7 +50,7 @@ boot/kernel/ibmpower/use:
 
 ## Apple hardware
 boot/kernel/G5/sources: sys-kernel/gentoo-sources
-boot/kernel/G5/config: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/kconfig/powerpc/installcd-ppc64apple-2.6.24.config
+boot/kernel/G5/config: ../../../kconfig/powerpc/installcd-ppc64apple-2.6.34.config
 boot/kernel/G5/console: ttyS0,57600
 boot/kernel/G5/extraversion: G5
 boot/kernel/G5/gk_kernargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu-
@@ -79,7 +79,7 @@ boot/kernel/G5/use:
 	usb
 
 ## ppc32 hardware
-boot/kernel/ppc32/config: /home/ranger/2008.0/svn/releng/trunk/releases/2008.0/kconfig/powerpc/installcd-ppc32apple-2.6.24.config
+boot/kernel/ppc32/config: ../../../kconfig/powerpc/installcd-ppc32apple-2.6.24.config
 boot/kernel/ppc32/sources: gentoo-sources
 boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use:
