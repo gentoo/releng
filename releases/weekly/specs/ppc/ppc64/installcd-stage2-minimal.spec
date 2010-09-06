@@ -79,7 +79,7 @@ boot/kernel/G5/use:
 	usb
 
 ## ppc32 hardware
-boot/kernel/ppc32/config: ../../../kconfig/powerpc/installcd-ppc32apple-2.6.24.config
+boot/kernel/ppc32/config: ../../../kconfig/powerpc/installcd-ppc32apple-2.6.34.config
 boot/kernel/ppc32/sources: gentoo-sources
 boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use:
