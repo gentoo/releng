@@ -1,6 +1,10 @@
 # ChangeLog for releng repo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  06 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  +tools/catalyst-auto-ppc.conf, +tools/catalyst-auto-ppc64.conf:
+  Add ppc configs
 
   22 Dec 2008; Andrew Gaffney <agaffney@gentoo.org> tools/catalyst-auto:
   Uncomment section to run catalyst with --purgeonly
