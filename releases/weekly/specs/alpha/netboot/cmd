@@ -1,0 +1,1 @@
+./netabootwrap -t netboot.img -k /space/catalyst/builds/default/netboot2-alpha-20100329/kernels/gentoo -i /space/catalyst/builds/default/netboot2-alpha-20100329/kernels/misc/gentoo.igz

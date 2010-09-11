@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  +specs/alpha/netboot/bs.conf, +specs/alpha/netboot/cmd,
+  +specs/alpha/netboot/config, +specs/alpha/netboot/netboot2.spec:
+  Add netboot stuff for alpha, so it doesn't get lost
+
   08 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   specs/ppc/ppc64/installcd-stage2-minimal.spec:
   Fix version_stamp on ppc64 minimalcd
