@@ -3,6 +3,12 @@
 # $Header: $
 
   11 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  +specs/sparc/sparc64/netboot/sparc-netboot.spec,
+  +specs/sparc/sparc64/netboot/sparc-netboot-busybox.conf,
+  +specs/sparc/sparc64/netboot/sparc-netboot-kernel.conf:
+  Add netboot stuff for sparc, so it doesn't get lost
+
+  11 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   +specs/alpha/netboot/bs.conf, +specs/alpha/netboot/cmd,
   +specs/alpha/netboot/config, +specs/alpha/netboot/netboot2.spec:
   Add netboot stuff for alpha, so it doesn't get lost
