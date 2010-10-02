@@ -158,9 +158,9 @@ livecd/empty:
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
-	/usr/i386-gentoo-linux-uclibc
-	/usr/i386-pc-linux-gnu
-	/usr/i386-pc-linux-uclibc
+	/usr/i?86-gentoo-linux-uclibc
+	/usr/i?86-pc-linux-gnu
+	/usr/i?86-pc-linux-uclibc
 	/usr/include
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
@@ -280,8 +280,8 @@ livecd/rm:
 	/usr/bin/gcc*
 	/usr/bin/genkernel
 	/usr/bin/gprof
-	/usr/bin/i386-gentoo-linux-uclibc-*
-	/usr/bin/i386-pc-linux-*
+	/usr/bin/i?86-gentoo-linux-uclibc-*
+	/usr/bin/i?86-pc-linux-*
 	/usr/bin/jpegtran
 	/usr/bin/ld
 	/usr/bin/libpng*

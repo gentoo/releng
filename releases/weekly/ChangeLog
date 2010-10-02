@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  specs/x86/installcd-stage2-minimal.spec:
+  Replace i386 with i?86, bug #338453
+
   11 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   +specs/sparc/sparc64/netboot/sparc-netboot.spec,
   +specs/sparc/sparc64/netboot/sparc-netboot-busybox.conf,
