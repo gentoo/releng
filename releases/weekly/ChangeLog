@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  -kconfig/alpha/installcd-2.6.31.config,
+  specs/alpha/installcd-stage2-minimal.spec,
+  +kconfig/alpha/installcd-2.6.34.config:
+  Update alpha kconfig
+
   02 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   specs/x86/installcd-stage2-minimal.spec:
   Replace i386 with i?86, bug #338453
