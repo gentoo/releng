@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org>
+  +specs/arm/armv7a/hardfloat/stage1.spec,
+  +specs/arm/armv7a/hardfloat/stage2.spec,
+  +specs/arm/armv7a/hardfloat/stage3.spec:
+  Add armv7a-hardfloat specs
+
   07 Oct 2010; Raúl Porcel <armin76@gentoo.org>
   -kconfig/alpha/installcd-2.6.31.config,
   specs/alpha/installcd-stage2-minimal.spec,
