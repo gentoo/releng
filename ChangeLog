@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Nov 2010; Raúl Porcel <armin76@gentoo.org>
+  tools/catalyst-auto-hppa.conf:
+  Update hppa config
+
   08 Sep 2010; Raúl Porcel <armin76@gentoo.org> releases/weekly/ChangeLog,
   releases/weekly/specs/ppc/ppc64/installcd-stage2-minimal.spec,
   tools/catalyst-auto-ppc64.conf:
