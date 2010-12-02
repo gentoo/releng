@@ -17,7 +17,7 @@ livecd/volid: Gentoo Linux amd64 2008.0
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /release/svn-releng/trunk/releases/weekly/kconfig/amd64/installcd-2.6.31.config
+boot/kernel/gentoo/config: /release/svn-releng/trunk/releases/weekly/kconfig/amd64/installcd-2.6.34.config
 boot/kernel/gentoo/use:
 	-*
 	alsa
