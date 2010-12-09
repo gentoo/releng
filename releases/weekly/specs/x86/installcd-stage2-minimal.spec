@@ -58,6 +58,7 @@ boot/kernel/gentoo/use:
 	lvm1
 	midi
 	mng
+	modules
 	ncurses
 	nls
 	nptl

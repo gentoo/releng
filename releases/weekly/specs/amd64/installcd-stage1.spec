@@ -13,6 +13,7 @@ livecd/use:
 	livecd
 	loop-aes
 	lvm1
+	modules
 	ncurses
 	nls
 	nptl
@@ -39,8 +40,6 @@ livecd/packages:
 	media-gfx/fbgrab
 	net-analyzer/traceroute
 	net-dialup/mingetty
-### Masked (no keywords)
-#	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-fs/mount-cifs
@@ -74,26 +73,12 @@ livecd/packages:
 	sys-apps/hdparm
 	sys-apps/hwsetup
 	sys-apps/iproute2
-### Masked (no keywords)
-#	sys-apps/lssbus
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-block/parted
-### Masked (no keywords)
-#	sys-apps/powerpc-utils
-### Masked (no keywords)
-#	sys-apps/ibm-powerpc-utils
-### Masked (no keywords)
-#	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
 	sys-block/partimage
 	sys-block/qla-fc-firmware
-### Masked (no keywords)
-#	sys-boot/yaboot
-### Masked (no keywords)
-#	sys-devel/binutils-hppa64
-### Masked (no keywords)
-#	sys-devel/gcc-hppa64
 	sys-fs/cryptsetup
 	sys-fs/dmraid
 	sys-fs/dosfstools
@@ -102,12 +87,9 @@ livecd/packages:
 ### Masked (no keywords)
 #	sys-fs/hfsplusutils
 	sys-fs/hfsutils
-### Masked (no keywords)
-#	sys-fs/iprutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
-#	sys-fs/lvm-user
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/multipath-tools
@@ -116,6 +98,4 @@ livecd/packages:
 	sys-fs/xfsprogs
 	sys-libs/gpm
 	sys-power/acpid
-### Masked (no keywords)
-#	sys-power/apmd
 	www-client/links
