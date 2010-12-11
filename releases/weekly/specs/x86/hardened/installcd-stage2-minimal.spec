@@ -9,17 +9,45 @@ source_subpath: hardened/livecd-stage1-x86-hardened-2008.0
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
-livecd/iso: /var/tmp/catalyst/builds/default/install-x86-minimal-2008.0.iso
+livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
+livecd/iso: /release/buildroot/x86-dev/builds/hardened/install-x86-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux x86 2008.0
 
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: /var/cvsroot/gentoo/src/releng/kconfig/2008.0/x86/hardened/installcd-2.6.20.config
+boot/kernel/gentoo/config: /release/svn-releng/trunk/releases/weekly/kconfig/x86/hardened/installcd-2.6.20.config
 boot/kernel/gentoo/use:
 	-*
+	alsa
+	alsa_pcm_plugins_adpcm
+	alsa_pcm_plugins_alaw
+	alsa_pcm_plugins_asym
+	alsa_pcm_plugins_copy
+	alsa_pcm_plugins_dmix
+	alsa_pcm_plugins_dshare
+	alsa_pcm_plugins_dsnoop
+	alsa_pcm_plugins_empty
+	alsa_pcm_plugins_extplug
+	alsa_pcm_plugins_file
+	alsa_pcm_plugins_hooks
+	alsa_pcm_plugins_iec958
+	alsa_pcm_plugins_ioplug
+	alsa_pcm_plugins_ladspa
+	alsa_pcm_plugins_lfloat
+	alsa_pcm_plugins_linear
+	alsa_pcm_plugins_meter
+	alsa_pcm_plugins_mmap_emul
+	alsa_pcm_plugins_mulaw
+	alsa_pcm_plugins_multi
+	alsa_pcm_plugins_null
+	alsa_pcm_plugins_plug
+	alsa_pcm_plugins_rate
+	alsa_pcm_plugins_route
+	alsa_pcm_plugins_share
+	alsa_pcm_plugins_shm
+	alsa_pcm_plugins_softvol
 	atm
 	deprecated
 	fbcon
@@ -28,7 +56,9 @@ boot/kernel/gentoo/use:
 	livecd
 	loop-aes
 	lvm1
+	midi
 	mng
+	modules
 	ncurses
 #	nls
 	nptl
@@ -43,14 +73,15 @@ boot/kernel/gentoo/use:
 	usb
 
 boot/kernel/gentoo/packages:
+### These need to be added for software speech.
+	app-accessibility/espeakup
+	media-libs/alsa-oss
+	media-sound/alsa-utils
 	net-dialup/slmodem
 	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
-	net-wireless/rt2500
-	net-wireless/acx
-	net-wireless/ipw3945
 	sys-apps/pcmciautils
 	sys-fs/ntfs3g
 
@@ -88,7 +119,8 @@ livecd/unmerge:
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
-	sys-devel/gcc
+# This might be needed for software speech.
+#	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
@@ -120,9 +152,9 @@ livecd/empty:
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
-	/usr/i386-gentoo-linux-uclibc
-	/usr/i386-pc-linux-gnu
-	/usr/i386-pc-linux-uclibc
+	/usr/i?86-gentoo-linux-uclibc
+	/usr/i?86-pc-linux-gnu
+	/usr/i?86-pc-linux-uclibc
 	/usr/include
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
@@ -242,8 +274,8 @@ livecd/rm:
 	/usr/bin/gcc*
 	/usr/bin/genkernel
 	/usr/bin/gprof
-	/usr/bin/i386-gentoo-linux-uclibc-*
-	/usr/bin/i386-pc-linux-*
+	/usr/bin/i?86-gentoo-linux-uclibc-*
+	/usr/bin/i?86-pc-linux-*
 	/usr/bin/jpegtran
 	/usr/bin/ld
 	/usr/bin/libpng*

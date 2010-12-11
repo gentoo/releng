@@ -84,11 +84,6 @@ boot/kernel/gentoo/packages:
 	net-wireless/hostap-utils
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
-### Compile failure and in-kernel
-#	net-wireless/rt2500
-#	net-wireless/acx
-### In-kernel
-#	net-wireless/ipw3945
 	sys-apps/pcmciautils
 	sys-fs/ntfs3g
 

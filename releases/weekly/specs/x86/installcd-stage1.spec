@@ -4,7 +4,7 @@ target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/10.0
 snapshot: 2008.0
-source_subpath: default/stage3-i486-2008.0
+source_subpath: default/stage3-i486-latest
 livecd/use:
 	-*
 	deprecated
@@ -29,6 +29,7 @@ livecd/packages:
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
+	app-arch/xz-utils
 	app-crypt/gnupg
 	app-editors/zile
 	app-misc/screen
