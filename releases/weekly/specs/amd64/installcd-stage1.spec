@@ -31,6 +31,7 @@ livecd/packages:
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
+	app-arch/xz-utils
 	app-crypt/gnupg
 	app-editors/zile
 	app-misc/screen
