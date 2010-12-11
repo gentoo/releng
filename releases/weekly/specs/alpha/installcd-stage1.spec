@@ -20,6 +20,7 @@ livecd/use:
 	socks5
 	ssl
 	unicode
+	xml
 
 livecd/packages:
 	app-accessibility/brltty

@@ -18,6 +18,7 @@ livecd/use:
 	readline
 	socks5
 	ssl
+	xml
 
 livecd/packages:
 	app-accessibility/brltty
