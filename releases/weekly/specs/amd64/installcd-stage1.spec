@@ -4,7 +4,7 @@ target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/10.0/no-multilib
 snapshot: 2008.0
-source_subpath: default/stage3-amd64-20100617
+source_subpath: default/stage3-amd64-latest
 livecd/use:
 	-*
 	deprecated
