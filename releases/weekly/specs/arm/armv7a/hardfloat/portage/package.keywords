@@ -1,0 +1,4 @@
+# To get gcc-4.5, since hardfloat is only supported there
+sys-devel/gcc
+# <3.0 doesn't build with gcc-4.5
+sys-apps/diffutils
