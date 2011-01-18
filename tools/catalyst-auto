@@ -39,7 +39,7 @@ send_email() {
     body=${message}
   fi
 
-  echo -e "From: ${EMAIL_FROM}\r\nTo: ${EMAIL_TO}\r\nSubject: ${subject}\r\n\r\n${body}" | /usr/sbin/sendmail -f ${EMAIL_FROM} ${EMAIL_TO}
+  echo -e "From: ${EMAIL_FROM}\r\nTo: ${EMAIL_TO}\r\nSubject: ${subject}\r\n\r\n${body}" | /usr/sbin/sendmail -f ${EMAIL_FROM} ${EMAIL_TO//,/ }
 }
 
 run_cmd() {
