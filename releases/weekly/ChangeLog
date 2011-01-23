@@ -1,6 +1,10 @@
 # ChangeLog for releng repo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  23 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec:
+  Use my cdtar on alpha with an enhanced message
 
   14 Dec 2010; Raúl Porcel <armin76@gentoo.org>
   +specs/arm/armv7a/hardfloat/portage/package.keywords,

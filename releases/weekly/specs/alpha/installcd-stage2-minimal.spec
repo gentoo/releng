@@ -7,7 +7,7 @@ snapshot: 2008.0
 source_subpath: default/livecd-stage1-alpha-2008.0
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/aboot-1.0_pre20040408-r2-cdtar.tar.bz2
+livecd/cdtar: /home/armin76/tmp/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
 livecd/fsscript: /home/armin76/releng/trunk/releases/weekly/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm
