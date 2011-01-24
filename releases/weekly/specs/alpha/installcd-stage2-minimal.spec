@@ -15,11 +15,37 @@ livecd/iso: /space/catalyst/builds/default/install-alpha-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux alpha 2008.0
 
-boot/kernel: gentoo
+boot/kernel: gentoo gentoolegacy
 
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-2.6.34.config
 boot/kernel/gentoo/use:
+	-*
+	atm
+	deprecated
+	fbcon
+	fbcondecor
+	ipv6
+	livecd
+	loop-aes
+	lvm1
+	mng
+	ncurses
+	nls
+	nptl
+	nptlonly
+	pam
+	png
+	readline
+	socks5
+	ssl
+	truetype
+	unicode
+	usb
+
+boot/kernel/gentoolegacy/sources: gentoo-sources
+boot/kernel/gentoolegacy/config: ../../kconfig/alpha/installcd-2.6.34.legacy.config
+boot/kernel/gentoolegacy/use:
 	-*
 	atm
 	deprecated
