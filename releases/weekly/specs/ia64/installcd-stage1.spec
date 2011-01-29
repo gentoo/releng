@@ -18,6 +18,7 @@ livecd/use:
 	readline
 	socks5
 	ssl
+	static-libs
 	xml
 
 livecd/packages:
