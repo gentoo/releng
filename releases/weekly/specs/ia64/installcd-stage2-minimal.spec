@@ -17,7 +17,7 @@ livecd/volid: Gentoo Linux IA64 2008.0
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: ../../kconfig/ia64/installcd-2.6.31.config
+boot/kernel/gentoo/config: ../../kconfig/ia64/installcd-2.6.36.config
 boot/kernel/gentoo/use:
 	-*
 	atm

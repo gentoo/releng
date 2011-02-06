@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  -kconfig/ia64/installcd-2.6.31.config, +kconfig/ia64/installcd-2.6.36.config,
+  specs/ia64/installcd-stage2-minimal.spec:
+  Update kconfig for ia64
+
   02 Feb 2011; Raúl Porcel <armin76@gentoo.org>
   specs/ia64/installcd-stage2-minimal.spec:
   Fix cdtar for ia64
