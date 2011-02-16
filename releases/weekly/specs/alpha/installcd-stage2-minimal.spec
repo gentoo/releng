@@ -15,7 +15,7 @@ livecd/iso: /space/catalyst/builds/default/install-alpha-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux alpha 2008.0
 
-boot/kernel: gentoo gentoolegacy
+boot/kernel: gentoo gentoo_nolsa
 
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-2.6.34.config
@@ -43,9 +43,9 @@ boot/kernel/gentoo/use:
 	unicode
 	usb
 
-boot/kernel/gentoolegacy/sources: gentoo-sources
-boot/kernel/gentoolegacy/config: ../../kconfig/alpha/installcd-2.6.34.legacy.config
-boot/kernel/gentoolegacy/use:
+boot/kernel/gentoo_nolsa/sources: gentoo-sources
+boot/kernel/gentoo_nolsa/config: ../../kconfig/alpha/installcd-2.6.34.nolsa.config
+boot/kernel/gentoo_nolsa/use:
 	-*
 	atm
 	deprecated

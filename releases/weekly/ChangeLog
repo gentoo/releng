@@ -2,6 +2,14 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  kconfig/alpha/installcd-2.6.34.config,
+  -kconfig/alpha/installcd-2.6.34.legacy.config,
+  +kconfig/alpha/installcd-2.6.34.nolsa.config,
+  specs/alpha/installcd-stage2-minimal.spec:
+  Swap the kernels for alpha, turns out disabling legacy address gives more
+  problems
+
   06 Feb 2011; Raúl Porcel <armin76@gentoo.org>
   -kconfig/ia64/installcd-2.6.31.config, +kconfig/ia64/installcd-2.6.36.config,
   specs/ia64/installcd-stage2-minimal.spec:
