@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  kconfig/alpha/installcd-2.6.34.config,
+  kconfig/alpha/installcd-2.6.34.nolsa.config:
+  Add CONFIG_SATA_SIL=m to alpha
+
   16 Feb 2011; Raúl Porcel <armin76@gentoo.org>
   kconfig/alpha/installcd-2.6.34.config,
   -kconfig/alpha/installcd-2.6.34.legacy.config,
