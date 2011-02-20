@@ -83,10 +83,10 @@ livecd/unmerge:
 	dev-libs/gmp
 	dev-libs/libxml2
 	dev-libs/mpfr
-	dev-libs/popt
+#	dev-libs/popt
 	dev-python/pycrypto
 	dev-util/pkgconfig
-	net-misc/rsync
+#	net-misc/rsync
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
@@ -128,7 +128,7 @@ livecd/empty:
 	/etc/cron.weekly
 	/etc/logrotate.d
 	/etc/modules.autoload.d
-	/etc/rsync
+#	/etc/rsync
 	/etc/runlevels/single
 	/etc/skel
 	/lib/dev-state

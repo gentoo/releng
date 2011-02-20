@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec,
+  specs/ia64/installcd-stage2-minimal.spec,
+  specs/sparc/sparc64/installcd-stage2-minimal.spec:
+  Leave rsync on alpha/ia64/sparc installcd
+
   19 Feb 2011; Raúl Porcel <armin76@gentoo.org>
   kconfig/alpha/installcd-2.6.34.config,
   kconfig/alpha/installcd-2.6.34.nolsa.config:
