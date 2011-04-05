@@ -54,7 +54,7 @@ grp/src/packages:
 	qla-fc-firmware
 	nfs-utils
 	alsa-utils
-	sys-apps/eject
+	sys-block/eject
 	acl
 	alsa-lib
 	attr

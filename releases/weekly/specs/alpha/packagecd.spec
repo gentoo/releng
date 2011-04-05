@@ -14,7 +14,7 @@ grp/cd2/packages:
 	hotplug
 	dante
 	tsocks
-	sys-apps/eject
+	sys-block/eject
 	xorg-x11
 	minicom
 	links

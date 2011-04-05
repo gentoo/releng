@@ -2,6 +2,20 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Apr 2011; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
+  specs/alpha/packagecd.spec, specs/amd64/installcd-stage1.spec,
+  specs/amd64/livecd-stage1.spec, specs/amd64/livedvd-stage1.spec,
+  specs/hppa/installcd-stage1.spec, specs/ia64/installcd-stage1.spec,
+  specs/ia64/livecd-stage1.spec, specs/ppc/ppc64/installcd-stage1.spec,
+  specs/sparc/sparc64/distfiles.spec,
+  specs/sparc/sparc64/installcd-stage1.spec, specs/sparc/sparc64/packages.spec,
+  specs/x86/hardened/installcd-stage1.spec, specs/x86/i686/livecd-stage1.spec,
+  specs/x86/i686/livedvd-stage1.spec, specs/x86/installcd-stage1.spec,
+  specs/ppc/ppc64/packages-32ul.spec, specs/ppc/ppc64/livecd-stage1.spec,
+  specs/ppc/ppc64/packages-64ul.spec:
+  sys-apps/eject has been moved to sys-block/eject
+
   20 Feb 2011; Raúl Porcel <armin76@gentoo.org>
   specs/alpha/installcd-stage2-minimal.spec,
   specs/ia64/installcd-stage2-minimal.spec,

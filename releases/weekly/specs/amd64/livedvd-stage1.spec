@@ -193,7 +193,7 @@ livecd/packages:
 ### Masked
 #	sys-apps/apmd
 	sys-apps/dmidecode
-	sys-apps/eject
+	sys-block/eject
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/gradm

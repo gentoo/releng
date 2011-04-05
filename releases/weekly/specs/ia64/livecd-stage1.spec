@@ -78,7 +78,7 @@ livecd/packages:
 #	net-wireless/wpa_supplicant
 #	net-wireless/zd1201-firmware
 #	sys-apps/apmd
-	sys-apps/eject
+	sys-block/eject
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm

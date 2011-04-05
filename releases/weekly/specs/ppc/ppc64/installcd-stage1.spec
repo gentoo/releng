@@ -60,7 +60,7 @@ livecd/packages:
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/apmd
-	sys-apps/eject
+	sys-block/eject
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm

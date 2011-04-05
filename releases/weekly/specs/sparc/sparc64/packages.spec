@@ -28,7 +28,7 @@ grp/cd2/packages:
 	mdadm
 	device-mapper
 	silo
-	sys-apps/eject
+	sys-block/eject
 	superadduser
 	gentoolkit
 	gentoolkit-dev

@@ -32,7 +32,7 @@ grp/cd2/packages:
 	ide-smart
 	netcat
 	gnupg
-	sys-apps/eject
+	sys-block/eject
 	minicom
 	whois
 	tcpdump

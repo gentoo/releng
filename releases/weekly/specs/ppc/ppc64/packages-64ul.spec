@@ -27,7 +27,7 @@ grp/cd2/packages:
 	xscreensaver
 	netcat
 	gnupg
-	sys-apps/eject
+	sys-block/eject
 	minicom
 	whois
 	tcpdump
