@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Apr 2011; Raúl Porcel <armin76@gentoo.org>
+  specs/arm/armv7a/hardfloat/portage/package.keywords:
+  Update package.keywords for armv7a-hardfloat
+
   05 Apr 2011; Raúl Porcel <armin76@gentoo.org>
   specs/alpha/installcd-stage1.spec, specs/alpha/livecd-stage1.spec,
   specs/alpha/packagecd.spec, specs/amd64/installcd-stage1.spec,

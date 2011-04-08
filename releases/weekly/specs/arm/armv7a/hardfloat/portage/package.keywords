@@ -1,4 +1,6 @@
-# To get gcc-4.5, since hardfloat is only supported there
-sys-devel/gcc
+# hardfloat is only supported since gcc-4.5
+# We force gcc-4.5 because this stage should be closer to stable
+# When gcc-4.5 is stable this could be removed
+=sys-devel/gcc-4.5*
 # <3.0 doesn't build with gcc-4.5
 sys-apps/diffutils
