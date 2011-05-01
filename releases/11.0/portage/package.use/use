@@ -1,0 +1,58 @@
+app-editors/emacs gtk xft
+app-editors/zile -livecd
+virtual/mysql embedded
+sys-fs/udev extras
+net-print/cups gnutls
+sys-auth/pambase consolekit
+dev-lang/python sqlite
+sys-auth/consolekit policykit
+sys-block/parted device-mapper
+gnome-base/gvfs gdu
+gnome-extra/evolution-data-server kerberos ldap
+app-crypt/pinentry gtk
+x11-libs/qt-qt3support kde
+x11-libs/qt-webkit kde
+x11-libs/qt-sql mysql
+dev-python/PyQt4 sql svg webkit
+media-sound/phonon gstreamer
+media-libs/sdl-mixer vorbis
+media-libs/lcms static-libs
+media-libs/jpeg static-libs
+sys-fs/aufs2 kernel-patch
+app-accessibility/espeak portaudio -pulseaudio
+dev-libs/libgcrypt static-libs
+xfce-base/thunar udev
+net-ftp/gftp gtk
+media-libs/libpng static-libs
+dev-python/PyQt4 declarative
+net-libs/telepathy-glib -vala
+media-gfx/eog exif lcms svg
+mail-client/evolution gstreamer
+gnome-extra/gucharmap cjk
+gnome-base/gnome cdr
+app-text/evince djvu
+x11-libs/cairo -qt4
+net-dns/avahi gtk
+=net-dns/avahi-0.6.25-r1 autoipd mdnsresponder-compat
+dev-db/mysql embedded
+media-libs/taglib mp4
+x11-drivers/nvidia-drivers gtk acpi
+virtual/mysql embedded
+media-sound/amarok ipod
+x11-libs/qt-gui private-headers
+x11-libs/qt-core private-headers
+=x11-libs/qt-declarative-4.7.1-r2 private-headers
+=x11-libs/qt-script-4.7.1-r1 private-headers
+
+media-libs/gd fontconfig
+net-irc/quassel monolithic phonon
+x11-libs/qt-gui -raster
+sys-fs/aufs2 ramfs
+net-dns/avahi autopid
+net-dns/avahi autoipd
+dev-libs/libgpg-error static-libs
+app-arch/p7zip -pch
+sys-apps/util-linux -loop-aes
+media-tv/xbmc joystick webserver xrandr
+media-libs/mesa hardened
+media-libs/libmng static-libs

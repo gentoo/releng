@@ -1,0 +1,5 @@
+=app-portage/gentoolkit-9999 **
+app-emulation/virtualbox-guest-additions **
+x11-drivers/xf86-video-virtualbox **
+=sys-kernel/genkernel-9999 **
+=sys-apps/portage-2.2* **
