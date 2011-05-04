@@ -10,7 +10,7 @@ livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/elilo-3.6-cdtar.tar.bz2
 livecd/fsscript: /var/cvsroot/gentoo/src/releng/scripts/2008.0/livecd.sh
 livecd/fstype: squashfs
-livecd/gk_mainargs: --dmraid --evms --lvm --mdadm
+livecd/gk_mainargs: --dmraid --lvm --mdadm
 livecd/iso: /var/tmp/catalyst/builds/default/livecd-ia64-installer-2008.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 2008.0 IA64 LiveCD

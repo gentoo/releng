@@ -112,7 +112,7 @@ livecd/packages:
 	sys-fs/cryptsetup
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
-	sys-fs/evms
+#	sys-fs/evms
 #	sys-fs/hfsplusutils
 #	sys-fs/hfsutils
 #	sys-fs/iprutils

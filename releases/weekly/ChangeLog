@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 May 2011; Raúl Porcel <armin76@gentoo.org>
+  specs/ia64/installcd-stage1.spec, specs/ia64/installcd-stage2-minimal.spec,
+  specs/ia64/livecd-stage1.spec, specs/ia64/livecd-stage2.spec:
+  Remove evms from ia64 specs
+
   08 Apr 2011; Raúl Porcel <armin76@gentoo.org>
   specs/arm/armv7a/hardfloat/portage/package.keywords:
   Update package.keywords for armv7a-hardfloat
