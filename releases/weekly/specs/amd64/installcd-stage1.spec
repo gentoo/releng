@@ -86,7 +86,6 @@ livecd/packages:
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
-	sys-fs/evms
 ### Masked (no keywords)
 #	sys-fs/hfsplusutils
 	sys-fs/hfsutils
