@@ -8,7 +8,7 @@ source_subpath: default/livecd-stage1-ppc64-32ul-2008.0/
 
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 livecd/fstype: squashfs 
-livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --evms
+livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid
 livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-universal-2008.0.iso
 livecd/type: gentoo-release-universal
 

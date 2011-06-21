@@ -10,7 +10,7 @@ livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fsscript: /home/agaffney/release/2008.0/scripts/livecd.sh
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm --makeopts=-j8
+livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: /var/tmp/catalyst/builds/default/livedvd-i686-installer-2008.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 2008.0 x86 LiveDVD

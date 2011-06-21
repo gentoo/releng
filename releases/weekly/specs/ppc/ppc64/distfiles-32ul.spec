@@ -28,7 +28,6 @@ grp/src/packages:
 	reiserfsprogs
 	iputils
 	lvm2
-	evms
 	mdadm
 	ethtool
 	genkernel
