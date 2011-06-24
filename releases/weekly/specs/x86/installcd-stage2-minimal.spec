@@ -10,14 +10,14 @@ livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
-livecd/iso: /release/buildroot/x86-dev/builds/default/install-x86-minimal-2008.0.iso
+livecd/iso: /home/release/buildroot/x86-dev/builds/default/install-x86-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux x86 2008.0
 
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /release/svn-releng/trunk/releases/weekly/kconfig/x86/installcd-2.6.37.config
+boot/kernel/gentoo/config: /home/gentoo-scm/releng/trunk/releases/weekly/kconfig/x86/installcd-2.6.37.config
 boot/kernel/gentoo/use:
 	-*
 	alsa

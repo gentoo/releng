@@ -9,7 +9,7 @@ source_subpath: default/livecd-stage1-alpha-2008.0
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/aboot-1.0_pre20040408-r2-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --evms --mdadm
+livecd/gk_mainargs: --lvm --dmraid --mdadm
 livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-universal-2008.0.iso
 livecd/type: gentoo-release-universal
 livecd/volid: Gentoo Linux alpha 2008.0
