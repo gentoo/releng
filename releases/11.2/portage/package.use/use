@@ -1,0 +1,95 @@
+#required by media-libs/phonon-gstreamer-4.5.1, required by media-libs/phonon-4.5.0[gstreamer], required by kde-base/kdepimlibs-4.6.5[semantic-desktop], required by kde-base/libplasmaclock-4.6.5[holidays], required by kde-base/kdebase-meta-4.6.5, required by kde-base/kde-meta-4.6.5, required by @selected, required by @world (argument)
+>=media-plugins/gst-plugins-meta-0.10-r6 ogg vorbis
+
+#required by mail-client/thunderbird-5.0, required by @selected, required by @world (argument)
+=media-libs/libpng-1.4.8-r1 apng
+
+#required by media-sound/pulseaudio-0.9.23-r1[udev], required by gnome-base/gnome-settings-daemon-3.0.2-r2, required by gnome-base/gnome-shell-3.0.2, required by gnome-base/gnome-3.0.0, required by @selected, required by @world (argument)
+=sys-fs/udev-171-r1 hwdb
+
+x11-libs/qt-script private-headers
+x11-libs/qt-declarative private-headers
+app-editors/emacs gtk xft
+app-editors/zile -livecd
+sys-fs/udev extras
+net-print/cups gnutls
+sys-auth/pambase consolekit
+gnome-base/gvfs gdu
+sys-block/parted device-mapper
+sys-auth/consolekit policykit
+dev-lang/python sqlite
+gnome-extra/evolution-data-server kerberos ldap
+app-crypt/pinentry gtk
+x11-libs/qt-qt3support kde -phonon
+x11-libs/qt-webkit kde
+dev-python/PyQt4 sql svg webkit
+x11-libs/qt-sql mysql
+media-libs/phonon gstreamer
+media-libs/sdl-mixer vorbis
+media-libs/jpeg static-libs
+media-libs/lcms static-libs
+sys-fs/aufs2 kernel-patch
+app-accessibility/espeak portaudio -pulseaudio
+dev-libs/libgcrypt static-libs
+xfce-base/thunar udev
+net-ftp/gftp gtk
+media-libs/libpng static-libs
+dev-python/PyQt4 declarative
+x11-libs/qt-phonon debug
+net-libs/telepathy-glib -vala
+media-gfx/eog exif lcms svg
+mail-client/evolution gstreamer
+gnome-extra/gucharmap cjk
+gnome-base/gnome cdr
+app-text/evince djvu
+x11-libs/cairo -qt4
+net-dns/avahi gtk
+=net-dns/avahi-0.6.25-r1 autoipd mdnsresponder-compat
+media-libs/taglib mp4
+x11-drivers/nvidia-drivers gtk acpi
+dev-db/mysql embedded
+virtual/mysql embedded
+media-sound/amarok ipod
+x11-libs/qt-gui private-headers
+x11-libs/qt-core private-headers
+=x11-libs/qt-declarative-4.7.1-r2 private-headers
+=x11-libs/qt-script-4.7.1-r1 private-headers
+media-libs/gd fontconfig
+net-irc/quassel monolithic phonon
+x11-libs/qt-gui -raster
+net-dns/avahi autoipd
+dev-libs/libgpg-error static-libs
+app-arch/p7zip -pch
+sys-apps/util-linux -loop-aes
+media-tv/xbmc joystick webserver xrandr
+media-libs/libmng static-libs
+=virtual/jpeg-0 static-libs
+=dev-util/kdevplatform-1.2.0 subversion
+kde-base/solid -networkmanager
+media-libs/freetype kpatchsea
+app-text/lcdf-typetools kpatchsea
+media-libs/freetype kpathsea
+app-text/lcdf-typetools kpathsea
+dev-util/kdevplatform subversion
+gnome-extra/nm-applet bluetooth
+gnome-base/gnome-core-apps bluetooth
+=net-libs/telepathy-glib-0.14.3 vala
+gnome-base/gnome-applets -networkmanager
+net-libs/gtk-vnc gtk3
+net-libs/telepathy-glib vala
+sys-block/gparted btrfs dmraid fat gtk hfs jfs mdadm ntfs reiserfs xfs
+
+#required by www-client/firefox-4.0.1-r1, required by @selected, required by @world (argument)
+=media-libs/libpng-1.4.7 apng
+
+=gnome-base/gvfs-1.8.2-r1 cdda
+net-print/cups -usb
+>=media-libs/freetype-2.4.5 static-libs
+>=kde-base/marble-4.7.0 plasma
+>=dev-libs/soprano-2.6.51 clucene
+>=dev-libs/libxml2-2.7.8-r1 icu
+=x11-libs/cairo-1.10.2-r1 xcb
+media-plugins/kipi-plugins redeyes expoblending
+x11-wm/openbox imlib startup-notification
+media-libs/mesa pax_kernel
+=x11-misc/obconf-2.0.3_p20110314-r1 lxde

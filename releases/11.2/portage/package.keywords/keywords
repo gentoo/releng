@@ -1,0 +1,6 @@
+=app-portage/gentoolkit-9999 **
+=sys-kernel/genkernel-9999 **
+=sys-apps/portage-2.2* **
+app-emulation/virtualbox-guest-additions **
+x11-drivers/xf86-video-virtualbox **
+>=media-sound/rhythmbox-9999 **
