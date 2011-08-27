@@ -45,6 +45,7 @@ livecd/packages:
 	app-arch/unrar
 	app-arch/unzip
 	app-arch/xz-utils
+	app-backup/duplicity
 	app-benchmarks/bonnie
 	app-benchmarks/bonnie++
 	app-benchmarks/dbench
@@ -56,11 +57,16 @@ livecd/packages:
 	app-crypt/gnupg
 	app-crypt/pinentry
 	app-editors/emacs
+	app-editors/hexcurse
+	app-editors/hexedit
 	app-editors/vim
 	app-editors/zile
 	app-emacs/gentoo-syntax
+	app-misc/colordiff
 	app-misc/mc
+	app-misc/pax-utils
 	app-misc/screen
+	app-misc/tmux
 	app-misc/vlock
 	app-portage/eix
 	app-portage/gentoolkit
@@ -77,8 +83,14 @@ livecd/packages:
 	dev-lang/perl
 	dev-lang/python
 	media-gfx/fbgrab
+	net-analyzer/gnu-netcat
+	net-analyzer/netcat
+	net-analyzer/netcat6
+	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
-
+	net-analyzer/traceroute-nanog
+	net-analyzer/tpdump
+	net-analyzer/nmap
 	net-dialup/mingetty
 	net-dialup/minicom
 	net-dialup/pptpclient
@@ -118,9 +130,9 @@ livecd/packages:
 	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	sys-apps/apmd
-	sys-block/eject
 	sys-apps/acl
 	sys-apps/attr
+	sys-apps/cciss_vol_status
 	sys-apps/coreutils
 	sys-apps/diffutils
 	sys-apps/dmidecode
@@ -130,6 +142,8 @@ livecd/packages:
 	sys-apps/findutils
 	sys-apps/flashrom
 	sys-apps/fxload
+	sys-apps/gawk
+	sys-apps/grep
 	sys-apps/hdparm
 	sys-apps/hwsetup
 	sys-apps/ipmitool
@@ -144,16 +158,21 @@ livecd/packages:
 	sys-apps/pciutils
 	sys-apps/sdparm
 	sys-apps/sed
+	sys-apps/setserial
 	sys-apps/sg3_utils
 	sys-apps/smartmontools
 	sys-apps/usbutils
 	sys-apps/which
-	sys-block/parted
-	sys-apps/sdparm
 	sys-block/aoetools
+	sys-block/eject
+	sys-block/lsiutil
+	sys-block/megacli
+	sys-block/megarc
 	sys-block/mtx
+	sys-block/parted
 	sys-block/partimage
 	sys-block/qla-fc-firmware
+	sys-block/tw_cli
 	sys-boot/grub
 	sys-fs/cryptsetup
 	sys-fs/dmraid
