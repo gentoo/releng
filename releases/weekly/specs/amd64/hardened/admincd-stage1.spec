@@ -1,10 +1,10 @@
 subarch: amd64
-version_stamp: 2008.0
+version_stamp: hardened-2008.0
 target: livecd-stage1
-rel_type: default
-profile: default/linux/amd64/10.0/no-multilib
+rel_type: hardened
+profile: hardened/linux/amd64
 snapshot: 2008.0
-source_subpath: default/stage3-amd64-latest
+source_subpath: hardened/stage3-amd64-hardened-latest
 livecd/use:
 	-*
 	deprecated
@@ -84,6 +84,7 @@ livecd/packages:
 	dev-lang/python
 	media-gfx/fbgrab
 	net-analyzer/gnu-netcat
+	net-analyzer/iptraf-ng
 	net-analyzer/netcat
 	net-analyzer/netcat6
 	net-analyzer/tcptraceroute

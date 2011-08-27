@@ -1,22 +1,22 @@
 subarch: amd64
-version_stamp: 2008.0
+version_stamp: hardened-2008.0
 target: livecd-stage2
-rel_type: default
-profile: default/linux/amd64/10.0/no-multilib
+rel_type: hardened
+profile: hardened/linux/amd64
 snapshot: 2008.0
-source_subpath: default/admincd-stage1-amd64-2008.0
+source_subpath: hardened/admincd-stage1-amd64-2008.0
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
-livecd/iso: /release/buildroot/amd64-dev/builds/default/admincd-amd64-2008.0.iso
+livecd/iso: /release/buildroot/amd64-dev/builds/hardened/admincd-amd64-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux Admin CD amd64 2008.0
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/sources: gentoo-sources
+boot/kernel/gentoo/sources: hardened-sources
 boot/kernel/gentoo/config: /release/svn-releng/trunk/releases/weekly/kconfig/amd64/admincd-3.0.config
 boot/kernel/gentoo/use:
 	-*
@@ -156,9 +156,9 @@ livecd/empty:
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
-	/usr/i386-gentoo-linux-uclibc
-	/usr/i386-pc-linux-gnu
-	/usr/i386-pc-linux-uclibc
+	/usr/i?86-gentoo-linux-uclibc
+	/usr/i?86-pc-linux-gnu
+	/usr/i?86-pc-linux-uclibc
 	/usr/include
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
@@ -278,8 +278,8 @@ livecd/rm:
 	/usr/bin/gcc*
 	/usr/bin/genkernel
 	/usr/bin/gprof
-	/usr/bin/i386-gentoo-linux-uclibc-*
-	/usr/bin/i386-pc-linux-*
+	/usr/bin/i?86-gentoo-linux-uclibc-*
+	/usr/bin/i?86-pc-linux-*
 	/usr/bin/jpegtran
 	/usr/bin/ld
 	/usr/bin/libpng*
