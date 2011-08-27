@@ -33,6 +33,7 @@ livecd/packages:
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-admin/sysstat
+	app-admin/testdisk
 	app-arch/bzip2
 	app-arch/cpio
 	app-arch/gzip
@@ -44,12 +45,21 @@ livecd/packages:
 	app-arch/unrar
 	app-arch/unzip
 	app-arch/xz-utils
+	app-benchmarks/bonnie
+	app-benchmarks/bonnie++
+	app-benchmarks/dbench
+	app-benchmarks/iozone
+	app-benchmarks/lmbench
+	app-benchmarks/piozone
+	app-benchmarks/stress
+	app-benchmarks/tiobench
 	app-crypt/gnupg
 	app-crypt/pinentry
 	app-editors/emacs
 	app-editors/vim
 	app-editors/zile
 	app-emacs/gentoo-syntax
+	app-misc/mc
 	app-misc/screen
 	app-misc/vlock
 	app-portage/eix
@@ -140,6 +150,7 @@ livecd/packages:
 	sys-apps/which
 	sys-block/parted
 	sys-apps/sdparm
+	sys-block/aoetools
 	sys-block/mtx
 	sys-block/partimage
 	sys-block/qla-fc-firmware
@@ -157,6 +168,7 @@ livecd/packages:
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/multipath-tools
+	sys-fs/ntfs3g
 	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
