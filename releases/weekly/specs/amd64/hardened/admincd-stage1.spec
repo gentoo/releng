@@ -5,6 +5,7 @@ rel_type: hardened
 profile: hardened/linux/amd64
 snapshot: 2008.0
 source_subpath: hardened/stage3-amd64-hardened-latest
+portage_confdir: /release/svn-releng/trunk/releases/weekly/portage/admincd
 livecd/use:
 	-*
 	deprecated
@@ -50,7 +51,6 @@ livecd/packages:
 	app-benchmarks/bonnie++
 	app-benchmarks/dbench
 	app-benchmarks/iozone
-	app-benchmarks/lmbench
 	app-benchmarks/piozone
 	app-benchmarks/stress
 	app-benchmarks/tiobench
@@ -75,7 +75,6 @@ livecd/packages:
 	app-shells/bash-completion
 	app-shells/gentoo-bashcomp
 	app-shells/zsh
-	app-text/dos2unix
 	app-text/tree
 	app-text/unix2dos
 	app-text/wgetpaste
@@ -85,12 +84,11 @@ livecd/packages:
 	media-gfx/fbgrab
 	net-analyzer/gnu-netcat
 	net-analyzer/iptraf-ng
-	net-analyzer/netcat
 	net-analyzer/netcat6
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-analyzer/traceroute-nanog
-	net-analyzer/tpdump
+	net-analyzer/tcpdump
 	net-analyzer/nmap
 	net-dialup/mingetty
 	net-dialup/minicom
@@ -144,6 +142,7 @@ livecd/packages:
 	sys-apps/flashrom
 	sys-apps/fxload
 	sys-apps/gawk
+	sys-apps/gptfdisk
 	sys-apps/grep
 	sys-apps/hdparm
 	sys-apps/hwsetup

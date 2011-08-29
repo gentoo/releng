@@ -1,0 +1,4 @@
+sys-block/lsiutil ~amd64
+sys-block/megacli ~amd64
+sys-block/megarc ~amd64
+sys-fs/ext3grep ~amd64
