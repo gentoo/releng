@@ -2,6 +2,14 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Aug 2011; Raúl Porcel <armin76@gentoo.org>
+  -kconfig/alpha/installcd-2.6.34.config,
+  -kconfig/alpha/installcd-2.6.34.nolsa.config,
+  +kconfig/alpha/installcd-2.6.39.nolsa.config,
+  specs/alpha/installcd-stage2-minimal.spec,
+  +kconfig/alpha/installcd-2.6.39.config:
+  Update kconfig for alpha to include full HID support
+
   04 May 2011; Raúl Porcel <armin76@gentoo.org>
   specs/ia64/installcd-stage1.spec, specs/ia64/installcd-stage2-minimal.spec,
   specs/ia64/livecd-stage1.spec, specs/ia64/livecd-stage2.spec:
