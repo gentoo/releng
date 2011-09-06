@@ -1,4 +1,5 @@
-sys-block/lsiutil ~amd64
-sys-block/megacli ~amd64
-sys-block/megarc ~amd64
-sys-fs/ext3grep ~amd64
+sys-block/lsiutil
+sys-block/megacli
+sys-block/megarc
+sys-fs/ext3grep
+=sys-kernel/hardened-sources-3.0.4-r1
