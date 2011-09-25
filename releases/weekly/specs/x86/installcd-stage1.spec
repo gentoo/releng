@@ -33,7 +33,7 @@ livecd/packages:
 	app-arch/unzip
 	app-arch/xz-utils
 	app-crypt/gnupg
-	app-editors/zile
+	app-editors/mg
 	app-misc/screen
 	app-misc/vlock
 	app-portage/mirrorselect

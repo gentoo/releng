@@ -59,8 +59,8 @@ livecd/packages:
 	app-editors/emacs
 	app-editors/hexcurse
 	app-editors/hexedit
+	app-editors/mg
 	app-editors/vim
-	app-editors/zile
 	app-emacs/gentoo-syntax
 	app-misc/colordiff
 	app-misc/mc
