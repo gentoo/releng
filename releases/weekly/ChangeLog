@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org>
+  kconfig/ia64/installcd-2.6.39.config:
+  Update ia64 kconfig
+
   05 Sep 2011; Raúl Porcel <armin76@gentoo.org>
   -kconfig/ia64/installcd-2.6.36.config, +kconfig/ia64/installcd-2.6.39.config,
   specs/ia64/installcd-stage2-minimal.spec:
