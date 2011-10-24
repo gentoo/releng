@@ -169,6 +169,7 @@ livecd/packages:
 	sys-block/megacli
 	sys-block/megarc
 	sys-block/mtx
+	sys-block/open-iscsi
 	sys-block/parted
 	sys-block/partimage
 	sys-block/qla-fc-firmware
