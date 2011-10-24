@@ -176,6 +176,7 @@ livecd/packages:
 	sys-block/tw_cli
 	sys-boot/grub
 	sys-fs/cryptsetup
+	sys-fs/ddrescue
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
