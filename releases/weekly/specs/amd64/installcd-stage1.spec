@@ -65,12 +65,14 @@ livecd/packages:
 	net-wireless/iwl4965-ucode
 	net-wireless/iwl5000-ucode
 	net-wireless/prism54-firmware
+	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	sys-apps/apmd
 	sys-block/eject
+	sys-apps/dmidecode
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm

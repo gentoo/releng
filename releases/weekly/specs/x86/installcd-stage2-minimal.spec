@@ -6,7 +6,7 @@ profile: default/linux/x86/10.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-x86-2008.0
 
-livecd/bootargs: dokeymap
+#livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
@@ -78,8 +78,6 @@ boot/kernel/gentoo/packages:
 	app-accessibility/espeakup
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-### Compile failure w/ 2.6.24
-#	net-dialup/slmodem
 	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
 #	net-dialup/fritzcapi
@@ -157,7 +155,6 @@ livecd/empty:
 	/usr/i?86-gentoo-linux-uclibc
 	/usr/i?86-pc-linux-gnu
 	/usr/i?86-pc-linux-uclibc
-	/usr/include
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
 	/usr/lib/X11/etc
@@ -294,10 +291,8 @@ livecd/rm:
 	/usr/bin/powerpc64-unknown-linux-gnu-*
 	/usr/bin/sparc-unknown-linux-gnu-*
 	/usr/bin/sparc64-unknown-linux-gnu-*
-	/usr/bin/strings
 	/usr/bin/strip
 	/usr/bin/tbz2tool
-	/usr/bin/x86_64-pc-linux-gnu-*
 	/usr/bin/xpak
 	/usr/bin/yacc
 	/usr/lib*/*.a

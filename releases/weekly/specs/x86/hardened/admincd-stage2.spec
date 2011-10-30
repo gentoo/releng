@@ -1,12 +1,12 @@
 subarch: x86
-version_stamp: hardened-2008.0
+version_stamp: 2008.0
 target: livecd-stage2
 rel_type: hardened
 profile: hardened/linux/x86
 snapshot: 2008.0
 source_subpath: hardened/admincd-stage1-x86-2008.0
 
-livecd/bootargs: dokeymap
+#livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
@@ -79,6 +79,7 @@ boot/kernel/gentoo/packages:
 	media-libs/alsa-oss
 	media-sound/alsa-utils
 	net-dialup/globespan-adsl
+	sys-fs/ntfs3g
 
 # These were not stable at time of snapshot/release.
 #	net-wireless/rtl8180
@@ -159,7 +160,6 @@ livecd/empty:
 	/usr/i?86-gentoo-linux-uclibc
 	/usr/i?86-pc-linux-gnu
 	/usr/i?86-pc-linux-uclibc
-	/usr/include
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
 	/usr/lib/X11/etc
@@ -296,10 +296,8 @@ livecd/rm:
 	/usr/bin/powerpc64-unknown-linux-gnu-*
 	/usr/bin/sparc-unknown-linux-gnu-*
 	/usr/bin/sparc64-unknown-linux-gnu-*
-	/usr/bin/strings
 	/usr/bin/strip
 	/usr/bin/tbz2tool
-	/usr/bin/x86_64-pc-linux-gnu-*
 	/usr/bin/xpak
 	/usr/bin/yacc
 	/usr/lib*/*.a
