@@ -4,7 +4,7 @@ target: livecd-stage1
 rel_type: hardened
 profile: hardened/linux/x86
 snapshot: 2008.0
-source_subpath: hardened/stage3-x86-hardened-latest
+source_subpath: hardened/stage3-i686-hardened-latest
 portage_confdir: /release/svn-releng/trunk/releases/weekly/portage/admincd
 livecd/use:
 	-*
