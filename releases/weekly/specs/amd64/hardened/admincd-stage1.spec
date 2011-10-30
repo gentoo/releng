@@ -1,5 +1,5 @@
 subarch: amd64
-version_stamp: hardened-2008.0
+version_stamp: 2008.0
 target: livecd-stage1
 rel_type: hardened
 profile: hardened/linux/amd64
@@ -183,6 +183,7 @@ livecd/packages:
 	sys-fs/e2fsprogs
 	sys-fs/ext3grep
 	sys-fs/extundelete
+	sys-fs/hfsplusutils
 	sys-fs/hfsutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi

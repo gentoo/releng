@@ -57,7 +57,7 @@ livecd/packages:
 	net-proxy/ntlmaps
 	net-proxy/tsocks
 	net-wireless/b43-fwcutter
-### Masked (~amd64)
+### Masked (~keywords)
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
@@ -71,7 +71,6 @@ livecd/packages:
 	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	sys-apps/apmd
-	sys-block/eject
 	sys-apps/dmidecode
 	sys-apps/ethtool
 	sys-apps/fxload
@@ -80,16 +79,16 @@ livecd/packages:
 	sys-apps/iproute2
 	sys-apps/memtester
 	sys-apps/netplug
-	sys-block/parted
 	sys-apps/sdparm
+	sys-block/eject
+	sys-block/parted
 	sys-block/partimage
 	sys-block/qla-fc-firmware
 	sys-fs/cryptsetup
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
-### Masked (no keywords)
-#	sys-fs/hfsplusutils
+	sys-fs/hfsplusutils
 	sys-fs/hfsutils
 	sys-fs/jfsutils
 	sys-fs/lsscsi
