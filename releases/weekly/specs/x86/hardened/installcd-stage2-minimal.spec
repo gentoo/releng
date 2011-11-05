@@ -155,7 +155,6 @@ livecd/empty:
 	/usr/i?86-gentoo-linux-uclibc
 	/usr/i?86-pc-linux-gnu
 	/usr/i?86-pc-linux-uclibc
-	/usr/include
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
 	/usr/lib/X11/etc

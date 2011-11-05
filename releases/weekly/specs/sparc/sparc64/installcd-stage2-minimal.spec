@@ -114,7 +114,6 @@ livecd/empty:
 	/usr/i386-gentoo-linux-uclibc
 	/usr/i386-pc-linux-gnu
 	/usr/i386-pc-linux-uclibc
-	/usr/include
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
 	/usr/lib/X11/etc
