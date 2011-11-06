@@ -4,7 +4,7 @@ target: livecd-stage2
 rel_type: hardened
 profile: hardened/linux/x86
 snapshot: 2008.0
-source_subpath: hardened/admincd-stage1-x86-2008.0
+source_subpath: hardened/livecd-stage1-x86-2008.0
 portage_confdir: /release/svn-releng/trunk/releases/weekly/portage/admincd
 
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
