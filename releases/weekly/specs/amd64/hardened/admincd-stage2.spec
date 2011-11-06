@@ -119,7 +119,6 @@ livecd/unmerge:
 	sys-devel/autoconf-wrapper
 	sys-devel/automake
 	sys-devel/automake-wrapper
-	sys-devel/binutils
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
