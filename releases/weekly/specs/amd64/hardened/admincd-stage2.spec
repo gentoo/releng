@@ -7,6 +7,7 @@ snapshot: 2008.0
 source_subpath: hardened/livecd-stage1-amd64-2008.0
 portage_confdir: /release/svn-releng/trunk/releases/weekly/portage/admincd
 
+livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
