@@ -157,7 +157,6 @@ livecd/empty:
 	/usr/diet/include
 	/usr/diet/man
 	/usr/i?86-gentoo-linux-uclibc
-	/usr/i?86-pc-linux-gnu
 	/usr/i?86-pc-linux-uclibc
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
@@ -217,7 +216,6 @@ livecd/empty:
 	/usr/share/zoneinfo
 	/usr/sparc-unknown-linux-gnu
 	/usr/src
-	/usr/x86_64-pc-linux-gnu
 	/var/cache
 	/var/empty
 	/var/lib/portage
