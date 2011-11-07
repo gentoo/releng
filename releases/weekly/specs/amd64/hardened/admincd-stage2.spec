@@ -14,6 +14,7 @@ livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: /release/buildroot/amd64-dev/builds/hardened/admincd-amd64-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux Admin CD 2008.0
+livecd/rcdel: keymaps|boot
 
 boot/kernel: gentoo
 
