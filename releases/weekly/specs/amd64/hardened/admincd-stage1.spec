@@ -133,6 +133,7 @@ livecd/packages:
 	sys-apps/apmd
 	sys-apps/acl
 	sys-apps/attr
+	sys-apps/busybox
 	sys-apps/cciss_vol_status
 	sys-apps/coreutils
 	sys-apps/diffutils
