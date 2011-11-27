@@ -18,7 +18,7 @@ livecd/volid: Gentoo Linux alpha 2008.0
 boot/kernel: gentoo gentoo_nolsa
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-2.6.39.config
+boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-3.0.6.config
 boot/kernel/gentoo/use:
 	-*
 	atm
@@ -44,7 +44,7 @@ boot/kernel/gentoo/use:
 	usb
 
 boot/kernel/gentoo_nolsa/sources: gentoo-sources
-boot/kernel/gentoo_nolsa/config: ../../kconfig/alpha/installcd-2.6.39.nolsa.config
+boot/kernel/gentoo_nolsa/config: ../../kconfig/alpha/installcd-3.0.6.nolsa.config
 boot/kernel/gentoo_nolsa/use:
 	-*
 	atm

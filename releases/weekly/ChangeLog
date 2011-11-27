@@ -2,6 +2,14 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Nov 2011; Raúl Porcel <armin76@gentoo.org>
+  -kconfig/alpha/installcd-2.6.39.config,
+  -kconfig/alpha/installcd-2.6.39.nolsa.config,
+  +kconfig/alpha/installcd-3.0.6.nolsa.config,
+  specs/alpha/installcd-stage2-minimal.spec,
+  +kconfig/alpha/installcd-3.0.6.config:
+  Update alpha kconfig
+
   12 Oct 2011; Raúl Porcel <armin76@gentoo.org>
   kconfig/ia64/installcd-2.6.39.config:
   Add support for the Emulex LightPulse on ia64, bug #371809
