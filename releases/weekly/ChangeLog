@@ -2,6 +2,19 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Nov 2011; Raúl Porcel <armin76@gentoo.org> -specs/alpha/distfiles.spec,
+  -specs/alpha/installcd-stage2-universal.spec,
+  -specs/alpha/livecd-stage1.spec, -specs/alpha/livecd-stage2.spec,
+  -specs/alpha/packagecd.spec, -specs/alpha/stage2-desktop.spec,
+  -specs/alpha/stage3-desktop.spec, -specs/ia64/hardened/stage1.spec,
+  -specs/ia64/hardened/stage2.spec, -specs/ia64/hardened/stage3.spec,
+  -specs/ia64/livecd-stage1.spec, -specs/ia64/livecd-stage2.spec,
+  -specs/ia64/stage2-desktop.spec, -specs/ia64/stage3-desktop.spec,
+  -specs/sparc/sparc64/distfiles.spec,
+  -specs/sparc/sparc64/installcd-stage2-universal.spec,
+  -specs/sparc/sparc64/packages.spec:
+  Remove unused+outdated specs
+
   27 Nov 2011; Raúl Porcel <armin76@gentoo.org>
   -kconfig/alpha/installcd-2.6.39.config,
   -kconfig/alpha/installcd-2.6.39.nolsa.config,
