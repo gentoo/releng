@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/x86
 snapshot: 2008.0
 source_subpath: hardened/stage3-i686-hardened-latest
-portage_confdir: /release/svn-releng/trunk/releases/weekly/portage/admincd
+portage_confdir: /home/repositories/releng/trunk/releases/weekly/portage/admincd
 livecd/use:
 	-*
 	deprecated
@@ -54,6 +54,7 @@ livecd/packages:
 	app-benchmarks/piozone
 	app-benchmarks/stress
 	app-benchmarks/tiobench
+	app-crypt/bcwipe
 	app-crypt/gnupg
 	app-crypt/pinentry
 	app-editors/emacs
