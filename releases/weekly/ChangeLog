@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Dec 2011; Raúl Porcel <armin76@gentoo.org>
+  -specs/arm/armv7a/hardfloat/portage/package.keywords,
+  specs/arm/armv7a/hardfloat/stage1.spec,
+  specs/arm/armv7a/hardfloat/stage2.spec,
+  specs/arm/armv7a/hardfloat/stage3.spec:
+  gcc-4.5 is stable now
+
   27 Nov 2011; Raúl Porcel <armin76@gentoo.org> -specs/alpha/distfiles.spec,
   -specs/alpha/installcd-stage2-universal.spec,
   -specs/alpha/livecd-stage1.spec, -specs/alpha/livecd-stage2.spec,
