@@ -57,7 +57,7 @@ run_cmd() {
 pre_build() {
   # This is a skeleton function that you can override from the config file.
   # It will be executed before the build is started. You can use this to
-  # update a svn checkout of spec files
+  # update the checkout of the releng repo
   local foo=bar
 }
 
