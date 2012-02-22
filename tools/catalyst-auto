@@ -108,7 +108,7 @@ fi
 
 source ${config_file}
 
-TMPDIR=/tmp/catalyst-auto.${PID}
+TMPDIR=/home/release/tmp/catalyst-auto.${PID}
 DATESTAMP=$(date +%Y%m%d)
 
 if [ ${verbose} = 1 ]; then
