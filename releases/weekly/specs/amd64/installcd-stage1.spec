@@ -94,7 +94,7 @@ livecd/packages:
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/multipath-tools
-	sys-fs/ntfsprogs
+	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-libs/gpm
