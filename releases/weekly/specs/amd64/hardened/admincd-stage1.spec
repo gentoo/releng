@@ -193,7 +193,6 @@ livecd/packages:
 	sys-fs/mdadm
 	sys-fs/multipath-tools
 	sys-fs/ntfs3g
-	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-libs/gpm

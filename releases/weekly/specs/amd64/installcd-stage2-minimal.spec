@@ -80,7 +80,6 @@ boot/kernel/gentoo/packages:
 	media-libs/alsa-oss
 	media-sound/alsa-utils
 	net-dialup/globespan-adsl
-	sys-fs/ntfs3g
 
 # These were not stable at time of snapshot/release.
 #	net-wireless/rtl8180

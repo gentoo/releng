@@ -84,7 +84,6 @@ boot/kernel/gentoo/packages:
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
 	sys-apps/pcmciautils
-	sys-fs/ntfs3g
 
 livecd/unmerge:
 	app-admin/eselect
