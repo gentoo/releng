@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/amd64
 snapshot: 2008.0
 source_subpath: hardened/stage3-amd64-hardened-latest
-portage_confdir: /release/svn-releng/trunk/releases/weekly/portage/admincd
+portage_confdir: /home/repositories/releng/releases/weekly/portage/admincd
 
 livecd/use:
 	-*

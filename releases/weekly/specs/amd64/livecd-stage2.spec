@@ -8,21 +8,21 @@ source_subpath: default/livecd-stage1-amd64-installer-2008.0
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-livecd/fsscript: /var/svnroot/releng/trunk/releases/2008.0/scripts/livecd.sh
+livecd/fsscript: /home/repositories/releng/releases/2008.0/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
-livecd/iso: /release/buildroot/amd64-dev/builds/default/livecd-amd64-installer-2008.0.iso
+livecd/iso: /home/release/buildroot/amd64-dev/builds/default/livecd-amd64-installer-2008.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 2008.0 amd64 LiveCD
 livecd/xsession: xfce
 livecd/xdm: gdm
 
-livecd/overlay: /var/svnroot/releng/trunk/releases/2008.0/overlays/common/overlay/livecd
-livecd/root_overlay: /var/svnroot/releng/trunk/releases/2008.0/overlays/common/root_overlay
+livecd/overlay: /home/repositories/releng/releases/2008.0/overlays/common/overlay/livecd
+livecd/root_overlay: /home/repositories/releng/releases/2008.0/overlays/common/root_overlay
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/amd64/livecd-2.6.24.config
+boot/kernel/gentoo/config: /home/repositories/releng/releases/2008.0/kconfig/amd64/livecd-2.6.24.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 	media-libs/alsa-oss
