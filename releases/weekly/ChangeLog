@@ -1,6 +1,28 @@
 # ChangeLog for releng repo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  30 Apr 2012; Raúl Porcel <armin76@gentoo.org>
+  -specs/ppc/ppc64/distfiles-32ul.spec,
+  -specs/ppc/ppc64/power5/stage2-32ul.spec,
+  specs/ppc/ppc64/installcd-stage1.spec, -specs/ppc/ppc64/g5/stage2-32ul.spec,
+  -specs/ppc/ppc64/g5/stage3-32ul.spec, -specs/ppc/ppc64/packages-32ul.spec,
+  -specs/ppc/ppc64/power5/stage3-32ul.spec,
+  -specs/ppc/ppc64/power6/stage2-32ul.spec,
+  -specs/ppc/ppc64/power6/stage3-32ul.spec,
+  -specs/ppc/ppc64/stage2-32ul-desktop.spec,
+  -specs/ppc/ppc64/stage3-32ul-desktop.spec,
+  -specs/ppc/ppc64/distfiles-64ul.spec,
+  -specs/ppc/ppc64/installcd-stage2-universal.spec,
+  -specs/ppc/ppc64/g5/stage2-64ul.spec, -specs/ppc/ppc64/g5/stage3-64ul.spec,
+  -specs/ppc/ppc64/packages-64ul.spec,
+  -specs/ppc/ppc64/power5/stage2-64ul.spec,
+  -specs/ppc/ppc64/livecd-stage1.spec,
+  -specs/ppc/ppc64/power5/stage3-64ul.spec,
+  -specs/ppc/ppc64/livecd-stage2.spec,
+  -specs/ppc/ppc64/power6/stage2-64ul.spec,
+  -specs/ppc/ppc64/power6/stage3-64ul.spec:
+  Replace ntfsprogs with ntfs3g and remove unmantained stuff
 
   08 Dec 2011; Raúl Porcel <armin76@gentoo.org>
   -specs/arm/armv7a/hardfloat/portage/package.keywords,
