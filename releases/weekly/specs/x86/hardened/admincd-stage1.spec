@@ -178,6 +178,7 @@ livecd/packages:
 	sys-block/qla-fc-firmware
 	sys-block/tw_cli
 	sys-boot/grub
+	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/ddrescue
 	sys-fs/dmraid
