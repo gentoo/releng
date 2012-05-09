@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 May 2012; Raúl Porcel <armin76@gentoo.org>
+  +specs/arm/armv6j/hardfloat/stage1.spec,
+  +specs/arm/armv6j/hardfloat/stage2.spec,
+  +specs/arm/armv6j/hardfloat/stage3.spec:
+  Add armv6j hardfloat specs
+
   30 Apr 2012; Raúl Porcel <armin76@gentoo.org>
   -specs/ppc/ppc64/distfiles-32ul.spec,
   -specs/ppc/ppc64/power5/stage2-32ul.spec,
