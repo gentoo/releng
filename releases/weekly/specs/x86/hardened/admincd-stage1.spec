@@ -169,7 +169,6 @@ livecd/packages:
 	sys-block/aoetools
 	sys-block/eject
 	sys-block/lsiutil
-	sys-block/megacli
 	sys-block/megarc
 	sys-block/mtx
 	sys-block/open-iscsi
