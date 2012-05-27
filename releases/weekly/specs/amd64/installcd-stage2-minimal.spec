@@ -100,7 +100,6 @@ livecd/unmerge:
 	dev-libs/gmp
 	dev-libs/libxml2
 	dev-libs/mpfr
-	dev-libs/popt
 	dev-python/pycrypto
 	dev-util/pkgconfig
 	net-misc/rsync
