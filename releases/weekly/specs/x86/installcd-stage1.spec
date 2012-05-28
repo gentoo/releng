@@ -72,6 +72,7 @@ livecd/packages:
 	sys-apps/dmidecode
 	sys-apps/ethtool
 	sys-apps/fxload
+	sys-apps/gptfdisk
 	sys-apps/hdparm
 	sys-apps/hwsetup
 	sys-apps/iproute2
