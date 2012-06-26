@@ -1,0 +1,11 @@
+This directory houses the config files for catalyst to be used by releng
+build boxes. To use these config files, add a symlink in a build box from
+/etc/catalyst/release to this dir.
+
+Old config files that serve as examples are stores in the old subdir.
+
+Changes to these files should be discussed with the members responsible
+for individual build boxes / arches or with the RelEng team.
+
+---------
+Release Engineering Team
