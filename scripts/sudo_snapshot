@@ -1,0 +1,20 @@
+#!/bin/bash
+usage() {
+	echo "Usage: $(basename ${0}) <version>"
+}
+if [ -z "${1}" ]
+then
+	usage
+else
+	catalyst -c /etc/catalyst/snapshot.conf -s ${1}
+	for i in amd64 x86
+	do
+		for j in default dev hardened uclibc
+		do
+			cd /release/buildroot/${i}-${j}/snapshots
+			rm -f portage-${1}.tar.bz2
+			ln -sf /release/snapshots/portage-${1}.tar.bz2 \
+				portage-${1}.tar.bz2
+		done
+	done
+fi

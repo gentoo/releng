@@ -1,0 +1,28 @@
+#!/bin/bash
+
+usage() {
+	echo "Usage: $(basename ${0}) <arch> <target> <spec>"
+	echo "Where arch is either amd64 or x86, target is default, dev, hardened,"
+	echo "or uclibc, and spec is your spec file."
+	echo
+}
+
+if [ -z "$1" -o -z "$2" -o -z "$3" ]
+then
+	usage
+else
+	target="$(grep target ${3} | cut -d' ' -f2)"
+	/usr/bin/catalyst -c /etc/catalyst/${1}-${2}.conf -f ${3} ${4} ${5}
+#	&& \
+#	case ${target} in
+#		stage*|grp*|livecd-stage2)
+#			echo "Cleaning out ${target} temp files"
+#			rel_type="$(grep rel_type ${3} | cut -d' ' -f2)"
+#			subarch="$(grep subarch ${3} | cut -d' ' -f2)"
+#			version="$(grep version ${3} | cut -d' ' -f2)"
+#			storedir="$(grep storedir /etc/catalyst/${1}-${2}.conf | cut -d\" -f2)"
+#			echo "Removing ${storedir}/tmp/${rel_type}/${target}-${subarch}-${version}"
+#			rm -rf ${storedir}/tmp/${rel_type}/${target}-${subarch}-${version}
+#		;;
+#	esac
+fi

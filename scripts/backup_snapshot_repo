@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Start our rsyncs
+RSYNC_OPTS="--archive --delete --sparse --whole-file"
+
+if [ -e /release/repos/snapshot-tree/hooks/post-commit ]
+then
+	echo "$(date): Starting rsync of trees from tmpfs to disk..." >> /var/log/snapshot-tree-backup.log
+	rsync ${RSYNC_OPTS} /release/repos/snapshot-tree/* /release/repos/snapshot-tree-disk 2>&1 >> /var/log/snapshot-tree-backup.log || echo "$(date): rsync failed!" >> /var/log/snapshot-tree-backup.log
+fi

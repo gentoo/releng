@@ -1,0 +1,39 @@
+#!/bin/bash
+
+email_from="auto"
+email_to="releng@gentoo.org"
+url="https://poseidon.amd64.dev.gentoo.org/snapshots"
+snapshot_uri="/release/webroot/snapshots"
+svn_repo="/release/repos/snapshot-tree"
+
+send_email() {
+  subject="[Snapshot] ${1}"
+
+  echo -e "From: ${email_from}\r\nTo: ${email_to}\r\nSubject: ${subject}\r\n\r\nA new snapshot has been built from revision `svnlook history ${svn_repo} | head -n 3 | tail -n 1 | sed -e 's:^ *::' -e 's: .*$::'` of ${svn_repo}.  You can find it at ${url}.\r\n\r\n$(cat /release/snapshots/portage-${1}.tar.bz2.DIGESTS)\r\n" | /usr/sbin/sendmail -f ${email_from} ${email_to}
+}
+
+if [ "${email_from}" == "auto" ]
+then
+	username="$(whoami)"
+	if [ "${username}" == "root" ]
+	then
+		email_from="catalyst@poseidon.amd64.dev.gentoo.org"
+	else
+		email_from="${username}@gentoo.org"
+	fi
+fi
+
+sudo /release/bin/sudo_official "$@" && \
+echo "Starting rsync from /release/snapshots/portage-${1}.tar.bz2* to ${snapshot_uri}" && \
+rsync --archive --stats --progress /release/snapshots/portage-${1}.tar.bz2* \
+	${snapshot_uri}
+ret=$?
+
+if [ "${email_from}" == "none" ]
+then
+	echo "Skipping email step as configured..."
+else
+	[ $ret -eq 0 ] && send_email ${1}
+fi
+
+exit $ret
