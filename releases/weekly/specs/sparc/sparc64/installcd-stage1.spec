@@ -68,7 +68,7 @@ livecd/packages:
 #	net-wireless/zd1201-firmware
 #	net-wireless/zd1211-firmware
 #	sys-apps/apmd
-	sys-block/eject
+	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
@@ -77,11 +77,12 @@ livecd/packages:
 	sys-apps/lssbus
 	sys-apps/memtester
 #	sys-apps/netplug
-	sys-block/parted
 #	sys-apps/powerpc-utils
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
+	sys-block/eject
+	sys-block/parted
 #	sys-block/partimage
 	sys-block/qla-fc-firmware
 #	sys-boot/yaboot
