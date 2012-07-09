@@ -60,17 +60,18 @@ livecd/packages:
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/apmd
-	sys-block/eject
+	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
 	sys-apps/iproute2
 #	sys-apps/lssbus
 	sys-apps/memtester
-	sys-block/parted
 	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/sdparm
+	sys-block/eject
+	sys-block/parted
 	sys-block/partimage
 #	sys-block/qla-fc-firmware
 	sys-boot/yaboot
