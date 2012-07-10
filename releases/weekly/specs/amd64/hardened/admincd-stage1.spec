@@ -46,7 +46,6 @@ livecd/packages:
 	app-arch/tar
 	app-arch/unrar
 	app-arch/unzip
-	app-arch/xz-utils
 	app-backup/duplicity
 	app-benchmarks/bonnie
 	app-benchmarks/bonnie++
