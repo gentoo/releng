@@ -194,7 +194,6 @@ livecd/empty:
 	/usr/share/consolefonts/partialfonts
 	/usr/share/consoletrans
 	/usr/share/dict
-	/usr/share/doc
 	/usr/share/et
 	/usr/share/gcc-data
 	/usr/share/genkernel
