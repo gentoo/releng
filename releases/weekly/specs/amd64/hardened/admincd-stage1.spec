@@ -104,6 +104,7 @@ livecd/packages:
 	net-misc/curl
 	net-misc/dhcpcd
 	net-misc/iputils
+	net-misc/ndisc6
 	net-misc/ntp
 	net-misc/openssh
 	net-misc/openvpn
