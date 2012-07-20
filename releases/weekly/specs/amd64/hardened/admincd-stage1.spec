@@ -169,7 +169,6 @@ livecd/packages:
 	sys-apps/which
 	sys-block/aoetools
 	sys-block/eject
-	sys-block/megarc
 	sys-block/mtx
 	sys-block/open-iscsi
 	sys-block/parted
