@@ -219,7 +219,6 @@ livecd/empty:
 	/var/empty
 	/var/lib/portage
 	/var/log
-	/var/run
 	/var/spool
 	/var/state
 	/var/tmp
