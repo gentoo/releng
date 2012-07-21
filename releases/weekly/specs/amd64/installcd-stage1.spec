@@ -6,7 +6,6 @@ profile: default/linux/amd64/10.0/no-multilib
 snapshot: 2008.0
 source_subpath: default/stage3-amd64-latest
 livecd/use:
-	-*
 	deprecated
 	fbcon
 	ipv6
