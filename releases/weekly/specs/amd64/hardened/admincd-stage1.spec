@@ -8,7 +8,6 @@ source_subpath: hardened/stage3-amd64-hardened-latest
 portage_confdir: /release/releng/releases/weekly/portage/admincd
 
 livecd/use:
-	-*
 	deprecated
 	fbcon
 	ipv6
