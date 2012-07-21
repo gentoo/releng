@@ -218,7 +218,6 @@ livecd/empty:
 	/var/cache
 	/var/empty
 	/var/lib/portage
-	/var/lock
 	/var/log
 	/var/run
 	/var/spool
