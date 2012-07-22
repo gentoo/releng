@@ -7,7 +7,6 @@ snapshot: 2008.0
 source_subpath: default/stage3-ppc64-32ul-2008.0
 
 livecd/use:
-	-*
 	deprecated
 	fbcon
 	ipv6
