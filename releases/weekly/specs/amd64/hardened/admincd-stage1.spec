@@ -95,7 +95,7 @@ livecd/packages:
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-dns/bind-tools
-	net-fs/mount-cifs
+	net-fs/cifs-utils
 	net-fs/nfs-utils
 	net-ftp/ftp
 	net-ftp/ncftp

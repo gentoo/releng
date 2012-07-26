@@ -47,7 +47,7 @@ livecd/packages:
 #	net-dialup/penggy
 #	net-dialup/pptpclient
 	net-dialup/rp-pppoe
-	net-fs/mount-cifs
+	net-fs/cifs-utils
 	net-fs/nfs-utils
 	net-irc/irssi
 	net-misc/dhcpcd

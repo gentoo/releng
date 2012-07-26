@@ -57,7 +57,7 @@ livecd/packages:
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-firewall/iptables
-	net-fs/mount-cifs
+	net-fs/cifs-utils
 	net-fs/nfs-utils
 	net-im/pidgin
 	net-irc/irssi

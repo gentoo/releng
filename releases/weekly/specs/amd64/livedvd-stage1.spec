@@ -146,7 +146,7 @@ livecd/packages:
 	net-firewall/iptables
 	net-firewall/kmyfirewall
 	net-ftp/ncftp
-	net-fs/mount-cifs
+	net-fs/cifs-utils
 	net-fs/nfs-utils
 	net-fs/samba
 	net-im/pidgin
