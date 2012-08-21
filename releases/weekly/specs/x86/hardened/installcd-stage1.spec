@@ -54,9 +54,6 @@ livecd/packages:
 	net-proxy/tsocks
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
-	net-wireless/iwl3945-ucode
-	net-wireless/iwl4965-ucode
-	net-wireless/iwl5000-ucode
 	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
@@ -75,6 +72,9 @@ livecd/packages:
 	sys-apps/sdparm
 #	sys-block/partimage
 #	sys-block/qla-fc-firmware
+	sys-firmware/iwl3945-ucode
+	sys-firmware/iwl4965-ucode
+	sys-firmware/iwl5000-ucode
 	sys-fs/cryptsetup
 	sys-fs/dmraid
 	sys-fs/dosfstools
