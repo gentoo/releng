@@ -120,9 +120,6 @@ livecd/packages:
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware
-	net-wireless/iwl3945-ucode
-	net-wireless/iwl4965-ucode
-	net-wireless/iwl5000-ucode
 	net-wireless/prism54-firmware
 	net-wireless/rfkill
 	net-wireless/wireless-tools
@@ -174,6 +171,9 @@ livecd/packages:
 	sys-block/qla-fc-firmware
 	sys-block/tw_cli
 	sys-boot/grub
+	sys-firmware/iwl3945-ucode
+	sys-firmware/iwl4965-ucode
+	sys-firmware/iwl5000-ucode
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/ddrescue
