@@ -1,4 +1,4 @@
-subarch: amd64
+subarch: x32
 target: stage1
 version_stamp: x32-2008.0
 rel_type: default
