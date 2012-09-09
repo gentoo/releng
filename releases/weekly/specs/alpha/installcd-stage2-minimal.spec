@@ -8,7 +8,7 @@ source_subpath: default/livecd-stage1-alpha-2008.0
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /home/armin76/tmp/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
-livecd/fsscript: /home/armin76/releng/trunk/releases/weekly/scripts/livecd.sh
+livecd/fsscript: /home/armin76/releng/releases/weekly/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm
 livecd/iso: /space/catalyst/builds/default/install-alpha-minimal-2008.0.iso
