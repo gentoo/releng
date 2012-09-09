@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org>
+  specs/alpha/installcd-stage2-minimal.spec:
+  Fix fsscript path
+
   09 Aug 2012; Raúl Porcel <armin76@gentoo.org>
   -kconfig/alpha/installcd-3.0.6.config,
   -kconfig/alpha/installcd-3.0.6.nolsa.config,
