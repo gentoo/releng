@@ -1,6 +1,10 @@
 # ChangeLog for releng repo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  11 Sep 2012; Raúl Porcel <armin76@gentoo.org>
+  tools/catalyst-auto-sparc64.conf:
+  Remove unneeded stuff
 
   02 Nov 2010; Raúl Porcel <armin76@gentoo.org>
   tools/catalyst-auto-hppa.conf:
