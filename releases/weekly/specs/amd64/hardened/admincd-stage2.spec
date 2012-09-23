@@ -89,7 +89,9 @@ boot/kernel/gentoo/packages:
 #	net-wireless/acx
 #	net-wireless/ipw3945
 #	net-wireless/rt2500
-	sys-apps/pcmciautils
+
+# fails to build
+#	sys-apps/pcmciautils
 
 livecd/unmerge:
 	app-admin/eselect
