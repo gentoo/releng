@@ -43,7 +43,9 @@ boot/kernel/gentoo/packages:
 ### Compile failure and in-kernel
 #	net-wireless/rt2500
 #	net-wireless/rtl8187
-	sys-apps/pcmciautils
+
+# fails to build
+#	sys-apps/pcmciautils
 
 livecd/empty:
 	/var/tmp

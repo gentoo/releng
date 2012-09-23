@@ -43,7 +43,10 @@ boot/kernel/gentoo/packages:
 #	net-wireless/rt2500
 ### Masked (~amd64)
 #	net-wireless/rtl8187
-	sys-apps/pcmciautils
+
+# fails to build
+#	sys-apps/pcmciautils
+
 	sys-fs/ntfs3g
 
 livecd/empty:
