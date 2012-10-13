@@ -8,22 +8,22 @@ source_subpath: default/livecd-stage1-i686-installer-2008.0
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-livecd/fsscript: /home/repositories/releng/releases/2008.0/scripts/livecd.sh
+livecd/fsscript: /release/releng/releases/2008.0/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
-livecd/iso: /home/release/buildroot/x86-dev/builds/default/livedvd-i686-installer-2008.0.iso
+livecd/iso: /release/buildroot/x86-dev/builds/default/livedvd-i686-installer-2008.0.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo Linux 2008.0 x86 LiveDVD
 livecd/xdm: gdm
 livecd/xsession: xfce
 
-livecd/overlay: /home/repositories/releng/releases/2008.0/overlays/common/overlay/livedvd
-livecd/root_overlay: /home/repositories/releng/releases/2008.0/overlays/common/root_overlay
+livecd/overlay: /release/releng/releases/2008.0/overlays/common/overlay/livedvd
+livecd/root_overlay: /release/releng/releases/2008.0/overlays/common/root_overlay
 
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /home/repositories/releng/releases/2008.0/kconfig/livecd-2.6.24.config
+boot/kernel/gentoo/config: /release/releng/releases/2008.0/kconfig/livecd-2.6.24.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 	app-laptop/laptop-mode-tools
