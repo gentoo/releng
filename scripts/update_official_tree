@@ -1,0 +1,2 @@
+#!/bin/bash
+PORTDIR="/release/trees/portage-official/" emerge --sync

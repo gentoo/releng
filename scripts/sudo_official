@@ -1,0 +1,46 @@
+#!/bin/bash
+
+tree="/release/trees/snapshot-tree"
+portdir="${tree}/${1/_beta2/}/portage"
+cache_args="--portdir=${portdir} --cachedir=/release/tmp/depcache"
+
+usage() {
+	echo "Usage: $(basename ${0}) <version>"
+}
+
+if [ -z "${1}" ]
+then
+	usage
+else
+	cd ${tree}
+	echo "Clearing out old metadata cache"
+	rm -rf ${portdir}/metadata/cache
+	echo "Performing a svn up on ${tree}"
+	svn up || exit 1
+	mkdir -p ${portdir}/metadata/cache
+	echo "Recreating portage metadata cache"
+	cache-tools.py ${cache_args} --generate || exit 1
+	cache-tools.py ${cache_args} --transfer --reverse \
+		--cleanse-on-transfer-failure || exit 1
+	if [ ! -d ${portdir}/metadata/cache/sys-kernel ]
+	then
+		echo "Metadata update failed! Bailing out!"
+		exit 1
+	fi
+	catalyst -c /etc/catalyst/snapshot-official.conf -s ${1} \
+		-C portdir="${portdir}" || exit 1
+	for i in amd64 x86
+	do
+		for j in default dev hardened uclibc
+		do
+			cd /release/buildroot/${i}-${j}/snapshots
+			rm -f portage-official.tar.bz2 portage-${1}.tar.bz2*
+			ln -sf /release/snapshots/portage-${1}.tar.bz2 \
+				portage-official.tar.bz2
+			ln -sf /release/snapshots/portage-${1}.tar.bz2 \
+				portage-${1}.tar.bz2
+			ln -sf /release/snapshots/portage-${1}.tar.bz2.DIGESTS \
+				portage-${1}.tar.bz2.DIGESTS
+		done
+	done
+fi
