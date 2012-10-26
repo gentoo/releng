@@ -1,0 +1,9 @@
+subarch: i686
+target: stage2
+version_stamp: uclibc-hardened
+rel_type: hardened/i686
+profile: hardened/linux/uclibc/x86
+snapshot: current
+source_subpath: hardened/i686/stage1-i686-uclibc-hardened
+chost: i686-gentoo-linux-uclibc
+portage_confdir: /root/MyCatalyst/portage

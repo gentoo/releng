@@ -1,0 +1,9 @@
+subarch: amd64
+target: stage1
+version_stamp: uclibc-hardened
+rel_type: hardened/amd64
+profile: hardened/linux/uclibc/amd64
+snapshot: current
+source_subpath: hardened/amd64/stage3-amd64-uclibc-hardened
+chost: x86_64-gentoo-linux-uclibc
+portage_confdir: /root/MyCatalyst/portage

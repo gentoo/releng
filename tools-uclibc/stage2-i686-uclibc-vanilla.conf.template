@@ -1,0 +1,9 @@
+subarch: i686
+target: stage2
+version_stamp: uclibc-vanilla
+rel_type: vanilla/i686
+profile: vanilla/linux/uclibc/x86
+snapshot: current
+source_subpath: vanilla/i686/stage1-i686-uclibc-vanilla
+chost: i686-gentoo-linux-uclibc
+portage_confdir: /root/MyCatalyst/portage
