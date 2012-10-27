@@ -5,4 +5,4 @@ rel_type: hardened/i686
 profile: hardened/linux/uclibc/x86
 snapshot: current
 source_subpath: hardened/i686/stage2-i686-uclibc-hardened
-portage_confdir: /root/MyCatalyst/portage
+portage_confdir: /root/MyCatalyst/portage.i686.hardened
