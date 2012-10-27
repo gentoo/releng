@@ -6,4 +6,4 @@ profile: vanilla/linux/uclibc/x86
 snapshot: current
 source_subpath: vanilla/i686/stage1-i686-uclibc-vanilla
 chost: i686-gentoo-linux-uclibc
-portage_confdir: /root/MyCatalyst/portage
+portage_confdir: /root/MyCatalyst/portage.i686.vanilla
