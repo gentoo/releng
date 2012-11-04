@@ -76,7 +76,6 @@ livecd/packages:
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/sdparm
-	sys-block/eject
 	sys-block/parted
 	sys-block/partimage
 	sys-block/qla-fc-firmware
