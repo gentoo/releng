@@ -163,7 +163,6 @@ livecd/packages:
 	sys-apps/usbutils
 	sys-apps/which
 	sys-block/aoetools
-	sys-block/eject
 	sys-block/mtx
 	sys-block/open-iscsi
 	sys-block/parted

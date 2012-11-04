@@ -85,7 +85,6 @@ livecd/packages:
 	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	sys-apps/apmd
-	sys-block/eject
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
