@@ -23,8 +23,8 @@ for ARCH in $ARCHES; do
 	rc=0
 	fail=0
 
-	indir=/home/buildsync/builds/${ARCH}
-	outdir=/release/weekly/${ARCH}
+	indir=/release/weekly/builds/${ARCH}
+	outdir=/release/distfiles/weekly/${ARCH}
 	tmpdir=/release/tmp/buildsync/partial/${ARCH}
 
 	mkdir -p ${tmpdir} 2>/dev/null
