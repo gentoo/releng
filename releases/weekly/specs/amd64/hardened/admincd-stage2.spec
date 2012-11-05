@@ -92,6 +92,8 @@ boot/kernel/gentoo/packages:
 
 # fails to build
 #	sys-apps/pcmciautils
+	sys-kernel/spl
+	sys-fs/zfs-kmod
 
 livecd/unmerge:
 	app-admin/eselect
