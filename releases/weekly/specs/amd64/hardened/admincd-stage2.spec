@@ -90,8 +90,7 @@ boot/kernel/gentoo/packages:
 #	net-wireless/ipw3945
 #	net-wireless/rt2500
 
-# fails to build
-#	sys-apps/pcmciautils
+	sys-apps/pcmciautils
 	sys-kernel/spl
 	sys-fs/zfs-kmod
 
