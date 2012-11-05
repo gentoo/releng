@@ -44,8 +44,7 @@ boot/kernel/gentoo/packages:
 ### Masked (~amd64)
 #	net-wireless/rtl8187
 
-# fails to build
-#	sys-apps/pcmciautils
+	sys-apps/pcmciautils
 
 	sys-fs/ntfs3g
 
