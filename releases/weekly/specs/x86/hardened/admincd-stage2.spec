@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/x86
 snapshot: 2008.0
 source_subpath: hardened/livecd-stage1-x86-2008.0
-portage_confdir: /release/releng/releases/weekly/portage/admincd
+portage_confdir: /home/release/releng/releases/weekly/portage/admincd
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
@@ -19,7 +19,7 @@ livecd/rcdel: keymaps|boot
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: /release/releng/releases/weekly/kconfig/x86/admincd-3.4.2.config
+boot/kernel/gentoo/config: /home/release/releng/releases/weekly/kconfig/x86/admincd-3.4.2.config
 boot/kernel/gentoo/use:
 	-*
 	alsa
