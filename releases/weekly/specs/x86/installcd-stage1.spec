@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/x86/10.0
 snapshot: 2008.0
 source_subpath: default/stage3-i486-latest
-portage_confdir: /release/releng/releases/weekly/portage/installcd
+portage_confdir: /home/release/releng/releases/weekly/portage/installcd
 
 livecd/use:
 	deprecated

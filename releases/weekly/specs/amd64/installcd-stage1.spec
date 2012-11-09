@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/amd64/10.0/no-multilib
 snapshot: 2008.0
 source_subpath: default/stage3-amd64-latest
-portage_confdir: /release/releng/releases/weekly/portage/installcd
+portage_confdir: /home/release/releng/releases/weekly/portage/installcd
 
 livecd/use:
 	deprecated
