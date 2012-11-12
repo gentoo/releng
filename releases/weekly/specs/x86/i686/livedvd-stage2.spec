@@ -46,8 +46,7 @@ boot/kernel/gentoo/packages:
 #	net-wireless/rt2500
 #	net-wireless/rtl8187
 
-# fails to build
-#	sys-apps/pcmciautils
+	sys-apps/pcmciautils
 
 livecd/unmerge:
 	sys-kernel/gentoo-sources

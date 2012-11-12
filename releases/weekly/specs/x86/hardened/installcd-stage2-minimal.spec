@@ -83,8 +83,7 @@ boot/kernel/gentoo/packages:
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
 
-# fails to build
-#	sys-apps/pcmciautils
+	sys-apps/pcmciautils
 
 livecd/unmerge:
 	app-admin/eselect
