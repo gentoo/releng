@@ -1,9 +1,9 @@
 subarch: mips32r2
 target: stage1
 version_stamp: uclibc-vanilla
-rel_type: vanilla/mips
+rel_type: vanilla/mips32r2
 profile: hardened/linux/uclibc/mips
 snapshot: current
-source_subpath: vanilla/mips/stage3-mips32r2-uclibc-vanilla
+source_subpath: vanilla/mips32r2/stage3-mips32r2-uclibc-vanilla
 chost: mips-gentoo-linux-uclibc
 portage_confdir: /root/MyCatalyst/portage.mips.vanilla
