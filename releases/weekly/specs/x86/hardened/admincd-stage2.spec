@@ -104,12 +104,10 @@ livecd/unmerge:
 	dev-libs/mpfr
 	dev-python/pycrypto
 	dev-util/pkgconfig
-	net-misc/rsync
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
 	sys-apps/diffutils
-	sys-apps/file
 	sys-apps/groff
 	sys-apps/man
 	sys-apps/man-pages
@@ -125,7 +123,7 @@ livecd/unmerge:
 	sys-devel/bison
 	sys-devel/flex
 # This might be needed for software speech.
-#	sys-devel/gcc
+	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig

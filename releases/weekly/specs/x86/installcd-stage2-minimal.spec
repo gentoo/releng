@@ -104,7 +104,6 @@ livecd/unmerge:
 	perl-core/Test-Harness
 	sys-apps/debianutils
 	sys-apps/diffutils
-	sys-apps/file
 	sys-apps/groff
 	sys-apps/man
 	sys-apps/man-pages
