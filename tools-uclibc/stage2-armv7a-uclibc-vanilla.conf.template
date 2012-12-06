@@ -1,0 +1,9 @@
+subarch: armv7a
+target: stage2
+version_stamp: uclibc-vanilla
+rel_type: vanilla/armv7a
+profile: hardened/linux/uclibc/arm/armv7a
+snapshot: current
+source_subpath: vanilla/armv7a/stage1-armv7a-uclibc-vanilla
+chost: armv7a-softfp-linux-uclibceabi
+portage_confdir: /root/MyCatalyst/portage.arm.vanilla
