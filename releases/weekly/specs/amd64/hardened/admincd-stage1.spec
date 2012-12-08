@@ -192,7 +192,6 @@ livecd/packages:
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
-	sys-fs/zfs
 	sys-libs/gpm
 	sys-power/acpid
 	sys-process/htop

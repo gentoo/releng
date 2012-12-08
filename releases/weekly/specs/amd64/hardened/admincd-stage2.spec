@@ -92,6 +92,7 @@ boot/kernel/gentoo/packages:
 
 	sys-apps/pcmciautils
 	sys-kernel/spl
+	sys-fs/zfs
 	sys-fs/zfs-kmod
 
 livecd/unmerge:
