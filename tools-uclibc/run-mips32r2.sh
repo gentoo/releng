@@ -21,6 +21,15 @@ prepare_confs() {
   done
 }
 
+banner() {
+	echo
+	echo "************************************************************************"
+	echo "*    $1"
+	echo "************************************************************************"
+	echo
+}
+
+
 do_stages() {
   local arch=$1
   local flavor=$2
@@ -40,6 +49,7 @@ do_stages() {
     fi
 
     if [[ "x${pretend}" != "xtest" ]]; then
+      banner "stage${s}-${arch}-uclibc-${flavor}"
       catalyst -f stage${s}-${arch}-uclibc-${flavor}.conf \
         | tee -a zzz.log \
         > stage${s}-${arch}-uclibc-${flavor}.log \
