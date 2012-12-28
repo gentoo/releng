@@ -80,13 +80,13 @@ main() {
 
   >zzz.log
 
-#  if [[ "x${pretend}" != "xtest" ]]; then
-#     catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
-#  else
-#     >snapshot.log
-#     >snapshot.err
-#     echo "PRETEND: catalyst -s current > snapshot.log 2> snapshot.err"
-#  fi
+  if [[ "x${pretend}" != "xtest" ]]; then
+     catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
+  else
+     >snapshot.log
+     >snapshot.err
+     echo "PRETEND: catalyst -s current > snapshot.log 2> snapshot.err"
+  fi
 
   for arch in armv7a; do
     for flavor in hardened vanilla; do
@@ -94,16 +94,16 @@ main() {
     done
   done
   
-#  for arch in armv7a; do
-#    for flavor in hardened vanilla; do
-#      do_stages ${arch} ${flavor} ${pretend}
-#      ret=$?
-#      if [[ $? == 1 ]]; then
-#         echo "FAILURE at ${arch} ${flavor} ${pretend} " | tee zzz.log
-#         return 1
-#      fi
-#    done
-#  done
+  for arch in armv7a; do
+    for flavor in hardened vanilla; do
+      do_stages ${arch} ${flavor} ${pretend}
+      ret=$?
+      if [[ $? == 1 ]]; then
+         echo "FAILURE at ${arch} ${flavor} ${pretend} " | tee zzz.log
+         return 1
+      fi
+    done
+  done
 
   if [[ "x${pretend}" == "xtest" ]]; then
     tree /var/tmp/catalyst/builds
