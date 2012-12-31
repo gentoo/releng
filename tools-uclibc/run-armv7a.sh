@@ -22,11 +22,13 @@ prepare_confs() {
 }
 
 banner() {
-	echo
-	echo "************************************************************************"
-	echo "*    $1"
-	echo "************************************************************************"
-	echo
+cat << EOF | tee -a zzz.log > stage$1-$2-uclibc-$3.log
+
+************************************************************************
+*    stage$1-$2-uclibc-$3
+************************************************************************"
+
+EOF
 }
 
 
@@ -49,7 +51,7 @@ do_stages() {
     fi
 
     if [[ "x${pretend}" != "xtest" ]]; then
-      banner "stage${s}-${arch}-uclibc-${flavor}"
+      banner ${s} ${arch} ${flavor}
       catalyst -f stage${s}-${arch}-uclibc-${flavor}.conf \
         | tee -a zzz.log \
         > stage${s}-${arch}-uclibc-${flavor}.log \
