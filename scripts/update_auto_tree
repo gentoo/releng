@@ -1,2 +1,2 @@
 #!/bin/bash
-PORTDIR="/release/trees/portage-auto/" FEATURES="$FEATURES -news" emerge --sync -q
+PORTDIR="/home/release/trees/portage-auto/" FEATURES="$FEATURES -news" emerge --sync -q
