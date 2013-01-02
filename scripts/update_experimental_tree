@@ -1,0 +1,2 @@
+#!/bin/bash
+PORTDIR="/home/release/trees/portage-experimental/" FEATURES="$FEATURES -news" emerge --sync -q
