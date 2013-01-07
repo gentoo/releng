@@ -1,4 +1,4 @@
-subarch: armv7a
+subarch: armv7a_hardfp
 target: stage1
 version_stamp: hardfloat-hardened
 rel_type: hardened/armv7a
