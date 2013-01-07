@@ -1,0 +1,7 @@
+subarch: armv7a_hardfp
+target: stage2
+version_stamp: hardened
+rel_type: hardened/armv7a
+profile: hardened/linux/arm/armv7a
+snapshot: current
+source_subpath: hardened/armv7a/stage1-armv7a_hardfp-hardened

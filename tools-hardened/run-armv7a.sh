@@ -16,16 +16,16 @@ prepare_confs() {
   local flavor=$2
 
   for s in 1 2 3; do
-    cat stage${s}-${arch}-hardfloat-${flavor}.conf.template | \
-      sed -e "s/\(^version_stamp.*$\)/\1-${mydate}/" >  stage${s}-${arch}-hardfloat-${flavor}.conf
+    cat stage${s}-${arch}_hardfp-${flavor}.conf.template | \
+      sed -e "s/\(^version_stamp.*$\)/\1-${mydate}/" >  stage${s}-${arch}_hardfp-${flavor}.conf
   done
 }
 
 banner() {
-cat << EOF | tee -a zzz.log > stage$1-$2-uclibc-$3.log
+cat << EOF | tee -a zzz.log > stage$1-$2_hardfp-$3.log
 
 ************************************************************************
-*    stage$1-$2-uclibc-$3
+*    stage$1-$2_hardfp-$3
 ************************************************************************"
 
 EOF
@@ -39,30 +39,30 @@ do_stages() {
 
   for s in 1 2 3; do
     local tgpath="${storedir}/builds/${flavor}/${arch}"
-    local target="stage${s}-${arch}-hardfloat-${flavor}-${mydate}.tar.bz2"
-    local tglink="stage${s}-${arch}-hardfloat-${flavor}.tar.bz2"
+    local target="stage${s}-${arch}_hardfp-${flavor}-${mydate}.tar.bz2"
+    local tglink="stage${s}-${arch}_hardfp-${flavor}.tar.bz2"
 
     if [[ ! -f "${tgpath}/${tglink}" ]]; then
-       touch stage${s}-${arch}-hardfloat-${flavor}.log
+       touch stage${s}-${arch}_hardfp-${flavor}.log
        echo "!!! ${target} at ${tgpath} doesn't exit" \
          | tee -a zzz.log \
-         > stage${s}-${arch}-hardfloat-${flavor}.err
+         > stage${s}-${arch}_hardfp-${flavor}.err
        return 1
     fi
 
     if [[ "x${pretend}" != "xtest" ]]; then
       banner ${s} ${arch} ${flavor}
-      catalyst -f stage${s}-${arch}-hardfloat-${flavor}.conf \
+      catalyst -f stage${s}-${arch}_hardfp-${flavor}.conf \
         | tee -a zzz.log \
-        > stage${s}-${arch}-hardfloat-${flavor}.log \
-        2> stage${s}-${arch}-hardfloat-${flavor}.err
+        > stage${s}-${arch}_hardfp-${flavor}.log \
+        2> stage${s}-${arch}_hardfp-${flavor}.err
     else
-      touch stage${s}-${arch}-hardfloat-${flavor}.log
-      touch stage${s}-${arch}-hardfloat-${flavor}.err
+      touch stage${s}-${arch}_hardfp-${flavor}.log
+      touch stage${s}-${arch}_hardfp-${flavor}.err
       touch "${tgpath}/${target}"
-      echo "PRETEND: catalyst -f stage${s}-${arch}-hardfloat-${flavor}.conf \ "
-      echo "PRETEND:   > stage${s}-${arch}-hardfloat-${flavor}.log \ "
-      echo "PRETEND:   2> stage${s}-${arch}-hardfloat-${flavor}.err"
+      echo "PRETEND: catalyst -f stage${s}-${arch}_hardfp-${flavor}.conf \ "
+      echo "PRETEND:   > stage${s}-${arch}_hardfp-${flavor}.log \ "
+      echo "PRETEND:   2> stage${s}-${arch}_hardfp-${flavor}.err"
     fi
 
     if [[ -f "${tgpath}/${target}" ]]; then
@@ -71,7 +71,7 @@ do_stages() {
     else
       echo "!!! ${target} was not generated" \
         | tee -a zzz.log \
-        >stage${s}-${arch}-hardfloat-${flavor}.err
+        >stage${s}-${arch}_hardfp-${flavor}.err
       return 1
     fi
   done
@@ -92,13 +92,13 @@ main() {
 
   >zzz.log
 
-  if [[ "x${pretend}" != "xtest" ]]; then
-     catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
-  else
-     >snapshot.log
-     >snapshot.err
-     echo "PRETEND: catalyst -s current > snapshot.log 2> snapshot.err"
-  fi
+#  if [[ "x${pretend}" != "xtest" ]]; then
+#     catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
+#  else
+#     >snapshot.log
+#     >snapshot.err
+#     echo "PRETEND: catalyst -s current > snapshot.log 2> snapshot.err"
+#  fi
 
   for arch in armv7a; do
     for flavor in hardened; do
