@@ -91,6 +91,7 @@ boot/kernel/gentoo/packages:
 #	net-wireless/rt2500
 
 	sys-apps/pcmciautils
+	sys-kernel/linux-firmware
 	sys-kernel/spl
 	sys-fs/zfs
 	sys-fs/zfs-kmod
