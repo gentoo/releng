@@ -82,8 +82,7 @@ livecd/packages:
 	dev-lang/python
 	media-gfx/fbgrab
 	net-analyzer/gnu-netcat
-#   Masked as it fails trying to write to /var/lock
-#	net-analyzer/iptraf-ng
+	net-analyzer/iptraf-ng
 	net-analyzer/netcat6
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
