@@ -1,12 +1,5 @@
 #!/bin/bash
 
-#
-# Usage: ./run-armv7a.sh <mode>
-# where
-# <mode> = "", it will actually do the runs
-# <mode> = "test", it will just pretend
-#
-
 source /etc/catalyst/catalyst.conf
 
 mydate=`date +%Y%m%d`
@@ -35,7 +28,6 @@ EOF
 do_stages() {
   local arch=$1
   local flavor=$2
-  local pretend=$3
 
   for s in 1 2 3; do
     local tgpath="${storedir}/builds/${flavor}/${arch}"
@@ -50,20 +42,11 @@ do_stages() {
        return 1
     fi
 
-    if [[ "x${pretend}" != "xtest" ]]; then
-      banner ${s} ${arch} ${flavor}
-      catalyst -f stage${s}-${arch}_hardfp-${flavor}.conf \
-        | tee -a zzz.log \
-        > stage${s}-${arch}_hardfp-${flavor}.log \
-        2> stage${s}-${arch}_hardfp-${flavor}.err
-    else
-      touch stage${s}-${arch}_hardfp-${flavor}.log
-      touch stage${s}-${arch}_hardfp-${flavor}.err
-      touch "${tgpath}/${target}"
-      echo "PRETEND: catalyst -f stage${s}-${arch}_hardfp-${flavor}.conf \ "
-      echo "PRETEND:   > stage${s}-${arch}_hardfp-${flavor}.log \ "
-      echo "PRETEND:   2> stage${s}-${arch}_hardfp-${flavor}.err"
-    fi
+    banner ${s} ${arch} ${flavor}
+    catalyst -f stage${s}-${arch}_hardfp-${flavor}.conf \
+      | tee -a zzz.log \
+      > stage${s}-${arch}_hardfp-${flavor}.log \
+      2> stage${s}-${arch}_hardfp-${flavor}.err
 
     if [[ -f "${tgpath}/${target}" ]]; then
       rm -f "${tgpath}/${tglink}"
@@ -88,17 +71,9 @@ do_stages() {
 #
 
 main() {
-  local pretend=$1
-
   >zzz.log
 
-#  if [[ "x${pretend}" != "xtest" ]]; then
-#     catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
-#  else
-#     >snapshot.log
-#     >snapshot.err
-#     echo "PRETEND: catalyst -s current > snapshot.log 2> snapshot.err"
-#  fi
+  catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
   for arch in armv7a; do
     for flavor in hardened; do
@@ -108,21 +83,14 @@ main() {
   
   for arch in armv7a; do
     for flavor in hardened; do
-      do_stages ${arch} ${flavor} ${pretend}
+      do_stages ${arch} ${flavor}
       ret=$?
       if [[ $? == 1 ]]; then
-         echo "FAILURE at ${arch} ${flavor} ${pretend} " | tee zzz.log
+         echo "FAILURE at ${arch} ${flavor}" | tee zzz.log
          return 1
       fi
     done
   done
-
-  if [[ "x${pretend}" == "xtest" ]]; then
-    tree /var/tmp/catalyst/builds
-    echo
-    echo "!!! Run fixup.sh to clean up!"
-    echo
-  fi
 }
 
 main $1 &
