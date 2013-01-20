@@ -25,7 +25,7 @@ for ARCH in $ARCHES; do
 
 	indir=/release/weekly/builds/${ARCH}
 	outdir=/release/distfiles/weekly/${ARCH}
-	tmpdir=/release/tmp/buildsync/partial/${ARCH}
+	tmpdir=/release/distfiles/tmp/buildsync/partial/${ARCH}
 
 	mkdir -p ${tmpdir} 2>/dev/null
 	# Copying
