@@ -23,7 +23,7 @@ boot/kernel/ibmpower/config: ../../../kconfig/powerpc/installcd-ibm-2.6.34.confi
 boot/kernel/ibmpower/console: ttyS0,9600 hvc0 hvsi0
 boot/kernel/ibmpower/machine_type: ibm
 boot/kernel/ibmpower/extraversion: ibm
-boot/kernel/ibmpower/gk_kernargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu-
+boot/kernel/ibmpower/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64ppc' --kernel-as='as -a64'
 boot/kernel/ibmpower/use:
 	-*
 	atm
@@ -53,7 +53,7 @@ boot/kernel/G5/sources: sys-kernel/gentoo-sources
 boot/kernel/G5/config: ../../../kconfig/powerpc/installcd-ppc64apple-2.6.34.config
 boot/kernel/G5/console: ttyS0,57600
 boot/kernel/G5/extraversion: G5
-boot/kernel/G5/gk_kernargs: --kernel-cross-compile=powerpc64-unknown-linux-gnu-
+boot/kernel/G5/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64ppc' --kernel-as='as -a64'
 boot/kernel/G5/use:
 	-*
 	atm
