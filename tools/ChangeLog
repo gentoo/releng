@@ -1,6 +1,11 @@
 # ChangeLog for releng repo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Id$
+
+  22 Jan 2013; Raúl Porcel <armin76@gentoo.org> catalyst-auto-alpha.conf,
+  catalyst-auto-hppa.conf, catalyst-auto-ia64.conf, catalyst-auto-ppc.conf,
+  catalyst-auto-ppc64.conf, catalyst-auto-sparc64.conf:
+  Push to skimmer instead of poseidon
 
   02 Nov 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-auto:
   Detect build failure in one of the build sets and act accordingly
