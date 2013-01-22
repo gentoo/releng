@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Jan 2013; Raúl Porcel <armin76@gentoo.org> tools/ChangeLog,
+  tools/catalyst-auto-alpha.conf, tools/catalyst-auto-hppa.conf,
+  tools/catalyst-auto-ia64.conf, tools/catalyst-auto-ppc.conf,
+  tools/catalyst-auto-ppc64.conf, tools/catalyst-auto-sparc64.conf:
+  Push to skimmer instead of poseidon
+
   02 Jan 2013; Raúl Porcel <armin76@gentoo.org> tools/catalyst-auto:
   Set to /tmp if $TMP_PATH isn't set
 
