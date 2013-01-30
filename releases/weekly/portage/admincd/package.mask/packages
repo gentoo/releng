@@ -1,2 +1,3 @@
 >=dev-lang/python-3
 sys-apps/module-init-tools
+sys-apps/modutils

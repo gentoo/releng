@@ -168,12 +168,8 @@ livecd/packages:
 	sys-block/open-iscsi
 	sys-block/parted
 	sys-block/partimage
-	sys-block/qla-fc-firmware
 	sys-block/tw_cli
 	sys-boot/grub
-	sys-firmware/iwl3945-ucode
-	sys-firmware/iwl4965-ucode
-	sys-firmware/iwl5000-ucode
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/ddrescue
