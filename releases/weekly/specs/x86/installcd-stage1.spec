@@ -51,6 +51,7 @@ livecd/packages:
 	net-misc/ndisc6
 	net-misc/ntp
 	net-misc/rdate
+	net-misc/rsync
 	net-misc/vconfig
 	net-proxy/dante
 	net-proxy/ntlmaps
