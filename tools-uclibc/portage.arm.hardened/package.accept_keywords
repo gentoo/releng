@@ -1,4 +1,6 @@
-=sys-devel/gcc-4.6.3 ~amd64
-=sys-libs/uclibc-0.9.33.2-r1 ~amd64
+=sys-devel/gcc-4.6.3 ~arm
+=sys-libs/uclibc-0.9.33.2-r3 ~arm
 =dev-libs/elfutils-0.155 ~arm
 =sys-apps/sandbox-2.6 ~arm
+=sys-fs/eudev-1_beta2-r1 ~arm
+=virtual/udev-197 ~arm
