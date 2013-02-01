@@ -99,7 +99,6 @@ livecd/unmerge:
 	dev-libs/mpfr
 	dev-python/pycrypto
 	dev-util/pkgconfig
-	net-misc/rsync
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
