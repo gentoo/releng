@@ -4,3 +4,4 @@
 =sys-apps/sandbox-2.6 ~arm
 =sys-fs/eudev-1_beta2-r1 ~arm
 =virtual/udev-197 ~arm
+=sys-fs/udev-init-scripts-22 ~arm
