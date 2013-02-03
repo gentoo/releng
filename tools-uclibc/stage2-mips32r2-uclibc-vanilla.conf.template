@@ -6,4 +6,4 @@ profile: hardened/linux/uclibc/mips
 snapshot: current
 source_subpath: vanilla/mips32r2/stage1-mips32r2-uclibc-vanilla
 chost: mips-gentoo-linux-uclibc
-portage_confdir: /root/MyCatalyst/portage.mips.vanilla
+portage_confdir: MyCatalyst/portage.mips.vanilla

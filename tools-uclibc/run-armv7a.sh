@@ -17,7 +17,8 @@ prepare_confs() {
 
   for s in 1 2 3; do
     cat stage${s}-${arch}-uclibc-${flavor}.conf.template | \
-      sed -e "s/\(^version_stamp.*$\)/\1-${mydate}/" >  stage${s}-${arch}-uclibc-${flavor}.conf
+      sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
+        -e "s:MyCatalyst:$(pwd):" >  stage${s}-${arch}-uclibc-${flavor}.conf
   done
 }
 
