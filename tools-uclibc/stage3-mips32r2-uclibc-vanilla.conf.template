@@ -5,4 +5,4 @@ rel_type: vanilla/mips32r2
 profile: hardened/linux/uclibc/mips
 snapshot: current
 source_subpath: vanilla/mips32r2/stage2-mips32r2-uclibc-vanilla
-portage_confdir: /root/MyCatalyst/portage.mips.vanilla
+portage_confdir: MyCatalyst/portage.mips.vanilla

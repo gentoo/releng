@@ -6,4 +6,4 @@ profile: hardened/linux/uclibc/arm/armv7a
 snapshot: current
 source_subpath: vanilla/armv7a/stage1-armv7a-uclibc-vanilla
 chost: armv7a-softfp-linux-uclibceabi
-portage_confdir: /root/MyCatalyst/portage.arm.vanilla
+portage_confdir: MyCatalyst/portage.arm.vanilla

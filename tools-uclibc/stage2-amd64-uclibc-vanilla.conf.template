@@ -6,4 +6,4 @@ profile: hardened/linux/uclibc/amd64
 snapshot: current
 source_subpath: vanilla/amd64/stage1-amd64-uclibc-vanilla
 chost: x86_64-gentoo-linux-uclibc
-portage_confdir: /root/MyCatalyst/portage.amd64.vanilla
+portage_confdir: MyCatalyst/portage.amd64.vanilla

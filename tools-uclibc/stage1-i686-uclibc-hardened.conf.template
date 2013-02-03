@@ -6,4 +6,4 @@ profile: hardened/linux/uclibc/x86
 snapshot: current
 source_subpath: hardened/i686/stage3-i686-uclibc-hardened
 chost: i686-gentoo-linux-uclibc
-portage_confdir: /root/MyCatalyst/portage.i686.hardened
+portage_confdir: MyCatalyst/portage.i686.hardened

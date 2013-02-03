@@ -5,4 +5,4 @@ rel_type: vanilla/amd64
 profile: hardened/linux/uclibc/amd64
 snapshot: current
 source_subpath: vanilla/amd64/stage2-amd64-uclibc-vanilla
-portage_confdir: /root/MyCatalyst/portage.amd64.vanilla
+portage_confdir: MyCatalyst/portage.amd64.vanilla
