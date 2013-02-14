@@ -2,7 +2,7 @@ subarch: alpha
 version_stamp: 2008.0
 target: livecd-stage1
 rel_type: default
-profile: default/linux/alpha/10.0
+profile: default/linux/alpha/13.0
 snapshot: 2008.0
 source_subpath: default/stage3-alpha-2008.0
 livecd/use:
