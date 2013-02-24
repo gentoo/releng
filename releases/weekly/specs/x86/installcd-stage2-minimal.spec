@@ -130,6 +130,7 @@ livecd/unmerge:
 	sys-libs/gdbm
 	sys-libs/libkudzu
 	sys-kernel/genkernel
+	sys-kernel/linux-firmware
 	sys-kernel/linux-headers
 
 livecd/empty:
