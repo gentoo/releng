@@ -61,9 +61,6 @@ livecd/packages:
 	net-wireless/b43-fwcutter
 ### Masked (~keywords)
 #	net-wireless/bcm43xx-fwcutter
-	net-wireless/ipw2100-firmware
-	net-wireless/ipw2200-firmware
-	net-wireless/prism54-firmware
 	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
@@ -81,10 +78,6 @@ livecd/packages:
 	sys-apps/sdparm
 	sys-block/parted
 	sys-block/partimage
-	sys-block/qla-fc-firmware
-	sys-firmware/iwl3945-ucode
-	sys-firmware/iwl4965-ucode
-	sys-firmware/iwl5000-ucode
 	sys-fs/cryptsetup
 	sys-fs/dmraid
 	sys-fs/dosfstools
