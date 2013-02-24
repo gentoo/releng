@@ -2,7 +2,7 @@ subarch: amd64
 version_stamp: 2008.0
 target: livecd-stage2
 rel_type: default
-profile: default/linux/amd64/10.0/no-multilib
+profile: default/linux/amd64/13.0/no-multilib
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-amd64-2008.0
 portage_confdir: /release/releng/releases/weekly/portage/installcd
