@@ -123,11 +123,14 @@ livecd/packages:
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/apmd
+	sys-apps/arrayprobe
 	sys-apps/acl
 	sys-apps/attr
 	sys-apps/busybox
 	sys-apps/cciss_vol_status
+	sys-apps/chname
 	sys-apps/coreutils
+	sys-apps/dcfldd
 	sys-apps/diffutils
 	sys-apps/dmidecode
 	sys-apps/dstat
@@ -158,7 +161,9 @@ livecd/packages:
 	sys-apps/smartmontools
 	sys-apps/usbutils
 	sys-apps/which
+	sys-apps/x86info
 	sys-block/aoetools
+	sys-block/fio
 	sys-block/mtx
 	sys-block/open-iscsi
 	sys-block/parted
