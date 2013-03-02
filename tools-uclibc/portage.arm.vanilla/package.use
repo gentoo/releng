@@ -1,1 +1,2 @@
 sys-libs/uclibc -* savedconfig
+=dev-lang/perl-5.12.4-r1 -build
