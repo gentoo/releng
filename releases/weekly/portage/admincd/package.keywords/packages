@@ -1,3 +1,5 @@
+sys-apps/chname
+=sys-block/fio-2.0.13
 sys-block/lsiutil
 sys-block/megacli
 sys-block/megarc
