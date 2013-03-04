@@ -92,6 +92,9 @@ livecd/unmerge:
 	app-admin/perl-cleaner
 	app-admin/python-updater
 	app-arch/cpio
+	dev-libs/gmp
+	dev-libs/libxml2
+	dev-libs/mpfr
 	dev-python/pycrypto
 	dev-util/pkgconfig
 	perl-core/PodParser
@@ -110,6 +113,7 @@ livecd/unmerge:
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
+	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
@@ -117,6 +121,8 @@ livecd/unmerge:
 	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch
+	sys-libs/db
+	sys-libs/gdbm
 	sys-libs/libkudzu
 	sys-kernel/genkernel
 	sys-kernel/linux-headers
