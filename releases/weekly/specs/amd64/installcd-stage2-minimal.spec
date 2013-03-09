@@ -90,6 +90,7 @@ boot/kernel/gentoo/packages:
 #	net-wireless/ipw3945
 #	net-wireless/rt2500
 
+	net-misc/r8168
 	sys-apps/pcmciautils
 
 livecd/unmerge:
