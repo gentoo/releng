@@ -6,4 +6,4 @@ profile: hardened/linux/uclibc/mips/mipsel
 snapshot: current
 source_subpath: hardened/mipsel3/stage3-mipsel3-uclibc-hardened
 chost: mips-gentoo-linux-uclibc
-portage_confdir: MyCatalyst/portage.mips.hardened
+portage_confdir: MyCatalyst/portage.mipsel.hardened

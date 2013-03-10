@@ -5,4 +5,4 @@ rel_type: vanilla/mipsel3
 profile: hardened/linux/uclibc/mips/mipsel
 snapshot: current
 source_subpath: vanilla/mipsel3/stage2-mipsel3-uclibc-vanilla
-portage_confdir: MyCatalyst/portage.mips.vanilla
+portage_confdir: MyCatalyst/portage.mipsel.vanilla
