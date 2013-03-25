@@ -1,3 +1,1 @@
-=sys-libs/uclibc-0.9.33.2-r3 ~amd64
-=sys-fs/eudev-1_beta2-r2 ~amd64
-=virtual/udev-197-r1 ~amd64
+=sys-fs/eudev-1_beta2-r2 ~x86
