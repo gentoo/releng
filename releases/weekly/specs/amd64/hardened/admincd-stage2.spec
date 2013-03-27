@@ -82,7 +82,6 @@ boot/kernel/gentoo/packages:
 	media-sound/alsa-utils
 	net-dialup/globespan-adsl
 
-	net-misc/r8168
 	sys-apps/pcmciautils
 	sys-kernel/linux-firmware
 	sys-kernel/spl
