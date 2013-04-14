@@ -62,11 +62,11 @@ for ARCH in $ARCHES; do
 	latest_iso_date="$(echo -e "${iso_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	latest_stage3_date="$(echo -e "${stage3_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	header="$(echo -e "# Latest as of $(date -uR)\n# ts=$(date -u +%s)")"
-	
+
 	# Do not remove this
 	[ -z "${latest_iso_date}" ] && latest_iso_date="NONE-FOUND"
 	[ -z "${latest_stage3_date}" ] && latest_stage3_date="NONE-FOUND"
-	
+
 	if [ -n "${iso_list}" ]; then
 		echo -e "${header}" >"${OUT_ISO}"
 		echo -e "${iso_list}" |awk '{print $3}' | grep "$latest_iso_date" >>${OUT_ISO}
@@ -83,11 +83,11 @@ for ARCH in $ARCHES; do
 			ln -sf "$latest_stage3_date" current-stage3
 		fi
 	fi
-	
+
 	# new variant preserve code
 	variants="$(find 20* \( -iname '*.iso' -o -iname '*.tar.bz2' \) -printf '%f\n' |sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)"
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
-	for v in $variants ; do 
+	for v in $variants ; do
 		#date_variant=$(find 20* -iname "${v}*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -printf '%h\n' | sed -e "s,.*/$a/autobuilds/,,g" -e 's,/.*,,g' |sort -n | tail -n1 )
 		variant_path=$(find 20* -iname "${v}-*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		f="latest-${v}.txt"
@@ -96,7 +96,7 @@ for ARCH in $ARCHES; do
 		rm -f "current-$v"
 		ln -sf "${variant_path%/*}" "current-$v"
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${tmpdir}"/.keep.${ARCH}.txt
-	done 
+	done
 	#echo "$date_variant" \
 	#| sort | uniq | sed -e 's,^,/,g' -e 's,$,$,g' >"${tmpdir}"/.keep.${ARCH}.txt
 
@@ -115,7 +115,7 @@ for ARCH in $ARCHES; do
 
 			$DEBUGP rm $VERBOSEP -rf $(pwd)/${i}
 		done
-		
+
 		$DEBUGP rm $VERBOSEP -rf ${tmpdir}
 
 	else
