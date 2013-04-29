@@ -1,2 +1,1 @@
 sys-fs/udev
->sys-apps/texinfo-4.13
