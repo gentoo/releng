@@ -1,0 +1,3 @@
+/dev/sda1	/boot	ext2	noauto,noatime	1 2
+/dev/sda3	/	ext4	noatime		0 1
+/dev/sda2	none	swap	sw		0 0
