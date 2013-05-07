@@ -1,0 +1,43 @@
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+CHOST="x86_64-gentoo-linux-uclibc"
+MAKEOPTS="-j9"
+
+USE_BASE="bindist mmx mmxext smp sse sse2 ssse3 static-libs -savedconfig"
+USE_GCC="gcj graphite objc objc++ objc-gc gtk X"
+USE_ENC="gmp gnutls pkcs11 X509"
+USE_ACL="acl caps"
+USE_DBS="berkdb gdbm sqlite"
+USE_CMP="bzip2 lzma lzo"
+USE_LANG="guile networking perl python ruby tcl tk threads"
+USE_UDEV="gudev hwdb keymap kmod"
+USE_VCS="git"
+USE_CHAR="fontforge icu idn"
+
+USE_SERVERS="avahi cups dbus sasl mbox zeroconf"
+USE_PAX="xtpax -ptpax"
+
+USE_AUDIO="openal"
+USE_IMG="aalib apng exif gif jpeg jpeg2k lcms mng png svg tiff xmp"
+USE_GRAPH="directfb opengl xcb"
+USE_DISPLAY="cairo xinerama xscreensaver"
+USE_MULTI="3dnow 3dnowext a52 aac alsa amr ass avx cdio dirac dga dts dv dvb dvd encode ffmpeg flac g3dvl gsm jack jpeg2k lame libass libv4l mad mmxext mod modplug mp3 mpeg musepack ogg oss pulseaudio quicktime rtmp schroedinger sdl sdlgfx speex taglib theora vcd vorbis vpx xv xvid xvmc v4l vaapi"
+USE_MPLAYER="bidi bl bluray bs2b cddb cdparanoia cpudetection fbcon ftp ggi joystick ladspa libcaca libmpeg2 libnotify md5sum musicbrainz nas nut pnm portaudio postproc pvr quvi radio samba tga xanim zoran"
+
+USE_XFCE4="session thunar"
+USE_BROWSE="curl webkit -libproxy"
+USE_WORD="latex math openxml pdf spell thesaurus wmf wordperfect"
+USE_GAMES="artworkextra"
+
+USE_MISC="bash-completion extras lpsol natspec unlock-notify utils uuid vim-syntax watchdog"
+
+USE="${USE_BASE} ${USE_GCC} ${USE_ENC} ${USE_ACL} ${USE_DBS} ${USE_CMP} ${USE_LANG} ${USE_UDEV} ${USE_VCS} ${USE_CHAR} ${USE_SERVERS} ${USE_PAX} ${USE_AUDIO} ${USE_IMG} ${USE_GRAPH} ${USE_DISPLAY} ${USE_MULTI} ${USE_MPLAYER} ${USE_BROWSE} ${USE_WORD} ${USE_GAMES} ${USE_XFCE4} ${USE_MISC}"
+
+XFCE_PLUGINS="trash menu logout"
+VIDEO_CARDS="fbdev nouveau radeon"
+LINGUAS="en"
+
+PORTDIR_OVERLAY="/var/lib/layman/hardened-development"
+
+SYNC="rsync://192.168.3.1/portage"
+GENTOO_MIRRORS="ftp://192.168.3.1/pub/gentoo"
