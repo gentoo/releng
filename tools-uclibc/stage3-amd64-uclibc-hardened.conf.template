@@ -1,8 +1,0 @@
-subarch: amd64
-target: stage3
-version_stamp: uclibc-hardened
-rel_type: hardened/amd64
-profile: hardened/linux/uclibc/amd64
-snapshot: current
-source_subpath: hardened/amd64/stage2-amd64-uclibc-hardened
-portage_confdir: MyCatalyst/portage.amd64.hardened
