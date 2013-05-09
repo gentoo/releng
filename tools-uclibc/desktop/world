@@ -1,9 +1,11 @@
 app-admin/sudo
 app-admin/syslog-ng
 app-arch/file-roller
+app-editors/gedit
 app-editors/nano
 app-editors/vim
 app-office/abiword
+app-office/gnumeric
 app-portage/gentoolkit
 app-portage/layman
 app-text/evince
@@ -15,6 +17,7 @@ dev-libs/libiconv
 dev-libs/mpfr
 dev-util/strace
 dev-vcs/git
+gnome-extra/gcalctool
 gnome-extra/gnome-games
 gnome-extra/gnome-screensaver
 gnome-extra/gnome-system-monitor
@@ -25,7 +28,10 @@ media-gfx/eog
 media-gfx/gimp
 media-gfx/gqview
 media-sound/alsa-utils
+media-video/smplayer
 media-video/totem
+net-analyzer/tcpdump
+net-dns/avahi
 net-fs/samba
 net-ftp/lftp
 net-irc/hexchat
@@ -34,6 +40,7 @@ net-misc/openntpd
 net-misc/rdate
 net-misc/tor
 net-misc/vinagre
+net-p2p/transmission
 sys-apps/dbus
 sys-apps/gradm
 sys-apps/less
@@ -43,7 +50,10 @@ sys-boot/lilo
 sys-devel/autoconf
 sys-devel/automake
 sys-devel/gcc
+sys-devel/gdb
+sys-fs/cryptsetup
 sys-kernel/genkernel
+
 sys-libs/cracklib
 sys-libs/db
 sys-libs/gdbm
@@ -57,6 +67,7 @@ www-client/epiphany
 x11-base/xorg-server
 x11-drivers/xf86-video-nouveau
 x11-drivers/xf86-video-vesa
+x11-libs/gksu
 x11-misc/slim
 x11-terms/gnome-terminal
 x11-terms/xterm
