@@ -1,9 +1,0 @@
-subarch: mips32r2
-target: stage2
-version_stamp: uclibc-hardened
-rel_type: hardened/mips32r2
-profile: hardened/linux/uclibc/mips
-snapshot: current
-source_subpath: hardened/mips32r2/stage1-mips32r2-uclibc-hardened
-chost: mips-gentoo-linux-uclibc
-portage_confdir: MyCatalyst/portage.mips.hardened
