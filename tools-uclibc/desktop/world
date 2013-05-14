@@ -53,7 +53,6 @@ sys-devel/gcc
 sys-devel/gdb
 sys-fs/cryptsetup
 sys-kernel/genkernel
-
 sys-libs/cracklib
 sys-libs/db
 sys-libs/gdbm

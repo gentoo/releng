@@ -20,10 +20,10 @@ cp -f lilo.conf desktop-amd64-uclibc-hardened/etc/lilo.conf
 rm -f desktop-amd64-uclibc-hardened/etc/portage/make.conf.catalyst
 cp -f portage/make.conf.1 desktop-amd64-uclibc-hardened/etc/portage/make.conf
 
-for d in env package.accept_keywords package.mask package.use; do
-	[[ "$(ls portage/${d})" != "" ]] && cp -f portage/${d}/* desktop-amd64-uclibc-hardened/etc/portage/${d}/
+for d in env package.accept_keywords package.mask package.use profile; do
+	[[ -a portage/"${d}" ]] && cp -af portage/${d} desktop-amd64-uclibc-hardened/etc/portage
 done
-cp portage/package.env desktop-amd64-uclibc-hardened/etc/portage/
+cp -af portage/package.env desktop-amd64-uclibc-hardened/etc/portage
 
 cp -f toolchain.sh desktop-amd64-uclibc-hardened/tmp/
 chroot desktop-amd64-uclibc-hardened/ /tmp/toolchain.sh
@@ -42,6 +42,7 @@ cp -f update.sh desktop-amd64-uclibc-hardened/tmp/
 chroot desktop-amd64-uclibc-hardened/ /tmp/update.sh
 rm -f desktop-amd64-uclibc-hardened/tmp/update.sh
 
+mkdir -p desktop-amd64-uclibc-hardened/boot
 
 genkernel \
 	--kernel-config=config \
@@ -49,10 +50,14 @@ genkernel \
 	--symlink \
 	--no-mountboot \
 	--kerneldir=/usr/src/linux-lilblue \
-	--bootdir=/root/lilblue/desktop-amd64-uclibc-hardened/boot/ \
-	--module-prefix=/root/lilblue/desktop-amd64-uclibc-hardened/ \
-	--modprobedir=/root/lilblue/desktop-amd64-uclibc-hardened/etc/modprobe.d \
+	--bootdir=/root/releng/tools-uclibc/desktop/desktop-amd64-uclibc-hardened/boot/ \
+	--module-prefix=/root/releng/tools-uclibc/desktop/desktop-amd64-uclibc-hardened/ \
+	--modprobedir=/root/releng/tools-uclibc/desktop/desktop-amd64-uclibc-hardened/etc/modprobe.d \
 	all
+
+for i in $(find /root/releng/tools-uclibc/desktop/desktop-amd64-uclibc-hardened/lib/modules -iname *ko); do
+	objcopy --strip-unneeded $i
+done
 
 ln -sf net.lo desktop-amd64-uclibc-hardened/etc/init.d/net.eth0
 chroot desktop-amd64-uclibc-hardened/ rc-update add alsasound default
@@ -73,6 +78,8 @@ rm -f desktop-amd64-uclibc-hardened/tmp/passwd.sh
 
 rm -rf desktop-amd64-uclibc-hardened/home/gentoo
 cp -a gentoo desktop-amd64-uclibc-hardened/home/
+chroot desktop-amd64-uclibc-hardened/ chown -R gentoo:gentoo /home/gentoo
+sed -i 's/# \(%wheel.*NOPASSWD\)/\1/' desktop-amd64-uclibc-hardened/etc/sudoers
 
 sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1slim/' desktop-amd64-uclibc-hardened/etc/conf.d/xdm
 sed -i 's/^\(login.*\)/# \1/' desktop-amd64-uclibc-hardened/etc/slim.conf
