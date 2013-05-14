@@ -1,9 +1,0 @@
-subarch: mipsel3
-target: stage2
-version_stamp: uclibc-hardened
-rel_type: hardened/mipsel3
-profile: hardened/linux/uclibc/mips/mipsel
-snapshot: current
-source_subpath: hardened/mipsel3/stage1-mipsel3-uclibc-hardened
-chost: mipsel-gentoo-linux-uclibc
-portage_confdir: MyCatalyst/portage.mipsel.hardened

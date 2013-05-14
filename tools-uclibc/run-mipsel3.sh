@@ -16,10 +16,27 @@ prepare_confs() {
   local flavor=$2
 
   for s in 1 2 3; do
-    cat stage${s}-${arch}-uclibc-${flavor}.conf.template | \
+
+    local cstage=stage${s}
+    local p=$(( s - 1 ))
+    [[ $p == 0 ]] && p=3
+    local pstage=stage${p}
+    local tarch="${arch%3}"
+    local parch="mips/${tarch}"
+
+    cat stage-all.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
-        -e "s:MyCatalyst:$(pwd):" >  stage${s}-${arch}-uclibc-${flavor}.conf
+        -e "s:CSTAGE:${cstage}:g" \
+        -e "s:PSTAGE:${pstage}:g" \
+        -e "s:SARCH:${arch}:g" \
+        -e "s:PARCH:${parch}:g" \
+        -e "s:TARCH:${tarch}:g" \
+        -e "s:FLAVOR:${flavor}:g" \
+        -e "s:MYCATALYST:$(pwd):g" \
+        >  stage${s}-${arch}-uclibc-${flavor}.conf
   done
+
+  sed -i "/^chost/d" stage3-${arch}-uclibc-${flavor}.conf
 }
 
 banner() {
