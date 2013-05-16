@@ -1,0 +1,4 @@
+PORTDIR_OVERLAY="
+/var/lib/layman/hardened-development
+$PORTDIR_OVERLAY
+"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories version="1.0">
+  <repo priority="50" quality="experimental" status="official">
+    <name>hardened-development</name>
+    <description>Development Overlay for Hardened Gcc 4.x Toolchain</description>
+    <homepage>http://git.overlays.gentoo.org/gitweb/?p=proj/hardened-dev.git;a=summary</homepage>
+    <owner>
+      <email>hardened@gentoo.org</email>
+    </owner>
+    <source type="git">git://git.overlays.gentoo.org/proj/hardened-dev.git</source>
+    <feed>http://git.overlays.gentoo.org/gitweb/?p=proj/hardened-dev.git;a=atom</feed>
+  </repo>
+</repositories>
