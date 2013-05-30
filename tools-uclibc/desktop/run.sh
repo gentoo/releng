@@ -106,6 +106,7 @@ setup_usergroups() {
 
 	rm -rf "${ROOTFS}"/home/gentoo
 	cp -a gentoo "${ROOTFS}"/home/
+	mkdir "${ROOTFS}"/home/gentoo/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos}
 	chroot "${ROOTFS}"/ chown -R gentoo:gentoo /home/gentoo
 	sed -i 's/# \(%wheel.*NOPASSWD\)/\1/' "${ROOTFS}"/etc/sudoers
 }
@@ -137,7 +138,7 @@ unmount_dirs() {
 
 bundle_it() {
 	cd "${ROOTFS}"
-	tar jcvf ../"${ROOTFS}".tar.bz2 .
+	tar -j -c -f ../"${ROOTFS}".tar.bz2 .
 }
 
 main() {
