@@ -42,6 +42,7 @@ net-misc/tor
 net-misc/vinagre
 net-p2p/transmission
 sys-apps/dbus
+sys-apps/elfix
 sys-apps/gradm
 sys-apps/less
 sys-apps/paxctl

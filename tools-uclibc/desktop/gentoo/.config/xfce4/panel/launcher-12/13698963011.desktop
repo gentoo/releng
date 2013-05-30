@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Audio Mixer
+Comment=Adjust volume levels
+Icon=multimedia-volume-control
+Exec=xfce4-mixer
+Type=Application
+StartupNotify=true
+Terminal=false
+Categories=X-XFCE;Audio;Mixer;AudioVideo;
+X-XFCE-Source=file:///usr/share/applications/xfce4-mixer.desktop
