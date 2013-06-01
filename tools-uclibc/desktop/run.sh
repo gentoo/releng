@@ -137,8 +137,27 @@ unmount_dirs() {
 }
 
 bundle_it() {
+	local DATE=$(date +%Y%m%d)
+	local NAME="${ROOTFS}"-"${DATE}".tar.bz2
+	local DIGESTS="${NAME}".DIGESTS
+
 	cd "${ROOTFS}"
-	tar -j -c -f ../"${ROOTFS}".tar.bz2 .
+	tar -j -c -f ../"${NAME}" .
+
+	cd ..
+	>"${DIGESTS}"
+
+	echo "# MD5 HASH" >> "${DIGESTS}"
+	md5sum "${NAME}" >> "${DIGESTS}"
+
+	echo "# SHA1 HASH" >> "${DIGESTS}"
+	sha1sum "${NAME}" >> "${DIGESTS}"
+
+	echo "# SHA512 HASH" >> "${DIGESTS}"
+	sha512sum "${NAME}" >> "${DIGESTS}"
+
+	echo "# WHIRLPOOL HASH" >> "${DIGESTS}"
+	whirlpooldeep "${NAME}" >> "${DIGESTS}"
 }
 
 main() {
