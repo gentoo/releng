@@ -15,3 +15,9 @@ gpasswd -a gentoo usb
 gpasswd -a gentoo games
 
 echo gentoo:gentoo | chpasswd
+
+groupadd -g 9995 graudit
+groupadd -g 9996 grslink
+groupadd -g 9997 grasock
+groupadd -g 9998 grcsock
+groupadd -g 9999 grssock
