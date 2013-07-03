@@ -33,6 +33,7 @@ add_overlay() {
 populate_etc() {
 	cp -f fstab "${ROOTFS}"/etc/fstab 
 	cp -f lilo.conf "${ROOTFS}"/etc/lilo.conf
+	cp -f resolv.conf "${ROOTFS}"/etc/resolv.conf
 
 	rm -f "${ROOTFS}"/etc/portage/make.conf.catalyst
 	cp -f portage/make.conf.1 "${ROOTFS}"/etc/portage/make.conf
@@ -126,6 +127,7 @@ cleanup_dirs() {
 	rm -rf "${ROOTFS}"/tmp/*
 	rm -rf "${ROOTFS}"/var/log/*
 	rm -rf "${ROOTFS}"/var/tmp/*
+	rm -rf "${ROOTFS}"/etc/resolv.conf
 }
 
 unmount_dirs() {
