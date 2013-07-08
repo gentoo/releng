@@ -105,9 +105,16 @@ setup_usergroups() {
 	chroot  "${ROOTFS}"/ /tmp/passwd.sh
 	rm -f "${ROOTFS}"/tmp/passwd.sh
 
+	rm -rf "${ROOTFS}"/etc/skel
+	cp -a gentoo "${ROOTFS}"/etc/skel
+	mkdir "${ROOTFS}"/etc/skel/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh}
+	chmod 700 "${ROOTFS}"/etc/skel/.ssh
+
 	rm -rf "${ROOTFS}"/home/gentoo
-	cp -a gentoo "${ROOTFS}"/home/
-	mkdir "${ROOTFS}"/home/gentoo/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos}
+	cp -a gentoo "${ROOTFS}"/home/gentoo
+	mkdir "${ROOTFS}"/home/gentoo/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh}
+	chmod 700 "${ROOTFS}"/home/gentoo/.ssh
+
 	chroot "${ROOTFS}"/ chown -R gentoo:gentoo /home/gentoo
 	sed -i 's/# \(%wheel.*NOPASSWD\)/\1/' "${ROOTFS}"/etc/sudoers
 }
