@@ -61,7 +61,7 @@ livecd/packages:
 	app-editors/hexedit
 	app-editors/mg
 	app-editors/vim
-	app-emacs/gentoo-syntax
+	app-emacs/ebuild-mode
 	app-misc/colordiff
 	app-misc/mc
 	app-misc/pax-utils
