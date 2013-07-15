@@ -14,8 +14,13 @@ prepare_confs() {
     local p=$(( s - 1 ))
     [[ $p == 0 ]] && p=3
     local pstage=stage${p}
-    local tarch="${arch%32r2}"
+    local tarch="${arch%_hardfp}"
     local parch="arm/${tarch}"
+    local float
+
+    [[ "${arch}" == "${tarch}" ]] \
+      && float="softfp" \
+      || float="hardfloat"
 
     cat stage-all.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
@@ -24,10 +29,14 @@ prepare_confs() {
         -e "s:SARCH:${arch}:g" \
         -e "s:PARCH:${parch}:g" \
         -e "s:TARCH:${tarch}:g" \
-        -e "s:gentoo-linux-uclibc:softfp-linux-uclibceabi:" \
+        -e "s:gentoo-linux-uclibc:${float}-linux-uclibceabi:" \
         -e "s:FLAVOR:${flavor}:g" \
         -e "s:MYCATALYST:$(pwd):g" \
         >  stage${s}-${arch}-uclibc-${flavor}.conf
+
+    sed -i "/^portage_confdir/s:_hardfp::" \
+      stage${s}-${arch}-uclibc-${flavor}.conf
+
   done
 
   sed -i "/^chost/d" stage3-${arch}-uclibc-${flavor}.conf
@@ -85,7 +94,7 @@ do_stages() {
 #
 # approximate timings:
 #
-# catalyst -s current	3 minutes
+# catalyst -s current   3 minutes
 # catalyst -f stage1  130 minutes
 #
 
@@ -94,13 +103,13 @@ main() {
 
   catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
-  for arch in armv7a; do
+  for arch in armv7a_hardfp armv7a; do
     for flavor in hardened vanilla; do
       prepare_confs ${arch} ${flavor}
     done
   done
   
-  for arch in armv7a; do
+  for arch in armv7a_hardfp armv7a; do
     for flavor in hardened vanilla; do
       do_stages ${arch} ${flavor}
       ret=$?
