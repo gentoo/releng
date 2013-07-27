@@ -91,6 +91,7 @@ boot/kernel/gentoo/packages:
 #	net-wireless/rt2500
 
 	sys-apps/pcmciautils
+	sys-kernel/linux-firmware
 
 livecd/unmerge:
 	app-admin/eselect
@@ -135,7 +136,6 @@ livecd/unmerge:
 	sys-libs/gdbm
 	sys-libs/libkudzu
 	sys-kernel/genkernel
-	sys-kernel/linux-firmware
 	sys-kernel/linux-headers
 
 livecd/empty:
