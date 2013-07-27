@@ -86,6 +86,7 @@ boot/kernel/gentoo/packages:
 #	net-dialup/fcdsl
 
 	sys-apps/pcmciautils
+	sys-kernel/linux-firmware
 
 livecd/unmerge:
 	app-admin/eselect
@@ -130,7 +131,6 @@ livecd/unmerge:
 	sys-libs/gdbm
 	sys-libs/libkudzu
 	sys-kernel/genkernel
-	sys-kernel/linux-firmware
 	sys-kernel/linux-headers
 
 livecd/empty:
