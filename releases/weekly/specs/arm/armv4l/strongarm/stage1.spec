@@ -6,3 +6,4 @@ profile: default/linux/arm/13.0
 snapshot: 2008.0
 source_subpath: seed
 cflags: -O2 -pipe -mcpu=strongarm
+update_seed: yes
