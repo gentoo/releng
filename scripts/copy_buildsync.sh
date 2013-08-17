@@ -78,9 +78,9 @@ for ARCH in $ARCHES; do
 		# In the new variant preserve code there is a better way to do this
 		#echo -e "${stage3_list}" |awk '{print $3}' |grep "$latest_stage3_date" >>${OUT_STAGE3}
 		rm -f current-stage3
-		# The "latest stage3" concept doesn't apply to the arm variants
+		# The "latest stage3" concept doesn't apply to the arm/hppa/s390/sh variants
 		# that are pushed on different days of the week.
-		if [[ ! $(echo ${outdir} | grep arm) ]]; then
+		if [[ ! $(echo ${outdir} | egrep 'arm|hppa|ppc|s390|sh') ]]; then
 			ln -sf "$latest_stage3_date" current-stage3
 		fi
 	fi
