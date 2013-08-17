@@ -88,8 +88,7 @@ for ARCH in $ARCHES; do
 	variants="$(find 20* \( -iname '*.iso' -o -iname '*.tar.bz2' \) -printf '%f\n' |sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)"
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
-		#date_variant=$(find 20* -iname "${v}*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -printf '%h\n' | sed -e "s,.*/$a/autobuilds/,,g" -e 's,/.*,,g' |sort -n | tail -n1 )
-		variant_path=$(find 20* -iname "${v}-*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		variant_path=$(find 20* -iname "${v}-20*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		f="latest-${v}.txt"
 		echo -e "${header}" >"${f}"
 		echo -e "${variant_path}" >>${f}
