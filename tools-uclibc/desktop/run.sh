@@ -52,7 +52,7 @@ rebuild_toolchain() {
 
 rebuild_world() {
 	cp -f portage/make.conf.2 "${ROOTFS}"/etc/portage/make.conf
-	cp -f world "${ROOTFS}"/var/lib/portage/world
+	cp -f world.1 "${ROOTFS}"/var/lib/portage/world
 	cp -f rebuild.sh "${ROOTFS}"/tmp/
 	chroot "${ROOTFS}"/ /tmp/rebuild.sh
 	rm -f "${ROOTFS}"/tmp/rebuild.sh
@@ -61,6 +61,8 @@ rebuild_world() {
 
 update_world() {
 	cp -f portage/make.conf.3 "${ROOTFS}"/etc/portage/make.conf
+	cp -f world.2 "${ROOTFS}"/var/lib/portage/world
+
 	cp -f update.sh "${ROOTFS}"/tmp/
 	chroot "${ROOTFS}"/ /tmp/update.sh
 	rm -f "${ROOTFS}"/tmp/update.sh
@@ -128,6 +130,9 @@ setup_confs() {
 	sed -i '/^SYNC/d' "${ROOTFS}"/etc/portage/make.conf
 	sed -i '/^GENTOO_MIRRORS/d' "${ROOTFS}"/etc/portage/make.conf
 	sed -i 's/^MAKEOPTS/#MAKEOPTS/' "${ROOTFS}"/etc/portage/make.conf
+
+	# In kernels 3.9 and above, we must disallow-other-stacks because of SO_REUSEPORT
+	sed -i 's/^#\(disallow-other-stacks=\)no/\1yes/g' "${ROOTFS}"/etc/avahi/avahi-daemon.conf
 }
 
 cleanup_dirs() {
@@ -143,6 +148,9 @@ unmount_dirs() {
 	umount "${ROOTFS}"/dev/
 	umount "${ROOTFS}"/proc/
 	umount "${ROOTFS}"/usr/portage/
+
+	mkdir "${ROOTFS}"/usr/portage/profiles/
+	echo "gentoo" >> "${ROOTFS}"/usr/portage/profiles/repo_name
 }
 
 bundle_it() {
