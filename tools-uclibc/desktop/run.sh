@@ -126,6 +126,7 @@ setup_confs() {
 	sed -i 's/^\(login.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
 	sed -i '/# login_cmd.*Xsession/ a\login_cmd exec /bin/bash -login ~/.xinitrc' "${ROOTFS}"/etc/slim.conf
 	wget -O "${ROOTFS}"/usr/share/slim/themes/default/background.jpg http://www.gentoo.org/images/backgrounds/gentoo1600x1200.jpg
+	wget -O "${ROOTFS}"/usr/share/pixmaps/backgrounds/gnome/background-default.jpg http://www.gentoo.org/images/backgrounds/gentoo1600x1200.jpg
 
 	sed -i '/^SYNC/d' "${ROOTFS}"/etc/portage/make.conf
 	sed -i '/^GENTOO_MIRRORS/d' "${ROOTFS}"/etc/portage/make.conf
