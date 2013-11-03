@@ -14,7 +14,7 @@ USE_UDEV="gudev hwdb keymap kmod"
 USE_VCS="git"
 USE_CHAR="fontforge icu idn"
 
-USE_SERVERS="avahi cups dbus sasl mbox zeroconf"
+USE_SERVERS="ads avahi cups dbus ldap sasl mbox winbind zeroconf"
 USE_PAX="xtpax -ptpax"
 
 USE_AUDIO="openal"
@@ -42,5 +42,5 @@ source "/var/lib/layman/make.conf"
 
 PORTDIR="/usr/portage"
 
-SYNC="rsync://67.151.215.244/portage"
-GENTOO_MIRRORS="ftp://67.151.215.244/pub/gentoo"
+SYNC="rsync://192.168.100.1/portage"
+GENTOO_MIRRORS="ftp://192.168.100.1/pub/gentoo"
