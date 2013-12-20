@@ -103,30 +103,41 @@ setup_initrc() {
 }
 
 setup_usergroups() {
+	local DCONF_LOCAL="http://dev.gentoo.org/~blueness/lilblue/user"
+
 	cp -f passwd.sh "${ROOTFS}"/tmp/
 	chroot  "${ROOTFS}"/ /tmp/passwd.sh
 	rm -f "${ROOTFS}"/tmp/passwd.sh
 
 	rm -rf "${ROOTFS}"/etc/skel
 	cp -a gentoo "${ROOTFS}"/etc/skel
-	mkdir "${ROOTFS}"/etc/skel/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh}
+	mkdir -p "${ROOTFS}"/etc/skel/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh,.cache/dconf,.config/dconf}
 	chmod 700 "${ROOTFS}"/etc/skel/.ssh
+	wget -O "${ROOTFS}"/etc/skel/.config/dconf/user "${DCONF_LOCAL}"
+	wget -O "${ROOTFS}"/etc/skel/.cache/dconf/user "${DCONF_LOCAL}"
 
 	rm -rf "${ROOTFS}"/home/gentoo
 	cp -a gentoo "${ROOTFS}"/home/gentoo
-	mkdir "${ROOTFS}"/home/gentoo/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh}
+	mkdir -p "${ROOTFS}"/home/gentoo/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh,.cache/dconf,.config/dconf}
 	chmod 700 "${ROOTFS}"/home/gentoo/.ssh
+	wget -O "${ROOTFS}"/home/gentoo/.config/dconf/user "${DCONF_LOCAL}"
+	wget -O "${ROOTFS}"/home/gentoo/.cache/dconf/user "${DCONF_LOCAL}"
 
 	chroot "${ROOTFS}"/ chown -R gentoo:gentoo /home/gentoo
 	sed -i 's/# \(%wheel.*NOPASSWD\)/\1/' "${ROOTFS}"/etc/sudoers
 }
 
 setup_confs() {
+	local IMAGE="http://dev.gentoo.org/~blueness/lilblue/gentoo1600x1200.jpg"
+
 	sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1slim/' "${ROOTFS}"/etc/conf.d/xdm
 	sed -i 's/^\(login.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
 	sed -i '/# login_cmd.*Xsession/ a\login_cmd exec /bin/bash -login ~/.xinitrc' "${ROOTFS}"/etc/slim.conf
-	wget -O "${ROOTFS}"/usr/share/slim/themes/default/background.jpg http://www.gentoo.org/images/backgrounds/gentoo1600x1200.jpg
-	wget -O "${ROOTFS}"/usr/share/pixmaps/backgrounds/gnome/background-default.jpg http://www.gentoo.org/images/backgrounds/gentoo1600x1200.jpg
+	#sed -i 's/^\(sessiondir.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
+	#sed -i '/# sessiondir.*/ a\sessiondir /etc/X11/Sessions' "${ROOTFS}"/etc/slim.conf
+
+	wget -O "${ROOTFS}"/usr/share/slim/themes/default/background.jpg "${IMAGE}"
+	wget -O "${ROOTFS}"/usr/share/pixmaps/backgrounds/gnome/background-default.jpg "${IMAGE}"
 
 	sed -i '/^SYNC/d' "${ROOTFS}"/etc/portage/make.conf
 	sed -i '/^GENTOO_MIRRORS/d' "${ROOTFS}"/etc/portage/make.conf
