@@ -1,2 +1,3 @@
 #!/bin/bash
-PORTDIR="/home/release/trees/portage-experimental/" FEATURES="$FEATURES -news" emerge --sync -q
+#PORTDIR="/home/release/trees/portage-experimental/" FEATURES="$FEATURES -news" emerge --sync -q
+PORTAGE_REPOSITORIES=$'[gentoo]\nlocation = /home/release/trees/portage-experimental/\nsync-type = rsync\nsync-uri = rsync://rsync.gentoo.org/gentoo-portage' FEATURES="$FEATURES -news" emerge --sync -q
