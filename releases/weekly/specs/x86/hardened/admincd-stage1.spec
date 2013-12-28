@@ -178,6 +178,7 @@ livecd/packages:
 	sys-fs/e2fsprogs
 	sys-fs/ext3grep
 	sys-fs/extundelete
+	sys-fs/f2fs-tools
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
