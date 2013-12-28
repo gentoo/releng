@@ -1,7 +1,7 @@
 CFLAGS="-O2 -fstack-check -pipe"
 CXXFLAGS="${CFLAGS}"
 CHOST="x86_64-gentoo-linux-uclibc"
-MAKEOPTS="-j9"
+MAKEOPTS="-j17"
 
 USE_BASE="bindist mmx mmxext smp sse sse2 ssse3 static-libs -savedconfig"
 USE_GCC="graphite objc objc++ objc-gc gtk gtk3 X"
@@ -9,5 +9,7 @@ USE="${USE_BASE} ${USE_GCC}"
 
 source "/var/lib/layman/make.conf"
 
-SYNC="rsync://192.168.3.1/portage"
-GENTOO_MIRRORS="ftp://192.168.3.1/pub/gentoo"
+PORTDIR="/usr/portage"
+
+SYNC="rsync://192.168.100.1/portage"
+GENTOO_MIRRORS="ftp://192.168.100.1/pub/gentoo"

@@ -8,3 +8,4 @@ source_subpath: embedded/stage3-ppc-uclibc-2008.0
 cflags: -Os -pipe
 ldflags: -Wl,-O1
 chost: powerpc-gentoo-linux-uclibc
+update_seed: yes
