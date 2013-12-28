@@ -8,3 +8,4 @@ source_subpath: embedded/stage3-ppc-uclibc-softfloat-2008.0
 cflags: -Os -pipe
 ldflags: -Wl,-O1
 chost: powerpc-softfloat-linux-uclibc
+update_seed: yes

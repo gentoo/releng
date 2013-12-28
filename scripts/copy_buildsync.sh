@@ -75,11 +75,12 @@ for ARCH in $ARCHES; do
 	fi
 	if [ -n "${stage3_list}" ]; then
 		echo -e "${header}" >"${OUT_STAGE3}"
-		echo -e "${stage3_list}" |awk '{print $3}' |grep "$latest_stage3_date" >>${OUT_STAGE3}
+		# In the new variant preserve code there is a better way to do this
+		#echo -e "${stage3_list}" |awk '{print $3}' |grep "$latest_stage3_date" >>${OUT_STAGE3}
 		rm -f current-stage3
-		# The "latest stage3" concept doesn't apply to the arm variants
+		# The "latest stage3" concept doesn't apply to the arm/hppa/s390/sh variants
 		# that are pushed on different days of the week.
-		if [[ ! $(echo ${outdir} | grep arm) ]]; then
+		if [[ ! $(echo ${outdir} | egrep 'arm|hppa|ppc|s390|sh') ]]; then
 			ln -sf "$latest_stage3_date" current-stage3
 		fi
 	fi
@@ -88,11 +89,11 @@ for ARCH in $ARCHES; do
 	variants="$(find 20* \( -iname '*.iso' -o -iname '*.tar.bz2' \) -printf '%f\n' |sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)"
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
-		#date_variant=$(find 20* -iname "${v}*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -printf '%h\n' | sed -e "s,.*/$a/autobuilds/,,g" -e 's,/.*,,g' |sort -n | tail -n1 )
-		variant_path=$(find 20* -iname "${v}-*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		variant_path=$(find 20* -iname "${v}-20*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		f="latest-${v}.txt"
 		echo -e "${header}" >"${f}"
 		echo -e "${variant_path}" >>${f}
+		echo -e "${variant_path}" >>${OUT_STAGE3}
 		rm -f "current-$v"
 		ln -sf "${variant_path%/*}" "current-$v"
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${tmpdir}"/.keep.${ARCH}.txt

@@ -14,6 +14,8 @@ gpasswd -a gentoo cdrw
 gpasswd -a gentoo usb
 gpasswd -a gentoo games
 
+gpasswd -a portage wheel
+
 echo gentoo:gentoo | chpasswd
 
 groupadd -g 9995 graudit
