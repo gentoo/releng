@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# First let's get our own mount namespace to avoid leaking crap.
+if [[ -z ${UNSHARE} ]] ; then
+  if type -P unshare >&/dev/null ; then
+    UNSHARE=true exec unshare -m -- "$0" "$@"
+  fi
+fi
+unset UNSHARE
+
 PID=$$
 
 config_file=
