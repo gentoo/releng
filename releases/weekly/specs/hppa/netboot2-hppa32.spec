@@ -1,6 +1,6 @@
 # HPPA Netboot spec file by Guy Martin
-version_stamp:  20130927
-snapshot:       20130927
+version_stamp: 20130927
+snapshot: 20130927
 source_subpath: default/stage3-hppa1.1-20130927
 
 # these shouldn't change
@@ -12,10 +12,8 @@ profile:         default/linux/hppa/13.0
 # netboot2 stuff
 boot/kernel:                      netboot32
 boot/kernel/netboot32/sources:       sys-kernel/gentoo-sources
-boot/kernel/netboot32/config:        /root/gmsoft-specs/netboot-3.10.7-gentoo-netboot32.config
+boot/kernel/netboot32/config: /root/releng/releases/weekly/kconfig/hppa/netboot-3.10.7-gentoo-netboot32.config
 boot/kernel/netboot32/gk_kernargs:   --arch-override=parisc --all-ramdisk-modules
-
-#netboot2/busybox_config: /root/myspecs/busybox-config
 
 netboot2/use:
  -*
@@ -79,28 +77,20 @@ netboot2/packages/sys-fs/e2fsprogs/files:
 	/sbin/fsck.ext4
 	/sbin/fsck.ext3
 	/sbin/fsck.ext2
-	/lib/libext2fs.so.2.4
-	/lib/libext2fs.so.2
-	/lib/libcom_err.so.2.1
-	/lib/libcom_err.so.2
-	/lib/libblkid.so.1.1.0
-	/lib/libblkid.so.1
-	/lib/libe2p.so.2.3
-	/lib/libe2p.so.2
+	/lib/libext2fs.so.*
+	/lib/libcom_err.so.*
+	/lib/libblkid.so.*
+	/lib/libe2p.so.*
 	/usr/lib/e2initrd_helper
-	/lib/libpthread-2.17.so
-	/lib/libpthread.so.0
+	/lib/libpthread*
 
 netboot2/packages/sys-fs/xfsprogs/files:
 	/sbin/mkfs.xfs
 	/sbin/fsck.xfs
 	/sbin/xfs_repair
-	/lib/libxfs.so.0.0.0
-	/lib/libxfs.so.0
-	/lib/libxlog.so.0.0.0
-	/lib/libxlog.so.0
-	/lib/librt-2.17.so
-	/lib/librt.so.1
+	/lib/libxfs.so.*
+	/lib/libxlog.so.*
+	/lib/librt*
 
 
 netboot2/packages/sys-apps/util-linux/files:
@@ -119,16 +109,13 @@ netboot2/packages/sys-apps/util-linux/files:
 	/usr/sbin/fdformat
 	/usr/bin/column
 	/usr/bin/cal
-	/usr/bin/ul
 	/usr/bin/cytune
 	/usr/bin/chrt
 	/usr/bin/rename
 	/usr/bin/tailf
-	/usr/bin/setterm
 	/usr/bin/colcrt
 	/usr/bin/write
 	/usr/bin/hexdump
-	/usr/bin/line
 	/usr/bin/namei
 	/usr/bin/isosize
 	/usr/bin/look
@@ -145,13 +132,9 @@ netboot2/packages/sys-apps/util-linux/files:
 	/usr/bin/parisc64
 	/usr/bin/whereis
 	/usr/bin/setsid
-	/usr/bin/ddate
 	/usr/bin/rev
 	/usr/bin/linux32
-	/usr/bin/chkdupexe
-	/usr/bin/pg
 	/usr/bin/colrm
-	/sbin/cfdisk
 	/sbin/raw
 	/sbin/mkfs.bfs
 	/sbin/sfdisk
@@ -159,36 +142,28 @@ netboot2/packages/sys-apps/util-linux/files:
 	/sbin/hwclock
 	/sbin/ctrlaltdel
 	/sbin/mkfs
-	/sbin/mkfs.cramfs
 	/sbin/mkfs.minix
 	/sbin/blockdev
 	/sbin/losetup
-	/sbin/fsck.cramfs
 	/sbin/agetty
 	/sbin/mkswap
 	/sbin/pivot_root
 	/sbin/fdisk
 	/sbin/swapon
-	/bin/more
 	/bin/umount
 	/bin/dmesg
 	/bin/mount
 	/sbin/swapoff
-	/lib/libblkid.so.1
-	/lib/libblkid.so.1.1.0
-	/lib/libmount.so.1
-	/lib/libmount.so.1.1.0
-	/lib/libuuid.so.1
-	/lib/libuuid.so.1.3.0
+	/lib/libblkid.so.*
+	/lib/libmount.so.*
+	/lib/libuuid.so.*
 
 netboot2/packages/app-editors/nano/files:
 	/bin/nano
 
 netboot2/packages/sys-libs/ncurses/files:
-	/lib/libncurses.so.5.9
-	/lib/libncurses.so.5
-	/lib/libncursesw.so.5.9
-	/lib/libncursesw.so.5
+	/lib/libncurses.so.*
+	/lib/libncursesw.so.*
 	/etc/terminfo
 	/usr/lib/terminfo
 	/usr/share/tabset/std
@@ -213,24 +188,18 @@ netboot2/packages/sys-libs/ncurses/files:
 
 netboot2/packages/net-misc/wget/files:
 	/usr/bin/wget
-	/lib/libss.so.2.0
-	/lib/libss.so.2
-	/lib/libz.so.1.2.7
-	/lib/libz.so.1
+	/lib/libss.so.*
+	/lib/libz.so.*
 
 netboot2/packages/dev-libs/openssl/files:
-	/usr/lib/libssl.so.1.0.0
-	/usr/lib/libssl.so
-	/usr/lib/libcrypto.so.1.0.0
-	/usr/lib/libcrypto.so
+	/usr/lib/libssl.so*
+	/usr/lib/libcrypto.so*
 
 netboot2/packages/net-misc/rsync/files:
 	/usr/bin/rsync
 
 netboot2/packages/dev-libs/popt/files:
-	usr/lib/libpopt.so.0.0.0
-	/usr/lib/libpopt.so.0
-	/usr/lib/libpopt.so
+	/usr/lib/libpopt.so*
 
 netboot2/packages/net-misc/dropbear/files:
 	/usr/bin/dbclient
@@ -239,23 +208,19 @@ netboot2/packages/net-misc/dropbear/files:
 	/usr/bin/dropbearkey
 	/usr/bin/dropbearmulti
 	/usr/sbin/dropbear
-	/lib/libcrypt-2.17.so
-	/lib/libcrypt.so.1
-	/lib/libnss_compat-2.17.so
-	/lib/libnss_compat.so.2
-	/lib/libnsl-2.17.so
-	/lib/libnsl.so.1
+	/lib/libcrypt*
+	/lib/libnss_compat*
+	/lib/libnsl*
+	/lib/libresolv*
+	/lib/libnss_dns*
 
 netboot2/packages/dev-libs/libtommath/files:
-	/usr/lib/libtommath.so.0.0.41
-	/usr/lib/libtommath.so.0
+	/usr/lib/libtommath.so*
 	/usr/lib/libtommath.so
-	/lib/libutil-2.17.so
-	/lib/libutil.so.1
+	/lib/libutil*
 
 netboot2/packages/app-misc/screen/files:
 	/usr/bin/screen
 	/etc/screenrc
-	/lib/libdl-2.17.so
-	/lib/libdl.so.2
+	/lib/libdl*
 
