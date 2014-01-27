@@ -1,0 +1,11 @@
+
+This is not ready yet for a full catalyst run.  However,
+if you have a musl chroot (which you can get from any
+gentoo mirror off of /experimental/amd64/musl) then you
+can build a new stage by running ./run.sh.  It basically
+uses the `ROOT=rootfs emerge -e @system` technique.
+
+Once more stuff is integrated into gentoo, we will replace
+this with a catalyst scripts.
+
+Anthony G. Basile <blueness@gentoo.org>

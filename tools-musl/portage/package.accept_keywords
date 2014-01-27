@@ -1,0 +1,2 @@
+=sys-libs/musl-0.9.15 ~amd64
+=sys-apps/getent-0 ~amd64
