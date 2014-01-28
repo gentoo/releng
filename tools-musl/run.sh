@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOTFS="stage4-amd64-musl"
+ROOTFS="stage4-amd64-musl-vanilla"
 PWD="$(pwd)"
 
 prepare_etc () {
@@ -41,6 +41,30 @@ setup_configs() {
 	sed -i 's/^MAKEOPTS/#MAKEOPTS/' "${ROOTFS}"/etc/portage/make.conf
 }
 
+bundle_it() {
+	local DATE=$(date +%Y%m%d)
+	local NAME="${ROOTFS}"-"${DATE}".tar.bz2
+	local DIGESTS="${NAME}".DIGESTS
+
+	cd "${ROOTFS}"
+	tar -j -c -f ../"${NAME}" .
+
+	cd ..
+	>"${DIGESTS}"
+
+	echo "# MD5 HASH" >> "${DIGESTS}"
+	md5sum "${NAME}" >> "${DIGESTS}"
+
+	echo "# SHA1 HASH" >> "${DIGESTS}"
+	sha1sum "${NAME}" >> "${DIGESTS}"
+
+	echo "# SHA512 HASH" >> "${DIGESTS}"
+	sha512sum "${NAME}" >> "${DIGESTS}"
+
+	echo "# WHIRLPOOL HASH" >> "${DIGESTS}"
+	whirlpooldeep "${NAME}" >> "${DIGESTS}"
+}
+
 main (){
 	prepare_etc
 	prepare_usr_etc
@@ -48,6 +72,7 @@ main (){
 	emerge_system
 	mk_top_level_dirs
 	setup_configs
+	bundle_it
 }
 
 main > zzz.log 2>&1 &
