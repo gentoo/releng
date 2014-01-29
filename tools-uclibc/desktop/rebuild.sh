@@ -2,4 +2,4 @@
 
 source /etc/profile
 env-update
-emerge --keep-going -evq world
+emerge -evq --keep-going --with-bdeps=y world

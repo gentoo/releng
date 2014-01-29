@@ -19,6 +19,7 @@ mount_dirs() {
 	mount --bind /proc/ "${ROOTFS}"/proc/
 	mount --bind /dev/ "${ROOTFS}"/dev/
 	mount --bind /dev/pts "${ROOTFS}"/dev/pts/
+	mount -t tmpfs shm "${ROOTFS}"/dev/shm
 	mount --bind /sys/ "${ROOTFS}"/sys/
 }
 
@@ -156,6 +157,7 @@ cleanup_dirs() {
 
 unmount_dirs() {
 	umount "${ROOTFS}"/sys/
+	umount "${ROOTFS}"/dev/shm
 	umount "${ROOTFS}"/dev/pts/
 	umount "${ROOTFS}"/dev/
 	umount "${ROOTFS}"/proc/
