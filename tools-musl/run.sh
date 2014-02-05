@@ -9,7 +9,7 @@ elif [[ "${TEST_ARCH}" == "x86-64" ]]; then
 	MYARCH="amd64"
 	ALTARCH="x86_64"
 else
-	echo "Unsupported arch $MYARCH"
+	echo "Unsupported arch $TEST_ARCH"
 	exit
 fi
 
