@@ -1,14 +1,17 @@
 #!/bin/bash
 
-MYARCH=${1:-"amd64"}
+TEST_ARCH=$(file -b /usr/lib/libc.so | sed -e 's/^.*shared object, //' -e 's/,.*$//')
 
-if [[ "$MYARCH" != "amd64" && "$MYARCH" != "i686" ]]; then
+if [[ "${TEST_ARCH}" == "Intel 80386" ]]; then
+	MYARCH="i686"
+	ALTARCH="i386"
+elif [[ "${TEST_ARCH}" == "x86-64" ]]; then
+	MYARCH="amd64"
+	ALTARCH="x86_64"
+else
 	echo "Unsupported arch $MYARCH"
 	exit
 fi
-
-[[ "$MYARCH" == "amd64" ]] && ALTARCH="x86_64"
-[[ "$MYARCH" == "i686" ]] && ALTARCH="i386"
 
 ROOTFS="stage4-${MYARCH}-musl-vanilla"
 PWD="$(pwd)"
@@ -18,9 +21,9 @@ prepare_etc () {
 	cp -a "${PWD}"/portage/ "${ROOTFS}"/etc/
 
 	if [[ "$MYARCH" == "amd64" ]]; then
-		sed -i "s/ALTARCH/${ALTARCH}/" "${ROOTFS}"/etc/make.conf
+		sed -i "s/ALTARCH/${ALTARCH}/" "${ROOTFS}"/etc/portage/make.conf
 	elif [[ "$MYARCH" == "i686" ]]; then
-		sed -i "s/ALTARCH/${MYARCH}/" "${ROOTFS}"/etc/make.conf
+		sed -i "s/ALTARCH/${MYARCH}/" "${ROOTFS}"/etc/portage/make.conf
 	fi
 }
 
