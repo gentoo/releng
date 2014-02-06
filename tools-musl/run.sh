@@ -3,38 +3,43 @@
 TEST_ARCH=$(file -b /usr/lib/libc.so | sed -e 's/^.*shared object, //' -e 's/,.*$//')
 
 if [[ "${TEST_ARCH}" == "Intel 80386" ]]; then
-	MYARCH="i686"
+	MY_ARCH="i686"
 	ALTARCH="i386"
 elif [[ "${TEST_ARCH}" == "x86-64" ]]; then
-	MYARCH="amd64"
+	MY_ARCH="amd64"
 	ALTARCH="x86_64"
 else
 	echo "Unsupported arch $TEST_ARCH"
 	exit
 fi
 
-ROOTFS="stage4-${MYARCH}-musl-vanilla"
+ROOTFS="stage4-${MY_ARCH}-musl-vanilla"
 PWD="$(pwd)"
 
 prepare_etc () {
 	mkdir -p "${ROOTFS}"/etc
 	cp -a "${PWD}"/portage/ "${ROOTFS}"/etc/
 
-	if [[ "$MYARCH" == "amd64" ]]; then
+	if [[ "$MY_ARCH" == "amd64" ]]; then
 		sed -i "s/ALTARCH/${ALTARCH}/" "${ROOTFS}"/etc/portage/make.conf
-	elif [[ "$MYARCH" == "i686" ]]; then
-		sed -i "s/ALTARCH/${MYARCH}/" "${ROOTFS}"/etc/portage/make.conf
+	elif [[ "$MY_ARCH" == "i686" ]]; then
+		sed -i "s/ALTARCH/${MY_ARCH}/" "${ROOTFS}"/etc/portage/make.conf
 	fi
 }
 
 prepare_usr_etc() {
 	mkdir -p "${ROOTFS}"/usr/etc
 
+	local PATH_ARCH
+
+	[[ "$MY_ARCH" == "amd64" ]] && PATH_ARCH="x86_64"
+	[[ "$MY_ARCH" == "i686" ]] && PATH_ARCH="i686"
+
 	cat <<-EOF > "${ROOTFS}"/usr/etc/ld-musl-${ALTARCH}.path
 	/lib
 	/usr/lib
-	/usr/lib/gcc/${ALTARCH}-gentoo-linux-musl/4.7.3
-	/usr/${ALTARCH}-gentoo-linux-musl/lib
+	/usr/lib/gcc/${PATH_ARCH}-gentoo-linux-musl/4.7.3
+	/usr/${PATH_ARCH}-gentoo-linux-musl/lib
 	EOF
 
 	ln -sf ld-musl-${ALTARCH}.path "${ROOTFS}"/usr/etc/ld-musl.path
