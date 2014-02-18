@@ -134,8 +134,8 @@ setup_confs() {
 	sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1slim/' "${ROOTFS}"/etc/conf.d/xdm
 	sed -i 's/^\(login.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
 	sed -i '/# login_cmd.*Xsession/ a\login_cmd exec /bin/bash -login ~/.xinitrc' "${ROOTFS}"/etc/slim.conf
-	#sed -i 's/^\(sessiondir.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
-	#sed -i '/# sessiondir.*/ a\sessiondir /etc/X11/Sessions' "${ROOTFS}"/etc/slim.conf
+	sed -i 's/^\(sessiondir.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
+	sed -i '/# sessiondir.*/ a\sessiondir /etc/X11/Sessions' "${ROOTFS}"/etc/slim.conf
 
 	wget -O "${ROOTFS}"/usr/share/slim/themes/default/background.jpg "${IMAGE}"
 	wget -O "${ROOTFS}"/usr/share/pixmaps/backgrounds/gnome/background-default.jpg "${IMAGE}"
