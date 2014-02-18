@@ -53,6 +53,7 @@ prepare_overlay() {
 
 emerge_system() {
 	ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq @system 
+	ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq sandbox
 }
 
 mk_top_level_dirs() {
