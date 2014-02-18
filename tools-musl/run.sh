@@ -22,8 +22,10 @@ prepare_etc () {
 
 	if [[ "$MY_ARCH" == "amd64" ]]; then
 		sed -i "s/ALTARCH/${ALTARCH}/" "${ROOTFS}"/etc/portage/make.conf
+		ln -sf ../../usr/portage/profiles/hardened/linux/musl/amd64 "${ROOTFS}"/etc/portage/make.profile
 	elif [[ "$MY_ARCH" == "i686" ]]; then
 		sed -i "s/ALTARCH/${MY_ARCH}/" "${ROOTFS}"/etc/portage/make.conf
+		ln -sf ../../usr/portage/profiles/hardened/linux/musl/x86 "${ROOTFS}"/etc/portage/make.profile
 	fi
 }
 
