@@ -4,10 +4,23 @@ TEST_ARCH=$(file -b /usr/lib/libc.so | sed -e 's/^.*shared object, //' -e 's/,.*
 
 if [[ "${TEST_ARCH}" == "Intel 80386" ]]; then
 	MY_ARCH="i686"
-	ALTARCH="i386"
+	MY_CHOST="i686-gentoo-linux-musl"
+	MY_CFLAGS=""
+	MY_PROF="x86"
+	MY_PATH="i386"
 elif [[ "${TEST_ARCH}" == "x86-64" ]]; then
 	MY_ARCH="amd64"
-	ALTARCH="x86_64"
+	MY_CHOST="x86_64-gentoo-linux-musl"
+	MY_CFLAGS=""
+	MY_PROF="amd64"
+	MY_PATH="x86_64"
+elif [[ "${TEST_ARCH}" == "ARM" ]]; then
+	# Need better logic for alternative subarches and hard/softfloat
+	MY_ARCH="armv7a_hardfp"
+	MY_CHOST="armv7a-hardfloat-linux-musleabi"
+	MY_CFLAGS=" -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard"
+	MY_PROF="arm/armv7a"
+	MY_PATH="armhf"
 else
 	echo "Unsupported arch $TEST_ARCH"
 	exit
@@ -19,32 +32,22 @@ PWD="$(pwd)"
 prepare_etc () {
 	mkdir -p "${ROOTFS}"/etc
 	cp -a "${PWD}"/portage/ "${ROOTFS}"/etc/
-
-	if [[ "$MY_ARCH" == "amd64" ]]; then
-		sed -i "s/ALTARCH/${ALTARCH}/" "${ROOTFS}"/etc/portage/make.conf
-		ln -sf ../../usr/portage/profiles/hardened/linux/musl/amd64 "${ROOTFS}"/etc/portage/make.profile
-	elif [[ "$MY_ARCH" == "i686" ]]; then
-		sed -i "s/ALTARCH/${MY_ARCH}/" "${ROOTFS}"/etc/portage/make.conf
-		ln -sf ../../usr/portage/profiles/hardened/linux/musl/x86 "${ROOTFS}"/etc/portage/make.profile
-	fi
+	sed -i "s/MY_CHOST/${MY_CHOST}/" "${ROOTFS}"/etc/portage/make.conf
+	sed -i "s/MY_CFLAGS/${MY_CFLAGS}/" "${ROOTFS}"/etc/portage/make.conf
+	ln -sf ../../usr/portage/profiles/hardened/linux/musl/"${MY_PROF}" "${ROOTFS}"/etc/portage/make.profile
 }
 
 prepare_usr_etc() {
 	mkdir -p "${ROOTFS}"/usr/etc
 
-	local PATH_ARCH
-
-	[[ "$MY_ARCH" == "amd64" ]] && PATH_ARCH="x86_64"
-	[[ "$MY_ARCH" == "i686" ]] && PATH_ARCH="i686"
-
-	cat <<-EOF > "${ROOTFS}"/usr/etc/ld-musl-${ALTARCH}.path
+	cat <<-EOF > "${ROOTFS}"/usr/etc/ld-musl-${MY_PATH}.path
 	/lib
 	/usr/lib
-	/usr/lib/gcc/${PATH_ARCH}-gentoo-linux-musl/4.7.3
-	/usr/${PATH_ARCH}-gentoo-linux-musl/lib
+	/usr/lib/gcc/${MY_CHOST}/4.7.3
+	/usr/${MY_CHOST}/lib
 	EOF
 
-	ln -sf ld-musl-${ALTARCH}.path "${ROOTFS}"/usr/etc/ld-musl.path
+	ln -sf ld-musl-${MY_PATH}.path "${ROOTFS}"/usr/etc/ld-musl.path
 }
 
 prepare_overlay() {
@@ -55,7 +58,7 @@ prepare_overlay() {
 
 emerge_system() {
 	ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq @system 
-	ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq sandbox
+	FEATURES="-sandbox" ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq sandbox
 }
 
 mk_top_level_dirs() {
