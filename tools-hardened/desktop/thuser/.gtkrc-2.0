@@ -1,0 +1,15 @@
+style "xfdesktop-icon-view" {
+    XfdesktopIconView::label-alpha = 0
+    XfdesktopIconView::cell-spacing = 2
+    XfdesktopIconView::cell-padding = 2
+    XfdesktopIconView::cell-text-width-proportion = 1.8
+}
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+
+style "panel-icon-fix" {
+    xthickness = 0
+    ythickness = 0
+}
+
+widget "*Xfce*Panel*Button*" style "panel-icon-fix"
+class "*Xfce*Panel*Button*" style "panel-icon-fix"

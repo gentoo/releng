@@ -1,0 +1,71 @@
+
+- First make the key file.  To make things easy, I've given you a script.  Just run
+
+	./mkkey.sh
+
+to generate key.gpg  This file contains 65 random keys in an ascii armored gpg
+file.  (See the reference below for details.)
+
+If this is slow, do some work. (It depends on /dev/random which blocks on system entropy.)
+
+Put it somewhere.  A USB stick is good.  You can't put it on the filesystem since
+it lives only in RAM.  Once you reboot, poof! and no more access to your data.
+
+You have been warned!
+You have been warned!
+You have been warned!
+
+
+- Fill your drive with random data.  Replace sda with your device.
+
+	head -c 15 /dev/urandom | uuencode -m - | head -n 2 | tail -n 1 | losetup -p 0 -e AES256 /dev/loop3 /dev/sda
+	dd if=/dev/zero of=/dev/loop3 bs=4k conv=notrunc 2>/dev/null
+	losetup -d /dev/loop3
+
+
+- Add the following line to /etc/fstab
+
+	/dev/sda   /mnt/mpoint   ext3  defaults,noauto,loop=/dev/loop3,encryption=AES256,gpgkey=/path/to/key.gpg   0   0
+
+Change /mnt/mpoint to whatever mount point you like.  Change /path/to to
+wherever your key lives.
+
+NOTE: We are using the entire drive as one partition.
+
+
+- Lay down a filesystem on your encrypted partition:
+
+	losetup -F /dev/loop3
+	mke2fs -j /dev/loop3
+	losetup -d /dev/loop3
+
+
+- Mount the partition:
+
+	mount /mnt/mpoint
+
+You may now use that filesystem as usual.
+
+
+- Umount the parition:
+
+	umount /mnt/mpoint
+
+
+- Every so often, you should do an fsck on the filesystem.  Make sure its
+  unmount, and then:
+
+	losetup -F /dev/loop3
+	fsck -f -y /dev/loop3
+	losetup -d /dev/loop3
+
+--------------------------------------------------------------------------------
+
+REFERENCE: This howto derived from section 7.2 of
+
+	http://loop-aes.sourceforge.net/loop-AES.README
+
+See that howto for more information on the loop-aes patch.
+
+
+

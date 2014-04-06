@@ -1,0 +1,23 @@
+Kernel Requirements:
+====================
+
+On the host system, these two packages need to be installed:
+
+* sys-kernel/hardened-sources-3.13.5
+* sys-kernel/linux-firmware-20131230
+
+To run:
+=======
+
+Execute ./<DM>-run.sh
+
+Where <DM> is a desktop manager of three flavors of choice:
+
+* Fluxbox
+* Gnome3
+* Xfce4
+
+When your ISO is built, you can clean up by removing the th-<ARCH>-<DM>/
+directory as it is no longer needed.
+
+Enjoy! ;)

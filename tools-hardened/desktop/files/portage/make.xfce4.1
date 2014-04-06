@@ -1,0 +1,24 @@
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+CHOST="x86_64-pc-linux-gnu"
+#MAKEOPTS="-j9"
+#
+USE="mmx sse sse2 ipv6 loop-aes static-libs"
+#USE="${USE} bindist suid"
+USE="${USE} suid mudflap bindist"
+USE="${USE} X -xorg kdrive -gnome cairo dbus dconf device-mapper fam gd gtk gtk3 gdu gudev hwdb udisks icu openrc libnotify xa thunar"
+USE="${USE} ads -client avahi autoipd eds ldap mbox mdnsresponder-compat policykit consolekit samba sqlite winbind"
+USE="${USE} cdr cdda dvdr"
+USE="${USE} cups extras ppds"
+USE="${USE} exif gif jpeg jpeg2k mng apng png raw svg tiff wmf"
+USE="${USE} a52 alsa dvb dvd esd ffmpeg flac gstreamer lame mad mpeg ogg theora vorbis xv aac mp3 speex twolame pulseaudio"
+USE="${USE} python perl vala"
+#
+INPUT_DEVICES="evdev keyboard mouse acecad aiptek elographics fpit joystick penmount synaptics vmmouse void wacom"
+VIDEO_CARDS="fbdev glint intel mach64 mga nouveau nv r128 radeon savage sis tdfx trident v4l vesa via vmware apm ark ast chips cirrus epson fglrx i128 rendition s3 s3virge siliconmotion sisusb tga tseng" 
+
+# Set PORTDIR for backward compatibility with various tools:
+#   gentoo-bashcomp - bug #478444
+#   euse - bug #474574
+#   euses and ufed - bug #478318
+PORTDIR="/usr/portage"
