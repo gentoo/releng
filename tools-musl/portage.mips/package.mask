@@ -1,0 +1,9 @@
+>app-misc/pax-utils-0.7
+>dev-libs/glib-2.36.4-r99
+>sys-apps/kbd-1.15.5-r99
+>sys-apps/net-tools-1.60_p20120127084908-r99
+>sys-apps/util-linux-2.23.1-r99
+sys-apps/systemd
+>sys-devel/gcc-4.7.3-r99
+sys-fs/udev
+>sys-process/procps-3.3.8-r99

@@ -21,6 +21,12 @@ elif [[ "${TEST_ARCH}" == "ARM" ]]; then
 	MY_CFLAGS=" -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard"
 	MY_PROF="arm/armv7a"
 	MY_PATH="armhf"
+elif [[ "${TEST_ARCH}" == "MIPS" ]]; then
+	MY_ARCH="MIPS"
+	MY_CHOST="mipsel-gentoo-linux-musl"
+	MY_CFLAGS=""
+	MY_PROF="mips/mipsel"
+	MY_PATH="mipsel"
 else
 	echo "Unsupported arch $TEST_ARCH"
 	exit
@@ -31,7 +37,11 @@ PWD="$(pwd)"
 
 prepare_etc () {
 	mkdir -p "${ROOTFS}"/etc
-	cp -a "${PWD}"/portage/ "${ROOTFS}"/etc/
+	if [[ "${MY_ARCH}" == "MIPS" ]]; then
+		cp -a "${PWD}"/portage.mips/ "${ROOTFS}"/etc/portage
+	else
+		cp -a "${PWD}"/portage/ "${ROOTFS}"/etc/
+	fi
 	sed -i "s/MY_CHOST/${MY_CHOST}/" "${ROOTFS}"/etc/portage/make.conf
 	sed -i "s/MY_CFLAGS/${MY_CFLAGS}/" "${ROOTFS}"/etc/portage/make.conf
 	ln -sf ../../usr/portage/profiles/hardened/linux/musl/"${MY_PROF}" "${ROOTFS}"/etc/portage/make.profile
@@ -47,7 +57,12 @@ prepare_usr_etc() {
 	/usr/${MY_CHOST}/lib
 	EOF
 
-	ln -sf ld-musl-${MY_PATH}.path "${ROOTFS}"/usr/etc/ld-musl.path
+	# mips-muls needs some tlc upstream
+	if [[ "${MY_ARCH}" == "MIPS" ]]; then
+		ln -sf ld-musl-${MY_PATH}.path "${ROOTFS}"/etc/ld-musl.path
+	else
+		ln -sf ld-musl-${MY_PATH}.path "${ROOTFS}"/usr/etc/ld-musl.path
+	fi
 }
 
 prepare_overlay() {
@@ -57,7 +72,7 @@ prepare_overlay() {
 }
 
 emerge_system() {
-	ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq @system 
+	ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq @system
 	FEATURES="-sandbox" ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq sandbox
 }
 
