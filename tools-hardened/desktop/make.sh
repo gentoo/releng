@@ -2,7 +2,7 @@
 
 WORKING=$(pwd)
 CHROOTS=${CHROOTS:-"${WORKING}"}
-MYROOT=${MYROOT:-"desktop-amd64-hardened-ramdisk"}
+MYROOT=${MYROOT:-""}
 
 cleanup()
 {
@@ -60,7 +60,7 @@ mkiso()
 nameit()
 {
 	DATE=$(date +%Y%m%d)
-    NAME="${MYROOT}-${DATE}.iso"
+	NAME="${MYROOT}-${DATE}.iso"
 
 	[ -f ramdisk.iso ] && mv ramdisk.iso $NAME || echo "Can't name ramdisk.iso, I didn't find it."
 }
