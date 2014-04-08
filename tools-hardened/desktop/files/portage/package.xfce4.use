@@ -6,3 +6,4 @@ media-sound/cdparanoia -static-libs
 x11-base/xorg-server xorg
 sys-libs/zlib minizip
 x11-libs/cairo opengl
+media-libs/mesa gbm
