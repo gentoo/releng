@@ -1,3 +1,4 @@
 sys-kernel/hardened-sources ~amd64
 xfce-extra/xfce4-composite-editor ~amd64
 xfce-extra/xfce-theme-manager ~amd64
+=media-video/vlc-2.0.8 ~amd64
