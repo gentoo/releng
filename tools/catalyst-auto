@@ -15,6 +15,9 @@ verbose=0
 keep_tmpdir=0
 testing=0
 
+# Set pipefail so that run_cmd returns the right value in $?
+set -o pipefail
+
 usage() {
   msg=$1
 

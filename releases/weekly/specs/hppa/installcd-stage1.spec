@@ -1,29 +1,27 @@
 subarch: hppa1.1
-version_stamp: 20130920
+version_stamp: 20140201
 target: livecd-stage1
 rel_type:  default
 profile: default/linux/hppa/13.0
-snapshot: 20130920
-source_subpath: default/stage3-hppa1.1-20130920
+snapshot: 20140201
+source_subpath: default/stage3-hppa1.1-20140201
 livecd/use:
-	deprecated
+	-*
+	python_targets_python2_7
+	bindist
 	fbcon
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	modules
 	ncurses
 	nls
-	nptl
-	nptlonly
 	pam
 	readline
 	socks5
 	ssl
-	static-libs
+	openssl
+	curl_ssl_openssl
 	unicode
-	xml
 
 livecd/packages:
 	app-accessibility/brltty
@@ -37,6 +35,7 @@ livecd/packages:
 	app-misc/vlock
 	app-portage/mirrorselect
 	app-text/wgetpaste
+	dev-util/debootstrap
 	net-analyzer/traceroute
 	net-dialup/mingetty
 	net-dialup/rp-pppoe
@@ -61,7 +60,6 @@ livecd/packages:
 	sys-devel/kgcc64
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
-#	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/cryptsetup
 	sys-fs/lvm2
