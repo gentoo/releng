@@ -5,6 +5,10 @@ On the host system, these two packages need to be installed:
 
 * sys-kernel/hardened-sources-3.13.5
 * sys-kernel/linux-firmware-20131230
+* sys-kernel/genkernel
+
+Once you emerge these things, create a symbolic link of the hardened-sources
+to point to "/usr/src/linux-tinhat".
 
 To run:
 =======
