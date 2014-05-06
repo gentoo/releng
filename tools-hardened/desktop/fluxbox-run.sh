@@ -45,6 +45,7 @@ setup_usergroups() {
 	chroot "${ROOTFS}"/ chown -R thuser:thuser /home/thuser
 	sed -i 's/# \(%wheel.*NOPASSWD\)/\1/' "${ROOTFS}"/etc/sudoers
 	sed -i 's/^\/usr\/*.*/\/usr\/bin\/fluxbox/' "${ROOTFS}"/etc/skel/.xinitrc
+	mkdir -p "${ROOTFS}"/home/thuser/.fluxbox
 	cp -f files/usermenu "${ROOTFS}"/home/thuser/.fluxbox/my-menu
 }
 
