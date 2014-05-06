@@ -3,12 +3,21 @@ Kernel Requirements:
 
 On the host system, these two packages need to be installed:
 
-* sys-kernel/hardened-sources-3.13.5
+* sys-kernel/hardened-sources-3.14.2-r1
 * sys-kernel/linux-firmware-20131230
 * sys-kernel/genkernel
 
 Once you emerge these things, create a symbolic link of the hardened-sources
 to point to "/usr/src/linux-tinhat".
+
+After this you need to apply the Loop-AES patch by doing the following:
+
+* cp ./config/loop-AES-kernel-3.14.patch /usr/src/linux-tinhat/
+
+Then apply the patch:
+
+* rm -f drivers/block/loop.c include/linux/loop.h
+* patch -p1 < loop-AES-kernel-3.14.patch
 
 To run:
 =======
