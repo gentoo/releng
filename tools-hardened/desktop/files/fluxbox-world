@@ -38,6 +38,7 @@ sys-process/fcron
 www-client/firefox
 x11-base/xorg-server
 x11-misc/slim
+x11-terms/eterm
 x11-terms/xfce4-terminal
 x11-wm/fluxbox
 xfce-base/thunar
