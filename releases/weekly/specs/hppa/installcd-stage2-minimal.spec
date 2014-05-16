@@ -1,22 +1,25 @@
 subarch: hppa1.1
-version_stamp: 2008.0
+version_stamp: 20140201
 target: livecd-stage2
 rel_type: default
 profile: default/linux/hppa/13.0
-snapshot: 2008.0
-source_subpath: default/livecd-stage1-hppa1.1-2008.0
+snapshot: 20140201
+source_subpath: default/livecd-stage1-hppa1.1-20140201
 
+livecd/volid: Gentoo Linux - HPPA
 livecd/bootargs: dokeymap
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/palo-1.5_pre20040515-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --mdadm
-livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-2008.0.iso
+livecd/gk_mainargs: --arch-override=parisc
+livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-20140201.iso
 livecd/type: gentoo-release-minimal
 
 boot/kernel: livecd32 livecd64
 
-boot/kernel/livecd32/sources: sys-kernel/hppa-sources
-boot/kernel/livecd32/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/hppa/installcd-2.6.15-hppa32.config
+# On hppa, kernelopts are common for all kernel and will be applied to both
+boot/kernel/livecd32/kernelopts: panic=30
+
+boot/kernel/livecd32/sources: sys-kernel/gentoo-sources
+boot/kernel/livecd32/config: /home/gmsoft/specs/installcd-3.10.7-gentoo-livecd32.config
 boot/kernel/livecd32/use:
 	-*
 	atm
@@ -41,12 +44,9 @@ boot/kernel/livecd32/use:
 	unicode
 	usb
 
-boot/kernel/livecd32/packages:
-	sys-fs/ntfs3g
-
-boot/kernel/livecd64/sources: sys-kernel/hppa-sources
-boot/kernel/livecd64/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/hppa/installcd-2.6.15-hppa64.config
-boot/kernel/livecd64/gk_kernargs:  --kernel-cc=hppa64-linux-gcc --kernel-ld=hppa64-linux-ld 
+boot/kernel/livecd64/sources: sys-kernel/gentoo-sources
+boot/kernel/livecd64/config: /home/gmsoft/specs/installcd-3.10.7-gentoo-livecd64.config
+boot/kernel/livecd64/gk_kernargs: --kernel-cross-compile=hppa64-unknown-linux-gnu-
 boot/kernel/livecd64/use:
 	-*
 	atm
@@ -71,47 +71,70 @@ boot/kernel/livecd64/use:
 	unicode
 	usb
 
-boot/kernel/livecd64/packages:
-	sys-fs/ntfs3g
-
 boot/kernel/livecd32/extraversion: livecd32
 boot/kernel/livecd64/extraversion: livecd64
 
 livecd/unmerge:
 	app-admin/eselect
-	app-admin/eselect-ctags
-	app-admin/eselect-vi
+	app-admin/eselect-lib-bin-symlink
+	app-admin/eselect-pinentry
+	app-admin/eselect-python
 	app-admin/perl-cleaner
 	app-admin/python-updater
 	app-arch/cpio
+	app-crypt/gnupg
+	app-crypt/pinentry
+	app-portage/portage-utils
 	dev-libs/gmp
+	app-text/build-docbook-catalog
+	app-text/docbook-xml-dtd
+	app-text/docbook-xsl-stylesheets
+	app-text/openjade
+	app-text/opensp
+	app-text/po4a
+	app-text/sgml-common
+	dev-libs/elfutils
+	dev-libs/eventlog
+	dev-libs/libassuan
+	dev-libs/pth
+	dev-libs/libgpg-error
+	dev-libs/libksba
+	dev-libs/libpipeline
 	dev-libs/libxml2
+	dev-libs/libxslt
+	dev-libs/mpc
 	dev-libs/mpfr
 	dev-libs/popt
-	dev-python/pycrypto
+	dev-util/gtk-doc-am
+	dev-util/intltool
 	dev-util/pkgconfig
+	net-misc/netifrc
 	net-misc/rsync
+	net-proxy/ntlmaps
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
 	sys-apps/diffutils
-	sys-apps/file
 	sys-apps/groff
-	sys-apps/man
-	sys-apps/man-pages
-	sys-apps/miscfiles
-#	sys-apps/portage
-#	sys-apps/sandbox
+	sys-apps/help2man
+	sys-apps/man-db
+	sys-apps/portage
+	sys-apps/sandbox
+	sys-apps/tcp-wrappers
 	sys-apps/texinfo
+	sys-boot/palo
+	sys-apps/miscfiles
 	sys-devel/autoconf
 	sys-devel/autoconf-wrapper
 	sys-devel/automake
 	sys-devel/automake-wrapper
 	sys-devel/binutils
+	sys-devel/binutils-hppa64
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
 	sys-devel/gcc
+	sys-devel/kgcc64
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
@@ -119,11 +142,13 @@ livecd/unmerge:
 	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch
-	sys-libs/db
-	sys-libs/gdbm
-	sys-libs/libkudzu
 	sys-kernel/genkernel
 	sys-kernel/linux-headers
+	sys-libs/db
+	sys-libs/gdbm
+	sys-libs/cracklib
+	sys-libs/libkudzu
+	x11-misc/shared-mime-info	
 
 livecd/empty:
 	/etc/cron.daily
@@ -143,9 +168,8 @@ livecd/empty:
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
-	/usr/i386-gentoo-linux-uclibc
-	/usr/i386-pc-linux-gnu
-	/usr/i386-pc-linux-uclibc
+	/usr/hppa*-unknown-linux-*
+	/usr/include
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
 	/usr/lib/X11/etc
@@ -156,9 +180,6 @@ livecd/empty:
 	/usr/lib/nfs
 	/usr/lib/perl5/site_perl
 	/usr/lib/portage
-	/usr/lib/python2.2
-	/usr/lib/python2.3
-	/usr/lib/python2.4/test
 	/usr/lib64/X11/config
 	/usr/lib64/X11/doc
 	/usr/lib64/X11/etc
@@ -169,13 +190,8 @@ livecd/empty:
 	/usr/lib64/nfs
 	/usr/lib64/perl5/site_perl
 	/usr/lib64/portage
-	/usr/lib64/python2.2
-	/usr/lib64/python2.3
-	/usr/lib64/python2.4/test
 	/usr/local
 	/usr/portage
-	/usr/powerpc-unknown-linux-gnu
-	/usr/powerpc64-unknown-linux-gnu
 	/usr/share/aclocal
 	/usr/share/baselayout
 	/usr/share/binutils-data
@@ -203,9 +219,7 @@ livecd/empty:
 	/usr/share/texinfo
 	/usr/share/unimaps
 	/usr/share/zoneinfo
-	/usr/sparc-unknown-linux-gnu
 	/usr/src
-	/usr/x86_64-pc-linux-gnu
 	/var/cache
 	/var/empty
 	/var/lib/portage

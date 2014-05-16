@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="displays" version="1.0">
+  <property name="Default" type="empty">
+    <property name="HDMI-0" type="string" value="HDMI-0">
+      <property name="Active" type="bool" value="true"/>
+      <property name="Resolution" type="string" value="1600x900"/>
+      <property name="RefreshRate" type="double" value="59.622971"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Primary" type="bool" value="false"/>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
+      </property>
+    </property>
+    <property name="DVI-1" type="string" value="Acer 20&quot;">
+      <property name="Active" type="bool" value="false"/>
+      <property name="Resolution" type="string" value="1152x864"/>
+      <property name="RefreshRate" type="double" value="75.000000"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Primary" type="bool" value="false"/>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
+      </property>
+    </property>
+  </property>
+</channel>

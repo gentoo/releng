@@ -1,0 +1,22 @@
+button-title=Applications Menu
+button-icon=xfce4-panel-menu
+show-button-title=true
+show-button-icon=true
+launcher-show-name=true
+launcher-show-description=true
+hover-switch-category=false
+category-icon-size=1
+item-icon-size=2
+load-hierarchy=false
+favorites-in-recent=true
+display-recent-default=false
+position-search-alternate=false
+position-commands-alternate=false
+command-settings=xfce4-settings-manager
+command-lockscreen=xflock4
+command-logout=xfce4-session-logout
+favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-mail-reader.desktop,exo-web-browser.desktop
+recent=xfce-backdrop-settings.desktop,xfce-wmtweaks-settings.desktop,xfcecomped.desktop,xfce-wm-settings.desktop,Thunar.desktop,exo-mail-reader.desktop,xfce-display-settings.desktop,galculator.desktop,xfce-keyboard-settings.desktop
+menu-width=400
+menu-height=500
+

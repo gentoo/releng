@@ -1,0 +1,45 @@
+#!/bin/sh
+
+/bin/mount -t proc proc /proc
+/bin/mount -t sysfs sysfs /sys
+/bin/mount -o remount,rw /
+
+/bin/mknod /dev/null c 1 3
+/bin/mknod /dev/tty c 5 0
+
+echo
+echo "Waiting for slow devices ... "
+echo
+
+sleep 10
+
+mdev -s
+
+FOUND=''
+for CDROM in hda hdb hdc hdd sr0 sr1 sr2 sr3 sda1 sdb1 sdc1 sdd1 sde1 sdf1 sdg1
+do
+	if [ "x$FOUND" == "x" ]
+	then
+		/bin/mount /dev/${CDROM} /mnt/cdrom
+		[ -f /mnt/cdrom/tinroot ] && FOUND=$CDROM || /bin/umount /dev/${CDROM}
+	fi
+done
+
+if [ "x$FOUND" == "x" ]
+then
+	echo "Boot device not found, very confusing"
+	echo "Dropping to shell"
+	exec /bin/sh
+fi
+
+/bin/mount -o loop -t squashfs /mnt/cdrom/tinroot /mnt/squashfs
+/bin/mount -o size=3400m,nr_inodes=1m,mode=755 -t tmpfs none /mnt/tmpfs
+/bin/cp -a /mnt/squashfs/* /mnt/tmpfs/
+
+/bin/umount /mnt/squashfs
+/bin/umount /mnt/cdrom
+/bin/umount /sys
+/bin/umount /proc
+
+exec /sbin/switch_root /mnt/tmpfs /sbin/init
+

@@ -1,0 +1,25 @@
+This directory contains utilities which are relavant to
+Tin Hat's design goals.  .  As of the current release,
+there is only one, but more will be added.
+
+1. checksec.sh - Checks binaries or running processes for
+the following security enhancements:
+
+	RELRO - Default Read Only Marking.
+	STACK CANARY (aka SSP) - Stack Smashing Protector
+	NX - No eXecute
+	PIE - Position Independent Executables
+	ASLR - Address Space Layout Randomization
+
+For a better explanation of these see
+
+	http://www.gentoo.org/proj/en/hardened/hardened-toolchain.xml
+	http://en.wikipedia.org/wiki/NX_bit
+	http://en.wikipedia.org/wiki/ASLR
+
+
+This script was written by Tobias Klein.  Thank you!
+See his informative blog at
+
+	http://www.trapkit.de
+

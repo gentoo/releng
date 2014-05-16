@@ -1,0 +1,3 @@
+dev-vcs/git -gpg
+sys-fs/e2fsprogs -nls
+sys-apps/busybox -* savedconfig

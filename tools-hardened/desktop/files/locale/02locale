@@ -1,0 +1,4 @@
+# Configuration file for eselect
+# This file has been automatically generated.
+LANG="en_US.utf8"
+LC_COLLATE="C"

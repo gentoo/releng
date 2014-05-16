@@ -1,0 +1,2 @@
+tmpfs   /               tmpfs   size=4000m,nr_inodes=1m         0 1
+shm     /dev/shm        tmpfs   nodev,nosuid,noexec             0 0
