@@ -1,0 +1,92 @@
+[begin] (Fluxbox 1.3.2)
+[encoding] {UTF-8}
+      [exec] (xfce4-terminal) {xfce4-terminal} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/utilities-terminal.xpm>
+[submenu] (Terminals)
+      [exec]   (xfce4-terminal) {xfce4-terminal} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/utilities-terminal.xpm>
+[end]
+[submenu] (Net)
+[submenu] (Browsers)
+      [exec]   (firefox) {firefox} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/firefox.xpm>
+[end]
+[submenu] (Mail)
+      [exec]   (sylpheed) {sylpheed} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/sylpheed.xpm>
+[end]
+[submenu] (IRC client)
+      [exec]    (hexchat) {hexchat}
+[end]
+[end]
+[submenu] (Editors)
+      [exec]   (leafpad) {leafpad} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/accessories-text-editor.xpm>
+      [exec]   (nano) {xfce4-terminal -e nano} 
+      [exec]   (vim) {xfce4-terminal -e vim} 
+      [exec]   (vi) {xfce4-terminal -e vi} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/vinagre.xpm>
+[end]
+[submenu] (File utils)
+      [exec] (thunar) {thunar} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/system-file-manager.xpm>
+
+[end]
+[submenu] (Multimedia)
+[submenu] (Audio)
+      [exec]   (alsamixer) {xfce4-terminal -e alsamixer} 
+[end]
+[submenu] (Video)
+      [exec]   (vlc) {vlc} 
+</usr/share/icons/hicolor/48x48/apps/vlc.xpm>
+[end]
+[submenu] (Image)
+      [exec] (ristretto)
+[submenu] (X-utils)
+      [exec] (Reload .Xdefaults) {xrdb -load $HOME/.Xdefaults} 
+[end]
+[end]
+[submenu] (Office)
+      [exec] (galculator) {galculator} 
+      [exec] (abiword) {abiword}
+      [exec] (gnumeric) {gnumeric}
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/abiword_48.xpm>
+[end]
+[submenu] (System Tools)
+[submenu] (Burning)
+      [exec]   (xcdroast) {xcdroast} 
+</usr/share/icons/hicolor/48x48/apps/xcdroast.xpm>
+[end]
+      [exec]   (porthole) {porthole} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/porthole-icon.xpm>
+      [exec]   (top) {xfce4-terminal -e top} 
+[end]
+[submenu] (Fluxbox menu)
+      [config] (Configure) 
+[submenu] (Styles)
+      [include] (/usr/share/fluxbox/menu.d/styles/) 
+[end]
+      [workspaces] (Workspace List) 
+[submenu] (Tools)
+      [exec] (Window name) {xprop WM_CLASS|cut -d \" -f 2|gxmessage 
+-file - -center} 
+      [exec] (Screenshot - JPG) {import screenshot.jpg && display 
+-resize 50% screenshot.jpg} 
+      [exec] (Screenshot - PNG) {import screenshot.png && display 
+-resize 50% screenshot.png} 
+[end]
+[submenu] (Window Managers)
+      [restart] (xfce4) {xfwm4} 
+      [restart] (gnome) {gnome-session} 
+</var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/session-properties.xpm>
+[end]
+      [commanddialog] (Fluxbox Command) 
+      [reconfig] (Reload config) 
+      [restart] (Restart) 
+      [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | gxmessage 
+-file - -center} 
+      [separator] 
+      [exit] (Exit) 
+[end]
+[endencoding]
+[end]

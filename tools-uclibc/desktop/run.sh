@@ -19,6 +19,7 @@ mount_dirs() {
 	mount --bind /proc/ "${ROOTFS}"/proc/
 	mount --bind /dev/ "${ROOTFS}"/dev/
 	mount --bind /dev/pts "${ROOTFS}"/dev/pts/
+	mount -t tmpfs shm "${ROOTFS}"/dev/shm
 	mount --bind /sys/ "${ROOTFS}"/sys/
 }
 
@@ -133,8 +134,8 @@ setup_confs() {
 	sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1slim/' "${ROOTFS}"/etc/conf.d/xdm
 	sed -i 's/^\(login.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
 	sed -i '/# login_cmd.*Xsession/ a\login_cmd exec /bin/bash -login ~/.xinitrc' "${ROOTFS}"/etc/slim.conf
-	#sed -i 's/^\(sessiondir.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
-	#sed -i '/# sessiondir.*/ a\sessiondir /etc/X11/Sessions' "${ROOTFS}"/etc/slim.conf
+	sed -i 's/^\(sessiondir.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
+	sed -i '/# sessiondir.*/ a\sessiondir /etc/X11/Sessions' "${ROOTFS}"/etc/slim.conf
 
 	wget -O "${ROOTFS}"/usr/share/slim/themes/default/background.jpg "${IMAGE}"
 	wget -O "${ROOTFS}"/usr/share/pixmaps/backgrounds/gnome/background-default.jpg "${IMAGE}"
@@ -156,6 +157,7 @@ cleanup_dirs() {
 
 unmount_dirs() {
 	umount "${ROOTFS}"/sys/
+	umount "${ROOTFS}"/dev/shm
 	umount "${ROOTFS}"/dev/pts/
 	umount "${ROOTFS}"/dev/
 	umount "${ROOTFS}"/proc/

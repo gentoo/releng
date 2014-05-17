@@ -1,0 +1,32 @@
+1. To save your running Tin Hat system, first prepare a working directory:
+
+	sudo su -
+	cd ~
+	cp -a ~thuser/Save .
+	cd Save
+	chmod 755 *.sh
+
+
+2. If you want to clean out logs, ssh keys, udev persistent rules (eg. for a
+prestine release), then
+
+	./clean.sh
+
+
+3. If you want information about your release, then
+
+	./info.sh
+
+
+4. To make the ISO, do
+
+	./make.sh
+
+
+5. After having made the ISO, you can optionally transfer the image to a pen drive
+using
+
+	./iso2usb.sh
+
+
+

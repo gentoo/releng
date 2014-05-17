@@ -1,0 +1,11 @@
+x11-libs/libdrm libkms
+virtual/udev -static-libs
+sys-fs/lvm2 -static-libs
+sys-fs/cryptsetup -static-libs
+media-sound/cdparanoia -static-libs
+net-misc/openssh -bindist
+dev-libs/openssl -bindist
+x11-base/xorg-server xorg
+sys-libs/zlib minizip
+x11-libs/cairo opengl
+media-libs/mesa gbm

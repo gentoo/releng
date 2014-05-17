@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Sylpheed
+Comment=E-Mail client
+Exec=sylpheed
+Icon=sylpheed
+MimeType=message/rfc822;x-scheme-handler/mailto;
+Terminal=false
+Type=Application
+Categories=GTK;Network;Email;News;
+X-XFCE-Source=file:///usr/share/applications/sylpheed.desktop

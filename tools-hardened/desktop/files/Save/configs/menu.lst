@@ -1,0 +1,4 @@
+timeout 10
+title TinHat
+        kernel /boot/tinhat
+        initrd /boot/tinhat.igz

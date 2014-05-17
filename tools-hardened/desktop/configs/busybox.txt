@@ -1,0 +1,6 @@
+
+"busybox" version 1.7.4, statically compiled against uClibc
+To obtain its configuration, run ./busybox bbconfig
+
+8d9b173bfb62795922c1ed4a314b401f  busybox
+

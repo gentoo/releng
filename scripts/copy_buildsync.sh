@@ -80,7 +80,8 @@ for ARCH in $ARCHES; do
 		rm -f current-stage3
 		# The "latest stage3" concept doesn't apply to the arm/hppa/s390/sh variants
 		# that are pushed on different days of the week.
-		if [[ ! $(echo ${outdir} | egrep 'arm|hppa|ppc|s390|sh') ]]; then
+		# Disable it for amd64/x86 as well as any failures cause confusion to users
+		if [[ ! $(echo ${outdir} | egrep 'amd64|arm|hppa|ppc|s390|sh|x86') ]]; then
 			ln -sf "$latest_stage3_date" current-stage3
 		fi
 	fi

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-mixer" version="1.0">
+  <property name="volume-step-size" type="uint" value="5"/>
+  <property name="active-card" type="string" value="HDAIntelAlsamixer"/>
+  <property name="sound-card" type="string" value="LogitechUSBHeadsetH540Alsamixer"/>
+  <property name="sound-cards" type="empty">
+    <property name="HDAIntelAlsamixer" type="array">
+      <value type="string" value="IEC958 Default PCM"/>
+      <value type="string" value="PCM"/>
+      <value type="string" value="Speaker"/>
+      <value type="string" value="Headphone"/>
+      <value type="string" value="Master"/>
+    </property>
+    <property name="PlaybackDummyOutputPulseAudioMixer" type="array">
+      <value type="string" value="Master"/>
+    </property>
+    <property name="LogitechUSBHeadsetH540Alsamixer" type="array">
+      <value type="string" value="Microphone"/>
+      <value type="string" value="Headphone"/>
+    </property>
+  </property>
+  <property name="window-height" type="int" value="468"/>
+  <property name="window-width" type="int" value="601"/>
+</channel>
