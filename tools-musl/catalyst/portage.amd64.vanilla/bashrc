@@ -1,0 +1,15 @@
+post_src_install() {
+	[[ $PN != musl ]] && return 0
+
+	local arch=$(basename "${D}"/lib/ld-musl-*.so.1)
+	mkdir "${D}"/usr/etc
+	cat > "${D}"/usr/etc/${arch%so.1}path <<EOF
+/lib
+/usr/lib
+/usr/local/lib
+/usr/lib/opengl/xorg-x11/lib
+/usr/lib/gcc/x86_64-gentoo-linux-musl/4.7.3
+/usr/x86_64-gentoo-linux-musl/lib
+/usr/games/lib
+EOF
+}
