@@ -1,0 +1,2 @@
+=sys-libs/musl-1.1.0 ~*
+=sys-apps/getent-0 ~*

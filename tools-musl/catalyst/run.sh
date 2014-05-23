@@ -106,18 +106,14 @@ main() {
 
   catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
-#  for arch in amd64 i686; do
-#    for flavor in hardened vanilla; do
-  for arch in amd64; do
-    for flavor in vanilla; do
+  for arch in amd64 i686; do
+    for flavor in hardened vanilla; do
       prepare_confs ${arch} ${flavor}
     done
   done
   
-#  for arch in amd64 i686; do
-#    for flavor in hardened vanilla; do
-  for arch in amd64; do
-    for flavor in vanilla; do
+  for arch in amd64 i686; do
+    for flavor in hardened vanilla; do
       do_stages ${arch} ${flavor}
       ret=$?
       if [[ $? == 1 ]]; then
