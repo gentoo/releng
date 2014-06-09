@@ -1,3 +1,0 @@
-app-editors/vim -python
-dev-vcs/git -gpg
-sys-apps/busybox -* savedconfig
