@@ -1,127 +1,127 @@
 #!/bin/bash
 
-TEST_ARCH=$(file -b /usr/lib/libc.so | sed -e 's/^.*shared object, //' -e 's/,.*$//')
+source /etc/catalyst/catalyst.conf
 
-if [[ "${TEST_ARCH}" == "Intel 80386" ]]; then
-	MY_ARCH="i686"
-	MY_CHOST="i686-gentoo-linux-musl"
-	MY_CFLAGS=""
-	MY_PROF="x86"
-	MY_PATH="i386"
-elif [[ "${TEST_ARCH}" == "x86-64" ]]; then
-	MY_ARCH="amd64"
-	MY_CHOST="x86_64-gentoo-linux-musl"
-	MY_CFLAGS=""
-	MY_PROF="amd64"
-	MY_PATH="x86_64"
-elif [[ "${TEST_ARCH}" == "ARM" ]]; then
-	# Need better logic for alternative subarches and hard/softfloat
-	MY_ARCH="armv7a_hardfp"
-	MY_CHOST="armv7a-hardfloat-linux-musleabi"
-	MY_CFLAGS=" -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard"
-	MY_PROF="arm/armv7a"
-	MY_PATH="armhf"
-elif [[ "${TEST_ARCH}" == "MIPS" ]]; then
-	MY_ARCH="MIPS"
-	MY_CHOST="mipsel-gentoo-linux-musl"
-	MY_CFLAGS=""
-	MY_PROF="mips/mipsel"
-	MY_PATH="mipsel"
-else
-	echo "Unsupported arch $TEST_ARCH"
-	exit
-fi
+mydate=`date +%Y%m%d`
 
-ROOTFS="stage4-${MY_ARCH}-musl-vanilla"
-PWD="$(pwd)"
-
-prepare_etc () {
-	mkdir -p "${ROOTFS}"/etc
-	if [[ "${MY_ARCH}" == "MIPS" ]]; then
-		cp -a "${PWD}"/portage.mips/ "${ROOTFS}"/etc/portage
-	else
-		cp -a "${PWD}"/portage/ "${ROOTFS}"/etc/
-	fi
-	sed -i "s/MY_CHOST/${MY_CHOST}/" "${ROOTFS}"/etc/portage/make.conf
-	sed -i "s/MY_CFLAGS/${MY_CFLAGS}/" "${ROOTFS}"/etc/portage/make.conf
-	ln -sf ../../usr/portage/profiles/hardened/linux/musl/"${MY_PROF}" "${ROOTFS}"/etc/portage/make.profile
+undo_grsec() {
+  [[ -d /proc/sys/kernel/grsecurity ]] || return
+  for i in /proc/sys/kernel/grsecurity/chroot_* ; do
+    echo 0 > $i
+  done
 }
 
-prepare_usr_etc() {
-	mkdir -p "${ROOTFS}"/usr/etc
+prepare_confs() {
+  local arch=$1
+  local flavor=$2
 
-	cat <<-EOF > "${ROOTFS}"/usr/etc/ld-musl-${MY_PATH}.path
-	/lib
-	/usr/lib
-	/usr/lib/gcc/${MY_CHOST}/4.7.3
-	/usr/${MY_CHOST}/lib
-	EOF
+  for s in 1 2 3; do
 
-	# mips-muls needs some tlc upstream
-	if [[ "${MY_ARCH}" == "MIPS" ]]; then
-		ln -sf ld-musl-${MY_PATH}.path "${ROOTFS}"/etc/ld-musl.path
-	else
-		ln -sf ld-musl-${MY_PATH}.path "${ROOTFS}"/usr/etc/ld-musl.path
-	fi
+    local cstage=stage${s}
+    local p=$(( s - 1 ))
+    [[ $p == 0 ]] && p=3
+    local pstage=stage${p}
+
+    local parch="${arch}"
+    [[ "${arch}" == "i686" ]] && parch="x86"
+
+    local tarch="${arch}"
+    [[ "${arch}" == "amd64" ]] && tarch="x86_64"
+
+    cat stage-all.conf.template | \
+      sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
+        -e "s:CSTAGE:${cstage}:g" \
+        -e "s:PSTAGE:${pstage}:g" \
+        -e "s:SARCH:${arch}:g" \
+        -e "s:PARCH:${parch}:g" \
+        -e "s:TARCH:${tarch}:g" \
+        -e "s:FLAVOR:${flavor}:g" \
+        -e "s:MYCATALYST:$(pwd):g" \
+        >  stage${s}-${arch}-musl-${flavor}.conf
+  done
+
+  sed -i "/^chost/d" stage3-${arch}-musl-${flavor}.conf
 }
 
-prepare_overlay() {
-	# This is intensely ugly, but for now ...
-	mkdir -p "${ROOTFS}"/var/lib/layman/
-	cp -a /var/lib/layman/* "${ROOTFS}"/var/lib/layman/
+banner() {
+cat << EOF | tee -a zzz.log > stage$1-$2-musl-$3.log
+
+************************************************************************
+*    stage$1-$2-musl-$3
+************************************************************************"
+
+EOF
 }
 
-emerge_system() {
-	ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq @system
-	FEATURES="-sandbox" ROOT="${ROOTFS}" emerge --keep-going --with-bdeps=y -uvq sandbox
+
+do_stages() {
+  local arch=$1
+  local flavor=$2
+
+  for s in 1 2 3; do
+    local tgpath="${storedir}/builds/${flavor}/${arch}"
+    local target="stage${s}-${arch}-musl-${flavor}-${mydate}.tar.bz2"
+    local tglink="stage${s}-${arch}-musl-${flavor}.tar.bz2"
+
+    if [[ ! -f "${tgpath}/${tglink}" ]]; then
+       touch stage${s}-${arch}-musl-${flavor}.log
+       echo "!!! ${tglink} at ${tgpath} doesn't exist" \
+         | tee -a zzz.log \
+         > stage${s}-${arch}-musl-${flavor}.err
+       return 1
+    fi
+
+    banner ${s} ${arch} ${flavor}
+    catalyst -f stage${s}-${arch}-musl-${flavor}.conf \
+      | tee -a zzz.log \
+      > stage${s}-${arch}-musl-${flavor}.log \
+      2> stage${s}-${arch}-musl-${flavor}.err
+
+    if [[ -f "${tgpath}/${target}" ]]; then
+      rm -f "${tgpath}/${tglink}"
+      ln -s ${target} "${tgpath}/${tglink}"
+    else
+      echo "!!! ${target} was not generated" \
+        | tee -a zzz.log \
+        >stage${s}-${arch}-musl-${flavor}.err
+      return 1
+    fi
+  done
+
+  return 0
 }
 
-mk_top_level_dirs() {
-	mkdir "${ROOTFS}"/{boot,dev,home,media,mnt,opt,proc,root,sys}
+
+#
+# approximate timings:
+#
+# catalyst -s current	3 minutes
+# catalyst -f stage1  130 minutes
+#
+
+main() {
+  >zzz.log
+
+  undo_grsec
+
+  catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
+
+  for arch in amd64 i686; do
+    for flavor in vanilla hardened; do
+      prepare_confs ${arch} ${flavor}
+    done
+  done
+  
+  for arch in amd64 i686; do
+    for flavor in vanilla hardened; do
+      do_stages ${arch} ${flavor}
+      ret=$?
+      if [[ $? == 1 ]]; then
+         echo "FAILURE at ${arch} ${flavor}" | tee zzz.log
+         return 1
+      fi
+    done
+  done
 }
 
-setup_configs() {
-	sed -i '/^SYNC/d' "${ROOTFS}"/etc/portage/make.conf
-	sed -i '/^GENTOO_MIRRORS/d' "${ROOTFS}"/etc/portage/make.conf
-	sed -i 's/^MAKEOPTS/#MAKEOPTS/' "${ROOTFS}"/etc/portage/make.conf
-
-	# There are some issue with python3, so let's select python2
-	# which so far is option 1 in elesect python.
-	chroot "${ROOTFS}" eselect python set 1
-}
-
-bundle_it() {
-	local DATE=$(date +%Y%m%d)
-	local NAME="${ROOTFS}"-"${DATE}".tar.bz2
-	local DIGESTS="${NAME}".DIGESTS
-
-	cd "${ROOTFS}"
-	tar -j -c -f ../"${NAME}" .
-
-	cd ..
-	>"${DIGESTS}"
-
-	echo "# MD5 HASH" >> "${DIGESTS}"
-	md5sum "${NAME}" >> "${DIGESTS}"
-
-	echo "# SHA1 HASH" >> "${DIGESTS}"
-	sha1sum "${NAME}" >> "${DIGESTS}"
-
-	echo "# SHA512 HASH" >> "${DIGESTS}"
-	sha512sum "${NAME}" >> "${DIGESTS}"
-
-	echo "# WHIRLPOOL HASH" >> "${DIGESTS}"
-	whirlpooldeep "${NAME}" >> "${DIGESTS}"
-}
-
-main (){
-	prepare_etc
-	prepare_usr_etc
-	prepare_overlay
-	emerge_system
-	mk_top_level_dirs
-	setup_configs
-	bundle_it
-}
-
-main > zzz.log 2>&1 &
+main $1 &

@@ -62,6 +62,7 @@ livecd/packages:
 	app-editors/mg
 	app-editors/vim
 	app-emacs/ebuild-mode
+	app-emulation/xen-tools
 	app-misc/colordiff
 	app-misc/mc
 	app-misc/pax-utils

@@ -38,7 +38,6 @@ echo "#####################################################" >> /etc/fstab
 
 # fstab tweaks
 echo "tmpfs	/		tmpfs	defaults	0 0" >> /etc/fstab
-echo "tmpfs	/lib/firmware	tmpfs	defaults	0 0" >> /etc/fstab
 echo "tmpfs	/usr/portage	tmpfs	defaults	0 0" >> /etc/fstab
 #echo "tmpfs	/boot		tmpfs	defaults	0 0" >> /etc/fstab
 
