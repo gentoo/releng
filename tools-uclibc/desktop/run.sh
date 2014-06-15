@@ -39,10 +39,10 @@ populate_etc() {
 	rm -f "${ROOTFS}"/etc/portage/make.conf.catalyst
 	cp -f portage/make.conf.1 "${ROOTFS}"/etc/portage/make.conf
 
-	for d in env package.accept_keywords package.mask package.use profile repos.conf; do
+	rm -rf "${ROOTFS}"/etc/portage/patches
+	for d in env package.accept_keywords package.env package.mask package.unmask package.use patches profile repos.conf; do
 		[[ -a portage/"${d}" ]] && cp -af portage/${d} "${ROOTFS}"/etc/portage
 	done
-	cp -af portage/package.env "${ROOTFS}"/etc/portage
 }
 
 rebuild_toolchain() {
