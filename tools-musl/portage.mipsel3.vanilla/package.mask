@@ -1,0 +1,6 @@
+>app-misc/pax-utils-0.7
+dev-util/pkgconfig
+>sys-apps/kbd-1.15.5-r99
+sys-apps/systemd
+>sys-devel/gcc-4.7.3-r99
+sys-fs/udev
