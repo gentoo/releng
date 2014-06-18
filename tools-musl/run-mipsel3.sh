@@ -93,7 +93,7 @@ do_stages() {
 main() {
   >zzz.log
 
-#  catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
+  catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
   for arch in mipsel3; do
     for flavor in vanilla; do
@@ -101,16 +101,16 @@ main() {
     done
   done
   
-#  for arch in mipsel3; do
-#    for flavor in vanilla; do
-#      do_stages ${arch} ${flavor}
-#      ret=$?
-#      if [[ $? == 1 ]]; then
-#         echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-#         return 1
-#      fi
-#    done
-#  done
+  for arch in mipsel3; do
+    for flavor in vanilla; do
+      do_stages ${arch} ${flavor}
+      ret=$?
+      if [[ $? == 1 ]]; then
+         echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
+         return 1
+      fi
+    done
+  done
 }
 
 main $1 &
