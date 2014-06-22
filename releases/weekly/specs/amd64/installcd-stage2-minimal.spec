@@ -113,7 +113,7 @@ livecd/unmerge:
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
-#	sys-devel/gcc
+	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig

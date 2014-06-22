@@ -114,8 +114,7 @@ livecd/unmerge:
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
-# This might be needed for software speech.
-#	sys-devel/gcc
+	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
