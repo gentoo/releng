@@ -82,8 +82,6 @@ boot/kernel/gentoo/packages:
 	media-sound/alsa-utils
 	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
-#	net-dialup/fritzcapi
-#	net-dialup/fcdsl
 
 	sys-apps/pcmciautils
 	sys-kernel/linux-firmware
@@ -108,8 +106,6 @@ livecd/unmerge:
 	sys-apps/man
 	sys-apps/man-pages
 	sys-apps/miscfiles
-#	sys-apps/portage
-#	sys-apps/sandbox
 	sys-apps/texinfo
 	sys-devel/autoconf
 	sys-devel/autoconf-wrapper
@@ -118,8 +114,7 @@ livecd/unmerge:
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
-# This might be needed for software speech.
-#	sys-devel/gcc
+	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
@@ -145,8 +140,6 @@ livecd/empty:
 	/etc/skel
 	/lib/dev-state
 	/lib/udev-state
-	/lib64/dev-state
-	/lib64/udev-state
 	/root/.ccache
 	/tmp
 	/usr/diet/include
@@ -163,26 +156,8 @@ livecd/empty:
 	/usr/lib/nfs
 	/usr/lib/perl5/site_perl
 	/usr/lib/portage
-	/usr/lib/python2.2
-	/usr/lib/python2.3
-	/usr/lib/python2.4/test
-	/usr/lib64/X11/config
-	/usr/lib64/X11/doc
-	/usr/lib64/X11/etc
-	/usr/lib64/awk
-	/usr/lib64/ccache
-	/usr/lib64/gcc-config
-	/usr/lib64/gconv
-	/usr/lib64/nfs
-	/usr/lib64/perl5/site_perl
-	/usr/lib64/portage
-	/usr/lib64/python2.2
-	/usr/lib64/python2.3
-	/usr/lib64/python2.4/test
 	/usr/local
 	/usr/portage
-	/usr/powerpc-unknown-linux-gnu
-	/usr/powerpc64-unknown-linux-gnu
 	/usr/share/aclocal
 	/usr/share/baselayout
 	/usr/share/binutils-data
@@ -210,7 +185,6 @@ livecd/empty:
 	/usr/share/texinfo
 	/usr/share/unimaps
 	/usr/share/zoneinfo
-	/usr/sparc-unknown-linux-gnu
 	/usr/src
 	/var/cache
 	/var/empty
@@ -282,10 +256,6 @@ livecd/rm:
 	/usr/bin/readelf
 	/usr/bin/repoman
 	/usr/bin/size
-	/usr/bin/powerpc-unknown-linux-gnu-*
-	/usr/bin/powerpc64-unknown-linux-gnu-*
-	/usr/bin/sparc-unknown-linux-gnu-*
-	/usr/bin/sparc64-unknown-linux-gnu-*
 	/usr/bin/strip
 	/usr/bin/tbz2tool
 	/usr/bin/xpak
