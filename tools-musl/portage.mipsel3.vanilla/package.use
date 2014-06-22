@@ -1,0 +1,2 @@
+dev-util/pkgconf pkg-config
+sys-libs/musl nls

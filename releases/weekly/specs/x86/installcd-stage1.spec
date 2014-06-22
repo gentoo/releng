@@ -59,6 +59,7 @@ livecd/packages:
 	net-wireless/b43-fwcutter
 ### Masked (~keywords)
 #	net-wireless/bcm43xx-fwcutter
+	net-wireless/iw
 	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
