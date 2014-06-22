@@ -82,14 +82,6 @@ boot/kernel/gentoo/packages:
 	media-sound/alsa-utils
 	net-dialup/globespan-adsl
 
-# These were not stable at time of snapshot/release.
-#	net-wireless/rtl8180
-#	net-wireless/rtl8187
-#	net-wireless/adm8211
-#	net-wireless/acx
-#	net-wireless/ipw3945
-#	net-wireless/rt2500
-
 	sys-apps/pcmciautils
 	sys-kernel/linux-firmware
 
@@ -113,8 +105,6 @@ livecd/unmerge:
 	sys-apps/man
 	sys-apps/man-pages
 	sys-apps/miscfiles
-#	sys-apps/portage
-#	sys-apps/sandbox
 	sys-apps/texinfo
 	sys-devel/autoconf
 	sys-devel/autoconf-wrapper
@@ -123,7 +113,6 @@ livecd/unmerge:
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
-# This might be needed for software speech.
 #	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
