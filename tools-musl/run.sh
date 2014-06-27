@@ -110,7 +110,7 @@ main() {
       do_stages ${arch} ${flavor}
       ret=$?
       if [[ $? == 1 ]]; then
-         echo "FAILURE at ${arch} ${flavor}" | tee zzz.log
+         echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
          return 1
       fi
     done
