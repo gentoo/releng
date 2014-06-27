@@ -58,7 +58,7 @@ do_stages() {
   local flavor=$2
 
   for s in 1 2 3; do
-    local tgpath="${storedir}/builds/${flavor}/${arch}"
+    local tgpath="${storedir}/builds/musl/${flavor}/${arch}"
     local target="stage${s}-${arch}-musl-${flavor}-${mydate}.tar.bz2"
     local tglink="stage${s}-${arch}-musl-${flavor}.tar.bz2"
 
@@ -90,13 +90,6 @@ do_stages() {
   return 0
 }
 
-
-#
-# approximate timings:
-#
-# catalyst -s current   3 minutes
-# catalyst -f stage1  130 minutes
-#
 
 main() {
   >zzz.log

@@ -26,8 +26,8 @@ prepare_confs() {
         -e "s:TARCH:${tarch}:g" \
         -e "s:FLAVOR:${flavor}:g" \
         -e "s:MYCATALYST:$(pwd):g" \
-	-e "s|^cflags:.*|cflags: -O2 -march=mips3 -mplt -Wa,-mfix-loongson2f-nop -pipe|" \
-	-e "s|^cxxflags:.*|cxxflags: -O2 -march=mips3 -mplt -Wa,-mfix-loongson2f-nop -pipe|" \
+        -e "s|^cflags:.*|cflags: -O2 -march=mips3 -mplt -Wa,-mfix-loongson2f-nop -pipe|" \
+        -e "s|^cxxflags:.*|cxxflags: -O2 -march=mips3 -mplt -Wa,-mfix-loongson2f-nop -pipe|" \
         >  stage${s}-${arch}-musl-${flavor}.conf
   done
 
@@ -50,7 +50,7 @@ do_stages() {
   local flavor=$2
 
   for s in 1 2 3; do
-    local tgpath="${storedir}/builds/${flavor}/${arch}"
+    local tgpath="${storedir}/builds/musl/${flavor}/${arch}"
     local target="stage${s}-${arch}-musl-${flavor}-${mydate}.tar.bz2"
     local tglink="stage${s}-${arch}-musl-${flavor}.tar.bz2"
 
@@ -82,13 +82,6 @@ do_stages() {
   return 0
 }
 
-
-#
-# approximate timings:
-#
-# catalyst -s current	3 minutes
-# catalyst -f stage1  130 minutes
-#
 
 main() {
   >zzz.log

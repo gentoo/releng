@@ -1,9 +1,9 @@
 subarch: SARCH
 target: CSTAGE
 version_stamp: uclibc-FLAVOR
-rel_type: FLAVOR/SARCH
+rel_type: uclibc/FLAVOR/SARCH
 profile: hardened/linux/uclibc/PARCH
 snapshot: current
-source_subpath: FLAVOR/SARCH/PSTAGE-SARCH-uclibc-FLAVOR
+source_subpath: uclibc/FLAVOR/SARCH/PSTAGE-SARCH-uclibc-FLAVOR
 chost: TARCH-gentoo-linux-uclibc
 portage_confdir: MYCATALYST/portage.SARCH.FLAVOR
