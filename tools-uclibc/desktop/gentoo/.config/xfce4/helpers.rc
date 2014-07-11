@@ -1,4 +1,4 @@
-TerminalEmulator=gnome-terminal
+TerminalEmulator=xfce4-terminal
 WebBrowser=epiphany
 MailReader=sylpheed-claws
 
