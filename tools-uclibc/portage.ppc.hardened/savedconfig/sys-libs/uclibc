@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Version: 0.9.33.2
-# Wed Jul  9 19:33:11 2014
+# Tue Jul 15 17:11:45 2014
 #
 # TARGET_alpha is not set
 # TARGET_arm is not set
@@ -225,14 +225,14 @@ HARDWIRED_ABSPATH=y
 #
 # Security options
 #
-# UCLIBC_BUILD_PIE is not set
+UCLIBC_BUILD_PIE=y
 UCLIBC_HAS_ARC4RANDOM=y
 UCLIBC_HAS_SSP=y
 # UCLIBC_HAS_SSP_COMPAT is not set
 # SSP_QUICK_CANARY is not set
 # PROPOLICE_BLOCK_ABRT is not set
 PROPOLICE_BLOCK_SEGV=y
-UCLIBC_BUILD_SSP=y
+# UCLIBC_BUILD_SSP is not set
 UCLIBC_BUILD_RELRO=y
 UCLIBC_BUILD_NOW=y
 UCLIBC_BUILD_NOEXECSTACK=y

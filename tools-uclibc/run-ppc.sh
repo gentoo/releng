@@ -15,7 +15,7 @@ prepare_confs() {
     [[ $p == 0 ]] && p=3
     local pstage=stage${p}
 
-    local tarch="${arch}"
+    local parch="${arch}"
     [[ "${arch}" == "ppc" ]] && tarch="powerpc"
 
     cat stage-all.conf.template | \
@@ -93,16 +93,18 @@ main() {
     done
   done
   
-#  for arch in ppc; do
+  for arch in ppc; do
+#    hardened is currently broken
 #    for flavor in hardened vanilla; do
-#      do_stages ${arch} ${flavor}
-#      ret=$?
-#      if [[ $? == 1 ]]; then
-#         echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-#         return 1
-#      fi
-#    done
-#  done
+    for flavor in vanilla; do
+      do_stages ${arch} ${flavor}
+      ret=$?
+      if [[ $? == 1 ]]; then
+         echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
+         return 1
+      fi
+    done
+  done
 }
 
 main $1 &
