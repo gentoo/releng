@@ -1,7 +1,7 @@
 Kernel Requirements:
 ====================
 
-On the host system, these two packages need to be installed:
+On the host system, these packages need to be installed:
 
 * sys-kernel/hardened-sources-3.14.2-r1
 * sys-kernel/linux-firmware-20131230
