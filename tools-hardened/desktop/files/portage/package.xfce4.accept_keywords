@@ -1,3 +1,4 @@
+app-arch/xarchiver ~amd64
 sys-kernel/hardened-sources ~amd64
 xfce-extra/xfce4-composite-editor ~amd64
 xfce-extra/xfce-theme-manager ~amd64
