@@ -51,15 +51,12 @@ main() {
       prepare_confs ${arch} ${flavor}
     done
   done
-  
+
+  # No parallelization for arm.  Its too hard on the cpu!
   for arch in armv7a_hardfp; do
     for flavor in hardened vanilla; do
       do_stages ${arch} ${flavor}
-      ret=$?
-      if [[ $? == 1 ]]; then
-         echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-         return 1
-      fi
+      [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
     done
   done
 }
