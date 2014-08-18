@@ -87,7 +87,7 @@ livecd/packages:
 #	sys-fs/hfsplusutils
 #	sys-fs/hfsutils
 #	sys-fs/iprutils
-#	sys-fs/jfsutils
+	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
 #	sys-fs/lvm-user
