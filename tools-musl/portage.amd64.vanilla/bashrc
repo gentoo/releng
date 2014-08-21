@@ -8,7 +8,7 @@ post_src_install() {
 /usr/lib
 /usr/local/lib
 /usr/lib/opengl/xorg-x11/lib
-/usr/lib/gcc/${CHOST}/4.7.3
+/usr/lib/gcc/${CHOST}/4.7.7
 /usr/${CHOST}/lib
 /usr/games/lib
 EOF
