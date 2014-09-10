@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 
 # First let's get our own mount namespace to avoid leaking crap.
 if [[ -z ${UNSHARE} ]] ; then
@@ -7,8 +9,6 @@ if [[ -z ${UNSHARE} ]] ; then
   fi
 fi
 unset UNSHARE
-
-PID=$$
 
 config_file=
 verbose=0
@@ -118,7 +118,7 @@ fi
 
 source ${config_file}
 
-TMPDIR=${TMP_PATH:-/tmp}/catalyst-auto.${PID}
+TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.XXXXXX)
 DATESTAMP=$(date +%Y%m%d)
 
 if [ ${verbose} = 1 ]; then
@@ -126,20 +126,10 @@ if [ ${verbose} = 1 ]; then
   echo "DATESTAMP = ${DATESTAMP}"
 fi
 
-# Check if tmp directory exists and remove it
-if [ -d "${TMPDIR}" ]; then
-  if ! rm -rf "${TMPDIR}"; then
-    echo "Couldn't remove stale tmpdir ${TMPDIR}!"
-    exit 1
-  fi
+if ! mkdir -p "${TMPDIR}"/{specs,kconfig,log}; then
+  echo "Couldn't create tempdirs!"
+  exit 1
 fi
-
-for i in ${TMPDIR} ${TMPDIR}/specs ${TMPDIR}/kconfig ${TMPDIR}/log; do
-  if ! mkdir -p "${i}"; then
-    echo "Couldn't create dir ${i}!"
-    exit 1
-  fi
-done
 
 if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
   send_email "Catalyst build error - pre_build" "Your pre_build function sucks" "${TMPDIR}/log/pre_build.log"
