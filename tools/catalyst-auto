@@ -123,6 +123,8 @@ if [ -z "${config_file}" -o ! -e "${config_file}" ]; then
   exit 1
 fi
 
+# Probe the default gitdir from this script name.
+GITDIR=$(dirname "$(dirname "$(realpath "$0")")")
 source ${config_file}
 
 TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.XXXXXX)
