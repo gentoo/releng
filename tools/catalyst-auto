@@ -2,10 +2,17 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-# First let's get our own mount namespace to avoid leaking crap.
+# First let's get our own namespaces to avoid leaking crap.
 if [[ -z ${UNSHARE} ]] ; then
   if type -P unshare >&/dev/null ; then
-    UNSHARE=true exec unshare -m -- "$0" "$@"
+    uargs=()
+    # Probe the namespaces as some can be disabled (or we are not root).
+    unshare -m -- true >&/dev/null && uargs+=( -m )
+    unshare -u -- true >&/dev/null && uargs+=( -u )
+    unshare -i -- true >&/dev/null && uargs+=( -i )
+    unshare -p -- true >&/dev/null && uargs+=( -p -f --mount-proc )
+    # Re-exec ourselves in the new namespace.
+    UNSHARE=true exec unshare "${uargs[@]}" -- "$0" "$@"
   fi
 fi
 unset UNSHARE
