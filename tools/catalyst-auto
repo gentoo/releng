@@ -19,10 +19,10 @@ testing=0
 set -o pipefail
 
 usage() {
-  msg=$1
+  local msg=$1
 
   if [ -n "${msg}" ]; then
-    echo -e "${msg}\n";
+    printf "%b\n\n" "${msg}"
   fi
 
   cat <<EOH
@@ -104,8 +104,7 @@ do
       testing=1
       ;;
     -*)
-      echo "You have specified an invalid option: ${a}"
-      usage
+      usage "ERROR: You have specified an invalid option: ${a}"
       exit 1
       ;;
     esac
@@ -113,7 +112,7 @@ done
 
 # Make sure all required values were specified
 if [ -z "${config_file}" -o ! -e "${config_file}" ]; then
-  usage "You must specify a valid config file to use"
+  usage "ERROR: You must specify a valid config file to use"
   exit 1
 fi
 
