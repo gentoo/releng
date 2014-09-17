@@ -1,29 +1,26 @@
 subarch: s390x
-version_stamp:  20130301
+version_stamp:  20140915
 target: netboot2
 rel_type: default
 profile: default/linux/s390/13.0/s390x
-snapshot:  20130301
-source_subpath: default/stage3-s390x-20130112
-
-#portage_overlay:
+snapshot:  20140917
+source_subpath: default/stage3-s390x-latest
+portage_confdir: /home/armin76/netboot/portage
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: config
+boot/kernel/gentoo/config: ../../../../kconfig/s390/netboot64.config
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --lvm --dmraid --firmware --firmware-dir=/usr/src/linux/firmware --arch-override=s390
 
-
-
-#netboot2/builddate: 20100339
 netboot2/busybox_config: bs.conf
-
 
 netboot2/use:
 	-*
 	multicall
+	shadow
 
 netboot2/packages:
+	bc
 	bzip2
 	dropbear
 	e2fsprogs
@@ -41,6 +38,9 @@ netboot2/packages:
 	tar
 	util-linux
 	wget
+
+netboot2/packages/bc/files:
+	/usr/bin/bc
 
 netboot2/packages/bzip2/files:
 	/bin/bunzip2
