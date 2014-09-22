@@ -76,7 +76,7 @@ livecd/packages:
 	app-shells/gentoo-bashcomp
 	app-shells/zsh
 	app-text/tree
-	app-text/unix2dos
+	app-text/dos2unix
 	app-text/wgetpaste
 	app-vim/gentoo-syntax
 	dev-lang/perl
