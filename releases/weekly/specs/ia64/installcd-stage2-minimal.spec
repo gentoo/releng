@@ -10,7 +10,7 @@ livecd/bootargs: dokeymap
 livecd/cdtar: /home/armin76/tmp/elilo-3.6-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm
-livecd/iso: /var/tmp/catalyst/builds/default/install-ia64-minimal-2008.0.iso
+livecd/iso: /home/catalyst/builds/default/install-ia64-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux IA64 2008.0
 

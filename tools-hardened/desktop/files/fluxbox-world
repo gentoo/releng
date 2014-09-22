@@ -1,9 +1,9 @@
 app-admin/metalog
 app-admin/sudo
 app-admin/sysstat
-app-arch/file-roller
 app-arch/sharutils
 app-arch/unrar
+app-arch/xarchiver
 app-cdr/cdrtools
 app-editors/leafpad
 app-editors/nano

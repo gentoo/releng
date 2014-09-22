@@ -3,7 +3,7 @@
 ROOTFS="desktop-amd64-uclibc-hardened"
 
 PWD="$(pwd)"
-STAGE3="/var/tmp/catalyst/builds/hardened/amd64/stage3-amd64-uclibc-hardened.tar.bz2"
+STAGE3="/var/tmp/catalyst/builds/uclibc/hardened/amd64/stage3-amd64-uclibc-hardened.tar.bz2"
 LAYMAN="/var/lib/layman"
 KERNEL_SOURCE="/usr/src/linux-lilblue"
 

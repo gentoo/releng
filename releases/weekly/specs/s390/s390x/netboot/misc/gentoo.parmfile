@@ -1,0 +1,1 @@
+root=/dev/ram0 console=ttyS0 dasd=0150
