@@ -30,3 +30,4 @@ sys-process/at
 sys-process/fcron
 www-client/firefox
 x11-base/xorg-server
+x11-misc/slim

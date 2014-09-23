@@ -106,6 +106,8 @@ setup_systemd() {
 	chroot "${ROOTFS}"/ systemctl enable metalog.service
 	chroot "${ROOTFS}"/ systemctl enable NetworkManager.service
 	chroot "${ROOTFS}"/ systemctl enable postfix.service
+	chroot "${ROOTFS}"/ systemctl disable gdm
+	chroot "${ROOTFS}"/ systemctl enable slim
 	chroot "${ROOTFS}"/ systemctl enable smbd.service
 	chroot "${ROOTFS}"/ systemctl enable sshd.service
 	#chroot "${ROOTFS}"/ systemctl enable udev.service
