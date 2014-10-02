@@ -1,168 +1,45 @@
-subarch: s390x
-version_stamp:  20140915
-target: netboot2
-rel_type: default
-profile: default/linux/s390/13.0/s390x
-snapshot:  20140917
+# S390 Netboot spec file, based in HPPA Netboot spec file by Guy Martin
+version_stamp: 20140929
+snapshot: 20140929
 source_subpath: default/stage3-s390x-latest
+
+# these shouldn't change
+target:          netboot2
+subarch:         s390x
+rel_type:        default
+profile:         default/linux/s390/13.0/s390x
 portage_confdir: /home/armin76/netboot/portage
 
-boot/kernel: gentoo
-boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: ../../../../kconfig/s390/netboot64.config
-boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --lvm --dmraid --firmware --firmware-dir=/usr/src/linux/firmware --arch-override=s390
 
-netboot2/busybox_config: bs.conf
+boot/kernel:                      netboot64
+boot/kernel/netboot64/sources:       sys-kernel/gentoo-sources
+boot/kernel/netboot64/config: ../../kconfig/netboot64.config
+boot/kernel/netboot64/gk_kernargs:   --arch-override=s390 --all-ramdisk-modules
 
 netboot2/use:
-	-*
-	multicall
-	shadow
+ -*
+ multicall
+ shadow
+ readline
+ ssl
 
 netboot2/packages:
-	bc
-	bzip2
-	dropbear
-	e2fsprogs
-	e2fsprogs-libs
-	glibc
-	lvm2
-	nano
-	ncurses
-	openssl
-	openssh
-	popt
-	portmap
-	rsync
-	s390-tools
-	tar
-	util-linux
-	wget
+	sys-apps/s390-tools
+	sys-fs/e2fsprogs
+	sys-apps/util-linux
+	app-editors/nano
+	sys-libs/ncurses
+	dev-libs/popt
+	net-misc/wget
+	net-misc/rsync
+	dev-libs/libtommath
+	net-misc/dropbear
+	dev-libs/openssl
+	app-misc/screen
+	#needed for the kernel to compile 
+	sys-devel/bc
 
-netboot2/packages/bc/files:
-	/usr/bin/bc
-
-netboot2/packages/bzip2/files:
-	/bin/bunzip2
-	/bin/bzcat
-	/bin/bzip2
-	/lib64/libbz2.so*
-
-netboot2/packages/dropbear/files:
-	/usr/bin/dbclient
-	/usr/bin/dbscp
-	/usr/bin/dropbearconvert
-	/usr/bin/dropbearkey
-	/usr/bin/dropbearmulti
-	/usr/sbin/dropbear
-
-netboot2/packages/e2fsprogs/files:
-	/bin/chattr
-	/bin/lsattr
-	/bin/uuidgen
-	/sbin/badblocks
-	/sbin/blkid
-	/sbin/debugfs
-	/sbin/dumpe2fs
-	/sbin/e2fsck
-	/sbin/e2image
-	/sbin/e2label
-	/sbin/filefrag
-	/sbin/findfs
-	/sbin/fsck
-	/sbin/fsck.ext*
-	/sbin/logsave
-	/sbin/mke2fs
-	/sbin/mkfs.ext*
-	/sbin/resize2fs
-	/sbin/tune2fs
-	/usr/lib64/e2initrd_helper
-	/lib64/libblkid.so*
-	/lib64/libe2p.so*
-	/lib64/libext2fs.so*
-	/lib64/libuuid.so*
-	/usr/sbin/mklost+found
-
-netboot2/packages/e2fsprogs-libs/files:
-	/lib64/libcom_err*
-	/lib64/libss.*
-
-netboot2/packages/glibc/files:
-	/lib64/ld-linux.so*
-	/lib64/ld-*
-	/lib64/libc.so*
-	/lib64/libc-*
-	/lib64/libcrypt.so*
-	/lib64/libcrypt-*
-	/lib64/libdl.so*
-	/lib64/libdl-*
-	/lib64/libpthr*
-	/lib64/librt*
-	/lib64/libutil.so*
-	/lib64/libutil-*.so
-	/lib64/libz.so*
-	/lib64/libnss*
-	/lib64/libreso*
-
-netboot2/packages/lvm2/files:
-	/lib64/libdevmap*
-	/lib64/liblvm*
-	/sbin/lv*
-	/sbin/vg*
-	/usr/lib64/liblvm*
-	/usr/lib64/libdevmapp*
-
-netboot2/packages/nano/files:
-	/bin/nano
-	/bin/rnano
-	/usr/bin/nano
-
-netboot2/packages/ncurses/files:
-	/etc/terminfo
-	/lib64/libcurses.so*
-	/lib64/libncurses.so*
-	/lib64/libncursesw.so*
-	/usr/bin/toe
-	/usr/lib64/terminfo
-	/usr/share/tabset/std
-	/usr/share/tabset/stdcrt
-	/usr/share/tabset/vt100
-	/usr/share/tabset/vt300
-	/usr/share/terminfo/a/ansi
-	/usr/share/terminfo/d/dumb
-	/usr/share/terminfo/e/eterm
-	/usr/share/terminfo/l/linux
-	/usr/share/terminfo/r/rxvt
-	/usr/share/terminfo/s/screen
-	/usr/share/terminfo/s/sun
-	/usr/share/terminfo/v/vt100
-	/usr/share/terminfo/v/vt102
-	/usr/share/terminfo/v/vt200
-	/usr/share/terminfo/v/vt220
-	/usr/share/terminfo/v/vt52
-	/usr/share/terminfo/x/xterm
-	/usr/share/terminfo/x/xterm-color
-	/usr/share/terminfo/x/xterm-xfree86
-
-netboot2/packages/openssl/files:
-	/usr/lib64/libcrypto.so*
-	/usr/lib64/libssl.so*
-
-netboot2/packages/openssh/files:
-	/usr/bin/ssh
-
-netboot2/packages/popt/files:
-	/usr/lib64/libpopt.so
-	/usr/lib64/libpopt.so.0
-	/usr/lib64/libpopt.so.0.0.0
-
-netboot2/packages/portmap/files:
-	/sbin/portmap
-
-netboot2/packages/rsync/files:
-	/usr/bin/rsync
-
-netboot2/packages/s390-tools/files:
+netboot2/packages/sys-apps/s390-tools/files:
 	/sbin/ts-shell
 	/sbin/ttyrun
 	/sbin/iucvtty
@@ -220,18 +97,171 @@ netboot2/packages/s390-tools/files:
 	/usr/sbin/ip_watcher.pl
 	/usr/sbin/start_hsnc.sh
 
-netboot2/packages/tar/files:
-	/bin/tar
+netboot2/packages/sys-fs/e2fsprogs/files:
+	/usr/bin/chattr
+	/usr/bin/lsattr
+	/usr/bin/uuidgen
+	/usr/sbin/mklost+found
+	/sbin/e2fsck
+	/sbin/debugfs
+	/sbin/mke2fs
+	/sbin/badblocks
+	/sbin/tune2fs
+	/sbin/dumpe2fs
+	/sbin/blkid
+	/sbin/logsave
+	/sbin/e2image
+	/sbin/fsck
+	/sbin/e2undo
+	/usr/sbin/filefrag
+	/usr/sbin/uuidd
+	/sbin/resize2fs
+	/sbin/findfs
+	/sbin/e2label
+	/sbin/mkfs.ext4dev
+	/sbin/mkfs.ext4
+	/sbin/mkfs.ext3
+	/sbin/mkfs.ext2
+	/sbin/fsck.ext4dev
+	/sbin/fsck.ext4
+	/sbin/fsck.ext3
+	/sbin/fsck.ext2
+	/lib64/libext2fs.so.*
+	/lib64/libcom_err.so.*
+	/lib64/libblkid.so.*
+	/lib64/libe2p.so.*
+	/usr/lib64/e2initrd_helper
+	/lib64/libpthread*
 
-netboot2/packages/util-linux/files:
-	/sbin/fdisk
-	/sbin/mkfs
-	/sbin/mkswap
-	/sbin/swapoff
-	/sbin/swapon
-	/usr/bin/ddate
-	/usr/bin/setterm
+netboot2/packages/sys-apps/util-linux/files:
+	/usr/sbin/partx
+	/usr/sbin/delpart
+	/usr/sbin/rtcwake
+	/usr/sbin/addpart
+	/usr/sbin/readprofile
+	/usr/sbin/tunelp
+	/usr/bin/mcookie
+	/usr/bin/logger
+	/usr/bin/setarch
+	/usr/bin/script
+	/usr/bin/scriptreplay
+	/usr/bin/linux64
+	/usr/sbin/fdformat
+	/usr/bin/column
+	/usr/bin/cal
+	/usr/bin/cytune
+	/usr/bin/chrt
+	/usr/bin/rename
+	/usr/bin/tailf
+	/usr/bin/colcrt
+	/usr/bin/write
+	/usr/bin/hexdump
+	/usr/bin/namei
+	/usr/bin/isosize
+	/usr/bin/look
+	/usr/bin/ipcs
+	/usr/bin/flock
+	/usr/bin/ionice
+	/usr/bin/renice
+	/usr/bin/getopt
+	/usr/bin/col
+	/usr/bin/taskset
+	/usr/bin/ipcrm
 	/usr/bin/whereis
+	/usr/bin/setsid
+	/usr/bin/rev
+	/usr/bin/linux32
+	/usr/bin/s390x
+	/usr/bin/s390
+	/usr/bin/colrm
+	/sbin/raw
+	/sbin/mkfs.bfs
+	/sbin/sfdisk
+	/sbin/fsck.minix
+	/sbin/hwclock
+	/sbin/ctrlaltdel
+	/sbin/mkfs
+	/sbin/mkfs.minix
+	/sbin/blockdev
+	/sbin/losetup
+	/sbin/agetty
+	/sbin/mkswap
+	/sbin/pivot_root
+	/sbin/fdisk
+	/sbin/swapon
+	/bin/umount
+	/bin/dmesg
+	/bin/mount
+	/sbin/swapoff
+	/lib64/libblkid.so.*
+	/lib64/libmount.so.*
+	/lib64/libuuid.so.*
 
-netboot2/packages/wget/files:
+netboot2/packages/app-editors/nano/files:
+	/bin/nano
+
+netboot2/packages/sys-libs/ncurses/files:
+	/lib64/libncurses.so.*
+	/lib64/libncursesw.so.*
+	/etc/terminfo
+	/usr/lib64/terminfo
+	/usr/share/tabset/std
+	/usr/share/tabset/stdcrt
+	/usr/share/tabset/vt100
+	/usr/share/tabset/vt300
+	/usr/share/terminfo/a/ansi
+	/usr/share/terminfo/d/dumb
+	/usr/share/terminfo/e/eterm
+	/usr/share/terminfo/l/linux
+	/usr/share/terminfo/r/rxvt
+	/usr/share/terminfo/s/screen
+	/usr/share/terminfo/s/sun
+	/usr/share/terminfo/v/vt100
+	/usr/share/terminfo/v/vt102
+	/usr/share/terminfo/v/vt200
+	/usr/share/terminfo/v/vt220
+	/usr/share/terminfo/v/vt52
+	/usr/share/terminfo/x/xterm
+	/usr/share/terminfo/x/xterm-color
+	/usr/share/terminfo/x/xterm-xfree86
+
+netboot2/packages/net-misc/wget/files:
 	/usr/bin/wget
+	/lib64/libss.so.*
+	/lib64/libz.so.*
+
+netboot2/packages/dev-libs/openssl/files:
+	/usr/lib64/libssl.so*
+	/usr/lib64/libcrypto.so*
+
+netboot2/packages/net-misc/rsync/files:
+	/usr/bin/rsync
+
+netboot2/packages/dev-libs/popt/files:
+	/usr/lib64/libpopt.so*
+
+netboot2/packages/net-misc/dropbear/files:
+	/usr/bin/dbclient
+	/usr/bin/dbscp
+	/usr/bin/dropbearconvert
+	/usr/bin/dropbearkey
+	/usr/bin/dropbearmulti
+	/usr/sbin/dropbear
+	/lib64/libcrypt*
+	/lib64/libnss*
+	/lib64/libnsl*
+	/lib64/libresolv*
+	/lib64/libnss_dns*
+	/lib64/ld64.so.1
+	/lib64/ld-*
+
+netboot2/packages/dev-libs/libtommath/files:
+	/usr/lib64/libtommath.so*
+	/usr/lib64/libtommath.so
+	/lib64/libutil*
+
+netboot2/packages/app-misc/screen/files:
+	/usr/bin/screen
+	/etc/screenrc
+	/lib64/libdl*
+
