@@ -1,5 +1,6 @@
 #!/bin/bash -l
 
+kernel_dir="/usr/src/linux-tinhat"
 #Right now we're commenting out the cairo
 #rebuild to see if it works in glibc.
 #hacky - for some reason cairo fails to rebuild
@@ -12,4 +13,4 @@ env-update
 #env-update
 #emerge -1q x11-libs/cairo
 
-emerge -uvNDq --keep-going --with-bdeps=y world
+KERNEL_DIR="${kernel_dir}" emerge -uvNDq --keep-going --with-bdeps=y world
