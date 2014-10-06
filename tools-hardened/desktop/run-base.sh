@@ -15,6 +15,12 @@ mount_dirs() {
 	mount --bind /sys/ "${ROOTFS}"/sys/
 }
 
+populate_kernel_src()
+{
+	cp -f files/kernel-config "${KERNEL_SOURCE}"
+	cp -Rf "${KERNEL_SOURCE}"/ "${ROOTFS}"/usr/src/
+}
+
 populate_etc() {
 	cp -f files/fstab "${ROOTFS}"/etc/fstab
 	cp -f files/resolv.conf "${ROOTFS}"/etc/resolv.conf
@@ -117,6 +123,7 @@ setup_systemd() {
 
 cleanup_dirs() {
 	rm -rf "${ROOTFS}"/tmp/*
+    rm -rf "${ROOTFS}"/usr/src/*
 	rm -rf "${ROOTFS}"/var/cache/*
 	rm -rf "${ROOTFS}"/var/log/*
 	rm -rf "${ROOTFS}"/var/tmp/*
