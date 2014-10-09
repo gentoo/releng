@@ -7,12 +7,10 @@ unpack_stage3() {
 
 mount_dirs() {
 	mkdir "${ROOTFS}"/usr/portage/
-	mount --bind /usr/portage/ "${ROOTFS}"/usr/portage/
-	mount --bind /proc/ "${ROOTFS}"/proc/
-	mount --bind /dev/ "${ROOTFS}"/dev/
-	mount --bind /dev/pts "${ROOTFS}"/dev/pts/
-	mount -t tmpfs shm "${ROOTFS}"/dev/shm
-	mount --bind /sys/ "${ROOTFS}"/sys/
+	mount --rbind /usr/portage/ "${ROOTFS}"/usr/portage/
+	mount --rbind /proc/ "${ROOTFS}"/proc/
+	mount --rbind /dev/ "${ROOTFS}"/dev/
+	mount --rbind /sys/ "${ROOTFS}"/sys/
 }
 
 populate_kernel_src()
@@ -135,12 +133,10 @@ cleanup_dirs() {
 }
 
 unmount_dirs() {
-	umount "${ROOTFS}"/sys/
-	umount "${ROOTFS}"/dev/shm
-	umount "${ROOTFS}"/dev/pts/
-	umount "${ROOTFS}"/dev/
-	umount "${ROOTFS}"/proc/
-	umount "${ROOTFS}"/usr/portage/
+	umount -l "${ROOTFS}"/sys/
+	umount -l "${ROOTFS}"/dev/
+	umount -l "${ROOTFS}"/proc/
+	umount -l "${ROOTFS}"/usr/portage/
 
 	mkdir "${ROOTFS}"/usr/portage/profiles/
 	echo "gentoo" >> "${ROOTFS}"/usr/portage/profiles/repo_name
