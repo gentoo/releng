@@ -21,6 +21,7 @@ media-sound/alsa-utils
 net-irc/hexchat
 net-misc/dhcpcd
 net-misc/openssh
+net-misc/tor
 sys-apps/gradm
 sys-apps/iproute2
 sys-boot/grub
