@@ -1,1 +1,2 @@
-sys-libs/musl nls
+sys-devel/gettext -nls
+sys-fs/e2fsprogs -nls
