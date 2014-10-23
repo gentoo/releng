@@ -26,7 +26,7 @@ populate_etc() {
 	rm -f "${ROOTFS}"/etc/portage/make.conf.catalyst
 	cp -f files/portage/make."${MAKE_BASE}".1 "${ROOTFS}"/etc/portage/make.conf
 	cp -f files/portage/package."${KEYWORDS_BASE}".accept_keywords "${ROOTFS}"/etc/portage/package.accept_keywords
-	cp -f files/portage/package."${USE_BASE}".use "${ROOTFS}"/etc/portage/package.use
+	cp -f files/portage/package."${USE_BASE}".use.1 "${ROOTFS}"/etc/portage/package.use
 	cp -af files/portage/profile "${ROOTFS}"/etc/portage/profile
 	cp -af files/portage/repos.conf "${ROOTFS}"/etc/portage/repos.conf
 }
@@ -45,6 +45,7 @@ rebuild_world() {
 }
 
 update_world() {
+	cp -f files/portage/package."${USE_BASE}".use.2 "${ROOTFS}"/etc/portage/package.use
 	cp -f files/portage/make."${MAKE_BASE}".2 "${ROOTFS}"/etc/portage/make.conf
 	cp -f update.sh "${ROOTFS}"/tmp/
 	chroot "${ROOTFS}"/ /tmp/update.sh
