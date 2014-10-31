@@ -46,7 +46,11 @@ setup_usergroups() {
 setup_confs() {
 	local IMAGE="http://dev.gentoo.org/~blueness/lilblue/gentoo1600x1200.jpg"
 
-	sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1gdm/' "${ROOTFS}"/etc/conf.d/xdm
+	sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1slim/' "${ROOTFS}"/etc/conf.d/xdm
+	sed -i 's/^\(login.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
+	sed -i '/# login_cmd.*Xsession/ a\login_cmd exec /bin/bash -login ~/.xinitrc' "${ROOTFS}"/etc/slim.conf
+	sed -i 's/^\(sessiondir.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
+	sed -i '/# sessiondir.*/ a\sessiondir /etc/X11/Sessions' "${ROOTFS}"/etc/slim.conf
 
 	wget -O "${ROOTFS}"/usr/share/backgrounds/background.jpg "${IMAGE}"
 
@@ -54,12 +58,12 @@ setup_confs() {
 	sed -i '/^GENTOO_MIRRORS/d' "${ROOTFS}"/etc/portage/make.conf
 	sed -i 's/^MAKEOPTS/#MAKEOPTS/' "${ROOTFS}"/etc/portage/make.conf
 	sed -i 's/^exec \/sbin\/*.*/exec \/sbin\/switch_root \/mnt\/tmpfs \/usr\/lib\/systemd\/systemd/' configs/init
-        sed -i 's/^clock=\"*.*\"$/clock=\"local\"/' "${ROOTFS}"/etc/conf.d/hwclock
+	sed -i 's/^clock=\"*.*\"$/clock=\"local\"/' "${ROOTFS}"/etc/conf.d/hwclock
 
-        cp -a files/locale/locale.gen "${ROOTFS}"/etc/
-        chroot "${ROOTFS}"/ locale-gen
-
-        cp -a files/locale/02locale "${ROOTFS}"/etc/conf.d/
+	cp -a files/locale/locale.gen "${ROOTFS}"/etc/
+	chroot "${ROOTFS}"/ locale-gen
+	chroot "${ROOTFS}"/ eselect locale set en_US.utf8
+	cp -a files/locale/02locale "${ROOTFS}"/etc/conf.d/
 	# In kernels 3.9 and above, we must disallow-other-stacks because of SO_REUSEPORT 
 	sed -i 's/^#\(disallow-other-stacks=\)no/\1yes/g' "${ROOTFS}"/etc/avahi/avahi-daemon.conf
 }
@@ -67,6 +71,7 @@ setup_confs() {
 main() {
 	unpack_stage3
 	mount_dirs
+    populate_kernel_src
 	populate_etc
 	rebuild_toolchain
 	rebuild_world

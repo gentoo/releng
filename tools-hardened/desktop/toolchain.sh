@@ -1,11 +1,13 @@
 #!/bin/bash -l
 
+kernel_dir="/usr/src/linux-tinhat"
+
 source /etc/profile
 env-update
-emerge -1q binutils
+KERNEL_DIR="${kernel_dir}" emerge -1q binutils
 source /etc/profile
 env-update
-emerge -1q gcc
+KERNEL_DIR="${kernel_dir}" emerge -1q gcc
 source /etc/profile
 env-update
-emerge -1q glibc
+KERNEL_DIR="${kernel_dir}" emerge -1q glibc

@@ -21,6 +21,7 @@ media-sound/alsa-utils
 net-irc/hexchat
 net-misc/dhcpcd
 net-misc/openssh
+net-misc/tor
 sci-calculators/galculator
 sys-apps/gradm
 sys-apps/iproute2
@@ -35,6 +36,7 @@ sys-fs/squashfs-tools
 sys-fs/eudev
 sys-kernel/linux-firmware
 sys-power/cpufrequtils
+sys-power/upower-pm-utils
 sys-process/at
 sys-process/cronie
 www-client/firefox

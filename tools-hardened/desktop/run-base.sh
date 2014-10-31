@@ -7,12 +7,16 @@ unpack_stage3() {
 
 mount_dirs() {
 	mkdir "${ROOTFS}"/usr/portage/
-	mount --bind /usr/portage/ "${ROOTFS}"/usr/portage/
-	mount --bind /proc/ "${ROOTFS}"/proc/
-	mount --bind /dev/ "${ROOTFS}"/dev/
-	mount --bind /dev/pts "${ROOTFS}"/dev/pts/
-	mount -t tmpfs shm "${ROOTFS}"/dev/shm
-	mount --bind /sys/ "${ROOTFS}"/sys/
+	mount --rbind /usr/portage/ "${ROOTFS}"/usr/portage/
+	mount --rbind /proc/ "${ROOTFS}"/proc/
+	mount --rbind /dev/ "${ROOTFS}"/dev/
+	mount --rbind /sys/ "${ROOTFS}"/sys/
+}
+
+populate_kernel_src()
+{
+	cp -f files/kernel-config "${KERNEL_SOURCE}"
+	cp -Rf "${KERNEL_SOURCE}"/ "${ROOTFS}"/usr/src/
 }
 
 populate_etc() {
@@ -22,7 +26,7 @@ populate_etc() {
 	rm -f "${ROOTFS}"/etc/portage/make.conf.catalyst
 	cp -f files/portage/make."${MAKE_BASE}".1 "${ROOTFS}"/etc/portage/make.conf
 	cp -f files/portage/package."${KEYWORDS_BASE}".accept_keywords "${ROOTFS}"/etc/portage/package.accept_keywords
-	cp -f files/portage/package."${USE_BASE}".use "${ROOTFS}"/etc/portage/package.use
+	cp -f files/portage/package."${USE_BASE}".use.1 "${ROOTFS}"/etc/portage/package.use
 	cp -af files/portage/profile "${ROOTFS}"/etc/portage/profile
 	cp -af files/portage/repos.conf "${ROOTFS}"/etc/portage/repos.conf
 }
@@ -41,6 +45,7 @@ rebuild_world() {
 }
 
 update_world() {
+	cp -f files/portage/package."${USE_BASE}".use.2 "${ROOTFS}"/etc/portage/package.use
 	cp -f files/portage/make."${MAKE_BASE}".2 "${ROOTFS}"/etc/portage/make.conf
 	cp -f update.sh "${ROOTFS}"/tmp/
 	chroot "${ROOTFS}"/ /tmp/update.sh
@@ -106,6 +111,8 @@ setup_systemd() {
 	chroot "${ROOTFS}"/ systemctl enable metalog.service
 	chroot "${ROOTFS}"/ systemctl enable NetworkManager.service
 	chroot "${ROOTFS}"/ systemctl enable postfix.service
+	chroot "${ROOTFS}"/ systemctl disable gdm
+	chroot "${ROOTFS}"/ systemctl enable slim
 	chroot "${ROOTFS}"/ systemctl enable smbd.service
 	chroot "${ROOTFS}"/ systemctl enable sshd.service
 	#chroot "${ROOTFS}"/ systemctl enable udev.service
@@ -115,6 +122,7 @@ setup_systemd() {
 
 cleanup_dirs() {
 	rm -rf "${ROOTFS}"/tmp/*
+    rm -rf "${ROOTFS}"/usr/src/*
 	rm -rf "${ROOTFS}"/var/cache/*
 	rm -rf "${ROOTFS}"/var/log/*
 	rm -rf "${ROOTFS}"/var/tmp/*
@@ -126,12 +134,10 @@ cleanup_dirs() {
 }
 
 unmount_dirs() {
-	umount "${ROOTFS}"/sys/
-	umount "${ROOTFS}"/dev/shm
-	umount "${ROOTFS}"/dev/pts/
-	umount "${ROOTFS}"/dev/
-	umount "${ROOTFS}"/proc/
-	umount "${ROOTFS}"/usr/portage/
+	umount -l "${ROOTFS}"/sys/
+	umount -l "${ROOTFS}"/dev/
+	umount -l "${ROOTFS}"/proc/
+	umount -l "${ROOTFS}"/usr/portage/
 
 	mkdir "${ROOTFS}"/usr/portage/profiles/
 	echo "gentoo" >> "${ROOTFS}"/usr/portage/profiles/repo_name

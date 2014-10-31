@@ -65,7 +65,7 @@ setup_confs() {
 
 	cp -a files/locale/locale.gen "${ROOTFS}"/etc/
 	chroot "${ROOTFS}"/ locale-gen
-	chroot "${ROOTFS}"/ eselect locale set 3
+	chroot "${ROOTFS}"/ eselect locale set en_US.utf8
 	cp -a files/locale/02locale "${ROOTFS}"/etc/conf.d/
 	# In kernels 3.9 and above, we must disallow-other-stacks because of SO_REUSEPORT 
 	sed -i 's/^#\(disallow-other-stacks=\)no/\1yes/g' "${ROOTFS}"/etc/avahi/avahi-daemon.conf
@@ -74,6 +74,7 @@ setup_confs() {
 main() {
 	unpack_stage3
 	mount_dirs
+    populate_kernel_src
 	populate_etc
 	rebuild_toolchain
 	rebuild_world

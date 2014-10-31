@@ -1,20 +1,20 @@
 # S390 Netboot spec file, based in HPPA Netboot spec file by Guy Martin
 version_stamp: 20140929
 snapshot: 20140929
-source_subpath: default/stage3-s390x-latest
+source_subpath: default/stage3-s390-latest
 
 # these shouldn't change
 target:          netboot2
-subarch:         s390x
+subarch:         s390
 rel_type:        default
-profile:         default/linux/s390/13.0/s390x
-portage_confdir: /root/releng/releases/weekly/specs/s390/s390x/netboot/portage
+profile:         default/linux/s390/13.0
+portage_confdir: /root/releng/releases/weekly/specs/s390/s390/netboot/portage
 
 
-boot/kernel:                      netboot64
-boot/kernel/netboot64/sources:       sys-kernel/gentoo-sources
-boot/kernel/netboot64/config: ../../kconfig/netboot64.config
-boot/kernel/netboot64/gk_kernargs:   --arch-override=s390 --all-ramdisk-modules
+boot/kernel:                      netboot
+boot/kernel/netboot/sources:       sys-kernel/gentoo-sources
+boot/kernel/netboot/config: ../../kconfig/netboot64.config
+boot/kernel/netboot/gk_kernargs:   --arch-override=s390 --all-ramdisk-modules
 
 netboot2/use:
  -*
@@ -126,12 +126,12 @@ netboot2/packages/sys-fs/e2fsprogs/files:
 	/sbin/fsck.ext4
 	/sbin/fsck.ext3
 	/sbin/fsck.ext2
-	/lib64/libext2fs.so.*
-	/lib64/libcom_err.so.*
-	/lib64/libblkid.so.*
-	/lib64/libe2p.so.*
-	/usr/lib64/e2initrd_helper
-	/lib64/libpthread*
+	/lib/libext2fs.so.*
+	/lib/libcom_err.so.*
+	/lib/libblkid.so.*
+	/lib/libe2p.so.*
+	/usr/lib/e2initrd_helper
+	/lib/libpthread*
 
 netboot2/packages/sys-apps/util-linux/files:
 	/usr/sbin/partx
@@ -193,18 +193,18 @@ netboot2/packages/sys-apps/util-linux/files:
 	/bin/dmesg
 	/bin/mount
 	/sbin/swapoff
-	/lib64/libblkid.so.*
-	/lib64/libmount.so.*
-	/lib64/libuuid.so.*
+	/lib/libblkid.so.*
+	/lib/libmount.so.*
+	/lib/libuuid.so.*
 
 netboot2/packages/app-editors/nano/files:
 	/bin/nano
 
 netboot2/packages/sys-libs/ncurses/files:
-	/lib64/libncurses.so.*
-	/lib64/libncursesw.so.*
+	/lib/libncurses.so.*
+	/lib/libncursesw.so.*
 	/etc/terminfo
-	/usr/lib64/terminfo
+	/usr/lib/terminfo
 	/usr/share/tabset/std
 	/usr/share/tabset/stdcrt
 	/usr/share/tabset/vt100
@@ -227,18 +227,18 @@ netboot2/packages/sys-libs/ncurses/files:
 
 netboot2/packages/net-misc/wget/files:
 	/usr/bin/wget
-	/lib64/libss.so.*
-	/lib64/libz.so.*
+	/lib/libss.so.*
+	/lib/libz.so.*
 
 netboot2/packages/dev-libs/openssl/files:
-	/usr/lib64/libssl.so*
-	/usr/lib64/libcrypto.so*
+	/usr/lib/libssl.so*
+	/usr/lib/libcrypto.so*
 
 netboot2/packages/net-misc/rsync/files:
 	/usr/bin/rsync
 
 netboot2/packages/dev-libs/popt/files:
-	/usr/lib64/libpopt.so*
+	/usr/lib/libpopt.so*
 
 netboot2/packages/net-misc/dropbear/files:
 	/usr/bin/dbclient
@@ -247,21 +247,21 @@ netboot2/packages/net-misc/dropbear/files:
 	/usr/bin/dropbearkey
 	/usr/bin/dropbearmulti
 	/usr/sbin/dropbear
-	/lib64/libcrypt*
-	/lib64/libnss*
-	/lib64/libnsl*
-	/lib64/libresolv*
-	/lib64/libnss_dns*
-	/lib64/ld64.so.1
-	/lib64/ld-*
+	/lib/libcrypt*
+	/lib/libnss*
+	/lib/libnsl*
+	/lib/libresolv*
+	/lib/libnss_dns*
+	/lib/ld.so.1
+	/lib/ld-*
 
 netboot2/packages/dev-libs/libtommath/files:
-	/usr/lib64/libtommath.so*
-	/usr/lib64/libtommath.so
-	/lib64/libutil*
+	/usr/lib/libtommath.so*
+	/usr/lib/libtommath.so
+	/lib/libutil*
 
 netboot2/packages/app-misc/screen/files:
 	/usr/bin/screen
 	/etc/screenrc
-	/lib64/libdl*
+	/lib/libdl*
 
