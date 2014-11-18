@@ -1,1 +1,3 @@
 =sys-devel/gettext-0.19.2 ~amd64 ~arm ~x86 ~ppc
+=dev-libs/libgpg-error-1.15 ~ppc
+=dev-libs/libgcrypt-1.6.2 ~ppc
