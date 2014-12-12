@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 3.17.2-hardened-r1 Kernel Configuration
+# Linux/x86 3.17.6-hardened Kernel Configuration
 #
 CONFIG_64BIT=y
 CONFIG_X86_64=y
@@ -5958,7 +5958,6 @@ CONFIG_RTC_DRV_DS1742=m
 CONFIG_RTC_DRV_DS2404=m
 CONFIG_RTC_DRV_DA9052=m
 CONFIG_RTC_DRV_DA9055=m
-CONFIG_RTC_DRV_EFI=m
 CONFIG_RTC_DRV_STK17TA8=m
 CONFIG_RTC_DRV_M48T86=m
 CONFIG_RTC_DRV_M48T35=m
