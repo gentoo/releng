@@ -4,7 +4,7 @@ ARCH=${ARCH:-"amd64"}
 ROOTFS="th-${ARCH}-xfce4"
 
 PWD="$(pwd)"
-STAGE3="/var/tmp/catalyst/builds/hardened/${ARCH}/stage3-${ARCH}-hardened-latest.tar.bz2"
+STAGE3=${STAGE3:-"/var/tmp/catalyst/builds/hardened/${ARCH}/stage3-${ARCH}-hardened-latest.tar.bz2"}
 LAYMAN="/var/lib/layman"
 KERNEL_SOURCE="/usr/src/linux-tinhat"
 
