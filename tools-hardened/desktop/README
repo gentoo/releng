@@ -12,7 +12,7 @@ to point to "/usr/src/linux-tinhat".
 
 After this you need to apply the Loop-AES patch by doing the following:
 
-* cp ./config/loop-AES-kernel.patch /usr/src/linux-tinhat/
+* cp ./configs/loop-AES-kernel.patch /usr/src/linux-tinhat/
 
 Then apply the patch:
 
