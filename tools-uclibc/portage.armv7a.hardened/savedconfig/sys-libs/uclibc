@@ -241,7 +241,7 @@ UCLIBC_BUILD_NOEXECSTACK=y
 # Development/debugging options
 #
 CROSS_COMPILER_PREFIX=""
-UCLIBC_EXTRA_CFLAGS=""
+UCLIBC_EXTRA_CFLAGS="-fno-stack-check"
 # DODEBUG is not set
 DOSTRIP=y
 # DOASSERTS is not set
