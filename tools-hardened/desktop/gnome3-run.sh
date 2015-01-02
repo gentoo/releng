@@ -71,7 +71,7 @@ setup_confs() {
 main() {
 	unpack_stage3
 	mount_dirs
-    populate_kernel_src
+	populate_kernel_src
 	populate_etc
 	rebuild_toolchain
 	rebuild_world

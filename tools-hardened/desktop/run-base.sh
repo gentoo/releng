@@ -110,7 +110,7 @@ setup_systemd() {
 	chroot "${ROOTFS}"/ systemctl enable gdm.service
 	chroot "${ROOTFS}"/ systemctl enable metalog.service
 	chroot "${ROOTFS}"/ systemctl enable NetworkManager.service
-    chroot "${ROOTFS}"/ systemctl enable systemd-resolved
+	chroot "${ROOTFS}"/ systemctl enable systemd-resolved
 	chroot "${ROOTFS}"/ systemctl enable postfix.service
 	chroot "${ROOTFS}"/ systemctl disable gdm
 	chroot "${ROOTFS}"/ systemctl enable slim
@@ -123,7 +123,7 @@ setup_systemd() {
 
 cleanup_dirs() {
 	rm -rf "${ROOTFS}"/tmp/*
-    rm -rf "${ROOTFS}"/usr/src/*
+	rm -rf "${ROOTFS}"/usr/src/*
 	rm -rf "${ROOTFS}"/var/cache/*
 	rm -rf "${ROOTFS}"/var/log/*
 	rm -rf "${ROOTFS}"/var/tmp/*
