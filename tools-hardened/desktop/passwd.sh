@@ -13,6 +13,7 @@ gpasswd -a thuser cdrom
 gpasswd -a thuser cdrw
 gpasswd -a thuser usb
 gpasswd -a thuser games
+gpasswd -a thuser bluetooth
 
 gpasswd -a portage wheel
 
