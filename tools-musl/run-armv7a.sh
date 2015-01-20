@@ -35,6 +35,9 @@ prepare_confs() {
     sed -i "/^portage_confdir/s:_hardfp::" \
       stage${s}-${arch}-musl-${flavor}.conf
 
+    echo "cflags: -O2 -pipe -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard" >> \
+      stage${s}-${arch}-musl-${flavor}.conf
+
   done
 
   sed -i "/^chost/d" stage3-${arch}-musl-${flavor}.conf
