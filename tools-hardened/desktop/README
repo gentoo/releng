@@ -3,7 +3,7 @@ Kernel Requirements:
 
 On the host system, these packages need to be installed:
 
-* sys-kernel/hardened-sources-3.15.8
+* sys-kernel/hardened-sources-3.17.7-r1
 * >=sys-kernel/linux-firmware-20131230
 * sys-kernel/genkernel
 
