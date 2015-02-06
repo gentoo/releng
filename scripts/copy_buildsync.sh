@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ARCHES="alpha amd64 arm hppa ia64      ppc sparc x86 sh s390"
+ARCHES="alpha amd64 arm hppa ia64      ppc s390 sh sparc x86"
        #alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86
 #ARCHES="s390"
 RSYNC_OPTS="-aO --delay-updates"
