@@ -83,7 +83,7 @@ setup_initrc() {
 	chroot "${ROOTFS}"/ rc-update add cpupower boot
 	chroot "${ROOTFS}"/ rc-update add device-mapper boot
 	chroot "${ROOTFS}"/ rc-update add lvm boot
-	chroot "${ROOTFS}"/ rc-update add udev boot
+	chroot "${ROOTFS}"/ rc-update add udev sysinit
 	chroot "${ROOTFS}"/ rc-update add cupsd default
 	chroot "${ROOTFS}"/ rc-update add cronie default
 	chroot "${ROOTFS}"/ rc-update add net.eth0 default
