@@ -28,6 +28,7 @@ setup_usergroups() {
 	cp -f files/usermenu "${ROOTFS}"/usr/share/fluxbox/
 	cp -f files/fluxbox-startup "${ROOTFS}"/usr/share/fluxbox/startup
 
+	sed -i '2 i\fbsetbg \/usr\/share\/backgrounds\/backgrounds.jpg' "${ROOTFS}"/etc/skel/.xinitrc
 	sed -i 's/^\/usr\/*.*/exec startfluxbox/' "${ROOTFS}"/etc/skel/.xinitrc
 	mkdir -p "${ROOTFS}"/etc/skel/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh,.cache/dconf,.config/dconf,.fluxbox}
 
