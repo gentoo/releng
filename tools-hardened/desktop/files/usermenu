@@ -42,15 +42,16 @@
 [end]
 [submenu] (Image)
       [exec] (ristretto)
+[end]
 [submenu] (X-utils)
       [exec] (Reload .Xdefaults) {xrdb -load $HOME/.Xdefaults} 
-[end]
 [end]
 [submenu] (Office)
       [exec] (galculator) {galculator} 
       [exec] (abiword) {abiword}
       [exec] (gnumeric) {gnumeric}
 </var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/abiword_48.xpm>
+[end]
 [end]
 [submenu] (System Tools)
 [submenu] (Burning)
