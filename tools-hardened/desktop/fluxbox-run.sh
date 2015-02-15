@@ -39,7 +39,7 @@ setup_usergroups() {
 	rm -rf "${ROOTFS}"/home/thuser
 	cp -a thuser "${ROOTFS}"/home/thuser
 	sed -i -e 's/^\/usr\/*.*/exec startfluxbox/' "${ROOTFS}"/home/thuser/.xinitrc
-	sed -i '2 i\fbsetbg \/usr\/share\/backgrounds\/background.jpg' "${ROOTFS}"/etc/skel/.xinitrc
+	sed -i '2 i\fbsetbg \/usr\/share\/backgrounds\/background.jpg' "${ROOTFS}"/home/thuser/.xinitrc
 	cp -a files/{Encrypt,Save,Utilities} "${ROOTFS}"/home/thuser
 	rm -rf "${ROOTFS}"/home/thuser/Utilities/post_gnome3_install.sh
 	mkdir -p "${ROOTFS}"/home/thuser/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh,.cache/dconf,.config/dconf,.fluxbox}
