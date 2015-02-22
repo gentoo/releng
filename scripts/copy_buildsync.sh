@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ARCHES="alpha amd64 arm hppa ia64      ppc sparc x86 sh s390"
+ARCHES="alpha amd64 arm hppa ia64      ppc s390 sh sparc x86"
        #alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86
 #ARCHES="s390"
 RSYNC_OPTS="-aO --delay-updates"
@@ -69,9 +69,11 @@ for ARCH in $ARCHES; do
 
 	if [ -n "${iso_list}" ]; then
 		echo -e "${header}" >"${OUT_ISO}"
-		echo -e "${iso_list}" |awk '{print $3}' | grep "$latest_iso_date" >>${OUT_ISO}
-		rm -f current-iso
-		ln -sf "$latest_iso_date" current-iso
+		if [[ ! $(echo ${iso_list} | egrep "amd64|x86") ]]; then
+			echo -e "${iso_list}" |awk '{print $3}' | grep "$latest_iso_date" >>${OUT_ISO}
+			rm -f current-iso
+			ln -sf "$latest_iso_date" current-iso
+		fi
 	fi
 	if [ -n "${stage3_list}" ]; then
 		echo -e "${header}" >"${OUT_STAGE3}"
@@ -91,10 +93,12 @@ for ARCH in $ARCHES; do
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
 		variant_path=$(find 20* -iname "${v}-20*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		size=$(stat --format=%s ${variant_path})
 		f="latest-${v}.txt"
 		echo -e "${header}" >"${f}"
-		echo -e "${variant_path}" >>${f}
-		echo -e "${variant_path}" >>${OUT_STAGE3}
+		echo -e "${variant_path} ${size}" >>${f}
+		[[ ${variant_path} =~ tar.*$ ]] && echo -e "${variant_path} ${size}" >>${OUT_STAGE3}
+		[[ ${variant_path} =~ iso$ ]] && echo -e "${variant_path} ${size}" >>${OUT_ISO}
 		rm -f "current-$v"
 		ln -sf "${variant_path%/*}" "current-$v"
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${tmpdir}"/.keep.${ARCH}.txt

@@ -4,7 +4,7 @@ ARCH=${ARCH:-"amd64"}
 ROOTFS="th-${ARCH}-xfce4"
 
 PWD="$(pwd)"
-STAGE3="/var/tmp/catalyst/builds/hardened/${ARCH}/stage3-${ARCH}-hardened-latest.tar.bz2"
+STAGE3=${STAGE3:-"/var/tmp/catalyst/builds/hardened/${ARCH}/stage3-${ARCH}-hardened-latest.tar.bz2"}
 LAYMAN="/var/lib/layman"
 KERNEL_SOURCE="/usr/src/linux-tinhat"
 
@@ -33,7 +33,7 @@ setup_usergroups() {
 
 	rm -rf "${ROOTFS}"/home/thuser
 	cp -a thuser "${ROOTFS}"/home/thuser
-    sed -i -e 's/^\/usr\/*.*/\/usr\/bin\/startxfce4/' "${ROOTFS}"/home/thuser//.xinitrc
+	sed -i -e 's/^\/usr\/*.*/\/usr\/bin\/startxfce4/' "${ROOTFS}"/home/thuser//.xinitrc
 	cp -a files/{Encrypt,Save,Utilities} "${ROOTFS}"/home/thuser
 	rm -rf "${ROOTFS}"/home/thuser/Utilities/post_gnome3_install.sh
 	mkdir -p "${ROOTFS}"/home/thuser/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh,.cache/dconf,.config/dconf}
@@ -74,7 +74,7 @@ setup_confs() {
 main() {
 	unpack_stage3
 	mount_dirs
-    populate_kernel_src
+	populate_kernel_src
 	populate_etc
 	rebuild_toolchain
 	rebuild_world

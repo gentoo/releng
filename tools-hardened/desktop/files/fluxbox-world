@@ -33,7 +33,7 @@ sys-fs/mtools
 sys-fs/squashfs-tools
 sys-fs/eudev
 sys-kernel/linux-firmware
-sys-power/cpufrequtils
+sys-power/cpupower
 sys-power/upower-pm-utils
 sys-process/at
 sys-process/fcron

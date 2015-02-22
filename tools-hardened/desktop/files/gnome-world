@@ -26,7 +26,7 @@ sys-fs/dosfstools
 sys-fs/mtools
 sys-fs/squashfs-tools
 sys-kernel/linux-firmware
-sys-power/cpufrequtils
+sys-power/cpupower
 sys-process/at
 sys-process/fcron
 www-client/firefox

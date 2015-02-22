@@ -80,10 +80,10 @@ setup_initrc() {
 	ln -sf net.lo "${ROOTFS}"/etc/init.d/net.eth0
 	chroot "${ROOTFS}"/ rc-update add acpid boot
 	chroot "${ROOTFS}"/ rc-update add alsasound boot
-	chroot "${ROOTFS}"/ rc-update add cpufrequtils boot
+	chroot "${ROOTFS}"/ rc-update add cpupower boot
 	chroot "${ROOTFS}"/ rc-update add device-mapper boot
 	chroot "${ROOTFS}"/ rc-update add lvm boot
-	chroot "${ROOTFS}"/ rc-update add udev boot
+	chroot "${ROOTFS}"/ rc-update add udev sysinit
 	chroot "${ROOTFS}"/ rc-update add cupsd default
 	chroot "${ROOTFS}"/ rc-update add cronie default
 	chroot "${ROOTFS}"/ rc-update add net.eth0 default
@@ -110,6 +110,7 @@ setup_systemd() {
 	chroot "${ROOTFS}"/ systemctl enable gdm.service
 	chroot "${ROOTFS}"/ systemctl enable metalog.service
 	chroot "${ROOTFS}"/ systemctl enable NetworkManager.service
+	chroot "${ROOTFS}"/ systemctl enable systemd-resolved
 	chroot "${ROOTFS}"/ systemctl enable postfix.service
 	chroot "${ROOTFS}"/ systemctl disable gdm
 	chroot "${ROOTFS}"/ systemctl enable slim
@@ -122,7 +123,7 @@ setup_systemd() {
 
 cleanup_dirs() {
 	rm -rf "${ROOTFS}"/tmp/*
-    rm -rf "${ROOTFS}"/usr/src/*
+	rm -rf "${ROOTFS}"/usr/src/*
 	rm -rf "${ROOTFS}"/var/cache/*
 	rm -rf "${ROOTFS}"/var/log/*
 	rm -rf "${ROOTFS}"/var/tmp/*

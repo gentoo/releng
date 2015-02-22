@@ -4,7 +4,7 @@ ARCH=${ARCH:-"amd64"}
 ROOTFS="th-${ARCH}-gnome"
 
 PWD="$(pwd)"
-STAGE3="/var/tmp/catalyst/builds/hardened/${ARCH}/stage3-${ARCH}-hardened-latest.tar.bz2"
+STAGE3=${STAGE3:-"/var/tmp/catalyst/builds/hardened/${ARCH}/stage3-${ARCH}-hardened-latest.tar.bz2"}
 LAYMAN="/var/lib/layman"
 KERNEL_SOURCE="/usr/src/linux-tinhat"
 
@@ -25,6 +25,7 @@ setup_usergroups() {
 
 	rm -rf "${ROOTFS}"/etc/skel
 	cp -a thuser "${ROOTFS}"/etc/skel
+	sed -i '2 i\gsettings set org.gnome.desktop.background picture-uri file:\/\/\/usr\/share\/backgrounds\/background.jpg' "${ROOTFS}"/etc/skel/.xinitrc
 	mkdir -p "${ROOTFS}"/etc/skel/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh,.cache/dconf,.config/dconf}
 	chmod 700 "${ROOTFS}"/etc/skel/.ssh
 	wget -O "${ROOTFS}"/etc/skel/.config/dconf/user "${DCONF_LOCAL}"
@@ -32,6 +33,7 @@ setup_usergroups() {
 
 	rm -rf "${ROOTFS}"/home/thuser
 	cp -a thuser "${ROOTFS}"/home/thuser
+	sed -i '2 i\gsettings set org.gnome.desktop.background picture-uri file:\/\/\/usr\/share\/backgrounds\/background.jpg' "${ROOTFS}"/home/thuser/.xinitrc
 	cp -a files/{Encrypt,Save,Utilities} "${ROOTFS}"/home/thuser
 	rm -rf "${ROOTFS}"/home/thuser/Utilities/post_xfce4_install.sh
 	mkdir -p "${ROOTFS}"/home/thuser/{Desktop,Documents,Downloads,Music,Pictures,Public,Templates,Videos,.ssh,.cache/dconf,.config/dconf}
@@ -71,7 +73,7 @@ setup_confs() {
 main() {
 	unpack_stage3
 	mount_dirs
-    populate_kernel_src
+	populate_kernel_src
 	populate_etc
 	rebuild_toolchain
 	rebuild_world

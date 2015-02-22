@@ -1,0 +1,3 @@
+>sys-apps/util-linux-2.24.1-r99
+>sys-devel/gcc-4.8.3-r99
+>sys-fs/eudev-1.10-r2
