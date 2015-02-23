@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/amd64/selinux
 snapshot: 2008.0
 source_subpath: hardened/stage3-amd64-hardened-selinux-latest
-portage_confdir: /release/releng/releases/weekly/portage/admincd
+portage_confdir: /home/release/releng/releases/weekly/portage/admincd
 
 livecd/use:
 	deprecated
@@ -62,6 +62,7 @@ livecd/packages:
 	app-editors/mg
 	app-editors/vim
 	app-emacs/ebuild-mode
+	app-emulation/xen-tools
 	app-misc/colordiff
 	app-misc/mc
 	app-misc/pax-utils
@@ -119,6 +120,7 @@ livecd/packages:
 	net-wireless/b43-fwcutter
 ### Masked (~amd64)
 #	net-wireless/bcm43xx-fwcutter
+	net-wireless/iw
 	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
@@ -178,6 +180,7 @@ livecd/packages:
 	sys-fs/e2fsprogs
 	sys-fs/ext3grep
 	sys-fs/extundelete
+	sys-fs/f2fs-tools
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2

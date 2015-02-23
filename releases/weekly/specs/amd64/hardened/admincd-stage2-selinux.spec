@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/amd64/selinux
 snapshot: 2008.0
 source_subpath: hardened/livecd-stage1-amd64-2008.0-selinux
-portage_confdir: /release/releng/releases/weekly/portage/admincd
+portage_confdir: /home/release/releng/releases/weekly/portage/admincd
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
