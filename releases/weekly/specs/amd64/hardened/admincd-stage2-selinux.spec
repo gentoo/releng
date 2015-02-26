@@ -84,9 +84,10 @@ boot/kernel/gentoo/packages:
 
 	sys-apps/pcmciautils
 	sys-kernel/linux-firmware
-	sys-kernel/spl
-	sys-fs/zfs
-	sys-fs/zfs-kmod
+#	ZFS is disabled until spl can build with CONFIG_PAX_RANDKSTACK
+#	sys-kernel/spl
+#	sys-fs/zfs
+#	sys-fs/zfs-kmod
 
 livecd/unmerge:
 	app-admin/eselect
