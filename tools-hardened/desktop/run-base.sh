@@ -101,7 +101,7 @@ setup_initrc() {
 
 setup_systemd() {
 	ln -sf /proc/self/mounts /etc/mtab
-	sed -i -e 's/# GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="init=\/usr\/lib\/systemd\/systemd"/' "${ROOTFS}"/etc/default/grub
+	sed -i -e 's/#GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="init=\/usr\/lib\/systemd\/systemd"/' "${ROOTFS}"/etc/default/grub
 	chroot "${ROOTFS}"/ systemctl enable avahi-daemon.service
 	chroot "${ROOTFS}"/ systemctl enable bluetooth.service
 	chroot "${ROOTFS}"/ systemctl enable cups.service
