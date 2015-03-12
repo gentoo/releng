@@ -97,9 +97,6 @@ setup_initrc() {
 setup_systemd() {
 	ln -sf /proc/self/mounts /etc/mtab
 	sed -i -e 's/#GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="init=\/usr\/lib\/systemd\/systemd"/' "${ROOTFS}"/etc/default/grub
-	chroot "${ROOTFS}"/ systemctl enable avahi-daemon.service
-	chroot "${ROOTFS}"/ systemctl enable bluetooth.service
-	chroot "${ROOTFS}"/ systemctl enable cups.service
 	chroot "${ROOTFS}"/ systemctl enable dhcpcd.service
 	chroot "${ROOTFS}"/ systemctl enable cronie.service
 	chroot "${ROOTFS}"/ systemctl enable gdm.service
@@ -109,11 +106,10 @@ setup_systemd() {
 	chroot "${ROOTFS}"/ systemctl enable postfix.service
 	chroot "${ROOTFS}"/ systemctl disable gdm
 	chroot "${ROOTFS}"/ systemctl enable slim
-	chroot "${ROOTFS}"/ systemctl enable smbd.service
 	chroot "${ROOTFS}"/ systemctl enable sshd.service
-	#chroot "${ROOTFS}"/ systemctl enable udev.service
-	#chroot "${ROOTFS}"/ systemctl enable udev-settle.service
-	#chroot "${ROOTFS}"/ systemctl enable udev-trigger.service
+	chroot "${ROOTFS}"/ systemctl disable avahi-daemon.service
+	chroot "${ROOTFS}"/ systemctl disable bluetooth.serivce
+	chroot "${ROOTFS}"/ systemctl disable cups.service
 }
 
 cleanup_dirs() {
