@@ -79,20 +79,15 @@ build_kernel() {
 setup_initrc() {
 	ln -sf net.lo "${ROOTFS}"/etc/init.d/net.eth0
 	chroot "${ROOTFS}"/ rc-update add acpid boot
-	chroot "${ROOTFS}"/ rc-update add alsasound boot
-	chroot "${ROOTFS}"/ rc-update add cpupower boot
 	chroot "${ROOTFS}"/ rc-update add device-mapper boot
 	chroot "${ROOTFS}"/ rc-update add lvm boot
 	chroot "${ROOTFS}"/ rc-update add udev sysinit
-	chroot "${ROOTFS}"/ rc-update add cupsd default
 	chroot "${ROOTFS}"/ rc-update add cronie default
 	chroot "${ROOTFS}"/ rc-update add net.eth0 default
 	chroot "${ROOTFS}"/ rc-update add postfix default
 	chroot "${ROOTFS}"/ rc-update add sshd default
 	chroot "${ROOTFS}"/ rc-update add xdm default
-	chroot "${ROOTFS}"/ rc-update add avahi-daemon default
 	chroot "${ROOTFS}"/ rc-update add dbus default
-	chroot "${ROOTFS}"/ rc-update add samba default
 	chroot "${ROOTFS}"/ rc-update add syslog-ng default
 	chroot "${ROOTFS}"/ rc-update add udev-postmount default
 	chroot "${ROOTFS}"/ rc-update add kmod-static-nodes sysinit
