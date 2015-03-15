@@ -50,6 +50,13 @@ update_world() {
 	cp -f update.sh "${ROOTFS}"/tmp/
 	chroot "${ROOTFS}"/ /tmp/update.sh
 	rm -f "${ROOTFS}"/tmp/update.sh
+
+	if [ "${WORLD_BASE}" == "gnome" ];
+	then
+		gnome_shell_loc=`chroot "${ROOTFS}"/ which gnome-shell`
+		chroot "${ROOTFS}"/ paxctl-ng -vm "${gnome_shell_loc}"
+		unset gnome_shell_loc
+	fi
 }
 
 build_kernel() {
