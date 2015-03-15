@@ -13,8 +13,7 @@ mount_dirs() {
 	mount --rbind /sys/ "${ROOTFS}"/sys/
 }
 
-populate_kernel_src()
-{
+populate_kernel_src() {
 	cp -f files/kernel-config "${KERNEL_SOURCE}"
 	cp -Rf "${KERNEL_SOURCE}"/ "${ROOTFS}"/usr/src/
 }

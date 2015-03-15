@@ -48,7 +48,7 @@ setup_usergroups() {
 
 setup_confs() {
 	local IMAGE="http://dev.gentoo.org/~blueness/lilblue/gentoo1600x1200.jpg"
-    
+
 	sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1slim/' "${ROOTFS}"/etc/conf.d/xdm
 	sed -i 's/^\(login.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
 	sed -i '/# login_cmd.*Xsession/ a\login_cmd exec /bin/bash -login ~/.xinitrc' "${ROOTFS}"/etc/slim.conf
@@ -67,7 +67,7 @@ setup_confs() {
 	chroot "${ROOTFS}"/ locale-gen
 	chroot "${ROOTFS}"/ eselect locale set en_US.utf8
 	cp -a files/locale/02locale "${ROOTFS}"/etc/conf.d/
-	# In kernels 3.9 and above, we must disallow-other-stacks because of SO_REUSEPORT 
+	# In kernels 3.9 and above, we must disallow-other-stacks because of SO_REUSEPORT
 	sed -i 's/^#\(disallow-other-stacks=\)no/\1yes/g' "${ROOTFS}"/etc/avahi/avahi-daemon.conf
 }
 
