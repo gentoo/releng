@@ -20,7 +20,7 @@
 [end]
 [end]
 [submenu] (Editors)
-      [exec]   (leafpad) {leafpad} 
+      [exec]   (mousepad) {mousepad} 
 </var/tmp/portage/x11-wm/fluxbox-1.3.2/temp/home/.fluxbox/icons/accessories-text-editor.xpm>
       [exec]   (nano) {xfce4-terminal -e nano} 
       [exec]   (vim) {xfce4-terminal -e vim} 
