@@ -106,7 +106,6 @@ setup_systemd() {
 	sed -i -e 's/#GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="init=\/usr\/lib\/systemd\/systemd"/' "${ROOTFS}"/etc/default/grub
 	chroot "${ROOTFS}"/ systemctl enable dhcpcd.service
 	chroot "${ROOTFS}"/ systemctl enable cronie.service
-	chroot "${ROOTFS}"/ systemctl enable gdm.service
 	chroot "${ROOTFS}"/ systemctl enable metalog.service
 	chroot "${ROOTFS}"/ systemctl enable NetworkManager.service
 	chroot "${ROOTFS}"/ systemctl enable systemd-resolved
