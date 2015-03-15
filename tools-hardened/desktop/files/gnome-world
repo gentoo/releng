@@ -28,7 +28,7 @@ sys-fs/squashfs-tools
 sys-kernel/linux-firmware
 sys-power/cpupower
 sys-process/at
-sys-process/fcron
+sys-process/cronie
 www-client/firefox
 x11-base/xorg-server
 x11-misc/slim
