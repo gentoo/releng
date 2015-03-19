@@ -54,6 +54,11 @@ setup_confs() {
 	sed -i 's/^\(sessiondir.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
 	sed -i '/# sessiondir.*/ a\sessiondir /etc/X11/Sessions' "${ROOTFS}"/etc/slim.conf
 
+    if [ ! -d "${ROOTFS}/usr/share/backgrounds" ];
+    then
+        mkdir -p "${ROOTFS}"/usr/share/backgrounds
+    fi
+
 	wget -O "${ROOTFS}"/usr/share/backgrounds/background.jpg "${IMAGE}"
 
 	sed -i '/^SYNC/d' "${ROOTFS}"/etc/portage/make.conf
