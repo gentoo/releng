@@ -1,2 +1,5 @@
->sys-devel/gcc-4.8.3-r99
+>app-editors/nano-2.3.6
+>sys-apps/iproute2-3.17.0
+>sys-apps/util-linux-2.24.1-r99
+>sys-devel/gcc-4.8.4-r99
 >sys-fs/eudev-1.10-r2
