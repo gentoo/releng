@@ -4,8 +4,9 @@ ROOTFS="desktop-amd64-uclibc-hardened"
 
 PWD="$(pwd)"
 STAGE3="/var/tmp/catalyst/builds/uclibc/hardened/amd64/stage3-amd64-uclibc-hardened.tar.bz2"
-LAYMAN="/var/lib/layman"
 KERNEL_SOURCE="/usr/src/linux-lilblue"
+LAYMAN="/var/lib/layman"
+ADDOVERLAY=""
 
 
 unpack_stage3() {
@@ -38,6 +39,7 @@ populate_etc() {
 
 	rm -f "${ROOTFS}"/etc/portage/make.conf.catalyst
 	cp -f portage/make.conf.1 "${ROOTFS}"/etc/portage/make.conf
+	[[ -z "${ADDOVERLAY}" ]] && sed -i '/^source/,+1d' "${ROOTFS}"/etc/portage/make.conf
 
 	rm -rf "${ROOTFS}"/etc/portage/patches
 	for d in env package.accept_keywords package.env package.mask package.unmask package.use patches profile repos.conf; do
@@ -53,6 +55,7 @@ rebuild_toolchain() {
 
 rebuild_world() {
 	cp -f portage/make.conf.2 "${ROOTFS}"/etc/portage/make.conf
+	[[ -z "${ADDOVERLAY}" ]] && sed -i '/^source/,+1d' "${ROOTFS}"/etc/portage/make.conf
 	cp -f world.1 "${ROOTFS}"/var/lib/portage/world
 	cp -f rebuild.sh "${ROOTFS}"/tmp/
 	chroot "${ROOTFS}"/ /tmp/rebuild.sh
@@ -62,6 +65,7 @@ rebuild_world() {
 
 update_world() {
 	cp -f portage/make.conf.3 "${ROOTFS}"/etc/portage/make.conf
+	[[ -z "${ADDOVERLAY}" ]] && sed -i '/^source/,+1d' "${ROOTFS}"/etc/portage/make.conf
 	cp -f world.2 "${ROOTFS}"/var/lib/portage/world
 
 	cp -f update.sh "${ROOTFS}"/tmp/
@@ -138,9 +142,8 @@ setup_confs() {
 	sed -i '/# sessiondir.*/ a\sessiondir /etc/X11/Sessions' "${ROOTFS}"/etc/slim.conf
 
 	wget -O "${ROOTFS}"/usr/share/slim/themes/default/background.jpg "${IMAGE}"
-	wget -O "${ROOTFS}"/usr/share/pixmaps/backgrounds/gnome/background-default.jpg "${IMAGE}"
+	#wget -O "${ROOTFS}"/usr/share/pixmaps/backgrounds/gnome/background-default.jpg "${IMAGE}"
 
-	sed -i '/^SYNC/d' "${ROOTFS}"/etc/portage/make.conf
 	sed -i '/^GENTOO_MIRRORS/d' "${ROOTFS}"/etc/portage/make.conf
 	sed -i 's/^MAKEOPTS/#MAKEOPTS/' "${ROOTFS}"/etc/portage/make.conf
 
@@ -169,11 +172,11 @@ unmount_dirs() {
 
 bundle_it() {
 	local DATE=$(date +%Y%m%d)
-	local NAME="${ROOTFS}"-"${DATE}".tar.bz2
+	local NAME="${ROOTFS}"-"${DATE}".tar.xz
 	local DIGESTS="${NAME}".DIGESTS
 
 	cd "${ROOTFS}"
-	tar -j -c -f ../"${NAME}" .
+	tar --xattrs --xattrs-include=security.capability --xattrs-include=user.pax.flags -J -c -f ../"${NAME}" .
 
 	cd ..
 	>"${DIGESTS}"
@@ -192,9 +195,16 @@ bundle_it() {
 }
 
 main() {
+
+	while getopts ":a" opt; do
+		case $opt in
+			a) ADDOVERLAY="yes" ;;
+		esac
+	done
+
 	unpack_stage3
 	mount_dirs
-	add_overlay
+	[[ ! -z "${ADDOVERLAY}" ]] && add_overlay
 	populate_etc
 	rebuild_toolchain
 	rebuild_world
