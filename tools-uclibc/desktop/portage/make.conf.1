@@ -2,6 +2,7 @@ CFLAGS="-O2 -fstack-check -pipe"
 CXXFLAGS="${CFLAGS}"
 CHOST="x86_64-gentoo-linux-uclibc"
 MAKEOPTS="-j17"
+PAX_MARKINGS="XT"
 
 USE_BASE="bindist mmx mmxext smp sse sse2 ssse3 static-libs -savedconfig"
 USE_GCC="graphite objc objc++ objc-gc gtk gtk3 X"

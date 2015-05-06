@@ -135,6 +135,11 @@ setup_usergroups() {
 setup_confs() {
 	local IMAGE="http://dev.gentoo.org/~blueness/lilblue/gentoo1600x1200.jpg"
 
+	# Clean up /etc/portage.
+	sed -i '/^GENTOO_MIRRORS/d' "${ROOTFS}"/etc/portage/make.conf
+	sed -i 's/^MAKEOPTS/#MAKEOPTS/' "${ROOTFS}"/etc/portage/make.conf
+
+	# Change the display greeter to slim and configure.
 	sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1slim/' "${ROOTFS}"/etc/conf.d/xdm
 	sed -i 's/^\(login.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
 	sed -i '/# login_cmd.*Xsession/ a\login_cmd exec /bin/bash -login ~/.xinitrc' "${ROOTFS}"/etc/slim.conf
@@ -144,11 +149,15 @@ setup_confs() {
 	wget -O "${ROOTFS}"/usr/share/slim/themes/default/background.jpg "${IMAGE}"
 	#wget -O "${ROOTFS}"/usr/share/pixmaps/backgrounds/gnome/background-default.jpg "${IMAGE}"
 
-	sed -i '/^GENTOO_MIRRORS/d' "${ROOTFS}"/etc/portage/make.conf
-	sed -i 's/^MAKEOPTS/#MAKEOPTS/' "${ROOTFS}"/etc/portage/make.conf
+	# Change the hostname to 'lilblue'.
+	sed -i 's/localhost/lilblue/' "${ROOTFS}"/etc/conf.d/hostname
 
-	# In kernels 3.9 and above, we must disallow-other-stacks because of SO_REUSEPORT
+	# In kernels 3.9 and above, we must disallow-other-stacks because of SO_REUSEPORT.
 	sed -i 's/^#\(disallow-other-stacks=\)no/\1yes/g' "${ROOTFS}"/etc/avahi/avahi-daemon.conf
+
+	# Since we're using an ubuntu-based config, get rid of the evdev spam in dmesg.
+	# https://bugs.launchpad.net/ubuntu/+source/module-init-tools/+bug/240553
+	echo "blacklist evbug" >> "${ROOTFS}"/etc/modprobe.d/blacklist.conf
 }
 
 cleanup_dirs() {
