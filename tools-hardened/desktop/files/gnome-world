@@ -23,7 +23,7 @@ net-irc/hexchat
 net-misc/dhcpcd
 net-misc/openssh
 net-misc/tor
-sci-calculator/galculator
+sci-calculators/galculator
 sys-apps/gradm
 sys-apps/iproute2
 sys-boot/grub
