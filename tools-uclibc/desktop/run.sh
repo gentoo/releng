@@ -10,12 +10,12 @@ ADDOVERLAY=""
 
 
 unpack_stage3() {
-	mkdir "${ROOTFS}"
+	mkdir -p "${ROOTFS}"
 	tar -x -C "${ROOTFS}" -f "${STAGE3}"
 }
 
 mount_dirs() {
-	mkdir "${ROOTFS}"/usr/portage/
+	mkdir -p "${ROOTFS}"/usr/portage/
 	mount --bind /usr/portage/ "${ROOTFS}"/usr/portage/
 	mount --bind /proc/ "${ROOTFS}"/proc/
 	mount --bind /dev/ "${ROOTFS}"/dev/
@@ -26,7 +26,7 @@ mount_dirs() {
 
 add_overlay() {
 	layman -S
-	mkdir "${ROOTFS}"/"${LAYMAN}"
+	mkdir -p "${ROOTFS}"/"${LAYMAN}"
 	cp -a "${LAYMAN}"/hardened-development/ "${ROOTFS}"/"${LAYMAN}"
 	cp installed.xml "${ROOTFS}"/"${LAYMAN}"/installed.xml
 	cp make.conf.layman "${ROOTFS}"/"${LAYMAN}"/make.conf
@@ -175,7 +175,7 @@ unmount_dirs() {
 	umount "${ROOTFS}"/proc/
 	umount "${ROOTFS}"/usr/portage/
 
-	mkdir "${ROOTFS}"/usr/portage/profiles/
+	mkdir -p "${ROOTFS}"/usr/portage/profiles/
 	echo "gentoo" >> "${ROOTFS}"/usr/portage/profiles/repo_name
 }
 
