@@ -39,7 +39,7 @@ prepare_confs() {
       stage${s}-${arch}-musl-${flavor}.conf
 
     portage_confdir=$(grep portage_confdir stage${s}-${arch}-musl-${flavor}.conf \
-      | sed -e 's/^.*://')
+      | sed -e 's/^.*:[ \t]*//')
     [[ ! -e ${portage_confdir} ]] && sed -i -e '/^portage_confdir/d' \
       stage${s}-${arch}-musl-${flavor}.conf
   done
