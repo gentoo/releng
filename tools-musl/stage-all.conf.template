@@ -9,4 +9,4 @@ chost: TARCH-gentoo-linux-musl
 cflags: -O2 -pipe -fomit-frame-pointer
 cxxflags: -O2 -pipe -fomit-frame-pointer
 portage_confdir: MYCATALYST/portage.SARCH.FLAVOR
-portage_overlay: /var/lib/layman/hardened-development-musl
+portage_overlay: /var/lib/layman/musl
