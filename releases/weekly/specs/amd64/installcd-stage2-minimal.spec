@@ -19,7 +19,7 @@ livecd/rcdel: keymaps|boot
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /release/releng/releases/weekly/kconfig/amd64/installcd-3.16.5.config
+boot/kernel/gentoo/config: /release/releng/releases/weekly/kconfig/amd64/installcd-3.18.12.config
 boot/kernel/gentoo/use:
 	-*
 	alsa
