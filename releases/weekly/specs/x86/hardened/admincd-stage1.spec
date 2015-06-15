@@ -37,6 +37,7 @@ livecd/packages:
 	app-admin/testdisk
 	app-arch/bzip2
 	app-arch/cpio
+	app-arch/dpkg
 	app-arch/gzip
 	app-arch/mt-st
 	app-arch/p7zip
@@ -62,6 +63,7 @@ livecd/packages:
 	app-editors/mg
 	app-editors/vim
 	app-emacs/ebuild-mode
+	app-emulation/cloud-init
 	app-emulation/xen-tools
 	app-misc/colordiff
 	app-misc/mc
@@ -82,6 +84,7 @@ livecd/packages:
 	app-vim/gentoo-syntax
 	dev-lang/perl
 	dev-lang/python
+	dev-vcs/git
 	media-gfx/fbgrab
 	net-analyzer/gnu-netcat
 	net-analyzer/iptraf-ng
@@ -191,6 +194,7 @@ livecd/packages:
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-libs/gpm
+	sys-libs/libsmbios
 	sys-power/acpid
 	sys-process/htop
 	sys-process/lsof
