@@ -1,0 +1,9 @@
+=app-text/dvipsk-5.994_p20140525 ~amd64
+=app-text/ps2pkm-1.5_p20140525 ~amd64
+=app-text/texlive-core-2014-r4 ~amd64
+=dev-libs/kpathsea-6.2.0_p20140525 ~amd64
+=dev-tex/bibtexu-3.71_p20140525 ~amd64
+=dev-texlive/texlive-basic-2014 ~amd64
+=dev-texlive/texlive-fontutils-2014 ~amd64
+=dev-texlive/texlive-latex-2014 ~amd64
+=dev-texlive/texlive-latexrecommended-2014 ~amd64

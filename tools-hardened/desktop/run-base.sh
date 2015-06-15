@@ -13,8 +13,7 @@ mount_dirs() {
 	mount --rbind /sys/ "${ROOTFS}"/sys/
 }
 
-populate_kernel_src()
-{
+populate_kernel_src() {
 	cp -f files/kernel-config "${KERNEL_SOURCE}"
 	cp -Rf "${KERNEL_SOURCE}"/ "${ROOTFS}"/usr/src/
 }
@@ -50,6 +49,13 @@ update_world() {
 	cp -f update.sh "${ROOTFS}"/tmp/
 	chroot "${ROOTFS}"/ /tmp/update.sh
 	rm -f "${ROOTFS}"/tmp/update.sh
+
+	if [ "${WORLD_BASE}" == "gnome" ];
+	then
+		gnome_shell_loc=`chroot "${ROOTFS}"/ which gnome-shell`
+		chroot "${ROOTFS}"/ paxctl-ng -vm "${gnome_shell_loc}"
+		unset gnome_shell_loc
+	fi
 }
 
 build_kernel() {
@@ -79,20 +85,14 @@ build_kernel() {
 setup_initrc() {
 	ln -sf net.lo "${ROOTFS}"/etc/init.d/net.eth0
 	chroot "${ROOTFS}"/ rc-update add acpid boot
-	chroot "${ROOTFS}"/ rc-update add alsasound boot
-	chroot "${ROOTFS}"/ rc-update add cpupower boot
-	chroot "${ROOTFS}"/ rc-update add device-mapper boot
 	chroot "${ROOTFS}"/ rc-update add lvm boot
 	chroot "${ROOTFS}"/ rc-update add udev sysinit
-	chroot "${ROOTFS}"/ rc-update add cupsd default
 	chroot "${ROOTFS}"/ rc-update add cronie default
 	chroot "${ROOTFS}"/ rc-update add net.eth0 default
 	chroot "${ROOTFS}"/ rc-update add postfix default
 	chroot "${ROOTFS}"/ rc-update add sshd default
 	chroot "${ROOTFS}"/ rc-update add xdm default
-	chroot "${ROOTFS}"/ rc-update add avahi-daemon default
 	chroot "${ROOTFS}"/ rc-update add dbus default
-	chroot "${ROOTFS}"/ rc-update add samba default
 	chroot "${ROOTFS}"/ rc-update add syslog-ng default
 	chroot "${ROOTFS}"/ rc-update add udev-postmount default
 	chroot "${ROOTFS}"/ rc-update add kmod-static-nodes sysinit
@@ -101,24 +101,19 @@ setup_initrc() {
 
 setup_systemd() {
 	ln -sf /proc/self/mounts /etc/mtab
-	sed -i -e 's/# GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="init=\/usr\/lib\/systemd\/systemd"/' "${ROOTFS}"/etc/default/grub
-	chroot "${ROOTFS}"/ systemctl enable avahi-daemon.service
-	chroot "${ROOTFS}"/ systemctl enable bluetooth.service
-	chroot "${ROOTFS}"/ systemctl enable cups.service
+	sed -i -e 's/#GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="init=\/usr\/lib\/systemd\/systemd"/' "${ROOTFS}"/etc/default/grub
 	chroot "${ROOTFS}"/ systemctl enable dhcpcd.service
 	chroot "${ROOTFS}"/ systemctl enable cronie.service
-	chroot "${ROOTFS}"/ systemctl enable gdm.service
 	chroot "${ROOTFS}"/ systemctl enable metalog.service
 	chroot "${ROOTFS}"/ systemctl enable NetworkManager.service
 	chroot "${ROOTFS}"/ systemctl enable systemd-resolved
 	chroot "${ROOTFS}"/ systemctl enable postfix.service
 	chroot "${ROOTFS}"/ systemctl disable gdm
 	chroot "${ROOTFS}"/ systemctl enable slim
-	chroot "${ROOTFS}"/ systemctl enable smbd.service
 	chroot "${ROOTFS}"/ systemctl enable sshd.service
-	#chroot "${ROOTFS}"/ systemctl enable udev.service
-	#chroot "${ROOTFS}"/ systemctl enable udev-settle.service
-	#chroot "${ROOTFS}"/ systemctl enable udev-trigger.service
+	chroot "${ROOTFS}"/ systemctl disable avahi-daemon.service
+	chroot "${ROOTFS}"/ systemctl disable bluetooth.serivce
+	chroot "${ROOTFS}"/ systemctl disable cups.service
 }
 
 cleanup_dirs() {

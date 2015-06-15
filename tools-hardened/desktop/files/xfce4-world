@@ -5,7 +5,7 @@ app-arch/sharutils
 app-arch/unrar
 app-arch/xarchiver
 app-cdr/cdrtools
-app-editors/leafpad
+app-editors/mousepad
 app-editors/nano
 app-editors/vim
 app-office/abiword

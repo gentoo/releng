@@ -1,1 +1,2 @@
-->sys-fs/e2fsprogs-1.42.7
+>sys-libs/e2fsprogs-libs-1.42.10
+>sys-fs/e2fsprogs-1.42.10

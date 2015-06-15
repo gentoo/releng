@@ -1,3 +1,0 @@
-dev-util/pkgconf pkg-config
-sys-devel/gettext -nls
-sys-fs/e2fsprogs -nls

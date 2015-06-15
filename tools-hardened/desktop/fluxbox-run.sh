@@ -54,7 +54,7 @@ setup_usergroups() {
 
 setup_confs() {
 	local IMAGE="http://dev.gentoo.org/~blueness/lilblue/gentoo1600x1200.jpg"
-    
+
 	sed -i 's/^\(DISPLAYMANAGER="\)xdm/\1slim/' "${ROOTFS}"/etc/conf.d/xdm
 	sed -i 's/^\(login.*\)/# \1/' "${ROOTFS}"/etc/slim.conf
 	sed -i '/# login_cmd.*Xsession/ a\login_cmd exec /bin/bash -login ~/.xinitrc' "${ROOTFS}"/etc/slim.conf

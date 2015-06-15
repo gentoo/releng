@@ -38,6 +38,10 @@ prepare_confs() {
     echo "cflags: -O2 -pipe -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard" >> \
       stage${s}-${arch}-musl-${flavor}.conf
 
+    portage_confdir=$(grep portage_confdir stage${s}-${arch}-musl-${flavor}.conf \
+      | sed -e 's/^.*:[ \t]*//')
+    [[ ! -e ${portage_confdir} ]] && sed -i -e '/^portage_confdir/d' \
+      stage${s}-${arch}-musl-${flavor}.conf
   done
 
   sed -i "/^chost/d" stage3-${arch}-musl-${flavor}.conf

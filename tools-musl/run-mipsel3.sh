@@ -27,6 +27,11 @@ prepare_confs() {
         -e "s|^cflags:.*|cflags: -O2 -march=mips3 -mplt -Wa,-mfix-loongson2f-nop -pipe|" \
         -e "s|^cxxflags:.*|cxxflags: -O2 -march=mips3 -mplt -Wa,-mfix-loongson2f-nop -pipe|" \
         >  stage${s}-${arch}-musl-${flavor}.conf
+
+    portage_confdir=$(grep portage_confdir stage${s}-${arch}-musl-${flavor}.conf \
+      | sed -e 's/^.*:[ \t]*//')
+    [[ ! -e ${portage_confdir} ]] && sed -i -e '/^portage_confdir/d' \
+      stage${s}-${arch}-musl-${flavor}.conf
   done
 
   sed -i "/^chost/d" stage3-${arch}-musl-${flavor}.conf

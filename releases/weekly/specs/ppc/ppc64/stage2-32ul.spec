@@ -6,3 +6,4 @@ profile: default/linux/powerpc/ppc64/13.0/32bit-userland
 snapshot: 2008.0
 source_subpath: default/stage1-ppc64-32ul-2008.0
 chost: powerpc-unknown-linux-gnu
+portage_confdir: /release/releng/releases/weekly/portage/stages

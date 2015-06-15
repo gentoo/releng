@@ -4,8 +4,7 @@ WORKING=$(pwd)
 CHROOTS=${CHROOTS:-"${WORKING}"}
 MYROOT=${MYROOT:-""}
 
-cleanup()
-{
+cleanup() {
 	cd ${WORKING}
 	rm -f ramdisk.iso
 	rm -f tinhat.igz
@@ -14,8 +13,7 @@ cleanup()
 }
 
 
-mkinitramfs()
-{
+mkinitramfs() {
 	local BUSYBOX="http://dev.gentoo.org/~twitch153/tinhat/busybox"
 
 	cd ${WORKING}
@@ -27,7 +25,7 @@ mkinitramfs()
 	wget -O ${WORKING}/init/bin/busybox "${BUSYBOX}"
 	cp ../configs/init .
 	chmod 755 bin/busybox
-	chmod 755 init 
+	chmod 755 init
 
 	chroot . /bin/busybox --install -s
 
@@ -38,8 +36,7 @@ mkinitramfs()
 }
 
 
-mkiso()
-{
+mkiso() {
 	cd ${WORKING}
 	mkdir -p iso/boot/grub
 
@@ -57,8 +54,7 @@ mkiso()
 }
 
 
-nameit()
-{
+nameit() {
 	DATE=$(date +%Y%m%d)
 	NAME="${MYROOT}-${DATE}.iso"
 
