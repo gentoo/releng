@@ -85,6 +85,7 @@ build_kernel() {
 setup_initrc() {
 	ln -sf net.lo "${ROOTFS}"/etc/init.d/net.eth0
 	chroot "${ROOTFS}"/ rc-update add acpid boot
+	chroot "${ROOTFS}"/ rc-update add atd boot
 	chroot "${ROOTFS}"/ rc-update add lvm boot
 	chroot "${ROOTFS}"/ rc-update add udev sysinit
 	chroot "${ROOTFS}"/ rc-update add cronie default
@@ -102,6 +103,7 @@ setup_initrc() {
 setup_systemd() {
 	ln -sf /proc/self/mounts /etc/mtab
 	sed -i -e 's/#GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="init=\/usr\/lib\/systemd\/systemd"/' "${ROOTFS}"/etc/default/grub
+	chroot "${ROOTFS}"/ systemctl enable atd.service
 	chroot "${ROOTFS}"/ systemctl enable dhcpcd.service
 	chroot "${ROOTFS}"/ systemctl enable cronie.service
 	chroot "${ROOTFS}"/ systemctl enable metalog.service
