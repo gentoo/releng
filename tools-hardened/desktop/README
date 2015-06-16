@@ -16,6 +16,7 @@ After this you need to apply the Loop-AES patch by doing the following:
 
 Then apply the patch:
 
+* cd /usr/src/linux-tinhat
 * rm -f drivers/block/loop.c include/linux/loop.h
 * patch -p1 < loop-AES-kernel.patch
 
