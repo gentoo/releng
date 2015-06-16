@@ -86,7 +86,6 @@ setup_initrc() {
 	ln -sf net.lo "${ROOTFS}"/etc/init.d/net.eth0
 	chroot "${ROOTFS}"/ rc-update add acpid boot
 	chroot "${ROOTFS}"/ rc-update add atd boot
-	chroot "${ROOTFS}"/ rc-update add lvm boot
 	chroot "${ROOTFS}"/ rc-update add udev sysinit
 	chroot "${ROOTFS}"/ rc-update add cronie default
 	chroot "${ROOTFS}"/ rc-update add net.eth0 default
