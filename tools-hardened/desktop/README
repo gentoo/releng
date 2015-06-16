@@ -28,6 +28,9 @@ By default, it expects to see the tarball in:
 You can however inform TinHat of your own location of choice by passing it
 as an environment variable: "STAGE3".
 
+Feel free to grab a hardened amd64 stage3 of your choice at:
+http://distfiles.gentoo.org/releases/amd64/autobuilds/
+
 To run:
 =======
 ex.) STAGE3="/ministry/of/silly/walks/evil-rabbit.tar.bz2" ./<DM>-run.sh
