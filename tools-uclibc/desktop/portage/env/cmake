@@ -1,2 +1,0 @@
-#this should go upstream
-LDFLAGS="-lpthread"
