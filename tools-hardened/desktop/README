@@ -3,7 +3,7 @@ Kernel Requirements:
 
 On the host system, these packages need to be installed:
 
-* sys-kernel/hardened-sources-4.0.4-r2
+* sys-kernel/hardened-sources-4.0.4-r3
 * >=sys-kernel/linux-firmware-20131230
 * sys-kernel/genkernel
 
@@ -16,6 +16,7 @@ After this you need to apply the Loop-AES patch by doing the following:
 
 Then apply the patch:
 
+* cd /usr/src/linux-tinhat
 * rm -f drivers/block/loop.c include/linux/loop.h
 * patch -p1 < loop-AES-kernel.patch
 
@@ -26,6 +27,9 @@ By default, it expects to see the tarball in:
 "/var/tmp/catalyst/builds/hardened/amd64/stage3-amd64-hardened-latest.tar.bz2"
 You can however inform TinHat of your own location of choice by passing it
 as an environment variable: "STAGE3".
+
+Feel free to grab a hardened amd64 stage3 of your choice at:
+http://distfiles.gentoo.org/releases/amd64/autobuilds/
 
 To run:
 =======

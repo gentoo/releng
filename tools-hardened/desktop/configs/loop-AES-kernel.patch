@@ -3,9 +3,9 @@ include/linux/loop.h source files must be removed:
 
     rm -f drivers/block/loop.c include/linux/loop.h
 
-diff -urN linux-3.19-noloop/drivers/block/Kconfig linux-3.19-AES/drivers/block/Kconfig
---- linux-3.19-noloop/drivers/block/Kconfig	2015-02-09 04:54:22.000000000 +0200
-+++ linux-3.19-AES/drivers/block/Kconfig	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/block/Kconfig linux-4.0-AES/drivers/block/Kconfig
+--- linux-4.0-noloop/drivers/block/Kconfig	2015-04-13 01:12:50.000000000 +0300
++++ linux-4.0-AES/drivers/block/Kconfig	2015-05-03 18:22:44.000000000 +0300
 @@ -235,14 +235,6 @@
  	  bits of, say, a sound file). This is also safe if the file resides
  	  on a remote file server.
@@ -88,10 +88,10 @@ diff -urN linux-3.19-noloop/drivers/block/Kconfig linux-3.19-AES/drivers/block/K
  
  source "drivers/block/drbd/Kconfig"
  
-diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/loop.c
---- linux-3.19-noloop/drivers/block/loop.c	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/block/loop.c	2015-02-09 20:49:52.000000000 +0200
-@@ -0,0 +1,3279 @@
+diff -urN linux-4.0-noloop/drivers/block/loop.c linux-4.0-AES/drivers/block/loop.c
+--- linux-4.0-noloop/drivers/block/loop.c	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/block/loop.c	2015-05-03 18:22:44.000000000 +0300
+@@ -0,0 +1,3175 @@
 +/*
 + *  linux/drivers/block/loop.c
 + *
@@ -1460,20 +1460,12 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	int			bioext_index;
 +	int			bioext_size;
 +	unsigned int            bioext_bi_max_vecs_orig;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +	unsigned int		bioext_done_offset;
-+#endif
 +};	
 +
-+#if LINUX_VERSION_CODE >= 0x30e00
-+# define LOOP_COMPAT_BI_SECTOR  bi_iter.bi_sector
-+# define LOOP_COMPAT_BI_SIZE    bi_iter.bi_size
-+# define LOOP_COMPAT_BI_IDX     bi_iter.bi_idx
-+#else
-+# define LOOP_COMPAT_BI_SECTOR  bi_sector
-+# define LOOP_COMPAT_BI_SIZE    bi_size
-+# define LOOP_COMPAT_BI_IDX     bi_idx
-+#endif
++#define LOOP_COMPAT_BI_SECTOR  bi_iter.bi_sector
++#define LOOP_COMPAT_BI_SIZE    bi_iter.bi_size
++#define LOOP_COMPAT_BI_IDX     bi_iter.bi_idx
 +
 +static struct loop_device **loop_dev_ptr_arr;
 +
@@ -1684,7 +1676,6 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		merge->LOOP_COMPAT_BI_SIZE = 0; /* used as error code */
 +		set_bit(0, &merge->bi_flags);
 +		merge->LOOP_COMPAT_BI_IDX = orig_bio->LOOP_COMPAT_BI_IDX;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +		nzCnt = 1;
 +		if(origHasData) {
 +			/* compute total number of vecs that this driver must process */
@@ -1702,10 +1693,6 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +				orDon = 0;
 +			} while(1);
 +		}
-+#else
-+		nzCnt = orig_bio->bi_vcnt - orig_bio->LOOP_COMPAT_BI_IDX;
-+		if(nzCnt < 1) nzCnt = 1;
-+#endif
 +		atomic_set(&merge->bi_cnt, nzCnt);
 +		merge->bi_private = orig_bio;
 +	}
@@ -1716,11 +1703,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	extension = bio->bi_private;
 +	if(origHasData) {
 +		firstVec = (merge->LOOP_COMPAT_BI_IDX == orig_bio->LOOP_COMPAT_BI_IDX) ? 1 : 0;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +		lastVec = (orig_bio->LOOP_COMPAT_BI_SIZE <= (orig_bio->bi_io_vec[merge->LOOP_COMPAT_BI_IDX].bv_len - orig_bio->bi_iter.bi_bvec_done)) ? 1 : 0;
-+#else
-+		lastVec = (merge->LOOP_COMPAT_BI_IDX == (orig_bio->bi_vcnt - 1)) ? 1 : 0;
-+#endif
 +	} else {
 +		firstVec = 1;
 +		lastVec = 1;
@@ -1730,26 +1713,12 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	/*
 +	 * initialize one page "buffer-bio"
 +	 */
-+#if LINUX_VERSION_CODE >= 0x30700
 +	bio_reset(bio);
 +	bio->bi_private = extension;
-+#else
-+#if !defined(BIO_RESET_BITS)
-+# define BIO_RESET_BITS BIO_POOL_OFFSET
-+#endif
-+	bio->bi_flags &= (~0UL << BIO_RESET_BITS);
-+	bio->bi_flags |= (1 << BIO_UPTODATE);
-+#endif
 +	bio->LOOP_COMPAT_BI_SECTOR = merge->LOOP_COMPAT_BI_SECTOR;
 +	bio->bi_next = NULL;
 +	bio->bi_bdev = lo->lo_device;
 +
-+#if LINUX_VERSION_CODE < 0x30200
-+	if(orig_bio->bi_flags & (1 << BIO_CPU_AFFINE)) {
-+		bio->bi_comp_cpu = orig_bio->bi_comp_cpu;
-+		bio->bi_flags |= (1 << BIO_CPU_AFFINE);
-+	}
-+#endif
 +	/* read-ahead bit needs to be cleared to work around kernel bug */
 +	/* that causes I/O errors on -EWOULDBLOCK I/O elevator failures */
 +	bio->bi_rw = orig_bio->bi_rw & ~L_BIO_RW_AHEAD;
@@ -1791,15 +1760,11 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		bio->bi_io_vec = extension->bioext_bi_io_vec_orig;
 +		bio->bi_max_vecs = extension->bioext_bi_max_vecs_orig;
 +		bio->bi_vcnt = 1;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +		len = orig_bio->bi_io_vec[merge->LOOP_COMPAT_BI_IDX].bv_len - orig_bio->bi_iter.bi_bvec_done;
 +		if(len > orig_bio->LOOP_COMPAT_BI_SIZE)
 +			len = orig_bio->LOOP_COMPAT_BI_SIZE;
 +		bio->LOOP_COMPAT_BI_SIZE = len;
 +		extension->bioext_done_offset = orig_bio->bi_iter.bi_bvec_done;
-+#else
-+		bio->LOOP_COMPAT_BI_SIZE = len = orig_bio->bi_io_vec[merge->LOOP_COMPAT_BI_IDX].bv_len;
-+#endif
 +		bio->bi_io_vec[0].bv_len = len;
 +		bio->bi_io_vec[0].bv_offset = 0;
 +	} else {
@@ -1807,9 +1772,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		bio->bi_io_vec = 0;
 +		bio->bi_max_vecs = 0;
 +		bio->bi_vcnt = 0;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +		extension->bioext_done_offset = 0;
-+#endif
 +		bio->LOOP_COMPAT_BI_SIZE = len = 0;
 +	}
 +
@@ -1833,11 +1796,9 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	merge->LOOP_COMPAT_BI_SECTOR += len >> 9;
 +	merge->LOOP_COMPAT_BI_IDX++;
 +
-+#if LINUX_VERSION_CODE >= 0x30e00
 +	orig_bio->LOOP_COMPAT_BI_SIZE -= len;
 +	orig_bio->bi_iter.bi_bvec_done = 0;
 +	bio->bi_iter.bi_bvec_done = 0;
-+#endif
 +	return bio;
 +}
 +
@@ -1903,10 +1864,18 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		fs = get_fs();
 +		set_fs(get_ds());
 +		if (w) {
++#if LINUX_VERSION_CODE >= 0x40100
++			x = __vfs_write(file, buf + y, z, ppos);
++#else
 +			x = file->f_op->write(file, buf + y, z, ppos);
++#endif
 +			set_fs(fs);
 +		} else {
++#if LINUX_VERSION_CODE >= 0x40100
++			x = __vfs_read(file, buf + y, z, ppos);
++#else
 +			x = file->f_op->read(file, buf + y, z, ppos);
++#endif
 +			set_fs(fs);
 +			if (!x)
 +				return 1;
@@ -1932,9 +1901,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	unsigned int size, len, more;
 +	sector_t IV;
 +	struct page *pg;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +	unsigned int oln;
-+#endif
 +
 +	if(!bio_has_data(bio))
 +		return 0;
@@ -1946,17 +1913,12 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		IV += lo->lo_offs_sec;
 +	do {
 +		pg = bio->bi_io_vec[bio->LOOP_COMPAT_BI_IDX].bv_page;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +		len = bio->bi_io_vec[bio->LOOP_COMPAT_BI_IDX].bv_len - bio->bi_iter.bi_bvec_done;
 +		if(len > bio->LOOP_COMPAT_BI_SIZE)
 +			len = bio->LOOP_COMPAT_BI_SIZE;
 +		oln = len;
 +		data = kmap(pg) + bio->bi_io_vec[bio->LOOP_COMPAT_BI_IDX].bv_offset + bio->bi_iter.bi_bvec_done;
 +		bio->bi_iter.bi_bvec_done = 0;
-+#else
-+		len = bio->bi_io_vec[bio->LOOP_COMPAT_BI_IDX].bv_len;
-+		data = kmap(pg) + bio->bi_io_vec[bio->LOOP_COMPAT_BI_IDX].bv_offset;
-+#endif
 +		while (len > 0) {
 +			if (!lo->lo_encryption) {
 +				/* this code relies that NONE transfer is a no-op */
@@ -1991,11 +1953,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		}
 +		kunmap(pg);
 +		bio->LOOP_COMPAT_BI_IDX++;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +		more = ((bio->LOOP_COMPAT_BI_SIZE -= oln) > 0) ? 1 : 0;
-+#else
-+		more = (bio->LOOP_COMPAT_BI_IDX < bio->bi_vcnt) ? 1 : 0;
-+#endif
 +	} while (more);
 +	return 0;
 +
@@ -2018,26 +1976,14 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	}
 +}
 +
-+#if LINUX_VERSION_CODE >= 0x30200
 +static void loop_make_request_err(struct request_queue *q, struct bio *old_bio)
-+#else
-+static int loop_make_request_err(struct request_queue *q, struct bio *old_bio)
-+#endif
 +{
 +	old_bio->bi_next = NULL;
 +	bio_io_error(old_bio);
-+#if LINUX_VERSION_CODE >= 0x30200
 +	return;
-+#else
-+	return 0;
-+#endif
 +}
 +
-+#if LINUX_VERSION_CODE >= 0x30200
 +static void loop_make_request_real(struct request_queue *q, struct bio *old_bio)
-+#else
-+static int loop_make_request_real(struct request_queue *q, struct bio *old_bio)
-+#endif
 +{
 +	struct bio *new_bio, *merge;
 +	struct loop_device *lo = q->queuedata;
@@ -2059,11 +2005,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	 */
 +	if (lo->lo_flags & LO_FLAGS_DO_BMAP) {
 +		loop_add_queue_last(lo, old_bio, &lo->lo_bio_que0);
-+#if LINUX_VERSION_CODE >= 0x30200
 +		return;
-+#else
-+		return 0;
-+#endif
 +	}
 +
 +	/*
@@ -2075,11 +2017,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		generic_make_request(old_bio);
 +		if (atomic_dec_and_test(&lo->lo_pending))
 +			wake_up_interruptible_all(&lo->lo_bio_wait);
-+#if LINUX_VERSION_CODE >= 0x30200
 +		return;
-+#else
-+		return 0;
-+#endif
 +	}
 +
 +	/*
@@ -2120,11 +2058,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	if ((rw == WRITE) && origHasData) {
 +		extension = new_bio->bi_private;
 +		y = extension->bioext_index;
-+#if LINUX_VERSION_CODE >= 0x30e00
 +		md = kmap(old_bio->bi_io_vec[y].bv_page) + old_bio->bi_io_vec[y].bv_offset + extension->bioext_done_offset;
-+#else
-+		md = kmap(old_bio->bi_io_vec[y].bv_page) + old_bio->bi_io_vec[y].bv_offset;
-+#endif
 +		if (lo_do_transfer(lo, WRITE, page_address(new_bio->bi_io_vec[0].bv_page), md, extension->bioext_size, extension->bioext_iv)) {
 +			clear_bit(0, &merge->bi_flags);
 +		}
@@ -2155,20 +2089,12 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	/* other vecs may need processing too */
 +	if (!lastVec)
 +		goto try_next_old_bio_vec;
-+#if LINUX_VERSION_CODE >= 0x30200
 +	return;
-+#else
-+	return 0;
-+#endif
 +
 +out:
 +	old_bio->bi_next = NULL;
 +	bio_io_error(old_bio);
-+#if LINUX_VERSION_CODE >= 0x30200
 +	return;
-+#else
-+	return 0;
-+#endif
 +}
 +
 +struct loop_switch_request {
@@ -2299,11 +2225,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +			y = extension->bioext_index;
 +			xbio = merge->bi_private;
 +			if(extension->bioext_size) {
-+#if LINUX_VERSION_CODE >= 0x30e00
 +				md = kmap(xbio->bi_io_vec[y].bv_page) + xbio->bi_io_vec[y].bv_offset + extension->bioext_done_offset;
-+#else
-+				md = kmap(xbio->bi_io_vec[y].bv_page) + xbio->bi_io_vec[y].bv_offset;
-+#endif
 +				if (lo_do_transfer(lo, READ, page_address(bio->bi_io_vec[0].bv_page), md, extension->bioext_size, extension->bioext_iv)) {
 +					clear_bit(0, &merge->bi_flags);
 +				}
@@ -2392,7 +2314,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		goto out_putf;
 +
 +	/* new backing store must support reads */
-+	if (!file->f_op || !file->f_op->read)
++	if (!(file->f_mode & FMODE_CAN_READ))
 +		goto out_putf;
 +
 +	/* new backing store must be same size as the old one */
@@ -2511,11 +2433,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	lo->lo_crypt_name[0] = 0;
 +	lo->lo_file_name[0] = 0;
 +	lo->lo_init[1] = lo->lo_init[0] = 0;
-+#if LINUX_VERSION_CODE >= 0x30600
 +	lo->lo_key_owner = GLOBAL_ROOT_UID;
-+#else
-+	lo->lo_key_owner = 0;
-+#endif
 +	lo->ioctl = NULL;
 +	lo->key_data = NULL;	
 +	lo->lo_bio_que0 = NULL;
@@ -2541,10 +2459,10 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +		 * If we can't read - sorry. If we only can't write - well,
 +		 * it's going to be read-only.
 +		 */
-+		if (!file->f_op || !file->f_op->read)
++		if (!(file->f_mode & FMODE_CAN_READ))
 +			goto out_putf;
 +
-+		if (!file->f_op->write)
++		if (!(file->f_mode & FMODE_CAN_WRITE))
 +			lo_flags |= LO_FLAGS_READ_ONLY;
 +
 +		lo_flags |= LO_FLAGS_DO_BMAP;
@@ -2741,11 +2659,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	lo->lo_encrypt_key_size = 0;
 +	lo->lo_flags = 0;
 +	lo->lo_init[1] = lo->lo_init[0] = 0;
-+#if LINUX_VERSION_CODE >= 0x30600
 +	lo->lo_key_owner = GLOBAL_ROOT_UID;
-+#else
-+	lo->lo_key_owner = 0;
-+#endif
 +	lo->key_data = NULL;
 +	memset(lo->lo_encrypt_key, 0, LO_KEY_SIZE);
 +	memset(lo->lo_crypt_name, 0, LO_NAME_SIZE);
@@ -2763,17 +2677,10 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +{
 +	int err;
 +	struct loop_func_table *xfer = NULL;
-+#if LINUX_VERSION_CODE >= 0x30600
 +	kuid_t uid = current_uid();
 +
 +	if (lo->lo_encrypt_key_size && !uid_eq(lo->lo_key_owner, uid) && !capable(CAP_SYS_ADMIN))
 +		return -EPERM;
-+#else
-+	uid_t uid = current_uid();
-+
-+	if (lo->lo_encrypt_key_size && lo->lo_key_owner != uid && !capable(CAP_SYS_ADMIN))
-+		return -EPERM;
-+#endif
 +	if ((unsigned int) info->lo_encrypt_key_size > LO_KEY_SIZE)
 +		return -EINVAL;
 +
@@ -2840,11 +2747,7 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	struct kstat stat;
 +	int error;
 +
-+#if LINUX_VERSION_CODE >= 0x30900
 +	error = vfs_getattr(&file->f_path, &stat);
-+#else
-+	error = vfs_getattr(file->f_vfsmnt, file->f_path.dentry, &stat);
-+#endif
 +	if (error)
 +		return error;
 +	memset(info, 0, sizeof(*info));
@@ -3138,20 +3041,13 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +	return 0;
 +}
 +
-+#if LINUX_VERSION_CODE >= 0x30a00
 +static void lo_release(struct gendisk *disk, fmode_t mode)
-+#else
-+static int lo_release(struct gendisk *disk, fmode_t mode)
-+#endif
 +{
 +	struct loop_device *lo = disk->private_data;
 +
 +	spin_lock(&lo->lo_ioctl_spin);
 +	lo->lo_refcnt--;
 +	spin_unlock(&lo->lo_ioctl_spin);
-+#if LINUX_VERSION_CODE < 0x30a00
-+	return 0;
-+#endif
 +}
 +
 +static struct block_device_operations lo_fops = {
@@ -3371,9 +3267,9 @@ diff -urN linux-3.19-noloop/drivers/block/loop.c linux-3.19-AES/drivers/block/lo
 +}
 +EXPORT_SYMBOL(loop_add_keyscrub_fn);
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/Makefile linux-3.19-AES/drivers/misc/Makefile
---- linux-3.19-noloop/drivers/misc/Makefile	2015-02-09 04:54:22.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/Makefile	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/Makefile linux-4.0-AES/drivers/misc/Makefile
+--- linux-4.0-noloop/drivers/misc/Makefile	2015-04-13 01:12:50.000000000 +0300
++++ linux-4.0-AES/drivers/misc/Makefile	2015-05-03 18:22:44.000000000 +0300
 @@ -2,6 +2,33 @@
  # Makefile for misc devices that really don't fit anywhere else.
  #
@@ -3408,9 +3304,9 @@ diff -urN linux-3.19-noloop/drivers/misc/Makefile linux-3.19-AES/drivers/misc/Ma
  obj-$(CONFIG_IBM_ASM)		+= ibmasm/
  obj-$(CONFIG_AD525X_DPOT)	+= ad525x_dpot.o
  obj-$(CONFIG_AD525X_DPOT_I2C)	+= ad525x_dpot-i2c.o
-diff -urN linux-3.19-noloop/drivers/misc/aes-amd64.S linux-3.19-AES/drivers/misc/aes-amd64.S
---- linux-3.19-noloop/drivers/misc/aes-amd64.S	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/aes-amd64.S	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/aes-amd64.S linux-4.0-AES/drivers/misc/aes-amd64.S
+--- linux-4.0-noloop/drivers/misc/aes-amd64.S	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/aes-amd64.S	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,897 @@
 +//
 +// Copyright (c) 2001, Dr Brian Gladman <brg@gladman.uk.net>, Worcester, UK.
@@ -4309,9 +4205,9 @@ diff -urN linux-3.19-noloop/drivers/misc/aes-amd64.S linux-3.19-AES/drivers/misc
 +#if defined(__ELF__) && defined(SECTION_NOTE_GNU_STACK)
 +	.section .note.GNU-stack,"",@progbits
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/aes-intel32.S linux-3.19-AES/drivers/misc/aes-intel32.S
---- linux-3.19-noloop/drivers/misc/aes-intel32.S	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/aes-intel32.S	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/aes-intel32.S linux-4.0-AES/drivers/misc/aes-intel32.S
+--- linux-4.0-noloop/drivers/misc/aes-intel32.S	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/aes-intel32.S	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,655 @@
 +/*
 + * Implement AES algorithm in Intel AES-NI instructions.
@@ -4968,9 +4864,9 @@ diff -urN linux-3.19-noloop/drivers/misc/aes-intel32.S linux-3.19-AES/drivers/mi
 +#if defined(__ELF__) && defined(SECTION_NOTE_GNU_STACK)
 +	.section .note.GNU-stack,"",@progbits
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/aes-intel64.S linux-3.19-AES/drivers/misc/aes-intel64.S
---- linux-3.19-noloop/drivers/misc/aes-intel64.S	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/aes-intel64.S	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/aes-intel64.S linux-4.0-AES/drivers/misc/aes-intel64.S
+--- linux-4.0-noloop/drivers/misc/aes-intel64.S	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/aes-intel64.S	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,649 @@
 +/*
 + * Implement AES algorithm in Intel AES-NI instructions.
@@ -5621,9 +5517,9 @@ diff -urN linux-3.19-noloop/drivers/misc/aes-intel64.S linux-3.19-AES/drivers/mi
 +#if defined(__ELF__) && defined(SECTION_NOTE_GNU_STACK)
 +	.section .note.GNU-stack,"",@progbits
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/aes-x86.S linux-3.19-AES/drivers/misc/aes-x86.S
---- linux-3.19-noloop/drivers/misc/aes-x86.S	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/aes-x86.S	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/aes-x86.S linux-4.0-AES/drivers/misc/aes-x86.S
+--- linux-4.0-noloop/drivers/misc/aes-x86.S	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/aes-x86.S	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,927 @@
 +//
 +// Copyright (c) 2001, Dr Brian Gladman <brg@gladman.uk.net>, Worcester, UK.
@@ -6552,10 +6448,10 @@ diff -urN linux-3.19-noloop/drivers/misc/aes-x86.S linux-3.19-AES/drivers/misc/a
 +#if defined(__ELF__) && defined(SECTION_NOTE_GNU_STACK)
 +	.section .note.GNU-stack,"",@progbits
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/aes.c linux-3.19-AES/drivers/misc/aes.c
---- linux-3.19-noloop/drivers/misc/aes.c	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/aes.c	2015-02-09 20:49:52.000000000 +0200
-@@ -0,0 +1,1479 @@
+diff -urN linux-4.0-noloop/drivers/misc/aes.c linux-4.0-AES/drivers/misc/aes.c
+--- linux-4.0-noloop/drivers/misc/aes.c	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/aes.c	2015-05-03 18:22:44.000000000 +0300
+@@ -0,0 +1,1480 @@
 +// I retain copyright in this code but I encourage its free use provided
 +// that I don't carry any responsibility for the results. I am especially 
 +// happy to see it used in free and open source software. If you do use 
@@ -6661,10 +6557,6 @@ diff -urN linux-3.19-noloop/drivers/misc/aes.c linux-3.19-AES/drivers/misc/aes.c
 +# define INTERNAL_BYTE_ORDER 1
 +# undef DATA_ALWAYS_ALIGNED
 +# define DATA_ALWAYS_ALIGNED 1  /* unaligned access is always ok */
-+#elif defined(__ppc__)||defined(__ppc)||defined(__PPC__)||defined(__PPC)||defined(__powerpc__)||defined(__powerpc)||defined(__POWERPC__)||defined(__POWERPC)||defined(__PowerPC__)||defined(__PowerPC)||defined(__ppc64__)||defined(__ppc64)||defined(__PPC64__)||defined(__PPC64)||defined(__powerpc64__)||defined(__powerpc64)||defined(__s390__)||defined(__s390)
-+# define INTERNAL_BYTE_ORDER 2
-+# undef DATA_ALWAYS_ALIGNED
-+# define DATA_ALWAYS_ALIGNED 1  /* unaligned access is always ok */
 +#elif defined(__alpha__)||defined(__alpha)||defined(__ia64__)||defined(__ia64)
 +# define INTERNAL_BYTE_ORDER 1
 +#elif defined(__hppa__)||defined(__hppa)||defined(__HPPA__)||defined(__HPPA)||defined(__parisc__)||defined(__parisc)||defined(__sparc__)||defined(__sparc)||defined(__sparc_v9__)||defined(__sparc_v9)||defined(__sparc64__)||defined(__sparc64)||defined(__mc68000__)||defined(__mc68000)
@@ -6684,13 +6576,18 @@ diff -urN linux-3.19-noloop/drivers/misc/aes.c linux-3.19-AES/drivers/misc/aes.c
 +# endif
 +#else
 +# include <sys/param.h>
-+# if (defined(BYTE_ORDER) && defined(LITTLE_ENDIAN) && (BYTE_ORDER == LITTLE_ENDIAN)) || (defined(__BYTE_ORDER) && defined(__LITTLE_ENDIAN) && (__BYTE_ORDER == __LITTLE_ENDIAN))
++# if defined(__LITTLE_ENDIAN__) || (defined(__BYTE_ORDER__) && defined(__ORDER_LITTLE_ENDIAN__) && (__BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__)) || (defined(BYTE_ORDER) && defined(LITTLE_ENDIAN) && (BYTE_ORDER == LITTLE_ENDIAN)) || (defined(__BYTE_ORDER) && defined(__LITTLE_ENDIAN) && (__BYTE_ORDER == __LITTLE_ENDIAN))
 +#  define INTERNAL_BYTE_ORDER 1
-+# elif WORDS_BIGENDIAN || defined(__BIG_ENDIAN__) || (defined(BYTE_ORDER) && defined(BIG_ENDIAN) && (BYTE_ORDER == BIG_ENDIAN)) || (defined(__BYTE_ORDER) && defined(__BIG_ENDIAN) && (__BYTE_ORDER == __BIG_ENDIAN))
++# elif WORDS_BIGENDIAN || defined(__BIG_ENDIAN__) || (defined(__BYTE_ORDER__) && defined(__ORDER_BIG_ENDIAN__) && (__BYTE_ORDER__ == __ORDER_BIG_ENDIAN__)) || (defined(BYTE_ORDER) && defined(BIG_ENDIAN) && (BYTE_ORDER == BIG_ENDIAN)) || (defined(__BYTE_ORDER) && defined(__BIG_ENDIAN) && (__BYTE_ORDER == __BIG_ENDIAN))
 +#  define INTERNAL_BYTE_ORDER 2
 +# else
 +#  define INTERNAL_BYTE_ORDER 0
 +# endif
++#endif
++
++#if defined(__ppc__)||defined(__ppc)||defined(__PPC__)||defined(__PPC)||defined(__powerpc__)||defined(__powerpc)||defined(__POWERPC__)||defined(__POWERPC)||defined(__PowerPC__)||defined(__PowerPC)||defined(__ppc64__)||defined(__ppc64)||defined(__PPC64__)||defined(__PPC64)||defined(__powerpc64__)||defined(__powerpc64)||defined(__s390__)||defined(__s390)
++# undef DATA_ALWAYS_ALIGNED
++# define DATA_ALWAYS_ALIGNED 1  /* unaligned access is always ok */
 +#endif
 +
 +#if defined(DATA_ALWAYS_ALIGNED) && (INTERNAL_BYTE_ORDER > 0)
@@ -8035,9 +7932,9 @@ diff -urN linux-3.19-noloop/drivers/misc/aes.c linux-3.19-AES/drivers/misc/aes.c
 +
 +    state_out(out_blk, b0);
 +}
-diff -urN linux-3.19-noloop/drivers/misc/aes.h linux-3.19-AES/drivers/misc/aes.h
---- linux-3.19-noloop/drivers/misc/aes.h	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/aes.h	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/aes.h linux-4.0-AES/drivers/misc/aes.h
+--- linux-4.0-noloop/drivers/misc/aes.h	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/aes.h	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,112 @@
 +// I retain copyright in this code but I encourage its free use provided
 +// that I don't carry any responsibility for the results. I am especially 
@@ -8151,9 +8048,9 @@ diff -urN linux-3.19-noloop/drivers/misc/aes.h linux-3.19-AES/drivers/misc/aes.h
 +// if their parameters have not changed.
 +
 +#endif  // _AES_H
-diff -urN linux-3.19-noloop/drivers/misc/crypto-ksym.c linux-3.19-AES/drivers/misc/crypto-ksym.c
---- linux-3.19-noloop/drivers/misc/crypto-ksym.c	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/crypto-ksym.c	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/crypto-ksym.c linux-4.0-AES/drivers/misc/crypto-ksym.c
+--- linux-4.0-noloop/drivers/misc/crypto-ksym.c	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/crypto-ksym.c	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,18 @@
 +#include <linux/module.h>
 +#include "aes.h"
@@ -8173,9 +8070,9 @@ diff -urN linux-3.19-noloop/drivers/misc/crypto-ksym.c linux-3.19-AES/drivers/mi
 +EXPORT_SYMBOL(intel_aes_cbc_decrypt);
 +EXPORT_SYMBOL(intel_aes_cbc_enc_4x512);
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/md5-2x-amd64.S linux-3.19-AES/drivers/misc/md5-2x-amd64.S
---- linux-3.19-noloop/drivers/misc/md5-2x-amd64.S	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/md5-2x-amd64.S	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/md5-2x-amd64.S linux-4.0-AES/drivers/misc/md5-2x-amd64.S
+--- linux-4.0-noloop/drivers/misc/md5-2x-amd64.S	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/md5-2x-amd64.S	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,223 @@
 +//
 +//  md5-2x-amd64.S
@@ -8400,9 +8297,9 @@ diff -urN linux-3.19-noloop/drivers/misc/md5-2x-amd64.S linux-3.19-AES/drivers/m
 +#if defined(__ELF__) && defined(SECTION_NOTE_GNU_STACK)
 +	.section .note.GNU-stack,"",@progbits
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/md5-amd64.S linux-3.19-AES/drivers/misc/md5-amd64.S
---- linux-3.19-noloop/drivers/misc/md5-amd64.S	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/md5-amd64.S	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/md5-amd64.S linux-4.0-AES/drivers/misc/md5-amd64.S
+--- linux-4.0-noloop/drivers/misc/md5-amd64.S	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/md5-amd64.S	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,204 @@
 +//
 +//  md5-amd64.S
@@ -8608,9 +8505,9 @@ diff -urN linux-3.19-noloop/drivers/misc/md5-amd64.S linux-3.19-AES/drivers/misc
 +#if defined(__ELF__) && defined(SECTION_NOTE_GNU_STACK)
 +	.section .note.GNU-stack,"",@progbits
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/md5-x86.S linux-3.19-AES/drivers/misc/md5-x86.S
---- linux-3.19-noloop/drivers/misc/md5-x86.S	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/md5-x86.S	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/md5-x86.S linux-4.0-AES/drivers/misc/md5-x86.S
+--- linux-4.0-noloop/drivers/misc/md5-x86.S	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/md5-x86.S	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,211 @@
 +//
 +//  md5-x86.S
@@ -8823,9 +8720,9 @@ diff -urN linux-3.19-noloop/drivers/misc/md5-x86.S linux-3.19-AES/drivers/misc/m
 +#if defined(__ELF__) && defined(SECTION_NOTE_GNU_STACK)
 +	.section .note.GNU-stack,"",@progbits
 +#endif
-diff -urN linux-3.19-noloop/drivers/misc/md5.c linux-3.19-AES/drivers/misc/md5.c
---- linux-3.19-noloop/drivers/misc/md5.c	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/md5.c	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/md5.c linux-4.0-AES/drivers/misc/md5.c
+--- linux-4.0-noloop/drivers/misc/md5.c	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/md5.c	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,106 @@
 +/*
 + * MD5 Message Digest Algorithm (RFC1321).
@@ -8933,9 +8830,9 @@ diff -urN linux-3.19-noloop/drivers/misc/md5.c linux-3.19-AES/drivers/misc/md5.c
 +    hash[2] += c;
 +    hash[3] += d;
 +}
-diff -urN linux-3.19-noloop/drivers/misc/md5.h linux-3.19-AES/drivers/misc/md5.h
---- linux-3.19-noloop/drivers/misc/md5.h	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/drivers/misc/md5.h	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/drivers/misc/md5.h linux-4.0-AES/drivers/misc/md5.h
+--- linux-4.0-noloop/drivers/misc/md5.h	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/drivers/misc/md5.h	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,15 @@
 +/* md5.h */
 +
@@ -8952,9 +8849,9 @@ diff -urN linux-3.19-noloop/drivers/misc/md5.h linux-3.19-AES/drivers/misc/md5.h
 + asmlinkage
 +#endif
 +extern void md5_transform_CPUbyteorder_2x(u_int32_t *, u_int32_t const *, u_int32_t const *);
-diff -urN linux-3.19-noloop/include/linux/loop.h linux-3.19-AES/include/linux/loop.h
---- linux-3.19-noloop/include/linux/loop.h	1970-01-01 02:00:00.000000000 +0200
-+++ linux-3.19-AES/include/linux/loop.h	2015-02-09 20:49:52.000000000 +0200
+diff -urN linux-4.0-noloop/include/linux/loop.h linux-4.0-AES/include/linux/loop.h
+--- linux-4.0-noloop/include/linux/loop.h	1970-01-01 02:00:00.000000000 +0200
++++ linux-4.0-AES/include/linux/loop.h	2015-05-03 18:22:44.000000000 +0300
 @@ -0,0 +1,171 @@
 +#ifndef _LINUX_LOOP_H
 +#define _LINUX_LOOP_H
