@@ -8,7 +8,7 @@ source_subpath: hardened/livecd-stage1-amd64-2008.0-selinux
 portage_confdir: /release/releng/releases/weekly/portage/admincd
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
+livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: admincd-amd64-2008.0.iso
