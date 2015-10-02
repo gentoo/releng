@@ -6,6 +6,7 @@ ARCHES="alpha amd64 arm hppa ia64      ppc s390 sh sparc x86"
 RSYNC_OPTS="-aO --delay-updates"
 DEBUG=
 VERBOSE=
+EXTENSIONS="[.tar.xz,.tar.bz2,.tar.gz,.tar,.sfs]"
 
 OUT_STAGE3="latest-stage3.txt"
 OUT_ISO="latest-iso.txt"
@@ -58,7 +59,7 @@ for ARCH in $ARCHES; do
 	# %T@
 
 	iso_list="$(find 20* -name '*.iso' -printf '%h %f %h/%f\n' |grep -v hardened | sort -n)"
-	stage3_list="$(find 20* -name 'stage3*bz2' -printf '%h %f %h/%f\n' |grep -v hardened | sort -n)"
+	stage3_list=$(find 20* -name "stage3*${EXTENSIONS}" -printf '%h %f %h/%f\n' | grep -v hardened | sort -n)
 	latest_iso_date="$(echo -e "${iso_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	latest_stage3_date="$(echo -e "${stage3_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	header="$(echo -e "# Latest as of $(date -uR)\n# ts=$(date -u +%s)")"
@@ -89,10 +90,10 @@ for ARCH in $ARCHES; do
 	fi
 
 	# new variant preserve code
-	variants="$(find 20* \( -iname '*.iso' -o -iname '*.tar.bz2' \) -printf '%f\n' |sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)"
+	variants=$(find 20* \( -iname '*.iso' -o -iname "*${EXTENSIONS}" \) -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
-		variant_path=$(find 20* -iname "${v}-20*" \( -name '*.tar.bz2' -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		variant_path=$(find 20* -iname "${v}-20*" \( -name "*${EXTENSIONS}" -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		size=$(stat --format=%s ${variant_path})
 		f="latest-${v}.txt"
 		echo -e "${header}" >"${f}"
