@@ -6,7 +6,7 @@ version_stamp: 2008.0
 profile: default/linux/powerpc/ppc64/13.0/32bit-userland
 source_subpath: default/livecd-stage1-ppc64-32ul-2008.0
 
-livecd/cdtar: /usr/share/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 livecd/fstype: squashfs 
 livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j8 --lvm --dmraid --mdadm
 livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-minimal-2008.0.iso

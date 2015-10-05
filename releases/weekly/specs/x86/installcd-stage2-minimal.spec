@@ -8,7 +8,7 @@ source_subpath: default/livecd-stage1-x86-2008.0
 portage_confdir: /home/release/releng/releases/weekly/portage/installcd
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
+livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: install-x86-minimal-2008.0.iso
