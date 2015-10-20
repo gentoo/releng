@@ -94,6 +94,10 @@ for ARCH in $ARCHES; do
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
 		variant_path=$(find 20* -iname "${v}-20*" \( -name "*${EXTENSIONS}" -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		if [ -z "${variant_path}" -o ! -e "${variant_path}" ]; then
+			echo "$ARCH: Variant ${v} is missing" 1>&2
+			continue
+		fi
 		size=$(stat --format=%s ${variant_path})
 		f="latest-${v}.txt"
 		echo -e "${header}" >"${f}"
