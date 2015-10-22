@@ -2,7 +2,6 @@
 
 ARCHES="alpha amd64 arm hppa ia64      ppc s390 sh sparc x86"
        #alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86
-#ARCHES="s390"
 RSYNC_OPTS="-aO --delay-updates"
 DEBUG=
 VERBOSE=
@@ -15,6 +14,7 @@ OUT_ISO="latest-iso.txt"
 
 DEBUGP=
 VERBOSEP=
+
 [ -n "$DEBUG" ] && DEBUGP=echo
 [ -n "$DEBUG" ] && RSYNC_OPTS="${RSYNC_OPTS} -n"
 [ -n "$VERBOSE" ] && RSYNC_OPTS="${RSYNC_OPTS} -v"
@@ -29,6 +29,7 @@ for ARCH in $ARCHES; do
 	tmpdir=/release/distfiles/tmp/buildsync/partial/${ARCH}
 
 	mkdir -p ${tmpdir} 2>/dev/null
+
 	# Copying
 	if [ -d "${indir}" ]; then
 		for i in $(find ${indir} -type f | grep -- '-20[0123][0-9]\{5\}' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
@@ -78,9 +79,11 @@ for ARCH in $ARCHES; do
 	fi
 	if [ -n "${stage3_list}" ]; then
 		echo -e "${header}" >"${OUT_STAGE3}"
+
 		# In the new variant preserve code there is a better way to do this
 		#echo -e "${stage3_list}" |awk '{print $3}' |grep "$latest_stage3_date" >>${OUT_STAGE3}
 		rm -f current-stage3
+
 		# The "latest stage3" concept doesn't apply to the arm/hppa/s390/sh variants
 		# that are pushed on different days of the week.
 		# Disable it for amd64/x86 as well as any failures cause confusion to users
@@ -89,7 +92,7 @@ for ARCH in $ARCHES; do
 		fi
 	fi
 
-	# new variant preserve code
+	# New variant preserve code
 	variants=$(find 20* \( -iname '*.iso' -o -iname "*${EXTENSIONS}" \) -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
@@ -108,15 +111,13 @@ for ARCH in $ARCHES; do
 		ln -sf "${variant_path%/*}" "current-$v"
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${tmpdir}"/.keep.${ARCH}.txt
 	done
-	#echo "$date_variant" \
-	#| sort | uniq | sed -e 's,^,/,g' -e 's,$,$,g' >"${tmpdir}"/.keep.${ARCH}.txt
 
 	# ================================================================
 	# Cleanup
 	if [ $fail -eq 0 ]; then
+
 		# Clean up all but latest 4 from mirror dir
 		cd "${outdir}"
-		#echo regex "/${latest_iso_date}\$|/${latest_stage3_date}\$"
 		for i in $(find -regextype posix-basic -mindepth 1 -maxdepth 1 -type d -regex '.*20[012][0-9]\{5\}.*' \
 				| sed -e 's:^.*-\(20[^.]\+\).*$:\1:' \
 				| sort -ur \
