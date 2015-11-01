@@ -1,10 +1,10 @@
 subarch: i686
 target: stage1
-version_stamp: hardened-2008.0
+version_stamp: hardened-latest
 rel_type: hardened
 profile: hardened/linux/x86
-snapshot: 2008.0
-source_subpath: hardened/stage3-i686-hardened-latest.tar.xz
+snapshot: latest
+source_subpath: hardened/stage3-i686-hardened-latest
 compression_mode: pixz_x
 decompressor_search_order: bzip2 tar pixz xz gzip lbzip2
 update_seed: yes

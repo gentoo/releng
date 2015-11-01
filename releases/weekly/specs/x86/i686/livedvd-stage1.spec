@@ -1,10 +1,10 @@
 subarch: i686
-version_stamp: installer-2008.0
+version_stamp: installer-latest
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/13.0/desktop
-snapshot: 2008.0
-source_subpath: default/stage3-i686-desktop-2008.0
+snapshot: latest
+source_subpath: default/stage3-i686-desktop-latest
 livecd/use:
 	branding
 	livecd

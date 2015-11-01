@@ -1,10 +1,11 @@
 subarch: x86
-version_stamp: 2008.0
+version_stamp: latest
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/13.0
-snapshot: 2008.0
-source_subpath: default/stage3-i486-latest.tar.xz
+snapshot: latest
+source_subpath: default/stage3-i486-latest
+compression_mode: pixz_x
 portage_confdir: /home/release/releng/releases/weekly/portage/installcd
 
 livecd/use:

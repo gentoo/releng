@@ -1,9 +1,9 @@
 subarch: amd64
 target: stage1
-version_stamp: 2008.0
+version_stamp: latest
 rel_type: default
 profile: default/linux/amd64/13.0
-snapshot: 2008.0
+snapshot: latest
 source_subpath: default/stage3-amd64-latest.tar.bz2
 compression_mode: pixz_x
 decompressor_search_order: bzip2 tar pixz xz gzip lbzip2

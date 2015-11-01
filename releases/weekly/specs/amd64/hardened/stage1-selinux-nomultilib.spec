@@ -1,9 +1,9 @@
 subarch: amd64
 target: stage1
-version_stamp: hardened-selinux+nomultilib-2008.0
+version_stamp: hardened-selinux+nomultilib-latest
 rel_type: hardened
 profile: hardened/linux/amd64/no-multilib/selinux
-snapshot: 2008.0
+snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened-selinux+nomultilib-latest.tar.bz2
 compression_mode: pixz_x
 decompressor_search_order: bzip2 tar pixz xz gzip lbzip2
