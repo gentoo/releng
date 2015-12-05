@@ -4,7 +4,7 @@ target: livecd-stage2
 rel_type: hardened
 profile: hardened/linux/amd64/selinux
 snapshot: latest
-source_subpath: hardened/livecd-stage1-amd64-latest-selinux
+source_subpath: hardened/livecd-stage1-amd64-selinux-latest
 portage_confdir: /home/release/releng/releases/weekly/portage/admincd
 
 livecd/bootargs: dokeymap
