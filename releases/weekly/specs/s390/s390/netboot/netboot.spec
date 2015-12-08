@@ -185,7 +185,9 @@ netboot2/packages/sys-apps/util-linux/files:
 	/sbin/swapoff
 	/lib/libblkid.so.*
 	/lib/libmount.so.*
+	/lib/libsmartcols.so.*
 	/lib/libuuid.so.*
+	/usr/lib/libfdisk.so.*
 
 netboot2/packages/app-editors/nano/files:
 	/bin/nano
