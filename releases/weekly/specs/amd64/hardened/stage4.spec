@@ -8,8 +8,6 @@ source_subpath: hardened/stage3-amd64-cloud-hardened-2008.0
 portage_confdir: /release/releng/releases/weekly/portage/stages
 
 stage4/use:
-	abi_x86_32
-	abi_x86_64
 	bash-completion
 	bzip2
 	idm
