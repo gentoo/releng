@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/amd64/no-multilib
 snapshot: 2008.0
 source_subpath: hardened/stage3-amd64-hardened+nomultilib-2008.0
-portage_confdir: /release/releng/releases/weekly/portage/stages
+portage_confdir: /release/releng/releases/weekly/portage/cloud-stages
 
 stage4/use:
 	bash-completion
