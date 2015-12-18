@@ -98,26 +98,16 @@ netboot2/packages/sys-apps/util-linux/files:
 	/usr/sbin/delpart
 	/usr/sbin/rtcwake
 	/usr/sbin/addpart
-	/usr/sbin/readprofile
-	/usr/sbin/tunelp
-	/usr/bin/mcookie
 	/usr/bin/logger
 	/usr/bin/setarch
-	/usr/bin/script
-	/usr/bin/scriptreplay
 	/usr/bin/linux64
-	/usr/sbin/fdformat
 	/usr/bin/column
 	/usr/bin/cal
-	/usr/bin/cytune
 	/usr/bin/chrt
 	/usr/bin/rename
-	/usr/bin/tailf
 	/usr/bin/colcrt
-	/usr/bin/write
 	/usr/bin/hexdump
 	/usr/bin/namei
-	/usr/bin/isosize
 	/usr/bin/look
 	/usr/bin/ipcs
 	/usr/bin/parisc

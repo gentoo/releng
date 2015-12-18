@@ -6,7 +6,7 @@ profile: hardened/linux/musl/PARCH
 snapshot: current
 source_subpath: musl/FLAVOR/SARCH/PSTAGE-SARCH-musl-FLAVOR
 chost: TARCH-gentoo-linux-musl
-cflags: -O2 -pipe -fomit-frame-pointer
-cxxflags: -O2 -pipe -fomit-frame-pointer
+cflags: -O2 -pipe
+cxxflags: -O2 -pipe
 portage_confdir: MYCATALYST/portage.SARCH.FLAVOR
 portage_overlay: /var/lib/layman/musl
