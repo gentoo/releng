@@ -36,7 +36,7 @@ stage4/packages:
 	sys-devel/bc
 	sys-power/acpid
 	sys-process/cronie
-stage4/fsscript: /release/releng/releases/weekly/scripts/prep.sh
+stage4/fsscript: /release/releng/releases/weekly/scripts/cloud-prep.sh
 stage4/root_overlay: /release/releng/releases/weekly/overlays/cloud-overlay
 stage4/rcadd:
 	acpid|default
