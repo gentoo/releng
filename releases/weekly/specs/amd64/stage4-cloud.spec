@@ -7,7 +7,7 @@ snapshot: latest
 source_subpath: default/stage3-amd64-latest
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
-portage_confdir: /home/release/releng/releases/weekly/portage/stages
+portage_confdir: /home/release/releng/releases/weekly/portage/cloud-stages
 
 stage4/use:
 	bash-completion
