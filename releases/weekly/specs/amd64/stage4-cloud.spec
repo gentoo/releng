@@ -1,11 +1,13 @@
 subarch: amd64
 target: stage4
-version_stamp: cloud-2008.0
+version_stamp: cloud-latest
 rel_type: default
 profile: default/linux/amd64/13.0
-snapshot: 2008.0
-source_subpath: default/stage3-amd64-2008.0
-portage_confdir: /release/releng/releases/weekly/portage/stages
+snapshot: latest
+source_subpath: default/stage3-amd64-latest
+compression_mode: pixz_x
+decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
+portage_confdir: /home/release/releng/releases/weekly/portage/stages
 
 stage4/use:
 	bash-completion
@@ -36,8 +38,8 @@ stage4/packages:
 	sys-devel/bc
 	sys-power/acpid
 	sys-process/cronie
-stage4/fsscript: /release/releng/releases/weekly/scripts/cloud-prep.sh
-stage4/root_overlay: /release/releng/releases/weekly/overlays/cloud-overlay
+stage4/fsscript: /home/release/releng/releases/weekly/scripts/cloud-prep.sh
+stage4/root_overlay: /home/release/releng/releases/weekly/overlays/cloud-overlay
 stage4/rcadd:
 	acpid|default
 	cloud-config|default
@@ -53,6 +55,6 @@ stage4/rcadd:
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /release/releng/releases/weekly/kconfig/amd64/installcd-3.18.12.config
+boot/kernel/gentoo/config: /home/release/releng/releases/weekly/kconfig/amd64/installcd-3.18.12.config
 boot/kernel/gentoo/extraversion: openstack
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
