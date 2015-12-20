@@ -6,7 +6,7 @@ echo 'UTC' > /etc/timezone
 # Set locale
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 echo 'en_US ISO-8859-1' >> /etc/locale.gen
-locale-gen
+locale-gen -q
 eselect locale set en_US.utf8
 
 # Some rootfs stuff
@@ -68,7 +68,7 @@ sed -i '/^USE=\"\${USE}\ \ build\"$/d' /etc/portage/make.conf
 # clean up system
 passwd -d root
 passwd -l root
-rm -f /usr/portage/distfiles/*
+rm -R -f /usr/portage/distfiles/*
 rm -f /etc/ssh/ssh_host_*
 rm -f /root/.bash_history
 rm -f /root/.nano_history
