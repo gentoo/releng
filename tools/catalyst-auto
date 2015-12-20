@@ -239,7 +239,7 @@ for a in "" ${SETS}; do
 
   for i in ${!specs_var} ${!optional_specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"	
-    run_cmd "catalyst -P -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
+    run_cmd "catalyst -P -c ${CATALYST_CONFIG}" "${LOGFILE}"
   done
 
 done
