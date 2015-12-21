@@ -55,7 +55,7 @@ EOL
 USE="-build" emerge -uDNv --with-bdeps=y --jobs=2 @world
 USE="-build" emerge --verbose=n --depclean
 USE="-build" emerge -v --usepkg=n @preserved-rebuild
-etc-update --automode -3
+etc-update --automode -5
 
 # Clean up portage
 emerge --verbose=n --depclean
