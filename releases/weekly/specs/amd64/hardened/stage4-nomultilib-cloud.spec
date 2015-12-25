@@ -1,6 +1,6 @@
 subarch: amd64
 target: stage4
-version_stamp: 2008.0
+version_stamp: hardened+nomultilib-2008.0
 rel_type: hardened
 profile: hardened/linux/amd64/no-multilib
 snapshot: 2008.0
