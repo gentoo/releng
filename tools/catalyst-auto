@@ -172,7 +172,7 @@ for i in $(find -name '*.spec'); do
   old_source_subpath=$(grep source_subpath ${i} | sed -e 's|^source_subpath: *||')
 
   new_version_stamp=$(echo "${old_version_stamp}" | sed -e 's|^\(.*-\)\?.*$|\1'${DATESTAMP}'|')
-  new_source_subpath=$(echo "${old_source_subpath}" | sed -e 's|'${old_version_stamp}'$|'${new_version_stamp}'|')
+  new_source_subpath=$(echo "${old_source_subpath}" | sed -e 's|'${old_version_stamp}'|'${new_version_stamp}'|')
 
   sed -i 's|^version_stamp:.*$|version_stamp: '${new_version_stamp}'|' ${i}
   sed -i 's|^snapshot:.*$|snapshot: '${DATESTAMP}'|' ${i}
