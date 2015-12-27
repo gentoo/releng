@@ -1,9 +1,9 @@
 subarch: amd64
-version_stamp: 2008.0-selinux
+version_stamp: latest-selinux
 target: livecd-stage1
 rel_type: hardened
 profile: hardened/linux/amd64/selinux
-snapshot: 2008.0
+snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened-selinux-latest
 portage_confdir: /release/releng/releases/weekly/portage/admincd
 

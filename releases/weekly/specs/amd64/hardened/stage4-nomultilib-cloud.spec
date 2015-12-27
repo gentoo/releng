@@ -1,10 +1,10 @@
 subarch: amd64
 target: stage4
-version_stamp: hardened+nomultilib-2008.0
+version_stamp: hardened+cloud-nomultilib-latest
 rel_type: hardened
 profile: hardened/linux/amd64/no-multilib
-snapshot: 2008.0
-source_subpath: hardened/stage3-amd64-hardened+nomultilib-2008.0
+snapshot: latest
+source_subpath: hardened/stage3-amd64-hardened+nomultilib-latest
 portage_confdir: /release/releng/releases/weekly/portage/cloud-stages
 
 stage4/use:

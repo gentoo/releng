@@ -1,9 +1,9 @@
 subarch: x86
-version_stamp: 2008.0
+version_stamp: latest
 target: livecd-stage1
 rel_type: hardened
 profile: hardened/linux/x86
-snapshot: 2008.0
+snapshot: latest
 source_subpath: hardened/stage3-i686-hardened-latest
 portage_confdir: /release/releng/releases/weekly/portage/admincd
 

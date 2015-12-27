@@ -1,19 +1,19 @@
 subarch: amd64
-version_stamp: 2008.0-selinux
+version_stamp: latest-selinux
 target: livecd-stage2
 rel_type: hardened
 profile: hardened/linux/amd64/selinux
-snapshot: 2008.0
-source_subpath: hardened/livecd-stage1-amd64-2008.0-selinux
+snapshot: latest
+source_subpath: hardened/livecd-stage1-amd64-latest-selinux
 portage_confdir: /release/releng/releases/weekly/portage/admincd
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
-livecd/iso: admincd-amd64-2008.0.iso
+livecd/iso: admincd-amd64-latest.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo Linux Admin CD 2008.0
+livecd/volid: Gentoo Linux Admin CD latest
 livecd/rcdel: keymaps|boot
 
 boot/kernel: gentoo

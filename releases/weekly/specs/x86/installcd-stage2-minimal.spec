@@ -1,19 +1,19 @@
 subarch: x86
-version_stamp: 2008.0
+version_stamp: latest
 target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/13.0
-snapshot: 2008.0
-source_subpath: default/livecd-stage1-x86-2008.0
+snapshot: latest
+source_subpath: default/livecd-stage1-x86-latest
 portage_confdir: /release/releng/releases/weekly/portage/installcd
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
-livecd/iso: install-x86-minimal-2008.0.iso
+livecd/iso: install-x86-minimal-latest.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo Linux x86 2008.0
+livecd/volid: Gentoo Linux x86 latest
 livecd/rcdel: keymaps|boot
 
 boot/kernel: gentoo

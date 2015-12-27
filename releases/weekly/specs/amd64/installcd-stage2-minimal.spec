@@ -1,19 +1,19 @@
 subarch: amd64
-version_stamp: 2008.0
+version_stamp: latest
 target: livecd-stage2
 rel_type: default
 profile: default/linux/amd64/13.0/no-multilib
-snapshot: 2008.0
-source_subpath: default/livecd-stage1-amd64-2008.0
+snapshot: latest
+source_subpath: default/livecd-stage1-amd64-latest
 portage_confdir: /release/releng/releases/weekly/portage/installcd
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
-livecd/iso: install-amd64-minimal-2008.0.iso
+livecd/iso: install-amd64-minimal-latest.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo Linux amd64 2008.0
+livecd/volid: Gentoo Linux amd64 latest
 livecd/rcdel: keymaps|boot
 
 boot/kernel: gentoo

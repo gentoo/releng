@@ -1,9 +1,9 @@
 subarch: amd64
-version_stamp: 2008.0
+version_stamp: latest
 target: livecd-stage1
 rel_type: hardened
 profile: hardened/linux/amd64
-snapshot: 2008.0
+snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened-latest
 portage_confdir: /release/releng/releases/weekly/portage/admincd
 

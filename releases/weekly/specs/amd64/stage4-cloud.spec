@@ -1,10 +1,10 @@
 subarch: amd64
 target: stage4
-version_stamp: 2008.0
+version_stamp: cloud-latest
 rel_type: default
 profile: default/linux/amd64/13.0
-snapshot: 2008.0
-source_subpath: default/stage3-amd64-2008.0
+snapshot: latest
+source_subpath: default/stage3-amd64-latest
 portage_confdir: /release/releng/releases/weekly/portage/cloud-stages
 
 stage4/use:
