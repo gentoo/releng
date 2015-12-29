@@ -74,6 +74,6 @@ rm -f /root/.bash_history
 rm -f /root/.nano_history
 rm -f /root/.lesshst
 rm -f /root/.ssh/known_hosts
-rm -f /usr/src/linux
+rm -rf /usr/src/linux
 for i in $(find /var/log -type f); do echo > $i; done
 for i in $(find /tmp -type f); do rm -f $i; done
