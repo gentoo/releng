@@ -9,6 +9,7 @@ portage_confdir: /release/releng/releases/weekly/portage/cloud-stages
 
 stage4/use:
 	bash-completion
+	bindist
 	bzip2
 	idm
 	ipv6
