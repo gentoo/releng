@@ -26,6 +26,7 @@ stage4/packages:
 	app-portage/eix
 	app-portage/gentoolkit
 	net-misc/dhcpcd
+	net-misc/iputils
 	sys-boot/grub
 	sys-apps/dmidecode
 	sys-apps/gptfdisk
