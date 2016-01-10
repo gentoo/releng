@@ -69,3 +69,5 @@ sed -i '/^USE=\"\${USE}\ \ build\"$/d' /etc/portage/make.conf
 passwd -d root
 passwd -l root
 for i in $(find /var/log -type f); do truncate -s 0 $i; done
+# remove foreign manpages
+find /usr/share/man/ -mindepth 1  -maxdepth 1 -path "/usr/share/man/man*" -prune -o -exec rm -rf {} \;
