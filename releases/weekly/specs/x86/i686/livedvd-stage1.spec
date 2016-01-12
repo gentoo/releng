@@ -161,6 +161,7 @@ livecd/packages:
 	net-p2p/limewire
 	net-print/cups
 	net-proxy/dante
+	net-proxy/ntlmaps
 	net-proxy/tsocks
 	net-wireless/aircrack-ng
 	net-wireless/airsnort
