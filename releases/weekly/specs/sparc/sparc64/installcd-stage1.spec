@@ -57,7 +57,6 @@ livecd/packages:
 	net-misc/vconfig
 	net-proxy/dante
 # Not keyworded
-#	net-proxy/ntlmaps
 	net-proxy/tsocks
 #	net-wireless/ipw2100-firmware
 #	net-wireless/ipw2200-firmware

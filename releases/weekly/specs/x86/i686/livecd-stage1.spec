@@ -72,7 +72,6 @@ livecd/packages:
 	net-misc/whois
 	net-p2p/bittorrent
 	net-proxy/dante
-	net-proxy/ntlmaps
 	net-proxy/tsocks
 ### Masked by ~x86
 #	net-wireless/b43-fwcutter
