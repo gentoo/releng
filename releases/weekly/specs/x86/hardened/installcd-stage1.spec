@@ -50,7 +50,7 @@ livecd/packages:
 	net-misc/rdate
 	net-misc/vconfig
 	net-proxy/dante
-	net-proxy/ntlmaps
+#	net-proxy/ntlmaps
 	net-proxy/tsocks
 	net-wireless/ipw2100-firmware
 	net-wireless/ipw2200-firmware

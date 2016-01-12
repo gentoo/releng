@@ -49,7 +49,7 @@ livecd/packages:
 	net-misc/rdate
 #	net-misc/vconfig
 	net-proxy/dante
-	net-proxy/ntlmaps
+#	net-proxy/ntlmaps
 # Not keyworded
 #	net-proxy/tsocks
 #	net-wireless/ipw2100-firmware

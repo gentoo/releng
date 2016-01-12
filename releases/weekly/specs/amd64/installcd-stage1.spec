@@ -56,7 +56,7 @@ livecd/packages:
 	net-misc/rsync
 	net-misc/vconfig
 	net-proxy/dante
-	net-proxy/ntlmaps
+#	net-proxy/ntlmaps
 	net-proxy/tsocks
 	net-wireless/b43-fwcutter
 ### Masked (~keywords)
