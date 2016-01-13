@@ -20,11 +20,11 @@ echo 'vm.swappiness = 0' >> /etc/sysctl.conf
 mkdir /boot/grub
 echo 'GRUB_CMDLINE_LINUX="console=tty0 console=ttyS0,115200n8"' >> /etc/default/grub
 grub2-mkconfig -o /boot/grub/grub.cfg
-sed -r -i 's/loop[0-9]+p1/vda2/g' /boot/grub/grub.cfg
-sed -i 's/UUID=[a-z,0-9,-]*/\/dev\/vda2/g' /boot/grub/grub.cfg
+sed -r -i 's/loop[0-9]+p1/LABEL\=cloudimg-rootfs/g' /boot/grub/grub.cfg
+sed -i 's/root=.*\ ro/root=LABEL\=cloudimg-rootfs\ ro/' /boot/grub/grub.cfg
 
 # And the fstab
-echo '/dev/vda2 / ext4 defaults 0 0' > /etc/fstab
+echo 'LABEL=cloudimg-rootfs / ext4 defaults 0 0' > /etc/fstab
 
 # allow the console log
 sed -i 's/#s0/s0/g' /etc/inittab
@@ -68,12 +68,6 @@ sed -i '/^USE=\"\${USE}\ \ build\"$/d' /etc/portage/make.conf
 # clean up system
 passwd -d root
 passwd -l root
-rm -R -f /usr/portage/distfiles/*
-rm -f /etc/ssh/ssh_host_*
-rm -f /root/.bash_history
-rm -f /root/.nano_history
-rm -f /root/.lesshst
-rm -f /root/.ssh/known_hosts
-rm -f /usr/src/linux
-for i in $(find /var/log -type f); do echo > $i; done
-for i in $(find /tmp -type f); do rm -f $i; done
+for i in $(find /var/log -type f); do truncate -s 0 $i; done
+# remove foreign manpages
+find /usr/share/man/ -mindepth 1  -maxdepth 1 -path "/usr/share/man/man*" -prune -o -exec rm -rf {} \;

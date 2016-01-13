@@ -22,6 +22,7 @@ netboot2/use:
  shadow
  readline
  ssl
+ unicode
 
 netboot2/packages:
 	sys-apps/s390-tools

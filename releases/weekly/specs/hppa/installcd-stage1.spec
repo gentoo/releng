@@ -48,7 +48,7 @@ livecd/packages:
 	net-misc/rdate
 	net-misc/vconfig
 	net-proxy/dante
-	net-proxy/ntlmaps
+#	net-proxy/ntlmaps
 	sys-apps/ethtool
 	sys-apps/hdparm
 	sys-apps/hwsetup

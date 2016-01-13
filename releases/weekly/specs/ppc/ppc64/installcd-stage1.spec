@@ -53,7 +53,7 @@ livecd/packages:
 	net-misc/iputils
 	net-misc/ntp
 	net-misc/rdate
-	net-proxy/ntlmaps
+#	net-proxy/ntlmaps
 	net-wireless/b43-fwcutter
 	net-wireless/bcm43xx-fwcutter
 	net-wireless/wireless-tools

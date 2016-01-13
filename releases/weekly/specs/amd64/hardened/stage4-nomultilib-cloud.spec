@@ -54,7 +54,37 @@ stage4/rcadd:
 	syslog-ng|default
 
 boot/kernel: gentoo
-boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /home/release/releng/releases/weekly/kconfig/amd64/installcd-3.18.12.config
+boot/kernel/gentoo/sources: hardened-sources
+boot/kernel/gentoo/config: /home/release/releng/releases/weekly/kconfig/amd64/cloud-amd64-hardened.config
 boot/kernel/gentoo/extraversion: openstack
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
+
+# all of the cleanup...
+stage4/unmerge:
+	sys-kernel/genkernel
+	sys-kernel/gentoo-sources
+
+stage4/empty:
+	/root/.ccache
+	/tmp
+	/usr/portage/distfiles
+	/usr/src
+	/var/cache/edb/dep
+	/var/cache/genkernel
+	/var/empty
+	/var/run
+	/var/state
+	/var/tmp
+
+stage4/rm:
+	/etc/*-
+	/etc/*.old
+	/etc/ssh/ssh_host_*
+	/root/.*history
+	/root/.lesshst
+	/root/.ssh/known_hosts
+	/root/.viminfo
+	# Remove any generated stuff by genkernel
+	/usr/share/genkernel
+	# This is 3MB of crap for each copy
+	/usr/lib64/python*/site-packages/gentoolkit/test/eclean/testdistfiles.tar.gz

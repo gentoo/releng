@@ -110,7 +110,7 @@ livecd/unmerge:
 	dev-util/pkgconfig
 	net-misc/netifrc
 	net-misc/rsync
-	net-proxy/ntlmaps
+#	net-proxy/ntlmaps
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
