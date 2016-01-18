@@ -62,7 +62,7 @@ boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
 # all of the cleanup...
 stage4/unmerge:
 	sys-kernel/genkernel
-	sys-kernel/gentoo-sources
+	sys-kernel/hardened-sources
 
 stage4/empty:
 	/root/.ccache
