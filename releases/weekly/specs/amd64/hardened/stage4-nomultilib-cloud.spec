@@ -16,6 +16,7 @@ stage4/use:
 	sse
 	sse2
 	urandom
+  xattr
 
 stage4/packages:
 	app-admin/logrotate
