@@ -71,3 +71,7 @@ passwd -l root
 for i in $(find /var/log -type f); do truncate -s 0 $i; done
 # remove foreign manpages
 find /usr/share/man/ -mindepth 1  -maxdepth 1 -path "/usr/share/man/man*" -prune -o -exec rm -rf {} \;
+
+# fine if this fails, aka non-hardened
+echo 'migraging pax'
+/usr/sbin/migrate-pax -m
