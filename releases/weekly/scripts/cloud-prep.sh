@@ -59,7 +59,9 @@ etc-update --automode -5
 
 # Clean up portage
 emerge --verbose=n --depclean
-eix-update
+if [[ -a /usr/bin/eix ]]; then
+  eix-update
+fi
 emaint all -f
 eselect news read all
 eclean-dist --destructive
@@ -73,5 +75,7 @@ for i in $(find /var/log -type f); do truncate -s 0 $i; done
 find /usr/share/man/ -mindepth 1  -maxdepth 1 -path "/usr/share/man/man*" -prune -o -exec rm -rf {} \;
 
 # fine if this fails, aka non-hardened
-echo 'migraging pax'
-/usr/sbin/migrate-pax -m
+if -a [[ /usr/sbin/migrate-pax ]]; then
+  echo 'migraging pax'
+  /usr/sbin/migrate-pax -m
+fi
