@@ -75,7 +75,7 @@ for i in $(find /var/log -type f); do truncate -s 0 $i; done
 find /usr/share/man/ -mindepth 1  -maxdepth 1 -path "/usr/share/man/man*" -prune -o -exec rm -rf {} \;
 
 # fine if this fails, aka non-hardened
-if -a [[ /usr/sbin/migrate-pax ]]; then
+if [[ -a /usr/sbin/migrate-pax ]]; then
   echo 'migraging pax'
   /usr/sbin/migrate-pax -m
 fi
