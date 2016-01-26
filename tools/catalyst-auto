@@ -17,7 +17,8 @@ if [[ -z ${UNSHARE} ]] ; then
 fi
 unset UNSHARE
 
-config_file=
+declare -a config_files
+config_files=()
 verbose=0
 keep_tmpdir=0
 testing=0
@@ -98,7 +99,7 @@ do
       exit 0
       ;;
     -c|--config)
-      config_file=$1
+      config_files+=("$1")
       shift
       ;;
     -v|--verbose)
@@ -117,15 +118,24 @@ do
     esac
 done
 
-# Make sure all required values were specified
-if [ -z "${config_file}" -o ! -e "${config_file}" ]; then
-  usage "ERROR: You must specify a valid config file to use"
-  exit 1
-fi
-
 # Probe the default gitdir from this script name.
 GITDIR=$(dirname "$(dirname "$(realpath "$0")")")
-source ${config_file}
+
+doneconfig=0
+for config_file in ${config_files[@]}; do
+    # Make sure all required values were specified
+    if [ -z "${config_file}" -o ! -e "${config_file}" ]; then
+      usage "ERROR: You must specify a valid config file to use: '$config_file' is not valid"
+      exit 1
+    fi
+    source ${config_file}
+    doneconfig=1
+done
+if [[ $doneconfig -eq 0 ]]; then
+      usage "ERROR: You must specify at least one valid config file to use"
+      exit 1
+fi
+
 
 TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.XXXXXX)
 DATESTAMP=$(date +%Y%m%d)
