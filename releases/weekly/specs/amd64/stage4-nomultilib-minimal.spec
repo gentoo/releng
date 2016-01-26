@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/amd64/13.0/no-multilib
 snapshot: latest
 source_subpath: default/stage3-amd64-nomultilib-latest
-portage_confdir: /release/releng/releases/weekly/portage/minimal-stages
+portage_confdir: /release/releng/releases/weekly/portage/cloud-stages
 
 stage4/use:
 	bindist

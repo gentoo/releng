@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/amd64
 snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened-latest
-portage_confdir: /release/releng/releases/weekly/portage/minimal-stages
+portage_confdir: /release/releng/releases/weekly/portage/cloud-stages
 
 stage4/use:
 	bindist
