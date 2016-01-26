@@ -25,7 +25,6 @@ stage4/packages:
 	sys-apps/gptfdisk
 	sys-apps/iproute2
 	sys-apps/lsb-release
-	sys-block/parted
 	sys-devel/bc
 	sys-power/acpid
 stage4/fsscript: /release/releng/releases/weekly/scripts/cloud-prep.sh
