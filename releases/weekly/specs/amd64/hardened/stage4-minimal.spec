@@ -19,7 +19,7 @@ stage4/use:
 
 stage4/packages:
 	app-admin/sudo
-	net-misc/dhcpcd
+	net-misc/dhcp
 	sys-boot/grub
 	sys-apps/dmidecode
 	sys-apps/gptfdisk
@@ -31,7 +31,6 @@ stage4/fsscript: /release/releng/releases/weekly/scripts/cloud-prep.sh
 stage4/root_overlay: /release/releng/releases/weekly/overlays/cloud-overlay
 stage4/rcadd:
 	acpid|default
-	dhcpcd|default
 	net.lo|default
 	netmount|default
 	sshd|default
