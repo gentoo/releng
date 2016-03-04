@@ -13,11 +13,12 @@ prepare_confs() {
     local pstage=stage${p}
 
     local parch="${arch}"
-      [[ "${arch}" == "i686" ]] && parch="x86"
+    [[ "${arch}" == "i686" ]] && parch="x86"
 
     cat stage-all.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
-        -e "s:STAGE:${cstage}:g" \
+        -e "s:CSTAGE:${cstage}:g" \
+        -e "s:PSTAGE:${pstage}:g" \
         -e "s:SARCH:${arch}:g" \
         -e "s:PARCH:${parch}:g" \
         >  stage${s}-${arch}-systemd.conf
