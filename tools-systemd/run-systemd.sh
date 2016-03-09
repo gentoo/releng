@@ -33,15 +33,13 @@ main() {
 
   catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
-#  for arch in amd64 i686; do
-  for arch in amd64; do
+  for arch in amd64 i686; do
     prepare_confs ${arch}
   done
 
   # The parallelization `( do_stages ... ) &` doesn't work here
   # if catalyst is using snapcache, bug #519656
-#  for arch in amd64 i686; do
-  for arch in amd64; do
+  for arch in amd64 i686; do
     do_stages ${arch}
     [[ $? == 1 ]] && echo "FAILURE at ${arch}" | tee zzz.log
   done
