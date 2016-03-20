@@ -34,7 +34,21 @@ VERBOSEP=
 [ -n "$VERBOSE" ] && RSYNC_OPTS+=( -v )
 [ -n "$VERBOSEP" ] && VERBOSEP="-v"
 
-for ARCH in "${ARCHES[@]}"; do
+usage() {
+	cat <<EOF
+Usage: $0
+
+Move releases from the incoming upload directory to the outgoing release
+directory so they can be pushed out to mirrors.
+Also update the "latest" links/files so people can easily find the current
+version for any particular arch/release.
+EOF
+	exit 1
+}
+
+process_arch() {
+	local ARCH=$1
+
 	rc=0
 	fail=0
 
@@ -147,7 +161,18 @@ for ARCH in "${ARCHES[@]}"; do
 	else
 		echo "There was some failure for $ARCH during the weekly sync. Not doing cleanup for fear of dataloss." 1>&2
 	fi
+}
 
-done
+main() {
+	if [[ $# -ne 0 ]]; then
+		usage
+	fi
+
+	local arch
+	for arch in "${ARCHES[@]}"; do
+		process_arch "${arch}"
+	done
+}
+main "$@"
 
 # vim:ts=2 sw=2 noet ft=sh:
