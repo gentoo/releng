@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Where artifacts are uploaded by builders.
+INCOMING_BASE="/release/weekly/builds"
+# Where artifacts are moved to so they can be uploaded to mirrors.
+OUTGOING_BASE="/release/distfiles/weekly"
+# Scratch space used when moving files from incoming to outgoing.
+TMPDIR_BASE="/release/distfiles/tmp/buildsync/partial"
+
 ARCHES=(
 	alpha
 	amd64
@@ -43,39 +50,50 @@ EOF
 	exit ${1:-1}
 }
 
+# Copy artifacts for an arch to the outgoing directory.
+copy_arch_to_outgoing() {
+	local ARCH=$1 indir=$2 outdir=$3 tmpdir=$4
+	local i t rc
+
+	if [[ ! -d ${indir} ]]; then
+		# Nothing to do for this arch.
+		return
+	fi
+
+	# Copying
+	for i in $(find ${indir} -type f | grep -- '-20[0123][0-9]\{5\}' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
+		#echo "Doing $i"
+		t="${outdir}/${i}"
+		mkdir -p ${t} 2>/dev/null
+		rsync "${RSYNC_OPTS[@]}" --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
+		rc=$?
+		if [ $rc -eq 0 ]; then
+			find ${indir} -type f -name "*${i}*" -print0 | xargs -0 --no-run-if-empty $DEBUGP rm $VERBOSEP -f
+		else
+			echo "Not deleting ${indir}/*${i}*, rsync failed!" 1>&2
+			fail=1
+		fi
+	done
+	find ${outdir} -mindepth 1 -type d \
+		| egrep -v current \
+		| sort -r \
+		| tr '\n' '\0' \
+		| xargs -0 --no-run-if-empty rmdir --ignore-fail-on-non-empty
+}
+
 process_arch() {
 	local ARCH=$1
 
-	rc=0
 	fail=0
 
-	indir=/release/weekly/builds/${ARCH}
-	outdir=/release/distfiles/weekly/${ARCH}
-	tmpdir=/release/distfiles/tmp/buildsync/partial/${ARCH}
+	indir="${INCOMING_BASE}/${ARCH}"
+	outdir="${OUTGOING_BASE}/${ARCH}"
+	tmpdir="${TMPDIR_BASE}/${ARCH}"
 
 	mkdir -p ${tmpdir} 2>/dev/null
 
-	# Copying
-	if [ -d "${indir}" ]; then
-		for i in $(find ${indir} -type f | grep -- '-20[0123][0-9]\{5\}' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
-			#echo "Doing $i"
-			t="${outdir}/${i}"
-			mkdir -p ${t} 2>/dev/null
-			rsync "${RSYNC_OPTS[@]}" --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
-			rc=$?
-			if [ $rc -eq 0 ]; then
-				find ${indir} -type f -name "*${i}*" -print0 | xargs -0 --no-run-if-empty $DEBUGP rm $VERBOSEP -f
-			else
-				echo "Not deleting ${indir}/*${i}*, rsync failed!" 1>&2
-				fail=1
-			fi
-		done
-		find ${outdir} -mindepth 1 -type d \
-			| egrep -v current \
-			| sort -r \
-			| tr '\n' '\0' \
-			|xargs -0 --no-run-if-empty rmdir --ignore-fail-on-non-empty
-	fi
+	# Sync incoming->outgoing first.
+	copy_arch_to_outgoing "${ARCH}" "${indir}" "${outdir}" "${tmpdir}"
 
 	# ================================================================
 	# Build data for revealing latest:
