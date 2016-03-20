@@ -74,11 +74,9 @@ copy_arch_to_outgoing() {
 			fail=1
 		fi
 	done
-	find ${outdir} -mindepth 1 -type d \
-		| egrep -v current \
-		| sort -r \
-		| tr '\n' '\0' \
-		| xargs -0 --no-run-if-empty rmdir --ignore-fail-on-non-empty
+	find "${outdir}" \
+		-depth -mindepth 1 -type d \
+		-exec rmdir --ignore-fail-on-non-empty {} +
 }
 
 process_arch() {
