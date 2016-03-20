@@ -153,10 +153,11 @@ process_arch() {
 	fi
 
 	# New variant preserve code
-	variants=$(find 20* \( -iname '*.iso' -o "${EXTENSIONS[@]}" \) -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)
+	find_variants=( '(' -iname '*.iso' -o -name 'netboot-*' -o "${EXTENSIONS[@]}" ')' )
+	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
-		variant_path=$(find 20* -iname "${v}-20*" \( "${EXTENSIONS[@]}" -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		if [ -z "${variant_path}" -o ! -e "${variant_path}" ]; then
 			echo "$ARCH: Variant ${v} is missing" 1>&2
 			continue
