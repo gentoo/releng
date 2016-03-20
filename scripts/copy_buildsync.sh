@@ -17,8 +17,6 @@ RSYNC_OPTS=(
 	-aO
 	--delay-updates
 )
-DEBUG=
-VERBOSE=
 EXTENSIONS="[.tar.xz,.tar.bz2,.tar.gz,.tar,.sfs]"
 
 OUT_STAGE3="latest-stage3.txt"
@@ -29,21 +27,20 @@ OUT_ISO="latest-iso.txt"
 DEBUGP=
 VERBOSEP=
 
-[ -n "$DEBUG" ] && DEBUGP=echo
-[ -n "$DEBUG" ] && RSYNC_OPTS+=( -n )
-[ -n "$VERBOSE" ] && RSYNC_OPTS+=( -v )
-[ -n "$VERBOSEP" ] && VERBOSEP="-v"
-
 usage() {
 	cat <<EOF
-Usage: $0
+Usage: $0 [options]
 
 Move releases from the incoming upload directory to the outgoing release
 directory so they can be pushed out to mirrors.
 Also update the "latest" links/files so people can easily find the current
 version for any particular arch/release.
+
+Options:
+  -v, --verbose    Run in verbose mode
+  -d, --debug      Run in debug mode
 EOF
-	exit 1
+	exit ${1:-1}
 }
 
 process_arch() {
@@ -164,10 +161,28 @@ process_arch() {
 }
 
 main() {
-	if [[ $# -ne 0 ]]; then
-		usage
-	fi
+	# Process all the command line options first.
+	while [[ $# -ne 0 ]]; do
+		case $1 in
+		-d|--debug)
+			DEBUGP="echo"
+			RSYNC_OPTS+=( -n )
+			;;
+		-v|--verbose)
+			VERBOSEP="-v"
+			RSYNC_OPTS+=( -v )
+			;;
+		-h|--help)
+			usage 0
+			;;
+		*)
+			usage 1
+			;;
+		esac
+		shift
+	done
 
+	# Process all the architectures.
 	local arch
 	for arch in "${ARCHES[@]}"; do
 		process_arch "${arch}"
