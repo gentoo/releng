@@ -1,10 +1,24 @@
 #!/bin/bash
 
-ARCHES="alpha amd64 arm hppa ia64      ppc s390 sh sparc x86"
-       #alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86
-RSYNC_OPTS="-aO --delay-updates"
-DEBUG=1
-VERBOSE=1
+ARCHES=(
+	alpha
+	amd64
+	arm
+	hppa
+	ia64
+	#mips
+	ppc
+	s390
+	sh
+	sparc
+	x86
+)
+RSYNC_OPTS=(
+	-aO
+	--delay-updates
+)
+DEBUG=
+VERBOSE=
 EXTENSIONS="[.tar.xz,.tar.bz2,.tar.gz,.tar,.sfs]"
 
 OUT_STAGE3="latest-stage3.txt"
@@ -16,11 +30,11 @@ DEBUGP=
 VERBOSEP=
 
 [ -n "$DEBUG" ] && DEBUGP=echo
-[ -n "$DEBUG" ] && RSYNC_OPTS="${RSYNC_OPTS} -n"
-[ -n "$VERBOSE" ] && RSYNC_OPTS="${RSYNC_OPTS} -v"
+[ -n "$DEBUG" ] && RSYNC_OPTS+=( -n )
+[ -n "$VERBOSE" ] && RSYNC_OPTS+=( -v )
 [ -n "$VERBOSEP" ] && VERBOSEP="-v"
 
-for ARCH in $ARCHES; do
+for ARCH in "${ARCHES[@]}"; do
 	rc=0
 	fail=0
 
@@ -36,7 +50,7 @@ for ARCH in $ARCHES; do
 			#echo "Doing $i"
 			t="${outdir}/${i}"
 			mkdir -p ${t} 2>/dev/null
-			rsync ${RSYNC_OPTS} --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
+			rsync "${RSYNC_OPTS[@]}" --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
 			rc=$?
 			if [ $rc -eq 0 ]; then
 				find ${indir} -type f -name "*${i}*" -print0 | xargs -0 --no-run-if-empty $DEBUGP rm $VERBOSEP -f
