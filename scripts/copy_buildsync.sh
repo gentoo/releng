@@ -24,7 +24,16 @@ RSYNC_OPTS=(
 	-aO
 	--delay-updates
 )
-EXTENSIONS="[.tar.xz,.tar.bz2,.tar.gz,.tar,.sfs]"
+# Command line for `find` to figure out what files are release artifacts.
+EXTENSIONS=(
+	'('
+	-name '*.tar.xz' -o
+	-name '*.tar.bz2' -o
+	-name '*.tar.gz' -o
+	-name '*.tar' -o
+	-name '*.sfs'
+	')'
+)
 
 OUT_STAGE3="latest-stage3.txt"
 OUT_ISO="latest-iso.txt"
@@ -101,7 +110,7 @@ process_arch() {
 	# %T@
 
 	iso_list="$(find 20* -name '*.iso' -printf '%h %f %h/%f\n' |grep -v hardened | sort -n)"
-	stage3_list=$(find 20* -name "stage3*${EXTENSIONS}" -printf '%h %f %h/%f\n' | grep -v hardened | sort -n)
+	stage3_list=$(find 20* -name "stage3*" -a "${EXTENSIONS[@]}" -printf '%h %f %h/%f\n' | grep -v hardened | sort -n)
 	latest_iso_date="$(echo -e "${iso_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	latest_stage3_date="$(echo -e "${stage3_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	header="$(echo -e "# Latest as of $(date -uR)\n# ts=$(date -u +%s)")"
@@ -144,10 +153,10 @@ process_arch() {
 	fi
 
 	# New variant preserve code
-	variants=$(find 20* \( -iname '*.iso' -o -iname "*${EXTENSIONS}" \) -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)
+	variants=$(find 20* \( -iname '*.iso' -o "${EXTENSIONS[@]}" \) -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
-		variant_path=$(find 20* -iname "${v}-20*" \( -name "*${EXTENSIONS}" -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		variant_path=$(find 20* -iname "${v}-20*" \( "${EXTENSIONS[@]}" -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		if [ -z "${variant_path}" -o ! -e "${variant_path}" ]; then
 			echo "$ARCH: Variant ${v} is missing" 1>&2
 			continue
