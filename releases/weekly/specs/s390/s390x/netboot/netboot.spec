@@ -8,7 +8,7 @@ target:          netboot2
 subarch:         s390x
 rel_type:        default
 profile:         default/linux/s390/13.0/s390x
-portage_confdir: /root/releng/releases/weekly/specs/s390/s390x/netboot/portage
+portage_confdir: @GITDIR@/releases/weekly/specs/s390/s390x/netboot/portage
 
 
 boot/kernel:                      netboot64

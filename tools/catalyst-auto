@@ -203,6 +203,12 @@ for i in $(find -name '*.spec'); do
       sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" ${i}
     done
   fi
+
+  # Expand vars that the spec expects us to.
+  sed -i \
+    -e "s:@DATESTAMP@:${DATESTAMP}:g" \
+    -e "s:@GITDIR@:${GITDIR}:g" \
+    "${i}"
 done
 
 if [ "${testing}" -eq 1 ]; then
