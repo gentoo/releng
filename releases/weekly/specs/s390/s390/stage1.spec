@@ -6,3 +6,4 @@ profile: default/linux/s390/13.0
 snapshot: 2008.0
 source_subpath: default/stage3-s390-latest
 update_seed: yes
+portage_confdir: @GITDIR@/releases/weekly/portage/stages
