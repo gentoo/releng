@@ -123,14 +123,17 @@ process_arch() {
 
 		# In the new variant preserve code there is a better way to do this
 		#echo -e "${stage3_list}" |awk '{print $3}' |grep "$latest_stage3_date" >>${OUT_STAGE3}
-		rm -f current-stage3
 
-		# The "latest stage3" concept doesn't apply to the arm/hppa/s390/sh variants
-		# that are pushed on different days of the week.
-		# Disable it for amd64/x86 as well as any failures cause confusion to users
-		if [[ ! $(echo ${outdir} | egrep 'amd64|arm|hppa|ppc|s390|sh|x86') ]]; then
-			ln -sf "$latest_stage3_date" current-stage3
-		fi
+		# The "latest stage3" concept works for only a few arches -- ones that
+		# do not have more than one stage3 target per arch (i.e. multilib, etc...).
+		case ${ARCH} in
+		amd64|arm|hppa|ppc|s390|sh|x86)
+			rm -f current-stage3
+			;;
+		*)
+			ln -sfT "$latest_stage3_date" current-stage3
+			;;
+		esac
 	fi
 
 	# New variant preserve code
