@@ -112,11 +112,18 @@ process_arch() {
 
 	if [ -n "${iso_list}" ]; then
 		echo -e "${header}" >"${OUT_ISO}"
-		if [[ ! $(echo ${iso_list} | egrep "amd64|x86") ]]; then
-			echo -e "${iso_list}" |awk '{print $3}' | grep "$latest_iso_date" >>${OUT_ISO}
+		# Some arches produce more than one type of iso.
+		# Only apply the current-iso link logic to them.
+		# TODO: Should make this dynamic based on the iso list.
+		case ${ARCH} in
+		amd64|x86)
 			rm -f current-iso
-			ln -sf "$latest_iso_date" current-iso
-		fi
+			;;
+		*)
+			echo -e "${iso_list}" |awk '{print $3}' | grep "$latest_iso_date" >>${OUT_ISO}
+			ln -sfT "$latest_iso_date" current-iso
+			;;
+		esac
 	fi
 	if [ -n "${stage3_list}" ]; then
 		echo -e "${header}" >"${OUT_STAGE3}"
