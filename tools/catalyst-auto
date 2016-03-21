@@ -24,6 +24,7 @@ config_files=()
 verbose=0
 keep_tmpdir=0
 testing=0
+preclean=0
 
 # Set pipefail so that run_cmd returns the right value in $?
 set -o pipefail
@@ -41,6 +42,7 @@ Usage:
 
 Options:
   -c|--config         Specifies the config file to use (required)
+  -C|--preclean       Clean up loose artifacts from previous runs
   -v|--verbose        Send output of commands to console as well as log
   -k|--keep-tmpdir    Don't remove temp dir when build finishes
   -t|--test           Stop after mangling specs and copying files
@@ -119,6 +121,9 @@ do
     -t|--test)
       testing=1
       ;;
+    -C|--preclean)
+      preclean=1
+      ;;
     -*)
       usage "ERROR: You have specified an invalid option: ${a}"
       exit 1
@@ -148,6 +153,12 @@ BUILD_SRCDIR_BASE=$(catalyst_var storedir)
 
 TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.XXXXXX)
 DATESTAMP=$(date +%Y%m%d)
+
+# Nuke any previous tmpdirs to keep them from accumulating.
+if [[ ${preclean} -eq 1 ]]; then
+  rm -rf "${TMPDIR%.??????}".*
+  mkdir "${TMPDIR}"
+fi
 
 if [ ${verbose} = 1 ]; then
   echo "TMPDIR = ${TMPDIR}"
@@ -223,6 +234,18 @@ done
 if [ "${testing}" -eq 1 ]; then
   echo "Exiting due to --test"
   exit
+fi
+
+if [[ ${preclean} -eq 1 ]]; then
+  snapshot_cache=$(catalyst_var snapshot_cache)
+  if [[ -z ${snapshot_cache} ]]; then
+    echo "error: snapshot_cache not set in config file"
+    exit 1
+  fi
+  pushd "${BUILD_SRCDIR_BASE}" >/dev/null || exit 1
+  rm -rf --one-file-system \
+    kerncache packages snapshots tmp "${snapshot_cache}"/*
+  popd >/dev/null
 fi
 
 # Create snapshot
