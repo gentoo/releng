@@ -17,6 +17,8 @@ if [[ -z ${UNSHARE} ]] ; then
 fi
 unset UNSHARE
 
+CATALYST_CONFIG=/etc/catalyst/catalyst.conf
+
 declare -a config_files
 config_files=()
 verbose=0
@@ -87,6 +89,12 @@ post_build() {
   local foo=bar
 }
 
+catalyst_var() {
+  # Extract a setting from the catalyst.conf.
+  local var=$1
+  (. "${CATALYST_CONFIG}"; echo "${!var}")
+}
+
 # Parse args
 params=${#}
 while [ ${#} -gt 0 ]
@@ -136,6 +144,7 @@ if [[ $doneconfig -eq 0 ]]; then
       exit 1
 fi
 
+BUILD_SRCDIR_BASE=$(catalyst_var storedir)
 
 TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.XXXXXX)
 DATESTAMP=$(date +%Y%m%d)
