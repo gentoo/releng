@@ -25,6 +25,7 @@ verbose=0
 keep_tmpdir=0
 testing=0
 preclean=0
+lastrun=0
 
 # Set pipefail so that run_cmd returns the right value in $?
 set -o pipefail
@@ -46,6 +47,7 @@ Options:
   -v|--verbose        Send output of commands to console as well as log
   -k|--keep-tmpdir    Don't remove temp dir when build finishes
   -t|--test           Stop after mangling specs and copying files
+  --interval <days>   Exit if last successful run was less than <days> ago
   -h|--help           Show this message and quit
 
 EOH
@@ -124,6 +126,10 @@ do
     -C|--preclean)
       preclean=1
       ;;
+    --interval)
+      lastrun=$1
+      shift
+      ;;
     -*)
       usage "ERROR: You have specified an invalid option: ${a}"
       exit 1
@@ -150,6 +156,16 @@ if [[ $doneconfig -eq 0 ]]; then
 fi
 
 BUILD_SRCDIR_BASE=$(catalyst_var storedir)
+
+# See if we had a recent success.
+if [[ ${lastrun} -ne 0 ]]; then
+  last_success_file="${BUILD_SRCDIR_BASE}/.last_success"
+  delay=$(( lastrun * 24 * 60 * 60 ))
+  last_success=$(head -1 "${last_success_file}" 2>/dev/null || echo 0)
+  if [[ $(date +%s) -lt $(( last_success + delay )) ]]; then
+    exit 0
+  fi
+fi
 
 TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.XXXXXX)
 DATESTAMP=$(date +%Y%m%d)
@@ -298,6 +314,11 @@ if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
 fi
 
 if [ ${build_failure} = 0 ]; then
+  if [[ ${lastrun} -ne 0 ]]; then
+    stamp=$(date)
+    (date -d"${stamp}" +%s; echo "${stamp}") >"${last_success_file}"
+  fi
+
   send_email "Catalyst build success" "Build process complete."
 
   if [ "${keep_tmpdir}" = 0 ]; then
