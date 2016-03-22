@@ -187,7 +187,7 @@ if ! mkdir -p "${TMPDIR}"/{specs,kconfig,log}; then
 fi
 
 if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
-  send_email "Catalyst build error - pre_build" "Your pre_build function sucks" "${TMPDIR}/log/pre_build.log"
+  send_email "Catalyst build error - pre_build" "The pre_build function failed" "${TMPDIR}/log/pre_build.log"
   exit 1
 fi
 
@@ -309,7 +309,7 @@ for a in "" ${SETS}; do
 done
 
 if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
-  send_email "Catalyst build error - post_build" "Your post_build function sucks" "${TMPDIR}/log/post_build.log"
+  send_email "Catalyst build error - post_build" "The post_build function failed" "${TMPDIR}/log/post_build.log"
   exit 1
 fi
 
