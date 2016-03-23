@@ -26,6 +26,7 @@ keep_tmpdir=0
 testing=0
 preclean=0
 lastrun=0
+lock_file=
 
 # Set pipefail so that run_cmd returns the right value in $?
 set -o pipefail
@@ -48,6 +49,7 @@ Options:
   -k|--keep-tmpdir    Don't remove temp dir when build finishes
   -t|--test           Stop after mangling specs and copying files
   --interval <days>   Exit if last successful run was less than <days> ago
+  -l|--lock <file>    File to grab a lock on to prevent multiple invocations
   -h|--help           Show this message and quit
 
 EOH
@@ -130,12 +132,25 @@ do
       lastrun=$1
       shift
       ;;
+    -l|--lock)
+      lock_file=$1
+      shift
+      ;;
     -*)
       usage "ERROR: You have specified an invalid option: ${a}"
       exit 1
       ;;
     esac
 done
+
+(
+
+if [[ -n ${lock_file} ]]; then
+  if ! flock -n 9; then
+    echo "catalyst-auto already running"
+    exit 1
+  fi
+fi
 
 # Probe the default gitdir from this script name.
 GITDIR=$(dirname "$(dirname "$(realpath "$0")")")
@@ -331,3 +346,5 @@ if [ ${build_failure} = 0 ]; then
 else
   send_email "Catalyst build complete, but with errors" "Build process has completed, but there were errors. Please consult previous emails to determine the problem."
 fi
+
+) 9>"${lock_file:-/dev/null}"
