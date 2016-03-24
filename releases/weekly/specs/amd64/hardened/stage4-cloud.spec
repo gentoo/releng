@@ -7,7 +7,7 @@ snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened-latest
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
-portage_confdir: /home/release/releng/releases/weekly/portage/cloud-stages
+portage_confdir: @REPO_DIR@/releases/weekly/portage/cloud-stages
 
 stage4/use:
 	bash-completion
@@ -38,8 +38,8 @@ stage4/packages:
 	sys-devel/bc
 	sys-power/acpid
 	sys-process/cronie
-stage4/fsscript: /home/release/releng/releases/weekly/scripts/cloud-prep.sh
-stage4/root_overlay: /home/release/releng/releases/weekly/overlays/cloud-overlay
+stage4/fsscript: @REPO_DIR@/releases/weekly/scripts/cloud-prep.sh
+stage4/root_overlay: @REPO_DIR@/releases/weekly/overlays/cloud-overlay
 stage4/rcadd:
 	acpid|default
 	cloud-config|default
@@ -55,7 +55,7 @@ stage4/rcadd:
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: /home/release/releng/releases/weekly/kconfig/amd64/cloud-amd64-hardened.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/cloud-amd64-hardened.config
 boot/kernel/gentoo/extraversion: openstack
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
 

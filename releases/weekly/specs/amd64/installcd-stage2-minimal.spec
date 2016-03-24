@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/amd64/13.0/no-multilib
 snapshot: latest
 source_subpath: default/livecd-stage1-amd64-latest
-portage_confdir: /home/release/releng/releases/weekly/portage/installcd
+portage_confdir: @REPO_DIR@/releases/weekly/portage/installcd
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
@@ -19,7 +19,7 @@ livecd/rcdel: keymaps|boot
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /home/release/releng/releases/weekly/kconfig/amd64/installcd-3.18.12.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/installcd-3.18.12.config
 boot/kernel/gentoo/use:
 	-*
 	alsa
