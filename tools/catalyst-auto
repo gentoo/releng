@@ -170,7 +170,8 @@ if [[ $doneconfig -eq 0 ]]; then
       exit 1
 fi
 
-BUILD_SRCDIR_BASE=$(catalyst_var storedir)
+# Some configs will set this explicitly, so don't clobber it.
+: ${BUILD_SRCDIR_BASE:=$(catalyst_var storedir)}
 
 # See if we had a recent success.
 if [[ ${lastrun} -ne 0 ]]; then
