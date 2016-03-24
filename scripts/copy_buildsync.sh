@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Where artifacts are uploaded by builders.
+INCOMING_BASE="/home/buildsync/builds"
+# Where artifacts are moved to so they can be uploaded to mirrors.
+OUTGOING_BASE="/home/release/weekly"
+# Scratch space used when moving files from incoming to outgoing.
+TMPDIR_BASE="/home/release/tmp/buildsync/partial"
+
 ARCHES=(
 	alpha
 	amd64
@@ -17,7 +24,16 @@ RSYNC_OPTS=(
 	-aO
 	--delay-updates
 )
-EXTENSIONS="[.tar.xz,.tar.bz2,.tar.gz,.tar,.sfs]"
+# Command line for `find` to figure out what files are release artifacts.
+EXTENSIONS=(
+	'('
+	-name '*.tar.xz' -o
+	-name '*.tar.bz2' -o
+	-name '*.tar.gz' -o
+	-name '*.tar' -o
+	-name '*.sfs'
+	')'
+)
 
 OUT_STAGE3="latest-stage3.txt"
 OUT_ISO="latest-iso.txt"
@@ -43,39 +59,48 @@ EOF
 	exit ${1:-1}
 }
 
+# Copy artifacts for an arch to the outgoing directory.
+copy_arch_to_outgoing() {
+	local ARCH=$1 indir=$2 outdir=$3 tmpdir=$4
+	local i t rc
+
+	if [[ ! -d ${indir} ]]; then
+		# Nothing to do for this arch.
+		return
+	fi
+
+	# Copying
+	for i in $(find ${indir} -type f | grep -- '-20[0123][0-9]\{5\}' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
+		#echo "Doing $i"
+		t="${outdir}/${i}"
+		mkdir -p ${t} 2>/dev/null
+		rsync "${RSYNC_OPTS[@]}" --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
+		rc=$?
+		if [ $rc -eq 0 ]; then
+			find ${indir} -type f -name "*${i}*" -print0 | xargs -0 --no-run-if-empty $DEBUGP rm $VERBOSEP -f
+		else
+			echo "Not deleting ${indir}/*${i}*, rsync failed!" 1>&2
+			fail=1
+		fi
+	done
+	find "${outdir}" \
+		-depth -mindepth 1 -type d \
+		-exec rmdir --ignore-fail-on-non-empty {} +
+}
+
 process_arch() {
 	local ARCH=$1
 
-	rc=0
 	fail=0
 
-	indir=/home/buildsync/builds/${ARCH}
-	outdir=/release/weekly/${ARCH}
-	tmpdir=/release/tmp/buildsync/partial/${ARCH}
+	indir="${INCOMING_BASE}/${ARCH}"
+	outdir="${OUTGOING_BASE}/${ARCH}"
+	tmpdir="${TMPDIR_BASE}/${ARCH}"
 
 	mkdir -p ${tmpdir} 2>/dev/null
 
-	# Copying
-	if [ -d "${indir}" ]; then
-		for i in $(find ${indir} -type f | grep -- '-20[0123][0-9]\{5\}' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
-			#echo "Doing $i"
-			t="${outdir}/${i}"
-			mkdir -p ${t} 2>/dev/null
-			rsync "${RSYNC_OPTS[@]}" --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
-			rc=$?
-			if [ $rc -eq 0 ]; then
-				find ${indir} -type f -name "*${i}*" -print0 | xargs -0 --no-run-if-empty $DEBUGP rm $VERBOSEP -f
-			else
-				echo "Not deleting ${indir}/*${i}*, rsync failed!" 1>&2
-				fail=1
-			fi
-		done
-		find ${outdir} -mindepth 1 -type d \
-			| egrep -v current \
-			| sort -r \
-			| tr '\n' '\0' \
-			|xargs -0 --no-run-if-empty rmdir --ignore-fail-on-non-empty
-	fi
+	# Sync incoming->outgoing first.
+	copy_arch_to_outgoing "${ARCH}" "${indir}" "${outdir}" "${tmpdir}"
 
 	# ================================================================
 	# Build data for revealing latest:
@@ -84,10 +109,10 @@ process_arch() {
 	cd "${outdir}"
 	# %T@
 
-	iso_list="$(find 20* -name '*.iso' | grep -v hardened | sort -n -r)"
-	stage3_list="$(find 20* -name "stage3*${EXTENSIONS}" | grep -v hardened | sort -n -r)"
-	latest_iso_date="$(echo -e "${iso_list}" | awk '{print $1}' | cut -d/ -f1 | tail -n1)"
-	latest_stage3_date="$(echo -e "${stage3_list}" | awk '{print $1}' | cut -d/ -f1 | tail -n1)"
+	iso_list="$(find 20* -name '*.iso' -printf '%h %f %h/%f\n' |grep -v hardened | sort -n)"
+	stage3_list=$(find 20* -name "stage3*" -a "${EXTENSIONS[@]}" -printf '%h %f %h/%f\n' | grep -v hardened | sort -n)
+	latest_iso_date="$(echo -e "${iso_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
+	latest_stage3_date="$(echo -e "${stage3_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	header="$(echo -e "# Latest as of $(date -uR)\n# ts=$(date -u +%s)")"
 
 	# Do not remove this
@@ -96,32 +121,43 @@ process_arch() {
 
 	if [ -n "${iso_list}" ]; then
 		echo -e "${header}" >"${OUT_ISO}"
-		if [[ ! $(echo ${iso_list} | egrep "amd64|x86") ]]; then
-			echo -e "${iso_list}" |awk '{print $3}' | grep "$latest_iso_date" >>${OUT_ISO}
+		# Some arches produce more than one type of iso.
+		# Only apply the current-iso link logic to them.
+		# TODO: Should make this dynamic based on the iso list.
+		case ${ARCH} in
+		amd64|x86)
 			rm -f current-iso
-			ln -sf "$latest_iso_date" current-iso
-		fi
+			;;
+		*)
+			echo -e "${iso_list}" |awk '{print $3}' | grep "$latest_iso_date" >>${OUT_ISO}
+			ln -sfT "$latest_iso_date" current-iso
+			;;
+		esac
 	fi
 	if [ -n "${stage3_list}" ]; then
 		echo -e "${header}" >"${OUT_STAGE3}"
 
 		# In the new variant preserve code there is a better way to do this
 		#echo -e "${stage3_list}" |awk '{print $3}' |grep "$latest_stage3_date" >>${OUT_STAGE3}
-		rm -f current-stage3
 
-		# The "latest stage3" concept doesn't apply to the arm/hppa/s390/sh variants
-		# that are pushed on different days of the week.
-		# Disable it for amd64/x86 as well as any failures cause confusion to users
-		if [[ ! $(echo ${outdir} | egrep 'amd64|arm|hppa|ppc|s390|sh|x86') ]]; then
-			ln -sf "$latest_stage3_date" current-stage3
-		fi
+		# The "latest stage3" concept works for only a few arches -- ones that
+		# do not have more than one stage3 target per arch (i.e. multilib, etc...).
+		case ${ARCH} in
+		amd64|arm|hppa|ppc|s390|sh|x86)
+			rm -f current-stage3
+			;;
+		*)
+			ln -sfT "$latest_stage3_date" current-stage3
+			;;
+		esac
 	fi
 
 	# New variant preserve code
-	variants=$(find 20* \( -iname '*.iso' -o -iname "*${EXTENSIONS}" \) -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort | uniq)
+	find_variants=( '(' -iname '*.iso' -o -name 'netboot-*' -o "${EXTENSIONS[@]}" ')' )
+	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
-		variant_path=$(find 20* -iname "${v}-20*" \( -name "*${EXTENSIONS}" -o -iname '*.iso' \) -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		if [ -z "${variant_path}" -o ! -e "${variant_path}" ]; then
 			echo "$ARCH: Variant ${v} is missing" 1>&2
 			continue
