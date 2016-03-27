@@ -155,6 +155,12 @@ fi
 # Probe the default gitdir from this script name.
 GITDIR=$(dirname "$(dirname "$(realpath "$0")")")
 
+# Set up defaults that config files can override if they want.
+SUBARCH=$(uname -m)
+EMAIL_TO="releng@gentoo.org,gentoo-releng-autobuilds@lists.gentoo.org"
+EMAIL_FROM="catalyst@${HOSTNAME:-$(hostname)}"
+EMAIL_SUBJECT_PREPEND="[${SUBARCH}-auto]"
+
 doneconfig=0
 for config_file in ${config_files[@]}; do
     # Make sure all required values were specified
