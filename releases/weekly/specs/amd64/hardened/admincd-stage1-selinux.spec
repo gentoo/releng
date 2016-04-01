@@ -4,7 +4,7 @@ target: livecd-stage1
 rel_type: hardened
 profile: hardened/linux/amd64/selinux
 snapshot: latest
-source_subpath: hardened/stage3-amd64-hardened-latest-selinux
+source_subpath: hardened/stage3-amd64-hardened-selinux-latest
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/weekly/portage/admincd
 
