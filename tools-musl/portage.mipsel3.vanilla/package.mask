@@ -2,5 +2,4 @@
 >sys-apps/coreutils-8.23
 >sys-apps/iproute2-3.17.0
 >sys-apps/sandbox-2.6-r999
->sys-apps/util-linux-2.25.2-r99
 >sys-devel/gcc-4.8.5-r99
