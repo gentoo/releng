@@ -49,6 +49,7 @@ chown root:root /etc/conf.d/hostname
 # set a nice default for /etc/resolv.conf
 cat > /etc/resolv.conf << EOL
 nameserver 8.8.8.8
+nameserver 2001:4860:4860::8888
 EOL
 
 # let's upgrade (security fixes and otherwise)
