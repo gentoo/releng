@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/amd64
 snapshot: latest
 source_subpath: hardened/livecd-stage1-amd64-latest
-portage_confdir: /release/releng/releases/weekly/portage/admincd
+portage_confdir: /release/releng/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2

@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/x86/13.0
 snapshot: latest
 source_subpath: default/livecd-stage1-x86-latest
-portage_confdir: /release/releng/releases/weekly/portage/installcd
+portage_confdir: /release/releng/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2

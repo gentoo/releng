@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/amd64/13.0/no-multilib
 snapshot: latest
 source_subpath: default/livecd-stage1-amd64-latest
-portage_confdir: /release/releng/releases/weekly/portage/installcd
+portage_confdir: /release/releng/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2

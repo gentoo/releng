@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/ia64/13.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-ia64-2008.0
-portage_confdir: @GITDIR@/releases/weekly/portage/installcd
+portage_confdir: @GITDIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /home/armin76/tmp/elilo-3.6-cdtar.tar.bz2
