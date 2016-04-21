@@ -6,7 +6,7 @@ profile: hardened/linux/amd64
 snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened-latest
 compression_mode: pixz_x
-portage_confdir: @REPO_DIR@/releases/weekly/portage/admincd
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
 	deprecated

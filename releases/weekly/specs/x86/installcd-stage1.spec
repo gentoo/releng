@@ -6,7 +6,7 @@ profile: default/linux/x86/13.0
 snapshot: latest
 source_subpath: default/stage3-i486-latest
 compression_mode: pixz_x
-portage_confdir: /home/release/releng/releases/weekly/portage/installcd
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
 	deprecated

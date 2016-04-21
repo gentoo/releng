@@ -6,7 +6,7 @@ profile: default/linux/amd64/13.0/no-multilib
 snapshot: latest
 source_subpath: default/stage3-amd64-latest
 compression_mode: pixz_x
-portage_confdir: @REPO_DIR@/releases/weekly/portage/installcd
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
 	deprecated
