@@ -16,9 +16,14 @@ grep -v rootfs /proc/mounts > /etc/mtab
 echo 'net.ipv4.conf.eth0.arp_notify = 1' >> /etc/sysctl.conf
 echo 'vm.swappiness = 0' >> /etc/sysctl.conf
 
-# Let's configure out grub
+# Let's configure our grub
+# Access on both regular tty and serial console
 mkdir /boot/grub
-echo 'GRUB_CMDLINE_LINUX="console=tty0 console=ttyS0,115200n8"' >> /etc/default/grub
+cat >>/etc/default/grub <<EOF
+GRUB_TERMINAL='serial console'
+GRUB_CMDLINE_LINUX="console=tty0 console=ttyS0,115200n8"
+GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1"
+EOF
 grub2-mkconfig -o /boot/grub/grub.cfg
 sed -r -i 's/loop[0-9]+p1/LABEL\=cloudimg-rootfs/g' /boot/grub/grub.cfg
 sed -i 's/root=.*\ ro/root=LABEL\=cloudimg-rootfs\ ro/' /boot/grub/grub.cfg
