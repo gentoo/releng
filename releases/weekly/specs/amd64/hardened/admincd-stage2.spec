@@ -5,7 +5,7 @@ rel_type: hardened
 profile: hardened/linux/amd64
 snapshot: latest
 source_subpath: hardened/livecd-stage1-amd64-latest
-portage_confdir: /release/releng/releases/weekly/portage/isos
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
@@ -19,7 +19,7 @@ livecd/rcdel: keymaps|boot
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: /release/releng/releases/weekly/kconfig/amd64/admincd-3.18.9.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/admincd-3.18.9.config
 boot/kernel/gentoo/use:
 	-*
 	alsa

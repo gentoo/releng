@@ -5,4 +5,4 @@ rel_type: hardened
 profile: hardened/linux/amd64
 snapshot: latest
 source_subpath: hardened/stage1-amd64-hardened-latest
-portage_confdir: /release/releng/releases/weekly/portage/stages
+portage_confdir: @REPO_DIR@/releases/weekly/portage/stages

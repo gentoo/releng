@@ -17,7 +17,7 @@ livecd/volid: Gentoo Linux x86 latest
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: /release/releng/releases/weekly/kconfig/x86/hardened/installcd-2.6.38.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/x86/hardened/installcd-2.6.38.config
 boot/kernel/gentoo/use:
 	-*
 	alsa

@@ -7,4 +7,4 @@ snapshot: latest
 source_subpath: default/stage3-x32-latest
 update_seed: yes
 update_seed_command: --update --deep @world
-portage_confdir: /release/releng/releases/weekly/portage/stages
+portage_confdir: @REPO_DIR@/releases/weekly/portage/stages

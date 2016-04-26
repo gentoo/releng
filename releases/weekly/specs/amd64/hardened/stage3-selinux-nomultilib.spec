@@ -5,4 +5,4 @@ rel_type: hardened
 profile: hardened/linux/amd64/no-multilib/selinux
 snapshot: latest
 source_subpath: hardened/stage2-amd64-hardened-selinux+nomultilib-latest
-portage_confdir: /release/releng/releases/weekly/portage/stages
+portage_confdir: @REPO_DIR@/releases/weekly/portage/stages

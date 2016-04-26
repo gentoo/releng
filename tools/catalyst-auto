@@ -266,6 +266,7 @@ for i in $(find -name '*.spec'); do
   sed -i \
     -e "s:@DATESTAMP@:${DATESTAMP}:g" \
     -e "s:@GITDIR@:${GITDIR}:g" \
+    -e "s:@REPO_DIR@:${REPO_DIR}:g" \
     "${i}"
 done
 

@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/x86/13.0
 snapshot: latest
 source_subpath: default/livecd-stage1-x86-latest
-portage_confdir: /release/releng/releases/weekly/portage/isos
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
@@ -19,7 +19,7 @@ livecd/rcdel: keymaps|boot
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /release/releng/releases/weekly/kconfig/x86/installcd-3.18.12.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/x86/installcd-3.18.12.config
 boot/kernel/gentoo/use:
 	-*
 	alsa

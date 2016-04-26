@@ -5,4 +5,4 @@ rel_type: default
 profile: default/linux/x86/13.0
 snapshot: latest
 source_subpath: default/stage2-i486-latest
-portage_confdir: /release/releng/releases/weekly/portage/stages
+portage_confdir: @REPO_DIR@/releases/weekly/portage/stages

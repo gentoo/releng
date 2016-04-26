@@ -8,7 +8,7 @@ source_subpath: default/livecd-stage1-i686-installer-latest
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-livecd/fsscript: /release/releng/releases/latest/scripts/livecd.sh
+livecd/fsscript: @REPO_DIR@/releases/latest/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: livedvd-i686-installer-latest.iso
@@ -17,13 +17,13 @@ livecd/volid: Gentoo Linux latest x86 LiveDVD
 livecd/xdm: gdm
 livecd/xsession: xfce
 
-livecd/overlay: /release/releng/releases/latest/overlays/common/overlay/livedvd
-livecd/root_overlay: /release/releng/releases/latest/overlays/common/root_overlay
+livecd/overlay: @REPO_DIR@/releases/latest/overlays/common/overlay/livedvd
+livecd/root_overlay: @REPO_DIR@/releases/latest/overlays/common/root_overlay
 
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: /release/releng/releases/latest/kconfig/livecd-2.6.24.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/latest/kconfig/livecd-2.6.24.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 	app-laptop/laptop-mode-tools
