@@ -17,11 +17,16 @@ if [[ -z ${UNSHARE} ]] ; then
 fi
 unset UNSHARE
 
+CATALYST_CONFIG=/etc/catalyst/catalyst.conf
+
 declare -a config_files
 config_files=()
 verbose=0
 keep_tmpdir=0
 testing=0
+preclean=0
+lastrun=0
+lock_file=
 
 # Set pipefail so that run_cmd returns the right value in $?
 set -o pipefail
@@ -39,9 +44,12 @@ Usage:
 
 Options:
   -c|--config         Specifies the config file to use (required)
+  -C|--preclean       Clean up loose artifacts from previous runs
   -v|--verbose        Send output of commands to console as well as log
   -k|--keep-tmpdir    Don't remove temp dir when build finishes
   -t|--test           Stop after mangling specs and copying files
+  --interval <days>   Exit if last successful run was less than <days> ago
+  -l|--lock <file>    File to grab a lock on to prevent multiple invocations
   -h|--help           Show this message and quit
 
 EOH
@@ -87,6 +95,12 @@ post_build() {
   local foo=bar
 }
 
+catalyst_var() {
+  # Extract a setting from the catalyst.conf.
+  local var=$1
+  (. "${CATALYST_CONFIG}"; echo "${!var}")
+}
+
 # Parse args
 params=${#}
 while [ ${#} -gt 0 ]
@@ -111,6 +125,17 @@ do
     -t|--test)
       testing=1
       ;;
+    -C|--preclean)
+      preclean=1
+      ;;
+    --interval)
+      lastrun=$1
+      shift
+      ;;
+    -l|--lock)
+      lock_file=$1
+      shift
+      ;;
     -*)
       usage "ERROR: You have specified an invalid option: ${a}"
       exit 1
@@ -118,8 +143,23 @@ do
     esac
 done
 
+(
+
+if [[ -n ${lock_file} ]]; then
+  if ! flock -n 9; then
+    echo "catalyst-auto already running"
+    exit 1
+  fi
+fi
+
 # Probe the default gitdir from this script name.
 GITDIR=$(dirname "$(dirname "$(realpath "$0")")")
+
+# Set up defaults that config files can override if they want.
+SUBARCH=$(uname -m)
+EMAIL_TO="releng@gentoo.org,gentoo-releng-autobuilds@lists.gentoo.org"
+EMAIL_FROM="catalyst@${HOSTNAME:-$(hostname)}"
+EMAIL_SUBJECT_PREPEND="[${SUBARCH}-auto]"
 
 doneconfig=0
 for config_file in ${config_files[@]}; do
@@ -136,9 +176,27 @@ if [[ $doneconfig -eq 0 ]]; then
       exit 1
 fi
 
+# Some configs will set this explicitly, so don't clobber it.
+: ${BUILD_SRCDIR_BASE:=$(catalyst_var storedir)}
+
+# See if we had a recent success.
+if [[ ${lastrun} -ne 0 ]]; then
+  last_success_file="${BUILD_SRCDIR_BASE}/.last_success"
+  delay=$(( lastrun * 24 * 60 * 60 ))
+  last_success=$(head -1 "${last_success_file}" 2>/dev/null || echo 0)
+  if [[ $(date +%s) -lt $(( last_success + delay )) ]]; then
+    exit 0
+  fi
+fi
 
 TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.XXXXXX)
 DATESTAMP=$(date +%Y%m%d)
+
+# Nuke any previous tmpdirs to keep them from accumulating.
+if [[ ${preclean} -eq 1 ]]; then
+  rm -rf "${TMPDIR%.??????}".*
+  mkdir "${TMPDIR}"
+fi
 
 if [ ${verbose} = 1 ]; then
   echo "TMPDIR = ${TMPDIR}"
@@ -151,7 +209,7 @@ if ! mkdir -p "${TMPDIR}"/{specs,kconfig,log}; then
 fi
 
 if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
-  send_email "Catalyst build error - pre_build" "Your pre_build function sucks" "${TMPDIR}/log/pre_build.log"
+  send_email "Catalyst build error - pre_build" "The pre_build function failed" "${TMPDIR}/log/pre_build.log"
   exit 1
 fi
 
@@ -217,6 +275,18 @@ if [ "${testing}" -eq 1 ]; then
   exit
 fi
 
+if [[ ${preclean} -eq 1 ]]; then
+  snapshot_cache=$(catalyst_var snapshot_cache)
+  if [[ -z ${snapshot_cache} ]]; then
+    echo "error: snapshot_cache not set in config file"
+    exit 1
+  fi
+  pushd "${BUILD_SRCDIR_BASE}" >/dev/null || exit 1
+  rm -rf --one-file-system \
+    kerncache packages snapshots tmp "${snapshot_cache}"/*
+  popd >/dev/null
+fi
+
 # Create snapshot
 if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/snapshot.log"; then
   send_email "Catalyst build error - snapshot" "" "${TMPDIR}/log/snapshot.log"
@@ -262,11 +332,16 @@ for a in "" ${SETS}; do
 done
 
 if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
-  send_email "Catalyst build error - post_build" "Your post_build function sucks" "${TMPDIR}/log/post_build.log"
+  send_email "Catalyst build error - post_build" "The post_build function failed" "${TMPDIR}/log/post_build.log"
   exit 1
 fi
 
 if [ ${build_failure} = 0 ]; then
+  if [[ ${lastrun} -ne 0 ]]; then
+    stamp=$(date)
+    (date -d"${stamp}" +%s; echo "${stamp}") >"${last_success_file}"
+  fi
+
   send_email "Catalyst build success" "Build process complete."
 
   if [ "${keep_tmpdir}" = 0 ]; then
@@ -279,3 +354,5 @@ if [ ${build_failure} = 0 ]; then
 else
   send_email "Catalyst build complete, but with errors" "Build process has completed, but there were errors. Please consult previous emails to determine the problem."
 fi
+
+) 9>"${lock_file:-/dev/null}"
