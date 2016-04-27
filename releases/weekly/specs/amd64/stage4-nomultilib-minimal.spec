@@ -53,7 +53,7 @@ stage4/empty:
 	/usr/src
 	/var/cache/edb/dep
 	/var/cache/genkernel
-  /var/cache/portage/distfiles
+	/var/cache/portage/distfiles
 	/var/empty
 	/var/run
 	/var/state
