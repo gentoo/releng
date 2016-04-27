@@ -17,13 +17,13 @@ livecd/volid: Gentoo Linux AMD64 LiveDVD
 livecd/xdm: gdm
 livecd/xsession: xfce
 
-livecd/overlay: @REPO_DIR@/latest/overlays/common/overlay/livedvd
+livecd/overlay: @REPO_DIR@/releases/latest/overlays/common/overlay/livedvd
 livecd/root_overlay: @REPO_DIR@/releases/latest/overlays/common/root_overlay
 
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/latest/kconfig/amd64/livecd-2.6.24.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/latest/kconfig/amd64/livecd-2.6.24.config
 boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
 boot/kernel/gentoo/packages:
 	media-libs/alsa-oss
