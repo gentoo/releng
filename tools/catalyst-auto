@@ -81,6 +81,13 @@ run_cmd() {
   fi
 }
 
+update_symlinks() {
+  # This is a skeleton function that you can override from the config file.
+  # It will be called by pre_build and after completing the build of a set
+  # to ensure the symlinks point to the latest built stages.
+  local foo=bar
+}
+
 pre_build() {
   # This is a skeleton function that you can override from the config file.
   # It will be executed before the build is started. You can use this to
@@ -246,7 +253,7 @@ for i in $(find -name '*.spec'); do
   sed -i 's|^snapshot:.*$|snapshot: '${DATESTAMP}'|' ${i}
 
   # We don't want to mangle the source_subpath for our stage1 spec
-  if ! grep -q '^target: *stage1$' ${i}; then
+  if ! [[grep -q '^target: *stage1$' ${i} || grep -q '^target: *stage4$' ${i} ]]; then
     sed -i 's|^source_subpath:.*$|source_subpath: '${new_source_subpath}'|' ${i}
   fi
 
@@ -329,6 +336,7 @@ for a in "" ${SETS}; do
     run_cmd "time catalyst -P -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
   done
 
+  update_symlinks
 done
 
 if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
