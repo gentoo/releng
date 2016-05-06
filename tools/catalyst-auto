@@ -253,7 +253,7 @@ for i in $(find -name '*.spec'); do
   sed -i 's|^snapshot:.*$|snapshot: '${DATESTAMP}'|' ${i}
 
   # We don't want to mangle the source_subpath for our stage1 spec
-  if ! [[grep -q '^target: *stage1$' ${i} || grep -q '^target: *stage4$' ${i} ]]; then
+  if ! [[ grep -q '^target: *stage1$' ${i} || grep -q '^target: *stage4$' ${i} ]]; then
     sed -i 's|^source_subpath:.*$|source_subpath: '${new_source_subpath}'|' ${i}
   fi
 
