@@ -109,8 +109,8 @@ process_arch() {
 	cd "${outdir}"
 	# %T@
 
-	iso_list="$(find 20* -name '*.iso' -printf '%h %f %h/%f\n' |grep -v hardened | sort -n)"
-	stage3_list=$(find 20* -name "stage3*" -a "${EXTENSIONS[@]}" -printf '%h %f %h/%f\n' | grep -v hardened | sort -n)
+	iso_list="$(find 20* -name '*.iso' -printf '%h %f %h/%f\n' 2>/dev/null |grep -v hardened | sort -n)"
+	stage3_list=$(find 20* -name "stage3*" -a "${EXTENSIONS[@]}" -printf '%h %f %h/%f\n' 2>/dev/null| grep -v hardened | sort -n)
 	latest_iso_date="$(echo -e "${iso_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	latest_stage3_date="$(echo -e "${stage3_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	header="$(echo -e "# Latest as of $(date -uR)\n# ts=$(date -u +%s)")"
@@ -154,10 +154,10 @@ process_arch() {
 
 	# New variant preserve code
 	find_variants=( '(' -iname '*.iso' -o -name 'netboot-*' -o "${EXTENSIONS[@]}" ')' )
-	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
+	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' 2>/dev/null | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
-		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
+		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print 2>/dev/null | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		if [ -z "${variant_path}" -o ! -e "${variant_path}" ]; then
 			echo "$ARCH: Variant ${v} is missing" 1>&2
 			continue
