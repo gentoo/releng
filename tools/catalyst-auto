@@ -161,7 +161,6 @@ fi
 
 # Probe the default source dir from this script name.
 REPO_DIR=$(dirname "$(dirname "$(realpath "$0")")")
-GITDIR=${REPO_DIR}
 
 # Set up defaults that config files can override if they want.
 SUBARCH=$(uname -m)
@@ -273,7 +272,6 @@ for i in $(find -name '*.spec'); do
   # Expand vars that the spec expects us to.
   sed -i \
     -e "s:@DATESTAMP@:${DATESTAMP}:g" \
-    -e "s:@GITDIR@:${GITDIR}:g" \
     -e "s:@REPO_DIR@:${REPO_DIR}:g" \
     "${i}"
 done

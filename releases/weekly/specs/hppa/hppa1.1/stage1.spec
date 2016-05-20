@@ -6,4 +6,4 @@ profile: default/linux/hppa/13.0
 snapshot: 2008.0
 source_subpath: default/stage3-hppa1.1-latest
 update_seed: yes
-portage_confdir: @GITDIR@/releases/weekly/portage/stages
+portage_confdir: @REPO_DIR@/releases/weekly/portage/stages

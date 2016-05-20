@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/ia64/13.0
 snapshot: 2008.0
 source_subpath: default/stage3-ia64-2008.0
-portage_confdir: @GITDIR@/releases/weekly/portage/isos
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
 	deprecated
