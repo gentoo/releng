@@ -5,4 +5,4 @@ rel_type: default
 profile: default/linux/s390/13.0/s390x
 snapshot: 2008.0
 source_subpath: default/stage2-s390x-2008.0
-portage_confdir: @GITDIR@/releases/weekly/portage/stages
+portage_confdir: @REPO_DIR@/releases/weekly/portage/stages
