@@ -159,8 +159,9 @@ if [[ -n ${lock_file} ]]; then
   fi
 fi
 
-# Probe the default gitdir from this script name.
-GITDIR=$(dirname "$(dirname "$(realpath "$0")")")
+# Probe the default source dir from this script name.
+REPO_DIR=$(dirname "$(dirname "$(realpath "$0")")")
+GITDIR=${REPO_DIR}
 
 # Set up defaults that config files can override if they want.
 SUBARCH=$(uname -m)
