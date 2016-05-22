@@ -21,6 +21,7 @@ netboot2/use:
  shadow
  readline
  ssl
+ unicode
 
 netboot2/packages:
 	sys-boot/palo
