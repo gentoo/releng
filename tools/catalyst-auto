@@ -61,12 +61,14 @@ send_email() {
   logfile=$3
 
   if [ -n "${logfile}" ]; then
-    body=$(echo -e "${message}\n\n"; tail -n 200 "${logfile}"; echo -e "\n\n\nFull build log at ${logfile}")
+    body=$(printf '%b\n\n\n' "${message}"; tail -n 200 "${logfile}"; printf '\n\n\nFull build log at %s\n' "${logfile}")
   else
     body=${message}
   fi
 
-  echo -e "From: ${EMAIL_FROM}\r\nTo: ${EMAIL_TO}\r\nSubject: ${subject}\r\n\r\n${body}" | /usr/sbin/sendmail -f ${EMAIL_FROM} ${EMAIL_TO//,/ }
+  printf 'From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n%b' \
+    "${EMAIL_FROM}" "${EMAIL_TO}" "${subject}" "${body}" | \
+    /usr/sbin/sendmail -f "${EMAIL_FROM}" ${EMAIL_TO//,/ }
 }
 
 run_cmd() {
