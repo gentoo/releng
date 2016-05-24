@@ -56,9 +56,9 @@ EOH
 }
 
 send_email() {
-  subject="${EMAIL_SUBJECT_PREPEND} $1"
-  message=$2
-  logfile=$3
+  local subject="${EMAIL_SUBJECT_PREPEND} $1"
+  local message=$2
+  local logfile=$3
 
   if [ -n "${logfile}" ]; then
     body=$(printf '%b\n\n\n' "${message}"; tail -n 200 "${logfile}"; printf '\n\n\nFull build log at %s\n' "${logfile}")
@@ -72,8 +72,8 @@ send_email() {
 }
 
 run_cmd() {
-  cmd=$1
-  logfile=$2
+  local cmd=$1
+  local logfile=$2
 
   if [ $verbose = 1 ]; then
     echo "*** Running command: ${cmd}"
