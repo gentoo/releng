@@ -1,2 +1,14 @@
 #!/bin/bash
-PORTDIR="/release/trees/portage-official/" emerge --sync
+PORTDIR="/release/trees/portage-official/"
+TMPREPO=$(mktemp)
+trap "rm -f $TMPREPO" EXIT
+cat >$f <<EOF
+[DEFAULT]
+main-repo = gentoo
+
+[gentoo]
+location = $PORTDIR
+sync-type = rsync
+sync-uri = rsync://rsync.gentoo.org/gentoo-portage
+EOF
+PORTAGE_REPOSITORIES="$(cat $TMPREPO)" FEATURES="$FEATURES -news" emerge --sync -q
