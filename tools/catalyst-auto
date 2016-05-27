@@ -198,8 +198,8 @@ if [[ ${lastrun} -ne 0 ]]; then
   fi
 fi
 
-TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.XXXXXX)
 DATESTAMP=$(date +%Y%m%d)
+TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.${DATESTAMP}.XXXXXX)
 
 # Nuke any previous tmpdirs to keep them from accumulating.
 if [[ ${preclean} -eq 1 ]]; then
