@@ -2,7 +2,7 @@
 PORTDIR="/release/trees/portage-snapshot/"
 TMPREPO=$(mktemp)
 trap "rm -f $TMPREPO" EXIT
-cat >$f <<EOF
+cat >$TMPREPO <<EOF
 [DEFAULT]
 main-repo = gentoo
 
