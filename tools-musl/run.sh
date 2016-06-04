@@ -52,17 +52,6 @@ main() {
       prepare_confs ${arch} ${flavor}
     done
   done
-
-  # The parallelization `( do_stages ... ) &` doesn't work here
-  # if catalyst is using snapcache, bug #519656
-  for arch in amd64 i686; do
-    for flavor in hardened vanilla; do
-      (
-        do_stages ${arch} ${flavor}
-        [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-      ) &
-    done
-  done
 }
 
 main $1 &
