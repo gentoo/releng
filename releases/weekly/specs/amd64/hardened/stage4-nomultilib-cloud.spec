@@ -5,6 +5,8 @@ rel_type: hardened
 profile: hardened/linux/amd64/no-multilib
 snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened+nomultilib-latest
+compression_mode: pixz_x
+decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 portage_confdir: @REPO_DIR@/releases/weekly/portage/cloud-stages
 
 stage4/use:
