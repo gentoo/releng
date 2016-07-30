@@ -19,7 +19,7 @@ livecd/rcdel: keymaps|boot
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/admincd-3.8.3-selinux.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/admincd-4.4.8-r1-selinux.config
 boot/kernel/gentoo/use:
 	-*
 	alsa
