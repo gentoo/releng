@@ -50,6 +50,7 @@ livecd/packages:
 	net-misc/iputils
 	net-misc/ndisc6
 	net-misc/ntp
+	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync
 	net-misc/vconfig
