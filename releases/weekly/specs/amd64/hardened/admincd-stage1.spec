@@ -51,7 +51,6 @@ livecd/packages:
 	app-benchmarks/bonnie++
 	app-benchmarks/dbench
 	app-benchmarks/iozone
-	app-benchmarks/piozone
 	app-benchmarks/stress
 	app-benchmarks/tiobench
 	app-crypt/bcwipe
