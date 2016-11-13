@@ -28,7 +28,6 @@ livecd/packages:
 	app-editors/vim
 	app-misc/mc
 	app-misc/screen
-	app-misc/vlock
 ### Removed for space reasons
 #	app-office/openoffice-bin
 	app-portage/gentoolkit

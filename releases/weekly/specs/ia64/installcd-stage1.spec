@@ -33,7 +33,6 @@ livecd/packages:
 # Not keyworded	
 #	app-editors/mg
 	app-misc/screen
-	app-misc/vlock
 	app-portage/mirrorselect
 	app-text/wgetpaste
 #	media-gfx/fbgrab

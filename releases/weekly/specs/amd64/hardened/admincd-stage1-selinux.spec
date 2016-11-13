@@ -67,7 +67,6 @@ livecd/packages:
 	app-misc/pax-utils
 	app-misc/screen
 	app-misc/tmux
-	app-misc/vlock
 	app-portage/eix
 	app-portage/gentoolkit
 	app-portage/mirrorselect

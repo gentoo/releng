@@ -28,7 +28,6 @@ livecd/packages:
 	app-editors/vim
 	app-misc/mc
 	app-misc/screen
-	app-misc/vlock
 #	app-office/openoffice-bin
 #	app-office/openoffice
 	app-portage/gentoolkit
