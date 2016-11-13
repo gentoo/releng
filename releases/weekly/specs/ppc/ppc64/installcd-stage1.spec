@@ -57,7 +57,6 @@ livecd/packages:
 	net-wireless/bcm43xx-fwcutter
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	sys-apps/apmd
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload

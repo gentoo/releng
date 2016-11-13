@@ -65,7 +65,6 @@ livecd/packages:
 	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	sys-apps/apmd
 	sys-apps/busybox
 	sys-apps/dmidecode
 	sys-apps/ethtool

@@ -65,7 +65,6 @@ livecd/packages:
 #	net-wireless/wpa_supplicant
 #	net-wireless/zd1201-firmware
 #	net-wireless/zd1211-firmware
-#	sys-apps/apmd
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload
@@ -103,5 +102,4 @@ livecd/packages:
 #	sys-fs/xfsprogs
 	sys-libs/gpm
 #	sys-power/acpid
-#	sys-power/apmd
 	www-client/links

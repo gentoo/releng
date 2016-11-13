@@ -58,7 +58,6 @@ livecd/packages:
 #	net-wireless/wireless-tools
 #	net-wireless/wpa_supplicant
 #	net-wireless/zd1201-firmware
-#	sys-apps/apmd
 	sys-apps/busybox
 	sys-apps/ethtool
 #	sys-apps/fxload
@@ -99,5 +98,4 @@ livecd/packages:
 	sys-libs/gpm
 # No ACPI on alphas, not keyworded. 
 #	sys-power/acpid
-#	sys-power/apmd
 	www-client/links

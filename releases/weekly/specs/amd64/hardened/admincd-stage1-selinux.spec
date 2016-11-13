@@ -122,7 +122,6 @@ livecd/packages:
 	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	sys-apps/apmd
 	sys-apps/arrayprobe
 	sys-apps/acl
 	sys-apps/attr
