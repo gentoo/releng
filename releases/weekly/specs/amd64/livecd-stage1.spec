@@ -28,7 +28,6 @@ livecd/packages:
 	app-editors/vim
 	app-misc/mc
 	app-misc/screen
-	app-misc/vlock
 #	app-office/openoffice-bin
 #	app-office/openoffice
 	app-portage/gentoolkit
@@ -86,7 +85,6 @@ livecd/packages:
 	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 ### Masked (no keywords)
-#	sys-apps/apmd
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm

@@ -32,7 +32,6 @@ livecd/packages:
 	app-arch/unzip
 	app-crypt/gnupg
 	app-misc/screen
-	app-misc/vlock
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	dev-util/debootstrap

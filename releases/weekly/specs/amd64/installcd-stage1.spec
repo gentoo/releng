@@ -38,7 +38,6 @@ livecd/packages:
 	app-crypt/gnupg
 	app-editors/mg
 	app-misc/screen
-	app-misc/vlock
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	media-gfx/fbgrab
@@ -53,6 +52,7 @@ livecd/packages:
 	net-misc/iputils
 	net-misc/ndisc6
 	net-misc/ntp
+	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync
 	net-misc/vconfig
@@ -66,7 +66,6 @@ livecd/packages:
 	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	sys-apps/apmd
 	sys-apps/busybox
 	sys-apps/dmidecode
 	sys-apps/ethtool

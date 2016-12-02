@@ -37,7 +37,6 @@ livecd/packages:
 	app-crypt/gnupg
 	app-editors/mg
 	app-misc/screen
-	app-misc/vlock
 	app-portage/mirrorselect
 	app-text/wgetpaste
 #	media-gfx/fbgrab
@@ -66,7 +65,6 @@ livecd/packages:
 #	net-wireless/wpa_supplicant
 #	net-wireless/zd1201-firmware
 #	net-wireless/zd1211-firmware
-#	sys-apps/apmd
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload
@@ -104,5 +102,4 @@ livecd/packages:
 #	sys-fs/xfsprogs
 	sys-libs/gpm
 #	sys-power/acpid
-#	sys-power/apmd
 	www-client/links

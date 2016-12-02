@@ -37,7 +37,6 @@ livecd/packages:
 # Not keyworded
 #	app-editors/mg
 	app-misc/screen
-	app-misc/vlock
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	media-gfx/fbgrab
@@ -58,7 +57,6 @@ livecd/packages:
 	net-wireless/bcm43xx-fwcutter
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	sys-apps/apmd
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload

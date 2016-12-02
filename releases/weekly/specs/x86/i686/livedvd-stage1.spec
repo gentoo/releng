@@ -179,7 +179,6 @@ livecd/packages:
 	net-wireless/zd1201-firmware
 	net-wireless/zd1211-firmware
 	rox-base/rox
-	sys-apps/apmd
 	sys-apps/dmidecode
 	sys-apps/ethtool
 	sys-apps/fxload

@@ -188,7 +188,6 @@ livecd/packages:
 	net-wireless/zd1211-firmware
 	rox-base/rox
 ### Masked
-#	sys-apps/apmd
 	sys-apps/dmidecode
 	sys-apps/ethtool
 	sys-apps/fxload

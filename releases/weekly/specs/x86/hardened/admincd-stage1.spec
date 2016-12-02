@@ -51,7 +51,6 @@ livecd/packages:
 	app-benchmarks/bonnie++
 	app-benchmarks/dbench
 	app-benchmarks/iozone
-	app-benchmarks/piozone
 	app-benchmarks/stress
 	app-benchmarks/tiobench
 	app-crypt/bcwipe
@@ -70,7 +69,6 @@ livecd/packages:
 	app-misc/pax-utils
 	app-misc/screen
 	app-misc/tmux
-	app-misc/vlock
 	app-portage/eix
 	app-portage/gentoolkit
 	app-portage/mirrorselect
@@ -127,7 +125,6 @@ livecd/packages:
 	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	sys-apps/apmd
 	sys-apps/arrayprobe
 	sys-apps/acl
 	sys-apps/attr
