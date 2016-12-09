@@ -77,9 +77,9 @@ run_cmd() {
 
   if [ $verbose = 1 ]; then
     echo "*** Running command: ${cmd}"
-    ${cmd} 2>&1 | tee ${logfile}
+    ${cmd} 2>&1 | tee "${logfile}"
   else
-    ${cmd} &> ${logfile}
+    ${cmd} &> "${logfile}"
   fi
 }
 
@@ -174,13 +174,13 @@ EMAIL_FROM="catalyst@${HOSTNAME:-$(hostname)}"
 EMAIL_SUBJECT_PREPEND="[${SUBARCH}-auto]"
 
 doneconfig=0
-for config_file in ${config_files[@]}; do
+for config_file in "${config_files[@]}"; do
     # Make sure all required values were specified
     if [ -z "${config_file}" -o ! -e "${config_file}" ]; then
       usage "ERROR: You must specify a valid config file to use: '$config_file' is not valid"
       exit 1
     fi
-    source ${config_file}
+    source "${config_file}"
     doneconfig=1
 done
 if [[ $doneconfig -eq 0 ]]; then
@@ -202,7 +202,7 @@ if [[ ${lastrun} -ne 0 ]]; then
 fi
 
 DATESTAMP=$(date +%Y%m%d)
-TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" catalyst-auto.${DATESTAMP}.XXXXXX)
+TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${DATESTAMP}.XXXXXX")
 
 # Nuke any previous tmpdirs to keep them from accumulating.
 if [[ ${preclean} -eq 1 ]]; then
@@ -225,7 +225,7 @@ if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
   exit 1
 fi
 
-cd ${SPECS_DIR}
+cd "${SPECS_DIR}" || exit 1
 
 for a in "" ${SETS}; do
   if [ -z "${a}" ]; then
@@ -237,40 +237,40 @@ for a in "" ${SETS}; do
   fi
 
   for i in ${!specs_var} ${!optional_specs_var}; do
-    cp --parents ${i} ${TMPDIR}/specs/
+    cp --parents "${i}" "${TMPDIR}"/specs/
   done
 done
 
-find ${KCONFIG_DIR} -type f -exec cp {} ${TMPDIR}/kconfig \;
+find "${KCONFIG_DIR}" -type f -exec cp {} "${TMPDIR}"/kconfig \;
 
-cd ${TMPDIR}/specs
+cd "${TMPDIR}/specs" || exit 1
 
 # Fix up specs with datestamp
 for i in $(find -name '*.spec'); do
   # Grab current version_stamp and source_subpath
-  old_version_stamp=$(grep version_stamp ${i} | sed -e 's|^version_stamp: *||')
-  old_source_subpath=$(grep source_subpath ${i} | sed -e 's|^source_subpath: *||')
+  old_version_stamp=$(grep version_stamp "${i}" | sed -e 's|^version_stamp: *||')
+  old_source_subpath=$(grep source_subpath "${i}" | sed -e 's|^source_subpath: *||')
 
-  new_version_stamp=$(echo "${old_version_stamp}" | sed -e 's|^\(.*-\)\?.*$|\1'${DATESTAMP}'|')
-  new_source_subpath=$(echo "${old_source_subpath}" | sed -e 's|'${old_version_stamp}'|'${new_version_stamp}'|')
+  new_version_stamp=$(echo "${old_version_stamp}" | sed -e "s|^\(.*-\)\?.*$|\1${DATESTAMP}|")
+  new_source_subpath=$(echo "${old_source_subpath}" | sed -e "s|${old_version_stamp}|${new_version_stamp}|")
 
-  sed -i 's|^version_stamp:.*$|version_stamp: '${new_version_stamp}'|' ${i}
-  sed -i 's|^snapshot:.*$|snapshot: '${DATESTAMP}'|' ${i}
+  sed -i "s|^version_stamp:.*$|version_stamp: ${new_version_stamp}|" "${i}"
+  sed -i "s|^snapshot:.*$|snapshot: ${DATESTAMP}|" "${i}"
 
   # We don't want to mangle the source_subpath for our stage1 spec
-  if ! grep -q '^target: *stage[14]$' ${i}; then
-    sed -i 's|^source_subpath:.*$|source_subpath: '${new_source_subpath}'|' ${i}
+  if ! grep -q '^target: *stage[14]$' "${i}"; then
+    sed -i "s|^source_subpath:.*$|source_subpath: ${new_source_subpath}|" "${i}"
   fi
 
-  sed -i '/^livecd\/iso/s|'${old_version_stamp}'|'${new_version_stamp}'|' ${i}
-  sed -i '/^livecd\/volid/s|'${old_version_stamp}'|'${new_version_stamp}'|' ${i}
+  sed -i "/^livecd\/iso/s|${old_version_stamp}|${new_version_stamp}|" "${i}"
+  sed -i "/^livecd\/volid/s|${old_version_stamp}|${new_version_stamp}|" "${i}"
 
-  kconfig_lines=$(grep '^boot/kernel/[^/]\+/config:' ${i})
+  kconfig_lines=$(grep '^boot/kernel/[^/]\+/config:' "${i}")
   if [ -n "${kconfig_lines}" ]; then
     echo "${kconfig_lines}" | while read line; do
       key=$(echo "${line}" | cut -d: -f1)
       filename=$(basename $(echo "${line}" | cut -d: -f2))
-      sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" ${i}
+      sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" "${i}"
     done
   fi
 
@@ -320,7 +320,7 @@ for a in "" ${SETS}; do
 
   for i in ${!specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-    run_cmd "${timeprefix} catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
+    run_cmd "${timeprefix} catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
     if [ $? != 0 ]; then
       build_failure=1
       send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
@@ -330,7 +330,7 @@ for a in "" ${SETS}; do
 
   for i in ${!optional_specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-    run_cmd "${timeprefix} catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" ${LOGFILE}
+    run_cmd "${timeprefix} catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
     if [ $? != 0 ]; then
       build_failure=1
       send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
