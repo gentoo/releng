@@ -59,6 +59,7 @@ send_email() {
   local subject="${EMAIL_SUBJECT_PREPEND} $1"
   local message=$2
   local logfile=$3
+  local body
 
   if [ -n "${logfile}" ]; then
     body=$(printf '%b\n\n\n' "${message}"; tail -n 200 "${logfile}"; printf '\n\n\nFull build log at %s\n' "${logfile}")
