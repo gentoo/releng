@@ -71,15 +71,16 @@ send_email() {
     /usr/sbin/sendmail -f "${EMAIL_FROM}" ${EMAIL_TO//,/ }
 }
 
+# Usage: run_cmd <logfile> <command to run>
 run_cmd() {
-  local cmd=$1
-  local logfile=$2
+  local logfile="$1"
+  shift
 
   if [ $verbose = 1 ]; then
-    echo "*** Running command: ${cmd}"
-    ${cmd} 2>&1 | tee "${logfile}"
+    echo "*** Running command: $*"
+    "$@" 2>&1 | tee "${logfile}"
   else
-    ${cmd} &> "${logfile}"
+    "$@" &> "${logfile}"
   fi
 }
 
@@ -220,7 +221,7 @@ if ! mkdir -p "${TMPDIR}"/{specs,kconfig,log}; then
   exit 1
 fi
 
-if ! run_cmd "pre_build" "${TMPDIR}/log/pre_build.log"; then
+if ! run_cmd "${TMPDIR}/log/pre_build.log" pre_build; then
   send_email "Catalyst build error - pre_build" "The pre_build function failed" "${TMPDIR}/log/pre_build.log"
   exit 1
 fi
@@ -299,15 +300,15 @@ if [[ ${preclean} -eq 1 ]]; then
 fi
 
 # Create snapshot
-if ! run_cmd "catalyst -c ${CATALYST_CONFIG} -s ${DATESTAMP}" "${TMPDIR}/log/snapshot.log"; then
+if ! run_cmd "${TMPDIR}/log/snapshot.log" catalyst -c "${CATALYST_CONFIG}" -s "${DATESTAMP}"; then
   send_email "Catalyst build error - snapshot" "" "${TMPDIR}/log/snapshot.log"
   exit 1
 fi
 
 build_failure=0
 
-timeprefix=""
-which time >/dev/null && timeprefix="time"
+timeprefix=()
+which time >/dev/null && timeprefix=( "time" )
 
 for a in "" ${SETS}; do
   if [ -z "${a}" ]; then
@@ -320,7 +321,7 @@ for a in "" ${SETS}; do
 
   for i in ${!specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-    run_cmd "${timeprefix} catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
+    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -p -c "${CATALYST_CONFIG}" -f "${i}"
     if [ $? != 0 ]; then
       build_failure=1
       send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
@@ -330,7 +331,7 @@ for a in "" ${SETS}; do
 
   for i in ${!optional_specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-    run_cmd "${timeprefix} catalyst -a -p -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
+    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -p -c "${CATALYST_CONFIG}" -f "${i}"
     if [ $? != 0 ]; then
       build_failure=1
       send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
@@ -340,13 +341,13 @@ for a in "" ${SETS}; do
 
   for i in ${!specs_var} ${!optional_specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"	
-    run_cmd "${timeprefix} catalyst -P -c ${CATALYST_CONFIG} -f ${i}" "${LOGFILE}"
+    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -P -c "${CATALYST_CONFIG}" -f "${i}"
   done
 
   update_symlinks
 done
 
-if ! run_cmd "post_build" "${TMPDIR}/log/post_build.log"; then
+if ! run_cmd "${TMPDIR}/log/post_build.log" post_build; then
   send_email "Catalyst build error - post_build" "The post_build function failed" "${TMPDIR}/log/post_build.log"
   exit 1
 fi
