@@ -82,6 +82,9 @@ run_cmd() {
   else
     "$@" &> "${logfile}"
   fi
+
+  # If we used tee above, make sure we pass back up the command's error.
+  return ${PIPESTATUS[0]}
 }
 
 update_symlinks() {
