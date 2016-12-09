@@ -148,6 +148,10 @@ do
       usage "ERROR: You have specified an invalid option: ${a}"
       exit 1
       ;;
+    *)
+      usage "ERROR: This script takes no arguments: ${a}"
+      exit 1
+      ;;
     esac
 done
 
