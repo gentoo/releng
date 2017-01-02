@@ -50,7 +50,7 @@ stage4/rcadd:
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: @REPO_DIR@/../releases/weekly/kconfig/amd64/admincd-4.4.8-r1.config
+boot/kernel/gentoo/config: @REPO_DIR@/../releases/weekly/kconfig/amd64/cloud-amd64-hardened.config
 boot/kernel/gentoo/extraversion: openstack
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --makeopts=-j4
 
