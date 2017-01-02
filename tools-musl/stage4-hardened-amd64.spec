@@ -54,10 +54,6 @@ boot/kernel/gentoo/config: @REPO_DIR@/../releases/weekly/kconfig/amd64/admincd-4
 boot/kernel/gentoo/extraversion: openstack
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --makeopts=-j4
 
-# all of the cleanup...
-stage4/unmerge:
-	sys-kernel/hardened-sources
-
 stage4/empty:
 	/root/.ccache
 	/tmp
