@@ -38,7 +38,7 @@ stage4/packages:
 	sys-devel/bc
 	sys-power/acpid
 	sys-process/cronie
-stage4/fsscript: /root/releng/tools-musl/tools-musl/stage4-fsscript.sh
+stage4/fsscript: @REPO_DIR@/stage4-fsscript.sh
 stage4/rcadd:
 	acpid|default
 	cronie|default
@@ -56,7 +56,6 @@ boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --makeopts=-j4
 
 # all of the cleanup...
 stage4/unmerge:
-	sys-kernel/genkernel
 	sys-kernel/hardened-sources
 
 stage4/empty:
