@@ -1,6 +1,6 @@
 subarch: amd64
 target: stage4
-version_stamp: cloud-latest
+version_stamp: hardened-musl-cloud-latest
 rel_type: default
 profile: hardened/linux/musl/amd64
 snapshot: current
