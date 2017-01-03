@@ -1,5 +1,4 @@
 =sys-apps/portage-2.3.1 ~amd64
 =net-analyzer/macchanger-1.7.0-r1 ~amd64
-<sys-kernel/hardened-sources-4.5.0 ~amd64
 =sys-apps/busybox-1.26.0::musl ~amd64
 =sys-kernel/genkernel-3.5.0.8 ~amd64
