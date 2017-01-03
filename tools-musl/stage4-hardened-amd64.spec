@@ -52,7 +52,7 @@ boot/kernel: gentoo
 boot/kernel/gentoo/sources: hardened-sources
 boot/kernel/gentoo/config: @REPO_DIR@/../releases/weekly/kconfig/amd64/cloud-amd64-hardened.config
 boot/kernel/gentoo/extraversion: openstack
-boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --makeopts=-j4
+boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --no-nfs --makeopts=-j4
 
 stage4/empty:
 	/root/.ccache
