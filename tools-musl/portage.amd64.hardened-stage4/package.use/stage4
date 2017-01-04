@@ -1,1 +1,2 @@
 sys-boot/grub grub_platforms_pc
+app-admin/syslog-ng -tcpd

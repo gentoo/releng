@@ -1,7 +1,7 @@
 subarch: amd64
 target: stage4
-version_stamp: hardened-musl-cloud-latest
-rel_type: default
+version_stamp: musl-hardened-MY_DATE
+rel_type: musl/hardened/amd64
 profile: hardened/linux/musl/amd64
 snapshot: current
 source_subpath: musl/hardened/amd64/stage3-amd64-musl-hardened
@@ -20,21 +20,10 @@ stage4/use:
 	urandom
 
 stage4/packages:
-	app-admin/logrotate
-	app-admin/sudo
 	app-admin/syslog-ng
-	app-editors/vim
-	app-portage/eix
-	app-portage/gentoolkit
+  dev-util/pkgconf
 	net-misc/dhcpcd
-	net-misc/iputils
-	sys-boot/grub
-	sys-apps/dmidecode
-	sys-apps/gptfdisk
 	sys-apps/iproute2
-	sys-apps/lsb-release
-	sys-apps/pciutils
-	sys-block/parted
 	sys-devel/bc
 	sys-power/acpid
 	sys-process/cronie
@@ -59,15 +48,14 @@ stage4/empty:
 	/tmp
 	/usr/portage/distfiles
 	/usr/src
-	/var/cache/edb/dep
-	/var/cache/genkernel
-	/var/cache/portage/distfiles
+  /var/cache
 	/var/empty
 	/var/run
 	/var/state
 	/var/tmp
 
 stage4/rm:
+	/boot/System.map-genkernel*
 	/etc/*-
 	/etc/*.old
 	/etc/ssh/ssh_host_*

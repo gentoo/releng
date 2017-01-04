@@ -51,6 +51,19 @@ nameserver 8.8.8.8
 nameserver 2001:4860:4860::8888
 EOL
 
+# make sure musl stuff is available
+echo "=app-portage/layman-2.4.1-r1 ~amd64" >> /etc/portage/package.keywords/layman
+echo "=dev-python/ssl-fetch-0.4 ~amd64" >> /etc/portage/package.keywords/layman
+emerge -vq --jobs=4 layman dev-vcs/git
+layman -L
+layman -a musl
+
+# shrink stuff down
+eselect python set python3.4
+emerge -C -q dev-lang/python:2.7 sys-boot/grub sys-devel/bc
+USE="-build" emerge -q --jobs=2 --usepkg=n --buildpkg=y @preserved-rebuild
+USE="-build" emerge --verbose=n --depclean
+
 # let's upgrade (security fixes and otherwise)
 USE="-build" emerge -uDNv --with-bdeps=y --buildpkg=y --jobs=2 @world
 USE="-build" emerge --verbose=n --depclean
@@ -59,13 +72,11 @@ etc-update --automode -5
 
 # Clean up portage
 emerge --verbose=n --depclean
-if [[ -a /usr/bin/eix ]]; then
-  eix-update
-fi
 emaint all -f
 eselect news read all
 eclean-dist --destructive
 sed -i '/^USE=\"\${USE}\ \ build\"$/d' /etc/portage/make.conf
+sed -i '/dev-util\/pkgconf/d' /var/lib/portage/world
 
 # clean up system
 passwd -d root
