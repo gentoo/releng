@@ -21,7 +21,7 @@ stage4/use:
 
 stage4/packages:
 	app-admin/syslog-ng
-  dev-util/pkgconf
+	dev-util/pkgconf
 	net-misc/dhcpcd
 	sys-apps/iproute2
 	sys-devel/bc
@@ -48,7 +48,7 @@ stage4/empty:
 	/tmp
 	/usr/portage/distfiles
 	/usr/src
-  /var/cache
+	/var/cache
 	/var/empty
 	/var/run
 	/var/state
