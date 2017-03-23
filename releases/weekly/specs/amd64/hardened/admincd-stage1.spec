@@ -107,7 +107,6 @@ livecd/packages:
 	net-misc/ndisc6
 	net-misc/ntp
 	net-misc/openssh
-	net-misc/openvpn
 	net-misc/rdate
 	net-misc/rsync
 	net-misc/telnet-bsd
@@ -117,6 +116,7 @@ livecd/packages:
 	net-proxy/dante
 #	net-proxy/ntlmaps
 	net-proxy/tsocks
+	net-vpn/openvpn
 	net-wireless/b43-fwcutter
 ### Masked (~amd64)
 #	net-wireless/bcm43xx-fwcutter
