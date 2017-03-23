@@ -175,7 +175,8 @@ REPO_DIR=$(dirname "$(dirname "$(realpath "$0")")")
 # Set up defaults that config files can override if they want.
 SUBARCH=$(uname -m)
 EMAIL_TO="releng@gentoo.org,gentoo-releng-autobuilds@lists.gentoo.org"
-EMAIL_FROM="catalyst@${HOSTNAME:-$(hostname)}"
+# Use full hostname by default as Gentoo servers will reject short names.
+EMAIL_FROM="catalyst@$(hostname -f)"
 EMAIL_SUBJECT_PREPEND="[${SUBARCH}-auto]"
 
 doneconfig=0
