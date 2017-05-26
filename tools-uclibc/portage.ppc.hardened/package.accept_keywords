@@ -1,1 +1,3 @@
 =dev-lang/python-3.5.2 ~ppc
+=sys-fs/e2fsprogs-1.43.4 ~ppc
+=sys-libs/e2fsprogs-libs-1.43.4 ~ppc
