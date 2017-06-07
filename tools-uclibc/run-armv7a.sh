@@ -50,14 +50,16 @@ main() {
 
   catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
-  for arch in armv7a_hardfp armv7a; do
+#  for arch in armv7a_hardfp armv7a; do
+  for arch in armv7a_hardfp; do
     for flavor in hardened vanilla; do
       prepare_confs ${arch} ${flavor}
     done
   done
 
   # No parallelization for arm.  Its too hard on the cpu!
-  for arch in armv7a_hardfp armv7a; do
+#  for arch in armv7a_hardfp armv7a; do
+  for arch in armv7a_hardfp; do
     for flavor in hardened vanilla; do
       do_stages ${arch} ${flavor}
       [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
