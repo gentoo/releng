@@ -174,9 +174,11 @@ livecd/packages:
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/ddrescue
+	sys-fs/dislocker
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
+	sys-fs/exfat-utils
 	sys-fs/ext3grep
 	sys-fs/extundelete
 	sys-fs/f2fs-tools
@@ -186,6 +188,7 @@ livecd/packages:
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/multipath-tools
+	sys-fs/nilfs-utils
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs

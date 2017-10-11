@@ -1,4 +1,8 @@
 sys-block/lsiutil
 sys-block/megacli
 sys-block/megarc
+sys-fs/btrfs-progs
+sys-fs/dislocker
+sys-fs/exfat-utils
 sys-fs/ext3grep
+sys-fs/nilfs-utils
