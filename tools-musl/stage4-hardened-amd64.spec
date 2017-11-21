@@ -38,8 +38,8 @@ stage4/rcadd:
 	syslog-ng|default
 
 boot/kernel: gentoo
-boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: @REPO_DIR@/../releases/weekly/kconfig/amd64/cloud-amd64-hardened.config
+boot/kernel/gentoo/sources: gentoo-sources
+boot/kernel/gentoo/config: @REPO_DIR@/../releases/weekly/kconfig/amd64/cloud-amd64-gentoo.config
 boot/kernel/gentoo/extraversion: openstack
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --no-nfs --makeopts=-j4
 

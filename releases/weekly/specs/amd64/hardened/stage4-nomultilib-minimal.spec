@@ -36,15 +36,15 @@ stage4/rcadd:
 	sshd|default
 
 boot/kernel: gentoo
-boot/kernel/gentoo/sources: hardened-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/cloud-amd64-hardened.config
+boot/kernel/gentoo/sources: gentoo-sources
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/cloud-amd64-gentoo.config
 boot/kernel/gentoo/extraversion: openstack
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
 
 # all of the cleanup...
 stage4/unmerge:
 	sys-kernel/genkernel
-	sys-kernel/hardened-sources
+	sys-kernel/gentoo-sources
 
 stage4/empty:
 	/root/.ccache
