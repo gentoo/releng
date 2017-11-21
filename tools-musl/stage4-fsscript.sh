@@ -59,7 +59,7 @@ layman -L
 layman -a musl
 
 # shrink stuff down
-eselect python set python3.4
+eselect python set python3.5
 emerge -C -q dev-lang/python:2.7 sys-boot/grub sys-devel/bc
 USE="-build" emerge -q --jobs=2 --usepkg=n --buildpkg=y @preserved-rebuild
 USE="-build" emerge --verbose=n --depclean
