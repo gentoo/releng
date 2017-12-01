@@ -1,0 +1,9 @@
+subarch: arm64
+version_stamp: 2008.0
+target: stage1
+rel_type: default
+profile: default/linux/arm64/13.0
+snapshot: 2008.0
+source_subpath: default/stage3-arm64-latest
+pkgcache_path: /var/tmp/catalyst/packages/stage1
+update_seed: yes
