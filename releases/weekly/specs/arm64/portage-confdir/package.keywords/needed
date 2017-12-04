@@ -1,0 +1,12 @@
+=sys-apps/openrc-0.34.11 ~arm64
+=dev-libs/elfutils-0.169-r1 ~arm64
+=sys-devel/binutils-2.29.1-r1 ~arm64
+=sys-libs/glibc-2.25-r9 ~arm64
+=dev-libs/libffi-3.2.1 ~arm64
+=sys-devel/gcc-6.4.0 ~arm64
+=app-misc/ca-certificates-20161130.3.30.2 ~arm64
+=sys-apps/man-db-2.7.6.1-r2 ~arm64
+=net-misc/openssh-7.5_p1-r3 ~arm64
+=sys-apps/hwids-20170328 ~arm64
+=dev-util/intltool-0.51.0-r1 ~arm64
+=dev-libs/libgcrypt-1.8.1 ~arm64
