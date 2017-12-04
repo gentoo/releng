@@ -78,7 +78,6 @@ boot/kernel/gentoo/packages:
 	media-libs/alsa-oss
 	media-sound/alsa-utils
 	net-dialup/slmodem
-	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl

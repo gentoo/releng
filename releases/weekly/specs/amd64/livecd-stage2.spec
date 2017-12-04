@@ -31,7 +31,6 @@ boot/kernel/gentoo/packages:
 #	net-dialup/fcdsl
 ### Masked (~amd64)
 #	net-dialup/fritzcapi
-	net-dialup/globespan-adsl
 ### Masked (~amd64)
 #	net-dialup/slmodem
 	net-misc/br2684ctl

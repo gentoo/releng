@@ -80,7 +80,6 @@ boot/kernel/gentoo/packages:
 	app-accessibility/espeakup
 	media-libs/alsa-oss
 	media-sound/alsa-utils
-	net-dialup/globespan-adsl
 	net-wireless/hostap-utils
 
 	sys-apps/pcmciautils

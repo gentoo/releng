@@ -30,7 +30,6 @@ boot/kernel/gentoo/packages:
 	media-sound/alsa-utils
 #	net-dialup/fcdsl
 #	net-dialup/fritzcapi
-	net-dialup/globespan-adsl
 ### Compile failure w/ 2.6.24
 #	net-dialup/slmodem
 	net-misc/br2684ctl
