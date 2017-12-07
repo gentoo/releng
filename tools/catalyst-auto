@@ -326,7 +326,7 @@ for a in "" ${SETS}; do
 
   for i in ${!specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -p -c "${CATALYST_CONFIG}" -f "${i}"
+    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${i}"
     if [ $? != 0 ]; then
       build_failure=1
       send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
@@ -336,7 +336,7 @@ for a in "" ${SETS}; do
 
   for i in ${!optional_specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -p -c "${CATALYST_CONFIG}" -f "${i}"
+    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${i}"
     if [ $? != 0 ]; then
       build_failure=1
       send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"

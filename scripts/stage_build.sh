@@ -152,7 +152,7 @@ for i in 1 2 3; do
   else 
     echo "source_subpath: default/stage$(expr ${i} - 1)-${subarch}-${version_stamp}" >> stage${i}.spec
   fi
-  run_cmd "catalyst -a -p -c ${config} -f stage${i}.spec" "/tmp/catalyst_build_stage${i}.${PID}.log"
+  run_cmd "catalyst -a -c ${config} -f stage${i}.spec" "/tmp/catalyst_build_stage${i}.${PID}.log"
   if [ $? != 0 ]; then
     send_email "Catalyst build error - stage${i}" "$(tail -n 200 /tmp/catalyst_build_stage${i}.${PID}.log)\r\n\r\nFull build log at /tmp/catalyst_build_stage${i}.${PID}.log"
     exit 1
