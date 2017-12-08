@@ -207,8 +207,9 @@ if [[ ${lastrun} -ne 0 ]]; then
   fi
 fi
 
-DATESTAMP=$(date +%Y%m%d)
-TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${DATESTAMP}.XXXXXX")
+DATESTAMP=$(date -u +%Y%m%d)
+TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
+TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${TIMESTAMP}.XXXXXX")
 
 # Nuke any previous tmpdirs to keep them from accumulating.
 if [[ ${preclean} -eq 1 ]]; then
@@ -219,6 +220,7 @@ fi
 if [ ${verbose} = 1 ]; then
   echo "TMPDIR = ${TMPDIR}"
   echo "DATESTAMP = ${DATESTAMP}"
+  echo "TIMESTAMP = ${TIMESTAMP}"
 fi
 
 if ! mkdir -p "${TMPDIR}"/{specs,kconfig,log}; then
@@ -257,11 +259,11 @@ for i in $(find -name '*.spec'); do
   old_version_stamp=$(grep version_stamp "${i}" | sed -e 's|^version_stamp: *||')
   old_source_subpath=$(grep source_subpath "${i}" | sed -e 's|^source_subpath: *||')
 
-  new_version_stamp=$(echo "${old_version_stamp}" | sed -e "s|^\(.*-\)\?.*$|\1${DATESTAMP}|")
+  new_version_stamp=$(echo "${old_version_stamp}" | sed -e "s|^\(.*-\)\?.*$|\1${TIMESTAMP}|")
   new_source_subpath=$(echo "${old_source_subpath}" | sed -e "s|${old_version_stamp}|${new_version_stamp}|")
 
   sed -i "s|^version_stamp:.*$|version_stamp: ${new_version_stamp}|" "${i}"
-  sed -i "s|^snapshot:.*$|snapshot: ${DATESTAMP}|" "${i}"
+  sed -i "s|^snapshot:.*$|snapshot: ${TIMESTAMP}|" "${i}"
 
   # We don't want to mangle the source_subpath for our stage1 spec
   if ! grep -q '^target: *stage[14]$' "${i}"; then
@@ -283,6 +285,7 @@ for i in $(find -name '*.spec'); do
   # Expand vars that the spec expects us to.
   sed -i \
     -e "s:@DATESTAMP@:${DATESTAMP}:g" \
+    -e "s:@TIMESTAMP@:${TIMESTAMP}:g" \
     -e "s:@REPO_DIR@:${REPO_DIR}:g" \
     "${i}"
 done
@@ -305,7 +308,7 @@ if [[ ${preclean} -eq 1 ]]; then
 fi
 
 # Create snapshot
-if ! run_cmd "${TMPDIR}/log/snapshot.log" catalyst -c "${CATALYST_CONFIG}" -s "${DATESTAMP}"; then
+if ! run_cmd "${TMPDIR}/log/snapshot.log" catalyst -c "${CATALYST_CONFIG}" -s "${TIMESTAMP}"; then
   send_email "Catalyst build error - snapshot" "" "${TMPDIR}/log/snapshot.log"
   exit 1
 fi

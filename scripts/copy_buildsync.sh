@@ -70,7 +70,7 @@ copy_arch_to_outgoing() {
 	fi
 
 	# Copying
-	for i in $(find ${indir} -type f | grep -- '-20[0123][0-9]\{5\}' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
+	for i in $(find ${indir} -type f | egrep -- '-20[0123][0-9]{5}(([0-9]{6})|(T[0-9]{6}Z))?' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
 		#echo "Doing $i"
 		t="${outdir}/${i}"
 		mkdir -p ${t} 2>/dev/null
@@ -154,7 +154,7 @@ process_arch() {
 
 	# New variant preserve code
 	find_variants=( '(' -iname '*.iso' -o -name 'netboot-*' -o "${EXTENSIONS[@]}" ')' )
-	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' 2>/dev/null | sed  -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
+	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' 2>/dev/null | sed -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
 	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
 	for v in $variants ; do
 		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print 2>/dev/null | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
