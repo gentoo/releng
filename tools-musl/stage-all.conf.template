@@ -2,7 +2,7 @@ subarch: SARCH
 target: CSTAGE
 version_stamp: musl-FLAVOR
 rel_type: musl/FLAVOR/SARCH
-profile: hardened/linux/musl/PARCH
+profile: PROFILE/linux/musl/PARCH
 snapshot: current
 source_subpath: musl/FLAVOR/SARCH/PSTAGE-SARCH-musl-FLAVOR
 chost: TARCH-gentoo-linux-musl

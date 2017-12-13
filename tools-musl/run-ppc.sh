@@ -17,6 +17,9 @@ prepare_confs() {
     local tarch="${arch}"
     [[ "${arch}" == "ppc" ]] && tarch="powerpc"
 
+    local profile=${flavor}
+    [[ "${flavor}" == "vanilla" ]] && profile="default"
+
     cat stage-all.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
@@ -25,6 +28,7 @@ prepare_confs() {
         -e "s:PARCH:${parch}:g" \
         -e "s:TARCH:${tarch}:g" \
         -e "s:FLAVOR:${flavor}:g" \
+        -e "s:PROFILE:${profile}:g" \
         -e "s:MYCATALYST:$(pwd):g" \
         >  stage${s}-${arch}-musl-${flavor}.conf
 

@@ -20,6 +20,9 @@ prepare_confs() {
       && float="softfp" \
       || float="hardfloat"
 
+    local profile=${flavor}
+    [[ "${flavor}" == "vanilla" ]] && profile="default"
+
     cat stage-all.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
@@ -29,6 +32,7 @@ prepare_confs() {
         -e "s:TARCH:${tarch}:g" \
         -e "s:gentoo-linux-musl:${float}-linux-musleabi:" \
         -e "s:FLAVOR:${flavor}:g" \
+        -e "s:PROFILE:${profile}:g" \
         -e "s:MYCATALYST:$(pwd):g" \
         >  stage${s}-${arch}-musl-${flavor}.conf
 
