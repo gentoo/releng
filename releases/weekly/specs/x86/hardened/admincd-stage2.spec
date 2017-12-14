@@ -14,7 +14,6 @@ livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: admincd-x86-latest.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux Admin CD latest
-livecd/rcdel: keymaps|boot
 
 boot/kernel: gentoo
 

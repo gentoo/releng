@@ -14,7 +14,6 @@ livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: install-amd64-minimal-latest.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo Linux amd64 latest
-livecd/rcdel: keymaps|boot
 
 boot/kernel: gentoo
 
