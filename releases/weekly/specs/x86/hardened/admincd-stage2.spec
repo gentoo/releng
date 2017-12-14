@@ -17,7 +17,7 @@ livecd/volid: Gentoo Linux Admin CD latest
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/sources: hardened-sources
+boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/x86/admincd-3.18.9.config
 boot/kernel/gentoo/use:
 	-*
