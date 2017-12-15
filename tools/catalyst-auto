@@ -40,7 +40,7 @@ usage() {
 
   cat <<EOH
 Usage:
-  stage_build [-c|--config <config>] [-v|--verbose] [-h|--help]
+  catalyst-auto [-c|--config <config>] [-v|--verbose] [-h|--help]
 
 Options:
   -c|--config         Specifies the config file to use (required)
