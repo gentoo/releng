@@ -13,7 +13,7 @@ livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm
 livecd/iso: /home/catalyst/builds/default/install-ia64-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo Linux IA64 2008.0
+livecd/volid: Gentoo ia64 latest
 
 boot/kernel: gentoo
 

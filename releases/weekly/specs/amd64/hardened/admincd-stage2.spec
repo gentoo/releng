@@ -13,7 +13,7 @@ livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: admincd-amd64-latest.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo Linux Admin CD latest
+livecd/volid: Gentoo amd64 AdminCD latest
 
 boot/kernel: gentoo
 

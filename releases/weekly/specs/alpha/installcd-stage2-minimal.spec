@@ -13,7 +13,7 @@ livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm
 livecd/iso: /space/catalyst/builds/default/install-alpha-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo Linux alpha 2008.0
+livecd/volid: Gentoo alpha latest
 
 boot/kernel: gentoo gentoo_nolsa
 

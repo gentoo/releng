@@ -10,7 +10,7 @@ livecd/cdtar: /home/armin76/tmp/silo-1.4.14-sparc-cdtar-weekly.tar.bz2
 livecd/fstype: squashfs
 livecd/iso: /var/tmp/catalyst/builds/default/install-sparc64-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo Linux SPARC64 2008.0
+livecd/volid: Gentoo sparc64 latest
 livecd/gk_mainargs: --firmware-files=/lib/firmware/ql2200_fw.bin --makeopts=-j33
 
 boot/kernel: gentoo

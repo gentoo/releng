@@ -13,7 +13,7 @@ livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: livecd-i686-installer-latest.iso
 livecd/type: gentoo-release-livecd
-livecd/volid: Gentoo Linux latest x86 LiveCD
+livecd/volid: Gentoo x86 LiveCD latest
 livecd/xdm: gdm
 livecd/xsession: xfce
 

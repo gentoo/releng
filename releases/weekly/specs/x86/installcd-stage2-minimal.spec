@@ -13,7 +13,7 @@ livecd/fstype: squashfs
 livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: install-x86-minimal-latest.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo Linux x86 latest
+livecd/volid: Gentoo x86 latest
 
 boot/kernel: gentoo
 
