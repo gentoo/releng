@@ -79,9 +79,9 @@ run_cmd() {
 
   if [ $verbose = 1 ]; then
     echo "*** Running command: $*"
-    "$@" 2>&1 | tee "${logfile}"
+    "$@" 2>&1 | tee -a "${logfile}"
   else
-    "$@" &> "${logfile}"
+    "$@" &>> "${logfile}"
   fi
 
   # If we used tee above, make sure we pass back up the command's error.
