@@ -360,7 +360,7 @@ for a in "" ${SETS}; do
 
   for i in ${!specs_var} ${!optional_specs_var}; do
     LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"	
-    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -P -c "${CATALYST_CONFIG}" -f "${i}"
+    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst --purgetmponly -c "${CATALYST_CONFIG}" -f "${i}"
   done
 
   update_symlinks
