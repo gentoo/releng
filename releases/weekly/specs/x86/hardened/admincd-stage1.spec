@@ -5,6 +5,7 @@ rel_type: hardened
 profile: hardened/linux/x86
 snapshot: latest
 source_subpath: hardened/stage3-i686-hardened-latest
+compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
