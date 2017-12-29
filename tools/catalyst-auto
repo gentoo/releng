@@ -77,9 +77,12 @@ run_cmd() {
   local logfile="$1"
   shift
 
-  if [ $verbose = 1 ]; then
+  if [ $verbose = 2 ]; then
     echo "*** Running command: $*"
     "$@" 2>&1 | tee -a "${logfile}"
+  elif [ $verbose = 1 ]; then
+    echo "*** Running command: $*"
+    "$@" &>> "${logfile}"
   else
     "$@" &>> "${logfile}"
   fi
@@ -137,7 +140,7 @@ do
       shift
       ;;
     -v|--verbose)
-      verbose=1
+      verbose=$(($verbose+1))
       ;;
     -k|--keep-tmpdir)
       keep_tmpdir=1
@@ -224,7 +227,7 @@ if [[ ${preclean} -eq 1 ]]; then
   mkdir "${TMPDIR}"
 fi
 
-if [ ${verbose} = 1 ]; then
+if [ ${verbose} -ge 1 ]; then
   echo "TMPDIR = ${TMPDIR}"
   echo "DATESTAMP = ${DATESTAMP}"
   echo "TIMESTAMP = ${TIMESTAMP}"
