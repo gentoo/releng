@@ -35,6 +35,7 @@ livecd/packages:
 	app-arch/unzip
 	app-crypt/gnupg
 	app-editors/mg
+	app-editors/nano
 	app-misc/screen
 	app-portage/mirrorselect
 	app-text/wgetpaste

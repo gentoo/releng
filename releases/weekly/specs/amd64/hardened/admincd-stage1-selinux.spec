@@ -9,8 +9,10 @@ compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
+	caps
 	deprecated
 	fbcon
+	filecaps
 	ipv6
 	livecd
 	loop-aes
@@ -59,6 +61,7 @@ livecd/packages:
 	app-editors/hexcurse
 	app-editors/hexedit
 	app-editors/mg
+	app-editors/nano
 	app-editors/vim
 	app-emacs/ebuild-mode
 	app-emulation/xen-tools
@@ -186,7 +189,6 @@ livecd/packages:
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/multipath-tools
-	sys-fs/nilfs-utils
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
