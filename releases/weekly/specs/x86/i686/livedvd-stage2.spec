@@ -2,7 +2,7 @@ subarch: i686
 version_stamp: latest
 target: livecd-stage2
 rel_type: default
-profile: default/linux/x86/13.0/desktop
+profile: default/linux/x86/17.0/desktop
 snapshot: latest
 source_subpath: default/livecd-stage1-i686-installer-latest
 

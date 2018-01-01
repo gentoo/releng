@@ -2,7 +2,7 @@ subarch: amd64
 target: stage1
 version_stamp: hardened+nomultilib-latest
 rel_type: hardened
-profile: hardened/linux/amd64/no-multilib
+profile: default/linux/amd64/17.0/no-multilib/hardened
 snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened+nomultilib-latest
 compression_mode: pixz_x

@@ -2,7 +2,7 @@ subarch: amd64
 target: stage1
 version_stamp: hardened-latest
 rel_type: hardened
-profile: hardened/linux/amd64
+profile: default/linux/amd64/17.0/hardened
 snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened-latest
 compression_mode: pixz_x

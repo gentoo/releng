@@ -2,7 +2,7 @@ subarch: amd64
 version_stamp: latest
 target: livecd-stage2
 rel_type: hardened
-profile: hardened/linux/amd64
+profile: default/linux/amd64/17.0/hardened
 snapshot: latest
 source_subpath: hardened/livecd-stage1-amd64-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos

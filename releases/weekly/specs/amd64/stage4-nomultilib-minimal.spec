@@ -2,7 +2,7 @@ subarch: amd64
 target: stage4
 version_stamp: minimal-nomultilib-latest
 rel_type: default
-profile: default/linux/amd64/13.0/no-multilib
+profile: default/linux/amd64/17.0/no-multilib
 snapshot: latest
 source_subpath: default/stage3-amd64-nomultilib-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/cloud-stages
