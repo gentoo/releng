@@ -19,6 +19,17 @@ unset UNSHARE
 
 CATALYST_CONFIG=/etc/catalyst/catalyst.conf
 
+# Probe the default source dir from this script name.
+REPO_DIR=$(dirname "$(dirname "$(realpath "$0")")")
+
+# Set up defaults that config files can override if they want.
+SUBARCH=$(uname -m)
+EMAIL_TO="releng@gentoo.org,gentoo-releng-autobuilds@lists.gentoo.org"
+# Use full hostname by default as Gentoo servers will reject short names.
+EMAIL_FROM="catalyst@$(hostname -f)"
+EMAIL_SUBJECT_PREPEND="[${SUBARCH}-auto]"
+
+# Variables updated by command line arguments.
 declare -a config_files
 config_files=()
 verbose=0
@@ -27,9 +38,6 @@ testing=0
 preclean=0
 lastrun=0
 lock_file=
-
-# Set pipefail so that run_cmd returns the right value in $?
-set -o pipefail
 
 usage() {
   local msg=$1
@@ -125,269 +133,271 @@ trigger_post_build() {
   fi
 }
 
-# Parse args
-while [ ${#} -gt 0 ]
-do
-  a=${1}
-  shift
-  case "${a}" in
-    -h|--help)
-      usage
-      exit 0
-      ;;
-    -c|--config)
-      config_files+=("$1")
-      shift
-      ;;
-    -v|--verbose)
-      verbose=$(($verbose+1))
-      ;;
-    -k|--keep-tmpdir)
-      keep_tmpdir=1
-      ;;
-    -t|--test)
-      testing=1
-      ;;
-    -C|--preclean)
-      preclean=1
-      ;;
-    --interval)
-      lastrun=$1
-      shift
-      ;;
-    -l|--lock)
-      lock_file=$1
-      shift
-      ;;
-    -*)
-      usage "ERROR: You have specified an invalid option: ${a}"
-      exit 1
-      ;;
-    *)
-      usage "ERROR: This script takes no arguments: ${a}"
-      exit 1
-      ;;
-    esac
-done
+parse_args() {
+	local a
+	while [[ $# -gt 0 ]] ; do
+		a=$1
+		shift
+		case "${a}" in
+		-h|--help)
+			usage
+			exit 0
+			;;
+		-c|--config)
+			config_files+=("$1")
+			shift
+			;;
+		-v|--verbose)
+			verbose=$(($verbose+1))
+			;;
+		-k|--keep-tmpdir)
+			keep_tmpdir=1
+			;;
+		-t|--test)
+			testing=1
+			;;
+		-C|--preclean)
+			preclean=1
+			;;
+		--interval)
+			lastrun=$1
+			shift
+			;;
+		-l|--lock)
+			lock_file=$1
+			shift
+			;;
+		-*)
+			usage "ERROR: You have specified an invalid option: ${a}"
+			exit 1
+			;;
+		*)
+			usage "ERROR: This script takes no arguments: ${a}"
+			exit 1
+			;;
+		esac
+	done
+}
 
-(
+run_catalyst_commands() {
+	doneconfig=0
+	for config_file in "${config_files[@]}"; do
+		# Make sure all required values were specified.
+		if [[ -z "${config_file}" || ! -e "${config_file}" ]]; then
+			usage "ERROR: You must specify a valid config file to use: '$config_file' is not valid"
+			exit 1
+		fi
+		source "${config_file}"
+		doneconfig=1
+	done
+	if [[ ${doneconfig} == 0 ]]; then
+		usage "ERROR: You must specify at least one valid config file to use"
+		exit 1
+	fi
 
-if [[ -n ${lock_file} ]]; then
-  if ! flock -n 9; then
-    echo "catalyst-auto already running"
-    exit 1
-  fi
-fi
+	# Some configs will set this explicitly, so don't clobber it.
+	: ${BUILD_SRCDIR_BASE:=$(catalyst_var storedir)}
 
-# Probe the default source dir from this script name.
-REPO_DIR=$(dirname "$(dirname "$(realpath "$0")")")
+	# See if we had a recent success.
+	if [[ ${lastrun} != 0 ]]; then
+		last_success_file="${BUILD_SRCDIR_BASE}/.last_success"
+		delay=$(( lastrun * 24 * 60 * 60 ))
+		last_success=$(head -1 "${last_success_file}" 2>/dev/null || echo 0)
+		if [[ $(date +%s) -lt $(( last_success + delay )) ]]; then
+			exit 0
+		fi
+	fi
 
-# Set up defaults that config files can override if they want.
-SUBARCH=$(uname -m)
-EMAIL_TO="releng@gentoo.org,gentoo-releng-autobuilds@lists.gentoo.org"
-# Use full hostname by default as Gentoo servers will reject short names.
-EMAIL_FROM="catalyst@$(hostname -f)"
-EMAIL_SUBJECT_PREPEND="[${SUBARCH}-auto]"
+	DATESTAMP=$(date -u +%Y%m%d)
+	TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
+	TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${TIMESTAMP}.XXXXXX")
 
-doneconfig=0
-for config_file in "${config_files[@]}"; do
-    # Make sure all required values were specified
-    if [ -z "${config_file}" -o ! -e "${config_file}" ]; then
-      usage "ERROR: You must specify a valid config file to use: '$config_file' is not valid"
-      exit 1
-    fi
-    source "${config_file}"
-    doneconfig=1
-done
-if [[ $doneconfig -eq 0 ]]; then
-      usage "ERROR: You must specify at least one valid config file to use"
-      exit 1
-fi
+	# Nuke any previous tmpdirs to keep them from accumulating.
+	if [[ ${preclean} == 1 ]]; then
+		rm -rf "${TMPDIR%.??????}".*
+		mkdir "${TMPDIR}"
+	fi
 
-# Some configs will set this explicitly, so don't clobber it.
-: ${BUILD_SRCDIR_BASE:=$(catalyst_var storedir)}
+	if [[ ${verbose} -ge 1 ]]; then
+		echo "TMPDIR = ${TMPDIR}"
+		echo "DATESTAMP = ${DATESTAMP}"
+		echo "TIMESTAMP = ${TIMESTAMP}"
+	fi
 
-# See if we had a recent success.
-if [[ ${lastrun} -ne 0 ]]; then
-  last_success_file="${BUILD_SRCDIR_BASE}/.last_success"
-  delay=$(( lastrun * 24 * 60 * 60 ))
-  last_success=$(head -1 "${last_success_file}" 2>/dev/null || echo 0)
-  if [[ $(date +%s) -lt $(( last_success + delay )) ]]; then
-    exit 0
-  fi
-fi
+	if ! mkdir -p "${TMPDIR}"/{specs,kconfig,log}; then
+		echo "Couldn't create tempdirs!"
+		exit 1
+	fi
 
-DATESTAMP=$(date -u +%Y%m%d)
-TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
-TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${TIMESTAMP}.XXXXXX")
+	if ! run_cmd "${TMPDIR}/log/pre_build.log" pre_build; then
+		send_email "Catalyst build error - pre_build" "The pre_build function failed" "${TMPDIR}/log/pre_build.log"
+		exit 1
+	fi
 
-# Nuke any previous tmpdirs to keep them from accumulating.
-if [[ ${preclean} -eq 1 ]]; then
-  rm -rf "${TMPDIR%.??????}".*
-  mkdir "${TMPDIR}"
-fi
+	cd "${SPECS_DIR}" || exit 1
 
-if [ ${verbose} -ge 1 ]; then
-  echo "TMPDIR = ${TMPDIR}"
-  echo "DATESTAMP = ${DATESTAMP}"
-  echo "TIMESTAMP = ${TIMESTAMP}"
-fi
+	for a in "" ${SETS}; do
+		if [[ -z "${a}" ]]; then
+			specs_var="SPECS"
+			optional_specs_var="OPTIONAL_SPECS"
+		else
+			specs_var="SET_${a}_SPECS"
+			optional_specs_var="SET_${a}_OPTIONAL_SPECS"
+		fi
 
-if ! mkdir -p "${TMPDIR}"/{specs,kconfig,log}; then
-  echo "Couldn't create tempdirs!"
-  exit 1
-fi
+		for i in ${!specs_var} ${!optional_specs_var}; do
+			cp --parents "${i}" "${TMPDIR}"/specs/
+		done
+	done
 
-if ! run_cmd "${TMPDIR}/log/pre_build.log" pre_build; then
-  send_email "Catalyst build error - pre_build" "The pre_build function failed" "${TMPDIR}/log/pre_build.log"
-  exit 1
-fi
+	find "${KCONFIG_DIR}" -type f -exec cp {} "${TMPDIR}"/kconfig \;
 
-cd "${SPECS_DIR}" || exit 1
+	cd "${TMPDIR}/specs" || exit 1
 
-for a in "" ${SETS}; do
-  if [ -z "${a}" ]; then
-    specs_var="SPECS"
-    optional_specs_var="OPTIONAL_SPECS"
-  else
-    specs_var="SET_${a}_SPECS"
-    optional_specs_var="SET_${a}_OPTIONAL_SPECS"
-  fi
+	# Fix up specs with datestamp
+	for i in $(find -name '*.spec'); do
+		# Grab current version_stamp and source_subpath
+		old_version_stamp=$(grep version_stamp "${i}" | sed -e 's|^version_stamp: *||')
+		old_source_subpath=$(grep source_subpath "${i}" | sed -e 's|^source_subpath: *||')
 
-  for i in ${!specs_var} ${!optional_specs_var}; do
-    cp --parents "${i}" "${TMPDIR}"/specs/
-  done
-done
+		new_version_stamp=$(echo "${old_version_stamp}" | sed -e "s|^\(.*-\)\?.*$|\1${TIMESTAMP}|")
+		new_source_subpath=$(echo "${old_source_subpath}" | sed -e "s|${old_version_stamp}|${new_version_stamp}|")
 
-find "${KCONFIG_DIR}" -type f -exec cp {} "${TMPDIR}"/kconfig \;
+		sed -i "s|^version_stamp:.*$|version_stamp: ${new_version_stamp}|" "${i}"
+		sed -i "s|^snapshot:.*$|snapshot: ${TIMESTAMP}|" "${i}"
 
-cd "${TMPDIR}/specs" || exit 1
+		# We don't want to mangle the source_subpath for our stage1 spec
+		if ! grep -q '^target: *stage[14]$' "${i}"; then
+			sed -i "s|^source_subpath:.*$|source_subpath: ${new_source_subpath}|" "${i}"
+		fi
 
-# Fix up specs with datestamp
-for i in $(find -name '*.spec'); do
-  # Grab current version_stamp and source_subpath
-  old_version_stamp=$(grep version_stamp "${i}" | sed -e 's|^version_stamp: *||')
-  old_source_subpath=$(grep source_subpath "${i}" | sed -e 's|^source_subpath: *||')
+		sed -i "/^livecd\/iso/s|${old_version_stamp}|${new_version_stamp}|" "${i}"
+		sed -i "/^livecd\/volid/s|${old_version_stamp}|${new_version_stamp}|" "${i}"
 
-  new_version_stamp=$(echo "${old_version_stamp}" | sed -e "s|^\(.*-\)\?.*$|\1${TIMESTAMP}|")
-  new_source_subpath=$(echo "${old_source_subpath}" | sed -e "s|${old_version_stamp}|${new_version_stamp}|")
+		kconfig_lines=$(grep '^boot/kernel/[^/]\+/config:' "${i}")
+		if [[ -n ${kconfig_lines} ]]; then
+			echo "${kconfig_lines}" | while read line; do
+				key=$(echo "${line}" | cut -d: -f1)
+				filename=$(basename $(echo "${line}" | cut -d: -f2))
+				sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" "${i}"
+			done
+		fi
 
-  sed -i "s|^version_stamp:.*$|version_stamp: ${new_version_stamp}|" "${i}"
-  sed -i "s|^snapshot:.*$|snapshot: ${TIMESTAMP}|" "${i}"
+		# Expand vars that the spec expects us to.
+		sed -i \
+			-e "s:@DATESTAMP@:${DATESTAMP}:g" \
+			-e "s:@TIMESTAMP@:${TIMESTAMP}:g" \
+			-e "s:@REPO_DIR@:${REPO_DIR}:g" \
+			"${i}"
+	done
 
-  # We don't want to mangle the source_subpath for our stage1 spec
-  if ! grep -q '^target: *stage[14]$' "${i}"; then
-    sed -i "s|^source_subpath:.*$|source_subpath: ${new_source_subpath}|" "${i}"
-  fi
+	if [[ ${testing} == 1 ]]; then
+		echo "Exiting due to --test"
+		exit
+	fi
 
-  sed -i "/^livecd\/iso/s|${old_version_stamp}|${new_version_stamp}|" "${i}"
-  sed -i "/^livecd\/volid/s|${old_version_stamp}|${new_version_stamp}|" "${i}"
+	if [[ ${preclean} == 1 ]]; then
+		snapshot_cache=$(catalyst_var snapshot_cache)
+		if [[ -z ${snapshot_cache} ]]; then
+			echo "error: snapshot_cache not set in config file"
+			exit 1
+		fi
+		pushd "${BUILD_SRCDIR_BASE}" >/dev/null || exit 1
+		rm -rf --one-file-system \
+			kerncache packages snapshots tmp "${snapshot_cache}"/*
+		popd >/dev/null
+	fi
 
-  kconfig_lines=$(grep '^boot/kernel/[^/]\+/config:' "${i}")
-  if [ -n "${kconfig_lines}" ]; then
-    echo "${kconfig_lines}" | while read line; do
-      key=$(echo "${line}" | cut -d: -f1)
-      filename=$(basename $(echo "${line}" | cut -d: -f2))
-      sed -i "s|^${key}:.*\$|${key}: ${TMPDIR}/kconfig/${filename}|" "${i}"
-    done
-  fi
+	# Create snapshot
+	if ! run_cmd "${TMPDIR}/log/snapshot.log" catalyst -c "${CATALYST_CONFIG}" -s "${TIMESTAMP}"; then
+		send_email "Catalyst build error - snapshot" "" "${TMPDIR}/log/snapshot.log"
+		exit 1
+	fi
 
-  # Expand vars that the spec expects us to.
-  sed -i \
-    -e "s:@DATESTAMP@:${DATESTAMP}:g" \
-    -e "s:@TIMESTAMP@:${TIMESTAMP}:g" \
-    -e "s:@REPO_DIR@:${REPO_DIR}:g" \
-    "${i}"
-done
+	build_failure=0
 
-if [ "${testing}" -eq 1 ]; then
-  echo "Exiting due to --test"
-  exit
-fi
+	timeprefix=()
+	which time >/dev/null && timeprefix=( "time" )
 
-if [[ ${preclean} -eq 1 ]]; then
-  snapshot_cache=$(catalyst_var snapshot_cache)
-  if [[ -z ${snapshot_cache} ]]; then
-    echo "error: snapshot_cache not set in config file"
-    exit 1
-  fi
-  pushd "${BUILD_SRCDIR_BASE}" >/dev/null || exit 1
-  rm -rf --one-file-system \
-    kerncache packages snapshots tmp "${snapshot_cache}"/*
-  popd >/dev/null
-fi
+	for a in "" ${SETS}; do
+		if [[ -z ${a} ]]; then
+			specs_var="SPECS"
+			optional_specs_var="OPTIONAL_SPECS"
+		else
+			specs_var="SET_${a}_SPECS"
+			optional_specs_var="SET_${a}_OPTIONAL_SPECS"
+		fi
 
-# Create snapshot
-if ! run_cmd "${TMPDIR}/log/snapshot.log" catalyst -c "${CATALYST_CONFIG}" -s "${TIMESTAMP}"; then
-  send_email "Catalyst build error - snapshot" "" "${TMPDIR}/log/snapshot.log"
-  exit 1
-fi
+		for i in ${!specs_var}; do
+			LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+			run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${i}"
+			if [[ $? != 0 ]]; then
+				build_failure=1
+				send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
+				continue 2
+			else
+				trigger_post_build
+			fi
+		done
 
-build_failure=0
+		for i in ${!optional_specs_var}; do
+			LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+			run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${i}"
+			if [[ $? != 0 ]]; then
+				build_failure=1
+				send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
+				break
+			else
+				trigger_post_build
+			fi
+		done
 
-timeprefix=()
-which time >/dev/null && timeprefix=( "time" )
+		for i in ${!specs_var} ${!optional_specs_var}; do
+			LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"
+			run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst --purgetmponly -c "${CATALYST_CONFIG}" -f "${i}"
+		done
 
-for a in "" ${SETS}; do
-  if [ -z "${a}" ]; then
-    specs_var="SPECS"
-    optional_specs_var="OPTIONAL_SPECS"
-  else
-    specs_var="SET_${a}_SPECS"
-    optional_specs_var="SET_${a}_OPTIONAL_SPECS"
-  fi
+		update_symlinks
+	done
 
-  for i in ${!specs_var}; do
-    LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${i}"
-    if [ $? != 0 ]; then
-      build_failure=1
-      send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
-      continue 2
-    else
-      trigger_post_build
-    fi
-  done
+	trigger_post_build
 
-  for i in ${!optional_specs_var}; do
-    LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${i}"
-    if [ $? != 0 ]; then
-      build_failure=1
-      send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
-      break
-    else
-      trigger_post_build
-    fi
-  done
+	if [[ ${build_failure} == 0 ]]; then
+		if [[ ${lastrun} != 0 ]]; then
+			stamp=$(date)
+			(date -d"${stamp}" +%s; echo "${stamp}") >"${last_success_file}"
+		fi
 
-  for i in ${!specs_var} ${!optional_specs_var}; do
-    LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"	
-    run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst --purgetmponly -c "${CATALYST_CONFIG}" -f "${i}"
-  done
+		send_email "Catalyst build success" "Build process complete."
 
-  update_symlinks
-done
+		if [[ ${keep_tmpdir} == 0 ]]; then
+			if ! rm -rf "${TMPDIR}"; then
+				echo "Could not remove tmpdir ${TMPDIR}!"
+				exit 1
+			fi
+		fi
+	else
+		send_email "Catalyst build complete, but with errors" "Build process has completed, but there were errors. Please consult previous emails to determine the problem."
+	fi
+}
 
-trigger_post_build
+main() {
+	# Set pipefail so that run_cmd returns the right value in $?.
+	set -o pipefail
 
-if [ ${build_failure} = 0 ]; then
-  if [[ ${lastrun} -ne 0 ]]; then
-    stamp=$(date)
-    (date -d"${stamp}" +%s; echo "${stamp}") >"${last_success_file}"
-  fi
+	# Parse user arguments before we try doing container logic.
+	parse_args "$@"
 
-  send_email "Catalyst build success" "Build process complete."
+	(
+	if [[ -n ${lock_file} ]]; then
+		if ! flock -n 9; then
+			echo "catalyst-auto already running"
+			exit 1
+		fi
+	fi
 
-  if [ "${keep_tmpdir}" = 0 ]; then
-    if ! rm -rf "${TMPDIR}"; then
-      echo "Could not remove tmpdir ${TMPDIR}!"
-      exit 1
-    fi
-  fi
+	run_catalyst_commands
+	) 9>"${lock_file:-/dev/null}"
+}
 
-else
-  send_email "Catalyst build complete, but with errors" "Build process has completed, but there were errors. Please consult previous emails to determine the problem."
-fi
-
-) 9>"${lock_file:-/dev/null}"
+main "$@"
