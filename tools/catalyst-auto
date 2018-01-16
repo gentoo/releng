@@ -93,8 +93,7 @@ update_symlinks() {
 
 pre_build() {
   # This is a skeleton function that you can override from the config file.
-  # It will be executed before the build is started. You can use this to
-  # update the checkout of the releng repo
+  # It will be executed before the build is started.
   :
 }
 
@@ -181,6 +180,31 @@ containerize() {
 		unshare -p -- true >&/dev/null && uargs+=( -p -f --mount-proc )
 		# Re-exec ourselves in the new namespace.
 		UNSHARE=true exec unshare "${uargs[@]}" -- "$0" "$@"
+	fi
+}
+
+# Update the git repo if possible.  It might modify this script which will probably
+# make bash fail (since bash parses as it executes).  So we have to safely re-exec
+# the script whenever there's an update.
+git_update() {
+	# If we've already relaunched, nothing to do.
+	if [[ ${GIT_UPDATE} == "true" ]] ; then
+		return
+	fi
+
+	pushd "${REPO_DIR}" >/dev/null
+	git fetch -q
+	revs=$(git rev-list HEAD..FETCH_HEAD)
+	popd >/dev/null
+	if [[ -n ${revs} ]] ; then
+		GIT_UPDATE=true exec bash -c '
+			repo_dir=$1 script=$2
+			shift 2
+			pushd "${repo_dir}" >/dev/null
+			git merge FETCH_HEAD || echo "${script}: WARNING: git repo is dirty"
+			popd >/dev/null
+			exec "${script}" "$@"
+		' -- "${REPO_DIR}" "$0" "$@"
 	fi
 }
 
@@ -392,6 +416,9 @@ main() {
 
 	# Parse user arguments before we try doing container logic.
 	parse_args "$@"
+
+	# Update the release git dir if possible.
+	git_update "$@"
 
 	# Try to isolate ourselves from the rest of the system.
 	containerize "$@"
