@@ -203,7 +203,7 @@ git_update() {
 			repo_dir=$1 script=$2
 			shift 2
 			pushd "${repo_dir}" >/dev/null
-			git merge FETCH_HEAD || echo "${script}: WARNING: git repo is dirty"
+			git merge -q FETCH_HEAD || echo "${script}: WARNING: git repo is dirty"
 			popd >/dev/null
 			exec "${script}" "$@"
 		' -- "${REPO_DIR}" "$0" "$@"
