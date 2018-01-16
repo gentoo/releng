@@ -94,7 +94,7 @@ update_symlinks() {
 pre_build() {
   # This is a skeleton function that you can override from the config file.
   # It will be executed before the build is started.
-  :
+  update_symlinks
 }
 
 post_build() {
