@@ -111,10 +111,11 @@ catalyst_var() {
 }
 
 trigger_post_build() {
-  if ! run_cmd "${TMPDIR}/log/post_build.log" post_build; then
-    send_email "Catalyst build error - post_build" "The post_build function failed" "${TMPDIR}/log/post_build.log"
-    exit 1
-  fi
+	local set=$1 spec=$2
+	if ! run_cmd "${TMPDIR}/log/post_build.log" post_build "${set}" "${spec}"; then
+		send_email "Catalyst build error - post_build" "The post_build function failed" "${TMPDIR}/log/post_build.log"
+		exit 1
+	fi
 }
 
 parse_args() {
@@ -365,7 +366,7 @@ run_catalyst_commands() {
 				send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
 				continue 2
 			else
-				trigger_post_build
+				trigger_post_build "${a}" "${i}"
 			fi
 		done
 
@@ -377,7 +378,7 @@ run_catalyst_commands() {
 				send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
 				break
 			else
-				trigger_post_build
+				trigger_post_build "${a}" "${i}"
 			fi
 		done
 
