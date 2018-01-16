@@ -70,6 +70,7 @@ run_cmd() {
   local logfile="$1"
   shift
 
+  echo "*** Running command: $*" &>> "${logfile}"
   if [ $verbose = 2 ]; then
     echo "*** Running command: $*"
     "$@" 2>&1 | tee -a "${logfile}"
