@@ -2,6 +2,6 @@ subarch: SARCH
 target: CSTAGE
 version_stamp: systemd
 rel_type: systemd/SARCH
-profile: default/linux/PARCH/13.0/systemd
+profile: default/linux/PARCH/17.0/systemd
 snapshot: current
 source_subpath: systemd/SARCH/PSTAGE-SARCH-systemd
