@@ -28,7 +28,6 @@ stage4/packages:
 	sys-devel/bc
 	sys-power/acpid
 stage4/fsscript: @REPO_DIR@/releases/weekly/scripts/cloud-prep.sh
-stage4/root_overlay: @REPO_DIR@/releases/weekly/overlays/cloud-overlay
 stage4/rcadd:
 	acpid|default
 	net.lo|default
