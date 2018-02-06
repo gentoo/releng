@@ -1,0 +1,2 @@
+# required by sys-libs/libselinux-2.7
+dev-libs/libpcre static-libs
