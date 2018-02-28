@@ -4,8 +4,8 @@ version_stamp: systemd-latest
 rel_type: default
 profile: default/linux/amd64/17.0/systemd
 snapshot: latest
-source_subpath: default/stage3-amd64-latest
-portage_confdir: @REPO_DIR@/releases/weekly/portage/systemd-stages
+source_subpath: default/stage3-amd64-systemd-latest
+portage_confdir: @REPO_DIR@/releases/weekly/portage/stages/
 
 stage4/use:
 	bash-completion
@@ -19,38 +19,21 @@ stage4/use:
 	urandom
 
 stage4/packages:
-	app-admin/logrotate
 	app-admin/sudo
-	app-admin/syslog-ng
-	app-editors/vim
-	app-emulation/cloud-init
-	app-portage/eix
-	app-portage/gentoolkit
-	net-misc/dhcpcd
+	net-misc/dhcp
 	net-misc/iputils
 	sys-boot/grub
-	sys-apps/dmidecode
 	sys-apps/gptfdisk
 	sys-apps/iproute2
 	sys-apps/lsb-release
-	sys-apps/pciutils
-	sys-block/parted
 	sys-devel/bc
 	sys-power/acpid
-	sys-process/cronie
 stage4/fsscript: @REPO_DIR@/releases/weekly/scripts/cloud-prep.sh
 stage4/rcadd:
 	acpid|default
-	cloud-config|default
-	cloud-final|default
-	cloud-init-local|default
-	cloud-init|default
-	cronie|default
-	dhcpcd|default
 	net.lo|default
 	netmount|default
 	sshd|default
-	syslog-ng|default
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
@@ -70,7 +53,7 @@ stage4/empty:
 	/usr/src
 	/var/cache/edb/dep
 	/var/cache/genkernel
-  /var/cache/portage/distfiles
+	/var/cache/portage/distfiles
 	/var/empty
 	/var/run
 	/var/state
