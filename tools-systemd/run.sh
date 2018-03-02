@@ -47,10 +47,8 @@ main() {
   # The parallelization `( do_stages ... ) &` doesn't work here
   # if catalyst is using snapcache, bug #519656
   for arch in amd64 i686; do
-    (
-      do_stages ${arch}
-      [[ $? == 1 ]] && echo "FAILURE at ${arch}" | tee zzz.log
-    ) &
+    do_stages ${arch}
+    [[ $? == 1 ]] && echo "FAILURE at ${arch}" | tee zzz.log
   done
 }
 
