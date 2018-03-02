@@ -5,22 +5,29 @@ source common.sh
 prepare_confs() {
   local arch=$1
 
-  for s in 1 2 3; do
+  for s in 1 2 3 4; do
+    # don't make i686 stage4
+    [[ $arch == i686 ]] && [[ $s == 4 ]] && continue
 
     local cstage=stage${s}
     local p=$(( s - 1 ))
     [[ $p == 0 ]] && p=3
     local pstage=stage${p}
+    local repo_dir="$( cd "$( dirname ${BASH_SOURCE[0]} )../" && pwd )"
+    local template="stage-all.conf.template"
+    # set the template file if stage4
+    [[ $s == 4 ]] && specfile=stage4-amd64.spec
 
     local parch="${arch}"
     [[ "${arch}" == "i686" ]] && parch="x86"
 
-    cat stage-all.conf.template | \
+    cat ${specfile} | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
         -e "s:PSTAGE:${pstage}:g" \
         -e "s:SARCH:${arch}:g" \
         -e "s:PARCH:${parch}:g" \
+        -e "s:@REPO_DIR@:${repo_dir}:g" \
         >  stage${s}-${arch}-systemd.conf
   done
 }
