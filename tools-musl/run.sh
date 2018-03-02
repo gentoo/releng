@@ -20,9 +20,9 @@ prepare_confs() {
     [[ "${arch}" == "amd64" ]] && tarch="x86_64"
 
     local profile=${flavor}
-    [[ "${flavor}" == "vanilla" ]] && profile="default"
+    [[ "${flavor}" == "vanilla" ]] && profile="" || profile="/hardened"
 
-    cat stage-all.conf.template | \
+    cat stage.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
         -e "s:PSTAGE:${pstage}:g" \
@@ -61,10 +61,12 @@ main() {
   # if catalyst is using snapcache, bug #519656
   for arch in amd64 i686; do
     for flavor in hardened vanilla; do
-      (
-        do_stages ${arch} ${flavor}
-        [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-      ) &
+      do_stages ${arch} ${flavor}
+      [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
+#      (
+#        do_stages ${arch} ${flavor}
+#        [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
+#      ) &
     done
   done
 }

@@ -1,0 +1,12 @@
+subarch: SARCH
+target: CSTAGE
+version_stamp: musl-FLAVOR
+rel_type: musl/FLAVOR/SARCH
+profile: default/linux/PARCH/17.0/muslPROFILE
+snapshot: current
+source_subpath: musl/FLAVOR/SARCH/PSTAGE-SARCH-musl-FLAVOR
+chost: TARCH-gentoo-linux-musl
+cflags: -O2 -pipe
+cxxflags: -O2 -pipe
+portage_confdir: MYCATALYST/portage.SARCH.FLAVOR
+portage_overlay: /var/lib/layman/musl
