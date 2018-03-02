@@ -56,10 +56,8 @@ main() {
   # if catalyst is using snapcache, bug #519656
   for arch in amd64 i686; do
     for flavor in hardened vanilla; do
-      (
-        do_stages ${arch} ${flavor}
-        [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-      ) &
+      do_stages ${arch} ${flavor}
+      [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
     done
   done
 }
