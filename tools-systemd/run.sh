@@ -13,7 +13,7 @@ prepare_confs() {
     local p=$(( s - 1 ))
     [[ $p == 0 ]] && p=3
     local pstage=stage${p}
-    local repo_dir="$( cd "$( dirname ${BASH_SOURCE[0]} )../" && pwd )"
+    local repo_dir="$( dirname $(pwd) )"
     local template="stage-all.conf.template"
     # set the template file if stage4
     [[ $s == 4 ]] && template=stage4-amd64.spec
