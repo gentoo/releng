@@ -16,12 +16,12 @@ prepare_confs() {
     local repo_dir="$( cd "$( dirname ${BASH_SOURCE[0]} )../" && pwd )"
     local template="stage-all.conf.template"
     # set the template file if stage4
-    [[ $s == 4 ]] && specfile=stage4-amd64.spec
+    [[ $s == 4 ]] && template=stage4-amd64.spec
 
     local parch="${arch}"
     [[ "${arch}" == "i686" ]] && parch="x86"
 
-    cat ${specfile} | \
+    cat ${template} | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
         -e "s:PSTAGE:${pstage}:g" \
