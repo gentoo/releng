@@ -50,6 +50,8 @@ main() {
     do_stages ${arch}
     [[ $? == 1 ]] && echo "FAILURE at ${arch}" | tee zzz.log
   done
+
+  catalyst -f stage4-amd64-systemd.conf
 }
 
 main $1 &

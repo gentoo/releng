@@ -27,12 +27,10 @@ EOF
 do_stages() {
   local arch=$1
 
-  for s in 1 2 3 4; do
+  for s in 1 2 3; do
     local tgpath="${storedir}/builds/systemd/${arch}"
     local target="stage${s}-${arch}-systemd-${mydate}.tar.bz2"
     local tglink="stage${s}-${arch}-systemd.tar.bz2"
-    # only run the amd64 stage4
-    [[ $arch == i686 ]] && [[ $s == 4 ]] && continue
     if [[ ! -f "${tgpath}/${tglink}" ]]; then
        touch stage${s}-${arch}-systemd.log
        echo "!!! ${tglink} at ${tgpath} doesn't exist" \
