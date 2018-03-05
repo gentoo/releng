@@ -6,4 +6,5 @@ profile: default/linux/arm64/17.0
 snapshot: current
 source_subpath: default/stage2-arm64-2008.0
 pkgcache_path: /var/tmp/catalyst/packages/stage3
-portage_confdir: @REPO_DIR@/releases/weekly/specs/arm64/portage-confdir
+portage_confdir: @REPO_DIR@/releases/weekly/portage/stages
+portage_prefix: releng
