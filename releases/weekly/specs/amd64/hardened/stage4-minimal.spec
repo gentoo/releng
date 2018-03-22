@@ -18,13 +18,11 @@ stage4/use:
 	urandom
 
 stage4/packages:
-	app-admin/sudo
 	net-misc/dhcp
 	sys-boot/grub
 	sys-apps/dmidecode
 	sys-apps/gptfdisk
 	sys-apps/iproute2
-	sys-apps/lsb-release
 	sys-devel/bc
 	sys-power/acpid
 stage4/fsscript: @REPO_DIR@/releases/weekly/scripts/cloud-prep.sh
@@ -42,6 +40,7 @@ boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
 
 # all of the cleanup...
 stage4/unmerge:
+	sys-devel/bc
 	sys-kernel/genkernel
 	sys-kernel/gentoo-sources
 
