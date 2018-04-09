@@ -115,7 +115,6 @@ livecd/packages:
 	net-misc/wget
 	net-misc/whois
 	net-proxy/dante
-#	net-proxy/ntlmaps
 	net-proxy/tsocks
 	net-vpn/openvpn
 	net-wireless/b43-fwcutter

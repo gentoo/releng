@@ -167,7 +167,6 @@ livecd/packages:
 	net-p2p/limewire
 	net-print/cups
 	net-proxy/dante
-#	net-proxy/ntlmaps
 	net-proxy/tsocks
 ### Masked (~amd64)
 #	net-wireless/aircrack-ng
