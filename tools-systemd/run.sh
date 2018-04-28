@@ -28,6 +28,7 @@ prepare_confs() {
         -e "s:SARCH:${arch}:g" \
         -e "s:PARCH:${parch}:g" \
         -e "s:@REPO_DIR@:${repo_dir}:g" \
+        -e "s:MYCATALYST:$(pwd):g" \
         >  stage${s}-${arch}-systemd.conf
   done
 }
