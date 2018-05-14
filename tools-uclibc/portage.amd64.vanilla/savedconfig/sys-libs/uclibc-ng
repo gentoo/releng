@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# uClibc-ng 0.1.0.28 C Library Configuration
+# uClibc-ng 0.1.0.30 C Library Configuration
 #
 # TARGET_aarch64 is not set
 # TARGET_alpha is not set
@@ -28,6 +28,7 @@
 # TARGET_sh is not set
 # TARGET_sparc is not set
 # TARGET_sparc64 is not set
+# TARGET_tile is not set
 TARGET_x86_64=y
 # TARGET_xtensa is not set
 
@@ -78,7 +79,6 @@ LDSO_RUNPATH_OF_EXECUTABLE=y
 LDSO_SAFE_RUNPATH=y
 LDSO_SEARCH_INTERP_PATH=y
 LDSO_LD_LIBRARY_PATH=y
-# LDSO_NO_CLEANUP is not set
 UCLIBC_CTOR_DTOR=y
 LDSO_GNU_HASH_SUPPORT=y
 # HAS_NO_THREADS is not set
@@ -222,8 +222,6 @@ HARDWIRED_ABSPATH=y
 #
 # Security options
 #
-UCLIBC_HAS_ARC4RANDOM=y
-# ARC4RANDOM_USES_NODEV is not set
 UCLIBC_HAS_SSP=y
 # SSP_QUICK_CANARY is not set
 UCLIBC_BUILD_SSP=y
