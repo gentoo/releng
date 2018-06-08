@@ -52,8 +52,8 @@ nameserver 2001:4860:4860::8888
 EOL
 
 # make sure musl stuff is available
-echo "=app-portage/layman-2.4.1-r1 ~amd64" >> /etc/portage/package.keywords/layman
-echo "=dev-python/ssl-fetch-0.4 ~amd64" >> /etc/portage/package.keywords/layman
+echo "=app-portage/layman-2.4.1-r1 ~amd64" >> /etc/portage/package.accept_keywords/layman
+echo "=dev-python/ssl-fetch-0.4 ~amd64" >> /etc/portage/package.accept_keywords/layman
 emerge -vq --jobs=4 layman dev-vcs/git
 layman -L
 layman -a musl
