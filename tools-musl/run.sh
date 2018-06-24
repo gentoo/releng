@@ -63,10 +63,6 @@ main() {
     for flavor in hardened vanilla; do
       do_stages ${arch} ${flavor}
       [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-#      (
-#        do_stages ${arch} ${flavor}
-#        [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-#      ) &
     done
   done
 }

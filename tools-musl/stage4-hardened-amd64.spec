@@ -2,10 +2,10 @@ subarch: amd64
 target: stage4
 version_stamp: musl-hardened-MY_DATE
 rel_type: musl/hardened/amd64
-profile: hardened/linux/musl/amd64
+profile: default/linux/amd64/17.0/musl/hardened
 snapshot: current
 source_subpath: musl/hardened/amd64/stage3-amd64-musl-hardened
-portage_confdir: @REPO_DIR@/portage.amd64.hardened-stage4
+portage_confdir: @REPO_DIR@/portage.amd64.hardened
 portage_overlay: /opt/overlays/musl
 
 stage4/use:
@@ -21,6 +21,7 @@ stage4/use:
 
 stage4/packages:
 	app-admin/syslog-ng
+	app-portage/layman
 	dev-util/pkgconf
 	net-misc/dhcpcd
 	sys-apps/iproute2

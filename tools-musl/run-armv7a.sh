@@ -23,7 +23,7 @@ prepare_confs() {
     local profile=${flavor}
     [[ "${flavor}" == "vanilla" ]] && profile="default"
 
-    cat stage-all.conf.template | \
+    cat stage.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
         -e "s:PSTAGE:${pstage}:g" \

@@ -1,0 +1,4 @@
+# needed for layman / stage4
+=net-analyzer/macchanger-1.7.0-r1 ~amd64
+=dev-libs/openssl-1.0.2o-r6 ~amd64
+=dev-python/cryptography-2.1.4-r2 ~amd64
