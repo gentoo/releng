@@ -10,7 +10,6 @@ livecd/bootargs: dokeymap
 livecd/cdtar: /space/armin76/tmp/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
 livecd/fsscript: /space/armin76/releng/releases/weekly/scripts/livecd.sh
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --mdadm
 livecd/iso: /space/catalyst/builds/default/install-alpha-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo alpha latest

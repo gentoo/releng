@@ -10,7 +10,6 @@ portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 livecd/bootargs: dokeymap
 livecd/cdtar: /home/armin76/tmp/elilo-3.6-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --mdadm
 livecd/iso: /home/catalyst/builds/default/install-ia64-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo ia64 latest

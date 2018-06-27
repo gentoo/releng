@@ -11,7 +11,7 @@ livecd/fstype: squashfs
 livecd/iso: /var/tmp/catalyst/builds/default/install-sparc64-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo sparc64 latest
-livecd/gk_mainargs: --firmware-files=/lib/firmware/ql2200_fw.bin --makeopts=-j33
+livecd/gk_mainargs: --firmware-files=/lib/firmware/ql2200_fw.bin
 
 boot/kernel: gentoo
 

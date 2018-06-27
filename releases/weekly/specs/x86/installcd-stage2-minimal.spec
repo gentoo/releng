@@ -10,7 +10,6 @@ portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: install-x86-minimal-latest.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo x86 latest

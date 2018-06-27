@@ -10,7 +10,6 @@ livecd/bootargs: dokeymap
 livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fsscript: @REPO_DIR@/releases/latest/scripts/livecd.sh
 livecd/fstype: squashfs
-livecd/gk_mainargs: --lvm --dmraid --mdadm --makeopts=-j8
 livecd/iso: livecd-i686-installer-latest.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo x86 LiveCD latest
