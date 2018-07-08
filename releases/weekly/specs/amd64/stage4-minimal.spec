@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/amd64/17.0
 snapshot: latest
 source_subpath: default/stage3-amd64-latest
-portage_confdir: @REPO_DIR@/releases/weekly/portage/stages
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 stage4/use:
 	bindist
