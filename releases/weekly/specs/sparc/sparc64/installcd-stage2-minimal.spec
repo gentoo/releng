@@ -1,14 +1,16 @@
 subarch: sparc64
-version_stamp: 2008.0
+version_stamp: latest
 target: livecd-stage2
 rel_type: default
 profile: default/linux/sparc/13.0
-snapshot: 2008.0
-source_subpath: default/livecd-stage1-sparc64-2008.0
+snapshot: latest
+source_subpath: default/livecd-stage1-sparc64-latest
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
+livecd/bootargs: dokeymap
 livecd/cdtar: /home/armin76/tmp/silo-1.4.14-sparc-cdtar-weekly.tar.bz2
 livecd/fstype: squashfs
-livecd/iso: /var/tmp/catalyst/builds/default/install-sparc64-minimal-2008.0.iso
+livecd/iso: install-sparc64-minimal-latest.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo sparc64 latest
 livecd/gk_mainargs: --firmware-files=/lib/firmware/ql2200_fw.bin
@@ -16,7 +18,7 @@ livecd/gk_mainargs: --firmware-files=/lib/firmware/ql2200_fw.bin
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: ../../../kconfig/sparc/installcd-3.8.13.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/sparc/installcd-4.14.39.config
 boot/kernel/gentoo/use:
 	-*
 	atm
@@ -28,6 +30,7 @@ boot/kernel/gentoo/use:
 	loop-aes
 	lvm1
 	mng
+	modules
 	ncurses
 	nls
 	nptl
@@ -41,10 +44,6 @@ boot/kernel/gentoo/use:
 	unicode
 	usb
 
-# Not keyworded stable
-#boot/kernel/gentoo/packages:
-#	sys-fs/ntfs3g
-
 livecd/unmerge:
 	app-admin/eselect
 	app-admin/eselect-ctags
@@ -55,27 +54,21 @@ livecd/unmerge:
 	dev-libs/gmp
 	dev-libs/libxml2
 	dev-libs/mpfr
-#	dev-libs/popt
 	dev-python/pycrypto
 	dev-util/pkgconfig
-#	net-misc/rsync
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
 	sys-apps/diffutils
-	sys-apps/file
 	sys-apps/groff
 	sys-apps/man
 	sys-apps/man-pages
 	sys-apps/miscfiles
-#	sys-apps/portage
-#	sys-apps/sandbox
 	sys-apps/texinfo
 	sys-devel/autoconf
 	sys-devel/autoconf-wrapper
 	sys-devel/automake
 	sys-devel/automake-wrapper
-	sys-devel/binutils
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
@@ -100,7 +93,7 @@ livecd/empty:
 	/etc/cron.weekly
 	/etc/logrotate.d
 	/etc/modules.autoload.d
-#	/etc/rsync
+	/etc/rsync
 	/etc/runlevels/single
 	/etc/skel
 	/lib/dev-state
@@ -111,9 +104,9 @@ livecd/empty:
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
-	/usr/i386-gentoo-linux-uclibc
+	/usr/i?86-gentoo-linux-uclibc
 	/usr/i386-pc-linux-gnu
-	/usr/i386-pc-linux-uclibc
+	/usr/i?86-pc-linux-uclibc
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
 	/usr/lib/X11/etc
@@ -124,9 +117,6 @@ livecd/empty:
 	/usr/lib/nfs
 	/usr/lib/perl5/site_perl
 	/usr/lib/portage
-	/usr/lib/python2.2
-	/usr/lib/python2.3
-	/usr/lib/python2.4/test
 	/usr/lib64/X11/config
 	/usr/lib64/X11/doc
 	/usr/lib64/X11/etc
@@ -137,13 +127,8 @@ livecd/empty:
 	/usr/lib64/nfs
 	/usr/lib64/perl5/site_perl
 	/usr/lib64/portage
-	/usr/lib64/python2.2
-	/usr/lib64/python2.3
-	/usr/lib64/python2.4/test
 	/usr/local
 	/usr/portage
-	/usr/powerpc-unknown-linux-gnu
-	/usr/powerpc64-unknown-linux-gnu
 	/usr/share/aclocal
 	/usr/share/baselayout
 	/usr/share/binutils-data
@@ -230,8 +215,8 @@ livecd/rm:
 	/usr/bin/gcc*
 	/usr/bin/genkernel
 	/usr/bin/gprof
-	/usr/bin/i386-gentoo-linux-uclibc-*
-	/usr/bin/i386-pc-linux-*
+	/usr/bin/i?86-gentoo-linux-uclibc-*
+	/usr/bin/i?86-pc-linux-*
 	/usr/bin/jpegtran
 	/usr/bin/ld
 	/usr/bin/libpng*
@@ -244,11 +229,8 @@ livecd/rm:
 	/usr/bin/readelf
 	/usr/bin/repoman
 	/usr/bin/size
-	/usr/bin/powerpc-unknown-linux-gnu-*
-	/usr/bin/powerpc64-unknown-linux-gnu-*
 	/usr/bin/sparc-unknown-linux-gnu-*
 	/usr/bin/sparc64-unknown-linux-gnu-*
-	/usr/bin/strings
 	/usr/bin/strip
 	/usr/bin/tbz2tool
 	/usr/bin/x86_64-pc-linux-gnu-*
