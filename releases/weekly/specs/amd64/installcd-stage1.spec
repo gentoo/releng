@@ -76,7 +76,9 @@ livecd/packages:
 	sys-apps/iproute2
 	sys-apps/memtester
 	sys-apps/netplug
+	sys-apps/pciutils
 	sys-apps/sdparm
+	sys-apps/usbutils
 	sys-block/parted
 	sys-block/partimage
 	sys-fs/btrfs-progs

@@ -156,6 +156,7 @@ livecd/packages:
 	sys-apps/netplug
 	sys-apps/pciutils
 	sys-apps/sdparm
+	sys-apps/usbutils
 	sys-apps/sed
 	sys-apps/setserial
 	sys-apps/sg3_utils
