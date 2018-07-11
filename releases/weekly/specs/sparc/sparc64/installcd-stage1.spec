@@ -66,7 +66,6 @@ livecd/packages:
 #	net-proxy/ntlmaps
 	net-proxy/tsocks
 #	net-wireless/iw
-#	net-wireless/rfkill
 #	net-wireless/wireless-tools
 #	net-wireless/wpa_supplicant
 	sys-apps/busybox

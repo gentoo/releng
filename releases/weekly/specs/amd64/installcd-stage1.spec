@@ -63,7 +63,6 @@ livecd/packages:
 ### Masked (~keywords)
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/iw
-	net-wireless/rfkill
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/busybox
