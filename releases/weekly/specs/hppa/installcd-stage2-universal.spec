@@ -21,18 +21,13 @@ boot/kernel/livecd32/config: /var/svnroot/releng/trunk/releases/2008.0/kconfig/h
 boot/kernel/livecd32/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline
@@ -51,18 +46,13 @@ boot/kernel/livecd64/gk_kernargs:  --kernel-cc=hppa64-linux-gcc --kernel-ld=hppa
 boot/kernel/livecd64/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline

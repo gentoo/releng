@@ -48,20 +48,15 @@ boot/kernel/gentoo/use:
 	alsa_pcm_plugins_shm
 	alsa_pcm_plugins_softvol
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
 	midi
-	mng
 	modules
 	ncurses
 #	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline

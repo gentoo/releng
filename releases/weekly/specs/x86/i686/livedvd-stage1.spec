@@ -8,7 +8,6 @@ source_subpath: default/stage3-i686-desktop-latest
 livecd/use:
 	branding
 	livecd
-	loop-aes
 	socks5
 
 livecd/packages:

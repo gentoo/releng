@@ -10,18 +10,15 @@ portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
 	caps
-	deprecated
 	fbcon
 	filecaps
 	ipv6
 	livecd
-	loop-aes
 	lvm1
 	modules
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	readline
 	socks5

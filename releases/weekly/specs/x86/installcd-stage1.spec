@@ -9,11 +9,9 @@ compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
-	deprecated
 	fbcon
 	ipv6
 	livecd
-	loop-aes
 	lvm1
 	modules
 	ncurses

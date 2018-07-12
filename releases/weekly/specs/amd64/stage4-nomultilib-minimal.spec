@@ -12,9 +12,6 @@ stage4/use:
 	bzip2
 	idm
 	ipv6
-	mmx
-	sse
-	sse2
 	urandom
 
 stage4/packages:

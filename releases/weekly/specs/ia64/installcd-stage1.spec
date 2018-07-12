@@ -8,11 +8,9 @@ source_subpath: default/stage3-ia64-2008.0
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
-	deprecated
 	fbcon
 	ipv6
 	livecd
-	loop-aes
 	lvm1
 	ncurses
 	pam

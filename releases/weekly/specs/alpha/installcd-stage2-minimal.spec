@@ -21,18 +21,13 @@ boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-3.8.13.config
 boot/kernel/gentoo/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline
@@ -47,18 +42,13 @@ boot/kernel/gentoo_nolsa/config: ../../kconfig/alpha/installcd-3.8.13.nolsa.conf
 boot/kernel/gentoo_nolsa/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline

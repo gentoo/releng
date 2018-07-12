@@ -22,19 +22,14 @@ boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/sparc/installcd-4.
 boot/kernel/gentoo/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	modules
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline

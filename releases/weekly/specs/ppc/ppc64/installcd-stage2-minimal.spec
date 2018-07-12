@@ -27,18 +27,13 @@ boot/kernel/ibmpower/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf6
 boot/kernel/ibmpower/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline
@@ -57,18 +52,13 @@ boot/kernel/G5/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64ppc' 
 boot/kernel/G5/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline
@@ -85,18 +75,13 @@ boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline

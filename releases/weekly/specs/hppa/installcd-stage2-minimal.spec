@@ -23,18 +23,13 @@ boot/kernel/livecd32/config: /home/gmsoft/specs/installcd-3.10.7-gentoo-livecd32
 boot/kernel/livecd32/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline
@@ -50,18 +45,13 @@ boot/kernel/livecd64/gk_kernargs: --kernel-cross-compile=hppa64-unknown-linux-gn
 boot/kernel/livecd64/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline

@@ -21,18 +21,13 @@ boot/kernel/gentoo/config: ../../kconfig/ia64/installcd-3.8.13.config
 boot/kernel/gentoo/use:
 	-*
 	atm
-	deprecated
 	fbcon
-	fbcondecor
 	ipv6
 	livecd
-	loop-aes
 	lvm1
-	mng
 	ncurses
 	nls
 	nptl
-	nptlonly
 	pam
 	png
 	readline

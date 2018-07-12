@@ -23,7 +23,7 @@ boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/latest/kconfig/livecd-2.6.24.config
-boot/kernel/gentoo/use: atm fbcondecor mng png truetype usb
+boot/kernel/gentoo/use: atm png truetype usb
 boot/kernel/gentoo/packages:
 	app-laptop/laptop-mode-tools
 	media-libs/alsa-lib

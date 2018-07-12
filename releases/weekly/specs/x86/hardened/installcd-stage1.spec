@@ -8,11 +8,9 @@ source_subpath: hardened/stage3-x86-hardened-latest
 compression_mode: pixz_x
 livecd/use:
 	-*
-	deprecated
 	fbcon
 	ipv6
 	livecd
-	loop-aes
 	lvm1
 	modules
 	ncurses
