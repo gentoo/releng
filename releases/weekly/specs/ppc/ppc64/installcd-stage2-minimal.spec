@@ -116,7 +116,7 @@ livecd/unmerge:
 	sys-apps/diffutils
 	sys-apps/file
 	sys-apps/groff
-	sys-apps/man
+	sys-apps/man-db
 	sys-apps/man-pages
 	sys-apps/miscfiles
 #	sys-apps/portage

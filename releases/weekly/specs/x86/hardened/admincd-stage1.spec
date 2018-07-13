@@ -147,7 +147,7 @@ livecd/packages:
 	sys-apps/ipmitool
 	sys-apps/iproute2
 	sys-apps/less
-	sys-apps/man
+	sys-apps/man-db
 	sys-apps/man-pages
 	sys-apps/man-pages-posix
 	sys-apps/memtester

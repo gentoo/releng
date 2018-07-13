@@ -98,7 +98,7 @@ livecd/unmerge:
 	sys-apps/debianutils
 	sys-apps/diffutils
 	sys-apps/groff
-	sys-apps/man
+	sys-apps/man-db
 	sys-apps/man-pages
 	sys-apps/miscfiles
 	sys-apps/texinfo
