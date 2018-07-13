@@ -107,7 +107,6 @@ livecd/unmerge:
 	sys-apps/groff
 	sys-apps/help2man
 	sys-apps/man-db
-	sys-apps/portage
 	sys-apps/sandbox
 	sys-apps/tcp-wrappers
 	sys-apps/texinfo

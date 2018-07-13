@@ -101,8 +101,7 @@ livecd/unmerge:
 	sys-apps/man-db
 	sys-apps/man-pages
 	sys-apps/miscfiles
-#	sys-apps/portage
-#	sys-apps/sandbox
+	sys-apps/sandbox
 	sys-apps/texinfo
 	sys-devel/autoconf
 	sys-devel/autoconf-wrapper
@@ -112,8 +111,7 @@ livecd/unmerge:
 	sys-devel/binutils-config
 	sys-devel/bison
 	sys-devel/flex
-# This might be needed for software speech.
-#	sys-devel/gcc
+	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
