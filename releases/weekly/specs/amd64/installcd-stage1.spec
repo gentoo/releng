@@ -92,6 +92,8 @@ livecd/packages:
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
+	#force rebuild for USE="(-multilib*)"
+	sys-libs/glibc
 	sys-libs/gpm
 	sys-power/acpid
 	www-client/links
