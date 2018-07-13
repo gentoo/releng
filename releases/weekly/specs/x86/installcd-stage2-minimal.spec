@@ -138,6 +138,7 @@ livecd/empty:
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
+	/usr/include
 	/usr/i?86-gentoo-linux-uclibc
 	/usr/i?86-pc-linux-uclibc
 	/usr/lib/X11/config

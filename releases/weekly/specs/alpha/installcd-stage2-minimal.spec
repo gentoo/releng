@@ -129,6 +129,7 @@ livecd/empty:
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
+	/usr/include
 	/usr/i386-gentoo-linux-uclibc
 	/usr/i386-pc-linux-gnu
 	/usr/i386-pc-linux-uclibc

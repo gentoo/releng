@@ -158,6 +158,7 @@ livecd/empty:
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
+	/usr/include
 	/usr/hppa*-unknown-linux-*
 	/usr/include
 	/usr/lib/X11/config
