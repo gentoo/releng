@@ -217,7 +217,10 @@ livecd/rm:
 	/usr/bin/cpp
 	/usr/bin/djpeg
 	/usr/bin/ebuild
+	/usr/bin/egencache
 	/usr/bin/emerge
+	/usr/bin/emerge-webrsync
+	/usr/bin/emirrordist
 	/usr/bin/elftoaout
 	/usr/bin/f77
 	/usr/bin/g++*
@@ -256,8 +259,8 @@ livecd/rm:
 	/usr/sbin/archive-conf
 	/usr/sbin/dispatch-conf
 	/usr/sbin/emaint
-	/usr/sbin/emerge-webrsync
 	/usr/sbin/env-update
+	/usr/sbin/etc-update
 	/usr/sbin/fb*
 	/usr/sbin/fixpackages
 	/usr/sbin/quickpkg
