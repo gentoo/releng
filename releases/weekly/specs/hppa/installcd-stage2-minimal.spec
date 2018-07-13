@@ -140,6 +140,7 @@ livecd/unmerge:
 	x11-misc/shared-mime-info	
 
 livecd/empty:
+	/boot
 	/etc/cron.daily
 	/etc/cron.hourly
 	/etc/cron.monthly

@@ -122,6 +122,7 @@ livecd/unmerge:
 	sys-kernel/linux-headers
 
 livecd/empty:
+	/boot
 	/etc/cron.daily
 	/etc/cron.hourly
 	/etc/cron.monthly
