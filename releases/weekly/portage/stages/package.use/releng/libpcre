@@ -2,4 +2,4 @@
 dev-libs/libpcre static-libs
 
 # required by dev-vcs/git
-dev-libs/Libpcre2 jit
+dev-libs/libpcre2 jit
