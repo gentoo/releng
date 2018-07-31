@@ -17,7 +17,7 @@ livecd/volid: Gentoo amd64 latest
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/installcd-4.4.6.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/installcd-4.14.52.config
 boot/kernel/gentoo/use:
 	-*
 	alsa
