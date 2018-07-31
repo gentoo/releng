@@ -1,0 +1,2 @@
+# required by dev-vcs/git
+dev-libs/libpcre2 jit
