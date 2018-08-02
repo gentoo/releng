@@ -115,8 +115,6 @@ livecd/packages:
 	net-proxy/tsocks
 	net-vpn/openvpn
 	net-wireless/b43-fwcutter
-	sys-firmware/ipw2100-firmware
-	sys-firmware/ipw2200-firmware
 ### Masked (~amd64)
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/iw
@@ -170,6 +168,8 @@ livecd/packages:
 	sys-block/partimage
 	sys-block/tw_cli
 	sys-boot/grub
+	sys-firmware/ipw2100-firmware
+	sys-firmware/ipw2200-firmware
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/ddrescue

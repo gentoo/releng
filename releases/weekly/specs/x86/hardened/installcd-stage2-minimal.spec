@@ -75,8 +75,8 @@ boot/kernel/gentoo/packages:
 	net-wireless/hostap-utils
 #	net-dialup/fritzcapi
 #	net-dialup/fcdsl
-
 	sys-apps/pcmciautils
+	sys-kernel/linux-firmware
 
 livecd/unmerge:
 	app-admin/eselect

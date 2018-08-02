@@ -42,8 +42,8 @@ boot/kernel/gentoo/packages:
 #	net-wireless/rt2500
 ### Masked (~amd64)
 #	net-wireless/rtl8187
-
 	sys-apps/pcmciautils
+	sys-kernel/linux-firmware
 
 livecd/empty:
 	/var/tmp

@@ -74,13 +74,8 @@ livecd/packages:
 ### Masked by ~x86
 #	net-wireless/b43-fwcutter
 #	net-wireless/bcm43xx-fwcutter
-	net-wireless/ipw2100-firmware
-	net-wireless/ipw2200-firmware
-	net-wireless/prism54-firmware
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
-	net-wireless/zd1201-firmware
-	net-wireless/zd1211-firmware
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
@@ -110,9 +105,10 @@ livecd/packages:
 #	sys-devel/binutils-hppa64
 	sys-devel/distcc
 #	sys-devel/gcc-hppa64
-	sys-firmware/iwl3945-ucode
-	sys-firmware/iwl4965-ucode
-	sys-firmware/iwl5000-ucode
+	sys-firmware/ipw2100-firmware
+	sys-firmware/ipw2200-firmware
+	sys-firmware/zd1201-firmware
+	sys-firmware/zd1211-firmware
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
