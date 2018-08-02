@@ -56,6 +56,8 @@ livecd/packages:
 	net-proxy/dante
 	net-proxy/tsocks
 	net-wireless/b43-fwcutter
+	sys-firmware/ipw2100-firmware
+	sys-firmware/ipw2200-firmware
 ### Masked (~keywords)
 #	net-wireless/bcm43xx-fwcutter
 	net-wireless/iw
