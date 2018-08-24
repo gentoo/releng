@@ -7,7 +7,7 @@ snapshot: latest
 source_subpath: hardened/livecd-stage1-x86-hardened-latest
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
+#livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/iso: install-x86-minimal-latest.iso
 livecd/type: gentoo-release-minimal

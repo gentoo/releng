@@ -8,7 +8,7 @@ source_subpath: hardened/livecd-stage1-amd64-latest-selinux
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
+#livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/iso: admincd-amd64-latest.iso
 livecd/type: gentoo-release-minimal
