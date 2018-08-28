@@ -1,4 +1,4 @@
-subarch: x86
+subarch: i486
 version_stamp: latest
 target: livecd-stage2
 rel_type: default

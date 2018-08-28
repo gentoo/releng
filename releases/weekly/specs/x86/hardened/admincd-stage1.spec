@@ -1,4 +1,4 @@
-subarch: x86
+subarch: i686
 version_stamp: latest
 target: livecd-stage1
 rel_type: hardened
