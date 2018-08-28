@@ -4,7 +4,7 @@ target: livecd-stage2
 rel_type: hardened
 profile: hardened/linux/x86
 snapshot: latest
-source_subpath: hardened/livecd-stage1-x86-latest
+source_subpath: hardened/livecd-stage1-i686-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap

@@ -4,7 +4,7 @@ target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/17.0
 snapshot: latest
-source_subpath: default/livecd-stage1-x86-latest
+source_subpath: default/livecd-stage1-i486-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
