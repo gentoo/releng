@@ -1,6 +1,6 @@
 subarch: arm64
-version_stamp: 2008.0
 target: stage1
+version_stamp: 2008.0
 rel_type: default
 profile: default/linux/arm64/17.0
 snapshot: current
