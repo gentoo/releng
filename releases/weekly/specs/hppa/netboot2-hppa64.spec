@@ -8,7 +8,7 @@ pkgcache_path: /var/tmp/catalyst/packages/default/netboot2-hppa64
 target:          netboot2
 subarch:         hppa2.0
 rel_type:        default
-profile:         default/linux/hppa/13.0
+profile:         default/linux/hppa/17.0
 
 boot/kernel:                      netboot64
 boot/kernel/netboot64/sources:       sys-kernel/gentoo-sources
