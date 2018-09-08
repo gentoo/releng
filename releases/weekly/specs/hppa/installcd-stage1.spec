@@ -6,6 +6,7 @@ profile: default/linux/hppa/17.0
 snapshot: 20140201
 source_subpath: default/stage3-hppa1.1-20140201
 pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage1
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 livecd/use:
 	-*
 	python_targets_python2_7
