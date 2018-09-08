@@ -5,6 +5,7 @@ rel_type: default
 profile: default/linux/hppa/13.0
 snapshot: 20140201
 source_subpath: default/livecd-stage1-hppa1.1-20140201
+pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage2
 
 livecd/volid: Gentoo hppa latest
 livecd/bootargs: dokeymap

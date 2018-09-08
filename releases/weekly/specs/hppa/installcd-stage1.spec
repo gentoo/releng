@@ -5,6 +5,7 @@ rel_type:  default
 profile: default/linux/hppa/13.0
 snapshot: 20140201
 source_subpath: default/stage3-hppa1.1-20140201
+pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage1
 livecd/use:
 	-*
 	python_targets_python2_7

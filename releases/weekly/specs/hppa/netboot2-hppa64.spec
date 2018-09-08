@@ -2,6 +2,7 @@
 version_stamp: 20130927
 snapshot: 20130927
 source_subpath: default/stage3-hppa2.0-20130927
+pkgcache_path: /var/tmp/catalyst/packages/default/netboot2-hppa64
 
 # these shouldn't change
 target:          netboot2
