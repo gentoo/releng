@@ -5,6 +5,7 @@ rel_type: default
 profile: default/linux/alpha/13.0
 snapshot: 2008.0
 source_subpath: default/stage3-alpha-2008.0
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 livecd/use:
 	fbcon
 	ipv6

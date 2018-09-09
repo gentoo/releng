@@ -5,6 +5,7 @@ rel_type: default
 profile: default/linux/alpha/13.0
 snapshot: 2008.0
 source_subpath: default/livecd-stage1-alpha-2008.0
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /space/armin76/tmp/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
