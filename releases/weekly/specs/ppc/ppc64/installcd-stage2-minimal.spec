@@ -8,7 +8,6 @@ source_subpath: default/livecd-stage1-ppc64-32ul-2008.0
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 
-livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 livecd/fstype: squashfs 
 livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc 
 livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-minimal-2008.0.iso

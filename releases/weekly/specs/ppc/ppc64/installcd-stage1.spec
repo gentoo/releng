@@ -60,7 +60,7 @@ livecd/packages:
 	sys-apps/memtester
 	sys-apps/sdparm
 	sys-block/parted
-	sys-boot/yaboot
+	sys-boot/grub
 	sys-fs/btrfs-progs
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
