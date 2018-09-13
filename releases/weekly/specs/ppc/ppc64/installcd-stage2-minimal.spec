@@ -7,6 +7,7 @@ profile: default/linux/powerpc/ppc64/17.0/32bit-userland
 source_subpath: default/livecd-stage1-ppc64-32ul-2008.0
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
+portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/fstype: squashfs 
 livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc 
