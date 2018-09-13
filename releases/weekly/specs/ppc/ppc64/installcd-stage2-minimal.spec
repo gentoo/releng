@@ -5,6 +5,8 @@ snapshot: 2008.0
 version_stamp: 2008.0
 profile: default/linux/powerpc/ppc64/17.0/32bit-userland
 source_subpath: default/livecd-stage1-ppc64-32ul-2008.0
+compression_mode: pixz_x
+decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 
 livecd/cdtar: /usr/lib/catalyst/livecd/cdtar/yaboot-1.3.13-cdtar.tar.bz2
 livecd/fstype: squashfs 
