@@ -111,12 +111,10 @@ livecd/unmerge:
 	dev-libs/popt
 	dev-python/pycrypto
 	dev-util/pkgconfig
-	net-misc/rsync
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
 	sys-apps/diffutils
-	sys-apps/file
 	sys-apps/groff
 	sys-apps/man-db
 	sys-apps/man-pages
@@ -153,7 +151,6 @@ livecd/empty:
 	/etc/cron.weekly
 	/etc/logrotate.d
 	/etc/modules.autoload.d
-	/etc/rsync
 	/etc/runlevels/single
 	/etc/skel
 	/lib/dev-state
@@ -165,22 +162,6 @@ livecd/empty:
 	/usr/diet/include
 	/usr/diet/man
 	/usr/include
-	/usr/i386-gentoo-linux-uclibc
-	/usr/i386-pc-linux-gnu
-	/usr/i386-pc-linux-uclibc
-	/usr/lib/X11/config
-	/usr/lib/X11/doc
-	/usr/lib/X11/etc
-	/usr/lib/awk
-	/usr/lib/ccache
-	/usr/lib/gcc-config
-	/usr/lib/gconv
-	/usr/lib/nfs
-	/usr/lib/perl5/site_perl
-	/usr/lib/portage
-	/usr/lib/python2.2
-	/usr/lib/python2.3
-	/usr/lib/python2.4/test
 	/usr/lib64/X11/config
 	/usr/lib64/X11/doc
 	/usr/lib64/X11/etc
@@ -191,9 +172,7 @@ livecd/empty:
 	/usr/lib64/nfs
 	/usr/lib64/perl5/site_perl
 	/usr/lib64/portage
-	/usr/lib64/python2.2
-	/usr/lib64/python2.3
-	/usr/lib64/python2.4/test
+	/usr/lib64/python*/test
 	/usr/local
 	/usr/portage
 	/usr/powerpc-unknown-linux-gnu
@@ -225,9 +204,7 @@ livecd/empty:
 	/usr/share/texinfo
 	/usr/share/unimaps
 	/usr/share/zoneinfo
-	/usr/sparc-unknown-linux-gnu
 	/usr/src
-	/usr/x86_64-pc-linux-gnu
 	/var/cache
 	/var/empty
 	/var/lib/portage
@@ -287,8 +264,6 @@ livecd/rm:
 	/usr/bin/gcc*
 	/usr/bin/genkernel
 	/usr/bin/gprof
-	/usr/bin/i386-gentoo-linux-uclibc-*
-	/usr/bin/i386-pc-linux-*
 	/usr/bin/jpegtran
 	/usr/bin/ld
 	/usr/bin/libpng*
@@ -303,12 +278,9 @@ livecd/rm:
 	/usr/bin/size
 	/usr/bin/powerpc-unknown-linux-gnu-*
 	/usr/bin/powerpc64-unknown-linux-gnu-*
-	/usr/bin/sparc-unknown-linux-gnu-*
-	/usr/bin/sparc64-unknown-linux-gnu-*
 	/usr/bin/strings
 	/usr/bin/strip
 	/usr/bin/tbz2tool
-	/usr/bin/x86_64-pc-linux-gnu-*
 	/usr/bin/xpak
 	/usr/bin/yacc
 	/usr/lib*/*.a

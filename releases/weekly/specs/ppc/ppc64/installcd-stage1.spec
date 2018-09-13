@@ -13,6 +13,7 @@ livecd/use:
 	ipv6
 	livecd
 	lvm1
+	modules
 	ncurses
 	nls
 	nocxx
@@ -27,18 +28,13 @@ livecd/use:
 	
 livecd/packages:
 	app-accessibility/brltty
-	app-admin/hddtemp
-#	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
-# Not keyworded
-#	app-editors/mg
 	app-misc/screen
 	app-portage/mirrorselect
 	app-text/wgetpaste
-	media-gfx/fbgrab
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/mingetty
@@ -50,25 +46,22 @@ livecd/packages:
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/ntp
+	net-misc/openssh
 	net-misc/rdate
-	net-wireless/b43-fwcutter
-	net-wireless/bcm43xx-fwcutter
+	net-misc/rsync
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
-	sys-apps/iproute2
-#	sys-apps/lssbus
-	sys-apps/memtester
 	sys-apps/ibm-powerpc-utils
-#	sys-apps/ibm-powerpc-utils-papr
+	sys-apps/iproute2
+	sys-apps/memtester
 	sys-apps/sdparm
 	sys-block/parted
-	sys-block/partimage
-#	sys-block/qla-fc-firmware
 	sys-boot/yaboot
+	sys-fs/btrfs-progs
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/hfsplusutils
