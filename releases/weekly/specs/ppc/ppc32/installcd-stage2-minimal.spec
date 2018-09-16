@@ -1,18 +1,15 @@
-subarch: ppc64
+subarch: ppc
 target: livecd-stage2
-rel_type: default
-snapshot: 2008.0
 version_stamp: 2008.0
-profile: default/linux/powerpc/ppc64/17.0/32bit-userland
-source_subpath: default/livecd-stage1-ppc64-32ul-2008.0
-compression_mode: pixz_x
-decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
+rel_type: default
+profile: default/linux/powerpc/ppc32/17.0
+snapshot: 2008.0
+source_subpath: default/livecd-stage1-ppc-2008.0
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/fstype: squashfs 
-livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc 
+livecd/gk_mainargs: --utils-arch=ppc --arch-override=ppc --makeopts=-j12
 livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-minimal-2008.0.iso
-livecd/overlay: /home/ranger/2008.0/ppccdoverlay/
 livecd/type: gentoo-release-minimal
 
 livecd/rcadd: pbbuttonsd|default
@@ -71,8 +68,8 @@ boot/kernel/G5/use:
 	usb
 
 ## ppc32 hardware
+boot/kernel/ppc32/sources: sys-kernel/gentoo-sources
 boot/kernel/ppc32/config: ../../../kconfig/powerpc/installcd-ppc32apple-4.14.config
-boot/kernel/ppc32/sources: gentoo-sources
 boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use:
 	-*
