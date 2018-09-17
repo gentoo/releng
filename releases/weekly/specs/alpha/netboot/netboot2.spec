@@ -2,7 +2,7 @@ subarch: alpha
 version_stamp: 20100329
 target: netboot2
 rel_type: default
-profile: default/linux/alpha/10.0
+profile: default/linux/alpha/17.0
 snapshot: 20100329
 source_subpath: default/stage3-alpha-20100329
 
