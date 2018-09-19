@@ -50,6 +50,8 @@ livecd/packages:
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync
+	net-wireless/b43-fwcutter
+	net-wireless/bcm43xx-fwcutter
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/busybox
