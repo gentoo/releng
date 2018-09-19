@@ -60,6 +60,7 @@ livecd/packages:
 	sys-apps/hdparm
 	sys-apps/ibm-powerpc-utils
 	sys-apps/iproute2
+	sys-apps/lm_sensors
 	sys-apps/memtester
 	sys-apps/sdparm
 	sys-block/parted
