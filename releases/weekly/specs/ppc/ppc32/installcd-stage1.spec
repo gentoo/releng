@@ -50,8 +50,6 @@ livecd/packages:
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync
-	net-wireless/b43-fwcutter
-	net-wireless/bcm43xx-fwcutter
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/busybox
@@ -65,6 +63,8 @@ livecd/packages:
 	sys-apps/sdparm
 	sys-block/parted
 	sys-boot/grub
+	sys-firmware/b43-firmware
+	sys-firmware/b43legacy-firmware
 	sys-fs/btrfs-progs
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
