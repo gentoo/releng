@@ -1,2 +1,0 @@
-# Disable filecaps or we get a circular dep between sys-libs/pam and sys-libs/filecaps
-sys-libs/pam -filecaps

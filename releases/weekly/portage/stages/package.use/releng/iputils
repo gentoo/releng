@@ -1,2 +1,0 @@
-# Disable caps and filecaps or ping on the stage will only work for root
-net-misc/iputils -caps -filecaps
