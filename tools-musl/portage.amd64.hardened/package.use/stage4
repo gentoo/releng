@@ -1,5 +1,0 @@
-app-admin/syslog-ng -tcpd
-sys-apps/kmod lzma  # kernel module compression
-sys-apps/util-linux static-libs  # for genkernel
-sys-boot/grub grub_platforms_pc
-dev-lang/python xml sqlite  # for layman
