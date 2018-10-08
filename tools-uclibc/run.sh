@@ -20,17 +20,18 @@ prepare_confs() {
     [[ "${arch}" == "amd64" ]] && tarch="x86_64"
 
     local profile=${flavor}
-    [[ "${flavor}" == "vanilla" ]] && profile="default"
+    [[ "${flavor}" == "vanilla" ]] && profile="" || profile="/hardened"
 
-    cat stage-all.conf.template | \
+    cat stage.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
         -e "s:PSTAGE:${pstage}:g" \
         -e "s:SARCH:${arch}:g" \
         -e "s:PARCH:${parch}:g" \
+        -e "s:TARCHPROFILE:${profile}:g" \
         -e "s:TARCH:${tarch}:g" \
+        -e "s:gentoo-linux-uclibc:unknown-linux-uclibc:" \
         -e "s:FLAVOR:${flavor}:g" \
-        -e "s:PROFILE:${profile}:g" \
         -e "s:MYCATALYST:$(pwd):g" \
         >  stage${s}-${arch}-uclibc-${flavor}.conf
   done
@@ -42,7 +43,7 @@ prepare_confs() {
 main() {
   >zzz.log
 
-  undo_grsec
+#  undo_grsec
 
   catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 

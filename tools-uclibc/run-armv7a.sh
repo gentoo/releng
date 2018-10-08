@@ -29,6 +29,7 @@ prepare_confs() {
         -e "s:PSTAGE:${pstage}:g" \
         -e "s:SARCH:${arch}:g" \
         -e "s:PARCH:${parch}:g" \
+        -e "s:TARCHPROFILE:/${tarch}${profile}:g" \
         -e "s:TARCH:${tarch}:g" \
         -e "s:gentoo-linux-uclibc:unknown-linux-uclibceabi${float}:" \
         -e "s:FLAVOR:${flavor}:g" \
