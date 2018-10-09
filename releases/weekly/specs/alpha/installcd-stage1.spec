@@ -77,7 +77,7 @@ livecd/packages:
 #	sys-devel/binutils-hppa64
 #	sys-devel/gcc-hppa64
 	sys-fs/cryptsetup
-#	sys-fs/dmraid
+	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 #	sys-fs/hfsplusutils
