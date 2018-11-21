@@ -62,7 +62,7 @@ EOF
 # Copy artifacts for an arch to the outgoing directory.
 copy_arch_to_outgoing() {
 	local ARCH=$1 indir=$2 outdir=$3 tmpdir=$4
-	local i t rc
+	local i t rc timestamps
 
 	if [[ ! -d ${indir} ]]; then
 		# Nothing to do for this arch.
@@ -70,21 +70,48 @@ copy_arch_to_outgoing() {
 	fi
 
 	# Copying
-	for i in $(find ${indir} -not -path '*/\.*' -type f | egrep -- '-20[0123][0-9]{5}(([0-9]{6})|(T[0-9]{6}Z))?' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
+	timestamps=( $(
+		find "${indir}" \
+				-regextype posix-egrep \
+				-type f \
+				-regex '.*-20[0123][0-9]{5}(([0-9]{6})|(T[0-9]{6}Z))?.*' \
+				\( -not -path '*/\.*' \) \
+		| sed -e 's:^.*-\(20[^.]\+\).*$:\1:' \
+		| sort -ur
+		) )
+
+	for i in "${timestamps[@]}" ; do
 		#echo "Doing $i"
 		t="${outdir}/${i}"
 		mkdir -p ${t} 2>/dev/null
-		rsync "${RSYNC_OPTS[@]}" --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter '- **/.*' --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
+		rsync \
+			"${RSYNC_OPTS[@]}" \
+			--temp-dir="${tmpdir}" \
+			--partial-dir="${tmpdir}" \
+			--filter '- **/.*' \
+			--filter "S *${i}*" \
+			--filter 'S **/' \
+			--filter 'H *' \
+			${indir}/ \
+			${t}
 		rc=$?
 		if [ $rc -eq 0 ]; then
-			find ${indir} -not -path '*/\.*' -type f -name "*${i}*" -print0 | xargs -0 --no-run-if-empty $DEBUGP rm $VERBOSEP -f
+			find "${indir}" \
+				-type f \
+				-name "*${i}*" \
+				\( -not -path '*/\.*' \) \
+				-print0 \
+				| xargs -0 --no-run-if-empty \
+				"$DEBUGP" rm "$VERBOSEP" -f
 		else
 			echo "Not deleting ${indir}/*${i}*, rsync failed!" 1>&2
 			fail=1
 		fi
 	done
 	find "${outdir}" \
-		-depth -mindepth 1 -type d \
+		-depth \
+		-mindepth 1 \
+		-type d \
 		-exec rmdir --ignore-fail-on-non-empty {} +
 }
 
