@@ -185,7 +185,7 @@ process_arch() {
 	keepfile="${tmpdir}/.keep.${ARCH}.txt"
 	keepfile_tmp=$(mktemp -p "${tmpdir}" -t ".keep.${ARCH}.txt.XXXXXX")
 	echo -n '' >"${keepfile_tmp}"
-	chmod 644 "${keepfile}"
+	chmod 644 "${keepfile_tmp}"
 	for v in $variants ; do
 		# FIXME: trace the $a variable in this!
 		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print 2>/dev/null | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
