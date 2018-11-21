@@ -56,7 +56,7 @@ Options:
   -v, --verbose    Run in verbose mode
   -d, --debug      Run in debug mode
 EOF
-	exit ${1:-1}
+	exit "${1:-1}"
 }
 
 # Copy artifacts for an arch to the outgoing directory.
@@ -83,7 +83,7 @@ copy_arch_to_outgoing() {
 	for i in "${timestamps[@]}" ; do
 		#echo "Doing $i"
 		t="${outdir}/${i}"
-		mkdir -p ${t} 2>/dev/null
+		mkdir -p "${t}" 2>/dev/null
 		rsync \
 			"${RSYNC_OPTS[@]}" \
 			--temp-dir="${tmpdir}" \
@@ -92,8 +92,8 @@ copy_arch_to_outgoing() {
 			--filter "S *${i}*" \
 			--filter 'S **/' \
 			--filter 'H *' \
-			${indir}/ \
-			${t}
+			"${indir}"/ \
+			"${t}"
 		rc=$?
 		if [ $rc -eq 0 ]; then
 			find "${indir}" \
@@ -102,7 +102,7 @@ copy_arch_to_outgoing() {
 				\( -not -path '*/\.*' \) \
 				-print0 \
 				| xargs -0 --no-run-if-empty \
-				"$DEBUGP" rm "$VERBOSEP" -f
+				$DEBUGP rm $VERBOSEP -f
 		else
 			echo "Not deleting ${indir}/*${i}*, rsync failed!" 1>&2
 			fail=1
@@ -124,7 +124,7 @@ process_arch() {
 	outdir="${OUTGOING_BASE}/${ARCH}"
 	tmpdir="${TMPDIR_BASE}/${ARCH}"
 
-	mkdir -p ${tmpdir} 2>/dev/null
+	mkdir -p "${tmpdir}" 2>/dev/null
 
 	# Sync incoming->outgoing first.
 	copy_arch_to_outgoing "${ARCH}" "${indir}" "${outdir}" "${tmpdir}"
@@ -182,23 +182,31 @@ process_arch() {
 	# New variant preserve code
 	find_variants=( '(' -iname '*.iso' -o -name 'netboot-*' -o "${EXTENSIONS[@]}" ')' )
 	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' 2>/dev/null | sed -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
-	echo -n '' >"${tmpdir}"/.keep.${ARCH}.txt
+	keepfile="${tmpdir}/.keep.${ARCH}.txt"
+	keepfile_tmp=$(mktemp -p "${tmpdir}" -t ".keep.${ARCH}.txt.XXXXXX")
+	echo -n '' >"${keepfile_tmp}"
+	chmod 644 "${keepfile_tmp}"
 	for v in $variants ; do
+		# FIXME: trace the $a variable in this!
 		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print 2>/dev/null | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
-		if [ -z "${variant_path}" -o ! -e "${variant_path}" ]; then
+		if [ -z "${variant_path}" ] || [ ! -e "${variant_path}" ]; then
 			echo "$ARCH: Variant ${v} is missing" 1>&2
 			continue
 		fi
-		size=$(stat --format=%s ${variant_path})
+		size=$(stat --format='%s' "${variant_path}")
 		f="latest-${v}.txt"
-		echo -e "${header}" >"${f}"
-		echo -e "${variant_path} ${size}" >>${f}
-		[[ ${variant_path} =~ tar.*$ ]] && echo -e "${variant_path} ${size}" >>${OUT_STAGE3}
-		[[ ${variant_path} =~ iso$ ]] && echo -e "${variant_path} ${size}" >>${OUT_ISO}
+		f_tmp=$(mktemp -p . -t ".${f}.XXXXXX")
+		chmod 644 "${f_tmp}"
+		echo -e "${header}" >"${f_tmp}"
+		echo -e "${variant_path} ${size}" >>"${f_tmp}"
+		[[ ${variant_path} =~ tar.*$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_STAGE3}" # FIXME: tempfile
+		[[ ${variant_path} =~ iso$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_ISO}" # FIXME: tempfile
 		rm -f "current-$v"
 		ln -sf "${variant_path%/*}" "current-$v"
-		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${tmpdir}"/.keep.${ARCH}.txt
+		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${keepfile_tmp}"
+		mv -f "${f_tmp}" "${f}"
 	done
+	mv -f "${keepfile_tmp}" "${keepfile}"
 
 	# ================================================================
 	# Cleanup
@@ -206,17 +214,17 @@ process_arch() {
 
 		# Clean up all but latest 4 from mirror dir
 		cd "${outdir}"
-		for i in $(find -regextype posix-basic -mindepth 1 -maxdepth 1 -type d -regex '.*20[012][0-9]\{5\}.*' \
+		for i in $(find . -regextype posix-basic -mindepth 1 -maxdepth 1 -type d -regex '.*20[012][0-9]\{5\}.*' \
 				| sed -e 's:^.*-\(20[^.]\+\).*$:\1:' \
 				| sort -ur \
-				| egrep -v "/${latest_iso_date}\$|/${latest_stage3_date}\$" \
-				| egrep -v -f "${tmpdir}"/.keep.${ARCH}.txt \
+				| grep -E -v -e "/${latest_iso_date}\$|/${latest_stage3_date}\$" \
+				| grep -E -v -f "${keepfile}" \
 				| tail -n +5); do
 
-			$DEBUGP rm $VERBOSEP -rf $(pwd)/${i}
+			$DEBUGP rm $VERBOSEP -rf "$(pwd)"/"${i}"
 		done
 
-		$DEBUGP rm $VERBOSEP -rf ${tmpdir}
+		$DEBUGP rm $VERBOSEP -rf "${tmpdir}"
 
 	else
 		echo "There was some failure for $ARCH during the weekly sync. Not doing cleanup for fear of dataloss." 1>&2
