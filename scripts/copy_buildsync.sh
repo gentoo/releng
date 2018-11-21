@@ -70,14 +70,14 @@ copy_arch_to_outgoing() {
 	fi
 
 	# Copying
-	for i in $(find ${indir} -type f | egrep -- '-20[0123][0-9]{5}(([0-9]{6})|(T[0-9]{6}Z))?' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
+	for i in $(find ${indir} -not -path '*/\.*' -type f | egrep -- '-20[0123][0-9]{5}(([0-9]{6})|(T[0-9]{6}Z))?' | sed -e 's:^.*-\(20[^.]\+\).*$:\1:' | sort -ur); do
 		#echo "Doing $i"
 		t="${outdir}/${i}"
 		mkdir -p ${t} 2>/dev/null
-		rsync "${RSYNC_OPTS[@]}" --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
+		rsync "${RSYNC_OPTS[@]}" --temp-dir=${tmpdir} --partial-dir=${tmpdir} ${indir}/ --filter '- **/.*' --filter "S *${i}*" --filter 'S **/' --filter 'H *' ${t}
 		rc=$?
 		if [ $rc -eq 0 ]; then
-			find ${indir} -type f -name "*${i}*" -print0 | xargs -0 --no-run-if-empty $DEBUGP rm $VERBOSEP -f
+			find ${indir} -not -path '*/\.*' -type f -name "*${i}*" -print0 | xargs -0 --no-run-if-empty $DEBUGP rm $VERBOSEP -f
 		else
 			echo "Not deleting ${indir}/*${i}*, rsync failed!" 1>&2
 			fail=1
