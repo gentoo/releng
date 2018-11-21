@@ -102,7 +102,7 @@ copy_arch_to_outgoing() {
 				\( -not -path '*/\.*' \) \
 				-print0 \
 				| xargs -0 --no-run-if-empty \
-				"$DEBUGP" rm "$VERBOSEP" -f
+				$DEBUGP rm $VERBOSEP -f
 		else
 			echo "Not deleting ${indir}/*${i}*, rsync failed!" 1>&2
 			fail=1
@@ -221,10 +221,10 @@ process_arch() {
 				| grep -E -v -f "${keepfile}" \
 				| tail -n +5); do
 
-			"$DEBUGP" rm "$VERBOSEP" -rf "$(pwd)"/"${i}"
+			$DEBUGP rm $VERBOSEP -rf "$(pwd)"/"${i}"
 		done
 
-		"$DEBUGP" rm "$VERBOSEP" -rf "${tmpdir}"
+		$DEBUGP rm $VERBOSEP -rf "${tmpdir}"
 
 	else
 		echo "There was some failure for $ARCH during the weekly sync. Not doing cleanup for fear of dataloss." 1>&2
