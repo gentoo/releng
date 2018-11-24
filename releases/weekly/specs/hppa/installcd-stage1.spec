@@ -33,6 +33,8 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
+	app-editors/emacs
+	app-editors/vim
 	app-misc/screen
 	app-portage/mirrorselect
 	app-text/wgetpaste
@@ -56,17 +58,17 @@ livecd/packages:
 	sys-apps/pciutils
 	sys-apps/sdparm
 	sys-apps/usbutils
+	sys-devel/bc
 	sys-devel/binutils-hppa64
 	sys-devel/kgcc64
+	sys-fs/cryptsetup
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/lsscsi
-	sys-fs/cryptsetup
-	sys-fs/lvm2
 	sys-fs/lsscsi
+	sys-fs/lvm2
 	sys-fs/mdadm
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-libs/gpm
 	www-client/links
-	sys-devel/bc
