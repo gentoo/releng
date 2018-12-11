@@ -6,3 +6,4 @@ profile: default/linux/PARCH/17.0/systemd
 snapshot: current
 source_subpath: systemd/SARCH/PSTAGE-SARCH-systemd
 portage_confdir: MYCATALYST/portage.SARCH
+portage_prefix: releng
