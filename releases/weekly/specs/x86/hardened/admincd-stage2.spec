@@ -2,7 +2,7 @@ subarch: i686
 version_stamp: latest
 target: livecd-stage2
 rel_type: hardened
-profile: hardened/linux/x86
+profile: default/linux/x86/17.0/hardened
 snapshot: latest
 source_subpath: hardened/livecd-stage1-i686-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos

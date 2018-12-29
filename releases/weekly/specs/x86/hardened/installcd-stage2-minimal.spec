@@ -2,7 +2,7 @@ subarch: x86
 version_stamp: hardened-latest
 target: livecd-stage2
 rel_type: hardened
-profile: hardened/linux/x86
+profile: default/linux/x86/17.0/hardened
 snapshot: latest
 source_subpath: hardened/livecd-stage1-x86-hardened-latest
 

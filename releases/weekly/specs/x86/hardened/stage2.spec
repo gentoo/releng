@@ -2,7 +2,7 @@ subarch: i686
 target: stage2
 version_stamp: hardened-latest
 rel_type: hardened
-profile: hardened/linux/x86
+profile: default/linux/x86/17.0/hardened
 snapshot: latest
 source_subpath: hardened/stage1-i686-hardened-latest
 compression_mode: pixz_x

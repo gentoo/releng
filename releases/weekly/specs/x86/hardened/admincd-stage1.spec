@@ -2,7 +2,7 @@ subarch: i686
 version_stamp: latest
 target: livecd-stage1
 rel_type: hardened
-profile: hardened/linux/x86
+profile: default/linux/x86/17.0/hardened
 snapshot: latest
 source_subpath: hardened/stage3-i686-hardened-latest
 compression_mode: pixz_x
