@@ -184,7 +184,6 @@ livecd/empty:
 	/usr/share/info
 	/usr/share/lcms
 	/usr/share/libtool
-	/usr/share/locale
 	/usr/share/man
 	/usr/share/rfc
 	/usr/share/ss
