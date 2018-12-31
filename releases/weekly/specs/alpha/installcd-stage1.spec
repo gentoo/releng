@@ -18,6 +18,7 @@ livecd/use:
 	socks5
 	ssl
 	static-libs
+	-static
 	unicode
 	xml
 
@@ -40,7 +41,8 @@ livecd/packages:
 #	net-dialup/penggy
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
-	net-fs/cifs-utils
+#	net-fs/cifs-utils
+	sys-fs/btrfs-progs
 	net-fs/nfs-utils
 	net-irc/irssi
 	net-misc/dhcpcd
@@ -93,6 +95,7 @@ livecd/packages:
 #	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
+	sys-kernel/linux-firmware
 	sys-libs/gpm
 # No ACPI on alphas, not keyworded. 
 #	sys-power/acpid
