@@ -79,7 +79,6 @@ livecd/packages:
 	sys-apps/sdparm
 	sys-block/parted
 #	sys-block/partimage
-	sys-block/qla-fc-firmware
 #	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 #	sys-fs/dmraid

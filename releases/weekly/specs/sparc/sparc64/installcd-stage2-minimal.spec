@@ -39,6 +39,9 @@ boot/kernel/gentoo/use:
 	unicode
 	usb
 
+boot/kernel/gentoo/packages:
+	sys-kernel/linux-firmware
+
 livecd/unmerge:
 	app-admin/eselect
 	app-admin/eselect-ctags
