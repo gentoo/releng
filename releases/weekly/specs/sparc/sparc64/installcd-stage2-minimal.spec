@@ -18,7 +18,7 @@ livecd/gk_mainargs: --firmware-files=/lib/firmware/ql2200_fw.bin
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/sparc/installcd-4.14.39.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/sparc/installcd-4.14.83.config
 boot/kernel/gentoo/use:
 	-*
 	atm
