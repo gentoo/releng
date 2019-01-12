@@ -77,6 +77,7 @@ livecd/packages:
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/sdparm
+	sys-apps/usbutils
 	sys-block/parted
 #	sys-block/partimage
 #	sys-fs/btrfs-progs
@@ -95,5 +96,4 @@ livecd/packages:
 #	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-libs/gpm
-#	sys-power/acpid
 	www-client/links
