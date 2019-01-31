@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/sparc/17.0
 snapshot: latest
 source_subpath: default/stage3-sparc64-latest
-compression_mode: xz_x
+compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
