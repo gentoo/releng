@@ -28,6 +28,7 @@ stage4/packages:
 	sys-devel/bc
 	sys-power/acpid
 	sys-process/cronie
+	app-crypt/gentoo-keys
 stage4/fsscript: @REPO_DIR@/stage4-fsscript.sh
 stage4/rcadd:
 	acpid|default

@@ -76,6 +76,7 @@ emaint all -f
 eselect news read all
 eclean-dist --destructive
 sed -i '/^USE=\"\${USE}\ \ build\"$/d' /etc/portage/make.conf
+echo 'PORTAGE_GPG_DIR="/var/lib/gentoo/gkeys/keyrings/gentoo/release"' >> /etc/portage/make.conf
 sed -i '/dev-util\/pkgconf/d' /var/lib/portage/world
 
 # clean up system

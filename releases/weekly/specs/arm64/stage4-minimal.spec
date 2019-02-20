@@ -22,6 +22,7 @@ stage4/packages:
 	sys-apps/iproute2
 	sys-devel/bc
 	sys-power/acpid
+	app-crypt/gentoo-keys
 #stage4/fsscript: @REPO_DIR@/releases/weekly/scripts/cloud-prep.sh
 stage4/rcadd:
 	acpid|default
