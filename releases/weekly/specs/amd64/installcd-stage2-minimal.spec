@@ -8,7 +8,6 @@ source_subpath: default/livecd-stage1-amd64-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
-#livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/iso: install-amd64-minimal-latest.iso
 livecd/type: gentoo-release-minimal
