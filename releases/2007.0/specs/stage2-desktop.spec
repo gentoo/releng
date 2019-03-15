@@ -1,7 +1,0 @@
-subarch: alpha
-target: stage2
-version_stamp: desktop-2007.0
-rel_type: default
-profile: default-linux/alpha/2007.0/desktop
-snapshot: 2007.0
-source_subpath: default/stage1-alpha-2007.0
