@@ -83,7 +83,7 @@ livecd/packages:
 	media-gfx/fbgrab
 	net-analyzer/gnu-netcat
 	net-analyzer/iptraf-ng
-	net-analyzer/netcat6
+	net-analyzer/openbsd-netcat
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-analyzer/traceroute-nanog
