@@ -9,7 +9,8 @@ pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage1
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 livecd/use:
 	-*
-	python_targets_python2_7
+	python_targets_python3_6
+	python_single_target_python3_6
 	bindist
 	fbcon
 	ipv6
