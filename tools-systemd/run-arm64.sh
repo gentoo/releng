@@ -31,8 +31,6 @@ prepare_confs() {
 main() {
   >zzz.log
 
-  undo_grsec
-
   catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
   for arch in arm64; do
@@ -43,7 +41,6 @@ main() {
     do_stages ${arch}
     [[ $? == 1 ]] && echo "FAILURE at ${arch}" | tee zzz.log
   done
-
 }
 
 main $1 &
