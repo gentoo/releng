@@ -3,36 +3,27 @@
 source common.sh
 
 prepare_confs() {
-  local arch=$1
-  local flavor=$2
+  local flavor=$1
+  local arch="armv7a_hardfp"
+  local tarch="armv7a"
+  local profile="default/linux/arm/17.0/musl/armv7a"
+  [[ "${flavor}" == "hardened" ]] && profile="${profile}/hardened"
 
   for s in 1 2 3; do
-
     local cstage=stage${s}
     local p=$(( s - 1 ))
     [[ $p == 0 ]] && p=3
     local pstage=stage${p}
-    local tarch="${arch%_hardfp}"
-    local parch="arm/${tarch}"
-    local float
-
-    [[ "${arch}" == "${tarch}" ]] \
-      && float="softfp" \
-      || float="hardfloat"
-
-    local profile=${flavor}
-    [[ "${flavor}" == "vanilla" ]] && profile="default"
 
     cat stage.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
         -e "s:PSTAGE:${pstage}:g" \
         -e "s:SARCH:${arch}:g" \
-        -e "s:PARCH:${parch}:g" \
         -e "s:TARCH:${tarch}:g" \
-        -e "s:gentoo-linux-musl:${float}-linux-musleabi:" \
         -e "s:FLAVOR:${flavor}:g" \
-        -e "s:PROFILE:${profile}:g" \
+        -e "s:gentoo-linux-musl:hardfloat-linux-musleabi:" \
+        -e "s:^profile\:.*:profile\: ${profile}:" \
         -e "s:MYCATALYST:$(pwd):g" \
         >  stage${s}-${arch}-musl-${flavor}.conf
 
@@ -57,18 +48,13 @@ main() {
 
   catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
-  for arch in armv7a_hardfp; do
-    for flavor in hardened vanilla; do
-      prepare_confs ${arch} ${flavor}
-    done
+  for flavor in hardened vanilla; do
+    prepare_confs ${flavor}
   done
 
-  # No parallelization for arm.  Its too hard on the cpu!
-  for arch in armv7a_hardfp; do
-    for flavor in hardened vanilla; do
-      do_stages ${arch} ${flavor}
-      [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-    done
+  for flavor in hardened vanilla; do
+    do_stages ${flavor}
+    [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
   done
 }
 

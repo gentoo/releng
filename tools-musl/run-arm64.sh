@@ -6,15 +6,14 @@ prepare_confs() {
   local flavor=$1
   local arch="arm64"
   local tarch="aarch64"
+  local profile="default/linux/arm64/17.0/musl"
+  [[ "${flavor}" == "hardened" ]] && profile="${profile}/hardened"
 
   for s in 1 2 3; do
     local cstage=stage${s}
     local p=$(( s - 1 ))
     [[ $p == 0 ]] && p=3
     local pstage=stage${p}
-
-    local profile="default/linux/arm64/17.0/musl"
-    [[ "${flavor}" == "hardened" ]] && profile="${profile}/hardened"
 
     cat stage.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
@@ -43,17 +42,16 @@ prepare_confs() {
 main() {
   >zzz.log
 
-#  catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
+  catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
   for flavor in hardened vanilla; do
     prepare_confs ${flavor}
   done
 
-  # No parallelization for arm64.  Its too hard on the cpu!
-#  for flavor in hardened vanilla; do
-#    do_stages ${flavor}
-#    [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
-#  done
+  for flavor in hardened vanilla; do
+    do_stages ${flavor}
+    [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
+  done
 }
 
 main $1 &
