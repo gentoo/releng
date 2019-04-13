@@ -49,7 +49,7 @@ main() {
   done
 
   for flavor in hardened vanilla; do
-    do_stages ${flavor}
+    do_stages "arm64" ${flavor}
     [[ $? == 1 ]] && echo "FAILURE at ${arch} ${flavor} " | tee zzz.log
   done
 }
