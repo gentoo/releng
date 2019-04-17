@@ -84,7 +84,6 @@ livecd/packages:
 	dev-lang/python
 	dev-vcs/git
 	media-gfx/fbgrab
-	net-analyzer/gnu-netcat
 	net-analyzer/iptraf-ng
 	net-analyzer/openbsd-netcat
 	net-analyzer/tcptraceroute
