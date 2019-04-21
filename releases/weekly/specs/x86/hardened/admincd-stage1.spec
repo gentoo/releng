@@ -52,7 +52,6 @@ livecd/packages:
 	app-benchmarks/iozone
 	app-benchmarks/stress
 	app-benchmarks/tiobench
-	app-crypt/bcwipe
 	app-crypt/gnupg
 	app-crypt/pinentry
 	app-editors/emacs
