@@ -4,6 +4,7 @@ version_stamp: minimal-2008.0
 rel_type: default
 profile: default/linux/arm64/17.0
 snapshot: current
+compression_mode: pixz_x
 source_subpath: default/stage3-arm64-2008.0
 #portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 

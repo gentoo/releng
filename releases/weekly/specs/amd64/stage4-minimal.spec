@@ -4,6 +4,7 @@ version_stamp: minimal-latest
 rel_type: default
 profile: default/linux/amd64/17.0
 snapshot: latest
+compression_mode: pixz_x
 source_subpath: default/stage3-amd64-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 

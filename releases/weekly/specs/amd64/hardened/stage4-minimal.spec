@@ -4,6 +4,7 @@ version_stamp: hardened+minimal-latest
 rel_type: hardened
 profile: default/linux/amd64/17.0/hardened
 snapshot: latest
+compression_mode: pixz_x
 source_subpath: hardened/stage3-amd64-hardened-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
