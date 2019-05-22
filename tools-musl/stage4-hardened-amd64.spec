@@ -5,6 +5,7 @@ rel_type: musl/hardened/amd64
 profile: default/linux/amd64/17.0/musl/hardened
 snapshot: current
 compression_mode: pixz_x
+decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 source_subpath: musl/hardened/amd64/stage3-amd64-musl-hardened
 portage_confdir: @REPO_DIR@/portage.amd64.hardened.stage4
 portage_overlay: /opt/overlays/musl

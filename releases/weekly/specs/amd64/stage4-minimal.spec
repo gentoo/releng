@@ -5,6 +5,7 @@ rel_type: default
 profile: default/linux/amd64/17.0
 snapshot: latest
 compression_mode: pixz_x
+decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 source_subpath: default/stage3-amd64-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 

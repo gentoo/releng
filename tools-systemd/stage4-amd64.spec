@@ -5,6 +5,7 @@ rel_type: systemd/SARCH
 profile: default/linux/PARCH/17.0/systemd
 snapshot: current
 compression_mode: pixz_x
+decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 source_subpath: systemd/SARCH/PSTAGE-SARCH-systemd
 portage_confdir: @REPO_DIR@/releases/weekly/portage/stages/
 
