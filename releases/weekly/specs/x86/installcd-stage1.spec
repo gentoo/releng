@@ -97,6 +97,7 @@ livecd/packages:
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
+	sys-kernel/linux-firmware
 	sys-libs/gpm
 	sys-power/acpid
 	www-client/links

@@ -98,6 +98,7 @@ livecd/packages:
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
+	sys-kernel/linux-firmware
 	#force rebuild for USE="(-multilib*)"
 	sys-libs/glibc
 	sys-libs/gpm
