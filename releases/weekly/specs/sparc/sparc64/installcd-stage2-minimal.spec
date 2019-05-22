@@ -19,28 +19,6 @@ boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/sparc/installcd-4.19.44.config
-boot/kernel/gentoo/use:
-	-*
-	atm
-	fbcon
-	ipv6
-	livecd
-	lvm1
-	modules
-	ncurses
-	nls
-	nptl
-	pam
-	png
-	readline
-	socks5
-	ssl
-	truetype
-	unicode
-	usb
-
-boot/kernel/gentoo/packages:
-	sys-kernel/linux-firmware
 
 livecd/unmerge:
 	app-admin/eselect

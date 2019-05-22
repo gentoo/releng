@@ -29,6 +29,7 @@ livecd/use:
 
 livecd/packages:
 	app-accessibility/brltty
+	app-accessibility/espeakup
 	app-admin/hddtemp
 	app-admin/passook
 	app-admin/pwgen
@@ -83,6 +84,7 @@ livecd/packages:
 	dev-lang/python
 	dev-vcs/git
 	media-gfx/fbgrab
+	media-sound/alsa-utils
 	net-analyzer/iptraf-ng
 	net-analyzer/openbsd-netcat
 	net-analyzer/tcptraceroute
@@ -152,6 +154,7 @@ livecd/packages:
 	sys-apps/mlocate
 	sys-apps/netplug
 	sys-apps/pciutils
+	sys-apps/pcmciautils
 	sys-apps/sdparm
 	sys-apps/usbutils
 	sys-apps/sed

@@ -27,6 +27,7 @@ livecd/use:
 
 livecd/packages:
 	app-accessibility/brltty
+	app-accessibility/espeakup
 	app-admin/hddtemp
 	app-admin/passook
 	app-admin/pwgen
@@ -39,6 +40,7 @@ livecd/packages:
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	media-gfx/fbgrab
+	media-sound/alsa-utils
 	net-analyzer/traceroute
 	net-dialup/mingetty
 	net-dialup/pptpclient
@@ -73,6 +75,7 @@ livecd/packages:
 	sys-apps/memtester
 	sys-apps/netplug
 	sys-apps/pciutils
+	sys-apps/pcmciautils
 	sys-apps/sdparm
 	sys-apps/usbutils
 	sys-block/parted
