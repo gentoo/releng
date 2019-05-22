@@ -21,6 +21,7 @@ livecd/use:
 	nls
 	nptl
 	pam
+	portaudio
 	readline
 	socks5
 	ssl

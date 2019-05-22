@@ -18,6 +18,7 @@ livecd/use:
 	ncurses
 	nls
 	pam
+	portaudio
 	readline
 	socks5
 	ssl
