@@ -7,7 +7,7 @@ source_subpath: default/stage3-s390x-latest
 target:          netboot2
 subarch:         s390x
 rel_type:        default
-profile:         default/linux/s390/13.0/s390x
+profile:         default/linux/s390/17.0/s390x
 portage_confdir: @REPO_DIR@/releases/weekly/specs/s390/s390x/netboot/portage
 
 
