@@ -2,6 +2,7 @@
 version_stamp: 20140929
 snapshot: 20140929
 source_subpath: default/stage3-s390-latest
+pkgcache_path: /var/tmp/catalyst/packages/default/netboot2-s390
 
 # these shouldn't change
 target:          netboot2
