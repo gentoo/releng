@@ -19,7 +19,6 @@ stage4/use:
 stage4/packages:
 	net-misc/dhcp
 	net-misc/iputils
-#	sys-boot/grub
 	sys-apps/gptfdisk
 	sys-apps/iproute2
 	sys-devel/bc
@@ -32,11 +31,11 @@ stage4/rcadd:
 	netmount|default
 	sshd|default
 
-#boot/kernel: gentoo
-#boot/kernel/gentoo/sources: gentoo-sources
-#boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/cloud-amd64-gentoo.config
-#boot/kernel/gentoo/extraversion: openstack
-#boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
+boot/kernel: gentoo
+boot/kernel/gentoo/sources: gentoo-sources
+boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/arm64/packet-arm64.config
+boot/kernel/gentoo/extraversion: openstack
+boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
 
 # all of the cleanup...
 stage4/unmerge:
