@@ -13,18 +13,18 @@ prepare_confs() {
     [[ $p == 0 ]] && p=3
     local pstage=stage${p}
 
-    local parch="${arch}"
-    [[ "${arch}" == "ppc" ]] && tarch="powerpc"
-
+    local parch="powerpc/ppc32"
+    local tarch="powerpc"
     local profile=${flavor}
-    [[ "${flavor}" == "vanilla" ]] && profile="default"
+    [[ "${flavor}" == "vanilla" ]] && profile="" || profile="/hardened"
 
-    cat stage-all.conf.template | \
+    cat stage.conf.template | \
       sed -e "s:\(^version_stamp.*$\):\1-${mydate}:" \
         -e "s:CSTAGE:${cstage}:g" \
         -e "s:PSTAGE:${pstage}:g" \
         -e "s:SARCH:${arch}:g" \
         -e "s:PARCH:${parch}:g" \
+        -e "s:TARCHPROFILE:${profile}:g" \
         -e "s:TARCH:${tarch}:g" \
         -e "s:FLAVOR:${flavor}:g" \
         -e "s:PROFILE:${profile}:g" \

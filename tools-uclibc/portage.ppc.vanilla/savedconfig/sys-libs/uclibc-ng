@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# uClibc-ng 0.1.0.30 C Library Configuration
+# uClibc-ng 0.1.0.31 C Library Configuration
 #
 # TARGET_aarch64 is not set
 # TARGET_alpha is not set
@@ -25,6 +25,7 @@
 # TARGET_nios2 is not set
 # TARGET_or1k is not set
 TARGET_powerpc=y
+# TARGET_riscv64 is not set
 # TARGET_sh is not set
 # TARGET_sparc is not set
 # TARGET_sparc64 is not set
