@@ -2,7 +2,7 @@ subarch: amd64
 target: stage1
 version_stamp: hardened-selinux+nomultilib-latest
 rel_type: hardened
-profile: default/linux/amd64/17.0/no-multilib/hardened/selinux
+profile: default/linux/amd64/17.1/no-multilib/hardened/selinux
 snapshot: latest
 source_subpath: hardened/stage3-amd64-hardened-selinux+nomultilib-latest
 compression_mode: pixz_x

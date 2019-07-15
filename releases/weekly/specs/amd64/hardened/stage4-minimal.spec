@@ -2,7 +2,7 @@ subarch: amd64
 target: stage4
 version_stamp: hardened+minimal-latest
 rel_type: hardened
-profile: default/linux/amd64/17.0/hardened
+profile: default/linux/amd64/17.1/hardened
 snapshot: latest
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip

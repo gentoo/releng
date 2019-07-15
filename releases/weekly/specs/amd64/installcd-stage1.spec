@@ -2,7 +2,7 @@ subarch: amd64
 version_stamp: latest
 target: livecd-stage1
 rel_type: default
-profile: default/linux/amd64/17.0/no-multilib
+profile: default/linux/amd64/17.1/no-multilib
 snapshot: latest
 source_subpath: default/stage3-amd64-latest
 compression_mode: pixz_x

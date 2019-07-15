@@ -2,7 +2,7 @@ subarch: amd64
 target: stage4
 version_stamp: minimal-latest
 rel_type: default
-profile: default/linux/amd64/17.0
+profile: default/linux/amd64/17.1
 snapshot: latest
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip

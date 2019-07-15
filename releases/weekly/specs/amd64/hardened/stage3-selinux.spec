@@ -2,7 +2,7 @@ subarch: amd64
 target: stage3
 version_stamp: hardened-selinux-latest
 rel_type: hardened
-profile: default/linux/amd64/17.0/hardened/selinux
+profile: default/linux/amd64/17.1/hardened/selinux
 snapshot: latest
 source_subpath: hardened/stage2-amd64-hardened-selinux-latest
 compression_mode: pixz_x

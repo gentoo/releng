@@ -2,7 +2,7 @@ subarch: amd64
 target: stage2
 version_stamp: latest
 rel_type: default
-profile: default/linux/amd64/17.0
+profile: default/linux/amd64/17.1
 snapshot: latest
 source_subpath: default/stage1-amd64-latest
 compression_mode: pixz_x
