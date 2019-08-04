@@ -18,7 +18,7 @@ boot/kernel: ibmpower G5 ppc32
 
 ## IBM hardware
 boot/kernel/ibmpower/sources: sys-kernel/gentoo-sources
-boot/kernel/ibmpower/config: ../../../kconfig/powerpc/installcd-ibm-4.14.config
+boot/kernel/ibmpower/config: ../../../kconfig/powerpc/installcd-ibm-4.19.config
 boot/kernel/ibmpower/console: ttyS0,9600 hvc0 hvsi0
 boot/kernel/ibmpower/machine_type: ibm
 boot/kernel/ibmpower/extraversion: ibm
@@ -44,7 +44,7 @@ boot/kernel/ibmpower/use:
 
 ## Apple hardware
 boot/kernel/G5/sources: sys-kernel/gentoo-sources
-boot/kernel/G5/config: ../../../kconfig/powerpc/installcd-ppc64apple-4.14.config
+boot/kernel/G5/config: ../../../kconfig/powerpc/installcd-ppc64apple-4.19.config
 boot/kernel/G5/console: ttyS0,57600
 boot/kernel/G5/extraversion: G5
 boot/kernel/G5/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64ppc' --kernel-as='as -a64'
@@ -69,7 +69,7 @@ boot/kernel/G5/use:
 
 ## ppc32 hardware
 boot/kernel/ppc32/sources: sys-kernel/gentoo-sources
-boot/kernel/ppc32/config: ../../../kconfig/powerpc/installcd-ppc32apple-4.14.config
+boot/kernel/ppc32/config: ../../../kconfig/powerpc/installcd-ppc32apple-4.19.config
 boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use:
 	-*
