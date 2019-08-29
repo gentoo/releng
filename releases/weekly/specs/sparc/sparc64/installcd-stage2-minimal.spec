@@ -2,7 +2,7 @@ subarch: sparc64
 version_stamp: latest
 target: livecd-stage2
 rel_type: default
-profile: default/linux/sparc/17.0
+profile: default/linux/sparc/17.0/64ul
 snapshot: latest
 source_subpath: default/livecd-stage1-sparc64-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos

@@ -2,7 +2,7 @@ subarch: sparc64
 target: stage2
 version_stamp: latest
 rel_type: default
-profile: default/linux/sparc/17.0
+profile: default/linux/sparc/17.0/64ul
 snapshot: latest
 source_subpath: default/stage1-sparc64-latest
 compression_mode: xz_x
