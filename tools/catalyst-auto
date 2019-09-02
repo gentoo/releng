@@ -165,6 +165,25 @@ parse_args() {
 	done
 }
 
+give_latest_from_dates() {
+  sed 's,-20,~20,g' | \
+  sort -k +1 -n -t '~' |\
+  awk -F\~ \
+  'BEGIN{i=$1; o=$0};
+  { if($1 != i && i != "") { print o; }; i=$1; o=$0;  }
+  END { print o; };' | \
+  tr '~' '-'
+}
+
+# Replace the date/time stamp in the filename to "latest".
+# Forms we handle:
+# stage3-xxx-2018.0.tar.bz2
+# stage3-xxx-20180116.tar.bz2
+# stage3-xxx-20180116T015819Z.tar.bz2
+convert_filename() {
+	sed -E 's:-20[0-9]+(\.[0-9]+|T[0-9]+Z)?:-latest:g'
+}
+
 # Let's get our own namespaces/etc... to avoid leaking crap.
 containerize() {
 	# If we've already relaunched, nothing to do.
