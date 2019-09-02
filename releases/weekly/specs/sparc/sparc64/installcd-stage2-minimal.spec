@@ -137,6 +137,7 @@ livecd/empty:
 	/usr/share/unimaps
 	/usr/share/zoneinfo
 	/usr/sparc-unknown-linux-gnu
+	/usr/sparc-64unknown-linux-gnu
 	/usr/src
 	/usr/x86_64-pc-linux-gnu
 	/var/cache
