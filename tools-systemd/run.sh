@@ -30,6 +30,9 @@ prepare_confs() {
         -e "s:@REPO_DIR@:${repo_dir}:g" \
         -e "s:MYCATALYST:$(pwd):g" \
         >  stage${s}-${arch}-systemd.conf
+
+    [[ $arch == i686 ]] && \
+      sed -i -e 's/17.1/17.0/' stage${s}-${arch}-systemd.conf
   done
 }
 

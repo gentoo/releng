@@ -2,7 +2,7 @@ subarch: SARCH
 target: CSTAGE
 version_stamp: systemd
 rel_type: systemd/SARCH
-profile: default/linux/PARCH/17.0/systemd
+profile: default/linux/PARCH/17.1/systemd
 snapshot: current
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
