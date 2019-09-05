@@ -1,10 +1,10 @@
 subarch: ia64
-version_stamp: 2008.0
+version_stamp: latest
 target: livecd-stage1
 rel_type: default
 profile: default/linux/ia64/17.0
-snapshot: 2008.0
-source_subpath: default/stage3-ia64-2008.0
+snapshot: latest
+source_subpath: default/stage3-ia64-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
