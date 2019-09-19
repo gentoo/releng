@@ -32,6 +32,7 @@ livecd/packages:
 	app-crypt/gnupg
 	app-editors/mg
 	app-misc/screen
+	app-misc/tmux
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	media-gfx/fbgrab

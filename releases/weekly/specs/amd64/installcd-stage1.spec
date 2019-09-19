@@ -39,6 +39,7 @@ livecd/packages:
 	app-editors/mg
 	app-editors/nano
 	app-misc/screen
+	app-misc/tmux
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	media-gfx/fbgrab
