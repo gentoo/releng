@@ -33,6 +33,7 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
+	app-misc/livecd-tools
 	app-misc/screen
 	app-portage/mirrorselect
 	app-text/wgetpaste

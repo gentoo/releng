@@ -38,6 +38,7 @@ livecd/packages:
 	app-crypt/gnupg
 	app-editors/mg
 	app-editors/nano
+	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/tmux
 	app-portage/mirrorselect

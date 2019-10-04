@@ -25,6 +25,7 @@ livecd/packages:
 	app-crypt/gnupg
 #	app-editors/emacs
 	app-editors/vim
+	app-misc/livecd-tools
 	app-misc/mc
 	app-misc/screen
 #	app-office/openoffice-bin

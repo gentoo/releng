@@ -36,6 +36,7 @@ livecd/packages:
 	app-crypt/gnupg
 	app-editors/emacs
 	app-editors/vim
+	app-misc/livecd-tools
 	app-misc/screen
 	app-portage/mirrorselect
 	app-text/wgetpaste

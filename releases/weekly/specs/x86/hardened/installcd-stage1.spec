@@ -31,6 +31,7 @@ livecd/packages:
 	app-arch/unzip
 	app-crypt/gnupg
 	app-editors/mg
+	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/tmux
 	app-portage/mirrorselect

@@ -65,6 +65,7 @@ livecd/packages:
 	app-emacs/ebuild-mode
 	app-emulation/xen-tools
 	app-misc/colordiff
+	app-misc/livecd-tools
 	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen

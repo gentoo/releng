@@ -32,6 +32,7 @@ livecd/packages:
 	app-crypt/gnupg
 # Not keyworded	
 #	app-editors/mg
+	app-misc/livecd-tools
 	app-misc/screen
 	app-portage/mirrorselect
 	app-text/wgetpaste

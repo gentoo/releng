@@ -45,6 +45,7 @@ livecd/packages:
 	app-laptop/i8kutils
 ### Can't emerge with profile USE
 #	app-misc/beagle
+	app-misc/livecd-tools
 	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen

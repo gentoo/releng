@@ -46,6 +46,7 @@ livecd/packages:
 	app-laptop/i8kutils
 ### Compile fails
 #	app-misc/beagle
+	app-misc/livecd-tools
 	app-misc/mc
 	app-misc/pax-utils
 	app-misc/screen
