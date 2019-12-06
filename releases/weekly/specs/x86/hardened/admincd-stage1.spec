@@ -121,8 +121,6 @@ livecd/packages:
 	net-proxy/tsocks
 	net-vpn/openvpn
 	net-wireless/b43-fwcutter
-### Masked (~amd64)
-#	net-wireless/bcm43xx-fwcutter
 	net-wireless/iw
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant

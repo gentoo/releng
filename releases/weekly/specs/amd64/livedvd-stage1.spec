@@ -173,8 +173,6 @@ livecd/packages:
 ### Masked (~amd64)
 #	net-wireless/airsnort
 	net-wireless/b43-fwcutter
-### Masked (~amd64)
-#	net-wireless/bcm43xx-fwcutter
 	net-wireless/gnome-bluetooth
 	net-wireless/kdebluetooth
 	net-wireless/wepattack

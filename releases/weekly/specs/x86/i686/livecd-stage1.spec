@@ -74,7 +74,6 @@ livecd/packages:
 	net-proxy/tsocks
 ### Masked by ~x86
 #	net-wireless/b43-fwcutter
-#	net-wireless/bcm43xx-fwcutter
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/ethtool

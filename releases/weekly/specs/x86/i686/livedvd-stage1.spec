@@ -166,7 +166,6 @@ livecd/packages:
 	net-wireless/airsnort
 ### Masked by ~x86
 #	net-wireless/b43-fwcutter
-#	net-wireless/bcm43xx-fwcutter
 	net-wireless/gnome-bluetooth
 	net-wireless/kdebluetooth
 	net-wireless/wepattack

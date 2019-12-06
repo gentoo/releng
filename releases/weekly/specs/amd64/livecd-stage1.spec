@@ -74,8 +74,6 @@ livecd/packages:
 	net-proxy/dante
 	net-proxy/tsocks
 	net-wireless/b43-fwcutter
-### Masked (~amd64)
-#	net-wireless/bcm43xx-fwcutter
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 ### Masked (no keywords)

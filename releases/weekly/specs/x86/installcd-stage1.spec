@@ -64,8 +64,6 @@ livecd/packages:
 	net-wireless/b43-fwcutter
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
-### Masked (~keywords)
-#	net-wireless/bcm43xx-fwcutter
 	net-wireless/iw
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
