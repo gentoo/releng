@@ -164,8 +164,7 @@ livecd/packages:
 	net-proxy/tsocks
 	net-wireless/aircrack-ng
 	net-wireless/airsnort
-### Masked by ~x86
-#	net-wireless/b43-fwcutter
+	net-wireless/b43-fwcutter
 	net-wireless/gnome-bluetooth
 	net-wireless/kdebluetooth
 	net-wireless/wepattack
