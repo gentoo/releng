@@ -154,6 +154,7 @@ livecd/packages:
 	sys-apps/memtester
 	sys-apps/mlocate
 	sys-apps/netplug
+	sys-apps/nvme-cli
 	sys-apps/pciutils
 	sys-apps/pcmciautils
 	sys-apps/sdparm

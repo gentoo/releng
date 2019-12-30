@@ -76,6 +76,7 @@ livecd/packages:
 	sys-apps/iproute2
 	sys-apps/memtester
 	sys-apps/netplug
+	sys-apps/nvme-cli
 	sys-apps/pciutils
 	sys-apps/pcmciautils
 	sys-apps/sdparm
