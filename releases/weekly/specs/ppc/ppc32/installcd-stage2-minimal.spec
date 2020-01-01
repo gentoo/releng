@@ -8,7 +8,7 @@ source_subpath: default/livecd-stage1-ppc-2008.0
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/fstype: squashfs 
-livecd/gk_mainargs: --arch-override=ppc --makeopts=-j12
+livecd/gk_mainargs: --makeopts=-j12
 livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 
