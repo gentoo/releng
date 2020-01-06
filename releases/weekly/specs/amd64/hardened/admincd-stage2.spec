@@ -39,7 +39,6 @@ livecd/unmerge:
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
-	sys-apps/diffutils
 	sys-apps/groff
 	sys-apps/man-db
 	sys-apps/man-pages
