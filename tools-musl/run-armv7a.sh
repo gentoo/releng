@@ -22,7 +22,7 @@ prepare_confs() {
         -e "s:SARCH:${arch}:g" \
         -e "s:TARCH:${tarch}:g" \
         -e "s:FLAVOR:${flavor}:g" \
-        -e "s:gentoo-linux-musl:hardfloat-linux-musleabi:" \
+        -e "s:gentoo-linux-musl:unknown-linux-musleabihf:g" \
         -e "s:^profile\:.*:profile\: ${profile}:" \
         -e "s:MYCATALYST:$(pwd):g" \
         >  stage${s}-${arch}-musl-${flavor}.conf
