@@ -49,6 +49,7 @@ livecd/packages:
 	app-arch/unrar
 	app-arch/unzip
 	app-backup/duplicity
+	app-backup/fsarchiver
 	app-benchmarks/bonnie
 	app-benchmarks/bonnie++
 	app-benchmarks/dbench
