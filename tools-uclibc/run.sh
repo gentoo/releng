@@ -45,7 +45,7 @@ main() {
 
 #  undo_grsec
 
-  catalyst -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
+  catalyst -c $(pwd)/catalyst.conf.local -s current | tee -a zzz.log >snapshot.log 2>snapshot.err
 
   for arch in amd64 i686; do
     for flavor in hardened vanilla; do

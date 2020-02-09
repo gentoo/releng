@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /etc/catalyst/catalyst.conf
+source $(pwd)/catalyst.conf.local
 
 mydate=`date +%Y%m%d`
 
@@ -42,7 +42,8 @@ do_stages() {
     fi
 
     banner ${s} ${arch} ${flavor}
-    catalyst -f stage${s}-${arch}-musl-${flavor}.conf \
+    catalyst -c $(pwd)/catalyst.conf.local \
+      -f stage${s}-${arch}-musl-${flavor}.conf \
       | tee -a zzz.log \
       > stage${s}-${arch}-musl-${flavor}.log \
       2> stage${s}-${arch}-musl-${flavor}.err

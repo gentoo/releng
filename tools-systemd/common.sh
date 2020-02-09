@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /etc/catalyst/catalyst.conf
+source $(pwd)/catalyst.conf.local
 
 mydate=$(date +%Y%m%d)
 
@@ -40,7 +40,8 @@ do_stages() {
     fi
 
     banner ${s} ${arch}
-    catalyst -f stage${s}-${arch}-systemd.conf \
+    catalyst -c $(pwd)/catalyst.conf.local \
+      -f stage${s}-${arch}-systemd.conf \
       | tee -a zzz.log \
       > stage${s}-${arch}-systemd.log \
       2> stage${s}-${arch}-systemd.err
