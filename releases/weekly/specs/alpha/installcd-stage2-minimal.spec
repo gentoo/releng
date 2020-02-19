@@ -14,6 +14,7 @@ livecd/fstype: squashfs
 livecd/iso: /space/catalyst/builds/default/install-alpha-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo alpha latest
+livecd/gk_mainargs: --firmware-files=qlogic/1040.bin
 
 boot/kernel: gentoo gentoo_nolsa
 
