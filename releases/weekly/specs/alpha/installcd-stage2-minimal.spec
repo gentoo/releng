@@ -8,10 +8,10 @@ source_subpath: default/livecd-stage1-alpha-2008.0
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /space/armin76/tmp/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
-livecd/fsscript: /space/armin76/releng/releases/weekly/scripts/livecd.sh
+livecd/cdtar: /root/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
+livecd/fsscript: /root/releng/releases/weekly/scripts/livecd.sh
 livecd/fstype: squashfs
-livecd/iso: /space/catalyst/builds/default/install-alpha-minimal-2008.0.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-2008.0.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo alpha latest
 livecd/gk_mainargs: --firmware-files=qlogic/1040.bin
