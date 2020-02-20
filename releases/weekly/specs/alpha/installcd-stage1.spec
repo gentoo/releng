@@ -23,7 +23,6 @@ livecd/use:
 	xml
 
 livecd/packages:
-	app-accessibility/brltty
 #	app-admin/hddtemp
 # No keywords on alpha
 #	app-admin/passook
