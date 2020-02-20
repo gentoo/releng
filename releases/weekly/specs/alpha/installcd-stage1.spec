@@ -27,7 +27,8 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
-	app-editors/mg
+	app-editors/emacs
+	app-editors/vim
 	app-misc/livecd-tools
 	app-misc/screen
 	app-portage/mirrorselect
@@ -36,7 +37,6 @@ livecd/packages:
 	net-dialup/mingetty
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
-	sys-fs/btrfs-progs
 	net-fs/nfs-utils
 	net-irc/irssi
 	net-misc/dhcpcd
@@ -51,7 +51,10 @@ livecd/packages:
 	sys-apps/hwsetup
 	sys-apps/iproute2
 	sys-apps/sdparm
+	sys-apps/usbutils
 	sys-block/parted
+	sys-devel/bc
+	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/dmraid
 	sys-fs/dosfstools
