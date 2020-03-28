@@ -12,6 +12,7 @@ livecd/use:
 	python_targets_python3_6
 	python_single_target_python3_6
 	bindist
+	compile-locales
 	fbcon
 	ipv6
 	livecd

@@ -8,6 +8,7 @@ source_subpath: hardened/stage3-x86-hardened-latest
 compression_mode: pixz_x
 livecd/use:
 	-*
+	compile-locales
 	fbcon
 	ipv6
 	livecd

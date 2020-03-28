@@ -7,6 +7,7 @@ snapshot: 2008.0
 source_subpath: default/stage3-alpha-2008.0
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 livecd/use:
+	compile-locales
 	fbcon
 	ipv6
 	livecd

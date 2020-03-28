@@ -10,6 +10,7 @@ decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
+	compile-locales
 	fbcon
 	ipv6
 	livecd

@@ -10,6 +10,7 @@ portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/use:
 	alsa
+	compile-locales
 	fbcon
 	ipv6
 	livecd
