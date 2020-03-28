@@ -20,7 +20,6 @@ boot/kernel: ibmpower G5 ppc32
 boot/kernel/ibmpower/sources: sys-kernel/gentoo-sources
 boot/kernel/ibmpower/config: ../../../kconfig/powerpc/installcd-ibm-4.19.config
 boot/kernel/ibmpower/console: ttyS0,9600 hvc0 hvsi0
-boot/kernel/ibmpower/machine_type: ibm
 boot/kernel/ibmpower/extraversion: ibm
 boot/kernel/ibmpower/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64ppc' --kernel-as='as -a64'
 boot/kernel/ibmpower/use:
