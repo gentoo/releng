@@ -71,11 +71,9 @@ netboot2/packages/sys-fs/e2fsprogs/files:
 	/sbin/resize2fs
 	/sbin/findfs
 	/sbin/e2label
-	/sbin/mkfs.ext4dev
 	/sbin/mkfs.ext4
 	/sbin/mkfs.ext3
 	/sbin/mkfs.ext2
-	/sbin/fsck.ext4dev
 	/sbin/fsck.ext4
 	/sbin/fsck.ext3
 	/sbin/fsck.ext2
@@ -90,8 +88,6 @@ netboot2/packages/sys-fs/xfsprogs/files:
 	/sbin/mkfs.xfs
 	/sbin/fsck.xfs
 	/sbin/xfs_repair
-	/lib/libxfs.so.*
-	/lib/libxlog.so.*
 	/lib/librt*
 
 
