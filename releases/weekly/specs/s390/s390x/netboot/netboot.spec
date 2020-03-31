@@ -15,7 +15,7 @@ portage_confdir: @REPO_DIR@/releases/weekly/specs/s390/s390x/netboot/portage
 boot/kernel:                      netboot64
 boot/kernel/netboot64/sources:       sys-kernel/gentoo-sources
 boot/kernel/netboot64/config: ../../kconfig/netboot64.config
-boot/kernel/netboot64/gk_kernargs:   --arch-override=s390 --all-ramdisk-modules
+boot/kernel/netboot64/gk_kernargs:   --all-ramdisk-modules
 
 netboot2/use:
  -*
