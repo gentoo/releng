@@ -14,7 +14,7 @@ profile:         default/linux/hppa/17.0
 boot/kernel:                      netboot32
 boot/kernel/netboot32/sources:       sys-kernel/gentoo-sources
 boot/kernel/netboot32/config: /root/releng/releases/weekly/kconfig/hppa/netboot-3.10.7-gentoo-netboot32.config
-boot/kernel/netboot32/gk_kernargs:   --arch-override=parisc --all-ramdisk-modules
+boot/kernel/netboot32/gk_kernargs:   --all-ramdisk-modules
 
 netboot2/use:
  -*

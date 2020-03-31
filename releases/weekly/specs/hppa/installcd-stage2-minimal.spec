@@ -11,7 +11,6 @@ portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 livecd/volid: Gentoo hppa latest
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
-livecd/gk_mainargs: --arch-override=parisc
 livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-20140201.iso
 livecd/type: gentoo-release-minimal
 
