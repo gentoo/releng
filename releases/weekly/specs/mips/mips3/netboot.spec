@@ -55,7 +55,6 @@ netboot2/packages:
 	ncurses
 	popt
 	pork
-	portmap
 	reiserfsprogs
 	rsync
 	sdparm
@@ -226,9 +225,6 @@ netboot2/packages/popt/files:
 	/usr/lib/libpopt.so
 	/usr/lib/libpopt.so.0
 	/usr/lib/libpopt.so.0.0.0
-
-netboot2/packages/portmap/files:
-	/sbin/portmap
 
 netboot2/packages/reiserfsprogs/files:
 	/sbin/fsck.reiserfs

@@ -34,7 +34,6 @@ netboot2/packages:
 	ncurses
 	openssl
 	popt
-	portmap
 	rsync
 	sdparm
 	util-linux

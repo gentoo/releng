@@ -25,8 +25,6 @@ netboot2/packages:
 	mdadm
 	nano
 	ncurses
-# bug 300368
-	portmap
 	qla-fc-firmware
 	sdparm
 	util-linux
@@ -40,7 +38,6 @@ netboot2/packages/dropbear/files:
 	/usr/bin/dropbearconvert
 	/usr/bin/dropbearkey
 	/usr/bin/dropbearmulti
-# bug 300368
 	/usr/bin/scp
 	/usr/sbin/dropbear
 
@@ -120,11 +117,6 @@ netboot2/packages/ncurses/files:
 	/usr/share/terminfo/x/xterm
 	/usr/share/terminfo/x/xterm-color
 	/usr/share/terminfo/x/xterm-xfree86
-
-netboot2/packages/portmap/files:
-	/sbin/portmap
-	/usr/sbin/pmap_set
-	/usr/sbin/pmap_dump
 
 netboot2/packages/qla-fc-firmware/files:
 	/lib/firmware/ql2200_fw.bin*
