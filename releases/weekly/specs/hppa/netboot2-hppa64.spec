@@ -13,7 +13,7 @@ profile:         default/linux/hppa/17.0
 boot/kernel:                      netboot64
 boot/kernel/netboot64/sources:       sys-kernel/gentoo-sources
 boot/kernel/netboot64/config: /root/releng/releases/weekly/kconfig/hppa/netboot-3.10.7-gentoo-netboot64.config
-boot/kernel/netboot64/gk_kernargs:   --cross-compile=hppa64-unknown-linux-gnu- --all-ramdisk-modules
+boot/kernel/netboot64/gk_kernargs:   --cross-compile=hppa64-unknown-linux-gnu --all-ramdisk-modules
 
 netboot2/use:
  -*

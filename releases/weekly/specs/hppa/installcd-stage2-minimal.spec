@@ -42,7 +42,7 @@ boot/kernel/livecd32/use:
 
 boot/kernel/livecd64/sources: sys-kernel/gentoo-sources
 boot/kernel/livecd64/config: /home/gmsoft/specs/installcd-3.10.7-gentoo-livecd64.config
-boot/kernel/livecd64/gk_kernargs: --cross-compile=hppa64-unknown-linux-gnu-
+boot/kernel/livecd64/gk_kernargs: --cross-compile=hppa64-unknown-linux-gnu
 boot/kernel/livecd64/use:
 	-*
 	atm
