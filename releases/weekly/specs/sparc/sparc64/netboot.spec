@@ -81,7 +81,6 @@ netboot2/packages/app-editors/nano/files:
 
 netboot2/packages/sys-libs/ncurses/files:
 	/etc/terminfo
-	/lib64/libcurses.so*
 	/lib64/libncurses.so*
 	/usr/bin/toe
 	/usr/lib64/libcurses.so*
