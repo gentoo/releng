@@ -8,7 +8,6 @@ source_subpath: default/livecd-stage1-sparc64-latest
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /release/silo-1.4.14_p20170829-sparc-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/iso: install-sparc64-minimal-latest.iso
 livecd/type: gentoo-release-minimal
