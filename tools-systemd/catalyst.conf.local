@@ -15,10 +15,10 @@ options="autoresume bindist kerncache pkgcache seedcache"
 
 portdir="/usr/portage"
 
-repo_basedir="/usr"
-repo_name="portage"
-target_distdir="/usr/portage/distfiles"
-target_pkgdir="/usr/portage/packages"
+repo_basedir="/var/db/repos"
+repo_name="gentoo"
+target_distdir="/var/cache/distfiles"
+target_pkgdir="/var/cache/binpkgs"
 
 sharedir="/usr/share/catalyst"
 
