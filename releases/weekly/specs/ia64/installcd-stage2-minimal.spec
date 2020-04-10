@@ -10,7 +10,6 @@ decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 portage_confdir: @REPO_DIR@/releases/weekly/portage/isos
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /home/armin76/tmp/elilo-3.6-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/iso: /home/catalyst/builds/default/install-ia64-minimal-latest.iso
 livecd/type: gentoo-release-minimal
