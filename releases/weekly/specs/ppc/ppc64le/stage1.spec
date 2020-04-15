@@ -2,7 +2,7 @@ subarch: ppc64le
 target: stage1
 version_stamp: latest
 rel_type: default
-profile: default/linux/powerpc/ppc64/17.0/64bit-userland/little-endian
+profile: default/linux/ppc64le/17.0
 snapshot: latest
 source_subpath: default/stage3-ppc64le-latest
 compression_mode: pixz_x
