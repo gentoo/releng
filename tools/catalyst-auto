@@ -229,6 +229,22 @@ git_update() {
 	fi
 }
 
+# Stages are uploaded to <arch>@releng-incoming.gentoo.org and in order to
+# allow us to change what system this domain points to, we will retrieve the
+# SSH fingerprint from DNS. To do this securely, we need to ensure DNSSEC is
+# working.
+verify_dnssec() {
+	which dig >/dev/null || {
+		echo "net-dns/bind-tools is needed to verify DNSSEC is working"
+		exit 1
+	}
+
+	if ! dig +noall +comments dev.gentoo.org. IN SSHFP | egrep -q '^;; flags: [ a-z]+\<ad\>'; then
+		echo "DNSSEC does not appear to be working. Bailing out"
+		exit 1
+	fi
+}
+
 run_catalyst_commands() {
 	doneconfig=0
 	for config_file in "${config_files[@]}"; do
@@ -440,6 +456,9 @@ main() {
 
 	# Update the release git dir if possible.
 	git_update "$@"
+
+	# Verify DNSSEC works
+	verify_dnssec
 
 	# Try to isolate ourselves from the rest of the system.
 	containerize "$@"
