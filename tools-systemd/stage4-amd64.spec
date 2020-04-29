@@ -29,7 +29,7 @@ stage4/packages:
 	sys-devel/bc
 	sys-power/acpid
 	app-crypt/gentoo-keys
-stage4/fsscript: @REPO_DIR@/releases/weekly/scripts/cloud-prep.sh
+stage4/fsscript: @REPO_DIR@/releases/scripts/cloud-prep.sh
 stage4/rcadd:
 	acpid|default
 	net.lo|default
@@ -38,7 +38,7 @@ stage4/rcadd:
 
 boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/weekly/kconfig/amd64/cloud-amd64-gentoo.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/cloud-amd64-gentoo.config
 boot/kernel/gentoo/extraversion: openstack
 boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules
 
