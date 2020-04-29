@@ -279,7 +279,6 @@ run_catalyst_commands() {
 		fi
 	fi
 
-	DATESTAMP=$(date -u +%Y%m%d)
 	TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
 	TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${TIMESTAMP}.XXXXXX")
 
@@ -291,7 +290,6 @@ run_catalyst_commands() {
 
 	if [[ ${verbose} -ge 1 ]]; then
 		echo "TMPDIR = ${TMPDIR}"
-		echo "DATESTAMP = ${DATESTAMP}"
 		echo "TIMESTAMP = ${TIMESTAMP}"
 	fi
 
@@ -356,7 +354,6 @@ run_catalyst_commands() {
 
 		# Expand vars that the spec expects us to.
 		sed -i \
-			-e "s:@DATESTAMP@:${DATESTAMP}:g" \
 			-e "s:@TIMESTAMP@:${TIMESTAMP}:g" \
 			-e "s:@REPO_DIR@:${REPO_DIR}:g" \
 			"${i}"
