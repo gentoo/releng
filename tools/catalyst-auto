@@ -325,24 +325,6 @@ run_catalyst_commands() {
 
 	# Fix up specs with datestamp
 	for i in $(find -name '*.spec'); do
-		# Grab current version_stamp and source_subpath
-		old_version_stamp=$(grep version_stamp "${i}" | sed -e 's|^version_stamp: *||')
-		old_source_subpath=$(grep source_subpath "${i}" | sed -e 's|^source_subpath: *||')
-
-		new_version_stamp=$(echo "${old_version_stamp}" | sed -e "s|^\(.*-\)\?.*$|\1${TIMESTAMP}|")
-		new_source_subpath=$(echo "${old_source_subpath}" | sed -e "s|${old_version_stamp}|${new_version_stamp}|")
-
-		sed -i "s|^version_stamp:.*$|version_stamp: ${new_version_stamp}|" "${i}"
-		sed -i "s|^snapshot:.*$|snapshot: ${TIMESTAMP}|" "${i}"
-
-		# We don't want to mangle the source_subpath for our stage1 spec
-		if ! grep -q '^target: *stage[14]$' "${i}"; then
-			sed -i "s|^source_subpath:.*$|source_subpath: ${new_source_subpath}|" "${i}"
-		fi
-
-		sed -i "/^livecd\/iso/s|${old_version_stamp}|${new_version_stamp}|" "${i}"
-		sed -i "/^livecd\/volid/s|${old_version_stamp}|${new_version_stamp}|" "${i}"
-
 		kconfig_lines=$(grep '^boot/kernel/[^/]\+/config:' "${i}")
 		if [[ -n ${kconfig_lines} ]]; then
 			echo "${kconfig_lines}" | while read line; do
