@@ -1,7 +1,7 @@
 # HPPA Netboot spec file by Guy Martin
-version_stamp: 20130927
-snapshot: 20130927
-source_subpath: default/stage3-hppa2.0-20130927
+version_stamp: latest
+snapshot: latest
+source_subpath: default/stage3-hppa2.0-latest
 pkgcache_path: /var/tmp/catalyst/packages/default/netboot2-hppa64
 
 # these shouldn't change

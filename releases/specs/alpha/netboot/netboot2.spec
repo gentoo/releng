@@ -1,10 +1,10 @@
 subarch: alpha
-version_stamp: 20100329
+version_stamp: latest
 target: netboot2
 rel_type: default
 profile: default/linux/alpha/17.0
-snapshot: 20100329
-source_subpath: default/stage3-alpha-20100329
+snapshot: latest
+source_subpath: default/stage3-alpha-latest
 
 #portage_overlay:
 
@@ -15,7 +15,7 @@ boot/kernel/gentoo/gk_kernargs: --all-ramdisk-modules --makeopts=-j4 --lvm --dmr
 
 
 
-#netboot2/builddate: 20100339
+#netboot2/builddate: latest
 netboot2/busybox_config: bs.conf
 
 

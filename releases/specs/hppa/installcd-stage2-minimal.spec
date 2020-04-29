@@ -1,17 +1,17 @@
 subarch: hppa1.1
-version_stamp: 20140201
+version_stamp: latest
 target: livecd-stage2
 rel_type: default
 profile: default/linux/hppa/17.0
-snapshot: 20140201
-source_subpath: default/livecd-stage1-hppa1.1-20140201
+snapshot: latest
+source_subpath: default/livecd-stage1-hppa1.1-latest
 pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage2
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/volid: Gentoo hppa latest
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
-livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-20140201.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-latest.iso
 livecd/type: gentoo-release-minimal
 
 boot/kernel: livecd32 livecd64

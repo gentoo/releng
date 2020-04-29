@@ -1,7 +1,7 @@
 subarch: mips4
-version_stamp: 2008.0
+version_stamp: latest
 target: stage2
 rel_type: default
 profile: default/linux/mips/10.0
-snapshot: 2008.0
-source_subpath: default/stage1-mips4-2008.0
+snapshot: latest
+source_subpath: default/stage1-mips4-latest

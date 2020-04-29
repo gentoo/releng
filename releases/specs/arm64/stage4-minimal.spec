@@ -1,12 +1,12 @@
 subarch: arm64
 target: stage4
-version_stamp: minimal-2008.0
+version_stamp: minimal-latest
 rel_type: default
 profile: default/linux/arm64/17.0
 snapshot: current
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
-source_subpath: default/stage3-arm64-2008.0
+source_subpath: default/stage3-arm64-latest
 #portage_confdir: @REPO_DIR@/releases/portage/isos
 
 stage4/use:

@@ -1,8 +1,8 @@
 subarch: armv6j
-version_stamp: 2008.0
+version_stamp: latest
 target: stage1
 rel_type: default
 profile: default/linux/arm/13.0/armv6j
-snapshot: 2008.0
+snapshot: latest
 source_subpath: default/stage3-armv6j-latest
 update_seed: yes

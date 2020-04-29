@@ -1,9 +1,9 @@
 subarch: hppa2.0
 target: stage3
-version_stamp: 2008.0
+version_stamp: latest
 rel_type: default
 profile: default/linux/hppa/17.0
-snapshot: 2008.0
-source_subpath: default/stage1-hppa2.0-2008.0
+snapshot: latest
+source_subpath: default/stage1-hppa2.0-latest
 portage_confdir: @REPO_DIR@/releases/portage/stages
 pkgcache_path: /var/tmp/catalyst/packages/default/stage3-hppa2.0
