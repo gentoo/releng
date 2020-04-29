@@ -1,17 +1,17 @@
 subarch: amd64
-version_stamp: latest-selinux
+version_stamp: @TIMESTAMP@-selinux
 target: livecd-stage2
 rel_type: hardened
 profile: default/linux/amd64/17.0/hardened/selinux
-snapshot: latest
-source_subpath: hardened/livecd-stage1-amd64-latest-selinux
+snapshot: @TIMESTAMP@
+source_subpath: hardened/livecd-stage1-amd64-@TIMESTAMP@-selinux
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
-livecd/iso: admincd-amd64-latest.iso
+livecd/iso: admincd-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo amd64 AdminCD latest
+livecd/volid: Gentoo amd64 AdminCD @TIMESTAMP@
 
 boot/kernel: gentoo
 

@@ -1,10 +1,10 @@
 subarch: alpha
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: livecd-stage1
 rel_type: default
 profile: default/linux/alpha/17.0
-snapshot: latest
-source_subpath: default/stage3-alpha-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/stage3-alpha-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 livecd/use:
 	compile-locales

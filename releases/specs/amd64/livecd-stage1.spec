@@ -1,10 +1,10 @@
 subarch: amd64
-version_stamp: installer-latest
+version_stamp: installer-@TIMESTAMP@
 target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/17.0/desktop
-snapshot: latest
-source_subpath: default/stage3-amd64-desktop-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/stage3-amd64-desktop-@TIMESTAMP@
 livecd/use:
 	branding
 	livecd

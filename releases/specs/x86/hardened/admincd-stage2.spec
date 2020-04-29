@@ -1,17 +1,17 @@
 subarch: i686
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: hardened
 profile: default/linux/x86/17.0/hardened
-snapshot: latest
-source_subpath: hardened/livecd-stage1-i686-latest
+snapshot: @TIMESTAMP@
+source_subpath: hardened/livecd-stage1-i686-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
-livecd/iso: admincd-x86-latest.iso
+livecd/iso: admincd-x86-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo x86 AdminCD latest
+livecd/volid: Gentoo x86 AdminCD @TIMESTAMP@
 
 boot/kernel: gentoo
 

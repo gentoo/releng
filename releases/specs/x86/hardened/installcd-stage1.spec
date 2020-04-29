@@ -1,10 +1,10 @@
 subarch: x86
-version_stamp: hardened-latest
+version_stamp: hardened-@TIMESTAMP@
 target: livecd-stage1
 rel_type: hardened
 profile: default/linux/x86/17.0/hardened
-snapshot: latest
-source_subpath: hardened/stage3-x86-hardened-latest
+snapshot: @TIMESTAMP@
+source_subpath: hardened/stage3-x86-hardened-@TIMESTAMP@
 compression_mode: pixz_x
 livecd/use:
 	-*

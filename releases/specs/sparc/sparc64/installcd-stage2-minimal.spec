@@ -1,17 +1,17 @@
 subarch: sparc64
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/sparc/17.0/64ul
-snapshot: latest
-source_subpath: default/livecd-stage1-sparc64-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/livecd-stage1-sparc64-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
-livecd/iso: install-sparc64-minimal-latest.iso
+livecd/iso: install-sparc64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo sparc64 latest
+livecd/volid: Gentoo sparc64 @TIMESTAMP@
 livecd/gk_mainargs: --firmware-files=ql2200_fw.bin --makeopts=-j256
 
 boot/kernel: gentoo

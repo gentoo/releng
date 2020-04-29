@@ -1,10 +1,10 @@
 profile:		default/linux/sparc/17.0/64ul
 rel_type:		default
-snapshot:		latest
-source_subpath:		default/stage3-sparc64-latest
+snapshot:		@TIMESTAMP@
+source_subpath:		default/stage3-sparc64-@TIMESTAMP@
 subarch:		sparc64
 target:			netboot2
-version_stamp:		latest
+version_stamp:		@TIMESTAMP@
 
 boot/kernel:			gentoo
 boot/kernel/gentoo/gk_kernargs:	--makeopts=-j256

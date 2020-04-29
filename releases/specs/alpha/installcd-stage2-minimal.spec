@@ -1,19 +1,19 @@
 subarch: alpha
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/alpha/17.0
-snapshot: latest
-source_subpath: default/livecd-stage1-alpha-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/livecd-stage1-alpha-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /root/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
 livecd/fsscript: /root/releng/releases/scripts/livecd.sh
 livecd/fstype: squashfs
-livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-latest.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo alpha latest
+livecd/volid: Gentoo alpha @TIMESTAMP@
 livecd/gk_mainargs: --firmware-files=qlogic/1040.bin
 
 boot/kernel: gentoo gentoo_nolsa

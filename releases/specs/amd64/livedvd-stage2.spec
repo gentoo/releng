@@ -1,28 +1,28 @@
 subarch: amd64
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/amd64/17.0/desktop
-snapshot: latest
-source_subpath: default/livecd-stage1-amd64-installer-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/livecd-stage1-amd64-installer-@TIMESTAMP@
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
-livecd/fsscript: @REPO_DIR@/releases/latest/scripts/livecd.sh
+livecd/fsscript: @REPO_DIR@/releases/@TIMESTAMP@/scripts/livecd.sh
 livecd/fstype: squashfs
-livecd/iso: livedvd-amd64-installer-latest.iso
+livecd/iso: livedvd-amd64-installer-@TIMESTAMP@.iso
 livecd/type: gentoo-release-livecd
-livecd/volid: Gentoo amd64 LiveDVD latest
+livecd/volid: Gentoo amd64 LiveDVD @TIMESTAMP@
 livecd/xdm: gdm
 livecd/xsession: xfce
 
-livecd/overlay: @REPO_DIR@/releases/latest/overlays/common/overlay/livedvd
-livecd/root_overlay: @REPO_DIR@/releases/latest/overlays/common/root_overlay
+livecd/overlay: @REPO_DIR@/releases/@TIMESTAMP@/overlays/common/overlay/livedvd
+livecd/root_overlay: @REPO_DIR@/releases/@TIMESTAMP@/overlays/common/root_overlay
 
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/latest/kconfig/amd64/livecd-2.6.24.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/@TIMESTAMP@/kconfig/amd64/livecd-2.6.24.config
 boot/kernel/gentoo/use: atm png truetype usb
 boot/kernel/gentoo/packages:
 	media-libs/alsa-oss

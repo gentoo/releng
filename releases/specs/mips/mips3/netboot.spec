@@ -1,10 +1,10 @@
 subarch: mips3
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: netboot2
 rel_type: default
 profile: default/linux/mips/10.0
-snapshot: latest
-source_subpath: default/stage3-mips3-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/stage3-mips3-@TIMESTAMP@
 
 chost: mips-unknown-linux-gnu
 cflags: -Os -march=mips3 -pipe -fomit-frame-pointer -pie -ftracer -fforce-addr
@@ -16,10 +16,10 @@ boot/kernel/ip30r10k/sources: =mips-sources-2.6.16.27
 boot/kernel/ip32r5k/sources: =mips-sources-2.6.16.27
 boot/kernel/ip32rm5k/sources: =mips-sources-2.6.16.27
 
-boot/kernel/ip28r10k/config: /usr/catalyst/latest/ip28r10k-2008.0.cf
-boot/kernel/ip30r10k/config: /usr/catalyst/latest/ip30r10k-2008.0.cf
-boot/kernel/ip32r5k/config: /usr/catalyst/latest/ip32r5k-2008.0.cf
-boot/kernel/ip32rm5k/config: /usr/catalyst/latest/ip32rm5k-2008.0.cf
+boot/kernel/ip28r10k/config: /usr/catalyst/@TIMESTAMP@/ip28r10k-2008.0.cf
+boot/kernel/ip30r10k/config: /usr/catalyst/@TIMESTAMP@/ip30r10k-2008.0.cf
+boot/kernel/ip32r5k/config: /usr/catalyst/@TIMESTAMP@/ip32r5k-2008.0.cf
+boot/kernel/ip32rm5k/config: /usr/catalyst/@TIMESTAMP@/ip32rm5k-2008.0.cf
 
 boot/kernel/ip28r10k/use: -doc ip28
 boot/kernel/ip30r10k/use: -doc ip30

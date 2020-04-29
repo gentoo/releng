@@ -1,12 +1,12 @@
 subarch: amd64
 target: stage4
-version_stamp: minimal-nomultilib-latest
+version_stamp: minimal-nomultilib-@TIMESTAMP@
 rel_type: default
 profile: default/linux/amd64/17.1/no-multilib
-snapshot: latest
+snapshot: @TIMESTAMP@
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
-source_subpath: default/stage3-amd64-nomultilib-latest
+source_subpath: default/stage3-amd64-nomultilib-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 stage4/use:

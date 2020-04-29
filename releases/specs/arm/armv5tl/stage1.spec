@@ -1,8 +1,8 @@
 subarch: armv5tl
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: stage1
 rel_type: default
 profile: default/linux/arm/13.0
-snapshot: latest
+snapshot: @TIMESTAMP@
 source_subpath: default/stage3-armv5tl-latest
 update_seed: yes

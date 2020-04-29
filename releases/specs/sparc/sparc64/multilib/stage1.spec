@@ -1,8 +1,8 @@
 subarch: sparc64
-version_stamp: multilib-latest
+version_stamp: multilib-@TIMESTAMP@
 target: stage1
 rel_type: multilib
 profile: default/linux/sparc/experimental/multilib
-snapshot: latest
+snapshot: @TIMESTAMP@
 source_subpath: multilib/stage3-sparc64-multilib-latest
 update_seed: yes

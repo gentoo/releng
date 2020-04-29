@@ -1,10 +1,10 @@
 subarch: amd64
-version_stamp: latest-selinux
+version_stamp: @TIMESTAMP@-selinux
 target: livecd-stage1
 rel_type: hardened
 profile: default/linux/amd64/17.0/hardened/selinux
-snapshot: latest
-source_subpath: hardened/stage3-amd64-hardened-selinux-latest
+snapshot: @TIMESTAMP@
+source_subpath: hardened/stage3-amd64-hardened-selinux-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/isos
 

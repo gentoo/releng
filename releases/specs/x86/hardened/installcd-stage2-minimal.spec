@@ -1,17 +1,17 @@
 subarch: x86
-version_stamp: hardened-latest
+version_stamp: hardened-@TIMESTAMP@
 target: livecd-stage2
 rel_type: hardened
 profile: default/linux/x86/17.0/hardened
-snapshot: latest
-source_subpath: hardened/livecd-stage1-x86-hardened-latest
+snapshot: @TIMESTAMP@
+source_subpath: hardened/livecd-stage1-x86-hardened-@TIMESTAMP@
 
 livecd/bootargs: dokeymap
 #livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/iso: install-x86-minimal-latest.iso
+livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo x86 latest
+livecd/volid: Gentoo x86 @TIMESTAMP@
 
 boot/kernel: gentoo
 

@@ -1,9 +1,9 @@
 subarch: ppc
 target: stage1
-version_stamp: uclibc-hardened-latest
+version_stamp: uclibc-hardened-@TIMESTAMP@
 rel_type: embedded
 profile: uclibc/ppc/hardened
-snapshot: latest
+snapshot: @TIMESTAMP@
 source_subpath: embedded/stage3-ppc-uclibc-hardened-latest
 cflags: -Os -pipe
 ldflags: -Wl,-O1

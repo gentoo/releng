@@ -1,9 +1,9 @@
 subarch: i686
 target: stage1
-version_stamp: hardened-latest
+version_stamp: hardened-@TIMESTAMP@
 rel_type: hardened
 profile: default/linux/x86/17.0/hardened
-snapshot: latest
+snapshot: @TIMESTAMP@
 source_subpath: hardened/stage3-i686-hardened-latest
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip

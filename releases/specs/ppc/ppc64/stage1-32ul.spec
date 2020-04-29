@@ -1,9 +1,9 @@
 subarch: ppc64
 target: stage1
-version_stamp: 32ul-latest
+version_stamp: 32ul-@TIMESTAMP@
 rel_type: default
 profile: default/linux/powerpc/ppc64/17.0/32bit-userland
-snapshot: latest
+snapshot: @TIMESTAMP@
 source_subpath: default/stage3-ppc64-32ul-latest
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip

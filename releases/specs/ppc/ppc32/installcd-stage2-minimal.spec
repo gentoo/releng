@@ -1,15 +1,15 @@
 subarch: ppc
 target: livecd-stage2
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 rel_type: default
 profile: default/linux/powerpc/ppc32/17.0
-snapshot: latest
-source_subpath: default/livecd-stage1-ppc-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/livecd-stage1-ppc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/fstype: squashfs 
 livecd/gk_mainargs: --makeopts=-j12
-livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-minimal-latest.iso
+livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 
 livecd/rcadd: pbbuttonsd|default

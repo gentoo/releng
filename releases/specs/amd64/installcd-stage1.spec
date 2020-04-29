@@ -1,10 +1,10 @@
 subarch: amd64
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/17.1/no-multilib
-snapshot: latest
-source_subpath: default/stage3-amd64-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/stage3-amd64-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/isos
 

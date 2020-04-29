@@ -1,10 +1,10 @@
 subarch: hppa1.1
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: livecd-stage1
 rel_type:  default
 profile: default/linux/hppa/17.0
-snapshot: latest
-source_subpath: default/stage3-hppa1.1-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/stage3-hppa1.1-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage1
 portage_confdir: @REPO_DIR@/releases/portage/isos
 livecd/use:

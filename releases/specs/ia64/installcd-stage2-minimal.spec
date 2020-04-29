@@ -1,19 +1,19 @@
 subarch: ia64
-version_stamp: latest
+version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/ia64/17.0
-snapshot: latest
-source_subpath: default/livecd-stage1-ia64-latest
+snapshot: @TIMESTAMP@
+source_subpath: default/livecd-stage1-ia64-@TIMESTAMP@
 compression_mode: pixz_x
 decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
-livecd/iso: /home/catalyst/builds/default/install-ia64-minimal-latest.iso
+livecd/iso: /home/catalyst/builds/default/install-ia64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo ia64 latest
+livecd/volid: Gentoo ia64 @TIMESTAMP@
 
 boot/kernel: gentoo
 

@@ -1,7 +1,7 @@
 # S390 Netboot spec file, based in HPPA Netboot spec file by Guy Martin
-version_stamp: latest
-snapshot: latest
-source_subpath: default/stage3-s390-latest
+version_stamp: @TIMESTAMP@
+snapshot: @TIMESTAMP@
+source_subpath: default/stage3-s390-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/default/netboot2-s390
 
 # these shouldn't change
