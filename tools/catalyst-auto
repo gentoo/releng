@@ -279,7 +279,24 @@ run_catalyst_commands() {
 		fi
 	fi
 
-	TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
+	if catalyst --help | grep -q "git-treeish"; then
+		snapshot_log=$(mktemp --tmpdir="${TMP_PATH:-/tmp}")
+		if ! run_cmd "${snapshot_log}" catalyst -c "${CATALYST_CONFIG}" -s stable; then
+			send_email "Catalyst build error - snapshot" "" "${snapshot_log}"
+			exit 1
+		fi
+
+		read TREEISH gitdir <<<$(egrep -o 'Creating .* tree snapshot [0-9a-f]{40} from .*' "${snapshot_log}" | cut -d' ' -f5,7)
+		TIMESTAMP=$(git -C "${gitdir}" show --no-patch --format=%cd --date=format:%Y%m%dT%H%M%SZ "${TREEISH}")
+	else
+		TIMESTAMP=$(date -u +%Y%m%dT%H%M%SZ)
+
+		snapshot_log=$(mktemp --tmpdir="${TMP_PATH:-/tmp}")
+		if ! run_cmd "${snapshot_log}" catalyst -c "${CATALYST_CONFIG}" -s "${TIMESTAMP}"; then
+			send_email "Catalyst build error - snapshot" "" "${snapshot_log}"
+			exit 1
+		fi
+	fi
 	TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${TIMESTAMP}.XXXXXX")
 
 	# Nuke any previous tmpdirs to keep them from accumulating.
@@ -297,6 +314,7 @@ run_catalyst_commands() {
 		echo "Couldn't create tempdirs!"
 		exit 1
 	fi
+	mv "${snapshot_log}" "${TMPDIR}/log/snapshot.log"
 
 	if ! run_cmd "${TMPDIR}/log/pre_build.log" pre_build; then
 		send_email "Catalyst build error - pre_build" "The pre_build function failed" "${TMPDIR}/log/pre_build.log"
@@ -334,10 +352,15 @@ run_catalyst_commands() {
 			done
 		fi
 
+		if [[ -n ${TREEISH} ]]; then
+			sed -i -e "s|snapshot:.*|snapshot_treeish: ${TREEISH}|g" "${i}"
+		fi
+
 		# Expand vars that the spec expects us to.
 		sed -i \
 			-e "s:@TIMESTAMP@:${TIMESTAMP}:g" \
 			-e "s:@REPO_DIR@:${REPO_DIR}:g" \
+			-e "s:@TREEISH@:${TREEISH}:g" \
 			"${i}"
 	done
 
@@ -356,12 +379,6 @@ run_catalyst_commands() {
 		rm -rf --one-file-system \
 			kerncache packages snapshots tmp "${snapshot_cache}"/*
 		popd >/dev/null
-	fi
-
-	# Create snapshot
-	if ! run_cmd "${TMPDIR}/log/snapshot.log" catalyst -c "${CATALYST_CONFIG}" -s "${TIMESTAMP}"; then
-		send_email "Catalyst build error - snapshot" "" "${TMPDIR}/log/snapshot.log"
-		exit 1
 	fi
 
 	build_failure=0
