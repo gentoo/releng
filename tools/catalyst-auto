@@ -244,7 +244,7 @@ verify_dnssec() {
 		exit 1
 	fi
 
-	if ! grep -q '^options \<edns0\>' /etc/resolv.conf; then
+	if ! grep -q '^options\>.*\<edns0\>' /etc/resolv.conf; then
 		echo "DNSSEC is not enabled in /etc/resolv.conf"
 		exit 1
 	fi
