@@ -24,7 +24,6 @@ livecd/use:
 	xml
 
 livecd/packages:
-	app-accessibility/brltty
 #	app-admin/hddtemp
 #	app-admin/passook
 	app-admin/pwgen
