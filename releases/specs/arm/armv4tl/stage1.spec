@@ -5,4 +5,7 @@ rel_type: default
 profile: default/linux/arm/17.0/armv4t
 snapshot: @TIMESTAMP@
 source_subpath: default/stage3-armv4tl-latest
+compression_mode: pixz_x
 update_seed: yes
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
