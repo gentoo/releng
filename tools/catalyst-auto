@@ -298,6 +298,7 @@ run_catalyst_commands() {
 			exit 1
 		fi
 	fi
+	DATESTAMP=$(date -u +%Y%m%d)
 	TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${TIMESTAMP}.XXXXXX")
 
 	# Nuke any previous tmpdirs to keep them from accumulating.
