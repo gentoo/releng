@@ -29,7 +29,6 @@ livecd/use:
 	xml
 
 livecd/packages:
-	app-accessibility/brltty
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
