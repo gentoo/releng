@@ -421,11 +421,25 @@ run_catalyst_commands() {
 			fi
 		done
 
+		# Do not purge yet, because there might be interdendency between specs
+		# in different build sets!
+
+		update_symlinks
+	done
+
+	# Now do the cleanup
+	for a in "" ${SETS}; do
+		if [[ -z ${a} ]]; then
+			specs_var="SPECS"
+			optional_specs_var="OPTIONAL_SPECS"
+		else
+			specs_var="SET_${a}_SPECS"
+			optional_specs_var="SET_${a}_OPTIONAL_SPECS"
+		fi
 		for i in ${!specs_var} ${!optional_specs_var}; do
 			LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::')_purge.log"
 			run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst --purgetmponly -c "${CATALYST_CONFIG}" -f "${i}"
 		done
-
 		update_symlinks
 	done
 
