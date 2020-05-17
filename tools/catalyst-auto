@@ -462,8 +462,6 @@ run_catalyst_commands() {
 				exit 1
 			fi
 		fi
-	else
-		send_email "Catalyst build complete, but with errors" "Build process has completed, but there were errors. Please consult previous emails to determine the problem."
 	fi
 }
 
