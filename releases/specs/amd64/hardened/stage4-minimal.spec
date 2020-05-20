@@ -5,7 +5,6 @@ rel_type: hardened
 profile: default/linux/amd64/17.1/hardened
 snapshot: @TIMESTAMP@
 compression_mode: pixz_x
-decompressor_search_order: tar pixz xz lbzip2 bzip2 gzip
 source_subpath: hardened/stage3-amd64-hardened-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
