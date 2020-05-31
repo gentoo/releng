@@ -280,6 +280,21 @@ run_catalyst_commands() {
 		fi
 	fi
 
+	# Nuke any previous tmpdirs to keep them from accumulating.
+	if [[ ${preclean} == 1 ]]; then
+		rm -rf "${TMP_PATH:-/tmp}/catalyst-auto".*
+
+		snapshot_cache=$(catalyst_var snapshot_cache)
+		if [[ -z ${snapshot_cache} ]]; then
+			echo "error: snapshot_cache not set in config file"
+			exit 1
+		fi
+		pushd "${BUILD_SRCDIR_BASE}" >/dev/null || exit 1
+		rm -rf --one-file-system \
+			kerncache packages snapshots tmp "${snapshot_cache}"/*
+		popd >/dev/null
+	fi
+
 	if catalyst --help | grep -q "git-treeish"; then
 		snapshot_log=$(mktemp --tmpdir="${TMP_PATH:-/tmp}")
 		if ! run_cmd "${snapshot_log}" catalyst -c "${CATALYST_CONFIG}" -s stable; then
@@ -300,12 +315,6 @@ run_catalyst_commands() {
 	fi
 	DATESTAMP=$(date -u +%Y%m%d)
 	TMPDIR=$(mktemp -d --tmpdir="${TMP_PATH:-/tmp}" "catalyst-auto.${TIMESTAMP}.XXXXXX")
-
-	# Nuke any previous tmpdirs to keep them from accumulating.
-	if [[ ${preclean} == 1 ]]; then
-		rm -rf "${TMPDIR%.??????}".*
-		mkdir "${TMPDIR}"
-	fi
 
 	if [[ ${verbose} -ge 1 ]]; then
 		echo "TMPDIR = ${TMPDIR}"
@@ -369,18 +378,6 @@ run_catalyst_commands() {
 	if [[ ${testing} == 1 ]]; then
 		echo "Exiting due to --test"
 		exit
-	fi
-
-	if [[ ${preclean} == 1 ]]; then
-		snapshot_cache=$(catalyst_var snapshot_cache)
-		if [[ -z ${snapshot_cache} ]]; then
-			echo "error: snapshot_cache not set in config file"
-			exit 1
-		fi
-		pushd "${BUILD_SRCDIR_BASE}" >/dev/null || exit 1
-		rm -rf --one-file-system \
-			kerncache packages snapshots tmp "${snapshot_cache}"/*
-		popd >/dev/null
 	fi
 
 	build_failure=0
