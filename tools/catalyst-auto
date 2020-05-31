@@ -25,13 +25,13 @@ lastrun=0
 lock_file=
 
 usage() {
-  local msg=$1
+	local msg=$1
 
-  if [ -n "${msg}" ]; then
-    printf "%b\n\n" "${msg}"
-  fi
+	if [ -n "${msg}" ]; then
+		printf "%b\n\n" "${msg}"
+	fi
 
-  cat <<EOH
+	cat <<EOH
 Usage:
   catalyst-auto [-c|--config <config>] [-v|--verbose] [-h|--help]
 
@@ -49,66 +49,66 @@ EOH
 }
 
 send_email() {
-  local subject="${EMAIL_SUBJECT_PREPEND} $1"
-  local message=$2
-  local logfile=$3
-  local body
+	local subject="${EMAIL_SUBJECT_PREPEND} $1"
+	local message=$2
+	local logfile=$3
+	local body
 
-  if [ -n "${logfile}" ]; then
-    body=$(printf '%b\n\n\n' "${message}"; tail -n 200 "${logfile}"; printf '\n\n\nFull build log at %s\n' "${logfile}")
-  else
-    body=${message}
-  fi
+	if [ -n "${logfile}" ]; then
+		body=$(printf '%b\n\n\n' "${message}"; tail -n 200 "${logfile}"; printf '\n\n\nFull build log at %s\n' "${logfile}")
+	else
+		body=${message}
+	fi
 
-  printf 'From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n%b' \
-    "${EMAIL_FROM}" "${EMAIL_TO}" "${subject}" "${body}" | \
-    /usr/sbin/sendmail -f "${EMAIL_FROM}" ${EMAIL_TO//,/ }
+	printf 'From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n%b' \
+		"${EMAIL_FROM}" "${EMAIL_TO}" "${subject}" "${body}" | \
+		/usr/sbin/sendmail -f "${EMAIL_FROM}" ${EMAIL_TO//,/ }
 }
 
 # Usage: run_cmd <logfile> <command to run>
 run_cmd() {
-  local logfile="$1"
-  shift
+	local logfile="$1"
+	shift
 
-  echo "*** Running command: $*" &>> "${logfile}"
-  if [ $verbose = 2 ]; then
-    echo "*** Running command: $*"
-    "$@" 2>&1 | tee -a "${logfile}"
-  elif [ $verbose = 1 ]; then
-    echo "*** Running command: $*"
-    "$@" &>> "${logfile}"
-  else
-    "$@" &>> "${logfile}"
-  fi
+	echo "*** Running command: $*" &>> "${logfile}"
+	if [[ ${verbose} == 2 ]]; then
+		echo "*** Running command: $*"
+		"$@" 2>&1 | tee -a "${logfile}"
+	elif [[ ${verbose} == 1 ]]; then
+		echo "*** Running command: $*"
+		"$@" &>> "${logfile}"
+	else
+		"$@" &>> "${logfile}"
+	fi
 
-  # If we used tee above, make sure we pass back up the command's error.
-  return ${PIPESTATUS[0]}
+	# If we used tee above, make sure we pass back up the command's error.
+	return ${PIPESTATUS[0]}
 }
 
 update_symlinks() {
-  # This is a skeleton function that you can override from the config file.
-  # It will be called by pre_build and after completing the build of a set
-  # to ensure the symlinks point to the latest built stages.
-  :
+	# This is a skeleton function that you can override from the config file.
+	# It will be called by pre_build and after completing the build of a set
+	# to ensure the symlinks point to the latest built stages.
+	:
 }
 
 pre_build() {
-  # This is a skeleton function that you can override from the config file.
-  # It will be executed before the build is started.
-  update_symlinks
+	# This is a skeleton function that you can override from the config file.
+	# It will be executed before the build is started.
+	update_symlinks
 }
 
 post_build() {
-  # This is a skeleton function that you can override from the config file.
-  # It will be executed after the build is successfully completed. You can
-  # use this to rsync the builds to another box
-  :
+	# This is a skeleton function that you can override from the config file.
+	# It will be executed after the build is successfully completed. You can
+	# use this to rsync the builds to another box
+	:
 }
 
 catalyst_var() {
-  # Extract a setting from the catalyst.conf.
-  local var=$1
-  (. "${CATALYST_CONFIG}"; echo "${!var}")
+	# Extract a setting from the catalyst.conf.
+	local var=$1
+	(. "${CATALYST_CONFIG}"; echo "${!var}")
 }
 
 trigger_post_build() {
@@ -166,13 +166,13 @@ parse_args() {
 }
 
 give_latest_from_dates() {
-  sed 's,-20,~20,g' | \
-  sort -k +1 -n -t '~' |\
-  awk -F\~ \
-  'BEGIN{i=$1; o=$0};
-  { if($1 != i && i != "") { print o; }; i=$1; o=$0;  }
-  END { print o; };' | \
-  tr '~' '-'
+	sed 's,-20,~20,g' | \
+	sort -k +1 -n -t '~' | \
+	awk -F'~' \
+		'BEGIN{i=$1; o=$0};
+		{ if($1 != i && i != "") { print o; }; i=$1; o=$0; }
+		END { print o; };' | \
+	tr '~' '-'
 }
 
 # Replace the date/time stamp in the filename to "latest".
