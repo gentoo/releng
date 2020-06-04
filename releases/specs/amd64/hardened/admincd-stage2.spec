@@ -18,11 +18,8 @@ boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/admincd-5.4.38.config
 
-#boot/kernel/gentoo/packages:
-#	ZFS is disabled until spl can build with CONFIG_PAX_RANDKSTACK
-#	sys-kernel/spl
-#	sys-fs/zfs
-#	sys-fs/zfs-kmod
+boot/kernel/gentoo/packages:
+	sys-fs/zfs
 
 livecd/unmerge:
 	app-admin/eselect
