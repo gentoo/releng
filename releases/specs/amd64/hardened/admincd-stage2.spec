@@ -16,7 +16,7 @@ livecd/volid: Gentoo amd64 AdminCD @TIMESTAMP@
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/admincd-4.14.83.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/admincd-5.4.38.config
 
 #boot/kernel/gentoo/packages:
 #	ZFS is disabled until spl can build with CONFIG_PAX_RANDKSTACK
