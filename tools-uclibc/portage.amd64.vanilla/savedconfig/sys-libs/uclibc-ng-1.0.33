@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# uClibc-ng 0.1.0.32 C Library Configuration
+# uClibc-ng 0.1.0.33 C Library Configuration
 #
 # TARGET_aarch64 is not set
 # TARGET_alpha is not set
@@ -14,7 +14,7 @@
 # TARGET_frv is not set
 # TARGET_h8300 is not set
 # TARGET_hppa is not set
-TARGET_i386=y
+# TARGET_i386 is not set
 # TARGET_ia64 is not set
 # TARGET_lm32 is not set
 # TARGET_m68k is not set
@@ -30,19 +30,15 @@ TARGET_i386=y
 # TARGET_sparc is not set
 # TARGET_sparc64 is not set
 # TARGET_tile is not set
-# TARGET_x86_64 is not set
+TARGET_x86_64=y
 # TARGET_xtensa is not set
 
 #
 # Target Architecture Features and Options
 #
-TARGET_ARCH="i386"
+TARGET_ARCH="x86_64"
 FORCE_OPTIONS_FOR_ARCH=y
-# CONFIG_386 is not set
-# CONFIG_486 is not set
-# CONFIG_586 is not set
-CONFIG_686=y
-TARGET_SUBARCH="i686"
+TARGET_SUBARCH=""
 
 #
 # Using ELF file format
@@ -227,7 +223,6 @@ HARDWIRED_ABSPATH=y
 #
 # Security options
 #
-UCLIBC_BUILD_PIE=y
 UCLIBC_HAS_SSP=y
 # SSP_QUICK_CANARY is not set
 UCLIBC_BUILD_SSP=y
@@ -238,7 +233,7 @@ UCLIBC_BUILD_NOEXECSTACK=y
 #
 # Development/debugging options
 #
-CROSS_COMPILER_PREFIX=""
+CROSS_COMPILER_PREFIX="x86_64-unknown-linux-uclibc-"
 UCLIBC_EXTRA_CFLAGS=""
 # DODEBUG is not set
 DOSTRIP=y
