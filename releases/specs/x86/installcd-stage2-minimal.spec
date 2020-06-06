@@ -17,7 +17,7 @@ livecd/volid: Gentoo x86 @TIMESTAMP@
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/installcd-4.14.52.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/x86-5.4.38.config
 
 livecd/unmerge:
 	app-admin/eselect
