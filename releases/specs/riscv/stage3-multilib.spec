@@ -1,12 +1,13 @@
-subarch: riscv
+subarch: rv64_multilib
 target: stage3
 version_stamp: @TIMESTAMP@
 cflags: -O2 -pipe -g
-rel_type: riscv64-multilib
+interpreter: /usr/bin/qemu-riscv64
+rel_type: default
 profile: default/linux/riscv/17.0/rv64gc
 snapshot: @TIMESTAMP@
-source_subpath: riscv64-multilib/stage2-riscv-@TIMESTAMP@
+source_subpath: default/stage2-rv64_multilib-@TIMESTAMP@
 compression_mode: pixz
 decompressor_search_order: xz bzip2
-portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng
