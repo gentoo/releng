@@ -162,7 +162,6 @@ livecd/packages:
 	sys-apps/smartmontools
 	sys-apps/usbutils
 	sys-apps/which
-	sys-apps/x86info
 	sys-block/aoetools
 	sys-block/fio
 	sys-block/mtx
