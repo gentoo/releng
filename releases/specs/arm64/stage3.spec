@@ -4,7 +4,7 @@ version_stamp: @TIMESTAMP@
 rel_type: default
 profile: default/linux/arm64/17.0
 snapshot: current
-source_subpath: default/stage2-arm64-@TIMESTAMP@
+source_subpath: default/stage1-arm64-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/stage3
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
