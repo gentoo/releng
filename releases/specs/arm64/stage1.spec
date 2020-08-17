@@ -3,7 +3,7 @@ target: stage1
 version_stamp: @TIMESTAMP@
 rel_type: default
 profile: default/linux/arm64/17.0
-snapshot: current
+snapshot: @TIMESTAMP@
 source_subpath: default/stage3-arm64-latest
 compression_mode: pixz_x
 pkgcache_path: /var/tmp/catalyst/packages/stage1
