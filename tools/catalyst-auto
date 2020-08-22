@@ -23,6 +23,7 @@ testing=0
 preclean=0
 lastrun=0
 lock_file=
+parallel_sets=1
 
 usage() {
 	local msg=$1
@@ -38,6 +39,7 @@ Usage:
 Options:
   -c|--config         Specifies the config file to use (required)
   -C|--preclean       Clean up loose artifacts from previous runs
+  -j|--jobs <n>       Build <n> spec sets in parallel
   -v|--verbose        Send output of commands to console as well as log
   -k|--keep-tmpdir    Don't remove temp dir when build finishes
   -t|--test           Stop after mangling specs and copying files
@@ -131,6 +133,10 @@ parse_args() {
 			;;
 		-c|--config)
 			config_files+=("$1")
+			shift
+			;;
+		-j|--jobs)
+			parallel_sets="$1"
 			shift
 			;;
 		-v|--verbose)
@@ -385,46 +391,75 @@ run_catalyst_commands() {
 	timeprefix=()
 	which time >/dev/null && timeprefix=( "time" )
 
+	JOB_PIDS=()
+	JOB_RETS=()
+	JOB_IDX_S=0
+	JOB_IDX_E=0
+
 	for a in "" ${SETS}; do
-		if [[ -z ${a} ]]; then
-			specs_var="SPECS"
-			optional_specs_var="OPTIONAL_SPECS"
-		else
-			specs_var="SET_${a}_SPECS"
-			optional_specs_var="SET_${a}_OPTIONAL_SPECS"
+
+		if [[ $(( JOB_IDX_E - JOB_IDX_S )) == ${parallel_sets} ]] ; then
+			wait ${JOB_PIDS[$(( JOB_IDX_S++ ))]}
+			JOB_RETS+=( $? )
 		fi
 
-		for i in ${!specs_var}; do
-			LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-			specpath=$(readlink -f "${i}")
-			run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${specpath}"
-			if [[ $? != 0 ]]; then
-				build_failure=1
-				send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
-				continue 2
+		(
+
+			if [[ -z ${a} ]]; then
+				specs_var="SPECS"
+				optional_specs_var="OPTIONAL_SPECS"
 			else
-				trigger_post_build "${a}" "${i}"
+				specs_var="SET_${a}_SPECS"
+				optional_specs_var="SET_${a}_OPTIONAL_SPECS"
 			fi
-		done
 
-		for i in ${!optional_specs_var}; do
-			LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
-			specpath=$(readlink -f "${i}")
-			run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${specpath}"
-			if [[ $? != 0 ]]; then
-				build_failure=1
-				send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
-				break
-			else
-				trigger_post_build "${a}" "${i}"
-			fi
-		done
+			for i in ${!specs_var}; do
+				LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+				specpath=$(readlink -f "${i}")
+				run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${specpath}"
+				if [[ $? != 0 ]]; then
+					build_failure=1
+					send_email "Catalyst fatal build error - ${i}" "" "${LOGFILE}"
+					exit 1
+				else
+					trigger_post_build "${a}" "${i}"
+				fi
+			done
 
-		# Do not purge yet, because there might be interdendency between specs
-		# in different build sets!
+			for i in ${!optional_specs_var}; do
+				LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+				specpath=$(readlink -f "${i}")
+				run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${specpath}"
+				if [[ $? != 0 ]]; then
+					build_failure=1
+					send_email "Catalyst non-fatal build error - ${i}" "" "${LOGFILE}"
+					break
+				else
+					trigger_post_build "${a}" "${i}"
+				fi
+			done
 
-		update_symlinks
+			# Do not purge yet, because there might be interdendency between specs
+			# in different build sets!
+
+			update_symlinks
+
+			exit ${build_failure}
+
+		)&
+
+		JOB_PIDS+=( $! )
+		: $(( ++JOB_IDX_E ))
+
+
 	done
+
+	for (( i = JOB_IDX_S; i < JOB_IDX_E; ++i )) ; do
+		wait ${JOB_PIDS[i]}
+		JOB_RETS+=( $? )
+	done
+	build_failure=$(( 0 ${JOB_RETS[@]/#/+} ))
+
 
 	# Now do the cleanup
 	for a in "" ${SETS}; do
