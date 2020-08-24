@@ -17,7 +17,7 @@ livecd/gk_mainargs: --firmware-files=ql2200_fw.bin --makeopts=-j256
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/sparc/installcd-4.19.44.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/sparc/installcd-5.4.48.config
 
 livecd/unmerge:
 	app-admin/eselect
