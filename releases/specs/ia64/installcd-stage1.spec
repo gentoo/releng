@@ -24,7 +24,6 @@ livecd/use:
 
 livecd/packages:
 #	app-admin/hddtemp
-#	app-admin/passook
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip

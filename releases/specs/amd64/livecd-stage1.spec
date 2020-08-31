@@ -15,7 +15,6 @@ livecd/packages:
 	app-admin/hddtemp
 	app-admin/ide-smart
 	app-admin/logrotate
-	app-admin/passook
 	app-admin/pwgen
 	app-admin/sudo
 	app-admin/syslog-ng
