@@ -2,7 +2,7 @@ subarch: rv64_multilib
 target: stage1
 version_stamp: @TIMESTAMP@
 cflags: -O2 -pipe -g
-interpreter: /usr/bin/qemu-riscv64
+interpreter: /usr/bin/qemu-riscv64 /usr/bin/qemu-riscv32
 rel_type: default
 profile: default/linux/riscv/17.0/rv64gc
 snapshot: @TIMESTAMP@
