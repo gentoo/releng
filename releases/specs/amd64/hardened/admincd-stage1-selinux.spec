@@ -11,6 +11,7 @@ portage_confdir: @REPO_DIR@/releases/portage/isos
 livecd/use:
 	alsa
 	caps
+	compile-locales
 	fbcon
 	filecaps
 	ipv6
