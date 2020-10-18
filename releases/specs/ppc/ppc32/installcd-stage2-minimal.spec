@@ -14,7 +14,7 @@ livecd/type: gentoo-release-minimal
 
 livecd/rcadd: pbbuttonsd|default
 
-boot/kernel: ibmpower ppc64 ppc32
+boot/kernel: ppc64 ppc32 ibmpower
 
 ## IBM hardware
 boot/kernel/ibmpower/sources: sys-kernel/gentoo-sources
