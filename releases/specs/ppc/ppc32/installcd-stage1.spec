@@ -56,6 +56,7 @@ livecd/packages:
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
+	sys-apps/hwsetup
 	sys-apps/ibm-powerpc-utils
 	sys-apps/iproute2
 	sys-apps/lm-sensors
