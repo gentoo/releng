@@ -61,6 +61,7 @@ livecd/packages:
 	sys-apps/iproute2
 	sys-apps/lm-sensors
 	sys-apps/memtester
+	sys-apps/powerpc-utils
 	sys-apps/sdparm
 	sys-block/parted
 	sys-boot/grub
