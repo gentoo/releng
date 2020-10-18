@@ -89,11 +89,6 @@ boot/kernel/ppc32/use:
 	unicode
 	usb
 
-boot/kernel/ppc32/packages:
-	sys-apps/pcmciautils
-	sys-fs/ntfs3g
-	app-laptop/pbbuttonsd
-
 livecd/unmerge:
 	app-admin/eselect
 	app-admin/eselect-ctags

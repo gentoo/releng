@@ -32,6 +32,7 @@ livecd/packages:
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
+	app-laptop/pbbuttonsd
 	app-misc/livecd-tools
 	app-misc/screen
 	app-portage/mirrorselect
@@ -61,6 +62,7 @@ livecd/packages:
 	sys-apps/iproute2
 	sys-apps/lm-sensors
 	sys-apps/memtester
+	sys-apps/pcmciautils
 	sys-apps/powerpc-utils
 	sys-apps/sdparm
 	sys-block/parted
