@@ -43,7 +43,7 @@ boot/kernel/ibmpower/use:
 
 ## Apple hardware
 boot/kernel/ppc64/sources: sys-kernel/gentoo-sources
-boot/kernel/ppc64/config: ../../../kconfig/powerpc/apple64.config
+boot/kernel/ppc64/config: ../../../kconfig/powerpc/ppc64.config
 boot/kernel/ppc64/console: ttyS0,57600
 boot/kernel/ppc64/extraversion: ppc64
 boot/kernel/ppc64/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64ppc' --kernel-as='as -a64'
@@ -68,7 +68,7 @@ boot/kernel/ppc64/use:
 
 ## ppc32 hardware
 boot/kernel/ppc32/sources: sys-kernel/gentoo-sources
-boot/kernel/ppc32/config: ../../../kconfig/powerpc/apple32.config
+boot/kernel/ppc32/config: ../../../kconfig/powerpc/ppc32.config
 boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use:
 	-*
