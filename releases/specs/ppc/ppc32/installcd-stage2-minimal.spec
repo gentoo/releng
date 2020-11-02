@@ -28,7 +28,6 @@ boot/kernel/ibmpower/use:
 	fbcon
 	ipv6
 	livecd
-	lvm1
 	ncurses
 	nls
 	nptl
@@ -53,7 +52,6 @@ boot/kernel/ppc64/use:
 	fbcon
 	ipv6
 	livecd
-	lvm1
 	ncurses
 	nls
 	nptl
@@ -76,7 +74,6 @@ boot/kernel/ppc32/use:
 	fbcon
 	ipv6
 	livecd
-	lvm1
 	ncurses
 	nls
 	nptl

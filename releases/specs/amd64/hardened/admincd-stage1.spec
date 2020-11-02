@@ -16,7 +16,6 @@ livecd/use:
 	filecaps
 	ipv6
 	livecd
-	lvm1
 	modules
 	ncurses
 	nls

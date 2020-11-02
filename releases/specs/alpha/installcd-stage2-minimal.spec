@@ -26,7 +26,6 @@ boot/kernel/gentoo/use:
 	fbcon
 	ipv6
 	livecd
-	lvm1
 	ncurses
 	nls
 	nptl
@@ -47,7 +46,6 @@ boot/kernel/gentoo_nolsa/use:
 	fbcon
 	ipv6
 	livecd
-	lvm1
 	ncurses
 	nls
 	nptl

@@ -13,11 +13,9 @@ livecd/use:
 	fbcon
 	ipv6
 	livecd
-	lvm1
 	modules
 	ncurses
 	nls
-	nocxx
 	nptl
 	pam
 	readline

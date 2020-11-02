@@ -51,7 +51,6 @@ boot/kernel/gentoo/use:
 	fbcon
 	ipv6
 	livecd
-	lvm1
 	midi
 	modules
 	ncurses
