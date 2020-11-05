@@ -55,7 +55,6 @@ livecd/packages:
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
-	sys-apps/hwsetup
 	sys-apps/iproute2
 	sys-apps/memtester
 	sys-apps/netplug

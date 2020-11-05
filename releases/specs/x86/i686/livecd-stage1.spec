@@ -77,7 +77,6 @@ livecd/packages:
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
-	sys-apps/hwsetup
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2

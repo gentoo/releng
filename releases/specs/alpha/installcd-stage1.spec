@@ -48,7 +48,6 @@ livecd/packages:
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/hdparm
-	sys-apps/hwsetup
 	sys-apps/iproute2
 	sys-apps/sdparm
 	sys-apps/usbutils

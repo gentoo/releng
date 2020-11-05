@@ -53,7 +53,6 @@ livecd/packages:
 	net-proxy/dante
 	sys-apps/ethtool
 	sys-apps/hdparm
-	sys-apps/hwsetup
 	sys-apps/iproute2
 	sys-apps/pciutils
 	sys-apps/sdparm

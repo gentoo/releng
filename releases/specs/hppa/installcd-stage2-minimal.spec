@@ -134,7 +134,6 @@ livecd/unmerge:
 	sys-libs/db
 	sys-libs/gdbm
 	sys-libs/cracklib
-	sys-libs/libkudzu
 	x11-misc/shared-mime-info	
 
 livecd/empty:

@@ -184,7 +184,6 @@ livecd/packages:
 	sys-apps/fxload
 	sys-apps/gradm
 	sys-apps/hdparm
-	sys-apps/hwsetup
 ### Masked (no keyword)
 #	sys-apps/ibm-powerpc-utils
 ### Masked (no keyword)

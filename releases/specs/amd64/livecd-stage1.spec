@@ -79,7 +79,6 @@ livecd/packages:
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/hdparm
-	sys-apps/hwsetup
 ### Masked (no keywords)
 #	sys-apps/ibm-powerpc-utils
 ### Masked (no keywords)

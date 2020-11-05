@@ -59,7 +59,6 @@ livecd/unmerge:
 	sys-devel/patch
 	sys-libs/db
 	sys-libs/gdbm
-	sys-libs/libkudzu
 	sys-kernel/genkernel
 	sys-kernel/linux-headers
 

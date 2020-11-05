@@ -140,7 +140,6 @@ livecd/packages:
 	sys-apps/gptfdisk
 	sys-apps/grep
 	sys-apps/hdparm
-	sys-apps/hwsetup
 	sys-apps/ipmitool
 	sys-apps/iproute2
 	sys-apps/less

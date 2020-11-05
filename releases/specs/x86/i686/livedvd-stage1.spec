@@ -175,7 +175,6 @@ livecd/packages:
 	sys-apps/fxload
 	sys-apps/gradm
 	sys-apps/hdparm
-	sys-apps/hwsetup
 #	sys-apps/ibm-powerpc-utils
 #	sys-apps/ibm-powerpc-utils-papr
 	sys-apps/iproute2
