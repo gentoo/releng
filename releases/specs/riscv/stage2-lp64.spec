@@ -1,7 +1,7 @@
 subarch: rv64_lp64
 target: stage2
 version_stamp: @TIMESTAMP@
-cflags: -O2 -pipe -g
+cflags: -O2 -pipe
 interpreter: /usr/bin/qemu-riscv64
 rel_type: default
 profile: default/linux/riscv/17.0/rv64gc/lp64
