@@ -1,7 +1,7 @@
 subarch: ppc64le
 target: stage3
 version_stamp: musl-hardened-@TIMESTAMP@
-rel_type: default
+rel_type: musl-hardened
 profile: default/linux/ppc64le/17.0/musl/hardened
 snapshot: @TIMESTAMP@
 source_subpath: default/stage1-ppc64le-musl-hardened-@TIMESTAMP@
