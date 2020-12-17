@@ -354,7 +354,7 @@ run_catalyst_commands() {
 		done
 	done
 
-	find "${KCONFIG_DIR}" -type f -exec cp {} "${TMPDIR}"/kconfig \;
+	[[ -n ${KCONFIG_DIR} ]] && find "${KCONFIG_DIR}" -type f -exec cp {} "${TMPDIR}"/kconfig \;
 
 	cd "${TMPDIR}/specs" || exit 1
 
