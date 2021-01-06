@@ -24,6 +24,7 @@ preclean=0
 lastrun=0
 lock_file=
 parallel_sets=1
+nonetwork=0
 
 usage() {
 	local msg=$1
@@ -45,12 +46,16 @@ Options:
   -t|--test           Stop after mangling specs and copying files
   --interval <days>   Exit if last successful run was less than <days> ago
   -l|--lock <file>    File to grab a lock on to prevent multiple invocations
+  -X|--nonetwork      Do not perform network operations (like uploading result)
+                      This needs to be supported by the config file as well.
   -h|--help           Show this message and quit
 
 EOH
 }
 
 send_email() {
+    if [[ ${nonetwork} == 0 ]]; then
+
 	local subject="${EMAIL_SUBJECT_PREPEND} $1"
 	local message=$2
 	local logfile=$3
@@ -65,6 +70,8 @@ send_email() {
 	printf 'From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n%b' \
 		"${EMAIL_FROM}" "${EMAIL_TO}" "${subject}" "${body}" | \
 		/usr/sbin/sendmail -f "${EMAIL_FROM}" ${EMAIL_TO//,/ }
+
+    fi
 }
 
 # Usage: run_cmd <logfile> <command to run>
@@ -151,6 +158,9 @@ parse_args() {
 		-C|--preclean)
 			preclean=1
 			;;
+		-X|--nonetwork)
+			nonetwork=1
+			;;
 		--interval)
 			lastrun=$1
 			shift
@@ -215,7 +225,7 @@ containerize() {
 # the script whenever there's an update.
 git_update() {
 	# If we've already relaunched, nothing to do.
-	if [[ ${GIT_UPDATE} == "true" ]] ; then
+	if [[ ${GIT_UPDATE} == "true" || ${nonetwork} == 1 ]] ; then
 		return
 	fi
 
@@ -240,6 +250,8 @@ git_update() {
 # SSH fingerprint from DNS. To do this securely, we need to ensure DNSSEC is
 # working.
 verify_dnssec() {
+    if [[ ${nonetwork} == 0 ]]; then
+
 	which dig >/dev/null || {
 		echo "net-dns/bind-tools is needed to verify DNSSEC is working"
 		exit 1
@@ -254,6 +266,8 @@ verify_dnssec() {
 		echo "DNSSEC is not enabled in /etc/resolv.conf"
 		exit 1
 	fi
+
+    fi
 }
 
 run_catalyst_commands() {
