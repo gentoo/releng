@@ -1,10 +1,10 @@
-subarch: armv4tl
-version_stamp: @TIMESTAMP@
+subarch: armv7a
+version_stamp: systemd-@TIMESTAMP@
 target: stage1
 rel_type: default
-profile: default/linux/arm/17.0/armv4t
+profile: default/linux/arm/17.0/armv7a/systemd
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-armv4tl-latest
+source_subpath: default/stage3-armv7a-systemd-latest
 compression_mode: pixz_x
 update_seed: yes
 update_seed_command: -uDN @world

@@ -1,10 +1,10 @@
-subarch: armv6j_hardfp
+subarch: armv6j
 version_stamp: @TIMESTAMP@
-target: stage2
+target: stage3
 rel_type: default
 profile: default/linux/arm/17.0/armv6j
 snapshot: @TIMESTAMP@
-source_subpath: default/stage1-armv6j_hardfp-@TIMESTAMP@
+source_subpath: default/stage1-armv6j-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
