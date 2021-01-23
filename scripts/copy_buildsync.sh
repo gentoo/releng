@@ -16,6 +16,7 @@ ARCHES=(
 	ia64
 	#mips
 	ppc
+	riscv
 	s390
 	sh
 	sparc
