@@ -53,7 +53,7 @@ EOH
 }
 
 send_email() {
-    if [[ ${nonetwork} == 0 ]]; then
+	[[ ${nonetwork} == 0 ]] || return
 
 	local subject="${EMAIL_SUBJECT_PREPEND} $1"
 	local message=$2
@@ -69,8 +69,6 @@ send_email() {
 	printf 'From: %s\r\nTo: %s\r\nSubject: %s\r\n\r\n%b' \
 		"${EMAIL_FROM}" "${EMAIL_TO}" "${subject}" "${body}" | \
 		/usr/sbin/sendmail -f "${EMAIL_FROM}" ${EMAIL_TO//,/ }
-
-    fi
 }
 
 # Usage: run_cmd <logfile> <command to run>
@@ -249,7 +247,7 @@ git_update() {
 # SSH fingerprint from DNS. To do this securely, we need to ensure DNSSEC is
 # working.
 verify_dnssec() {
-    if [[ ${nonetwork} == 0 ]]; then
+	[[ ${nonetwork} == 0 ]] || return
 
 	which dig >/dev/null || {
 		echo "net-dns/bind-tools is needed to verify DNSSEC is working"
@@ -265,8 +263,6 @@ verify_dnssec() {
 		echo "DNSSEC is not enabled in /etc/resolv.conf"
 		exit 1
 	fi
-
-    fi
 }
 
 upload() {
