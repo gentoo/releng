@@ -47,7 +47,6 @@ Options:
   --interval <days>   Exit if last successful run was less than <days> ago
   -l|--lock <file>    File to grab a lock on to prevent multiple invocations
   -X|--nonetwork      Do not perform network operations (like uploading result)
-                      This needs to be supported by the config file as well.
   -h|--help           Show this message and quit
 
 EOH
@@ -268,6 +267,29 @@ verify_dnssec() {
 	fi
 
     fi
+}
+
+upload() {
+	if [[ ${nonetwork} == 0 ]]; then
+		echo Uploading "$@"
+		local SSH_CMD=(
+			ssh
+			-i ${UPLOAD_KEY}
+			-o UserKnownHostsFile=/dev/null
+			-o VerifyHostKeyDNS=yes
+			-o StrictHostKeyChecking=no
+		)
+		local RSYNC_OPTS=(
+			-e "${SSH_CMD[*]}"
+			--archive
+			--omit-dir-times
+			--delay-updates
+		)
+		rsync "${RSYNC_OPTS[@]}" "$@" ${UPLOAD_USER}@releng-incoming.gentoo.org:${UPLOAD_DEST}
+	else
+		echo Would now upload "$@"
+		ls -l $@
+	fi
 }
 
 run_catalyst_commands() {
