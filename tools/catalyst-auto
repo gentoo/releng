@@ -522,7 +522,7 @@ run_catalyst_commands() {
 			(date -d"${stamp}" +%s; echo "${stamp}") >"${last_success_file}"
 		fi
 
-		send_email "Catalyst build success" "Build process complete."
+		send_email "Catalyst build success" "Build process complete." "${TMPDIR}/log/post_build.log"
 
 		if [[ ${keep_tmpdir} == 0 ]]; then
 			if ! rm -rf "${TMPDIR}"; then
