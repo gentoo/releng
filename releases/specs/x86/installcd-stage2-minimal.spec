@@ -88,7 +88,6 @@ livecd/empty:
 	/usr/lib/awk
 	/usr/lib/ccache
 	/usr/lib/gcc-config
-	/usr/lib/gconv
 	/usr/lib/nfs
 	/usr/lib/perl5/site_perl
 	/usr/lib/portage

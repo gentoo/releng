@@ -155,7 +155,6 @@ livecd/empty:
 	/usr/lib64/awk
 	/usr/lib64/ccache
 	/usr/lib64/gcc-config
-	/usr/lib64/gconv
 	/usr/lib64/nfs
 	/usr/lib64/perl5/site_perl
 	/usr/lib64/portage
