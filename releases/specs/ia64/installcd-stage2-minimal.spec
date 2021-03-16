@@ -118,9 +118,6 @@ livecd/empty:
 	/usr/lib/nfs
 	/usr/lib/perl5/site_perl
 	/usr/lib/portage
-	/usr/lib/python2.2
-	/usr/lib/python2.3
-	/usr/lib/python2.4/test
 	/usr/lib64/X11/config
 	/usr/lib64/X11/doc
 	/usr/lib64/X11/etc
@@ -130,9 +127,6 @@ livecd/empty:
 	/usr/lib64/nfs
 	/usr/lib64/perl5/site_perl
 	/usr/lib64/portage
-	/usr/lib64/python2.2
-	/usr/lib64/python2.3
-	/usr/lib64/python2.4/test
 	/usr/local
 	/usr/portage
 	/usr/powerpc-unknown-linux-gnu
