@@ -12,6 +12,7 @@ livecd/use:
 	compile-locales
 	fbcon
 	ipv6
+livecd/gk_mainargs: all
 	livecd
 	ncurses
 	pam

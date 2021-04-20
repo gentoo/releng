@@ -12,6 +12,7 @@ livecd/fsscript: @REPO_DIR@/releases/@TIMESTAMP@/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/iso: livecd-amd64-installer-@TIMESTAMP@.iso
 livecd/type: gentoo-release-livecd
+livecd/gk_mainargs: all
 livecd/volid: Gentoo amd64 LiveCD @TIMESTAMP@
 livecd/xsession: xfce
 livecd/xdm: gdm

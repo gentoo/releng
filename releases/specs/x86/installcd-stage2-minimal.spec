@@ -12,6 +12,7 @@ livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
+livecd/gk_mainargs: all
 livecd/volid: Gentoo x86 @TIMESTAMP@
 
 boot/kernel: gentoo

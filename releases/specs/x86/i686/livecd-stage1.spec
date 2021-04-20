@@ -12,6 +12,7 @@ livecd/use:
 
 livecd/packages:
 	app-accessibility/brltty
+livecd/gk_mainargs: all
 	app-admin/hddtemp
 	app-admin/ide-smart
 	app-admin/logrotate

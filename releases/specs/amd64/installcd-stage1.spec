@@ -12,6 +12,7 @@ livecd/use:
 	alsa
 	compile-locales
 	fbcon
+livecd/gk_mainargs: all
 	ipv6
 	livecd
 	modules
