@@ -9,6 +9,7 @@ pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage2
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/volid: Gentoo hppa @TIMESTAMP@
+livecd/gk_mainargs: all
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-@TIMESTAMP@.iso
