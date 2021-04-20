@@ -12,7 +12,6 @@ livecd/use:
 	fbcon
 	ipv6
 	livecd
-livecd/gk_mainargs: all
 	modules
 	ncurses
 #	nls

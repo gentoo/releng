@@ -12,7 +12,6 @@ livecd/volid: Gentoo hppa @TIMESTAMP@
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-@TIMESTAMP@.iso
-livecd/gk_mainargs: all
 livecd/type: gentoo-release-minimal
 
 boot/kernel: livecd32 livecd64

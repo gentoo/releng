@@ -12,7 +12,6 @@ livecd/fstype: squashfs
 livecd/iso: admincd-x86-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo x86 AdminCD @TIMESTAMP@
-livecd/gk_mainargs: all
 
 boot/kernel: gentoo
 

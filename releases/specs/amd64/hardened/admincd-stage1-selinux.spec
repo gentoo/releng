@@ -12,7 +12,6 @@ livecd/use:
 	alsa
 	caps
 	compile-locales
-livecd/gk_mainargs: all
 	fbcon
 	filecaps
 	ipv6

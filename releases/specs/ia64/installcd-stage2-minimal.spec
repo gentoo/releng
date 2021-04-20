@@ -12,7 +12,6 @@ livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: /home/catalyst/builds/default/install-ia64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/gk_mainargs: all
 livecd/volid: Gentoo ia64 @TIMESTAMP@
 
 boot/kernel: gentoo

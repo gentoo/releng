@@ -12,7 +12,6 @@ livecd/fstype: squashfs
 livecd/iso: install-amd64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo amd64 @TIMESTAMP@
-livecd/gk_mainargs: all
 
 boot/kernel: gentoo
 
