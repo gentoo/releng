@@ -4,7 +4,7 @@ version_stamp: musl-@TIMESTAMP@
 rel_type: musl
 profile: default/linux/amd64/17.0/musl
 snapshot: @TIMESTAMP@
-source_subpath: musl-vanilla/stage3-amd64-musl-latest
+source_subpath: musl/stage3-amd64-musl-latest
 chost: x86_64-gentoo-linux-musl
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_overlay: /root/musl
