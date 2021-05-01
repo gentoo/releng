@@ -1,0 +1,12 @@
+subarch: amd64
+target: stage3
+version_stamp: musl-hardened-@TIMESTAMP@
+rel_type: musl-hardened
+profile: default/linux/amd64/17.0/musl/hardened
+snapshot: @TIMESTAMP@
+source_subpath: musl-hardened/stage2-amd64-musl-hardened-@TIMESTAMP@
+chost: x86_64-gentoo-linux-musl
+portage_confdir: @REPO_DIR@/releases/portage/stages-musl
+portage_overlay: /root/musl
+portage_prefix: releng
+compression_mode: pixz_x
