@@ -1,0 +1,13 @@
+#!/bin/bash
+
+MUSLDIR="/release/trees/musl-auto"
+MUSLURI="https://anongit.gentoo.org/git/proj/musl.git"
+
+if [ ! -d "${MUSLDIR}" ] ; then
+	echo musl directory not present yet or not a directory, fixing
+	rm -rf "${MUSLDIR}"
+	git clone "${MUSLURI}" "${MUSLDIR}"
+else
+	cd "${MUSLDIR}"
+	git pull
+fi
