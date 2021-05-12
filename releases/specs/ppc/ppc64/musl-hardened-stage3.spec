@@ -1,0 +1,11 @@
+subarch: ppc64
+target: stage3
+version_stamp: musl-hardened-@TIMESTAMP@
+rel_type: musl-hardened
+profile: default/linux/ppc64/17.0/musl/hardened
+snapshot: @TIMESTAMP@
+source_subpath: musl-hardened/stage1-ppc64-musl-hardened-@TIMESTAMP@
+compression_mode: pixz_x
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
+portage_overlay: /var/db/repos/musl
