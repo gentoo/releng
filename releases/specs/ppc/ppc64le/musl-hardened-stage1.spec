@@ -11,4 +11,4 @@ update_seed: yes
 update_seed_command: --update --deep --newuse @world --jobs 5 --load-average 5
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
-portage_overlay: /var/db/repos/musl
+repos: /var/db/repos/musl

@@ -8,4 +8,4 @@ source_subpath: musl-hardened/stage1-ppc64-musl-hardened-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
-portage_overlay: /var/db/repos/musl
+repos: /var/db/repos/musl
