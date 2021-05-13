@@ -22,11 +22,13 @@ boot/kernel/4K_PAGESZ/sources: sys-kernel/gentoo-sources
 boot/kernel/4K_PAGESZ/config: ../../../kconfig/powerpc/installcd-ppc64le-4K-5.10.config
 boot/kernel/4K_PAGESZ/console: hvc0 tty0
 boot/kernel/4K_PAGESZ/extraversion: 4K_PAGESZ
+boot/kernel/4K_PAGESZ/gk_kernargs: --all-ramdisk-modules --firmware
 
 boot/kernel/64K_PAGESZ/sources: sys-kernel/gentoo-sources
 boot/kernel/64K_PAGESZ/config: ../../../kconfig/powerpc/installcd-ppc64le-64K-5.10.config
 boot/kernel/64K_PAGESZ/console: hvc0 tty0
 boot/kernel/64K_PAGESZ/extraversion: 64K_PAGESZ
+boot/kernel/4K_PAGESZ/gk_kernargs: --all-ramdisk-modules --firmware
 
 livecd/unmerge:
 	app-admin/eselect
