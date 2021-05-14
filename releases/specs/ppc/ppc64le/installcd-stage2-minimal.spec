@@ -8,11 +8,12 @@ source_subpath: default/livecd-stage1-ppc64le-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
+livecd/bootargs: dokeymap
 livecd/fstype: squashfs 
 livecd/gk_mainargs: --makeopts=-j12
 livecd/iso: install-ppc64le-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo amd64 @TIMESTAMP@
+livecd/volid: Gentoo ppc64le @TIMESTAMP@
 
 boot/kernel: 4K_PAGESZ 64K_PAGESZ
 
@@ -29,7 +30,7 @@ boot/kernel/64K_PAGESZ/sources: sys-kernel/gentoo-sources
 boot/kernel/64K_PAGESZ/config: ../../../kconfig/powerpc/installcd-ppc64le-64K-5.10.config
 boot/kernel/64K_PAGESZ/console: hvc0 tty0
 boot/kernel/64K_PAGESZ/extraversion: 64K_PAGESZ
-boot/kernel/4K_PAGESZ/gk_kernargs: --all-ramdisk-modules --firmware
+boot/kernel/64K_PAGESZ/gk_kernargs: --all-ramdisk-modules --firmware
 
 livecd/unmerge:
 	app-admin/eselect
@@ -103,7 +104,7 @@ livecd/empty:
 	/usr/lib64/portage
 	/usr/local
 	/usr/portage
-	/usr/powerpc64le-unknown-linux-gnu
+	/usr/powerpc64*-unknown-linux-gnu
 	/usr/share/aclocal
 	/usr/share/baselayout
 	/usr/share/binutils-data
@@ -203,7 +204,7 @@ livecd/rm:
 	/usr/bin/readelf
 	/usr/bin/repoman
 	/usr/bin/size
-	/usr/bin/powerpc64le-unknown-linux-gnu-*
+	/usr/bin/powerpc64*-unknown-linux-gnu-*
 	/usr/bin/strings
 	/usr/bin/strip
 	/usr/bin/tbz2tool
