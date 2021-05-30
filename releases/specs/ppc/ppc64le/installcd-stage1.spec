@@ -73,11 +73,13 @@ livecd/packages:
 	sys-apps/memtester
 	sys-apps/opal-utils
 	sys-apps/sdparm
+	sys-apps/usbutils
 	sys-block/parted
 	sys-boot/grub
 	sys-fs/btrfs-progs
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
+	sys-fs/f2fs-tools
 	sys-fs/hfsplusutils
 	sys-fs/hfsutils
 	sys-fs/iprutils
