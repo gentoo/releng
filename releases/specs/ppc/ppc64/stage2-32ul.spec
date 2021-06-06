@@ -8,3 +8,4 @@ source_subpath: default/stage1-ppc64-32ul-@TIMESTAMP@
 compression_mode: pixz_x
 chost: powerpc-unknown-linux-gnu
 portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng

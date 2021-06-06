@@ -9,3 +9,4 @@ compression_mode: pixz_x
 update_seed: yes
 update_seed_command: --update --deep --newuse @world --jobs 64 --load-average 128
 portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng

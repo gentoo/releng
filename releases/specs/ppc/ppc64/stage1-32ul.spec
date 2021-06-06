@@ -10,3 +10,4 @@ update_seed: yes
 update_seed_command: --update --deep --newuse @world --jobs 5 --load-average 5
 chost: powerpc-unknown-linux-gnu
 portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
