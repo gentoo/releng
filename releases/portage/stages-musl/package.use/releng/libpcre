@@ -1,0 +1,5 @@
+# required by sys-libs/libselinux-2.7
+dev-libs/libpcre static-libs
+
+# required by dev-vcs/git
+dev-libs/libpcre2 jit

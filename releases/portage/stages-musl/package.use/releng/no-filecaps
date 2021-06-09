@@ -1,0 +1,7 @@
+# For stage building, we cannot be sure the final unpack destination will have
+# xattr/fcaps support.  To be safe, we build stages without filecaps, but allow
+# filecaps to be turned back on @ next full world upgrade.  The ebuilds using
+# fcaps eclass will have more logic to safely fall back in case of missing
+# support.
+
+*/* -filecaps
