@@ -12,7 +12,7 @@ livecd/fstype: squashfs
 livecd/iso: install-sparc64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo sparc64 @TIMESTAMP@
-livecd/gk_mainargs: --firmware-files=ql2200_fw.bin --makeopts=-j256
+livecd/gk_mainargs: --firmware-files=ql2200_fw.bin --makeopts=-j256 all
 
 boot/kernel: gentoo
 

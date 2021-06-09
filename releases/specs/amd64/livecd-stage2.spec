@@ -13,6 +13,7 @@ livecd/fstype: squashfs
 livecd/iso: livecd-amd64-installer-@TIMESTAMP@.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo amd64 LiveCD @TIMESTAMP@
+livecd/gk_mainargs: all
 livecd/xsession: xfce
 livecd/xdm: gdm
 
