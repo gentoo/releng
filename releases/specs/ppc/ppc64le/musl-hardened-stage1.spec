@@ -9,6 +9,6 @@ chost: powerpc64le-gentoo-linux-musl
 compression_mode: pixz_x
 update_seed: yes
 update_seed_command: --update --deep --newuse @world --jobs 5 --load-average 5
-portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_confdir: @REPO_DIR@/releases/portage/stages-musl
 portage_prefix: releng
 repos: /var/db/repos/musl

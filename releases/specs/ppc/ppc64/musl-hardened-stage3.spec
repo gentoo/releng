@@ -6,6 +6,6 @@ profile: default/linux/ppc64/17.0/musl/hardened
 snapshot: @TIMESTAMP@
 source_subpath: musl-hardened/stage1-ppc64-musl-hardened-@TIMESTAMP@
 compression_mode: pixz_x
-portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_confdir: @REPO_DIR@/releases/portage/stages-musl
 portage_prefix: releng
 repos: /var/db/repos/musl
