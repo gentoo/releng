@@ -6,7 +6,7 @@ interpreter: /usr/bin/qemu-riscv64
 rel_type: 20.0
 profile: default/linux/riscv/20.0/rv64gc/lp64d
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-rv64_lp64d-20.0-openrc-latest
+source_subpath: 20.0/stage3-rv64_lp64d-20.0-openrc-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2
 update_seed: yes
