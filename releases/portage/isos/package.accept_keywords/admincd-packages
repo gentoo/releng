@@ -2,6 +2,3 @@ sys-block/lsiutil
 sys-block/megarc
 sys-fs/dislocker
 sys-fs/ext3grep
-
-#needed for python3_9 support
-~app-emulation/cloud-init-21.2
