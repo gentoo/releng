@@ -6,7 +6,7 @@ interpreter: /usr/bin/qemu-riscv64
 rel_type: 20.0
 profile: default/linux/riscv/20.0/rv64gc/lp64d/systemd
 snapshot: @TIMESTAMP@
-source_subpath: 20.0/stage2-rv64_lp64d-20.0-systemd-@TIMESTAMP@
+source_subpath: 20.0/stage1-rv64_lp64d-20.0-systemd-@TIMESTAMP@
 compression_mode: pixz
 decompressor_search_order: xz bzip2
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
