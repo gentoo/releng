@@ -3,10 +3,10 @@ target: stage1
 version_stamp: 20.0-openrc-@TIMESTAMP@
 cflags: -O2 -pipe
 interpreter: /usr/bin/qemu-riscv64 /usr/bin/qemu-riscv32
-rel_type: 20.0
+rel_type: default
 profile: default/linux/riscv/20.0/rv64gc/multilib
 snapshot: @TIMESTAMP@
-source_subpath: 20.0/stage3-rv64_multilib-20.0-openrc-latest
+source_subpath: default/stage3-rv64_multilib-20.0-openrc-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2
 update_seed: yes
