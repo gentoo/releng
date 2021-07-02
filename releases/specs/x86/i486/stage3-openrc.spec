@@ -1,12 +1,10 @@
 subarch: i486
-target: stage1
-version_stamp: @TIMESTAMP@
+target: stage3
+version_stamp: openrc-@TIMESTAMP@
 rel_type: default
 profile: default/linux/x86/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-i486-latest
+source_subpath: default/stage2-i486-openrc-@TIMESTAMP@
 compression_mode: pixz_x
-update_seed: yes
-update_seed_command: --update --deep --newuse @world
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng

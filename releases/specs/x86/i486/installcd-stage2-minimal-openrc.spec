@@ -1,16 +1,16 @@
 subarch: i486
-version_stamp: @TIMESTAMP@
+version_stamp: openrc-@TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/livecd-stage1-i486-@TIMESTAMP@
+source_subpath: default/livecd-stage1-i486-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 #livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
+livecd/iso: install-x86-minimal-openrc-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo x86 @TIMESTAMP@
 

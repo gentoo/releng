@@ -1,10 +1,10 @@
 subarch: i486
-version_stamp: @TIMESTAMP@
+version_stamp: openrc-@TIMESTAMP@
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-i486-@TIMESTAMP@
+source_subpath: default/stage3-i486-openrc-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
