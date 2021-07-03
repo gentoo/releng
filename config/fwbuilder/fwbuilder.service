@@ -1,0 +1,14 @@
+[Unit]
+Description=fwbuilder-based packet filter
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/
+ExecStart=/root/releng/config/fwbuilder/%l.fw start
+ExecStop=/root/releng/config/fwbuilder/%l.fw stop
+Restart=no
+
+[Install]
+WantedBy=multi-user.target
