@@ -1,81 +1,22 @@
-subarch: x86
-version_stamp: hardened-@TIMESTAMP@
+subarch: i686
+version_stamp: hardened-openrc-@TIMESTAMP@
 target: livecd-stage2
 rel_type: hardened
 profile: default/linux/x86/17.0/hardened
 snapshot: @TIMESTAMP@
-source_subpath: hardened/livecd-stage1-x86-hardened-@TIMESTAMP@
+source_subpath: hardened/livecd-stage1-i686-hardened-openrc-@TIMESTAMP@
+portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
-#livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
+livecd/iso: admincd-x86-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo x86 @TIMESTAMP@
+livecd/volid: Gentoo x86 AdminCD @TIMESTAMP@
 
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/hardened/installcd-2.6.38.config
-boot/kernel/gentoo/use:
-	-*
-	alsa
-	alsa_pcm_plugins_adpcm
-	alsa_pcm_plugins_alaw
-	alsa_pcm_plugins_asym
-	alsa_pcm_plugins_copy
-	alsa_pcm_plugins_dmix
-	alsa_pcm_plugins_dshare
-	alsa_pcm_plugins_dsnoop
-	alsa_pcm_plugins_empty
-	alsa_pcm_plugins_extplug
-	alsa_pcm_plugins_file
-	alsa_pcm_plugins_hooks
-	alsa_pcm_plugins_iec958
-	alsa_pcm_plugins_ioplug
-	alsa_pcm_plugins_ladspa
-	alsa_pcm_plugins_lfloat
-	alsa_pcm_plugins_linear
-	alsa_pcm_plugins_meter
-	alsa_pcm_plugins_mmap_emul
-	alsa_pcm_plugins_mulaw
-	alsa_pcm_plugins_multi
-	alsa_pcm_plugins_null
-	alsa_pcm_plugins_plug
-	alsa_pcm_plugins_rate
-	alsa_pcm_plugins_route
-	alsa_pcm_plugins_share
-	alsa_pcm_plugins_shm
-	alsa_pcm_plugins_softvol
-	atm
-	fbcon
-	ipv6
-	livecd
-	midi
-	modules
-	ncurses
-#	nls
-	nptl
-	pam
-	png
-	readline
-	socks5
-	ssl
-	truetype
-#	unicode
-	usb
-
-boot/kernel/gentoo/packages:
-### These need to be added for software speech.
-	app-accessibility/espeakup
-	media-libs/alsa-oss
-	media-sound/alsa-utils
-	net-dialup/slmodem
-	net-wireless/hostap-utils
-#	net-dialup/fritzcapi
-#	net-dialup/fcdsl
-	sys-apps/pcmciautils
-	sys-kernel/linux-firmware
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/x86-5.4.38.config
 
 livecd/unmerge:
 	app-admin/eselect
@@ -87,15 +28,11 @@ livecd/unmerge:
 	dev-libs/gmp
 	dev-libs/libxml2
 	dev-libs/mpfr
-	dev-libs/popt
 	dev-python/pycrypto
 	dev-util/pkgconfig
-	net-misc/rsync
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
-	sys-apps/diffutils
-	sys-apps/file
 	sys-apps/groff
 	sys-apps/man-db
 	sys-apps/man-pages
@@ -131,20 +68,16 @@ livecd/empty:
 	/etc/cron.weekly
 	/etc/logrotate.d
 	/etc/modules.autoload.d
-	/etc/rsync
 	/etc/runlevels/single
 	/etc/skel
 	/lib/dev-state
 	/lib/udev-state
-	/lib64/dev-state
-	/lib64/udev-state
 	/root/.ccache
 	/tmp
 	/usr/diet/include
 	/usr/diet/man
 	/usr/include
 	/usr/i?86-gentoo-linux-uclibc
-	/usr/i?86-pc-linux-gnu
 	/usr/i?86-pc-linux-uclibc
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
@@ -155,27 +88,14 @@ livecd/empty:
 	/usr/lib/nfs
 	/usr/lib/perl5/site_perl
 	/usr/lib/portage
-	/usr/lib64/X11/config
-	/usr/lib64/X11/doc
-	/usr/lib64/X11/etc
-	/usr/lib64/awk
-	/usr/lib64/ccache
-	/usr/lib64/gcc-config
-	/usr/lib64/nfs
-	/usr/lib64/perl5/site_perl
-	/usr/lib64/portage
 	/usr/local
 	/usr/portage
-	/usr/powerpc-unknown-linux-gnu
-	/usr/powerpc64-unknown-linux-gnu
 	/usr/share/aclocal
 	/usr/share/baselayout
 	/usr/share/binutils-data
 	/usr/share/consolefonts/partialfonts
 	/usr/share/consoletrans
 	/usr/share/dict
-	/usr/share/doc
-	/usr/share/emacs
 	/usr/share/et
 	/usr/share/gcc-data
 	/usr/share/genkernel
@@ -195,15 +115,11 @@ livecd/empty:
 	/usr/share/texinfo
 	/usr/share/unimaps
 	/usr/share/zoneinfo
-	/usr/sparc-unknown-linux-gnu
 	/usr/src
-	/usr/x86_64-pc-linux-gnu
 	/var/cache
 	/var/empty
 	/var/lib/portage
-	/var/lock
 	/var/log
-	/var/run
 	/var/spool
 	/var/state
 	/var/tmp
@@ -273,14 +189,8 @@ livecd/rm:
 	/usr/bin/readelf
 	/usr/bin/repoman
 	/usr/bin/size
-	/usr/bin/powerpc-unknown-linux-gnu-*
-	/usr/bin/powerpc64-unknown-linux-gnu-*
-	/usr/bin/sparc-unknown-linux-gnu-*
-	/usr/bin/sparc64-unknown-linux-gnu-*
-	/usr/bin/strings
 	/usr/bin/strip
 	/usr/bin/tbz2tool
-	/usr/bin/x86_64-pc-linux-gnu-*
 	/usr/bin/xpak
 	/usr/bin/yacc
 	/usr/lib*/*.a
