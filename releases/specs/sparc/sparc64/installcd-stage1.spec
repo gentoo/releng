@@ -66,7 +66,7 @@ livecd/packages:
 #	net-wireless/wireless-tools
 #	net-wireless/wpa_supplicant
 	sys-apps/busybox
-	sys-apps/dmidecode
+#	sys-apps/dmidecode
 	sys-apps/ethtool
 	sys-apps/fxload
 	sys-apps/gptfdisk
