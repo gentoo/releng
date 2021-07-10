@@ -4,7 +4,7 @@ target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/17.1/no-multilib
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-amd64-@TIMESTAMP@
+source_subpath: default/stage3-amd64-openrc-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
