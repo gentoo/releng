@@ -58,6 +58,7 @@ livecd/packages:
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync
+	net-wireless/iw
 	net-wireless/iwd
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
