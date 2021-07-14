@@ -1,10 +1,10 @@
-subarch: power9le
+subarch: ppc64le
 target: stage3
-version_stamp: power9-@TIMESTAMP@
-rel_type: power9
+version_stamp: openrc-@TIMESTAMP@
+rel_type: default
 profile: default/linux/ppc64le/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage1-ppc64le-@TIMESTAMP@
+source_subpath: default/stage1-ppc64le-openrc-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
