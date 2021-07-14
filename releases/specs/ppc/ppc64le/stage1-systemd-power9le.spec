@@ -1,7 +1,7 @@
 subarch: power9le
 target: stage1
 version_stamp: systemd-@TIMESTAMP@
-rel_type: default
+rel_type: power9le
 profile: default/linux/ppc64le/17.0/systemd
 snapshot: @TIMESTAMP@
 source_subpath: power9le/stage3-power9le-systemd-latest
