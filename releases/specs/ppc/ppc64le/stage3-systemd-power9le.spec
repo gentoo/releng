@@ -1,0 +1,10 @@
+subarch: power9le
+target: stage3
+version_stamp: systemd-@TIMESTAMP@
+rel_type: power9le
+profile: default/linux/ppc64le/17.0/systemd
+snapshot: @TIMESTAMP@
+source_subpath: power9le/stage1-power9le-systemd-@TIMESTAMP@
+compression_mode: pixz_x
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
