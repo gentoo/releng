@@ -2,7 +2,7 @@ subarch: power9le
 target: stage1
 version_stamp: openrc-@TIMESTAMP@
 rel_type: power9le
-profile: power9le/linux/ppc64le/17.0
+profile: default/linux/ppc64le/17.0
 snapshot: @TIMESTAMP@
 source_subpath: power9le/stage3-power9le-openrc-latest
 compression_mode: pixz_x
