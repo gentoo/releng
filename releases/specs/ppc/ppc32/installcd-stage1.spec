@@ -4,7 +4,7 @@ version_stamp: @TIMESTAMP@
 rel_type: default
 profile: default/linux/powerpc/ppc32/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-ppc-@TIMESTAMP@
+source_subpath: default/stage3-ppc-openrc-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
