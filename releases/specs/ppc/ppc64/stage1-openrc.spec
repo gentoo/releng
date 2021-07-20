@@ -2,7 +2,7 @@ subarch: ppc64
 target: stage1
 version_stamp: openrc-@TIMESTAMP@
 rel_type: default
-profile: default/linux/powerpc/ppc64/17.0/64bit-userland
+profile: default/linux/ppc64/17.0
 snapshot: @TIMESTAMP@
 source_subpath: default/stage3-ppc64-openrc-latest
 compression_mode: pixz_x
