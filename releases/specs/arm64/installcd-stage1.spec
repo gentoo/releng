@@ -29,7 +29,7 @@ livecd/use:
 
 livecd/packages:
 	app-accessibility/brltty
-	app-accessibility/espeakup
+	#app-accessibility/espeakup # needs keywording
 	#app-admin/hddtemp # needs stable
 	#app-admin/pwgen # needs stable
 	app-admin/syslog-ng
@@ -37,7 +37,7 @@ livecd/packages:
 	app-crypt/gnupg
 	#app-editors/mg # needs keywording
 	app-editors/nano
-	#app-misc/livecd-tools # needs keywording
+	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/tmux
 	app-portage/mirrorselect
@@ -45,7 +45,7 @@ livecd/packages:
 	#media-gfx/fbgrab # needs stable
 	media-sound/alsa-utils
 	net-analyzer/traceroute
-	#net-dialup/mingetty # needs keywording
+	net-dialup/mingetty
 	net-dialup/pptpclient
 	#net-dialup/rp-pppoe # needs stable
 	net-fs/cifs-utils
@@ -77,7 +77,7 @@ livecd/packages:
 	sys-apps/nvme-cli
 	sys-apps/pciutils
 	#sys-apps/pcmciautils # needs keywording
-	sys-apps/sdparm
+	#sys-apps/sdparm # needs keywording
 	sys-apps/usbutils
 	sys-block/parted
 	#sys-block/partimage # needs keywording
