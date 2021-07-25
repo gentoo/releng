@@ -15,8 +15,9 @@ livecd/volid: Gentoo arm64 @TIMESTAMP@
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/sources: gentoo-sources
+boot/kernel/gentoo/sources: sys-kernel/gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/arm64/arm64-5.10.52.config
+boot/kernel/gentoo/packages: zfs zfs-kmod
 
 livecd/unmerge:
 	app-admin/eselect
@@ -81,8 +82,6 @@ livecd/empty:
 	/usr/diet/include
 	/usr/diet/man
 	/usr/include
-	/usr/i?86-gentoo-linux-uclibc
-	/usr/i?86-pc-linux-uclibc
 	/usr/lib/X11/config
 	/usr/lib/X11/doc
 	/usr/lib/X11/etc
