@@ -9,6 +9,7 @@ portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
+livecd/gk_mainargs: --all-ramdisk-modules --firmware
 livecd/iso: install-arm64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo arm64 @TIMESTAMP@
