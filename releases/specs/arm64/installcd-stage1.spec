@@ -31,7 +31,7 @@ livecd/packages:
 	app-accessibility/brltty
 	#app-accessibility/espeakup # needs keywording
 	#app-admin/hddtemp # needs stable
-	#app-admin/pwgen # needs stable
+	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
