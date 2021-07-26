@@ -1,5 +1,5 @@
 post_src_unpack() {
-	if use ppc64; then
+	if use arm64 || use ppc64; then
 		einfo "hooked by ${BASH_SOURCE[0]} in ${FUNCNAME[0]}"
 		local patchfile
 		patchfile="${PORTAGE_CONFIGROOT%/}/etc/portage/patches/genkernel-ppc64-iso.patch"
