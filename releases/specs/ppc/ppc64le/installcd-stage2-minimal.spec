@@ -22,15 +22,13 @@ boot/kernel: 4K_PAGESZ 64K_PAGESZ
 # can't be mounted on 4K if created on 64K kernels (btrfs is known to do that and some others)
 boot/kernel/4K_PAGESZ/sources: sys-kernel/gentoo-sources
 boot/kernel/4K_PAGESZ/config: @REPO_DIR@/releases/kconfig/powerpc/installcd-ppc64le-4K-5.10.config
-boot/kernel/4K_PAGESZ/console: hvc0 tty0
 boot/kernel/4K_PAGESZ/extraversion: 4K_PAGESZ
-boot/kernel/4K_PAGESZ/packages: zfs zfs-kmod
+boot/kernel/4K_PAGESZ/packages: --usepkg n zfs zfs-kmod
 
 boot/kernel/64K_PAGESZ/sources: sys-kernel/gentoo-sources
 boot/kernel/64K_PAGESZ/config: @REPO_DIR@/releases/kconfig/powerpc/installcd-ppc64le-64K-5.10.config
-boot/kernel/64K_PAGESZ/console: hvc0 tty0
 boot/kernel/64K_PAGESZ/extraversion: 64K_PAGESZ
-boot/kernel/64K_PAGESZ/packages: zfs zfs-kmod
+boot/kernel/64K_PAGESZ/packages: --usepkg n zfs zfs-kmod
 
 livecd/unmerge:
 	app-admin/eselect
