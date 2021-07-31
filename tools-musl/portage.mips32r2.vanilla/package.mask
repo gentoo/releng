@@ -1,5 +1,0 @@
->app-editors/nano-2.3.6
->sys-apps/coreutils-8.23
->sys-apps/iproute2-3.17.0
->sys-apps/sandbox-2.6-r999
->sys-devel/gcc-4.8.5-r99
