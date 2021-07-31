@@ -1,1 +1,0 @@
->sys-libs/gdbm-1.12
