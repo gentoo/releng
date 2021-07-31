@@ -22,7 +22,6 @@ livecd/use:
 # needs broken dante
 #	socks5
 	ssl
-	static-libs
 	unicode
 	xml
 
