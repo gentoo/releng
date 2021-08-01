@@ -97,6 +97,7 @@ livecd/unmerge:
 	dev-util/gtk-doc-am
 	dev-util/intltool
 	dev-util/pkgconfig
+	dev-util/pkgconf
 	net-misc/netifrc
 	net-misc/rsync
 	perl-core/PodParser
