@@ -274,6 +274,7 @@ upload() {
 			-o UserKnownHostsFile=/dev/null
 			-o VerifyHostKeyDNS=yes
 			-o StrictHostKeyChecking=no
+			-o IPQoS=cs0
 		)
 		local RSYNC_OPTS=(
 			-e "${SSH_CMD[*]}"
