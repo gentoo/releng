@@ -1,10 +1,10 @@
-subarch: armv7a
-version_stamp: @TIMESTAMP@
+subarch: armv7a_hardfp
+version_stamp: openrc-@TIMESTAMP@
 target: stage3
 rel_type: default
 profile: default/linux/arm/17.0/armv7a
 snapshot: @TIMESTAMP@
-source_subpath: default/stage1-armv7a-@TIMESTAMP@
+source_subpath: default/stage1-armv7a_hardfp-openrc-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng

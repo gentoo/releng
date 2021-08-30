@@ -1,10 +1,10 @@
-subarch: armv7a
-version_stamp: @TIMESTAMP@
+subarch: armv7a_hardfp
+version_stamp: openrc-@TIMESTAMP@
 target: stage1
 rel_type: default
 profile: default/linux/arm/17.0/armv7a
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-armv7a-latest
+source_subpath: default/stage3-armv7a_hardfp-openrc-latest
 compression_mode: pixz_x
 update_seed: yes
 update_seed_command: -uDN @world
