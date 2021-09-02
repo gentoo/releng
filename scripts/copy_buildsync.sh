@@ -15,6 +15,7 @@ ARCHES=(
 	hppa
 	ia64
 	#mips
+	m68k
 	ppc
 	riscv
 	s390
