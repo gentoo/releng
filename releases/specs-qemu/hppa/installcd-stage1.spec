@@ -4,9 +4,9 @@ target: livecd-stage1
 rel_type:  default
 profile: default/linux/hppa/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-hppa1.1-@TIMESTAMP@
-pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage1
-portage_confdir: @REPO_DIR@/releases/portage/isos
+source_subpath: default/stage3-hppa1.1-openrc-@TIMESTAMP@
+portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
+interpreter: /usr/bin/qemu-hppa
 livecd/use:
 	-*
 	python_targets_python3_6

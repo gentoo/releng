@@ -1,8 +1,8 @@
 # HPPA Netboot spec file by Guy Martin
 version_stamp: @TIMESTAMP@
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-hppa1.1-@TIMESTAMP@
-pkgcache_path: /var/tmp/catalyst/packages/default/netboot2-hppa32
+source_subpath: default/stage3-hppa1.1-openrc-@TIMESTAMP@
+interpreter: /usr/bin/qemu-hppa
 
 # these shouldn't change
 target:          netboot2
