@@ -1,0 +1,35 @@
+post_src_unpack() {
+	if use arm64 || use ppc64; then
+		einfo "hooked by ${BASH_SOURCE[0]} in ${FUNCNAME[0]}"
+		local patchfile
+		patchfile="${PORTAGE_CONFIGROOT%/}/etc/portage/patches/genkernel-ppc64-iso.patch"
+		if [[ -f ${patchfile} ]]; then
+			einfo "found genkernel patch for bug https://bugs.gentoo.org/796272"
+			cd "${S}" || die
+			eapply "${patchfile}"
+		else
+			ewarn "no genkernel patch found, skipping hook"
+		fi
+	fi
+}
+
+post_pkg_postinst() {
+	einfo "hooked by ${BASH_SOURCE[0]} in ${FUNCNAME[0]}"
+	einfo "cleaning up bug https://bugs.gentoo.org/796272 workarounds"
+	# cleanup after ourselves, we don't want workarounds shipped to users
+	# and don't want updating all the spec files with new removal directives.
+	local envfile patchfile
+	envfile="${PORTAGE_CONFIGROOT%/}/etc/portage/env/sys-kernel/genkernel"
+	patchfile="${PORTAGE_CONFIGROOT%/}/etc/portage/patches/genkernel-ppc64-iso.patch"
+	
+	local _x
+	for _x in "${envfile}" "${patchfile}"; do
+		if [[ -f ${_x} ]]; then
+			rm -vf "${_x}"
+		fi
+	done
+	rmdir -v --ignore-fail-on-non-empty "${PORTAGE_CONFIGROOT%/}/etc/portage/env/sys-kernel"
+	rmdir -v --ignore-fail-on-non-empty "${PORTAGE_CONFIGROOT%/}/etc/portage/env"
+	rmdir -v --ignore-fail-on-non-empty "${PORTAGE_CONFIGROOT%/}/etc/portage/patches"
+}
+	
