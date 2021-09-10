@@ -27,6 +27,7 @@ netboot/use:
 
 netboot/packages:
 	sys-boot/palo
+	sys-fs/lvm2
 	sys-fs/mdadm
 	sys-fs/e2fsprogs
 	sys-fs/reiserfsprogs
