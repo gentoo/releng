@@ -2,21 +2,21 @@
 version_stamp: @TIMESTAMP@
 snapshot: @TIMESTAMP@
 source_subpath: default/stage3-hppa1.1-@TIMESTAMP@
-pkgcache_path: /var/tmp/catalyst/packages/default/netboot2-hppa32
+pkgcache_path: /var/tmp/catalyst/packages/default/netboot-hppa32
 
 # these shouldn't change
-target:          netboot2
+target:          netboot
 subarch:         hppa1.1
 rel_type:        default
 profile:         default/linux/hppa/17.0
 
-# netboot2 stuff
+# netboot stuff
 boot/kernel:                      netboot32
 boot/kernel/netboot32/sources:       sys-kernel/gentoo-sources
 boot/kernel/netboot32/config: /root/releng/releases/kconfig/hppa/netboot-3.10.7-gentoo-netboot32.config
 boot/kernel/netboot32/gk_kernargs:   --all-ramdisk-modules
 
-netboot2/use:
+netboot/use:
  -*
  multicall
  shadow
@@ -24,7 +24,7 @@ netboot2/use:
  ssl
  unicode
 
-netboot2/packages:
+netboot/packages:
 	sys-boot/palo
 	sys-fs/mdadm
 	sys-fs/e2fsprogs
@@ -43,14 +43,14 @@ netboot2/packages:
 	#needed for the kernel to compile 
 	sys-devel/bc
 
-netboot2/packages/sys-boot/palo/files:
+netboot/packages/sys-boot/palo/files:
 	/sbin/palo
 	/usr/share/palo/iplboot
 
-netboot2/packages/sys-fs/mdadm/files:
+netboot/packages/sys-fs/mdadm/files:
 	/sbin/mdadm
 
-netboot2/packages/sys-fs/e2fsprogs/files:
+netboot/packages/sys-fs/e2fsprogs/files:
 	/usr/bin/chattr
 	/usr/bin/lsattr
 	/usr/bin/uuidgen
@@ -84,14 +84,14 @@ netboot2/packages/sys-fs/e2fsprogs/files:
 	/usr/lib/e2initrd_helper
 	/lib/libpthread*
 
-netboot2/packages/sys-fs/xfsprogs/files:
+netboot/packages/sys-fs/xfsprogs/files:
 	/sbin/mkfs.xfs
 	/sbin/fsck.xfs
 	/sbin/xfs_repair
 	/lib/librt*
 
 
-netboot2/packages/sys-apps/util-linux/files:
+netboot/packages/sys-apps/util-linux/files:
 	/usr/sbin/partx
 	/usr/sbin/delpart
 	/usr/sbin/rtcwake
@@ -146,10 +146,10 @@ netboot2/packages/sys-apps/util-linux/files:
 	/lib/libmount.so.*
 	/lib/libuuid.so.*
 
-netboot2/packages/app-editors/nano/files:
+netboot/packages/app-editors/nano/files:
 	/bin/nano
 
-netboot2/packages/sys-libs/ncurses/files:
+netboot/packages/sys-libs/ncurses/files:
 	/lib/libncurses.so.*
 	/lib/libncursesw.so.*
 	/etc/terminfo
@@ -174,22 +174,22 @@ netboot2/packages/sys-libs/ncurses/files:
 	/usr/share/terminfo/x/xterm-color
 	/usr/share/terminfo/x/xterm-xfree86
 
-netboot2/packages/net-misc/wget/files:
+netboot/packages/net-misc/wget/files:
 	/usr/bin/wget
 	/lib/libss.so.*
 	/lib/libz.so.*
 
-netboot2/packages/dev-libs/openssl/files:
+netboot/packages/dev-libs/openssl/files:
 	/usr/lib/libssl.so*
 	/usr/lib/libcrypto.so*
 
-netboot2/packages/net-misc/rsync/files:
+netboot/packages/net-misc/rsync/files:
 	/usr/bin/rsync
 
-netboot2/packages/dev-libs/popt/files:
+netboot/packages/dev-libs/popt/files:
 	/usr/lib/libpopt.so*
 
-netboot2/packages/net-misc/dropbear/files:
+netboot/packages/net-misc/dropbear/files:
 	/usr/bin/dbclient
 	/usr/bin/dbscp
 	/usr/bin/dropbearconvert
@@ -202,12 +202,12 @@ netboot2/packages/net-misc/dropbear/files:
 	/lib/libresolv*
 	/lib/libnss_dns*
 
-netboot2/packages/dev-libs/libtommath/files:
+netboot/packages/dev-libs/libtommath/files:
 	/usr/lib/libtommath.so*
 	/usr/lib/libtommath.so
 	/lib/libutil*
 
-netboot2/packages/app-misc/screen/files:
+netboot/packages/app-misc/screen/files:
 	/usr/bin/screen
 	/etc/screenrc
 	/lib/libdl*
