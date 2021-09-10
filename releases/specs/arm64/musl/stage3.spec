@@ -7,5 +7,5 @@ snapshot: @TIMESTAMP@
 source_subpath: musl/stage1-arm64-musl-@TIMESTAMP@
 compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/stages-musl
-portage_overlay: /root/musl
+repos: /root/musl
 portage_prefix: releng

@@ -9,5 +9,5 @@ compression_mode: pixz_x
 update_seed: yes
 update_seed_command: --update --deep --jobs=5 --newuse --complete-graph @world
 portage_confdir: @REPO_DIR@/releases/portage/stages-musl
-portage_overlay: /root/musl
+repos: /root/musl
 portage_prefix: releng
