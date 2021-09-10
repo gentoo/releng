@@ -17,6 +17,7 @@ boot/kernel/netboot64/gk_kernargs:   --cross-compile=hppa64-unknown-linux-gnu --
 
 netboot/use:
  -*
+ libtommath # dropbear requires libtomcrypt[libtommath]
  multicall
  shadow
  readline

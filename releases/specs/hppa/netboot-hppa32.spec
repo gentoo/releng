@@ -18,6 +18,7 @@ boot/kernel/netboot32/gk_kernargs:   --all-ramdisk-modules
 
 netboot/use:
  -*
+ libtommath # dropbear requires libtomcrypt[libtommath]
  multicall
  shadow
  readline
