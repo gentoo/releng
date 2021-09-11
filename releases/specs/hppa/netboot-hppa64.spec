@@ -43,9 +43,6 @@ netboot/packages:
 	sys-devel/binutils-hppa64
 	sys-devel/kgcc64
 	app-misc/screen
-	#needed for the kernel to compile 
-	sys-devel/bc
-
 
 netboot/packages/sys-boot/palo/files:
 	/sbin/palo

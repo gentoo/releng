@@ -42,8 +42,6 @@ netboot/packages:
 	net-misc/dropbear
 	dev-libs/openssl
 	app-misc/screen
-	#needed for the kernel to compile 
-	sys-devel/bc
 
 netboot/packages/sys-boot/palo/files:
 	/sbin/palo
