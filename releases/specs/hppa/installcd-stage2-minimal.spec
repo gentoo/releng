@@ -20,6 +20,8 @@ boot/kernel/livecd32/sources: sys-kernel/gentoo-sources
 boot/kernel/livecd32/config: @REPO_DIR@/releases/kconfig/hppa/hppa32.config
 boot/kernel/livecd32/use:
 	-*
+	python_targets_python3_9
+	python_single_target_python3_9
 	atm
 	fbcon
 	ipv6
@@ -47,6 +49,8 @@ boot/kernel/livecd64/gk_kernargs:
 	--kernel-nm=hppa64-unknown-linux-gnu-nm
 boot/kernel/livecd64/use:
 	-*
+	python_targets_python3_9
+	python_single_target_python3_9
 	atm
 	fbcon
 	ipv6
