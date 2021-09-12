@@ -11,10 +11,10 @@ rel_type:        default
 profile:         default/linux/hppa/17.0
 
 # netboot stuff
-boot/kernel:                      netboot32
-boot/kernel/netboot32/sources:       sys-kernel/gentoo-sources
-boot/kernel/netboot32/config:        @REPO_DIR@/releases/kconfig/hppa/hppa32.config
-boot/kernel/netboot32/gk_kernargs:   --all-ramdisk-modules
+boot/kernel:                      hppa32
+boot/kernel/hppa32/sources:       sys-kernel/gentoo-sources
+boot/kernel/hppa32/config:        @REPO_DIR@/releases/kconfig/hppa/hppa32.config
+boot/kernel/hppa32/gk_kernargs:   --all-ramdisk-modules
 
 netboot/use:
  -*

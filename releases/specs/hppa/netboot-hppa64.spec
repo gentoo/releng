@@ -10,10 +10,10 @@ subarch:         hppa2.0
 rel_type:        default
 profile:         default/linux/hppa/17.0
 
-boot/kernel:                      netboot64
-boot/kernel/netboot64/sources:       sys-kernel/gentoo-sources
-boot/kernel/netboot64/config:        @REPO_DIR@/releases/kconfig/hppa/hppa32.config
-boot/kernel/netboot64/gk_kernargs:
+boot/kernel:                      hppa64
+boot/kernel/hppa64/sources:       sys-kernel/gentoo-sources
+boot/kernel/hppa64/config:        @REPO_DIR@/releases/kconfig/hppa/hppa32.config
+boot/kernel/hppa64/gk_kernargs:
 	--all-ramdisk-modules
 	--kernel-ar=hppa64-unknown-linux-gnu-ar
 	--kernel-as=hppa64-unknown-linux-gnu-as

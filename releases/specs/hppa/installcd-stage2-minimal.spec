@@ -14,11 +14,11 @@ livecd/fstype: squashfs
 livecd/iso: /var/tmp/catalyst/builds/default/install-hppa-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 
-boot/kernel: livecd32 livecd64
+boot/kernel: hppa32 hppa64
 
-boot/kernel/livecd32/sources: sys-kernel/gentoo-sources
-boot/kernel/livecd32/config: @REPO_DIR@/releases/kconfig/hppa/hppa32.config
-boot/kernel/livecd32/use:
+boot/kernel/hppa32/sources: sys-kernel/gentoo-sources
+boot/kernel/hppa32/config: @REPO_DIR@/releases/kconfig/hppa/hppa32.config
+boot/kernel/hppa32/use:
 	-*
 	python_targets_python3_9
 	python_single_target_python3_9
@@ -38,16 +38,16 @@ boot/kernel/livecd32/use:
 	unicode
 	usb
 
-boot/kernel/livecd64/sources: sys-kernel/gentoo-sources
-boot/kernel/livecd64/config: @REPO_DIR@/releases/kconfig/hppa/hppa64.config
-boot/kernel/livecd64/gk_kernargs:
+boot/kernel/hppa64/sources: sys-kernel/gentoo-sources
+boot/kernel/hppa64/config: @REPO_DIR@/releases/kconfig/hppa/hppa64.config
+boot/kernel/hppa64/gk_kernargs:
 	--all-ramdisk-modules
 	--kernel-ar=hppa64-unknown-linux-gnu-ar
 	--kernel-as=hppa64-unknown-linux-gnu-as
 	--kernel-cc=hppa64-unknown-linux-gnu-cc
 	--kernel-ld=hppa64-unknown-linux-gnu-ld
 	--kernel-nm=hppa64-unknown-linux-gnu-nm
-boot/kernel/livecd64/use:
+boot/kernel/hppa64/use:
 	-*
 	python_targets_python3_9
 	python_single_target_python3_9
@@ -67,8 +67,8 @@ boot/kernel/livecd64/use:
 	unicode
 	usb
 
-boot/kernel/livecd32/extraversion: livecd32
-boot/kernel/livecd64/extraversion: livecd64
+boot/kernel/hppa32/extraversion: hppa32
+boot/kernel/hppa64/extraversion: hppa64
 
 livecd/unmerge:
 	app-admin/eselect
