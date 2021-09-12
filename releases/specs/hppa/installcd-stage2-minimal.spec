@@ -41,7 +41,13 @@ boot/kernel/livecd32/use:
 
 boot/kernel/livecd64/sources: sys-kernel/gentoo-sources
 boot/kernel/livecd64/config: @REPO_DIR@/releases/kconfig/hppa/hppa64.config
-boot/kernel/livecd64/gk_kernargs: --cross-compile=hppa64-unknown-linux-gnu
+boot/kernel/livecd64/gk_kernargs:
+	--all-ramdisk-modules
+	--kernel-ar=hppa64-unknown-linux-gnu-ar
+	--kernel-as=hppa64-unknown-linux-gnu-as
+	--kernel-cc=hppa64-unknown-linux-gnu-cc
+	--kernel-ld=hppa64-unknown-linux-gnu-ld
+	--kernel-nm=hppa64-unknown-linux-gnu-nm
 boot/kernel/livecd64/use:
 	-*
 	atm
