@@ -16,9 +16,6 @@ livecd/type: gentoo-release-minimal
 
 boot/kernel: livecd32 livecd64
 
-# On hppa, kernelopts are common for all kernel and will be applied to both
-boot/kernel/livecd32/kernelopts: panic=30
-
 boot/kernel/livecd32/sources: sys-kernel/gentoo-sources
 boot/kernel/livecd32/config: @REPO_DIR@/releases/kconfig/hppa/hppa32.config
 boot/kernel/livecd32/use:
