@@ -13,7 +13,7 @@ profile:         default/linux/hppa/17.0
 # netboot stuff
 boot/kernel:                      netboot32
 boot/kernel/netboot32/sources:       sys-kernel/gentoo-sources
-boot/kernel/netboot32/config: /root/releng/releases/kconfig/hppa/netboot-3.10.7-gentoo-netboot32.config
+boot/kernel/netboot32/config:        @REPO_DIR@/releases/kconfig/hppa/hppa32.config
 boot/kernel/netboot32/gk_kernargs:   --all-ramdisk-modules
 
 netboot/use:

@@ -20,7 +20,7 @@ boot/kernel: livecd32 livecd64
 boot/kernel/livecd32/kernelopts: panic=30
 
 boot/kernel/livecd32/sources: sys-kernel/gentoo-sources
-boot/kernel/livecd32/config: /home/gmsoft/specs/installcd-3.10.7-gentoo-livecd32.config
+boot/kernel/livecd32/config: @REPO_DIR@/releases/kconfig/hppa/hppa32.config
 boot/kernel/livecd32/use:
 	-*
 	atm
@@ -40,7 +40,7 @@ boot/kernel/livecd32/use:
 	usb
 
 boot/kernel/livecd64/sources: sys-kernel/gentoo-sources
-boot/kernel/livecd64/config: /home/gmsoft/specs/installcd-3.10.7-gentoo-livecd64.config
+boot/kernel/livecd64/config: @REPO_DIR@/releases/kconfig/hppa/hppa64.config
 boot/kernel/livecd64/gk_kernargs: --cross-compile=hppa64-unknown-linux-gnu
 boot/kernel/livecd64/use:
 	-*
