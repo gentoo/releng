@@ -22,7 +22,6 @@ boot/kernel/hppa32/use:
 	-*
 	python_targets_python3_9
 	python_single_target_python3_9
-	atm
 	fbcon
 	ipv6
 	livecd
@@ -51,7 +50,6 @@ boot/kernel/hppa64/use:
 	-*
 	python_targets_python3_9
 	python_single_target_python3_9
-	atm
 	fbcon
 	ipv6
 	livecd
