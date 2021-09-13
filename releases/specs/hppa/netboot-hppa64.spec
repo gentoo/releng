@@ -20,6 +20,11 @@ boot/kernel/hppa64/gk_kernargs:
 	--kernel-cc=hppa64-unknown-linux-gnu-cc
 	--kernel-ld=hppa64-unknown-linux-gnu-ld
 	--kernel-nm=hppa64-unknown-linux-gnu-nm
+	--kernel-objcopy=hppa64-unknown-linux-gnu-objcopy
+	--kernel-objdump=hppa64-unknown-linux-gnu-objdump
+	--kernel-ranlib=hppa64-unknown-linux-gnu-ranlib
+	--kernel-readelf=hppa64-unknown-linux-gnu-readelf
+	--kernel-strip=hppa64-unknown-linux-gnu-strip
 
 netboot/use:
  -*
