@@ -40,8 +40,6 @@ livecd/packages:
 	app-text/wgetpaste
 	dev-util/debootstrap
 	net-analyzer/traceroute
-	net-dialup/mingetty
-	net-dialup/rp-pppoe
 	net-fs/cifs-utils
 	net-fs/nfs-utils
 	net-irc/irssi
@@ -63,7 +61,6 @@ livecd/packages:
 	sys-fs/cryptsetup
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
-	sys-fs/lsscsi
 	sys-fs/lsscsi
 	sys-fs/lvm2
 	sys-fs/mdadm
