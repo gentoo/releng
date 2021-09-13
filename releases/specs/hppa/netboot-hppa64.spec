@@ -93,7 +93,6 @@ netboot/packages/sys-fs/e2fsprogs/files:
 	/sbin/fsck.ext2
 	/lib/libext2fs.so.*
 	/lib/libcom_err.so.*
-	/lib/libblkid.so.*
 	/lib/libe2p.so.*
 	/usr/lib/e2initrd_helper
 	/lib/libpthread*
@@ -157,8 +156,15 @@ netboot/packages/sys-apps/util-linux/files:
 	/bin/mount
 	/sbin/swapoff
 	/lib/libblkid.so.*
+	/lib/libfdisk.so.*
 	/lib/libmount.so.*
+	/lib/libsmartcols.so.*
 	/lib/libuuid.so.*
+	/usr/lib/libblkid.so
+	/usr/lib/libfdisk.so
+	/usr/lib/libmount.so
+	/usr/lib/libsmartcols.so
+	/usr/lib/libuuid.so
 
 netboot/packages/app-editors/nano/files:
 	/bin/nano
