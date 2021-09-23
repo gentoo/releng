@@ -40,7 +40,6 @@ livecd/packages:
 	app-text/wgetpaste
 	dev-util/debootstrap
 	net-analyzer/traceroute
-	net-fs/cifs-utils
 	net-fs/nfs-utils
 	net-irc/irssi
 	net-misc/dhcpcd
