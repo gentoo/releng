@@ -4,8 +4,8 @@ target: livecd-stage1
 rel_type: default
 profile: default/linux/alpha/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-alpha-@TIMESTAMP@
-portage_confdir: @REPO_DIR@/releases/portage/isos
+source_subpath: default/stage3-alpha-openrc-@TIMESTAMP@
+portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
 livecd/use:
 	compile-locales
 	fbcon

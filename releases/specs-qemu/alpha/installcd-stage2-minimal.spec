@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/alpha/17.0
 snapshot: @TIMESTAMP@
 source_subpath: default/livecd-stage1-alpha-@TIMESTAMP@
-portage_confdir: @REPO_DIR@/releases/portage/isos
+portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
 
 livecd/bootargs: dokeymap
 livecd/cdtar: /root/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
