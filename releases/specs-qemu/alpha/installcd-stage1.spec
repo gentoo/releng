@@ -6,6 +6,7 @@ profile: default/linux/alpha/17.0
 snapshot: @TIMESTAMP@
 source_subpath: default/stage3-alpha-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
+interpreter: /usr/bin/qemu-alpha
 livecd/use:
 	compile-locales
 	fbcon
