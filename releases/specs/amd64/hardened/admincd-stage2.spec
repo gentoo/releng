@@ -16,7 +16,7 @@ livecd/volid: Gentoo amd64 AdminCD @TIMESTAMP@
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/amd64-5.10.49.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/amd64-5.10.61.config
 
 boot/kernel/gentoo/packages:
 	sys-fs/zfs
