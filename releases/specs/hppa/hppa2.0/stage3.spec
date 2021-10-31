@@ -6,4 +6,5 @@ profile: default/linux/hppa/17.0
 snapshot: @TIMESTAMP@
 source_subpath: default/stage1-hppa2.0-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
 pkgcache_path: /var/tmp/catalyst/packages/default/stage3-hppa2.0
