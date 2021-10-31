@@ -152,34 +152,13 @@ process_arch() {
 	if [ -n "${iso_list}" ]; then
 		echo -e "${header}" >"${OUT_ISO}"
 		# Some arches produce more than one type of iso.
-		# Only apply the current-iso link logic to them.
-		# TODO: Should make this dynamic based on the iso list.
-		case ${ARCH} in
-		amd64|x86)
-			rm -f current-iso
-			;;
-		*)
-			echo -e "${iso_list}" |awk '{print $3}' | grep "$latest_iso_date" >>${OUT_ISO}
-			ln -sfT "$latest_iso_date" current-iso
-			;;
-		esac
+		# So let's not advertise a current one via a symlink in general.
+		rm -f current-iso
 	fi
 	if [ -n "${stage3_list}" ]; then
 		echo -e "${header}" >"${OUT_STAGE3}"
-
-		# In the new variant preserve code there is a better way to do this
-		#echo -e "${stage3_list}" |awk '{print $3}' |grep "$latest_stage3_date" >>${OUT_STAGE3}
-
-		# The "latest stage3" concept works for only a few arches -- ones that
-		# do not have more than one stage3 target per arch (i.e. multilib, etc...).
-		case ${ARCH} in
-		amd64|arm|hppa|ppc|s390|sh|x86)
-			rm -f current-stage3
-			;;
-		*)
-			ln -sfT "$latest_stage3_date" current-stage3
-			;;
-		esac
+		# Dito for stage3
+		rm -f current-stage3
 	fi
 
 	# New variant preserve code
