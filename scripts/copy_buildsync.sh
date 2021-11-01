@@ -157,7 +157,7 @@ process_arch() {
 	fi
 	if [ -n "${stage3_list}" ]; then
 		echo -e "${header}" >"${OUT_STAGE3}"
-		# Dito for stage3
+		# Ditto for stage3
 		rm -f current-stage3
 	fi
 
