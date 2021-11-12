@@ -6,6 +6,8 @@ INCOMING_BASE="/release/weekly/builds"
 OUTGOING_BASE="/release/distfiles/weekly"
 # Scratch space used when moving files from incoming to outgoing.
 TMPDIR_BASE="/release/distfiles/tmp/buildsync/partial"
+# Keep some records
+LOGDIR_BASE="/release/distfiles/tmp/buildsync/logs"
 
 ARCHES=(
 	alpha
@@ -64,7 +66,7 @@ EOF
 
 # Copy artifacts for an arch to the outgoing directory.
 copy_arch_to_outgoing() {
-	local ARCH=$1 indir=$2 outdir=$3 tmpdir=$4
+	local ARCH=$1 indir=$2 outdir=$3 tmpdir=$4 logdir=$5
 	local i t rc timestamps
 
 	if [[ ! -d ${indir} ]]; then
@@ -91,6 +93,7 @@ copy_arch_to_outgoing() {
 			"${RSYNC_OPTS[@]}" \
 			--temp-dir="${tmpdir}" \
 			--partial-dir="${tmpdir}" \
+			--log-file="${logdir}/rsync.log" \
 			--filter '- **/.*' \
 			--filter "S *${i}*" \
 			--filter 'S **/' \
@@ -126,11 +129,12 @@ process_arch() {
 	indir="${INCOMING_BASE}/${ARCH}"
 	outdir="${OUTGOING_BASE}/${ARCH}"
 	tmpdir="${TMPDIR_BASE}/${ARCH}"
+	logdir="${LOGDIR_BASE}/${ARCH}"
 
-	mkdir -p "${tmpdir}" 2>/dev/null
+	mkdir -p "${tmpdir}" "${logdir}" 2>/dev/null
 
 	# Sync incoming->outgoing first.
-	copy_arch_to_outgoing "${ARCH}" "${indir}" "${outdir}" "${tmpdir}"
+	copy_arch_to_outgoing "${ARCH}" "${indir}" "${outdir}" "${tmpdir}" "${logdir}"
 
 	# ================================================================
 	# Build data for revealing latest:
@@ -216,10 +220,7 @@ process_arch() {
 		# Find the dead links for cleanup
 		_dead="${tmpdir}"/dead-link
 		find -L $(pwd) -type l >"${_dead}"
-		if test -s "${_dead}"; then
-			echo "copy_buildsync: dead links to verify:" 1>&2
-			cat "${_dead}" 1>&2
-		fi
+		mv -f "${_dead}" "${logdir}/dead-links.txt"
 
 		# Find the dead latest txt files
 		_dead="${tmpdir}"/dead-latest
@@ -235,6 +236,7 @@ process_arch() {
 				| fgrep -l -f - $f \
 				| xargs -n1 --no-run-if-empty readlink -f
 		done >"${_dead}"
+
 		if test -s "${_dead}"; then
 				echo "copy_buildsync: removing dead latest*txt files:" 1>&2
 				foreach txtfil in $(cat "${_dead}") ; do
@@ -242,11 +244,14 @@ process_arch() {
 				done
 		fi
 
+		mv -f "${_dead}" "${logdir}/dead-latest-txt.txt"
+
 		# Cleanup tmpdir
 		$DEBUGP rm $VERBOSEP -rf "${tmpdir}"
 
 	else
 		echo "There was some failure for $ARCH during the weekly sync. Not doing cleanup for fear of dataloss." 1>&2
+		echo "See logs in $logdir" 1>&2
 	fi
 }
 
