@@ -238,10 +238,8 @@ process_arch() {
 		done >"${_dead}"
 
 		if test -s "${_dead}"; then
-				echo "copy_buildsync: removing dead latest*txt files:" 1>&2
-				foreach txtfil in $(cat "${_dead}") ; do
-					rm -v "${txtfil}" 1>&2
-				done
+				echo "copy_buildsync: dead latest*txt files to verify:" 1>&2
+				cat "${_dead}" 1>&2
 		fi
 
 		mv -f "${_dead}" "${logdir}/dead-latest-txt.txt"
