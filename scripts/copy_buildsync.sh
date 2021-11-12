@@ -164,10 +164,12 @@ process_arch() {
 	# New variant preserve code
 	find_variants=( '(' -iname '*.iso' -o -name 'netboot-*' -o "${EXTENSIONS[@]}" ')' )
 	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' 2>/dev/null | sed -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
+	# This file specifies which variants are still in use.
 	keepfile="${tmpdir}/.keep.${ARCH}.txt"
 	keepfile_tmp=$(mktemp -p "${tmpdir}" -t ".keep.${ARCH}.txt.XXXXXX")
 	echo -n '' >"${keepfile_tmp}"
 	chmod 644 "${keepfile_tmp}"
+
 	for v in $variants ; do
 		# FIXME: trace the $a variable in this!
 		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print 2>/dev/null | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
@@ -188,6 +190,8 @@ process_arch() {
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${keepfile_tmp}"
 		mv -f "${f_tmp}" "${f}"
 	done
+
+	# Refresh keepfile
 	mv -f "${keepfile_tmp}" "${keepfile}"
 
 	# ================================================================
@@ -206,6 +210,37 @@ process_arch() {
 			$DEBUGP rm $VERBOSEP -rf "$(pwd)"/"${i}"
 		done
 
+		# Preserve the keepfile for review
+		cp -lf "${keepfile}" "${outdir}"
+
+		# Find the dead links for cleanup
+		_dead="${tmpdir}"/dead-link
+		find -L $(pwd) -type l >"${_dead}"
+		if test -s "${_dead}"; then
+			echo "copy_buildsync: dead links to verify:" 1>&2
+			cat "${_dead}" 1>&2
+		fi
+
+		# Find the dead latest txt files
+		_dead="${tmpdir}"/dead-latest
+		for f in $(find "${outdir}" -name 'latest*txt' ) ; do
+			d=$(dirname $f)
+			find $d \
+				| fgrep -f <(awk '/^#/{next} {print $1}' $f) \
+				| sed  "s,${d}/,,g" \
+				| sort \
+				| comm -13 \
+						- \
+						<(sort $f |grep -v -e '^#' |awk '{print $1}') \
+				| fgrep -l -f - $f \
+				| xargs -n1 --no-ruN-if-empty readlink -f
+		done >"${_dead}"
+		if test -s "${_dead}"; then
+				echo "copy_buildsync: dead latest*txt files to verify:" 1>&2
+				cat "${_dead}" 1>&2
+		fi
+
+		# Cleanup tmpdir
 		$DEBUGP rm $VERBOSEP -rf "${tmpdir}"
 
 	else
