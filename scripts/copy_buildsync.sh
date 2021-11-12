@@ -233,7 +233,7 @@ process_arch() {
 						- \
 						<(sort $f |grep -v -e '^#' |awk '{print $1}') \
 				| fgrep -l -f - $f \
-				| xargs -n1 --no-ruN-if-empty readlink -f
+				| xargs -n1 --no-run-if-empty readlink -f
 		done >"${_dead}"
 		if test -s "${_dead}"; then
 				echo "copy_buildsync: dead latest*txt files to verify:" 1>&2
