@@ -1,8 +1,0 @@
-# Temporarily mask ncurses-6.3, since the ~arch qemu builds need to upgrade sandbox first (works with sandbox 2.29)
-#
-# Seen on alpha:
-#checking whether the C compiler works...  * /var/tmp/portage/sys-apps/sandbox-2.25/work/sandbox-2.25/libsandbox/trace.c:_do_ptrace():83: failure (Function not implemented):
-# * ISE:_do_ptrace: ptrace(PTRACE_TRACEME, ..., 0x0000000000000000, 0x0000000000000000): Function not implemented
-#configure: error: cannot run C compiled programs.
-#
->=sys-libs/ncurses-6.3
