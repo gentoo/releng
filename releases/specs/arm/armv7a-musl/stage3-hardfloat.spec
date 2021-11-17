@@ -9,3 +9,4 @@ compression_mode: pixz_x
 portage_confdir: @REPO_DIR@/releases/portage/stages-musl
 portage_prefix: releng
 repos: /root/musl
+cflags: -O2 -pipe -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard
