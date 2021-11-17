@@ -1,10 +1,10 @@
 subarch: armv7a_hardfp_musl
-version_stamp: musl-@TIMESTAMP@
+version_stamp: @TIMESTAMP@
 target: stage1
 rel_type: musl
 profile: default/linux/arm/17.0/musl/armv7a
 snapshot: @TIMESTAMP@
-source_subpath: musl/stage3-armv7a_hardfp-musl-latest
+source_subpath: musl/stage3-armv7a_hardfp_musl-latest
 compression_mode: pixz_x
 update_seed: yes
 update_seed_command: -uDN @world
