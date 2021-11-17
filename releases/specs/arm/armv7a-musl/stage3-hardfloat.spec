@@ -1,4 +1,4 @@
-subarch: armv7a_hardfp
+subarch: armv7a_hardfp_musl
 version_stamp: musl-@TIMESTAMP@
 target: stage3
 rel_type: musl
