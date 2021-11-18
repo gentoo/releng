@@ -7,7 +7,7 @@ rel_type: default
 profile: default/linux/riscv/20.0/rv64gc/lp64/systemd
 snapshot: @TIMESTAMP@
 source_subpath: default/stage3-rv64_lp64-systemd-latest
-compression_mode: pixz_x
+compression_mode: pixz
 decompressor_search_order: xz bzip2
 update_seed: yes
 update_seed_command: -uDN @world

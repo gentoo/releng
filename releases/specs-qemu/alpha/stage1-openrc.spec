@@ -9,4 +9,4 @@ update_seed: yes
 update_seed_command: -uDN @world
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 interpreter: /usr/bin/qemu-alpha
-compression_mode: pixz_x
+compression_mode: pixz

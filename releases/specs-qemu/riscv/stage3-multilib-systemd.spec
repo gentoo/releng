@@ -7,7 +7,7 @@ rel_type: default
 profile: default/linux/riscv/20.0/rv64gc/multilib/systemd
 snapshot: @TIMESTAMP@
 source_subpath: default/stage1-rv64_multilib-systemd-@TIMESTAMP@
-compression_mode: pixz_x
+compression_mode: pixz
 decompressor_search_order: xz bzip2
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng

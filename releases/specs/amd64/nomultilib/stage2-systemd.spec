@@ -5,6 +5,6 @@ rel_type: default
 profile: default/linux/amd64/17.1/no-multilib/systemd
 snapshot: @TIMESTAMP@
 source_subpath: default/stage1-amd64-nomultilib-systemd-@TIMESTAMP@
-compression_mode: pixz_x
+compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng

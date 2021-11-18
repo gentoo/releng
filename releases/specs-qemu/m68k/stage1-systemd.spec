@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/m68k/17.0/systemd
 snapshot: @TIMESTAMP@
 source_subpath: default/stage3-m68k-systemd-latest
-compression_mode: pixz_x
+compression_mode: pixz
 update_seed: yes
 update_seed_command: -uDN @world
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu

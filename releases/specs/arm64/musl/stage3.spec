@@ -5,7 +5,7 @@ rel_type: musl
 profile: default/linux/arm64/17.0/musl
 snapshot: @TIMESTAMP@
 source_subpath: musl/stage1-arm64-musl-@TIMESTAMP@
-compression_mode: pixz_x
+compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-musl
 repos: /root/musl
 portage_prefix: releng

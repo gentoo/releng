@@ -7,6 +7,6 @@ snapshot: @TIMESTAMP@
 source_subpath: default/stage3-s390x-latest
 update_seed: yes
 update_seed_command: --update --deep --newuse @world --jobs 2 --load-average 2
-compression_mode: pixz_x
+compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 pkgcache_path: /var/tmp/catalyst/packages/default/stage1-s390x

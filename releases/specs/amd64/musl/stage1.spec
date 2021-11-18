@@ -11,4 +11,4 @@ portage_overlay: /root/musl
 portage_prefix: releng
 update_seed: yes
 update_seed_command: --update --deep --newuse @world
-compression_mode: pixz_x
+compression_mode: pixz

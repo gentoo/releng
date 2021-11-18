@@ -8,4 +8,4 @@ source_subpath: musl/stage2-i686-musl-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/stages-musl
 portage_overlay: /root/musl
 portage_prefix: releng
-compression_mode: pixz_x
+compression_mode: pixz

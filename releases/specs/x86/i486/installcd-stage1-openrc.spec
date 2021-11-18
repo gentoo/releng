@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/x86/17.0
 snapshot: @TIMESTAMP@
 source_subpath: default/stage3-i486-openrc-@TIMESTAMP@
-compression_mode: pixz_x
+compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/use:

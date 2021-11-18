@@ -5,7 +5,7 @@ rel_type: hardened
 profile: default/linux/amd64/17.1/hardened
 snapshot: @TIMESTAMP@
 source_subpath: hardened/stage3-amd64-hardened-openrc-@TIMESTAMP@
-compression_mode: pixz_x
+compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/use:
