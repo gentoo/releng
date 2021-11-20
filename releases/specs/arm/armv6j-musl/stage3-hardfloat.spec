@@ -6,6 +6,6 @@ profile: default/linux/arm/17.0/musl/armv6j
 snapshot: @TIMESTAMP@
 source_subpath: musl/stage1-armv6j_hardfp_musl-openrc-@TIMESTAMP@
 compression_mode: pixz
-portage_confdir: @REPO_DIR@/releases/portage/stages-musl
+portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
 repos: /root/musl
