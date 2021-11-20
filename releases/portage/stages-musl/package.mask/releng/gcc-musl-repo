@@ -1,3 +1,0 @@
-# we need gcc from musl repo that contains pure64 patches
-# https://github.com/gentoo/musl/issues/351
-sys-devel/gcc::gentoo
