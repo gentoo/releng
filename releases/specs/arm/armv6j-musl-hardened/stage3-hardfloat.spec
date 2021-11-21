@@ -4,7 +4,7 @@ target: stage3
 rel_type: musl-hardened
 profile: default/linux/arm/17.0/musl/armv6j/hardened
 snapshot: @TIMESTAMP@
-source_subpath: musl/stage1-armv6j_hardfp_musl-hardened-openrc-@TIMESTAMP@
+source_subpath: musl-hardened/stage1-armv6j_hardfp_musl-hardened-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
