@@ -2,7 +2,7 @@ subarch: ppc
 target: livecd-stage2
 version_stamp: @TIMESTAMP@
 rel_type: default
-profile: default/linux/powerpc/ppc32/17.0
+profile: default/linux/ppc/17.0
 snapshot: @TIMESTAMP@
 source_subpath: default/livecd-stage1-ppc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
