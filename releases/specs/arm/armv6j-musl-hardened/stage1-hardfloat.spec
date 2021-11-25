@@ -10,4 +10,3 @@ update_seed: yes
 update_seed_command: -uDN @world
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
-repos: /root/musl

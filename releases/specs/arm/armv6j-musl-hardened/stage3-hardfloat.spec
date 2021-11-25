@@ -8,4 +8,3 @@ source_subpath: musl-hardened/stage1-armv6j_hardfp_musl-hardened-openrc-@TIMESTA
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
-repos: /root/musl
