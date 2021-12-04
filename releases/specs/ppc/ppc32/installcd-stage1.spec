@@ -66,6 +66,7 @@ livecd/packages:
 	sys-firmware/b43-firmware
 	sys-firmware/b43legacy-firmware
 	sys-fs/btrfs-progs
+	sys-fs/cryptsetup
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/hfsplusutils
