@@ -7,6 +7,7 @@ snapshot: @TIMESTAMP@
 source_subpath: default/livecd-stage1-ppc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
+livecd/bootargs: scandelay=10
 livecd/fstype: squashfs 
 livecd/gk_mainargs: --makeopts=-j12
 livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-minimal-@TIMESTAMP@.iso
