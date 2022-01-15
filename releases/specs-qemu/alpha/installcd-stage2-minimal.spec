@@ -9,7 +9,7 @@ portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
 interpreter: /usr/bin/qemu-alpha
 
 livecd/bootargs: dokeymap
-livecd/cdtar: /root/aboot-1.0_pre20040408-r2-cdtar-weekly.tar.bz2
+livecd/cdtar: /usr/share/catalyst/livecd/cdtar/aboot-1.0_pre20040408-r2-cdtar.tar.bz2
 livecd/fsscript: /root/releng/releases/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/iso: /var/tmp/catalyst/builds/default/install-alpha-minimal-@TIMESTAMP@.iso
