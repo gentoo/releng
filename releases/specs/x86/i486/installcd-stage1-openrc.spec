@@ -80,6 +80,7 @@ livecd/packages:
 	sys-apps/usbutils
 	sys-block/parted
 	sys-block/partimage
+	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/dmraid
