@@ -29,7 +29,7 @@ livecd/use:
 livecd/packages:
 	app-accessibility/brltty
 	#app-accessibility/espeakup # needs keywording
-	#app-admin/hddtemp # needs stable
+	app-admin/hddtemp
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
@@ -41,26 +41,26 @@ livecd/packages:
 	app-misc/tmux
 	app-portage/mirrorselect
 	app-text/wgetpaste
-	#media-gfx/fbgrab # needs stable
+	media-gfx/fbgrab
 	media-sound/alsa-utils
 	net-analyzer/traceroute
 	net-dialup/mingetty
 	net-dialup/pptpclient
-	#net-dialup/rp-pppoe # needs stable
+	net-dialup/rp-pppoe
 	net-fs/cifs-utils
 	net-fs/nfs-utils
-	#net-irc/irssi # needs stable
+	net-irc/irssi
 	net-misc/dhcpcd
 	net-misc/iputils
-	#net-misc/ndisc6 # needs stable
+	net-misc/ndisc6
 	net-misc/ntp
 	net-misc/openssh
-	#net-misc/rdate # needs stable
+	net-misc/rdate
 	net-misc/rsync
-	#net-misc/vconfig # needs keywording
+	#net-misc/vconfig # needs stable
 	net-proxy/dante
-	#net-proxy/tsocks # needs keywording
-	#net-wireless/b43-fwcutter # needs stable
+	#net-proxy/tsocks # needs stable
+	net-wireless/b43-fwcutter
 	net-wireless/iw
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
@@ -85,18 +85,18 @@ livecd/packages:
 	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
-	#sys-fs/dmraid # needs stable
+	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/f2fs-tools
-	#sys-fs/jfsutils # needs stable
+	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
 	#sys-fs/mac-fdisk # not needed?
-	#sys-fs/mdadm # needs stable
+	sys-fs/mdadm
 	sys-fs/multipath-tools
-	#sys-fs/ntfs3g # needs stable
-	#sys-fs/reiserfsprogs # needs stable
+	sys-fs/ntfs3g
+	sys-fs/reiserfsprogs
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
 	sys-libs/gpm
