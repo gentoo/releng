@@ -82,6 +82,7 @@ livecd/packages:
 	#sys-block/partimage # needs keywording
 	#sys-firmware/ipw2100-firmware # needs keywording
 	#sys-firmware/ipw2200-firmware # needs keywording
+	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	#sys-fs/dmraid # needs stable

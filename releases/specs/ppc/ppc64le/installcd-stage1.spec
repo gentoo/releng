@@ -77,6 +77,7 @@ livecd/packages:
 	sys-apps/usbutils
 	sys-block/parted
 	sys-boot/grub
+	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/dosfstools

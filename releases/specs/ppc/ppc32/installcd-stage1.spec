@@ -65,6 +65,7 @@ livecd/packages:
 	sys-boot/grub
 	sys-firmware/b43-firmware
 	sys-firmware/b43legacy-firmware
+	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/dosfstools
