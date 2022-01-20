@@ -120,7 +120,6 @@ livecd/unmerge:
 	sys-apps/sandbox
 	sys-apps/tcp-wrappers
 	sys-apps/texinfo
-	sys-boot/palo
 	sys-apps/miscfiles
 	sys-devel/autoconf
 	sys-devel/autoconf-wrapper
