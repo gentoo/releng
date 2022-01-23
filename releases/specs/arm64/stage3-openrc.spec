@@ -1,10 +1,10 @@
 subarch: arm64
-target: stage2
-version_stamp: systemd-@TIMESTAMP@
+target: stage3
+version_stamp: openrc-@TIMESTAMP@
 rel_type: default
-profile: default/linux/arm64/17.0/systemd
+profile: default/linux/arm64/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage1-arm64-systemd-@TIMESTAMP@
+source_subpath: default/stage1-arm64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng

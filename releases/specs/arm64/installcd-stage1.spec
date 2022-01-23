@@ -4,7 +4,7 @@ version_stamp: @TIMESTAMP@
 rel_type: default
 profile: default/linux/arm64/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-arm64-@TIMESTAMP@
+source_subpath: default/stage3-arm64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
