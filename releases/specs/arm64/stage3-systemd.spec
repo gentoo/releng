@@ -4,7 +4,7 @@ version_stamp: systemd-@TIMESTAMP@
 rel_type: default
 profile: default/linux/arm64/17.0/systemd
 snapshot: @TIMESTAMP@
-source_subpath: default/stage1-arm64-systemd-@TIMESTAMP@
+source_subpath: default/stage1-arm64-systemd-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
