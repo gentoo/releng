@@ -4,7 +4,7 @@ target: stage1
 rel_type: musl-hardened
 profile: default/linux/arm/17.0/musl/armv7a/hardened
 snapshot: @TIMESTAMP@
-source_subpath: musl-hardened/stage3-armv7a_hardfp_musl-hardened-openrc-latest
+source_subpath: musl-hardened/stage3-armv7a_hardfp_musl-hardened-openrc-latest.tar.xz
 compression_mode: pixz
 update_seed: yes
 update_seed_command: -uDN @world
