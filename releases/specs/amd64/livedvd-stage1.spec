@@ -4,7 +4,7 @@ target: livecd-stage1
 rel_type: default
 profile: default/linux/amd64/17.1/desktop/plasma
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-amd64-openrc-@TIMESTAMP@
+source_subpath: default/stage3-amd64-openrc-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
@@ -29,17 +29,28 @@ livecd/packages:
 	app-accessibility/espeakup
 	app-admin/hddtemp
 	app-admin/syslog-ng
+	app-admin/testdisk
 	app-arch/deb2targz
+	app-arch/p7zip
 	app-arch/rpm
 	app-arch/zip
+	app-backup/fsarchiver
+	app-cdr/dvd+rw-tools
+	app-cdr/cdrtools
+	app-crypt/chntpw
 	app-crypt/gnupg
+	app-editors/ghex
+	app-editors/hexedit
+	app-editors/joe
 	app-editors/kile
 	app-editors/mg
 	app-editors/nano
 	app-eselect/eselect-repository
 	app-misc/livecd-tools
+	app-misc/mc
 	app-misc/screen
 	app-misc/tmux
+	app-misc/wipe
 	app-office/libreoffice
 	app-office/texstudio
 	app-officeext/texmaths
@@ -84,6 +95,7 @@ livecd/packages:
 	net-analyzer/nmap
 	net-analyzer/tcpdump
 	net-analyzer/traceroute
+	net-dialup/minicom
 	net-dialup/mingetty
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
@@ -95,16 +107,21 @@ livecd/packages:
 	net-misc/iputils
 	net-misc/ntp
 	net-misc/openssh
+	net-misc/rdesktop
 	net-misc/rsync
 	net-misc/vconfig
+	net-misc/wget
 	net-wireless/b43-fwcutter
 	net-wireless/iw
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	sys-apps/busybox
 	sys-apps/ethtool
+	sys-apps/flashrom
 	sys-apps/fxload
+	sys-apps/gptfdisk
 	sys-apps/hdparm
+	sys-apps/hwinfo
 	sys-apps/iproute2
 	sys-apps/memtester
 	sys-apps/netplug
@@ -113,20 +130,24 @@ livecd/packages:
 	sys-apps/pcmciautils
 	sys-apps/sdparm
 	sys-apps/usbutils
+	sys-apps/util-linux
 	sys-block/gparted
 	sys-block/parted
 	sys-block/partimage
+	sys-block/whdd
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
 	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
+	sys-fs/ddrescue
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/exfat-utils
 	sys-fs/fuse-exfat
 	sys-fs/f2fs-tools
+	sys-fs/growpart
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
@@ -142,3 +163,4 @@ livecd/packages:
 	www-client/firefox
 	www-client/links
 	x11-misc/sddm
+
