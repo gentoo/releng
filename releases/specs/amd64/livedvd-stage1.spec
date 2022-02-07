@@ -9,10 +9,20 @@ compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/use:
+	-aac
 	compile-locales
 	fbcon
+	jpeg2k
 	livecd
 	modules
+	openexr
+	opus
+	postproc
+	portaudio
+	python
+	theora
+	vpx
+	xetex
 
 livecd/packages:
 	app-accessibility/brltty
@@ -23,7 +33,6 @@ livecd/packages:
 	app-arch/rpm
 	app-arch/zip
 	app-crypt/gnupg
-	app-crypt/signing-party
 	app-editors/kile
 	app-editors/mg
 	app-editors/nano
@@ -58,7 +67,6 @@ livecd/packages:
 	kde-apps/kompare
 	kde-misc/kdiff3
 	kde-plasma/plasma-meta
-	media-gfx/blender
 	media-gfx/digikam
 	media-gfx/engauge
 	media-gfx/gimp
@@ -67,14 +75,12 @@ livecd/packages:
 	media-gfx/hugin
 	media-gfx/inkscape
 	media-gfx/jhead
-	media-gfx/jpeg2ps
 	media-gfx/pngcrush
 	media-gfx/pngquant
 	media-gfx/povray
 	media-sound/alsa-utils
 	media-video/kaffeine
 	media-video/mplayer
-	media-video/obs-studio
 	net-analyzer/nmap
 	net-analyzer/tcpdump
 	net-analyzer/traceroute

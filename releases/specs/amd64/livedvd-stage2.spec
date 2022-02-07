@@ -10,7 +10,7 @@ portage_confdir: @REPO_DIR@/releases/portage/isos
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: livedvd-amd64-@TIMESTAMP@.iso
-livecd/type: gentoo-release-minimal
+livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo amd64 @TIMESTAMP@
 
 boot/kernel: gentoo
