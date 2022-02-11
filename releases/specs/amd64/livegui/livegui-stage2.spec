@@ -5,7 +5,7 @@ rel_type: default
 profile: default/linux/amd64/17.1/desktop/plasma
 snapshot: @TIMESTAMP@
 source_subpath: default/livecd-stage1-amd64-plasma-@TIMESTAMP@
-portage_confdir: @REPO_DIR@/releases/portage/isos
+portage_confdir: @REPO_DIR@/releases/portage/livegui
 
 livecd/bootargs: dokeymap overlayfs
 livecd/fstype: squashfs
