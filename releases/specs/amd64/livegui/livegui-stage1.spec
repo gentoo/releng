@@ -29,6 +29,7 @@ livecd/packages:
 	app-accessibility/brltty
 	app-accessibility/espeakup
 	app-admin/hddtemp
+	app-admin/sudo
 	app-admin/syslog-ng
 	app-admin/testdisk
 	app-arch/deb2targz
