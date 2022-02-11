@@ -15,6 +15,7 @@ livecd/use:
 	jpeg2k
 	livecd
 	modules
+	networkmanager
 	openexr
 	opus
 	postproc

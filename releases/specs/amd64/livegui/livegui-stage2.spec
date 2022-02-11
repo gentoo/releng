@@ -13,6 +13,10 @@ livecd/iso: livegui-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo amd64 LiveGUI @TIMESTAMP@
 
+livecd/fsscript: @REPO_DIR@/releases/specs/amd64/livegui/files/fsscript-stage2.sh
+livecd/rcadd: udev|sysinit udev-mount|sysinit acpid|default dbus|default gpm|default NetworkManager|default
+livecd/unmerge: net-misc/netifrc
+
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
