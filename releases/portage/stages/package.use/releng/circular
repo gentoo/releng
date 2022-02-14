@@ -1,2 +1,3 @@
 # this makes only a difference for the "desktop" stages
+dev-db/sqlite -icu
 dev-lang/python -bluetooth
