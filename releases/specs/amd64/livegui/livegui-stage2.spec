@@ -7,7 +7,7 @@ snapshot: @TIMESTAMP@
 source_subpath: default/livecd-stage1-amd64-plasma-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/livegui
 
-livecd/bootargs: dokeymap overlayfs
+livecd/bootargs: dokeymap overlayfs nodhcp
 livecd/fstype: squashfs
 livecd/iso: livegui-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-livecd
