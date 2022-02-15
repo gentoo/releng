@@ -47,6 +47,7 @@ livecd/packages:
 	app-editors/kile
 	app-editors/mg
 	app-editors/nano
+	app-editors/vim
 	app-eselect/eselect-repository
 	app-misc/livecd-tools
 	app-misc/mc
@@ -104,6 +105,7 @@ livecd/packages:
 	net-fs/cifs-utils
 	net-fs/nfs-utils
 	net-irc/irssi
+	net-irc/weechat
 	net-misc/chrony
 	net-misc/dhcpcd
 	net-misc/iputils
