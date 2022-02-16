@@ -95,7 +95,7 @@ livecd/packages:
 	media-gfx/povray
 	media-sound/alsa-utils
 	media-video/kaffeine
-	media-video/mplayer
+	media-video/mpv
 	net-analyzer/nmap
 	net-analyzer/tcpdump
 	net-analyzer/traceroute
