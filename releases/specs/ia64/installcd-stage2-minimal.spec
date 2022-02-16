@@ -5,7 +5,6 @@ rel_type: default
 profile: default/linux/ia64/17.0
 snapshot: @TIMESTAMP@
 source_subpath: default/livecd-stage1-ia64-@TIMESTAMP@
-compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
