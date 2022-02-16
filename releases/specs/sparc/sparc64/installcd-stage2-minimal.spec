@@ -18,6 +18,7 @@ boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/sparc/installcd-5.4.48.config
+boot/kernel/gentoo/console: ttyS0,9600 ttyS1,9600 ttyHV0,115200
 
 livecd/unmerge:
 	app-admin/eselect
