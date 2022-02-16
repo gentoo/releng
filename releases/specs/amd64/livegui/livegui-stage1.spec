@@ -20,6 +20,7 @@ livecd/use:
 	opus
 	postproc
 	portaudio
+	pulseaudio
 	python
 	theora
 	vpx
