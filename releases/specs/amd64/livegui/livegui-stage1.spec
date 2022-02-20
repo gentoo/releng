@@ -222,7 +222,6 @@ livecd/packages:
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/ddrescue
-	sys-fs/dislocker
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
