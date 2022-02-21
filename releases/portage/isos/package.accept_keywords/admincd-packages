@@ -1,4 +1,3 @@
 sys-block/lsiutil
 sys-block/megarc
 sys-fs/dislocker
-sys-fs/ext3grep

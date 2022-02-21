@@ -179,7 +179,6 @@ livecd/packages:
 	sys-fs/dmraid
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
-	sys-fs/ext3grep
 	sys-fs/exfat-utils
 	sys-fs/extundelete
 	sys-fs/f2fs-tools

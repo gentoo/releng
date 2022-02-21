@@ -226,7 +226,6 @@ livecd/packages:
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/exfat-utils
-	sys-fs/ext3grep
 	sys-fs/extundelete
 	sys-fs/fuse-exfat
 	sys-fs/f2fs-tools
