@@ -1,5 +1,6 @@
 subarch: rv64_lp64d
 target: stage1
+chost: riscv64-gentoo-linux-musl
 version_stamp: musl-@TIMESTAMP@
 interpreter: /usr/bin/qemu-riscv64
 rel_type: musl
