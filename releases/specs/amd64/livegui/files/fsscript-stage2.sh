@@ -33,8 +33,11 @@ echo "[Default Applications]
 text/html=firefox.desktop" > .config/mimeapps.list
 
 # Customize taskbar pinned apps
-wget "https://dev.gentoo.org/~bkohler/plasma-org.kde.plasma.desktop-appletsrc" -O \
+wget "https://dev.gentoo.org/~bkohler/livegui/plasma-org.kde.plasma.desktop-appletsrc" -O \
 	.config/plasma-org.kde.plasma.desktop-appletsrc
+
+# User face image
+wget "https://dev.gentoo.org/~bkohler/livegui/face.icon.png" -O .face.icon
 
 # Desktop icon setups
 #DESKTOP_APPS=( org.kde.konsole firefox org.kde.dolphin )
