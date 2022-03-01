@@ -48,3 +48,16 @@ wget "https://dev.gentoo.org/~bkohler/livegui/face.icon.png" -O .face.icon
 popd
 # Clean up perms
 chown -R gentoo:users /home/gentoo
+
+# Let some tools run as root
+echo "polkit.addRule(function(action, subject) {
+    if (action.id == "org.gnome.gparted") {
+        return polkit.Result.YES;
+    }
+});
+
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.kde.kpmcore.externalcommand.init") {
+        return polkit.Result.YES;
+    }
+});" > /etc/polkit-1/rules.d/livegui-root-tools.rules
