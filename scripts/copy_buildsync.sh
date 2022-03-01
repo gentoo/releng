@@ -16,7 +16,7 @@ ARCHES=(
 	arm64
 	hppa
 	ia64
-	#mips
+	mips
 	m68k
 	ppc
 	riscv
