@@ -21,3 +21,5 @@ boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/livegui-amd64-5.15.16.config
+
+boot/kernel/gentoo/packages: --usepkg n zfs zfs-kmod
