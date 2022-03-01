@@ -60,4 +60,10 @@ polkit.addRule(function(action, subject) {
     if (action.id == "org.kde.kpmcore.externalcommand.init") {
         return polkit.Result.YES;
     }
+});
+
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.udisks2.filesystem-mount-system") {
+        return polkit.Result.YES;
+    }
 });" > /etc/polkit-1/rules.d/livegui-root-tools.rules
