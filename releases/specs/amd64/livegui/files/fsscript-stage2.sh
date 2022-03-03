@@ -50,7 +50,7 @@ popd
 chown -R gentoo:users /home/gentoo
 
 # Let some tools run as root
-echo "polkit.addRule(function(action, subject) {
+echo 'polkit.addRule(function(action, subject) {
     if (action.id == "org.gnome.gparted") {
         return polkit.Result.YES;
     }
@@ -66,4 +66,4 @@ polkit.addRule(function(action, subject) {
     if (action.id == "org.freedesktop.udisks2.filesystem-mount-system") {
         return polkit.Result.YES;
     }
-});" > /etc/polkit-1/rules.d/livegui-root-tools.rules
+});' > /etc/polkit-1/rules.d/livegui-root-tools.rules
