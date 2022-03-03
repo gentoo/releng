@@ -5,7 +5,7 @@ interpreter: /usr/bin/qemu-mips
 rel_type: default
 profile: default/linux/mips/17.0/o32
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-mips32_o32-openrc-latest
+source_subpath: default/stage3-mips32-openrc-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2
 update_seed: yes
