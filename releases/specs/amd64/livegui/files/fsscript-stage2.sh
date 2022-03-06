@@ -45,6 +45,18 @@ wget "https://dev.gentoo.org/~bkohler/livegui/face.icon.png" -O .face.icon
 #	ln -sv /usr/share/applications/${i}.desktop Desktop/
 #done
 
+# Autostart keyboard layout module
+mkdir -p .config/autostart
+echo "[Desktop Entry]
+Version=1.0
+Name=Keyboard settings
+Icon=preferences-system
+Type=Application
+SingleMainWindow=true
+Exec=systemsettings kcm_keyboard
+Terminal=false
+" > .config/autostart/systemsettings-keyboard.desktop
+
 popd
 # Clean up perms
 chown -R gentoo:users /home/gentoo
