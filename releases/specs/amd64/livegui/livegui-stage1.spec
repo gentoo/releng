@@ -78,6 +78,7 @@ livecd/packages:
 	app-misc/tmux
 	app-misc/wipe
 	app-office/libreoffice
+	app-office/lyx
 	app-office/texstudio
 	app-officeext/texmaths
 	app-portage/eix
@@ -102,6 +103,8 @@ livecd/packages:
 	app-vim/gentoo-syntax
 	dev-lang/perl
 	dev-lang/python
+	dev-util/kdevelop
+	dev-util/kdevelop-python
 	dev-vcs/git
 	dev-vcs/kdesvn
 	dev-vcs/subversion
@@ -188,6 +191,7 @@ livecd/packages:
 	sys-apps/hwinfo
 	sys-apps/ipmitool
 	sys-apps/iproute2
+	sys-apps/inxi
 	sys-apps/less
 	sys-apps/man-db
 	sys-apps/man-pages
@@ -247,6 +251,7 @@ livecd/packages:
 	sys-process/iotop
 	sys-process/procps
 	sys-process/psmisc
+	www-client/chromium
 	www-client/firefox
 	www-client/links
 	x11-misc/sddm
