@@ -53,7 +53,7 @@ Name=Keyboard settings
 Icon=preferences-system
 Type=Application
 SingleMainWindow=true
-Exec=systemsettings kcm_keyboard
+Exec=systemsettings5 kcm_keyboard
 Terminal=false
 " > .config/autostart/systemsettings-keyboard.desktop
 
