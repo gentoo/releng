@@ -59,6 +59,7 @@ livecd/packages:
 	app-crypt/gnupg
 	app-crypt/pinentry
 	app-editors/emacs
+	app-editors/gedit
 	app-editors/ghex
 	app-editors/hexedit
 	app-editors/joe
@@ -144,7 +145,11 @@ livecd/packages:
 	net-fs/nfs-utils
 	net-ftp/ftp
 	net-ftp/ncftp
+	net-im/pidgin
+	net-irc/hexchat
 	net-irc/irssi
+	net-irc/kvirc
+	net-irc/quassel
 	net-irc/weechat
 	net-misc/chrony
 	net-misc/dhcpcd

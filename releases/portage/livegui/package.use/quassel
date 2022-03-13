@@ -1,0 +1,1 @@
+net-irc/quassel -crypt -monolithic server
