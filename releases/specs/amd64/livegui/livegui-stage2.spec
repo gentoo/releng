@@ -15,8 +15,6 @@ livecd/type: gentoo-release-livecd
 livecd/volid: Gentoo amd64 LiveGUI @TIMESTAMP@
 
 livecd/fsscript: @REPO_DIR@/releases/specs/amd64/livegui/files/fsscript-stage2.sh
-livecd/overlay: @REPO_DIR@/releases/specs/amd64/livegui/files/overlay
-livecd/root_overlay: @REPO_DIR@/releases/specs/amd64/livegui/files/root_overlay
 livecd/rcadd: udev|sysinit udev-mount|sysinit acpid|default dbus|default gpm|default NetworkManager|default
 livecd/unmerge: net-misc/netifrc
 
