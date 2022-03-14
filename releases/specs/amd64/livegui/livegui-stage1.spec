@@ -111,17 +111,14 @@ livecd/packages:
 	dev-vcs/subversion
 	kde-apps/k3b
 	kde-apps/kde-apps-meta
-	kde-apps/kdenlive
 	kde-apps/kipi-plugins
 	kde-apps/kompare
 	kde-misc/kdiff3
 	kde-plasma/plasma-meta
 	media-gfx/digikam
-	media-gfx/engauge
 	media-gfx/fbgrab
 	media-gfx/gimp
 	media-gfx/graphviz
-	media-gfx/hugin
 	media-gfx/inkscape
 	media-gfx/jhead
 	media-gfx/pngcrush
