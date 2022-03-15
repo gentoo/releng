@@ -66,7 +66,6 @@ livecd/packages:
 	app-editors/kile
 	app-editors/mg
 	app-editors/nano
-	app-editors/vim
 	app-emacs/ebuild-mode
 	app-emulation/cloud-init
 	app-emulation/xen-tools
@@ -109,7 +108,6 @@ livecd/packages:
 	dev-vcs/git
 	dev-vcs/kdesvn
 	dev-vcs/subversion
-	kde-apps/k3b
 	kde-apps/kde-apps-meta
 	kde-apps/kipi-plugins
 	kde-apps/kompare
@@ -118,12 +116,10 @@ livecd/packages:
 	media-gfx/digikam
 	media-gfx/fbgrab
 	media-gfx/gimp
-	media-gfx/graphviz
 	media-gfx/inkscape
 	media-gfx/jhead
 	media-gfx/pngcrush
 	media-gfx/pngquant
-	media-gfx/povray
 	media-sound/alsa-utils
 	media-video/mpv
 	net-analyzer/iptraf-ng
@@ -255,6 +251,5 @@ livecd/packages:
 	sys-process/psmisc
 	www-client/chromium
 	www-client/firefox
-	www-client/links
 	x11-misc/sddm
 

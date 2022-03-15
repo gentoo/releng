@@ -1,6 +1,6 @@
 # https://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers
 
-LINGUAS="en en-GB en-US zh zh-CN zh-TW hi es fr ar bn bn-IN ru pt ur id de jp mr te tr ta vi"
+LINGUAS="en en-GB en-US zh zh-CN zh-TW hi es fr ar bn bn-IN ru pt ur id de jp"
 
 L10N=${LINGUAS}
 
