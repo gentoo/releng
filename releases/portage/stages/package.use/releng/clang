@@ -1,0 +1,4 @@
+
+# clang from stage1 does not have openmp capability, so turn this off
+# here to avoid failures in stage3
+app-crypt/libb2 -openmp
