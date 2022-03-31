@@ -1,0 +1,3 @@
+# this is needed for qemu-m68k, otherwise make aborts with
+# "The futex facility returned an unknown value"
+dev-lang/python releng/singleproc
