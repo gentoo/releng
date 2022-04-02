@@ -42,7 +42,6 @@ livecd/packages:
 	app-arch/mt-st
 	app-arch/p7zip
 	app-arch/pbzip2
-	app-arch/rpm
 	app-arch/tar
 	app-arch/zip
 	app-arch/unrar
@@ -103,8 +102,6 @@ livecd/packages:
 	app-vim/gentoo-syntax
 	dev-lang/perl
 	dev-lang/python
-	dev-util/kdevelop
-	dev-util/kdevelop-python
 	dev-vcs/git
 	dev-vcs/kdesvn
 	dev-vcs/subversion
@@ -163,6 +160,7 @@ livecd/packages:
 	net-vpn/networkmanager-pptp
 	net-vpn/openfortivpn
 	net-vpn/openvpn
+	net-vpn/tor
 	net-wireless/b43-fwcutter
 	net-wireless/iw
 	net-wireless/wireless-tools
@@ -253,3 +251,5 @@ livecd/packages:
 	www-client/firefox
 	x11-misc/sddm
 
+livecd/empty:
+	/var/db/repos
