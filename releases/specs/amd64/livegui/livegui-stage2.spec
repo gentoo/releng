@@ -17,6 +17,9 @@ livecd/fsscript: @REPO_DIR@/releases/specs/amd64/livegui/files/fsscript-stage2.s
 livecd/rcadd: udev|sysinit udev-mount|sysinit acpid|default dbus|default gpm|default NetworkManager|default
 livecd/unmerge: net-misc/netifrc
 
+livecd/empty:
+	/var/db/repos
+
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources

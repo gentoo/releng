@@ -250,6 +250,3 @@ livecd/packages:
 	www-client/chromium
 	www-client/firefox
 	x11-misc/sddm
-
-livecd/empty:
-	/var/db/repos
