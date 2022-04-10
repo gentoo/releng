@@ -20,6 +20,8 @@ livecd/unmerge: net-misc/netifrc
 livecd/empty:
 	/var/db/repos
 
+livecd/gk_mainargs: --all-ramdisk-modules
+
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
