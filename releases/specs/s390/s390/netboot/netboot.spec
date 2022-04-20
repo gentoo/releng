@@ -19,6 +19,7 @@ boot/kernel/netboot/gk_kernargs:   --all-ramdisk-modules
 
 netboot2/use:
  -*
+ libtommath
  multicall
  shadow
  readline
