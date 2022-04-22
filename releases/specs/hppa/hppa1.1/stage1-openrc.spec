@@ -8,4 +8,5 @@ source_subpath: default/stage3-hppa1.1-openrc-latest
 update_seed: yes
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
-pkgcache_path: /var/tmp/catalyst/packages/default/stage1-hppa1.1
+compression_mode: pixz
+decompressor_search_order: xz bzip2
