@@ -10,3 +10,4 @@ portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
 compression_mode: pixz
 decompressor_search_order: xz bzip2
+update_seed_command: --update --deep --newuse @world
