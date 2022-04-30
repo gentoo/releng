@@ -18,7 +18,6 @@ boot/kernel/netboot64/config: ../../kconfig/netboot64.config
 boot/kernel/netboot64/gk_kernargs:   --all-ramdisk-modules
 
 netboot2/use:
- -*
  multicall
  shadow
  readline
