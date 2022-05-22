@@ -1,10 +1,10 @@
 subarch: s390
-version_stamp: @TIMESTAMP@
+version_stamp: openrc-@TIMESTAMP@
 target: stage1
 rel_type: default
 profile: default/linux/s390/17.0
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-s390-latest
+source_subpath: default/stage3-s390-openrc-latest
 update_seed: yes
 update_seed_command: --update --deep --newuse @world
 compression_mode: pixz
