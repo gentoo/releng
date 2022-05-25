@@ -1,5 +1,5 @@
 subarch: s390x
-version_stamp: @TIMESTAMP@-systemd
+version_stamp: systemd-@TIMESTAMP@
 target: stage3
 rel_type: default
 profile: default/linux/s390/17.0/s390x/systemd
