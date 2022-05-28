@@ -1,0 +1,1 @@
+MAKEOPTS="-j$(($(nproc)+1)) -l$(($(nproc)*2))"
