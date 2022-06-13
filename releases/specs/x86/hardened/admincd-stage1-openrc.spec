@@ -46,7 +46,7 @@ livecd/packages:
 	app-arch/tar
 	app-arch/unrar
 	app-arch/unzip
-	app-backup/duplicity
+#	app-backup/duplicity
 	app-benchmarks/bonnie
 	app-benchmarks/bonnie++
 	app-benchmarks/dbench
