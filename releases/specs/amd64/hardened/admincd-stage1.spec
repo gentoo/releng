@@ -163,6 +163,7 @@ livecd/packages:
 	sys-apps/smartmontools
 	sys-apps/usbutils
 	sys-apps/which
+	sys-auth/ssh-import-id
 	sys-block/aoetools
 	sys-block/fio
 	sys-block/mtx

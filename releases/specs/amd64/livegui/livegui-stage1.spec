@@ -216,6 +216,7 @@ livecd/packages:
 	sys-apps/which
 	sys-apps/usbutils
 	sys-apps/util-linux
+	sys-auth/ssh-import-id
 	sys-block/aoetools
 	sys-block/fio
 	sys-block/gparted
