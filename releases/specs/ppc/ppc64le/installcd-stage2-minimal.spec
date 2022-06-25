@@ -9,7 +9,7 @@ portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs 
-livecd/gk_mainargs: --makeopts=-j12 --all-ramdisk-modules --firmware
+livecd/gk_mainargs: --makeopts=-j12 --all-ramdisk-modules
 livecd/iso: install-ppc64le-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo ppc64le @TIMESTAMP@
