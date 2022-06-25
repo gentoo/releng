@@ -192,6 +192,7 @@ livecd/packages:
 	sys-apps/sg3_utils
 	sys-apps/slocate
 	sys-apps/smartmontools
+	sys-auth/ssh-import-id
 	sys-block/aoetools
 	sys-block/disktype
 	sys-block/gpart

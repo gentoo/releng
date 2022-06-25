@@ -78,6 +78,7 @@ livecd/packages:
 	sys-apps/pcmciautils
 	sys-apps/sdparm
 	sys-apps/usbutils
+	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-block/partimage
 	sys-fs/bcache-tools
