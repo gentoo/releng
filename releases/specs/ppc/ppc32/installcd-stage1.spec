@@ -61,6 +61,7 @@ livecd/packages:
 	sys-apps/pcmciautils
 	sys-apps/powerpc-utils
 	sys-apps/sdparm
+	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-boot/grub
 	sys-firmware/b43-firmware

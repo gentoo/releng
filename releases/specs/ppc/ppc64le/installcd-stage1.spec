@@ -75,6 +75,7 @@ livecd/packages:
 	sys-apps/opal-utils
 	sys-apps/sdparm
 	sys-apps/usbutils
+	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-boot/grub
 	sys-fs/bcache-tools
