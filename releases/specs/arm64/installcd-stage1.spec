@@ -78,6 +78,7 @@ livecd/packages:
 	#sys-apps/pcmciautils # needs keywording
 	#sys-apps/sdparm # needs keywording
 	sys-apps/usbutils
+	sys-auth/ssh-import-id
 	sys-block/parted
 	#sys-block/partimage # needs keywording
 	#sys-firmware/ipw2100-firmware # needs keywording
