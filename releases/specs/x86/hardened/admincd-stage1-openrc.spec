@@ -46,6 +46,7 @@ livecd/packages:
 	app-arch/tar
 	app-arch/unrar
 	app-arch/unzip
+# remove duplicity until rust/sse2 situation is resolved	
 #	app-backup/duplicity
 	app-benchmarks/bonnie
 	app-benchmarks/bonnie++
@@ -62,7 +63,8 @@ livecd/packages:
 	app-editors/nano
 	app-editors/vim
 	app-emacs/ebuild-mode
-	app-emulation/cloud-init
+# remove clout-init until rust/sse2 situation is resolved
+#	app-emulation/cloud-init
 	app-emulation/xen-tools
 	app-misc/colordiff
 	app-misc/livecd-tools
