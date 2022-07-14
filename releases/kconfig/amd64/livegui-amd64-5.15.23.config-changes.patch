@@ -1,8 +1,6 @@
-diff --git a/releases/kconfig/amd64/livegui-amd64-5.15.23.config b/releases/kconfig/amd64/livegui-amd64-5.15.23.config
-index 93bc862c..42e322cd 100644
---- a/releases/kconfig/amd64/livegui-amd64-5.15.23.config
-+++ b/releases/kconfig/amd64/livegui-amd64-5.15.23.config
-@@ -2395,8 +2395,8 @@ CONFIG_ZRAM_DEF_COMP_LZORLE=y
+---- a/releases/kconfig/amd64/livegui-amd64-5.15.23.config
+-+++ b/releases/kconfig/amd64/livegui-amd64-5.15.23.config
+@@ -2395,8 +2395,8 @@
  CONFIG_ZRAM_DEF_COMP="lzo-rle"
  # CONFIG_ZRAM_WRITEBACK is not set
  # CONFIG_ZRAM_MEMORY_TRACKING is not set
@@ -13,7 +11,7 @@ index 93bc862c..42e322cd 100644
  # CONFIG_BLK_DEV_CRYPTOLOOP is not set
  CONFIG_BLK_DEV_DRBD=m
  # CONFIG_DRBD_FAULT_INJECTION is not set
-@@ -6874,7 +6874,7 @@ CONFIG_USB_TMC=m
+@@ -6874,7 +6874,7 @@
  #
  # also be needed; see USB_STORAGE Help for more info
  #
@@ -22,7 +20,7 @@ index 93bc862c..42e322cd 100644
  # CONFIG_USB_STORAGE_DEBUG is not set
  CONFIG_USB_STORAGE_REALTEK=m
  CONFIG_REALTEK_AUTOPM=y
-@@ -8715,7 +8715,7 @@ CONFIG_FUSE_FS=m
+@@ -8715,7 +8715,7 @@
  CONFIG_CUSE=m
  CONFIG_VIRTIO_FS=m
  CONFIG_FUSE_DAX=y
@@ -31,7 +29,7 @@ index 93bc862c..42e322cd 100644
  # CONFIG_OVERLAY_FS_REDIRECT_DIR is not set
  CONFIG_OVERLAY_FS_REDIRECT_ALWAYS_FOLLOW=y
  # CONFIG_OVERLAY_FS_INDEX is not set
-@@ -8737,7 +8737,7 @@ CONFIG_CACHEFILES=m
+@@ -8737,7 +8737,7 @@
  #
  # CD-ROM/DVD Filesystems
  #
@@ -40,7 +38,7 @@ index 93bc862c..42e322cd 100644
  CONFIG_JOLIET=y
  CONFIG_ZISOFS=y
  CONFIG_UDF_FS=m
-@@ -8748,7 +8748,7 @@ CONFIG_UDF_FS=m
+@@ -8748,7 +8748,7 @@
  #
  CONFIG_FAT_FS=m
  CONFIG_MSDOS_FS=m
@@ -49,7 +47,16 @@ index 93bc862c..42e322cd 100644
  CONFIG_FAT_DEFAULT_CODEPAGE=437
  CONFIG_FAT_DEFAULT_IOCHARSET="ascii"
  # CONFIG_FAT_DEFAULT_UTF8 is not set
-@@ -8825,7 +8825,7 @@ CONFIG_UBIFS_FS_AUTHENTICATION=y
+@@ -8756,7 +8756,7 @@
+ CONFIG_EXFAT_FS=m
+ CONFIG_EXFAT_DEFAULT_IOCHARSET="utf8"
+ # CONFIG_NTFS_FS is not set
+-CONFIG_NTFS3_FS=m
++CONFIG_NTFS3_FS=y
+ # CONFIG_NTFS3_64BIT_CLUSTER is not set
+ CONFIG_NTFS3_LZX_XPRESS=y
+ CONFIG_NTFS3_FS_POSIX_ACL=y
+@@ -8825,7 +8825,7 @@
  CONFIG_CRAMFS=m
  CONFIG_CRAMFS_BLOCKDEV=y
  # CONFIG_CRAMFS_MTD is not set
