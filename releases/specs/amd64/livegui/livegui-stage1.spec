@@ -105,7 +105,8 @@ livecd/packages:
 	dev-lang/perl
 	dev-lang/python
 	dev-util/kdevelop
-	dev-util/kdevelop-python
+#	Gone until it supports python3_10
+#	dev-util/kdevelop-python
 	dev-vcs/git
 	dev-vcs/kdesvn
 	dev-vcs/subversion
