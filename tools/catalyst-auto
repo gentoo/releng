@@ -61,7 +61,7 @@ send_email() {
 	local body
 
 	if [ -n "${logfile}" ]; then
-		body=$(printf '%b\n\n\n' "${message}"; tail -n 200 "${logfile}"; printf '\n\n\nFull build log at %s\n' "${logfile}")
+		body=$(printf '%b\n\n\n' "${message}"; tail -n 1000 "${logfile}"; printf '\n\n\nFull build log at %s\n' "${logfile}")
 	else
 		body=${message}
 	fi
