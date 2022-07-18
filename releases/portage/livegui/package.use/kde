@@ -1,1 +1,3 @@
 kde-apps/kde-apps-meta pim -education -games
+#for www-client/falkon
+dev-python/pyside2 webengine
