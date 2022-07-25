@@ -209,7 +209,6 @@ livecd/rm:
 	/usr/bin/portageq
 	/usr/bin/ranlib
 	/usr/bin/readelf
-	/usr/bin/repoman
 	/usr/bin/size
 	/usr/bin/sparc-unknown-linux-gnu-*
 	/usr/bin/sparc64-unknown-linux-gnu-*

@@ -256,7 +256,6 @@ livecd/rm:
 	/usr/bin/portageq
 	/usr/bin/ranlib
 	/usr/bin/readelf
-	/usr/bin/repoman
 	/usr/bin/size
 	/usr/bin/powerpc-unknown-linux-gnu-*
 	/usr/bin/powerpc64-unknown-linux-gnu-*

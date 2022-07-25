@@ -199,7 +199,6 @@ livecd/rm:
 	/usr/bin/portageq
 	/usr/bin/ranlib
 	/usr/bin/readelf
-	/usr/bin/repoman
 	/usr/bin/size
 	/usr/bin/strip
 	/usr/bin/tbz2tool
