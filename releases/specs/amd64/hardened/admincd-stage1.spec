@@ -71,6 +71,7 @@ livecd/packages:
 	app-misc/pax-utils
 	app-misc/screen
 	app-misc/tmux
+	app-portage/cpuid2cpuflags
 	app-portage/eix
 	app-portage/gentoolkit
 	app-portage/mirrorselect

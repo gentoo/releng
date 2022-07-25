@@ -40,6 +40,7 @@ livecd/packages:
 	app-misc/livecd-tools
 	app-misc/screen
 	app-misc/tmux
+	app-portage/cpuid2cpuflags
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	net-analyzer/tcptraceroute

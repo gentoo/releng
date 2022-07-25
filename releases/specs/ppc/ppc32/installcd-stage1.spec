@@ -32,6 +32,7 @@ livecd/packages:
 	app-laptop/pbbuttonsd
 	app-misc/livecd-tools
 	app-misc/screen
+	app-portage/cpuid2cpuflags
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	net-analyzer/tcptraceroute

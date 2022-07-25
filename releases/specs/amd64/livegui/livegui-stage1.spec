@@ -82,6 +82,7 @@ livecd/packages:
 	app-office/lyx
 	app-office/texstudio
 	app-officeext/texmaths
+	app-portage/cpuid2cpuflags
 	app-portage/eix
 	app-portage/genlop
 	app-portage/gentoolkit
