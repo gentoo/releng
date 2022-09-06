@@ -1,2 +1,1 @@
-app-text/texlive cjk luatex science publishers xetex
-app-text/texlive-core cjk
+app-text/texlive luatex science publishers xetex
