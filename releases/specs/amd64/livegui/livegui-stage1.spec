@@ -88,7 +88,6 @@ livecd/packages:
 	app-portage/mirrorselect
 	app-portage/portage-utils
 	app-portage/pram
-	app-portage/repoman
 	app-portage/ufed
 	app-shells/bash-completion
 	app-shells/gentoo-bashcomp
