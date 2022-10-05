@@ -1,10 +1,10 @@
 subarch: amd64
 target: stage3
-version_stamp: clang-openrc-@TIMESTAMP@
+version_stamp: llvm-openrc-@TIMESTAMP@
 rel_type: clang
 profile: default/linux/amd64/17.1/clang
 snapshot: @TIMESTAMP@
-source_subpath: clang/stage1-amd64-clang-openrc-@TIMESTAMP@
+source_subpath: clang/stage1-amd64-llvm-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
