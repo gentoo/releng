@@ -1,0 +1,11 @@
+subarch: loong
+version_stamp: openrc-@TIMESTAMP@
+target: stage3
+rel_type: default
+profile: default/linux/loong/22.0/la64v100/lp64d
+snapshot: @TIMESTAMP@
+source_subpath: default/stage1-loong-openrc-@TIMESTAMP@
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
+portage_prefix: releng
+interpreter: /usr/bin/qemu-loongarch64
