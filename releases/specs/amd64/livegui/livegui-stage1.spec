@@ -151,6 +151,7 @@ livecd/packages:
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/ndisc6
+	net-misc/ntp
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rdesktop
