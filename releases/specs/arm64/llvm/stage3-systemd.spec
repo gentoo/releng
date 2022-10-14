@@ -1,0 +1,10 @@
+subarch: arm64
+target: stage3
+version_stamp: llvm-systemd-@TIMESTAMP@
+rel_type: llvm
+profile: default/linux/arm64/17.0/systemd/llvm
+snapshot: @TIMESTAMP@
+source_subpath: llvm/stage1-arm64-llvm-systemd-@TIMESTAMP@.tar.xz
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
