@@ -36,6 +36,7 @@ netboot/use:
  readline
  ssl
  unicode
+ xml
 
 netboot/packages:
 	sys-boot/palo

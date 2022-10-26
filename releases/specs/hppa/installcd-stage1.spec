@@ -25,6 +25,7 @@ livecd/use:
 	openssl
 	curl_ssl_openssl
 	unicode
+	xml
 
 livecd/packages:
 	app-admin/hddtemp

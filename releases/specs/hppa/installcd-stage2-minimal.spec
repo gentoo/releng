@@ -69,6 +69,7 @@ boot/kernel/hppa64/use:
 	truetype
 	unicode
 	usb
+	xml
 
 boot/kernel/hppa32/extraversion: hppa32
 boot/kernel/hppa64/extraversion: hppa64
