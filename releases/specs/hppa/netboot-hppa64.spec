@@ -28,8 +28,8 @@ boot/kernel/hppa64/gk_kernargs:
 
 netboot/use:
  -*
- python_targets_python3_9
- python_single_target_python3_9
+ python_targets_python3_10
+ python_single_target_python3_10
  libtommath # dropbear requires libtomcrypt[libtommath]
  multicall
  shadow
