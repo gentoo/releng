@@ -24,7 +24,6 @@ livecd/use:
 	readline
 	socks5
 	ssl
-	symlink
 	unicode
 	xml
 
