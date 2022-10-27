@@ -14,10 +14,12 @@ livecd/use:
 	ipv6
 	livecd
 	ncurses
+	nls
 	pam
 	readline
 	socks5
 	ssl
+	unicode
 	xml
 
 livecd/packages:
