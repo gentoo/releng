@@ -20,7 +20,6 @@ livecd/use:
 	readline
 	socks5
 	ssl
-	-static
 	unicode
 	xml
 
