@@ -9,7 +9,6 @@ source_subpath: default/stage3-arm64-@TIMESTAMP@
 #portage_confdir: @REPO_DIR@/releases/portage/isos
 
 stage4/use:
-	bindist
 	bzip2
 	idm
 	ipv6
