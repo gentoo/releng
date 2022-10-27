@@ -15,6 +15,7 @@ livecd/use:
 	livecd
 	ncurses
 	nls
+	nptl
 	pam
 	readline
 	socks5
