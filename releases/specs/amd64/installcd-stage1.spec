@@ -12,17 +12,10 @@ livecd/use:
 	alsa
 	compile-locales
 	fbcon
-	ipv6
 	livecd
 	modules
-	ncurses
-	nls
-	nptl
-	pam
 	portaudio
-	readline
 	socks5
-	ssl
 	unicode
 	xml
 

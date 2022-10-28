@@ -14,17 +14,10 @@ livecd/use:
 	compile-locales
 	fbcon
 	filecaps
-	ipv6
 	livecd
 	modules
-	ncurses
-	nls
-	nptl
-	pam
 	portaudio
-	readline
 	socks5
-	ssl
 	unicode
 	xml
 

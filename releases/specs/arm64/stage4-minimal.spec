@@ -11,7 +11,6 @@ source_subpath: default/stage3-arm64-@TIMESTAMP@
 stage4/use:
 	bzip2
 	idm
-	ipv6
 	urandom
 
 stage4/packages:

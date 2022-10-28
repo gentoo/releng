@@ -11,15 +11,8 @@ compression_mode: pixz
 livecd/use:
 	compile-locales
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
-	readline
 	socks5
-	ssl
 	unicode
 	xml
 

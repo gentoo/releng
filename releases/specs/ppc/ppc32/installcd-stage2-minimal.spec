@@ -26,16 +26,9 @@ boot/kernel/ibmpower/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf6
 boot/kernel/ibmpower/use:
 	atm
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
 	png
-	readline
 	socks5
-	ssl
 	truetype
 	unicode
 	usb
@@ -49,16 +42,9 @@ boot/kernel/ppc64/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64pp
 boot/kernel/ppc64/use:
 	atm
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
 	png
-	readline
 	socks5
-	ssl
 	truetype
 	unicode
 	usb
@@ -70,16 +56,9 @@ boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use:
 	atm
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
 	png
-	readline
 	socks5
-	ssl
 	truetype
 	unicode
 	usb

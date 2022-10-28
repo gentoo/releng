@@ -8,21 +8,10 @@ source_subpath: default/stage3-hppa1.1-openrc-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage1
 portage_confdir: @REPO_DIR@/releases/portage/isos
 livecd/use:
-	python_targets_python3_10
-	python_single_target_python3_10
 	compile-locales
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
-	readline
 	socks5
-	ssl
-	openssl
-	curl_ssl_openssl
 	unicode
 	xml
 

@@ -24,16 +24,9 @@ boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-4.14.83.config
 boot/kernel/gentoo/use:
 	atm
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
 	png
-	readline
 	socks5
-	ssl
 	truetype
 	unicode
 	usb
@@ -43,16 +36,9 @@ boot/kernel/gentoo_nolsa/config: ../../kconfig/alpha/installcd-4.14.83.nolsa.con
 boot/kernel/gentoo_nolsa/use:
 	atm
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
 	png
-	readline
 	socks5
-	ssl
 	truetype
 	unicode
 	usb

@@ -22,16 +22,9 @@ boot/kernel/gentoo/console: ttyS0,9600 ttyS3,9600 ttySG0,115200
 boot/kernel/gentoo/use:
 	atm
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
 	png
-	readline
 	socks5
-	ssl
 	truetype
 	unicode
 	usb

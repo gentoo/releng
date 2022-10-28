@@ -11,15 +11,8 @@ portage_confdir: @REPO_DIR@/releases/portage/isos
 livecd/use:
 	compile-locales
 	fbcon
-	ipv6
 	livecd
-	ncurses
-	nls
-	nptl
-	pam
-	readline
 	socks5
-	ssl
 	unicode
 	xml
 
