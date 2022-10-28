@@ -12,7 +12,6 @@ livecd/use:
 	compile-locales
 	fbcon
 	livecd
-	modules
 # needs broken dante
 #	socks5
 	unicode

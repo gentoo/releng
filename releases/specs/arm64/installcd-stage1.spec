@@ -13,7 +13,6 @@ livecd/use:
 	compile-locales
 	fbcon
 	livecd
-	modules
 	portaudio
 	socks5
 	unicode

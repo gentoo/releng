@@ -15,7 +15,6 @@ livecd/use:
 	fbcon
 	filecaps
 	livecd
-	modules
 	portaudio
 	socks5
 	unicode

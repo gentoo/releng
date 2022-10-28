@@ -14,7 +14,6 @@ livecd/use:
 	fbcon
 	jpeg2k
 	livecd
-	modules
 	networkmanager
 	openexr
 	opus

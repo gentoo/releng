@@ -12,7 +12,6 @@ livecd/use:
 	compile-locales
 	fbcon
 	livecd
-	modules
 	socks5
 	unicode
 	xml
