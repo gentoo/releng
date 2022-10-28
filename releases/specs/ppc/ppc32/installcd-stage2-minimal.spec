@@ -24,7 +24,6 @@ boot/kernel/ibmpower/console: ttyS0,9600 hvc0 hvsi0
 boot/kernel/ibmpower/extraversion: ibm
 boot/kernel/ibmpower/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64ppc' --kernel-as='as -a64'
 boot/kernel/ibmpower/use:
-	-*
 	atm
 	fbcon
 	ipv6
@@ -48,7 +47,6 @@ boot/kernel/ppc64/console: ttyS0,57600
 boot/kernel/ppc64/extraversion: ppc64
 boot/kernel/ppc64/gk_kernargs: --kernel-cc='gcc -m64' --kernel-ld='ld -m elf64ppc' --kernel-as='as -a64'
 boot/kernel/ppc64/use:
-	-*
 	atm
 	fbcon
 	ipv6
@@ -70,7 +68,6 @@ boot/kernel/ppc32/sources: sys-kernel/gentoo-sources
 boot/kernel/ppc32/config: ../../../kconfig/powerpc/ppc32.config
 boot/kernel/ppc32/extraversion: ppc32
 boot/kernel/ppc32/use:
-	-*
 	atm
 	fbcon
 	ipv6

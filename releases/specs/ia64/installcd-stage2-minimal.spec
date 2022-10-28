@@ -20,7 +20,6 @@ boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: ../../kconfig/ia64/installcd-3.8.13.config
 boot/kernel/gentoo/console: ttyS0,9600 ttyS3,9600 ttySG0,115200
 boot/kernel/gentoo/use:
-	-*
 	atm
 	fbcon
 	ipv6

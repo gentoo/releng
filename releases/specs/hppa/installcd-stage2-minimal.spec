@@ -19,7 +19,6 @@ boot/kernel: hppa32 hppa64
 boot/kernel/hppa32/sources: sys-kernel/gentoo-sources
 boot/kernel/hppa32/config: @REPO_DIR@/releases/kconfig/hppa/hppa32.config
 boot/kernel/hppa32/use:
-	-*
 	python_targets_python3_10
 	python_single_target_python3_10
 	fbcon
@@ -52,7 +51,6 @@ boot/kernel/hppa64/gk_kernargs:
 	--kernel-readelf=hppa64-unknown-linux-gnu-readelf
 	--kernel-strip=hppa64-unknown-linux-gnu-strip
 boot/kernel/hppa64/use:
-	-*
 	python_targets_python3_10
 	python_single_target_python3_10
 	fbcon

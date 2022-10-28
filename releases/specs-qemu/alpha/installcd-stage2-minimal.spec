@@ -22,7 +22,6 @@ boot/kernel: gentoo gentoo_nolsa
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-4.14.83.config
 boot/kernel/gentoo/use:
-	-*
 	atm
 	fbcon
 	ipv6
@@ -42,7 +41,6 @@ boot/kernel/gentoo/use:
 boot/kernel/gentoo_nolsa/sources: gentoo-sources
 boot/kernel/gentoo_nolsa/config: ../../kconfig/alpha/installcd-4.14.83.nolsa.config
 boot/kernel/gentoo_nolsa/use:
-	-*
 	atm
 	fbcon
 	ipv6
