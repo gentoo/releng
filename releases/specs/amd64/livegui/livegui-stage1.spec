@@ -110,7 +110,6 @@ livecd/packages:
 	dev-vcs/subversion
 	kde-apps/k3b
 	kde-apps/kde-apps-meta
-	kde-apps/kipi-plugins
 	kde-apps/kompare
 	kde-misc/kdiff3
 	kde-plasma/plasma-meta
