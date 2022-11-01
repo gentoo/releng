@@ -9,7 +9,6 @@ compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/use:
-	-introspection
 	alsa
 	compile-locales
 	fbcon
