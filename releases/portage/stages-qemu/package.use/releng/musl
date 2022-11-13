@@ -1,0 +1,4 @@
+# we want crypt support within/provided by musl by default
+# if we didn't have it we would need libxcrypt[system] already
+# in stage1
+sys-libs/musl crypt
