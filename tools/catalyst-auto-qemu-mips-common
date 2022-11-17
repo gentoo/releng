@@ -7,7 +7,7 @@ SPECS_DIR=${REPO_DIR}/releases/specs-qemu/mips
 EMAIL_SUBJECT_PREPEND="[mips-qemu-auto]"
 
 SETS_BE="mips2o32openrc mips32o32openrc mips3n32openrc mips3multilibopenrc mips3n64openrc mips64n32openrc mips64multilibopenrc mips64n64openrc"
-SETS_LE="mipsel2o32openrc mips32elo32openrc mipsel3o32openrc mipsel3n32openrc mipsel3multilibopenrc mipsel3n64openrc mipsel3n64systemd mips64eln32openrc mips64elmultilibopenrc mips64eln64openrc mips64eln64systemd"
+SETS_LE="mipsel2o32openrc mips32elo32openrc mipsel3o32openrc mipsel3n32openrc mipsel3multilibopenrc mipsel3n64openrc mipsel3n64systemd mipsel3n64systemd_mu mips64eln32openrc mips64elmultilibopenrc mips64eln64openrc mips64eln64systemd mips64eln64systemd_mu"
 
 # SETS="${SETS_BE} ${SETS_LE}"
 
@@ -27,7 +27,10 @@ SET_mipsel3multilibopenrc_SPECS="stage1-mipsel3-multilib-openrc.spec stage3-mips
 
 SET_mips3n64openrc_SPECS="stage1-mips3-n64-openrc.spec stage3-mips3-n64-openrc.spec"
 SET_mipsel3n64openrc_SPECS="stage1-mipsel3-n64-openrc.spec stage3-mipsel3-n64-openrc.spec"
+
 SET_mipsel3n64systemd_SPECS="stage1-mipsel3-n64-systemd.spec stage3-mipsel3-n64-systemd.spec"
+
+SET_mipsel3n64systemd_mu_SPECS="stage1-mipsel3-n64-systemd-mu.spec stage3-mipsel3-n64-systemd-mu.spec"
 
 SET_mips64n32openrc_SPECS="stage1-mips64-n32-openrc.spec stage3-mips64-n32-openrc.spec"
 SET_mips64eln32openrc_SPECS="stage1-mips64el-n32-openrc.spec stage3-mips64el-n32-openrc.spec"
@@ -37,7 +40,10 @@ SET_mips64elmultilibopenrc_SPECS="stage1-mips64el-multilib-openrc.spec stage3-mi
 
 SET_mips64n64openrc_SPECS="stage1-mips64-n64-openrc.spec stage3-mips64-n64-openrc.spec"
 SET_mips64eln64openrc_SPECS="stage1-mips64el-n64-openrc.spec stage3-mips64el-n64-openrc.spec"
+
 SET_mips64eln64systemd_SPECS="stage1-mips64el-n64-systemd.spec stage3-mips64el-n64-systemd.spec"
+
+SET_mips64eln64systemd_mu_SPECS="stage1-mips64el-n64-systemd-mu.spec stage3-mips64el-n64-systemd-mu.spec"
 
 KCONFIG_DIR=${REPO_DIR}/releases/kconfig/mips
 
@@ -97,6 +103,9 @@ post_build() {
 	stage3-mipsel3-n64-systemd.spec)
 		upload stage3-mipsel3_n64-systemd-${TIMESTAMP}.tar.xz*
 		;;
+	stage3-mipsel3-n64-systemd-mu.spec)
+		upload stage3-mipsel3_n64-systemd-mergedusr-${TIMESTAMP}.tar.xz*
+		;;
 	stage3-mips64-n32-openrc.spec)
 		upload stage3-mips64_n32-openrc-${TIMESTAMP}.tar.xz*
 		;;
@@ -117,6 +126,9 @@ post_build() {
 		;;
 	stage3-mips64el-n64-systemd.spec)
 		upload stage3-mips64el_n64-systemd-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mips64el-n64-systemd-mu.spec)
+		upload stage3-mips64el_n64-systemd-mergedusr-${TIMESTAMP}.tar.xz*
 		;;
 	*)
 		echo "Finished ${spec}"
