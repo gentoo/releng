@@ -1,0 +1,10 @@
+subarch: ppc
+target: stage3
+version_stamp: systemd-mergedusr-@TIMESTAMP@
+rel_type: default
+profile: default/linux/ppc/17.0/systemd/merged-usr
+snapshot: @TIMESTAMP@
+source_subpath: default/stage1-ppc-systemd-mergedusr-@TIMESTAMP@
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
