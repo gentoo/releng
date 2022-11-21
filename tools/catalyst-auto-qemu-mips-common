@@ -73,8 +73,14 @@ post_build() {
 	stage3-mips2-o32-openrc.spec)
 		upload stage3-mips2-openrc-${TIMESTAMP}.tar.xz*
 		;;
+	stage3-mips2-o32-systemd.spec)
+		upload stage3-mips2-systemd-${TIMESTAMP}.tar.xz*
+		;;
 	stage3-mipsel2-o32-openrc.spec)
 		upload stage3-mipsel2-openrc-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mipsel2-o32-systemd.spec)
+		upload stage3-mipsel2-systemd-${TIMESTAMP}.tar.xz*
 		;;
 	stage3-mips32-o32-openrc.spec)
 		upload stage3-mips32-openrc-${TIMESTAMP}.tar.xz*
