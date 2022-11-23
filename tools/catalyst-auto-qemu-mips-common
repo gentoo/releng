@@ -7,7 +7,8 @@ SPECS_DIR=${REPO_DIR}/releases/specs-qemu/mips
 EMAIL_SUBJECT_PREPEND="[mips-qemu-auto]"
 
 SETS_BE="mips2_o32_openrc mips2_o32_systemd mips3n32openrc mips3multilibopenrc mips3n64openrc mips64n32openrc mips64multilibopenrc mips64n64openrc"
-SETS_LE="mipsel2_o32_openrc mipsel2_o32_systemd mipsel3o32openrc mipsel3n32openrc mipsel3multilibopenrc mipsel3n64openrc mipsel3n64systemd mipsel3n64systemd_mu mips64eln32openrc mips64elmultilibopenrc mips64eln64openrc mips64eln64systemd mips64eln64systemd_mu"
+
+SETS_LE="mipsel2_o32_openrc mipsel2_o32_systemd mipsel3_o32_openrc mipsel3_o32_systemd mipsel3n32openrc mipsel3multilibopenrc mipsel3n64openrc mipsel3n64systemd mipsel3n64systemd_mu mips64eln32openrc mips64elmultilibopenrc mips64eln64openrc mips64eln64systemd mips64eln64systemd_mu"
 
 # SETS="${SETS_BE} ${SETS_LE}"
 
@@ -20,7 +21,8 @@ SET_mipsel2_o32_systemd_SPECS="stage1-mipsel2-o32-systemd.spec stage3-mipsel2-o3
 # SET_mips32o32openrc_SPECS="stage1-mips32-o32-openrc.spec stage3-mips32-o32-openrc.spec"
 # SET_mips32elo32openrc_SPECS="stage1-mips32el-o32-openrc.spec stage3-mips32el-o32-openrc.spec"
 
-SET_mipsel3o32openrc_SPECS="stage1-mipsel3-o32-openrc.spec stage3-mipsel3-o32-openrc.spec"
+SET_mipsel3_o32_openrc_SPECS="stage1-mipsel3-o32-openrc.spec stage3-mipsel3-o32-openrc.spec"
+SET_mipsel3_o32_systemd_SPECS="stage1-mipsel3-o32-systemd.spec stage3-mipsel3-o32-systemd.spec"
 
 SET_mips3n32openrc_SPECS="stage1-mips3-n32-openrc.spec stage3-mips3-n32-openrc.spec"
 SET_mipsel3n32openrc_SPECS="stage1-mipsel3-n32-openrc.spec stage3-mipsel3-n32-openrc.spec"
@@ -90,6 +92,9 @@ post_build() {
 		;;
 	stage3-mipsel3-o32-openrc.spec)
 		upload stage3-mipsel3-openrc-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mipsel3-o32-systemd.spec)
+		upload stage3-mipsel3-systemd-${TIMESTAMP}.tar.xz*
 		;;
 	stage3-mips3-n32-openrc.spec)
 		upload stage3-mips3_n32-openrc-${TIMESTAMP}.tar.xz*
