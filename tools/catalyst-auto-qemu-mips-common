@@ -54,7 +54,7 @@ KCONFIG_DIR=${REPO_DIR}/releases/kconfig/mips
 update_symlinks() {
 	# Symlink the latest stages3 to build from
 	local d f
-	for d in "${BUILD_SRCDIR_BASE}/builds/default" ; do
+	for d in "${BUILD_SRCDIR_BASE}/builds/default" "${BUILD_SRCDIR_BASE}/builds/mergedusr" ; do
 		mkdir -p "${d}"
 		pushd "${d}" >/dev/null
 		for f in $(ls stage3*xz | grep -v latest | give_latest_from_dates) ; do
@@ -69,7 +69,6 @@ post_build() {
 	local set=$1 spec=$2
 
 	pushd "${BUILD_SRCDIR_BASE}/builds/default" >/dev/null
-
 	case ${spec} in
 	stage3-mips2-o32-openrc.spec)
 		upload stage3-mips2-openrc-${TIMESTAMP}.tar.xz*
@@ -113,9 +112,6 @@ post_build() {
 	stage3-mipsel3-n64-systemd.spec)
 		upload stage3-mipsel3_n64-systemd-${TIMESTAMP}.tar.xz*
 		;;
-	stage3-mipsel3-n64-systemd-mu.spec)
-		upload stage3-mipsel3_n64-systemd-mergedusr-${TIMESTAMP}.tar.xz*
-		;;
 	stage3-mips64-n32-openrc.spec)
 		upload stage3-mips64_n32-openrc-${TIMESTAMP}.tar.xz*
 		;;
@@ -137,13 +133,17 @@ post_build() {
 	stage3-mips64el-n64-systemd.spec)
 		upload stage3-mips64el_n64-systemd-${TIMESTAMP}.tar.xz*
 		;;
+	esac
+	popd >/dev/null
+
+	pushd "${BUILD_SRCDIR_BASE}/builds/mergedusr" >/dev/null
+	case ${spec} in
+	stage3-mipsel3-n64-systemd-mu.spec)
+		upload stage3-mipsel3_n64-systemd-mergedusr-${TIMESTAMP}.tar.xz*
+		;;
 	stage3-mips64el-n64-systemd-mu.spec)
 		upload stage3-mips64el_n64-systemd-mergedusr-${TIMESTAMP}.tar.xz*
 		;;
-	*)
-		echo "Finished ${spec}"
-		;;
 	esac
-
 	popd >/dev/null
 }
