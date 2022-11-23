@@ -1,10 +1,10 @@
 subarch: m68k
 version_stamp: systemd-mergedusr-@TIMESTAMP@
 target: stage1
-rel_type: default
+rel_type: mergedusr
 profile: default/linux/m68k/17.0/systemd/merged-usr
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-m68k-systemd-mergedusr-latest
+source_subpath: mergedusr/stage3-m68k-systemd-mergedusr-latest
 compression_mode: pixz
 update_seed: no
 update_seed_command: -uDN @world
