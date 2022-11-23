@@ -1,10 +1,10 @@
 subarch: hppa1.1
 target: stage1
 version_stamp: systemd-mergedusr-@TIMESTAMP@
-rel_type: default
+rel_type: mergedusr
 profile: default/linux/hppa/17.0/systemd/merged-usr
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-hppa1.1-systemd-mergedusr-latest
+source_subpath: mergedusr/stage3-hppa1.1-systemd-mergedusr-latest
 update_seed: no
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
