@@ -1,10 +1,10 @@
 subarch: s390x
 version_stamp: systemd-mergedusr-@TIMESTAMP@
 target: stage1
-rel_type: default
+rel_type: mergedusr
 profile: default/linux/s390/17.0/s390x/systemd/merged-usr
 snapshot: @TIMESTAMP@
-source_subpath: default/stage3-s390x-systemd-mergedusr-latest
+source_subpath: mergedusr/stage3-s390x-systemd-mergedusr-latest
 update_seed: no
 update_seed_command: --update --deep --newuse @world
 compression_mode: pixz
