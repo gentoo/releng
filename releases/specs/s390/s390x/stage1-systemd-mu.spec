@@ -9,4 +9,3 @@ update_seed: no
 update_seed_command: --update --deep --newuse @world
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
-pkgcache_path: /var/tmp/catalyst/packages/default/stage1-s390x
