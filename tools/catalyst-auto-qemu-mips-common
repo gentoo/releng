@@ -11,7 +11,10 @@ SETS_BE="
 	mips2_o32_systemd
 	mips3_n32_openrc
 	mips3_n32_systemd
-	mips3multilibopenrc mips3n64openrc
+	mips3_n64_openrc
+	mips3_n64_systemd
+	mips3_multilib_openrc
+	mips3_multilib_systemd
 "
 
 SETS_LE="
@@ -21,7 +24,11 @@ SETS_LE="
 	mipsel3_o32_systemd
 	mipsel3_n32_openrc
 	mipsel3_n32_systemd
-	mipsel3multilibopenrc mipsel3n64openrc mipsel3n64systemd mipsel3n64systemd_mu
+	mipsel3_n64_openrc
+	mipsel3_n64_systemd
+	mipsel3_n64_systemd_mu
+	mipsel3_multilib_openrc
+	mipsel3_multilib_systemd
 "
 
 # SETS="${SETS_BE} ${SETS_LE}"
@@ -41,15 +48,18 @@ SET_mips3_n32_systemd_SPECS="stage1-mips3-n32-systemd.spec stage3-mips3-n32-syst
 SET_mipsel3_n32_openrc_SPECS="stage1-mipsel3-n32-openrc.spec stage3-mipsel3-n32-openrc.spec"
 SET_mipsel3_n32_systemd_SPECS="stage1-mipsel3-n32-systemd.spec stage3-mipsel3-n32-systemd.spec"
 
-SET_mips3multilibopenrc_SPECS="stage1-mips3-multilib-openrc.spec stage3-mips3-multilib-openrc.spec"
-SET_mipsel3multilibopenrc_SPECS="stage1-mipsel3-multilib-openrc.spec stage3-mipsel3-multilib-openrc.spec"
+SET_mips3_multilib_openrc_SPECS="stage1-mips3-multilib-openrc.spec stage3-mips3-multilib-openrc.spec"
+SET_mips3_multilib_systemd_SPECS="stage1-mips3-multilib-systemd.spec stage3-mips3-multilib-systemd.spec"
 
-SET_mips3n64openrc_SPECS="stage1-mips3-n64-openrc.spec stage3-mips3-n64-openrc.spec"
-SET_mipsel3n64openrc_SPECS="stage1-mipsel3-n64-openrc.spec stage3-mipsel3-n64-openrc.spec"
+SET_mipsel3_multilib_openrc_SPECS="stage1-mipsel3-multilib-openrc.spec stage3-mipsel3-multilib-openrc.spec"
+SET_mipsel3_multilib_systemd_SPECS="stage1-mipsel3-multilib-systemd.spec stage3-mipsel3-multilib-systemd.spec"
 
-SET_mipsel3n64systemd_SPECS="stage1-mipsel3-n64-systemd.spec stage3-mipsel3-n64-systemd.spec"
+SET_mips3_n64_openrc_SPECS="stage1-mips3-n64-openrc.spec stage3-mips3-n64-openrc.spec"
+SET_mips3_n64_systemd_SPECS="stage1-mips3-n64-systemd.spec stage3-mips3-n64-systemd.spec"
 
-SET_mipsel3n64systemd_mu_SPECS="stage1-mipsel3-n64-systemd-mu.spec stage3-mipsel3-n64-systemd-mu.spec"
+SET_mipsel3_n64_openrc_SPECS="stage1-mipsel3-n64-openrc.spec stage3-mipsel3-n64-openrc.spec"
+SET_mipsel3_n64_systemd_SPECS="stage1-mipsel3-n64-systemd.spec stage3-mipsel3-n64-systemd.spec"
+SET_mipsel3_n64_systemd_mu_SPECS="stage1-mipsel3-n64-systemd-mu.spec stage3-mipsel3-n64-systemd-mu.spec"
 
 KCONFIG_DIR=${REPO_DIR}/releases/kconfig/mips
 
@@ -97,26 +107,35 @@ post_build() {
 	stage3-mips3-n32-systemd.spec)
 		upload stage3-mips3_n32-systemd-${TIMESTAMP}.tar.xz*
 		;;
-	stage3-mips3-multilib-openrc.spec)
-		upload stage3-mips3_multilib-openrc-${TIMESTAMP}.tar.xz*
-		;;
 	stage3-mipsel3-n32-openrc.spec)
 		upload stage3-mipsel3_n32-openrc-${TIMESTAMP}.tar.xz*
 		;;
 	stage3-mipsel3-n32-systemd.spec)
 		upload stage3-mipsel3_n32-systemd-${TIMESTAMP}.tar.xz*
 		;;
-	stage3-mipsel3-multilib-openrc.spec)
-		upload stage3-mipsel3_multilib-openrc-${TIMESTAMP}.tar.xz*
-		;;
 	stage3-mips3-n64-openrc.spec)
 		upload stage3-mips3_n64-openrc-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mips3-n64-systemd.spec)
+		upload stage3-mips3_n64-systemd-${TIMESTAMP}.tar.xz*
 		;;
 	stage3-mipsel3-n64-openrc.spec)
 		upload stage3-mipsel3_n64-openrc-${TIMESTAMP}.tar.xz*
 		;;
 	stage3-mipsel3-n64-systemd.spec)
 		upload stage3-mipsel3_n64-systemd-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mips3-multilib-openrc.spec)
+		upload stage3-mips3_multilib-openrc-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mips3-multilib-systemd.spec)
+		upload stage3-mips3_multilib-systemd-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mipsel3-multilib-openrc.spec)
+		upload stage3-mipsel3_multilib-openrc-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mipsel3-multilib-systemd.spec)
+		upload stage3-mipsel3_multilib-systemd-${TIMESTAMP}.tar.xz*
 		;;
 	esac
 	popd >/dev/null
