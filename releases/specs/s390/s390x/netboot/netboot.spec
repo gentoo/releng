@@ -2,10 +2,10 @@
 version_stamp: @TIMESTAMP@
 snapshot: @TIMESTAMP@
 source_subpath: default/stage3-s390x-openrc-@TIMESTAMP@
-pkgcache_path: /var/tmp/catalyst/packages/default/netboot2-s390x
+pkgcache_path: /var/tmp/catalyst/packages/default/netboot-s390x
 
 # these shouldn't change
-target:          netboot2
+target:          netboot
 subarch:         s390x
 rel_type:        default
 profile:         default/linux/s390/17.0/s390x
@@ -17,14 +17,14 @@ boot/kernel/netboot64/sources:       sys-kernel/gentoo-sources
 boot/kernel/netboot64/config: ../../kconfig/netboot64.config
 boot/kernel/netboot64/gk_kernargs:   --all-ramdisk-modules
 
-netboot2/use:
+netboot/use:
  multicall
  shadow
  readline
  ssl
  unicode
 
-netboot2/packages:
+netboot/packages:
 	sys-apps/s390-tools
 	sys-fs/e2fsprogs
 	sys-apps/util-linux
@@ -40,7 +40,7 @@ netboot2/packages:
 	#needed for the kernel to compile 
 	sys-devel/bc
 
-netboot2/packages/sys-apps/s390-tools/files:
+netboot/packages/sys-apps/s390-tools/files:
 	/sbin/ts-shell
 	/sbin/ttyrun
 	/sbin/iucvtty
@@ -98,7 +98,7 @@ netboot2/packages/sys-apps/s390-tools/files:
 	/usr/sbin/ip_watcher.pl
 	/usr/sbin/start_hsnc.sh
 
-netboot2/packages/sys-fs/e2fsprogs/files:
+netboot/packages/sys-fs/e2fsprogs/files:
 	/usr/bin/chattr
 	/usr/bin/lsattr
 	/usr/bin/uuidgen
@@ -132,7 +132,7 @@ netboot2/packages/sys-fs/e2fsprogs/files:
 	/usr/lib64/e2initrd_helper
 	/lib64/libpthread*
 
-netboot2/packages/sys-apps/util-linux/files:
+netboot/packages/sys-apps/util-linux/files:
 	/usr/sbin/partx
 	/usr/sbin/delpart
 	/usr/sbin/rtcwake
@@ -188,10 +188,10 @@ netboot2/packages/sys-apps/util-linux/files:
 	/lib64/libuuid.so.*
 	/usr/lib64/libfdisk.so.*
 
-netboot2/packages/app-editors/nano/files:
+netboot/packages/app-editors/nano/files:
 	/bin/nano
 
-netboot2/packages/sys-libs/ncurses/files:
+netboot/packages/sys-libs/ncurses/files:
 	/lib64/libncurses.so.*
 	/lib64/libncursesw.so.*
 	/etc/terminfo
@@ -216,22 +216,22 @@ netboot2/packages/sys-libs/ncurses/files:
 	/usr/share/terminfo/x/xterm-color
 	/usr/share/terminfo/x/xterm-xfree86
 
-netboot2/packages/net-misc/wget/files:
+netboot/packages/net-misc/wget/files:
 	/usr/bin/wget
 	/lib64/libss.so.*
 	/lib64/libz.so.*
 
-netboot2/packages/dev-libs/openssl/files:
+netboot/packages/dev-libs/openssl/files:
 	/usr/lib64/libssl.so*
 	/usr/lib64/libcrypto.so*
 
-netboot2/packages/net-misc/rsync/files:
+netboot/packages/net-misc/rsync/files:
 	/usr/bin/rsync
 
-netboot2/packages/dev-libs/popt/files:
+netboot/packages/dev-libs/popt/files:
 	/usr/lib64/libpopt.so*
 
-netboot2/packages/net-misc/dropbear/files:
+netboot/packages/net-misc/dropbear/files:
 	/usr/bin/dbclient
 	/usr/bin/dbscp
 	/usr/bin/dropbearconvert
@@ -246,12 +246,12 @@ netboot2/packages/net-misc/dropbear/files:
 	/lib64/ld64.so.1
 	/lib64/ld-*
 
-netboot2/packages/dev-libs/libtommath/files:
+netboot/packages/dev-libs/libtommath/files:
 	/usr/lib64/libtommath.so*
 	/usr/lib64/libtommath.so
 	/lib64/libutil*
 
-netboot2/packages/app-misc/screen/files:
+netboot/packages/app-misc/screen/files:
 	/usr/bin/screen
 	/etc/screenrc
 	/lib64/libdl*
