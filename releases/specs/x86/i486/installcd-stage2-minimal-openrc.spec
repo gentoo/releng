@@ -38,6 +38,7 @@ livecd/unmerge:
 	sys-apps/groff
 	sys-apps/man-db
 	sys-apps/man-pages
+	sys-apps/memtest86+
 	sys-apps/miscfiles
 	sys-apps/sandbox
 	sys-apps/texinfo

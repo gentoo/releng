@@ -143,6 +143,7 @@ livecd/packages:
 	sys-apps/man-pages
 	sys-apps/man-pages-posix
 	sys-apps/memtester
+	sys-apps/memtest86+
 	sys-apps/mlocate
 	sys-apps/netplug
 	sys-apps/nvme-cli
