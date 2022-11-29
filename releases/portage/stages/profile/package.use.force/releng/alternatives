@@ -1,0 +1,4 @@
+# need this here because of stage1
+app-alternatives/cpio gnu
+app-alternatives/sh bash
+app-alternatives/tar gnu
