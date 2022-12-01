@@ -1,4 +1,5 @@
 # need this here because of stage1
+app-alternatives/awk gawk
 app-alternatives/bzip2 reference
 app-alternatives/cpio gnu
 app-alternatives/gzip reference
