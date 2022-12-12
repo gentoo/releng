@@ -59,7 +59,7 @@ SET_mips3_n32_systemd_mu_SPECS="stage1-mips3-n32-systemd-mu.spec stage3-mips3-n3
 
 SET_mipsel3_n32_openrc_SPECS="stage1-mipsel3-n32-openrc.spec stage3-mipsel3-n32-openrc.spec"
 SET_mipsel3_n32_systemd_SPECS="stage1-mipsel3-n32-systemd.spec stage3-mipsel3-n32-systemd.spec"
-SET_mipsel3_n32_mu_systemd_SPECS="stage1-mipsel3-n32-systemd-mu.spec stage3-mipsel3-n32-systemd-mu.spec"
+SET_mipsel3_n32_systemd_mu_SPECS="stage1-mipsel3-n32-systemd-mu.spec stage3-mipsel3-n32-systemd-mu.spec"
 
 SET_mips3_multilib_openrc_SPECS="stage1-mips3-multilib-openrc.spec stage3-mips3-multilib-openrc.spec"
 SET_mips3_multilib_systemd_SPECS="stage1-mips3-multilib-systemd.spec stage3-mips3-multilib-systemd.spec"
