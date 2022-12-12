@@ -6,7 +6,7 @@ profile: default/linux/ppc64le/17.0/systemd/merged-usr
 snapshot: @TIMESTAMP@
 source_subpath: mergedusr/stage3-ppc64le-systemd-mergedusr-latest
 compression_mode: pixz
-update_seed: no
+update_seed: yes
 update_seed_command: --update --deep --newuse @world --jobs 8 --load-average 12
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
