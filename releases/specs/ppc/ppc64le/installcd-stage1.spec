@@ -32,10 +32,15 @@ livecd/packages:
 	app-misc/tmux
 	app-portage/cpuid2cpuflags
 	app-portage/mirrorselect
+	app-shells/bash-completion
+	app-shells/gentoo-bashcomp
 	app-text/wgetpaste
+	dev-embedded/u-boot-tools
+	dev-vcs/git
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
 	net-dialup/mingetty
+	net-dialup/picocom
 	net-dialup/pptpclient
 	net-dialup/rp-pppoe
 	net-fs/cifs-utils
@@ -58,12 +63,15 @@ livecd/packages:
 	sys-apps/gptfdisk
 	sys-apps/hdparm
 	sys-apps/ibm-powerpc-utils
+	sys-apps/ipmitool
 	sys-apps/iproute2
 	sys-apps/lm-sensors
 	sys-apps/lsvpd
 	sys-apps/memtester
 	sys-apps/nvme-cli
 	sys-apps/opal-utils
+	sys-apps/pciutils
+	sys-apps/ppc64-diag
 	sys-apps/sdparm
 	sys-apps/usbutils
 	sys-auth/ssh-import-id
@@ -82,10 +90,14 @@ livecd/packages:
 	sys-fs/lsscsi
 	sys-fs/lvm2
 	sys-fs/mdadm
+	sys-fs/mtd-utils
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/squashfs-tools
+	sys-fs/sysfsutils
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
 	sys-libs/gpm
+	sys-process/htop
+	sys-process/lsof
 	www-client/links
