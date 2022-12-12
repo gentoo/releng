@@ -1,2 +1,0 @@
-# needed for stage 1 at least
-sys-libs/musl crypt
