@@ -5,7 +5,7 @@ rel_type: mergedusr
 profile: default/linux/hppa/17.0/systemd/merged-usr
 snapshot: @TIMESTAMP@
 source_subpath: mergedusr/stage3-hppa1.1-systemd-mergedusr-latest
-update_seed: yes
+update_seed: no
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
 compression_mode: pixz
