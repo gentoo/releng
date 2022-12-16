@@ -1,0 +1,2 @@
+# we need this here to make sure musl stages build
+sys-libs/libxcrypt system

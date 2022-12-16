@@ -1,4 +1,5 @@
-# we want crypt support within/provided by musl by default
-# if we didn't have it we would need libxcrypt[system] already
-# in stage1
-sys-libs/musl crypt
+# we need this here to make sure musl stages build
+# note: tried building musl only with built-in crypt, but
+# that leads to a dependency mess when emerge refuses to
+# downgrade the libcrypt virtual...
+sys-libs/musl -crypt
