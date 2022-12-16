@@ -1,0 +1,3 @@
+# this version barfs on lots of minor arches, let's not try
+# to update to it
+=dev-libs/openssl-3.0.7-r1
