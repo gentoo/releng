@@ -18,7 +18,7 @@ hostname-mode=none" > /etc/NetworkManager/NetworkManager.conf
 echo "[Autologin]
 User=gentoo
 Session=plasma.desktop
-Relogin=yes" > /etc/sddm.conf
+Relogin=true" > /etc/sddm.conf
 
 # Set up gentoo user
 pushd /home/gentoo
