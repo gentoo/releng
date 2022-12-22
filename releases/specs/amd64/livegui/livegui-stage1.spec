@@ -68,7 +68,8 @@ livecd/packages:
 	app-editors/vim
 	app-emacs/ebuild-mode
 	app-emulation/cloud-init
-	app-emulation/xen-tools
+#	Fails to build...
+#	app-emulation/xen-tools
 	app-eselect/eselect-repository
 	app-misc/colordiff
 	app-misc/livecd-tools
