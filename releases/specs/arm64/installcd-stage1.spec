@@ -65,6 +65,7 @@ livecd/packages:
 	sys-apps/hdparm
 	sys-apps/iproute2
 	#sys-apps/memtester # needs keywording
+	sys-apps/merge-usr
 	#sys-apps/netplug # needs keywording
 	sys-apps/nvme-cli
 	sys-apps/pciutils
