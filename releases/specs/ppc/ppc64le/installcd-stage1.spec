@@ -68,6 +68,7 @@ livecd/packages:
 	sys-apps/lm-sensors
 	sys-apps/lsvpd
 	sys-apps/memtester
+	sys-apps/merge-usr
 	sys-apps/nvme-cli
 	sys-apps/opal-utils
 	sys-apps/pciutils
