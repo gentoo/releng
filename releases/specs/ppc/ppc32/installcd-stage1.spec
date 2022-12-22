@@ -51,6 +51,7 @@ livecd/packages:
 	sys-apps/iproute2
 	sys-apps/lm-sensors
 	sys-apps/memtester
+	sys-apps/merge-usr
 	sys-apps/pcmciautils
 	sys-apps/powerpc-utils
 	sys-apps/sdparm
