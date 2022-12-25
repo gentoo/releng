@@ -26,6 +26,8 @@ livecd/packages:
 	app-misc/screen
 	app-portage/cpuid2cpuflags
 	app-portage/mirrorselect
+	app-shells/bash-completion
+	app-shells/gentoo-bashcomp
 	app-text/wgetpaste
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
