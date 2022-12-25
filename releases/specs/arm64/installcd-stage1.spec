@@ -33,6 +33,8 @@ livecd/packages:
 	app-misc/tmux
 	app-portage/cpuid2cpuflags
 	app-portage/mirrorselect
+	app-shells/bash-completion
+	app-shells/gentoo-bashcomp
 	app-text/wgetpaste
 	dev-embedded/u-boot-tools
 	media-gfx/fbgrab
