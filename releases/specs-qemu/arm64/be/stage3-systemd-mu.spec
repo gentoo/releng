@@ -1,0 +1,11 @@
+subarch: aarch64_be
+version_stamp: systemd-mergedusr-@TIMESTAMP@
+target: stage3
+rel_type: mergedusr
+profile: default/linux/arm64/17.0/big-endian/systemd/merged-usr
+snapshot: @TIMESTAMP@
+source_subpath: mergedusr/stage1-aarch64_be-systemd-mergedusr-@TIMESTAMP@
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
+portage_prefix: releng
+interpreter: /usr/bin/qemu-aarch64_be
