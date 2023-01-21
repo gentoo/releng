@@ -43,7 +43,6 @@ livecd/unmerge:
 	sys-apps/miscfiles
 	sys-apps/sandbox
 	sys-apps/texinfo
-	sys-boot/efibootmgr
 	sys-devel/autoconf
 	sys-devel/autoconf-wrapper
 	sys-devel/automake
