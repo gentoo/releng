@@ -176,6 +176,9 @@ post_build() {
 	stage3-mipsel3-o32-systemd-mu.spec)
 		upload stage3-mipsel3-systemd-mergedusr-${TIMESTAMP}.tar.xz*
 		;;
+	stage3-mipsel3-n32-systemd-mu.spec)
+		upload stage3-mipsel3_n32-systemd-mergedusr-${TIMESTAMP}.tar.xz*
+		;;
 	stage3-mipsel3-n64-systemd-mu.spec)
 		upload stage3-mipsel3_n64-systemd-mergedusr-${TIMESTAMP}.tar.xz*
 		;;
