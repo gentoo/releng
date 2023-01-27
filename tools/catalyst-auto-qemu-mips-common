@@ -39,6 +39,45 @@ SETS_LE="
 	mipsel3_multilib_systemd_mu
 "
 
+SETS_O32="
+	mips2_o32_openrc
+	mips2_o32_systemd
+	mips2_o32_systemd_mu
+	mipsel2_o32_openrc
+	mipsel2_o32_systemd
+	mipsel2_o32_systemd_mu
+	mipsel3_o32_openrc
+	mipsel3_o32_systemd
+	mipsel3_o32_systemd_mu
+"
+
+SETS_N32="
+	mips3_n32_openrc
+	mips3_n32_systemd
+	mips3_n32_systemd_mu
+	mipsel3_n32_openrc
+	mipsel3_n32_systemd
+	mipsel3_n32_systemd_mu
+"
+
+SETS_N64="
+	mips3_n64_openrc
+	mips3_n64_systemd
+	mips3_n64_systemd_mu
+	mipsel3_n64_openrc
+	mipsel3_n64_systemd
+	mipsel3_n64_systemd_mu
+"
+
+SETS_MULTI="
+	mips3_multilib_openrc
+	mips3_multilib_systemd
+	mips3_multilib_systemd_mu
+	mipsel3_multilib_openrc
+	mipsel3_multilib_systemd
+	mipsel3_multilib_systemd_mu
+"
+
 # SETS="${SETS_BE} ${SETS_LE}"
 
 SET_mips2_o32_openrc_SPECS="stage1-mips2-o32-openrc.spec stage3-mips2-o32-openrc.spec"
