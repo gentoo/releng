@@ -179,6 +179,7 @@ livecd/packages:
 	sys-fs/exfat-utils
 	sys-fs/extundelete
 	sys-fs/f2fs-tools
+	sys-fs/genfstab
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
