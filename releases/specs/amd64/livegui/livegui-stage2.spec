@@ -20,6 +20,7 @@ livecd/unmerge: net-misc/netifrc
 
 livecd/empty:
 	/var/db/repos
+	/usr/src
 
 boot/kernel: gentoo
 
