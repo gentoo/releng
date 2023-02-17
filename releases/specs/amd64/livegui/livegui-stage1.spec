@@ -79,6 +79,7 @@ livecd/packages:
 	app-misc/tmux
 	app-misc/wipe
 	app-office/libreoffice
+	app-office/lyx
 	app-office/texstudio
 	app-officeext/texmaths
 	app-portage/cpuid2cpuflags
@@ -111,17 +112,21 @@ livecd/packages:
 	dev-vcs/subversion
 	kde-apps/k3b
 	kde-apps/kde-apps-meta
+	kde-apps/kdenlive
 	kde-apps/kompare
 	kde-misc/kdiff3
 	kde-plasma/plasma-meta
 	media-gfx/digikam
+	media-gfx/engauge
 	media-gfx/fbgrab
 	media-gfx/gimp
 	media-gfx/graphviz
+	media-gfx/hugin
 	media-gfx/inkscape
 	media-gfx/jhead
 	media-gfx/pngcrush
 	media-gfx/pngquant
+	media-gfx/povray
 	media-sound/alsa-utils
 	media-video/mpv
 	net-analyzer/iptraf-ng
@@ -173,6 +178,7 @@ livecd/packages:
 	sys-apps/arrayprobe
 	sys-apps/acl
 	sys-apps/attr
+	sys-apps/busybox
 	sys-apps/cciss_vol_status
 	sys-apps/chname
 	sys-apps/coreutils
