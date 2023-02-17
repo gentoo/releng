@@ -29,8 +29,17 @@ echo "[Daemon]
 Autolock=false" > .config/kscreenlockerrc
 
 # Firefox as default browser
-echo "[Default Applications]
-text/html=firefox.desktop" > .config/mimeapps.list
+echo \
+"[Added Associations]
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/http=firefox-esr.desktop;chromium-browser-chromium.desktop;
+x-scheme-handler/https=firefox-esr.desktop;chromium-browser-chromium.desktop;
+
+[Default Applications]
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/http=firefox-esr.desktop;
+x-scheme-handler/https=firefox-esr.desktop;" \
+ > .config/mimeapps.list
 
 # Customize taskbar pinned apps
 wget "https://dev.gentoo.org/~bkohler/livegui/plasma-org.kde.plasma.desktop-appletsrc" -O \
