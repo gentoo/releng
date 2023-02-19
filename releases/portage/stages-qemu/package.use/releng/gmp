@@ -1,2 +1,2 @@
 # testing this for bug 894134
-dev-libs/gmp cpudetection
+dev-libs/gmp asm cpudetection
