@@ -241,7 +241,6 @@ livecd/packages:
 	sys-fs/extundelete
 	sys-fs/fuse-exfat
 	sys-fs/f2fs-tools
-	sys-fs/genfstab
 	sys-fs/growpart
 	sys-fs/jfsutils
 	sys-fs/lsscsi

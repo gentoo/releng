@@ -83,7 +83,6 @@ livecd/packages:
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
 	sys-fs/f2fs-tools
-	sys-fs/genfstab
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
