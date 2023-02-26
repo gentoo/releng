@@ -421,8 +421,13 @@ run_catalyst_commands() {
 
 	build_failure=0
 
-	timeprefix=()
-	which time >/dev/null && timeprefix=( "time" )
+	# bash built-in time function is not used
+	if ! which time >/dev/null ; then
+		timeprefix=()
+		echo "sys-process/time is optional for build resource utilization"
+	else
+		timeprefix=( "time" )
+	fi
 
 	JOB_PIDS=()
 	JOB_RETS=()
