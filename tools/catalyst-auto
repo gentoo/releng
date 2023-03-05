@@ -120,7 +120,8 @@ post_build() {
 catalyst_var() {
 	# Extract a setting from the catalyst.conf.
 	local var=$(grep --color=never -Po "^${1}\s*=\s*\K.*" "${CATALYST_CONFIG}" || true)
-	[[ -z ${var} ]] || echo "${var}"
+	local vas=$(echo $var|sed -e 's:^"::g' -e 's:"$::g')
+	[[ -z ${vas} ]] || echo "${vas}"
 }
 
 trigger_post_build() {
