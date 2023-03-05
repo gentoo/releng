@@ -119,8 +119,8 @@ post_build() {
 
 catalyst_var() {
 	# Extract a setting from the catalyst.conf.
-	local var=$1
-	(. "${CATALYST_CONFIG}"; echo "${!var}")
+	local var=$(grep --color=never -Po "^${1}\s*=\s*\K.*" "${CATALYST_CONFIG}" || true)
+	[[ -z ${var} ]] || echo "${var}"
 }
 
 trigger_post_build() {
