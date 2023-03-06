@@ -71,6 +71,7 @@ popd
 chown -R gentoo:users /home/gentoo
 
 # Let some tools run as root
+mkdir -p /etc/polkit-1/rules.d/
 echo 'polkit.addRule(function(action, subject) {
     if (action.id == "org.gnome.gparted") {
         return polkit.Result.YES;
