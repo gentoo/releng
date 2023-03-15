@@ -1,3 +1,6 @@
 # this makes only a difference for the "desktop" stages
 dev-db/sqlite -icu
 dev-lang/python -bluetooth
+
+# this is also needed for normal stage3
+net-misc/curl -http2
