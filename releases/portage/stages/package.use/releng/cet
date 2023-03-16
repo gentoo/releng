@@ -1,0 +1,8 @@
+# Hardened profiles default to USE=cet but our -* in stage1 builds ends up
+# mixing -cet/+cet causing build failures or unmet deps.  This will keep the
+# flag enbled consistently.  This has no effect on non-hardened profiles
+# since the flag is masked there.
+sys-devel/binutils cet
+sys-devel/gcc cet
+sys-libs/binutils-libs cet
+sys-libs/glibc cet
