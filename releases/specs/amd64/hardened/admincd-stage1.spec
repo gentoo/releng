@@ -84,7 +84,6 @@ livecd/packages:
 	net-analyzer/openbsd-netcat
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
-	net-analyzer/traceroute-nanog
 	net-analyzer/tcpdump
 	net-analyzer/nmap
 	net-dialup/mingetty

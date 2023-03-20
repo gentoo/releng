@@ -135,7 +135,6 @@ livecd/packages:
 	net-analyzer/tcpdump
 	net-analyzer/tcptraceroute
 	net-analyzer/traceroute
-	net-analyzer/traceroute-nanog
 	net-dialup/minicom
 	net-dialup/mingetty
 	net-dialup/pptpclient
