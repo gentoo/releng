@@ -62,7 +62,6 @@ livecd/packages:
 	app-editors/ghex
 	app-editors/hexedit
 	app-editors/joe
-	app-editors/kile
 	app-editors/mg
 	app-editors/nano
 	app-editors/vim
@@ -79,9 +78,6 @@ livecd/packages:
 	app-misc/tmux
 	app-misc/wipe
 	app-office/libreoffice
-	app-office/lyx
-	app-office/texstudio
-	app-officeext/texmaths
 	app-portage/cpuid2cpuflags
 	app-portage/eix
 	app-portage/genlop
@@ -97,7 +93,6 @@ livecd/packages:
 	app-text/ghostscript-gpl
 	app-text/pdftk
 	app-text/recode
-	app-text/texlive
 	app-text/tree
 	app-text/wgetpaste
 	app-text/xournalpp
