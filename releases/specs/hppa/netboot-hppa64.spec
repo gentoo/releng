@@ -37,6 +37,7 @@ netboot/use:
  ssl
  unicode
  xml
+ gnu # for app-alternatives/cpio
 
 netboot/packages:
 	sys-boot/palo
