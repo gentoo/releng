@@ -47,9 +47,9 @@ livecd/packages:
 	net-fs/nfs-utils
 	net-irc/irssi
 	net-irc/weechat
+	net-misc/chrony
 	net-misc/dhcpcd
 	net-misc/iputils
-	net-misc/ntp
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync

@@ -146,10 +146,10 @@ livecd/packages:
 	net-irc/quassel
 	net-irc/weechat
 	net-misc/chrony
+	net-misc/chrony
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/ndisc6
-	net-misc/ntp
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rdesktop

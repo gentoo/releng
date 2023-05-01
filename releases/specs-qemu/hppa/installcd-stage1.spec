@@ -32,9 +32,9 @@ livecd/packages:
 	net-analyzer/traceroute
 	net-fs/nfs-utils
 	net-irc/irssi
+	net-misc/chrony
 	net-misc/dhcpcd
 	net-misc/iputils
-	net-misc/ntp
 	net-misc/rdate
 	net-misc/vconfig
 	net-proxy/dante

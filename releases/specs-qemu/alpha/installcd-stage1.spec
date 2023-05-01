@@ -33,9 +33,9 @@ livecd/packages:
 	net-dialup/rp-pppoe
 	net-fs/nfs-utils
 	net-irc/irssi
+	net-misc/chrony
 	net-misc/dhcpcd
 	net-misc/iputils
-	net-misc/ntp
 	net-misc/rdate
 	net-proxy/dante
 	net-proxy/tsocks

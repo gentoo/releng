@@ -97,10 +97,10 @@ livecd/packages:
 	net-ftp/ncftp
 	net-irc/irssi
 	net-misc/curl
+	net-misc/chrony
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/ndisc6
-	net-misc/ntp
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync
