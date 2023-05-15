@@ -142,7 +142,6 @@ livecd/packages:
 	net-im/pidgin
 	net-irc/hexchat
 	net-irc/irssi
-	net-irc/kvirc
 	net-irc/quassel
 	net-irc/weechat
 	net-misc/chrony
