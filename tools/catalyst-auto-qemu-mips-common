@@ -15,6 +15,8 @@ SETS_O32="
 	mipsel2_o32_openrc
 	mipsel2_o32_systemd
 	mipsel2_o32_systemd_mu
+	mipsel2_softfloat_o32_openrc
+	mipsel2_softfloat_o32_systemd
 	mipsel3_o32_openrc
 	mipsel3_o32_systemd
 	mipsel3_o32_systemd_mu
@@ -58,6 +60,9 @@ SET_mips2_softfloat_o32_systemd_SPECS="stage1-mips2_softfloat-o32-systemd.spec s
 SET_mipsel2_o32_openrc_SPECS="stage1-mipsel2-o32-openrc.spec stage3-mipsel2-o32-openrc.spec"
 SET_mipsel2_o32_systemd_SPECS="stage1-mipsel2-o32-systemd.spec stage3-mipsel2-o32-systemd.spec"
 SET_mipsel2_o32_systemd_mu_SPECS="stage1-mipsel2-o32-systemd-mu.spec stage3-mipsel2-o32-systemd-mu.spec"
+
+SET_mipsel2_softfloat_o32_openrc_SPECS="stage1-mipsel2_softfloat-o32-openrc.spec stage3-mipsel2_softfloat-o32-openrc.spec"
+SET_mipsel2_softfloat_o32_systemd_SPECS="stage1-mipsel2_softfloat-o32-systemd.spec stage3-mipsel2_softfloat-o32-systemd.spec"
 
 SET_mipsel3_o32_openrc_SPECS="stage1-mipsel3-o32-openrc.spec stage3-mipsel3-o32-openrc.spec"
 SET_mipsel3_o32_systemd_SPECS="stage1-mipsel3-o32-systemd.spec stage3-mipsel3-o32-systemd.spec"
@@ -126,6 +131,12 @@ post_build() {
 		;;
 	stage3-mipsel2-o32-systemd.spec)
 		upload stage3-mipsel2-systemd-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mipsel2_softfloat-o32-openrc.spec)
+		upload stage3-mipsel2_softfloat-openrc-${TIMESTAMP}.tar.xz*
+		;;
+	stage3-mipsel2_softfloat-o32-systemd.spec)
+		upload stage3-mipsel2_softfloat-systemd-${TIMESTAMP}.tar.xz*
 		;;
 	stage3-mipsel3-o32-openrc.spec)
 		upload stage3-mipsel3-openrc-${TIMESTAMP}.tar.xz*
