@@ -5,3 +5,6 @@ dev-python/pyside2 webengine
 
 #for kde-apps/kdenlive
 media-video/ffmpeg libass
+
+#for kde-misc/kweather
+dev-qt/qtpositioning geoclue
