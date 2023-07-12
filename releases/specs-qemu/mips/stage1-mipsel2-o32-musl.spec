@@ -5,7 +5,7 @@ interpreter: /usr/bin/qemu-mipsel
 rel_type: musl
 profile: default/linux/mips/17.0/mipsel/o32/musl
 snapshot: @TIMESTAMP@
-source_subpath: musl/stage3-mipsel2-musl-latest
+source_subpath: musl/stage3-mipsel2_musl-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2
 update_seed: yes
