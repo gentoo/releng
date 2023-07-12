@@ -1,6 +1,6 @@
 subarch: mips2_musl
 target: stage3
-version_stamp: musl-@TIMESTAMP@
+version_stamp: @TIMESTAMP@
 interpreter: /usr/bin/qemu-mips
 rel_type: musl
 profile: default/linux/mips/17.0/o32/musl

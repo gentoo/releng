@@ -1,11 +1,11 @@
 subarch: mips2_musl
 target: stage1
-version_stamp: musl-@TIMESTAMP@
+version_stamp: @TIMESTAMP@
 interpreter: /usr/bin/qemu-mips
 rel_type: musl
 profile: default/linux/mips/17.0/o32/musl
 snapshot: @TIMESTAMP@
-source_subpath: musl/stage3-mips2-musl-latest
+source_subpath: musl/stage3-mips2_musl-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2
 update_seed: yes
