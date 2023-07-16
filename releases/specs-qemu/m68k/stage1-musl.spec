@@ -3,7 +3,7 @@ version_stamp: @TIMESTAMP@
 target: stage1
 rel_type: musl
 profile: default/linux/m68k/17.0/musl
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: musl/stage3-m68k_musl-latest
 compression_mode: pixz
 update_seed: yes

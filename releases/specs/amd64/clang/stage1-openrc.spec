@@ -3,7 +3,7 @@ target: stage1
 version_stamp: llvm-openrc-@TIMESTAMP@
 rel_type: clang
 profile: default/linux/amd64/17.1/clang
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: clang/stage3-amd64-llvm-openrc-latest
 compression_mode: pixz
 update_seed: yes

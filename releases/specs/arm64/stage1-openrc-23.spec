@@ -3,7 +3,7 @@ target: stage1
 version_stamp: openrc-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/arm64/23.0
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: 23.0-default/stage3-arm64-openrc-latest.tar.xz
 compression_mode: pixz
 update_seed: yes

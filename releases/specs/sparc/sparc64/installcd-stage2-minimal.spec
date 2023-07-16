@@ -3,7 +3,7 @@ version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/sparc/17.0/64ul
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/livecd-stage1-sparc64-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 

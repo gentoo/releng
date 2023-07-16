@@ -3,7 +3,7 @@ version_stamp: systemd-mergedusr-@TIMESTAMP@
 target: stage1
 rel_type: mergedusr
 profile: default/linux/m68k/17.0/systemd/merged-usr
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: mergedusr/stage3-m68k-systemd-mergedusr-latest
 compression_mode: pixz
 update_seed: yes

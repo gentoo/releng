@@ -3,7 +3,7 @@ target: stage1
 version_stamp: musl-hardened-@TIMESTAMP@
 rel_type: 23.0-musl-hardened
 profile: default/linux/arm64/23.0/musl/hardened
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: 23.0-musl-hardened/stage3-arm64-musl-hardened-latest.tar.xz
 compression_mode: pixz
 update_seed: yes

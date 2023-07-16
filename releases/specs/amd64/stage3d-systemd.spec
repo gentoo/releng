@@ -3,7 +3,7 @@ target: stage3
 version_stamp: desktop-systemd-@TIMESTAMP@
 rel_type: default
 profile: default/linux/amd64/17.1/desktop/systemd
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/stage1-amd64-systemd-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

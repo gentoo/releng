@@ -3,7 +3,7 @@ version_stamp: systemd-mergedusr-@TIMESTAMP@
 target: stage1
 rel_type: mergedusr
 profile: default/linux/arm/17.0/armv4t/systemd/merged-usr
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: mergedusr/stage3-armv4tl-systemd-mergedusr-latest.tar.xz
 compression_mode: pixz
 update_seed: yes

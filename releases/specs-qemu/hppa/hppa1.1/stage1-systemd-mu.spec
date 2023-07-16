@@ -3,7 +3,7 @@ target: stage1
 version_stamp: systemd-mergedusr-@TIMESTAMP@
 rel_type: mergedusr
 profile: default/linux/hppa/17.0/systemd/merged-usr
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: mergedusr/stage3-hppa1.1-systemd-mergedusr-latest
 update_seed: yes
 interpreter: /usr/bin/qemu-hppa

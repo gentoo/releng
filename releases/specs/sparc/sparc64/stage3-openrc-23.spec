@@ -3,7 +3,7 @@ target: stage3
 version_stamp: openrc-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/sparc/23.0/64ul
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: 23.0-default/stage1-sparc64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

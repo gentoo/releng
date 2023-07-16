@@ -5,7 +5,7 @@ cflags: -O2 -pipe
 interpreter: /usr/bin/qemu-riscv64
 rel_type: 23.0-default
 profile: default/linux/riscv/23.0/rv64/lp64/systemd
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: 23.0-default/stage3-rv64_lp64-systemd-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2

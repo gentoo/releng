@@ -3,7 +3,7 @@ target: stage3
 version_stamp: openrc-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/arm64/23.0
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: 23.0-default/stage1-arm64-openrc-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

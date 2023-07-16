@@ -3,7 +3,7 @@ target: stage1
 version_stamp: systemd-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/sparc/23.0/64ul/systemd
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: 23.0-default/stage3-sparc64-systemd-latest
 compression_mode: pixz
 update_seed: yes

@@ -3,7 +3,7 @@ target: stage3
 version_stamp: openrc-@TIMESTAMP@
 rel_type: default
 profile: default/linux/ppc64/17.0
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/stage1-ppc64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

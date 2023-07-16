@@ -3,7 +3,7 @@ target: stage1
 version_stamp: musl-hardened-openrc-@TIMESTAMP@
 rel_type: musl-hardened
 profile: default/linux/ppc/17.0/musl/hardened
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 chost: powerpc-gentoo-linux-musl
 source_subpath: musl-hardened/stage3-ppc-musl-hardened-openrc-latest
 compression_mode: pixz

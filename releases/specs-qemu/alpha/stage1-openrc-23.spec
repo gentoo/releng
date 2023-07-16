@@ -3,7 +3,7 @@ target: stage1
 version_stamp: openrc-23.0-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/alpha/23.0
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: 23.0-default/stage3-alpha-openrc-23.0-latest
 update_seed: yes
 update_seed_command: -uDN @world

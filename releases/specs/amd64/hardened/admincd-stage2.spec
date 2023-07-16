@@ -3,7 +3,7 @@ version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: hardened
 profile: default/linux/amd64/17.1/hardened
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: hardened/livecd-stage1-amd64-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 

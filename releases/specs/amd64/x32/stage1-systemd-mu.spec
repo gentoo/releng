@@ -3,7 +3,7 @@ target: stage1
 version_stamp: systemd-mergedusr-@TIMESTAMP@
 rel_type: mergedusr
 profile: default/linux/amd64/17.0/x32/systemd/merged-usr
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: mergedusr/stage3-x32-systemd-mergedusr-latest
 compression_mode: pixz
 update_seed: yes

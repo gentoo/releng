@@ -3,7 +3,7 @@ version_stamp: openrc-@TIMESTAMP@
 target: stage3
 rel_type: 23.0-default
 profile: default/linux/loong/23.0/la64v100/lp64d
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: 23.0-default/stage1-loong-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
