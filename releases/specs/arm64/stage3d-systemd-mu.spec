@@ -3,7 +3,7 @@ target: stage3
 version_stamp: desktop-systemd-mergedusr-@TIMESTAMP@
 rel_type: mergedusr
 profile: default/linux/arm64/17.0/desktop/systemd/merged-usr
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: mergedusr/stage1-arm64-systemd-mergedusr-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

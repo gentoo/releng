@@ -3,7 +3,7 @@ version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/hppa/17.0
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/livecd-stage1-hppa1.1-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/default/installcd-stage2
 interpreter: /usr/bin/qemu-hppa

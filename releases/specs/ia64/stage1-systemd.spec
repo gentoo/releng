@@ -3,7 +3,7 @@ version_stamp: systemd-@TIMESTAMP@
 target: stage1
 rel_type: default
 profile: default/linux/ia64/17.0/systemd
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/stage3-ia64-systemd-latest
 compression_mode: pixz
 update_seed: yes

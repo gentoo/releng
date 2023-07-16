@@ -4,7 +4,7 @@ version_stamp: openrc-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mipsn32 /usr/bin/qemu-mips /usr/bin/qemu-mips64
 rel_type: default
 profile: default/linux/mips/17.0/multilib/n32
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/stage1-mips3_multilib-openrc-@TIMESTAMP@
 compression_mode: pixz
 decompressor_search_order: xz bzip2

@@ -3,7 +3,7 @@ version_stamp: hardened-openrc-@TIMESTAMP@
 target: livecd-stage2
 rel_type: hardened
 profile: default/linux/x86/17.0/hardened
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: hardened/livecd-stage1-i686-hardened-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 

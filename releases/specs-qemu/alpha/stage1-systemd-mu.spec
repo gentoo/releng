@@ -3,7 +3,7 @@ target: stage1
 version_stamp: systemd-mergedusr-@TIMESTAMP@
 rel_type: mergedusr
 profile: default/linux/alpha/17.0/systemd/merged-usr
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: mergedusr/stage3-alpha-systemd-mergedusr-latest
 update_seed: yes
 update_seed_command: -uDN @world

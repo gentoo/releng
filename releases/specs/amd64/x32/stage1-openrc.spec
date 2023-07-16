@@ -3,7 +3,7 @@ target: stage1
 version_stamp: openrc-@TIMESTAMP@
 rel_type: default
 profile: default/linux/amd64/17.0/x32
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/stage3-x32-openrc-latest
 compression_mode: pixz
 update_seed: yes

@@ -3,7 +3,7 @@ version_stamp: systemd-@TIMESTAMP@
 target: stage1
 rel_type: default
 profile: default/linux/loong/22.0/la64v100/lp64d/systemd
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/stage3-loong-systemd-latest
 compression_mode: pixz
 update_seed: yes

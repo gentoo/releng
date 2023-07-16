@@ -3,7 +3,7 @@ version_stamp: openrc-@TIMESTAMP@
 target: livecd-stage1
 rel_type: default
 profile: default/linux/x86/17.0
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: default/stage3-i486-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos

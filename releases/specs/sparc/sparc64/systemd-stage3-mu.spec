@@ -3,7 +3,7 @@ target: stage3
 version_stamp: systemd-mergedusr-@TIMESTAMP@
 rel_type: mergedusr
 profile: default/linux/sparc/17.0/64ul/systemd/merged-usr
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: mergedusr/stage1-sparc64-systemd-mergedusr-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

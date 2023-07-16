@@ -3,6 +3,6 @@ version_stamp: multilib-@TIMESTAMP@
 target: stage1
 rel_type: multilib
 profile: default/linux/sparc/experimental/multilib
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: multilib/stage3-sparc64-multilib-latest
 update_seed: yes

@@ -3,7 +3,7 @@ version_stamp: hardened-openrc-@TIMESTAMP@
 target: stage1
 rel_type: musl-hardened
 profile: default/linux/arm/17.0/musl/armv6j/hardened
-snapshot: @TIMESTAMP@
+snapshot_treeish: @TIMESTAMP@
 source_subpath: musl-hardened/stage3-armv6j_hardfp_musl-hardened-openrc-latest.tar.xz
 compression_mode: pixz
 update_seed: yes
