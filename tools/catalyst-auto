@@ -404,10 +404,6 @@ run_catalyst_commands() {
 			done
 		fi
 
-		if [[ -n ${TREEISH} ]]; then
-			sed -i -e "s|snapshot:.*|snapshot_treeish: ${TREEISH}|g" "${i}"
-		fi
-
 		# Expand vars that the spec expects us to.
 		sed -i \
 			-e "s:@TIMESTAMP@:${TIMESTAMP}:g" \
