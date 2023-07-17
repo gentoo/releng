@@ -3,7 +3,7 @@ target: stage1
 version_stamp: hardened-openrc-@TIMESTAMP@
 rel_type: hardened
 profile: default/linux/x86/17.0/hardened
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: hardened/stage3-i686-hardened-openrc-latest
 compression_mode: pixz
 update_seed: yes

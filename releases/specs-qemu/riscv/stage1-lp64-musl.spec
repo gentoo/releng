@@ -4,7 +4,7 @@ version_stamp: @TIMESTAMP@
 interpreter: /usr/bin/qemu-riscv64
 rel_type: musl
 profile: default/linux/riscv/20.0/rv64gc/lp64/musl
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: musl/stage3-rv64_lp64_musl-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2

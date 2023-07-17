@@ -3,7 +3,7 @@ target: stage1
 version_stamp: openrc-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/x86/23.0/i486
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage3-i486-openrc-latest
 compression_mode: pixz
 update_seed: yes

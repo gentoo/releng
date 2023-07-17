@@ -3,7 +3,7 @@ version_stamp: systemd-@TIMESTAMP@
 target: stage3
 rel_type: 23.0-default
 profile: default/linux/arm/23.0/armv7a_sf/systemd
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-armv7a-systemd-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

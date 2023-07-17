@@ -1,6 +1,6 @@
 # HPPA Netboot spec file by Guy Martin
 version_stamp: @TIMESTAMP@
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-hppa2.0-openrc-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/default/netboot-hppa64
 

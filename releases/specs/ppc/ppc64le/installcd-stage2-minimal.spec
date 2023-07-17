@@ -3,7 +3,7 @@ version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/ppc64le/17.0
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/livecd-stage1-ppc64le-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 

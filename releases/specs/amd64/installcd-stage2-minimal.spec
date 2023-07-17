@@ -3,7 +3,7 @@ version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/amd64/17.1/no-multilib
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/livecd-stage1-amd64-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 

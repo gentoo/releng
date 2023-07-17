@@ -3,7 +3,7 @@ version_stamp: @TIMESTAMP@
 target: stage3
 rel_type: musl
 profile: default/linux/m68k/17.0/musl
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: musl/stage1-m68k_musl-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu

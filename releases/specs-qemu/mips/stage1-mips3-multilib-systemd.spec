@@ -4,7 +4,7 @@ version_stamp: systemd-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mipsn32 /usr/bin/qemu-mips /usr/bin/qemu-mips64
 rel_type: default
 profile: default/linux/mips/17.0/multilib/n32/systemd
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-mips3_multilib-systemd-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2

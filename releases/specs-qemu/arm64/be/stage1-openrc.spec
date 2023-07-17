@@ -3,7 +3,7 @@ version_stamp: openrc-@TIMESTAMP@
 target: stage1
 rel_type: default
 profile: default/linux/arm64/17.0/big-endian
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-aarch64_be-openrc-latest
 compression_mode: pixz
 update_seed: yes

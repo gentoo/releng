@@ -3,7 +3,7 @@ version_stamp: openrc-@TIMESTAMP@
 target: stage3
 rel_type: default
 profile: default/linux/s390/17.0/s390x
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage1-s390x-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

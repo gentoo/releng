@@ -3,7 +3,7 @@ version_stamp: systemd-@TIMESTAMP@
 target: stage3
 rel_type: 23.0-default
 profile: default/linux/ia64/23.0/systemd
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-ia64-systemd-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

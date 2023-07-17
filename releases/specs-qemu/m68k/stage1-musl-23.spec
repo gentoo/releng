@@ -4,7 +4,7 @@ target: stage1
 rel_type: 23.0-musl
 profile: default/linux/m68k/23.0/musl
 chost: m68k-unknown-linux-musl
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-musl/stage3-m68k_musl-latest
 compression_mode: pixz
 update_seed: yes

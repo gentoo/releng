@@ -3,7 +3,7 @@ target: stage1
 version_stamp: openrc-@TIMESTAMP@
 rel_type: power9le
 profile: default/linux/ppc64le/17.0
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: power9le/stage3-power9le-openrc-latest
 compression_mode: pixz
 update_seed: yes

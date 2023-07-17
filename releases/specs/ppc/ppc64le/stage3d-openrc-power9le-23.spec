@@ -3,7 +3,7 @@ target: stage3
 version_stamp: desktop-openrc-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/ppc64le/23.0/desktop
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-power9le-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

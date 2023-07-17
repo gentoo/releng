@@ -3,7 +3,7 @@ target: stage1
 version_stamp: llvm-systemd-mergedusr-@TIMESTAMP@
 rel_type: llvm-mergedusr
 profile: default/linux/amd64/17.1/systemd/clang/merged-usr
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: llvm-mergedusr/stage3-amd64-llvm-systemd-mergedusr-latest
 compression_mode: pixz
 update_seed: yes

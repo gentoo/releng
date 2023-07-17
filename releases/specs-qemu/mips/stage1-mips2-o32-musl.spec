@@ -4,7 +4,7 @@ version_stamp: @TIMESTAMP@
 interpreter: /usr/bin/qemu-mips
 rel_type: musl
 profile: default/linux/mips/17.0/o32/musl
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: musl/stage3-mips2_musl-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2

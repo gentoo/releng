@@ -4,7 +4,7 @@ version_stamp: systemd-mergedusr-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mipsn32el /usr/bin/qemu-mipsel /usr/bin/qemu-mips64el
 rel_type: mergedusr
 profile: default/linux/mips/17.0/mipsel/multilib/n32/systemd/merged-usr
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: mergedusr/stage3-mipsel3_multilib-systemd-mergedusr-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2

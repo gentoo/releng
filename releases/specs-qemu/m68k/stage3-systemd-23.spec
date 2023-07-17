@@ -3,7 +3,7 @@ version_stamp: systemd-@TIMESTAMP@
 target: stage3
 rel_type: 23.0-default
 profile: default/linux/m68k/23.0/systemd
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-m68k-systemd-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu

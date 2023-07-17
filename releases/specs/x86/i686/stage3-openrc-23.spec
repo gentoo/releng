@@ -3,7 +3,7 @@ target: stage3
 version_stamp: openrc-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/x86/23.0/i686
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-i686-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

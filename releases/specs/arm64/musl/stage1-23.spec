@@ -3,7 +3,7 @@ target: stage1
 version_stamp: musl-@TIMESTAMP@
 rel_type: 23.0-musl
 profile: default/linux/arm64/23.0/musl
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-musl/stage3-arm64-musl-latest.tar.xz
 compression_mode: pixz
 update_seed: yes

@@ -3,7 +3,7 @@ target: stage1
 version_stamp: musl-llvm-@TIMESTAMP@
 rel_type: musl-llvm
 profile: default/linux/arm64/17.0/musl/llvm
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: musl-llvm/stage3-arm64-musl-llvm-latest.tar.xz
 compression_mode: pixz
 update_seed: yes

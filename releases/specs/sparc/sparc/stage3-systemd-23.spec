@@ -3,7 +3,7 @@ target: stage3
 version_stamp: systemd-@TIMESTAMP@
 rel_type: 23.0-default
 profile: default/linux/sparc/23.0/systemd
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-sparc-systemd-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

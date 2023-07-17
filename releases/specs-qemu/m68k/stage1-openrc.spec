@@ -3,7 +3,7 @@ version_stamp: openrc-@TIMESTAMP@
 target: stage1
 rel_type: default
 profile: default/linux/m68k/17.0
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-m68k-openrc-latest
 compression_mode: pixz
 update_seed: yes
