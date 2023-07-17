@@ -3,7 +3,7 @@ target: livecd-stage1
 version_stamp: @TIMESTAMP@
 rel_type: default
 profile: default/linux/ppc/17.0
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-ppc-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos

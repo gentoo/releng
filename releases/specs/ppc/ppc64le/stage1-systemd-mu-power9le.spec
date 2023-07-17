@@ -3,7 +3,7 @@ target: stage1
 version_stamp: systemd-mergedusr-@TIMESTAMP@
 rel_type: power9le-mergedusr
 profile: default/linux/ppc64le/17.0/systemd/merged-usr
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: power9le-mergedusr/stage3-power9le-systemd-mergedusr-latest
 compression_mode: pixz
 update_seed: yes

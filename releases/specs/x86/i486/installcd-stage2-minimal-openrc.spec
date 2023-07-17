@@ -3,7 +3,7 @@ version_stamp: openrc-@TIMESTAMP@
 target: livecd-stage2
 rel_type: default
 profile: default/linux/x86/17.0
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/livecd-stage1-i486-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 

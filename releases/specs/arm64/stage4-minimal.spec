@@ -3,7 +3,7 @@ target: stage4
 version_stamp: minimal-@TIMESTAMP@
 rel_type: default
 profile: default/linux/arm64/17.0
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 compression_mode: pixz
 source_subpath: default/stage3-arm64-@TIMESTAMP@
 #portage_confdir: @REPO_DIR@/releases/portage/isos

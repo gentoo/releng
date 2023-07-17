@@ -3,7 +3,7 @@ target: stage1
 version_stamp: llvm-systemd-@TIMESTAMP@
 rel_type: llvm
 profile: default/linux/arm64/17.0/systemd/llvm
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: llvm/stage3-arm64-llvm-systemd-latest.tar.xz
 compression_mode: pixz
 update_seed: yes

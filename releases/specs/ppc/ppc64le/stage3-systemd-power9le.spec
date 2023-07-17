@@ -3,7 +3,7 @@ target: stage3
 version_stamp: systemd-@TIMESTAMP@
 rel_type: power9le
 profile: default/linux/ppc64le/17.0/systemd
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: power9le/stage1-power9le-systemd-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

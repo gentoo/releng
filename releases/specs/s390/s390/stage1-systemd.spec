@@ -3,7 +3,7 @@ version_stamp: systemd-@TIMESTAMP@
 target: stage1
 rel_type: default
 profile: default/linux/s390/17.0/systemd
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-s390-systemd-latest
 update_seed: yes
 update_seed_command: --update --deep --newuse @world

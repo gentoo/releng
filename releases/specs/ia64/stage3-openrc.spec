@@ -3,7 +3,7 @@ version_stamp: openrc-@TIMESTAMP@
 target: stage3
 rel_type: default
 profile: default/linux/ia64/17.0
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage1-ia64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages

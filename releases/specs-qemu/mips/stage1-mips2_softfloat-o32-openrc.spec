@@ -4,7 +4,7 @@ version_stamp: openrc-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mips
 rel_type: default
 profile: default/linux/mips/17.0/o32
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-mips2_softfloat-openrc-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2

@@ -4,7 +4,7 @@ version_stamp: systemd-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mips64
 rel_type: default
 profile: default/linux/mips/17.0/n64/systemd
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-mips3_n64-systemd-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2

@@ -5,7 +5,7 @@ cflags: -O2 -pipe
 interpreter: /usr/bin/qemu-riscv64
 rel_type: default
 profile: default/linux/riscv/20.0/rv64gc/lp64d
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-rv64_lp64d-openrc-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2

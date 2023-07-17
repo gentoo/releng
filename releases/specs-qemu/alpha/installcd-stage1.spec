@@ -3,7 +3,7 @@ version_stamp: @TIMESTAMP@
 target: livecd-stage1
 rel_type: default
 profile: default/linux/alpha/17.0
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage3-alpha-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
 interpreter: /usr/bin/qemu-alpha

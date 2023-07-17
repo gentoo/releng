@@ -5,7 +5,7 @@ cflags: -O2 -pipe
 interpreter: /usr/bin/qemu-riscv64 /usr/bin/qemu-riscv32
 rel_type: default
 profile: default/linux/riscv/20.0/rv64gc/multilib
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: default/stage1-rv64_multilib-openrc-@TIMESTAMP@
 compression_mode: pixz
 decompressor_search_order: xz bzip2

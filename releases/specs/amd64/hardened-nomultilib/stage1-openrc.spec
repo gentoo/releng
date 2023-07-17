@@ -3,7 +3,7 @@ target: stage1
 version_stamp: hardened-nomultilib-openrc-@TIMESTAMP@
 rel_type: hardened
 profile: default/linux/amd64/17.1/no-multilib/hardened
-snapshot_treeish: @TIMESTAMP@
+snapshot_treeish: @TREEISH@
 source_subpath: hardened/stage3-amd64-hardened-nomultilib-openrc-latest
 compression_mode: pixz
 update_seed: yes
