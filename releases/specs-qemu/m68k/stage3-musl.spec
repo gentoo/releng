@@ -1,0 +1,11 @@
+subarch: m68k_musl
+version_stamp: @TIMESTAMP@
+target: stage3
+rel_type: musl
+profile: default/linux/m68k/17.0/musl
+snapshot: @TIMESTAMP@
+source_subpath: musl/stage1-m68k_musl-@TIMESTAMP@
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
+portage_prefix: releng
+interpreter: /usr/bin/qemu-m68k
