@@ -258,3 +258,4 @@ livecd/packages:
 	www-client/firefox
 	www-client/links
 	x11-misc/sddm
+	x11-wm/fluxbox
