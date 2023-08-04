@@ -115,6 +115,7 @@ livecd/packages:
 	net-wireless/iw
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
+	sec-keys/openpgp-keys-gentoo-release
 	sys-apps/arch-chroot
 	sys-apps/arrayprobe
 	sys-apps/acl

@@ -51,6 +51,7 @@ livecd/packages:
 #	net-wireless/wireless-tools
 #	net-wireless/wpa_supplicant
 #	net-wireless/zd1201-firmware
+	sec-keys/openpgp-keys-gentoo-release
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload

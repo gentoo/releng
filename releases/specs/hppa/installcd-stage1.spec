@@ -37,6 +37,7 @@ livecd/packages:
 	net-misc/rdate
 	net-misc/vconfig
 	net-proxy/dante
+	sec-keys/openpgp-keys-gentoo-release
 	sys-apps/ethtool
 	sys-apps/hdparm
 	sys-apps/iproute2
