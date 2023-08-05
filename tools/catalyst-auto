@@ -296,6 +296,35 @@ upload() {
 	fi
 }
 
+upsync_binpackages() {
+	# parameter 1: a PKGDIR on the local host
+	# parameter 2: the target dir in the mirroring system, should be of the
+	#              form arch/profileversion/name (e.g., amd64/17.0/x32 )
+	if [[ ${nonetwork} == 0 ]]; then
+		echo Upsyncing binpackages from $1 to $2
+		local SSH_CMD=(
+			ssh
+			-i ${UPLOAD_KEY}
+			-o UserKnownHostsFile=/dev/null
+			-o VerifyHostKeyDNS=yes
+			-o StrictHostKeyChecking=no
+			-o IPQoS=cs0
+		)
+		local RSYNC_OPTS=(
+			-e "${SSH_CMD[*]}"
+			--archive
+			--delete
+			--delete-after
+			--omit-dir-times
+			--delay-updates
+		)
+		rsync "${RSYNC_OPTS[@]}" "$1" "${UPLOAD_USER}@releng-incoming.gentoo.org:/release/weekly/binpackages/$2"
+	else
+		echo Would now upsync binpackages from $1 to $2
+		ls -l $@
+	fi
+}
+
 run_catalyst_commands() {
 	doneconfig=0
 	for config_file in "${config_files[@]}"; do
