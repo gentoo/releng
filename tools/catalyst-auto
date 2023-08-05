@@ -317,8 +317,9 @@ upsync_binpackages() {
 			--delete-after
 			--omit-dir-times
 			--delay-updates
+			--mkpath
 		)
-		rsync "${RSYNC_OPTS[@]}" "$1" "${UPLOAD_USER}@releng-incoming.gentoo.org:/release/weekly/binpackages/$2"
+		rsync "${RSYNC_OPTS[@]}" "$1"/* "${UPLOAD_USER}@releng-incoming.gentoo.org:/release/weekly/binpackages/$2/"
 	else
 		echo Would now upsync binpackages from $1 to $2
 		ls -l $@
