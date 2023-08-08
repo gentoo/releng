@@ -1,1 +1,2 @@
 sys-libs/libcxx static-libs
+sys-libs/libcxxabi static-libs
