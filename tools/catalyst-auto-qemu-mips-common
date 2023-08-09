@@ -184,6 +184,7 @@ post_build() {
 		;;
 	stage3-mips3-multilib-systemd.spec)
 		upload stage3-mips3_multilib-systemd-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mips3_multilib" mips/17.0/mips3_multilib
 		;;
 	stage3-mipsel3-multilib-openrc.spec)
 		upload stage3-mipsel3_multilib-openrc-${TIMESTAMP}.tar.xz*
