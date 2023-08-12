@@ -129,6 +129,7 @@ post_build() {
 		;;
 	stage3-mips2-o32-systemd.spec)
 		upload stage3-mips2-systemd-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mips2" mips/17.0/mips2_o32
 		;;
 	stage3-mips2_softfloat-o32-openrc.spec)
 		upload stage3-mips2_softfloat-openrc-${TIMESTAMP}.tar.xz*
