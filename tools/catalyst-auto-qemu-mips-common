@@ -176,6 +176,7 @@ post_build() {
 		;;
 	stage3-mipsel3-n64-openrc.spec)
 		upload stage3-mipsel3_n64-openrc-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3_n64" mips/17.0/mipsel3_n64
 		;;
 	stage3-mipsel3-n64-systemd.spec)
 		upload stage3-mipsel3_n64-systemd-${TIMESTAMP}.tar.xz*
