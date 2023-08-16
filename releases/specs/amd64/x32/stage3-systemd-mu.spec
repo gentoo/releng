@@ -8,3 +8,4 @@ source_subpath: mergedusr/stage1-x32-systemd-mergedusr-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: amd64/binpackages/17.0/x32
