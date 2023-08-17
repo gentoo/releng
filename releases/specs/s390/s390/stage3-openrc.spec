@@ -8,3 +8,4 @@ source_subpath: default/stage1-s390-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 pkgcache_path: /var/tmp/catalyst/packages/default/stage3-s390
+binrepo_path: s390/binpackages/17.0/s390
