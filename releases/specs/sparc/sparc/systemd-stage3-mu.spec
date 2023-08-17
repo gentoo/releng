@@ -8,3 +8,4 @@ source_subpath: mergedusr/stage1-sparc-systemd-mergedusr-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: sparc/binpackages/17.0/32
