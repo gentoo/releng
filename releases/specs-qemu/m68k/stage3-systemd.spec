@@ -9,3 +9,4 @@ compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng
 interpreter: /usr/bin/qemu-m68k
+binrepo_path: m68k/binpackages/17.0/m68k
