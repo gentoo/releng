@@ -9,3 +9,4 @@ compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng
 interpreter: /usr/bin/qemu-loongarch64
+binrepo_path: loong/binpackages/22.0/loong
