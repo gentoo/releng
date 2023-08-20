@@ -143,18 +143,21 @@ post_build() {
 		;;
 	stage3-mipsel2-o32-systemd.spec)
 		upload stage3-mipsel2-systemd-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel2" mips/17.0/mipsel2_o32
 		;;
 	stage3-mipsel2_softfloat-o32-openrc.spec)
 		upload stage3-mipsel2_softfloat-openrc-${TIMESTAMP}.tar.xz*
 		;;
 	stage3-mipsel2_softfloat-o32-systemd.spec)
 		upload stage3-mipsel2_softfloat-systemd-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel2_softfloat" mips/17.0/mipsel2_o32_softfloat
 		;;
 	stage3-mipsel3-o32-openrc.spec)
 		upload stage3-mipsel3-openrc-${TIMESTAMP}.tar.xz*
 		;;
 	stage3-mipsel3-o32-systemd.spec)
 		upload stage3-mipsel3-systemd-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3" mips/17.0/mipsel3_o32
 		;;
 	stage3-mips3-n32-openrc.spec)
 		upload stage3-mips3_n32-openrc-${TIMESTAMP}.tar.xz*
@@ -168,6 +171,7 @@ post_build() {
 		;;
 	stage3-mipsel3-n32-systemd.spec)
 		upload stage3-mipsel3_n32-systemd-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3_n32" mips/17.0/mipsel3_n32
 		;;
 	stage3-mips3-n64-openrc.spec)
 		upload stage3-mips3_n64-openrc-${TIMESTAMP}.tar.xz*
@@ -178,10 +182,10 @@ post_build() {
 		;;
 	stage3-mipsel3-n64-openrc.spec)
 		upload stage3-mipsel3_n64-openrc-${TIMESTAMP}.tar.xz*
-		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3_n64" mips/17.0/mipsel3_n64
 		;;
 	stage3-mipsel3-n64-systemd.spec)
 		upload stage3-mipsel3_n64-systemd-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3_n64" mips/17.0/mipsel3_n64
 		;;
 	stage3-mips3-multilib-openrc.spec)
 		upload stage3-mips3_multilib-openrc-${TIMESTAMP}.tar.xz*
@@ -242,9 +246,11 @@ post_build() {
 	case ${spec} in
 	stage3-mips2-o32-musl.spec)
 		upload stage3-mips2_musl-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/musl/stage3-mips2_musl" mips/17.0/mips2_o32_musl
 		;;
 	stage3-mipsel2-o32-musl.spec)
 		upload stage3-mipsel2_musl-${TIMESTAMP}.tar.xz*
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/musl/stage3-mipsel2_musl" mips/17.0/mipsel2_o32_musl
 		;;
 	esac
 	popd >/dev/null
