@@ -8,3 +8,4 @@ source_subpath: default/stage1-ia64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: ia64/binpackages/17.0/ia64
