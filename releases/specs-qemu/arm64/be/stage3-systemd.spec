@@ -9,3 +9,4 @@ compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng
 interpreter: /usr/bin/qemu-aarch64_be
+binrepo_path: arm64/binpackages/17.0/aarch64_be

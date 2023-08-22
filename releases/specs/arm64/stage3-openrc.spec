@@ -8,3 +8,4 @@ source_subpath: default/stage1-arm64-openrc-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: arm64/binpackages/17.0/arm64
