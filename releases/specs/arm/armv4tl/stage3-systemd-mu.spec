@@ -8,3 +8,4 @@ source_subpath: mergedusr/stage1-armv4tl-systemd-mergedusr-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: arm/binpackages/17.0/armv4tl

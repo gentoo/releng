@@ -8,3 +8,4 @@ source_subpath: musl/stage1-armv6j_hardfp_musl-openrc-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: arm/binpackages/17.0/armv6j_hardfp_musl
