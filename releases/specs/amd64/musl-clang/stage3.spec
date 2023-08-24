@@ -8,3 +8,4 @@ source_subpath: musl-clang/stage1-amd64-musl-llvm-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
 compression_mode: pixz
+binrepo_path: amd64/binpackages/17.1/x86-64_musl_llvm

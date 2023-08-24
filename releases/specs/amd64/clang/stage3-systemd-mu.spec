@@ -8,3 +8,4 @@ source_subpath: llvm-mergedusr/stage1-amd64-llvm-systemd-mergedusr-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: amd64/binpackages/17.1/x86-64_llvm

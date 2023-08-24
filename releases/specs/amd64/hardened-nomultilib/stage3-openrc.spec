@@ -8,3 +8,4 @@ source_subpath: hardened/stage1-amd64-hardened-nomultilib-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: amd64/binpackages/17.1/x86-64_hardened
