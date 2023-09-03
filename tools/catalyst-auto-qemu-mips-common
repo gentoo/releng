@@ -7,23 +7,23 @@ SPECS_DIR=${REPO_DIR}/releases/specs-qemu/mips
 EMAIL_SUBJECT_PREPEND="[mips-qemu-auto]"
 
 SETS_O32="
-	mips2_o32_openrc
-	mips2_o32_systemd
-	mips2_o32_systemd_mu
 	mips2_softfloat_o32_openrc
 	mips2_softfloat_o32_systemd
 	mips2_softfloat_o32_systemd_mu
+	mips2_o32_openrc
+	mips2_o32_systemd
+	mips2_o32_systemd_mu
 	mips2_o32_musl
-	mipsel2_o32_openrc
-	mipsel2_o32_systemd
-	mipsel2_o32_systemd_mu
 	mipsel2_softfloat_o32_openrc
 	mipsel2_softfloat_o32_systemd
 	mipsel2_softfloat_o32_systemd_mu
-	mipsel2_o32_musl
+	mipsel2_o32_openrc
+	mipsel2_o32_systemd
+	mipsel2_o32_systemd_mu
 	mipsel3_o32_openrc
 	mipsel3_o32_systemd
 	mipsel3_o32_systemd_mu
+	mipsel2_o32_musl
 "
 
 SETS_N32="
