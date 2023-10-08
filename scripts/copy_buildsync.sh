@@ -200,14 +200,35 @@ process_arch() {
 		echo -e "${variant_path} ${size}" >>"${f_tmp}"
 		[[ ${variant_path} =~ tar.*$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_STAGE3_tmp}"
 		[[ ${variant_path} =~ iso$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_ISO_tmp}"
-		rm -f "current-$v"
-		ln -sf "${variant_path%/*}" "current-$v"
+
+		# Previously, current-${v}/ was a symlink to the timestamp directory.
+		# This was apparently confusing to some users because it had way too many files.
+		# So instead make current-${v}/ a directory, containing just symlinks to
+		# the selected build.
+		#
+		# Link the files for a given variant into a current-${v}/ directory.
+		# If it's an old link, remove to convert to directory.
+		if test -l "current-$v" ; then rm "current-$v" ; fi
+		mkdir -p "current-$v"
+
+		# Remove old links in the directory.
+		find "current-$v" -type l ! -name "$f" ! -name "${variant_date}*"
+
+		# install new links
+		# do NOT use -f here, we do not want to override the existing files.
+		# this will ensure the mtime of the links does not change in most cases.
+		ln -s --target-directory="current-$v"/ "../${variant_path}"*
 
 		# Update keepfile
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${keepfile_tmp}"
 
 		# Place latest-*txt into place in the base arch dir.
 		mv -f "${f_tmp}" "${f}"
+
+		# current-${variant}/latest-${variant}.txt contains the RELATIVE filename
+		# So we have to strip the leading directory on the path.
+		# reuse the tmpfile from $f
+		sed "s,^${variant_date}/,,g" <"${f}" >"${f_tmp}" && mv -f "${f_tmp}" "current-$v"/"${f}"
 
 	done
 
