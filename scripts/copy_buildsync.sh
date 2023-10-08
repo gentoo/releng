@@ -11,20 +11,21 @@ LOGDIR_BASE="/release/distfiles/tmp/buildsync/logs"
 
 ARCHES=(
 	alpha
-	amd64
-	arm
-	arm64
-	hppa
-	ia64
-	loong
-	mips
-	m68k
-	ppc
-	riscv
-	s390
-	sh
-	sparc
-	x86
+	# Temporarily disable to reduce flap.
+	#amd64
+	#arm
+	#arm64
+	#hppa
+	#ia64
+	#loong
+	#mips
+	#m68k
+	#ppc
+	#riscv
+	#s390
+	#sh
+	#sparc
+	#x86
 )
 RSYNC_OPTS=(
 	-aO
