@@ -209,7 +209,7 @@ process_arch() {
 		#
 		# Link the files for a given variant into a current-${v}/ directory.
 		# If it's an old link, remove to convert to directory.
-		if test -l "current-$v" ; then rm "current-$v" ; fi
+		if test -L "current-$v" ; then rm "current-$v" ; fi
 		mkdir -p "current-$v"
 
 		# Remove old links in the directory.
