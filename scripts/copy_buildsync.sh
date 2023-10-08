@@ -154,14 +154,21 @@ process_arch() {
 	[ -z "${latest_iso_date}" ] && latest_iso_date="NONE-FOUND"
 	[ -z "${latest_stage3_date}" ] && latest_stage3_date="NONE-FOUND"
 
+
+	OUT_ISO_tmp=""
+	OUT_STAGE3_tmp=""
 	if [ -n "${iso_list}" ]; then
-		echo -e "${header}" >"${OUT_ISO}"
+		OUT_ISO_tmp=$(mktemp -p . -t ".${OUT_ISO}.XXXXXX")
+		chmod 644 "${OUT_ISO_tmp}"
+		echo -e "${header}" >"${OUT_ISO_tmp}"
 		# Some arches produce more than one type of iso.
 		# So let's not advertise a current one via a symlink in general.
 		rm -f current-iso
 	fi
 	if [ -n "${stage3_list}" ]; then
-		echo -e "${header}" >"${OUT_STAGE3}"
+		OUT_STAGE3_tmp=$(mktemp -p . -t ".${OUT_STAGE3}.XXXXXX")
+		chmod 644 "${OUT_STAGE3_tmp}"
+		echo -e "${header}" >"${OUT_STAGE3_tmp}"
 		# Ditto for stage3
 		rm -f current-stage3
 	fi
@@ -177,24 +184,36 @@ process_arch() {
 
 	for v in $variants ; do
 		# FIXME: trace the $a variable in this!
+		# example output 20230907T160230Z/install-alpha-minimal-20230907T160230Z.iso
 		variant_path=$(find 20* -iname "${v}-20*" "${find_variants[@]}" -print 2>/dev/null | sed -e "s,.*/$a/autobuilds/,,g" | sort -k1,1 -t/ | tail -n1 )
 		if [ -z "${variant_path}" ] || [ ! -e "${variant_path}" ]; then
 			echo "$ARCH: Variant ${v} is missing" 1>&2
 			continue
 		fi
+		variant_date="${variant_path%/*}"
+		variant_base="${variant_path#*/}"
 		size=$(stat --format='%s' "${variant_path}")
 		f="latest-${v}.txt"
 		f_tmp=$(mktemp -p . -t ".${f}.XXXXXX")
 		chmod 644 "${f_tmp}"
 		echo -e "${header}" >"${f_tmp}"
 		echo -e "${variant_path} ${size}" >>"${f_tmp}"
-		[[ ${variant_path} =~ tar.*$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_STAGE3}" # FIXME: tempfile
-		[[ ${variant_path} =~ iso$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_ISO}" # FIXME: tempfile
+		[[ ${variant_path} =~ tar.*$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_STAGE3_tmp}"
+		[[ ${variant_path} =~ iso$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_ISO_tmp}"
 		rm -f "current-$v"
 		ln -sf "${variant_path%/*}" "current-$v"
+
+		# Update keepfile
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${keepfile_tmp}"
+
+		# Place latest-*txt into place in the base arch dir.
 		mv -f "${f_tmp}" "${f}"
+
 	done
+
+	# Atomic move these files if created.
+	[[ -n "${OUT_ISO_tmp}" ]] && [[ -f "${OUT_ISO_tmp}" ]] && mv "${OUT_ISO_tmp}" "${OUT_ISO}"
+	[[ -n "${OUT_STAGE3_tmp}" ]] && [[ -f "${OUT_STAGE3_tmp}" ]] && mv "${OUT_STAGE3_tmp}" "${OUT_STAGE3}"
 
 	# Refresh keepfile
 	mv -f "${keepfile_tmp}" "${keepfile}"
