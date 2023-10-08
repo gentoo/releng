@@ -209,15 +209,42 @@ process_arch() {
 		# Link the files for a given variant into a current-${v}/ directory.
 		# If it's an old link, remove to convert to directory.
 		if test -L "current-$v" ; then rm "current-$v" ; fi
-		mkdir -p "current-$v"
+
+		# If there is a file here, something went wrong.
+		if ! mkdir -p "current-$v" ; then
+			echo "$ARCH: could not mkdir current-${v}" 1>&2
+			continue
+		fi
 
 		# Remove old links in the directory.
 		find "current-$v" -type l ! -name "$f" ! -name "${variant_date}*"
 
 		# install new links
-		# do NOT use -f here, we do not want to override the existing files.
-		# this will ensure the mtime of the links does not change in most cases.
-		( cd "current-$v" && ln -s --target-directory=. "../${variant_path}"* )
+		# do NOT unconditionally use -f here, we do not want to override the
+		# existing files.  this will ensure the mtime of the links does not change
+		# in most cases.
+		(
+				# shellcheck disable=SC2164 # error-checked above
+				cd "current-$v"
+				for variant_file in "../${variant_path}"* ; do
+				  doit=0
+					# If it doesn't exist, add it.
+					if [[ ! -e "$variant_file" ]]; then
+						doit=1
+						ln -s -t . "../${variant_path}"
+					else
+						# If it does exist, check carefully to see if anything is different
+						# Does it point to somewhere else?
+						# Is the target newer?
+						# If those are true, also bump the symlink.
+					  vfb=$(basename "$variant_file")
+					  vft=$(readlink -f "$vfb")
+						[[ "$vft" != "$(readlink -f "$variant_file")" ]] && doit=1
+						[[ "$vfb" -nt "$vft" ]] && doit=1
+					fi
+					[[ $doit -eq 1 ]] && ln -sf -t . "../${variant_file}"
+				done
+		)
 
 		# Update keepfile
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${keepfile_tmp}"
