@@ -218,7 +218,7 @@ process_arch() {
 		# install new links
 		# do NOT use -f here, we do not want to override the existing files.
 		# this will ensure the mtime of the links does not change in most cases.
-		ln -s --target-directory="current-$v"/ "../${variant_path}"*
+		( cd "$current_v" && ln -s --target-directory=. "../${variant_path}"* )
 
 		# Update keepfile
 		echo "${variant_path}" | sed -e 's,/.*,,g' -e 's,^,/,g' -e 's,$,$,g' >>"${keepfile_tmp}"
