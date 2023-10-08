@@ -217,7 +217,11 @@ process_arch() {
 		fi
 
 		# Remove old links in the directory.
-		find "current-$v" -type l ! -name "$f" ! -name "${variant_date}*"
+		find "current-$v" \
+			-type l \
+			! -name "$f" \
+			! -name "*${variant_date}*" \
+			-delete
 
 		# install new links
 		# do NOT unconditionally use -f here, we do not want to override the
