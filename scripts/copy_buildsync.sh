@@ -232,15 +232,15 @@ process_arch() {
 				cd "current-$v"
 				for variant_file in "../${variant_path}"* ; do
 				  doit=0
+					vfb=$(basename "$variant_file")
 					# If it doesn't exist, add it.
-					if [[ ! -e "$variant_file" ]]; then
+					if [[ ! -e "$vfb" ]]; then
 						doit=1
 					else
 						# If it does exist, check carefully to see if anything is different
 						# Does it point to somewhere else?
 						# Is the target newer?
 						# If those are true, also bump the symlink.
-					  vfb=$(basename "$variant_file")
 					  vft=$(readlink -f "$vfb")
 						[[ "$vft" != "$(readlink -f "$variant_file")" ]] && doit=1
 						[[ "$vfb" -nt "$vft" ]] && doit=1
