@@ -235,7 +235,6 @@ process_arch() {
 					# If it doesn't exist, add it.
 					if [[ ! -e "$variant_file" ]]; then
 						doit=1
-						ln -s -t . "${variant_file}"
 					else
 						# If it does exist, check carefully to see if anything is different
 						# Does it point to somewhere else?
@@ -246,7 +245,7 @@ process_arch() {
 						[[ "$vft" != "$(readlink -f "$variant_file")" ]] && doit=1
 						[[ "$vfb" -nt "$vft" ]] && doit=1
 					fi
-					[[ $doit -eq 1 ]] && ln -sf -t . "../${variant_file}"
+					[[ $doit -eq 1 ]] && ln -sf -t . "${variant_file}"
 				done
 		)
 
