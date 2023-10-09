@@ -235,7 +235,7 @@ process_arch() {
 					# If it doesn't exist, add it.
 					if [[ ! -e "$variant_file" ]]; then
 						doit=1
-						ln -s -t . "../${variant_path}"
+						ln -s -t . "${variant_file}"
 					else
 						# If it does exist, check carefully to see if anything is different
 						# Does it point to somewhere else?
