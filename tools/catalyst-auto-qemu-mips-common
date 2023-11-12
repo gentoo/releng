@@ -8,48 +8,37 @@ EMAIL_SUBJECT_PREPEND="[mips-qemu-auto]"
 
 SETS_O32="
 	mips2_softfloat_o32_openrc
-	mips2_softfloat_o32_systemd
 	mips2_softfloat_o32_systemd_mu
 	mips2_o32_openrc
-	mips2_o32_systemd
 	mips2_o32_systemd_mu
 	mips2_o32_musl
 	mipsel2_softfloat_o32_openrc
-	mipsel2_softfloat_o32_systemd
 	mipsel2_softfloat_o32_systemd_mu
 	mipsel2_o32_openrc
-	mipsel2_o32_systemd
 	mipsel2_o32_systemd_mu
 	mipsel3_o32_openrc
-	mipsel3_o32_systemd
 	mipsel3_o32_systemd_mu
 	mipsel2_o32_musl
 "
 
 SETS_N32="
 	mips3_n32_openrc
-	mips3_n32_systemd
 	mips3_n32_systemd_mu
 	mipsel3_n32_openrc
-	mipsel3_n32_systemd
 	mipsel3_n32_systemd_mu
 "
 
 SETS_N64="
 	mips3_n64_openrc
-	mips3_n64_systemd
 	mips3_n64_systemd_mu
 	mipsel3_n64_openrc
-	mipsel3_n64_systemd
 	mipsel3_n64_systemd_mu
 "
 
 SETS_MULTI="
 	mips3_multilib_openrc
-	mips3_multilib_systemd
 	mips3_multilib_systemd_mu
 	mipsel3_multilib_openrc
-	mipsel3_multilib_systemd
 	mipsel3_multilib_systemd_mu
 "
 
