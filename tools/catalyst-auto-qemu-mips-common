@@ -16,8 +16,6 @@ SETS_O32="
 	mipsel2_softfloat_o32_systemd_mu
 	mipsel2_o32_openrc
 	mipsel2_o32_systemd_mu
-	mipsel3_o32_openrc
-	mipsel3_o32_systemd_mu
 	mipsel2_o32_musl
 "
 
