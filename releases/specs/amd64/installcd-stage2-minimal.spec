@@ -16,7 +16,7 @@ livecd/volid: Gentoo amd64 @TIMESTAMP@
 boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/amd64-6.1.38.config
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/amd64-6.6.7.config
 
 livecd/unmerge:
 	app-admin/eselect
