@@ -1,0 +1,11 @@
+subarch: arm64
+target: stage3
+version_stamp: desktop-systemd-@TIMESTAMP@
+rel_type: 23.0-default
+profile: default/linux/arm64/23.0/desktop/systemd
+snapshot: @TIMESTAMP@
+source_subpath: 23.0-default/stage1-arm64-systemd-@TIMESTAMP@.tar.xz
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
+binrepo_path: arm64/binpackages/23.0/arm64

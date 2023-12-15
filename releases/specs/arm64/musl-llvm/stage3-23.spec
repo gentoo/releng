@@ -1,0 +1,11 @@
+subarch: arm64
+target: stage3
+version_stamp: musl-llvm-@TIMESTAMP@
+rel_type: 23.0-musl-llvm
+profile: default/linux/arm64/23.0/musl/llvm
+snapshot: @TIMESTAMP@
+source_subpath: 23.0-musl-llvm/stage1-arm64-musl-llvm-@TIMESTAMP@.tar.xz
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
+binrepo_path: arm64/binpackages/23.0/arm64_musl_llvm
