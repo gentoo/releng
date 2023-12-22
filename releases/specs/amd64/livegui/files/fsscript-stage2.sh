@@ -26,7 +26,8 @@ mkdir -pv .config Desktop
 
 # Disable screen lock
 echo "[Daemon]
-Autolock=false" > .config/kscreenlockerrc
+Autolock=false
+LockOnResume=false" > .config/kscreenlockerrc
 
 # Firefox as default browser
 echo \
