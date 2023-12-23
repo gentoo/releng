@@ -42,51 +42,37 @@ SETS_MULTI="
 
 
 SET_mips2_o32_openrc_SPECS="stage1-mips2-o32-openrc.spec stage3-mips2-o32-openrc.spec"
-SET_mips2_o32_systemd_SPECS="stage1-mips2-o32-systemd.spec stage3-mips2-o32-systemd.spec"
 SET_mips2_o32_systemd_mu_SPECS="stage1-mips2-o32-systemd-mu.spec stage3-mips2-o32-systemd-mu.spec"
 
 SET_mips2_softfloat_o32_openrc_SPECS="stage1-mips2_softfloat-o32-openrc.spec stage3-mips2_softfloat-o32-openrc.spec"
-SET_mips2_softfloat_o32_systemd_SPECS="stage1-mips2_softfloat-o32-systemd.spec stage3-mips2_softfloat-o32-systemd.spec"
 SET_mips2_softfloat_o32_systemd_mu_SPECS="stage1-mips2_softfloat-o32-systemd-mu.spec stage3-mips2_softfloat-o32-systemd-mu.spec"
 
 SET_mips2_o32_musl_SPECS="stage1-mips2-o32-musl.spec stage3-mips2-o32-musl.spec"
 
 SET_mipsel2_o32_openrc_SPECS="stage1-mipsel2-o32-openrc.spec stage3-mipsel2-o32-openrc.spec"
-SET_mipsel2_o32_systemd_SPECS="stage1-mipsel2-o32-systemd.spec stage3-mipsel2-o32-systemd.spec"
 SET_mipsel2_o32_systemd_mu_SPECS="stage1-mipsel2-o32-systemd-mu.spec stage3-mipsel2-o32-systemd-mu.spec"
 
 SET_mipsel2_softfloat_o32_openrc_SPECS="stage1-mipsel2_softfloat-o32-openrc.spec stage3-mipsel2_softfloat-o32-openrc.spec"
-SET_mipsel2_softfloat_o32_systemd_SPECS="stage1-mipsel2_softfloat-o32-systemd.spec stage3-mipsel2_softfloat-o32-systemd.spec"
 SET_mipsel2_softfloat_o32_systemd_mu_SPECS="stage1-mipsel2_softfloat-o32-systemd-mu.spec stage3-mipsel2_softfloat-o32-systemd-mu.spec"
 
 SET_mipsel2_o32_musl_SPECS="stage1-mipsel2-o32-musl.spec stage3-mipsel2-o32-musl.spec"
 
-SET_mipsel3_o32_openrc_SPECS="stage1-mipsel3-o32-openrc.spec stage3-mipsel3-o32-openrc.spec"
-SET_mipsel3_o32_systemd_SPECS="stage1-mipsel3-o32-systemd.spec stage3-mipsel3-o32-systemd.spec"
-SET_mipsel3_o32_systemd_mu_SPECS="stage1-mipsel3-o32-systemd-mu.spec stage3-mipsel3-o32-systemd-mu.spec"
-
 SET_mips3_n32_openrc_SPECS="stage1-mips3-n32-openrc.spec stage3-mips3-n32-openrc.spec"
-SET_mips3_n32_systemd_SPECS="stage1-mips3-n32-systemd.spec stage3-mips3-n32-systemd.spec"
 SET_mips3_n32_systemd_mu_SPECS="stage1-mips3-n32-systemd-mu.spec stage3-mips3-n32-systemd-mu.spec"
 
 SET_mipsel3_n32_openrc_SPECS="stage1-mipsel3-n32-openrc.spec stage3-mipsel3-n32-openrc.spec"
-SET_mipsel3_n32_systemd_SPECS="stage1-mipsel3-n32-systemd.spec stage3-mipsel3-n32-systemd.spec"
 SET_mipsel3_n32_systemd_mu_SPECS="stage1-mipsel3-n32-systemd-mu.spec stage3-mipsel3-n32-systemd-mu.spec"
 
 SET_mips3_multilib_openrc_SPECS="stage1-mips3-multilib-openrc.spec stage3-mips3-multilib-openrc.spec"
-SET_mips3_multilib_systemd_SPECS="stage1-mips3-multilib-systemd.spec stage3-mips3-multilib-systemd.spec"
 SET_mips3_multilib_systemd_mu_SPECS="stage1-mips3-multilib-systemd-mu.spec stage3-mips3-multilib-systemd-mu.spec"
 
 SET_mipsel3_multilib_openrc_SPECS="stage1-mipsel3-multilib-openrc.spec stage3-mipsel3-multilib-openrc.spec"
-SET_mipsel3_multilib_systemd_SPECS="stage1-mipsel3-multilib-systemd.spec stage3-mipsel3-multilib-systemd.spec"
 SET_mipsel3_multilib_systemd_mu_SPECS="stage1-mipsel3-multilib-systemd-mu.spec stage3-mipsel3-multilib-systemd-mu.spec"
 
 SET_mips3_n64_openrc_SPECS="stage1-mips3-n64-openrc.spec stage3-mips3-n64-openrc.spec"
-SET_mips3_n64_systemd_SPECS="stage1-mips3-n64-systemd.spec stage3-mips3-n64-systemd.spec"
 SET_mips3_n64_systemd_mu_SPECS="stage1-mips3-n64-systemd-mu.spec stage3-mips3-n64-systemd-mu.spec"
 
 SET_mipsel3_n64_openrc_SPECS="stage1-mipsel3-n64-openrc.spec stage3-mipsel3-n64-openrc.spec"
-SET_mipsel3_n64_systemd_SPECS="stage1-mipsel3-n64-systemd.spec stage3-mipsel3-n64-systemd.spec"
 SET_mipsel3_n64_systemd_mu_SPECS="stage1-mipsel3-n64-systemd-mu.spec stage3-mipsel3-n64-systemd-mu.spec"
 
 KCONFIG_DIR=${REPO_DIR}/releases/kconfig/mips
@@ -95,7 +81,7 @@ KCONFIG_DIR=${REPO_DIR}/releases/kconfig/mips
 update_symlinks() {
 	# Symlink the latest stages3 to build from
 	local d f
-	for d in "${BUILD_SRCDIR_BASE}/builds/default" "${BUILD_SRCDIR_BASE}/builds/mergedusr" ; do
+	for d in "${BUILD_SRCDIR_BASE}/builds"/* ; do
 		mkdir -p "${d}"
 		pushd "${d}" >/dev/null
 		for f in $(ls stage3*xz | grep -v latest | give_latest_from_dates) ; do
@@ -113,79 +99,42 @@ post_build() {
 	case ${spec} in
 	stage3-mips2-o32-openrc.spec)
 		upload stage3-mips2-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mips2-o32-systemd.spec)
-		upload stage3-mips2-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mips2" mips/17.0/mips2_o32
 		;;
 	stage3-mips2_softfloat-o32-openrc.spec)
 		upload stage3-mips2_softfloat-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mips2_softfloat-o32-systemd.spec)
-		upload stage3-mips2_softfloat-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mips2_softfloat" mips/17.0/mips2_o32_softfloat
 		;;
 	stage3-mipsel2-o32-openrc.spec)
 		upload stage3-mipsel2-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mipsel2-o32-systemd.spec)
-		upload stage3-mipsel2-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel2" mips/17.0/mipsel2_o32
 		;;
 	stage3-mipsel2_softfloat-o32-openrc.spec)
 		upload stage3-mipsel2_softfloat-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mipsel2_softfloat-o32-systemd.spec)
-		upload stage3-mipsel2_softfloat-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel2_softfloat" mips/17.0/mipsel2_o32_softfloat
-		;;
-	stage3-mipsel3-o32-openrc.spec)
-		upload stage3-mipsel3-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mipsel3-o32-systemd.spec)
-		upload stage3-mipsel3-systemd-${TIMESTAMP}.tar.xz*
-		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3" mips/17.0/mipsel3_o32
 		;;
 	stage3-mips3-n32-openrc.spec)
 		upload stage3-mips3_n32-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mips3-n32-systemd.spec)
-		upload stage3-mips3_n32-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mips3_n32" mips/17.0/mips3_n32
 		;;
 	stage3-mipsel3-n32-openrc.spec)
 		upload stage3-mipsel3_n32-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mipsel3-n32-systemd.spec)
-		upload stage3-mipsel3_n32-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3_n32" mips/17.0/mipsel3_n32
 		;;
 	stage3-mips3-n64-openrc.spec)
 		upload stage3-mips3_n64-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mips3-n64-systemd.spec)
-		upload stage3-mips3_n64-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mips3_n64" mips/17.0/mips3_n64
 		;;
 	stage3-mipsel3-n64-openrc.spec)
 		upload stage3-mipsel3_n64-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mipsel3-n64-systemd.spec)
-		upload stage3-mipsel3_n64-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3_n64" mips/17.0/mipsel3_n64
 		;;
 	stage3-mips3-multilib-openrc.spec)
 		upload stage3-mips3_multilib-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mips3-multilib-systemd.spec)
-		upload stage3-mips3_multilib-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mips3_multilib" mips/17.0/mips3_multilib
 		;;
 	stage3-mipsel3-multilib-openrc.spec)
 		upload stage3-mipsel3_multilib-openrc-${TIMESTAMP}.tar.xz*
-		;;
-	stage3-mipsel3-multilib-systemd.spec)
-		upload stage3-mipsel3_multilib-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/default/stage3-mipsel3_multilib" mips/17.0/mipsel3_multilib
 		;;
 	esac
