@@ -8,3 +8,4 @@ source_subpath: default/stage1-ppc64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
+binrepo_path: ppc/binpackages/17.0/ppc64
