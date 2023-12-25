@@ -8,4 +8,4 @@ source_subpath: musl-hardened/stage1-ppc64le-musl-hardened-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
-repos: /var/db/repos/musl
+binrepo_path: ppc/binpackages/17.0/ppc64le_musl_hardened

@@ -8,4 +8,4 @@ source_subpath: power9le-musl-hardened/stage1-power9le-musl-hardened-openrc-@TIM
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
-repos: /var/db/repos/musl
+binrepo_path: ppc/binpackages/17.0/power9le_musl_hardened
