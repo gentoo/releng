@@ -29,6 +29,7 @@ boot/kernel/ibmpower/use:
 	livecd
 	png
 	socks5
+	symlink
 	truetype
 	unicode
 	usb
@@ -45,6 +46,7 @@ boot/kernel/ppc64/use:
 	livecd
 	png
 	socks5
+	symlink
 	truetype
 	unicode
 	usb
@@ -59,6 +61,7 @@ boot/kernel/ppc32/use:
 	livecd
 	png
 	socks5
+	symlink
 	truetype
 	unicode
 	usb
