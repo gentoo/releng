@@ -1,0 +1,3 @@
+# without multiarch, builds are much less tested
+# forcing it on here lets us avoid spurious stage1 failures
+sys-libs/glibc multiarch
