@@ -4,7 +4,7 @@
 #
 #  Firewall Builder  fwb_ipt v6.0.0_rc1
 #
-#  Generated Sat Feb  3 22:37:42 2024 CET by huettel
+#  Generated Sun Feb  4 23:23:05 2024 CET by huettel
 #
 # files: * milou.fw /etc/milou.fw
 #
@@ -290,8 +290,8 @@ load_modules() {
 
 verify_interfaces() {
     :
-    echo "Verifying interfaces: eth0 lo"
-    for i in eth0 lo ; do
+    echo "Verifying interfaces: em1 lo"
+    for i in em1 lo ; do
         $IP link show "$i" > /dev/null 2>&1 || {
             log "Interface $i does not exist"
             exit 1
@@ -318,10 +318,10 @@ configure_interfaces() {
     :
     # Configure interfaces
     update_addresses_of_interface "lo 127.0.0.1/8" ""
-    getaddr eth0  i_eth0
-    getaddr6 eth0  i_eth0_v6
-    getnet eth0  i_eth0_network
-    getnet6 eth0  i_eth0_v6_network
+    getaddr em1  i_em1
+    getaddr6 em1  i_em1_v6
+    getnet em1  i_em1_network
+    getnet6 em1  i_em1_v6_network
 }
 
 script_body() {
@@ -341,19 +341,19 @@ script_body() {
 
     # ================ Table 'filter', rule set Policy
     # 
-    # Rule 0 (eth0)
+    # Rule 0 (em1)
     # 
-    echo "Rule 0 (eth0)"
+    echo "Rule 0 (em1)"
     # 
     # anti spoofing rule
     $IPTABLES -N In_RULE_0
-    for i_eth0 in $i_eth0_list
+    for i_em1 in $i_em1_list
     do
-    test -n "$i_eth0" && $IPTABLES -A INPUT -i eth0   -s $i_eth0   -m state --state NEW  -j In_RULE_0 
+    test -n "$i_em1" && $IPTABLES -A INPUT -i em1   -s $i_em1   -m state --state NEW  -j In_RULE_0 
     done
-    for i_eth0 in $i_eth0_list
+    for i_em1 in $i_em1_list
     do
-    test -n "$i_eth0" && $IPTABLES -A FORWARD -i eth0   -s $i_eth0   -m state --state NEW  -j In_RULE_0 
+    test -n "$i_em1" && $IPTABLES -A FORWARD -i em1   -s $i_em1   -m state --state NEW  -j In_RULE_0 
     done
     $IPTABLES -A In_RULE_0  -j LOG  --log-level info --log-prefix "RULE 0 -- DENY "
     $IPTABLES -A In_RULE_0  -j DROP
@@ -372,9 +372,9 @@ script_body() {
     # SSH Access to the host; useful ICMP
     # types; ping request
     $IPTABLES -N Cid5323X58824.0
-    for i_eth0 in $i_eth0_list
+    for i_em1 in $i_em1_list
     do
-    test -n "$i_eth0" && $IPTABLES -A OUTPUT  -d $i_eth0   -m state --state NEW  -j Cid5323X58824.0 
+    test -n "$i_em1" && $IPTABLES -A OUTPUT  -d $i_em1   -m state --state NEW  -j Cid5323X58824.0 
     done
     $IPTABLES -A Cid5323X58824.0 -p icmp  -m icmp  --icmp-type 3  -j ACCEPT
     $IPTABLES -A Cid5323X58824.0 -p icmp  -m icmp  --icmp-type 0/0   -j ACCEPT
@@ -393,9 +393,9 @@ script_body() {
     # 
     echo "Rule 3 (global)"
     # 
-    for i_eth0 in $i_eth0_list
+    for i_em1 in $i_em1_list
     do
-    test -n "$i_eth0" && $IPTABLES -A INPUT  -s $i_eth0   -m state --state NEW  -j ACCEPT 
+    test -n "$i_em1" && $IPTABLES -A INPUT  -s $i_em1   -m state --state NEW  -j ACCEPT 
     done
     $IPTABLES -A OUTPUT  -m state --state NEW  -j ACCEPT
     # 
@@ -461,7 +461,7 @@ test -z "$cmd" && {
 
 case "$cmd" in
     start)
-        log "Activating firewall script generated Sat Feb  3 22:37:42 2024 by huettel"
+        log "Activating firewall script generated Sun Feb  4 23:23:05 2024 by huettel"
         check_tools
          prolog_commands 
         check_run_time_address_table_files

@@ -516,7 +516,7 @@
       <ServiceGroup id="id1631X58824" name="TagServices" comment="" ro="False"/>
     </ServiceGroup>
     <ObjectGroup id="id1632X58824" name="Firewalls" comment="" ro="False">
-      <Firewall id="id5244X58824" host_OS="linux317" lastCompiled="1706996262" lastInstalled="0" lastModified="1706996112" platform="iptables" version="" name="milou" comment="This is an example of a firewall protecting a host ( a server or a workstation). Only SSH access to the host is permitted. Host has dynamic address." ro="False">
+      <Firewall id="id5244X58824" host_OS="linux317" lastCompiled="1707085385" lastInstalled="0" lastModified="1707085358" platform="iptables" version="" name="milou" comment="This is an example of a firewall protecting a host ( a server or a workstation). Only SSH access to the host is permitted. Host has dynamic address." ro="False">
         <NAT id="id5262X58824" name="NAT" comment="" ro="False" ipv4_rule_set="False" ipv6_rule_set="False" top_rule_set="True">
           <RuleSetOptions/>
         </NAT>
@@ -618,7 +618,7 @@
         <Routing id="id5410X58824" name="Routing" comment="" ro="False" ipv4_rule_set="False" ipv6_rule_set="False" top_rule_set="True">
           <RuleSetOptions/>
         </Routing>
-        <Interface id="id5252X58824" dedicated_failover="False" dyn="True" label="outside" mgmt="False" security_level="0" unnum="False" unprotected="False" name="eth0" comment="" ro="False">
+        <Interface id="id5252X58824" dedicated_failover="False" dyn="True" label="outside" mgmt="False" security_level="0" unnum="False" unprotected="False" name="em1" comment="" ro="False">
           <InterfaceOptions/>
         </Interface>
         <Interface id="id5254X58824" dedicated_failover="False" dyn="False" label="loopback" mgmt="False" security_level="100" unnum="False" unprotected="False" name="lo" comment="" ro="False">
