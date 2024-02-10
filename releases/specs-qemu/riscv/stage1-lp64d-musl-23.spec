@@ -1,5 +1,6 @@
 subarch: rv64_lp64d_musl
 target: stage1
+chost: riscv64-unknown-linux-musl
 version_stamp: @TIMESTAMP@
 interpreter: /usr/bin/qemu-riscv64
 rel_type: 23.0-musl
