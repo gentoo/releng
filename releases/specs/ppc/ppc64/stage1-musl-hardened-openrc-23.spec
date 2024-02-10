@@ -1,0 +1,12 @@
+subarch: ppc64
+target: stage1
+version_stamp: musl-hardened-openrc-@TIMESTAMP@
+rel_type: 23.0-musl-hardened
+profile: default/linux/ppc64/23.0/musl/hardened
+snapshot: @TIMESTAMP@
+source_subpath: 23.0-musl-hardened/stage3-ppc64-musl-hardened-openrc-latest
+chost: powerpc64-unknown-linux-musl
+compression_mode: pixz
+update_seed: yes
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
