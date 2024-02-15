@@ -90,3 +90,6 @@ polkit.addRule(function(action, subject) {
         return polkit.Result.YES;
     }
 });' > /etc/polkit-1/rules.d/livegui-root-tools.rules
+
+# Create missing /mnt/gentoo, to behave like installcd
+mkdir -p /mnt/gentoo
