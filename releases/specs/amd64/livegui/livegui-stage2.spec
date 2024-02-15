@@ -7,7 +7,7 @@ snapshot: @TIMESTAMP@
 source_subpath: default/livecd-stage1-amd64-plasma-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/livegui
 
-livecd/bootargs: overlayfs nodhcp
+livecd/bootargs: overlayfs nodhcp secureconsole
 livecd/depclean: no
 livecd/fstype: squashfs
 livecd/iso: livegui-amd64-@TIMESTAMP@.iso
