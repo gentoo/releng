@@ -1,0 +1,11 @@
+subarch: ia64
+version_stamp: openrc-@TIMESTAMP@
+target: stage3
+rel_type: 23.0-default
+profile: default/linux/ia64/23.0
+snapshot: @TIMESTAMP@
+source_subpath: 23.0-default/stage1-ia64-openrc-@TIMESTAMP@
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
+binrepo_path: ia64/binpackages/23.0/ia64
