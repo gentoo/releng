@@ -76,6 +76,7 @@ livecd/packages:
 	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-block/partimage
+	sys-boot/efibootmgr
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
 	sys-fs/bcache-tools
