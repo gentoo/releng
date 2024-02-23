@@ -54,8 +54,6 @@ livecd/packages:
 	net-proxy/dante
 	net-proxy/tsocks
 	net-wireless/b43-fwcutter
-	sys-firmware/ipw2100-firmware
-	sys-firmware/ipw2200-firmware
 	net-wireless/iw
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
@@ -77,6 +75,9 @@ livecd/packages:
 	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-block/partimage
+	sys-firmware/b43-firmware
+	sys-firmware/ipw2100-firmware
+	sys-firmware/ipw2200-firmware
 	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup

@@ -223,6 +223,7 @@ livecd/packages:
 	sys-block/whdd
 	sys-boot/efibootmgr
 	sys-boot/grub
+	sys-firmware/b43-firmware
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
 	sys-fs/bcache-tools
