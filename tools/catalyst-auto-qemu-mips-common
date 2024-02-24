@@ -6,7 +6,7 @@ UPLOAD_KEY=/root/.ssh/id_rsa
 SPECS_DIR=${REPO_DIR}/releases/specs-qemu/mips
 EMAIL_SUBJECT_PREPEND="[mips-qemu-auto]"
 
-SETS_O32="
+SETS_O32_17="
 	mipsel2_softfloat_o32_openrc
 	mipsel2_softfloat_o32_systemd_mu
 	mipsel2_o32_openrc
@@ -18,6 +18,21 @@ SETS_O32="
 	mips2_o32_systemd_mu
 	mips2_o32_musl
 "
+
+SETS_O32_23="
+	mipsel2_softfloat_o32_openrc_23
+	mipsel2_softfloat_o32_systemd_23
+	mipsel2_o32_openrc_23
+	mipsel2_o32_systemd_23
+	mipsel2_o32_musl_23
+	mips2_softfloat_o32_openrc_23
+	mips2_softfloat_o32_systemd_23
+	mips2_o32_openrc_23
+	mips2_o32_systemd_23
+	mips2_o32_musl_23
+"
+
+SETS_O32="${SETS_O32_17} ${SETS_O32_23}"
 
 SETS_N32="
 	mipsel3_n32_openrc
@@ -40,6 +55,7 @@ SETS_MULTI="
 	mips3_multilib_systemd_mu
 "
 
+# 17.0 O32
 
 SET_mips2_o32_openrc_SPECS="stage1-mips2-o32-openrc.spec stage3-mips2-o32-openrc.spec"
 SET_mips2_o32_systemd_mu_SPECS="stage1-mips2-o32-systemd-mu.spec stage3-mips2-o32-systemd-mu.spec"
@@ -57,17 +73,41 @@ SET_mipsel2_softfloat_o32_systemd_mu_SPECS="stage1-mipsel2_softfloat-o32-systemd
 
 SET_mipsel2_o32_musl_SPECS="stage1-mipsel2-o32-musl.spec stage3-mipsel2-o32-musl.spec"
 
+# 23.0 O32
+
+SET_mips2_o32_openrc_23_SPECS="o32/stage1-mips2-o32-openrc-23.spec o32/stage3-mips2-o32-openrc-23.spec"
+SET_mips2_o32_systemd_23_SPECS="o32/stage1-mips2-o32-systemd-23.spec o32/stage3-mips2-o32-systemd-23.spec"
+
+SET_mips2_softfloat_o32_openrc_23_SPECS="o32/stage1-mips2_softfloat-o32-openrc-23.spec o32/stage3-mips2_softfloat-o32-openrc-23.spec"
+SET_mips2_softfloat_o32_systemd_23_SPECS="o32/stage1-mips2_softfloat-o32-systemd-23.spec o32/stage3-mips2_softfloat-o32-systemd-23.spec"
+
+SET_mips2_o32_musl_23_SPECS="o32/stage1-mips2-o32-musl-23.spec o32/stage3-mips2-o32-musl-23.spec"
+
+SET_mipsel2_o32_openrc_23_SPECS="o32/stage1-mipsel2-o32-openrc-23.spec o32/stage3-mipsel2-o32-openrc-23.spec"
+SET_mipsel2_o32_systemd_23_SPECS="o32/stage1-mipsel2-o32-systemd-23.spec o32/stage3-mipsel2-o32-systemd-23.spec"
+
+SET_mipsel2_softfloat_o32_openrc_23_SPECS="o32/stage1-mipsel2_softfloat-o32-openrc-23.spec o32/stage3-mipsel2_softfloat-o32-openrc-23.spec"
+SET_mipsel2_softfloat_o32_systemd_23_SPECS="o32/stage1-mipsel2_softfloat-o32-systemd-23.spec o32/stage3-mipsel2_softfloat-o32-systemd-23.spec"
+
+SET_mipsel2_o32_musl_23_SPECS="o32/stage1-mipsel2-o32-musl-23.spec o32/stage3-mipsel2-o32-musl-23.spec"
+
+# 17.0 N32
+
 SET_mips3_n32_openrc_SPECS="stage1-mips3-n32-openrc.spec stage3-mips3-n32-openrc.spec"
 SET_mips3_n32_systemd_mu_SPECS="stage1-mips3-n32-systemd-mu.spec stage3-mips3-n32-systemd-mu.spec"
 
 SET_mipsel3_n32_openrc_SPECS="stage1-mipsel3-n32-openrc.spec stage3-mipsel3-n32-openrc.spec"
 SET_mipsel3_n32_systemd_mu_SPECS="stage1-mipsel3-n32-systemd-mu.spec stage3-mipsel3-n32-systemd-mu.spec"
 
+# 17.0 multilib
+
 SET_mips3_multilib_openrc_SPECS="stage1-mips3-multilib-openrc.spec stage3-mips3-multilib-openrc.spec"
 SET_mips3_multilib_systemd_mu_SPECS="stage1-mips3-multilib-systemd-mu.spec stage3-mips3-multilib-systemd-mu.spec"
 
 SET_mipsel3_multilib_openrc_SPECS="stage1-mipsel3-multilib-openrc.spec stage3-mipsel3-multilib-openrc.spec"
 SET_mipsel3_multilib_systemd_mu_SPECS="stage1-mipsel3-multilib-systemd-mu.spec stage3-mipsel3-multilib-systemd-mu.spec"
+
+# 17.0 N64
 
 SET_mips3_n64_openrc_SPECS="stage1-mips3-n64-openrc.spec stage3-mips3-n64-openrc.spec"
 SET_mips3_n64_systemd_mu_SPECS="stage1-mips3-n64-systemd-mu.spec stage3-mips3-n64-systemd-mu.spec"
@@ -140,6 +180,23 @@ post_build() {
 	esac
 	popd >/dev/null
 
+	pushd "${BUILD_SRCDIR_BASE}/builds/23.0-default" >/dev/null
+	case ${spec} in
+	o32/stage3-mips2-o32-systemd-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mips2" mips/23.0/mips2_o32
+		;;
+	o32/stage3-mips2_softfloat-o32-systemd-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mips2_softfloat" mips/23.0/mips2_o32_sf
+		;;
+	o32/stage3-mipsel2-o32-systemd-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mipsel2" mips/23.0/mipsel2_o32
+		;;
+	o32/stage3-mipsel2_softfloat-o32-systemd-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mipsel2_softfloat" mips/23.0/mipsel2_o32_sf
+		;;
+	esac
+	popd >/dev/null
+
 	pushd "${BUILD_SRCDIR_BASE}/builds/mergedusr" >/dev/null
 	case ${spec} in
 	stage3-mips2-o32-systemd-mu.spec)
@@ -187,6 +244,17 @@ post_build() {
 	stage3-mipsel2-o32-musl.spec)
 		upload stage3-mipsel2_musl-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/musl/stage3-mipsel2_musl" mips/17.0/mipsel2_o32_musl
+		;;
+	esac
+	popd >/dev/null
+
+	pushd "${BUILD_SRCDIR_BASE}/builds/23.0-musl" >/dev/null
+	case ${spec} in
+	o32/stage3-mips2-o32-musl-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-musl/stage3-mips2_musl" mips/23.0/mips2_o32_musl
+		;;
+	o32/stage3-mipsel2-o32-musl-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-musl/stage3-mipsel2_musl" mips/23.0/mipsel2_o32_musl
 		;;
 	esac
 	popd >/dev/null
