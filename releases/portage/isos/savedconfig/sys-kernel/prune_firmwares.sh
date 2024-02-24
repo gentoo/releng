@@ -16,6 +16,7 @@ echo "# Last updated for $(basename ${1})" >> linux-firmware
 
 sed 	-e's/^a300/#a300/' \
 	-e 's/^amd/#amd/' \
+	-e 's/^airoha/#airoha/' \
 	-e 's/^atusb/#atusb/' \
 	-e 's/^av7110/#av7110/' \
 	-e 's/^cadence/#cadence/' \
@@ -30,6 +31,8 @@ sed 	-e's/^a300/#a300/' \
 	-e 's/^go7007/#go7007/' \
 	-e 's/^hfi1/#hfi1/' \
 	-e 's/^i915/#i915/' \
+	-e 's%^intel/vsc%#intel/vsc%' \
+	-e 's%^intel/ipu%#intel/ipu%' \
 	-e 's/^isdbt/#isdbt/' \
 	-e 's/^keyspan/#keyspan/' \
 	-e 's/^liquidio/#liquidio/' \
