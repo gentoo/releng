@@ -34,12 +34,21 @@ SETS_O32_23="
 
 SETS_O32="${SETS_O32_17} ${SETS_O32_23}"
 
-SETS_N32="
+SETS_N32_17="
 	mipsel3_n32_openrc
 	mipsel3_n32_systemd_mu
 	mips3_n32_openrc
 	mips3_n32_systemd_mu
 "
+
+SETS_N32_23="
+	mipsel3_n32_openrc_23
+	mipsel3_n32_systemd_23
+	mips3_n32_openrc_23
+	mips3_n32_systemd_23
+"
+
+SETS_N32="${SETS_N32_17} ${SETS_N32_23}"
 
 SETS_N64="
 	mipsel3_n64_openrc
@@ -98,6 +107,14 @@ SET_mips3_n32_systemd_mu_SPECS="stage1-mips3-n32-systemd-mu.spec stage3-mips3-n3
 
 SET_mipsel3_n32_openrc_SPECS="stage1-mipsel3-n32-openrc.spec stage3-mipsel3-n32-openrc.spec"
 SET_mipsel3_n32_systemd_mu_SPECS="stage1-mipsel3-n32-systemd-mu.spec stage3-mipsel3-n32-systemd-mu.spec"
+
+# 23.0 N32
+
+SET_mips3_n32_openrc_23_SPECS="n32/stage1-mips3-n32-openrc-23.spec n32/stage3-mips3-n32-openrc-23.spec"
+SET_mips3_n32_systemd_23_SPECS="n32/stage1-mips3-n32-systemd-23.spec n32/stage3-mips3-n32-systemd-23.spec"
+
+SET_mipsel3_n32_openrc_23_SPECS="n32/stage1-mipsel3-n32-openrc-23.spec n32/stage3-mipsel3-n32-openrc-23.spec"
+SET_mipsel3_n32_systemd_23_SPECS="n32/stage1-mipsel3-n32-systemd-23.spec n32/stage3-mipsel3-n32-systemd-23.spec"
 
 # 17.0 multilib
 
@@ -193,6 +210,12 @@ post_build() {
 		;;
 	o32/stage3-mipsel2_softfloat-o32-systemd-23.spec)
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mipsel2_softfloat" mips/23.0/mipsel2_o32_sf
+		;;
+	n32/stage3-mips3-n32-systemd-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mips3_n32" mips/23.0/mips3_n32
+		;;
+	n32/stage3-mipsel3-n32-systemd-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mipsel3_n32" mips/23.0/mipsel3_n32
 		;;
 	esac
 	popd >/dev/null
