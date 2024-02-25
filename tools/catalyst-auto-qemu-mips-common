@@ -66,12 +66,22 @@ SETS_N64_23="
 
 SETS_N64="${SETS_N64_17} ${SETS_N64_23}"
 
-SETS_MULTI="
+SETS_MULTI_17="
 	mipsel3_multilib_openrc
 	mipsel3_multilib_systemd_mu
 	mips3_multilib_openrc
 	mips3_multilib_systemd_mu
 "
+
+SETS_MULTI_23="
+	mipsel3_multilib_openrc_23
+	mipsel3_multilib_systemd_23
+	mips3_multilib_openrc_23
+	mips3_multilib_systemd_23
+"
+
+SETS_MULTI="${SETS_MULTI_17} ${SETS_MULTI_23}"
+
 
 # 17.0 O32
 
@@ -148,6 +158,15 @@ SET_mips3_multilib_systemd_mu_SPECS="stage1-mips3-multilib-systemd-mu.spec stage
 
 SET_mipsel3_multilib_openrc_SPECS="stage1-mipsel3-multilib-openrc.spec stage3-mipsel3-multilib-openrc.spec"
 SET_mipsel3_multilib_systemd_mu_SPECS="stage1-mipsel3-multilib-systemd-mu.spec stage3-mipsel3-multilib-systemd-mu.spec"
+
+# 23.0 multilib
+
+SET_mips3_multilib_openrc_23_SPECS="multilib/stage1-mips3-multilib-openrc-23.spec multilib/stage3-mips3-multilib-openrc-23.spec"
+SET_mips3_multilib_systemd_23_SPECS="multilib/stage1-mips3-multilib-systemd-23.spec multilib/stage3-mips3-multilib-systemd-23.spec"
+
+SET_mipsel3_multilib_openrc_23_SPECS="multilib/stage1-mipsel3-multilib-openrc-23.spec multilib/stage3-mipsel3-multilib-openrc-23.spec"
+SET_mipsel3_multilib_systemd_23_SPECS="multilib/stage1-mipsel3-multilib-systemd-23.spec multilib/stage3-mipsel3-multilib-systemd-23.spec"
+
 
 KCONFIG_DIR=${REPO_DIR}/releases/kconfig/mips
 
@@ -239,6 +258,12 @@ post_build() {
 		;;
 	n64/stage3-mipsel3-n64-systemd-23.spec)
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mipsel3_n64" mips/23.0/mipsel3_n64
+		;;
+	multilib/stage3-mips3-multilib-systemd-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mips3_multilib" mips/23.0/mips3_multilib
+		;;
+	multilib/stage3-mipsel3-multilib-systemd-23.spec)
+		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-default/stage3-mipsel3_multilib" mips/23.0/mipsel3_multilib
 		;;
 	esac
 	popd >/dev/null
