@@ -1,0 +1,10 @@
+subarch: amd64
+target: stage3
+version_stamp: hardened-selinux-systemd-@TIMESTAMP@
+rel_type: 23.0-hardened
+profile: default/linux/amd64/23.0/hardened/selinux/systemd
+snapshot_treeish: @TREEISH@
+source_subpath: 23.0-hardened/stage1-amd64-hardened-selinux-systemd-@TIMESTAMP@
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
