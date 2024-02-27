@@ -67,6 +67,7 @@ livecd/packages:
 	app-editors/vim
 	app-emacs/ebuild-mode
 	app-emulation/cloud-init
+	app-emulation/spice-vdagent
 #	Fails to build...
 #	app-emulation/xen-tools
 	app-eselect/eselect-repository
