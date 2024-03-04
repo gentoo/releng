@@ -1,4 +1,5 @@
 subarch: mips3_n64
+chost: mips64-unknown-linux-gnuabi64
 target: stage1
 version_stamp: systemd-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mips64
