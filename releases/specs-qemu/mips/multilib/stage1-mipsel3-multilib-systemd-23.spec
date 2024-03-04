@@ -1,4 +1,5 @@
 subarch: mipsel3_multilib
+chost: mips64el-unknown-linux-gnuabin32
 target: stage1
 version_stamp: systemd-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mipsn32el /usr/bin/qemu-mipsel /usr/bin/qemu-mips64el

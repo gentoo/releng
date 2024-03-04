@@ -1,4 +1,5 @@
 subarch: mipsel3_n32
+chost: mips64el-unknown-linux-gnuabin32
 target: stage1
 version_stamp: openrc-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mipsn32el

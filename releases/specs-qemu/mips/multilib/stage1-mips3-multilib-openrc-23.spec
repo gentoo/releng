@@ -1,4 +1,5 @@
 subarch: mips3_multilib
+chost: mips64-unknown-linux-gnuabin32
 target: stage1
 version_stamp: openrc-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mipsn32 /usr/bin/qemu-mips /usr/bin/qemu-mips64

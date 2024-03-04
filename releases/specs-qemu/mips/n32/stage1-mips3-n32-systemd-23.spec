@@ -1,4 +1,5 @@
 subarch: mips3_n32
+chost: mips64-unknown-linux-gnuabin32
 target: stage1
 version_stamp: systemd-@TIMESTAMP@
 interpreter: /usr/bin/qemu-mipsn32
