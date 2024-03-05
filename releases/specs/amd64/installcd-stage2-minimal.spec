@@ -18,6 +18,8 @@ boot/kernel: gentoo
 boot/kernel/gentoo/sources: gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/amd64-6.6.13.config
 
+boot/kernel/gentoo/packages: --usepkg n broadcom-sta
+
 livecd/unmerge:
 	app-admin/eselect
 	app-admin/eselect-ctags
