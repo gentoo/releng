@@ -67,6 +67,63 @@ Exec=systemsettings5 kcm_keyboard
 Terminal=false
 " > .config/autostart/systemsettings-keyboard.desktop
 
+# Disable suspend
+echo "[AC]
+icon=battery-charging
+
+[AC][DPMSControl]
+idleTime=600
+lockBeforeTurnOff=0
+
+[AC][DimDisplay]
+idleTime=300000
+
+[AC][HandleButtonEvents]
+lidAction=1
+powerButtonAction=16
+powerDownAction=16
+triggerLidActionWhenExternalMonitorPresent=false
+
+[Battery]
+icon=battery-060
+
+[Battery][DPMSControl]
+idleTime=300
+lockBeforeTurnOff=0
+
+[Battery][DimDisplay]
+idleTime=120000
+
+[Battery][HandleButtonEvents]
+lidAction=1
+powerButtonAction=16
+powerDownAction=16
+triggerLidActionWhenExternalMonitorPresent=false
+
+[LowBattery]
+icon=battery-low
+
+[LowBattery][BrightnessControl]
+value=30
+
+[LowBattery][DPMSControl]
+idleTime=120
+lockBeforeTurnOff=0
+
+[LowBattery][DimDisplay]
+idleTime=60000
+
+[LowBattery][HandleButtonEvents]
+lidAction=1
+powerButtonAction=16
+powerDownAction=16
+triggerLidActionWhenExternalMonitorPresent=false
+
+[LowBattery][SuspendSession]
+idleTime=300000
+suspendThenHibernate=false
+suspendType=1" > .config/powermanagementprofilesrc
+
 popd
 # Clean up perms
 chown -R gentoo:users /home/gentoo
