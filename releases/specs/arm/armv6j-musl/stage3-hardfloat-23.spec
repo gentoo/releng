@@ -1,0 +1,11 @@
+subarch: armv6j_hardfp_musl
+version_stamp: openrc-@TIMESTAMP@
+target: stage3
+rel_type: 23.0-musl
+profile: default/linux/arm/23.0/armv6j_hf/musl
+snapshot_treeish: @TREEISH@
+source_subpath: 23.0-musl/stage1-armv6j_hardfp_musl-openrc-@TIMESTAMP@.tar.xz
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
+binrepo_path: arm/binpackages/23.0/armv6j_hardfp_musl
