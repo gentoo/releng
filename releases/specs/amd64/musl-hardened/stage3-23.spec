@@ -1,0 +1,11 @@
+subarch: amd64
+target: stage3
+version_stamp: musl-hardened-@TIMESTAMP@
+rel_type: 23.0-musl-hardened
+profile: default/linux/amd64/23.0/musl/hardened
+snapshot_treeish: @TREEISH@
+source_subpath: 23.0-musl-hardened/stage1-amd64-musl-hardened-@TIMESTAMP@
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
+compression_mode: pixz
+binrepo_path: amd64/binpackages/23.0/x86-64_musl_hardened
