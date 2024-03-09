@@ -1,4 +1,5 @@
 subarch: arm64
+chost: aarch64-unknown-linux-musl
 target: stage1
 version_stamp: musl-@TIMESTAMP@
 rel_type: 23.0-musl
