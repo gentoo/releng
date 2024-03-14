@@ -319,6 +319,7 @@ upsync_binpackages() {
 			--delay-updates
 			--mkpath
 			--min-size=1
+			--checksum
 			--stats
 		)
 		rsync "${RSYNC_OPTS[@]}" "$1"/* "${UPLOAD_USER}@releng-incoming.gentoo.org:/release/weekly/binpackages/$2/"
