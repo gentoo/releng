@@ -1,10 +1,10 @@
 subarch: amd64
 version_stamp: plasma-@TIMESTAMP@
 target: livecd-stage2
-rel_type: default
-profile: default/linux/amd64/17.1/desktop/plasma
+rel_type: 23.0-default
+profile: default/linux/amd64/23.0/desktop/plasma
 snapshot_treeish: @TREEISH@
-source_subpath: default/livecd-stage1-amd64-plasma-@TIMESTAMP@
+source_subpath: 23.0-default/livecd-stage1-amd64-plasma-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/livegui
 
 livecd/bootargs: overlayfs nodhcp secureconsole
