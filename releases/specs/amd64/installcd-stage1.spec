@@ -1,10 +1,10 @@
 subarch: amd64
 version_stamp: @TIMESTAMP@
 target: livecd-stage1
-rel_type: default
-profile: default/linux/amd64/17.1/no-multilib
+rel_type: 23.0-default
+profile: default/linux/amd64/23.0/no-multilib
 snapshot_treeish: @TREEISH@
-source_subpath: default/stage3-amd64-openrc-@TIMESTAMP@
+source_subpath: 23.0-default/stage3-amd64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
