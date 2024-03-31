@@ -1,10 +1,10 @@
 subarch: amd64
 version_stamp: @TIMESTAMP@
 target: livecd-stage1
-rel_type: hardened
-profile: default/linux/amd64/17.1/hardened
+rel_type: 23.0-hardened
+profile: default/linux/amd64/23.0/hardened
 snapshot_treeish: @TREEISH@
-source_subpath: hardened/stage3-amd64-hardened-openrc-@TIMESTAMP@
+source_subpath: 23.0-hardened/stage3-amd64-hardened-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
