@@ -1,10 +1,10 @@
 subarch: arm64
 target: livecd-stage1
 version_stamp: @TIMESTAMP@
-rel_type: default
-profile: default/linux/arm64/17.0
+rel_type: 23.0-default
+profile: default/linux/arm64/23.0
 snapshot_treeish: @TREEISH@
-source_subpath: default/stage3-arm64-openrc-@TIMESTAMP@.tar.xz
+source_subpath: 23.0-default/stage3-arm64-openrc-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
