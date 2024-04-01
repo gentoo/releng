@@ -1,10 +1,10 @@
 subarch: alpha
 version_stamp: @TIMESTAMP@
 target: livecd-stage1
-rel_type: default
-profile: default/linux/alpha/17.0
+rel_type: 23.0-default
+profile: default/linux/alpha/23.0
 snapshot_treeish: @TREEISH@
-source_subpath: default/stage3-alpha-openrc-@TIMESTAMP@
+source_subpath: 23.0-default/stage3-alpha-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
 interpreter: /usr/bin/qemu-alpha
 compression_mode: pixz
