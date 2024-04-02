@@ -544,6 +544,7 @@ run_catalyst_commands() {
 			specpath=$(readlink -f "${i}")
 			# Bail out of cleaning (eg) stage3-openrc.spec failure if
 			#  CLST_AUTO_NOCLEAN="stage3-openrc.spec" is set
+			run_cmd "${LOGFILE}" "${timeprefix[@]}"  echo "Testing ${i} against CLST_AUTO_NOCLEAN=${CLST_AUTO_NOCLEAN}"
 			[[ ${CLST_AUTO_NOCLEAN} == *${i}* ]] ||
 			run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst --purgetmponly -c "${CATALYST_CONFIG}" -f "${specpath}"
 		done
