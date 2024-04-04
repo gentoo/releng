@@ -1,14 +1,14 @@
 # HPPA Netboot spec file by Guy Martin
 version_stamp: @TIMESTAMP@
 snapshot_treeish: @TREEISH@
-source_subpath: default/stage3-hppa1.1-openrc-@TIMESTAMP@
-pkgcache_path: /var/tmp/catalyst/packages/default/netboot-hppa32
+source_subpath: 23.0-default/stage3-hppa1.1-openrc-@TIMESTAMP@
+pkgcache_path: /var/tmp/catalyst/packages/23.0-default/netboot-hppa32
 
 # these shouldn't change
 target:          netboot
 subarch:         hppa1.1
-rel_type:        default
-profile:         default/linux/hppa/17.0
+rel_type:        23.0-default
+profile:         default/linux/hppa/23.0
 
 # netboot stuff
 boot/kernel:                      hppa32
@@ -48,39 +48,39 @@ netboot/packages:
 	app-misc/screen
 
 netboot/packages/sys-boot/palo/files:
-	/sbin/palo
+	/usr/bin/palo
 	/usr/share/palo/iplboot
 
 netboot/packages/sys-fs/mdadm/files:
-	/sbin/mdadm
+	/usr/bin/mdadm
 
 netboot/packages/sys-fs/e2fsprogs/files:
 	/usr/bin/chattr
 	/usr/bin/lsattr
 	/usr/bin/uuidgen
-	/usr/sbin/mklost+found
-	/sbin/e2fsck
-	/sbin/debugfs
-	/sbin/mke2fs
-	/sbin/badblocks
-	/sbin/tune2fs
-	/sbin/dumpe2fs
-	/sbin/blkid
-	/sbin/logsave
-	/sbin/e2image
-	/sbin/fsck
-	/sbin/e2undo
-	/usr/sbin/filefrag
-	/usr/sbin/uuidd
-	/sbin/resize2fs
-	/sbin/findfs
-	/sbin/e2label
-	/sbin/mkfs.ext4
-	/sbin/mkfs.ext3
-	/sbin/mkfs.ext2
-	/sbin/fsck.ext4
-	/sbin/fsck.ext3
-	/sbin/fsck.ext2
+	/usr/bin/mklost+found
+	/usr/bin/e2fsck
+	/usr/bin/debugfs
+	/usr/bin/mke2fs
+	/usr/bin/badblocks
+	/usr/bin/tune2fs
+	/usr/bin/dumpe2fs
+	/usr/bin/blkid
+	/usr/bin/logsave
+	/usr/bin/e2image
+	/usr/bin/fsck
+	/usr/bin/e2undo
+	/usr/bin/filefrag
+	/usr/bin/uuidd
+	/usr/bin/resize2fs
+	/usr/bin/findfs
+	/usr/bin/e2label
+	/usr/bin/mkfs.ext4
+	/usr/bin/mkfs.ext3
+	/usr/bin/mkfs.ext2
+	/usr/bin/fsck.ext4
+	/usr/bin/fsck.ext3
+	/usr/bin/fsck.ext2
 	/lib/libext2fs.so.*
 	/lib/libcom_err.so.*
 	/lib/libe2p.so.*
@@ -88,17 +88,17 @@ netboot/packages/sys-fs/e2fsprogs/files:
 	/lib/libpthread*
 
 netboot/packages/sys-fs/xfsprogs/files:
-	/sbin/mkfs.xfs
-	/sbin/fsck.xfs
-	/sbin/xfs_repair
+	/usr/bin/mkfs.xfs
+	/usr/bin/fsck.xfs
+	/usr/bin/xfs_repair
 	/lib/librt*
 
 
 netboot/packages/sys-apps/util-linux/files:
-	/usr/sbin/partx
-	/usr/sbin/delpart
-	/usr/sbin/rtcwake
-	/usr/sbin/addpart
+	/usr/bin/partx
+	/usr/bin/delpart
+	/usr/bin/rtcwake
+	/usr/bin/addpart
 	/usr/bin/logger
 	/usr/bin/setarch
 	/usr/bin/linux64
@@ -126,25 +126,25 @@ netboot/packages/sys-apps/util-linux/files:
 	/usr/bin/rev
 	/usr/bin/linux32
 	/usr/bin/colrm
-	/sbin/raw
-	/sbin/mkfs.bfs
-	/sbin/sfdisk
-	/sbin/fsck.minix
-	/sbin/hwclock
-	/sbin/ctrlaltdel
-	/sbin/mkfs
-	/sbin/mkfs.minix
-	/sbin/blockdev
-	/sbin/losetup
-	/sbin/agetty
-	/sbin/mkswap
-	/sbin/pivot_root
-	/sbin/fdisk
-	/sbin/swapon
+	/usr/bin/raw
+	/usr/bin/mkfs.bfs
+	/usr/bin/sfdisk
+	/usr/bin/fsck.minix
+	/usr/bin/hwclock
+	/usr/bin/ctrlaltdel
+	/usr/bin/mkfs
+	/usr/bin/mkfs.minix
+	/usr/bin/blockdev
+	/usr/bin/losetup
+	/usr/bin/agetty
+	/usr/bin/mkswap
+	/usr/bin/pivot_root
+	/usr/bin/fdisk
+	/usr/bin/swapon
 	/bin/umount
 	/bin/dmesg
 	/bin/mount
-	/sbin/swapoff
+	/usr/bin/swapoff
 	/lib/libblkid.so.*
 	/lib/libfdisk.so.*
 	/lib/libmount.so.*
@@ -205,7 +205,7 @@ netboot/packages/net-misc/dropbear/files:
 	/usr/bin/dropbearconvert
 	/usr/bin/dropbearkey
 	/usr/bin/dropbearmulti
-	/usr/sbin/dropbear
+	/usr/bin/dropbear
 	/lib/libcrypt*
 	/lib/libnss_compat*
 	/lib/libnsl*
