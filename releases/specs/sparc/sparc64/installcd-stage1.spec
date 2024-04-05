@@ -1,10 +1,10 @@
 subarch: sparc64
 version_stamp: @TIMESTAMP@
 target: livecd-stage1
-rel_type: default
-profile: default/linux/sparc/17.0/64ul
+rel_type: 23.0-default
+profile: default/linux/sparc/23.0/64ul
 snapshot_treeish: @TREEISH@
-source_subpath: default/stage3-sparc64-@TIMESTAMP@
+source_subpath: 23.0-default/stage3-sparc64-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
