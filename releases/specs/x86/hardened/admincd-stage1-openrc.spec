@@ -1,10 +1,10 @@
 subarch: i686
 version_stamp: hardened-openrc-@TIMESTAMP@
 target: livecd-stage1
-rel_type: hardened
-profile: default/linux/x86/17.0/hardened
+rel_type: 23.0-hardened
+profile: default/linux/x86/23.0/hardened
 snapshot_treeish: @TREEISH@
-source_subpath: hardened/stage3-i686-hardened-openrc-@TIMESTAMP@
+source_subpath: 23.0-hardened/stage3-i686-hardened-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
