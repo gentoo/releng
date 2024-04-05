@@ -1,16 +1,16 @@
 subarch: ppc
 target: livecd-stage2
 version_stamp: @TIMESTAMP@
-rel_type: default
-profile: default/linux/ppc/17.0
+rel_type: 23.0-default
+profile: default/linux/ppc/23.0
 snapshot_treeish: @TREEISH@
-source_subpath: default/livecd-stage1-ppc-@TIMESTAMP@
+source_subpath: 23.0-default/livecd-stage1-ppc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: scandelay=10
 livecd/fstype: squashfs 
 livecd/gk_mainargs: --makeopts=-j12
-livecd/iso: /var/tmp/catalyst/builds/default/install-powerpc-minimal-@TIMESTAMP@.iso
+livecd/iso: /var/tmp/catalyst/builds/23.0-default/install-powerpc-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 
 livecd/rcadd: pbbuttonsd|default
@@ -121,10 +121,10 @@ livecd/empty:
 	/etc/modules.autoload.d
 	/etc/runlevels/single
 	/etc/skel
-	/lib/dev-state
-	/lib/udev-state
-	/lib64/dev-state
-	/lib64/udev-state
+	/usr/lib/dev-state
+	/usr/lib/udev-state
+	/usr/lib64/dev-state
+	/usr/lib64/udev-state
 	/root/.ccache
 	/tmp
 	/usr/diet/include
@@ -199,17 +199,17 @@ livecd/rm:
 	/etc/make.profile
 	/etc/man.conf
 	/etc/resolv.conf
-	/lib*/*.a
-	/lib*/*.la
-	/lib*/cpp
+	/usr/lib*/*.a
+	/usr/lib*/*.la
+	/usr/lib*/cpp
 	/root/.bash_history
 	/root/.viminfo
-	/sbin/*.static
-	/sbin/fsck.cramfs
-	/sbin/fsck.minix
-	/sbin/mkfs.bfs
-	/sbin/mkfs.cramfs
-	/sbin/mkfs.minix
+	/usr/bin/*.static
+	/usr/bin/fsck.cramfs
+	/usr/bin/fsck.minix
+	/usr/bin/mkfs.bfs
+	/usr/bin/mkfs.cramfs
+	/usr/bin/mkfs.minix
 	/usr/bin/addr2line
 	/usr/bin/ar
 	/usr/bin/as
@@ -253,15 +253,15 @@ livecd/rm:
 	/usr/lib*/*.la
 	/usr/lib*/perl5/site_perl
 	/usr/lib*/gcc-lib/*/*/libgcj*
-	/usr/sbin/archive-conf
-	/usr/sbin/dispatch-conf
-	/usr/sbin/emaint
-	/usr/sbin/env-update
-	/usr/sbin/etc-update
-	/usr/sbin/fb*
-	/usr/sbin/fixpackages
-	/usr/sbin/quickpkg
-	/usr/sbin/regenworld
+	/usr/bin/archive-conf
+	/usr/bin/dispatch-conf
+	/usr/bin/emaint
+	/usr/bin/env-update
+	/usr/bin/etc-update
+	/usr/bin/fb*
+	/usr/bin/fixpackages
+	/usr/bin/quickpkg
+	/usr/bin/regenworld
 	/usr/share/consolefonts/1*
 	/usr/share/consolefonts/7*
 	/usr/share/consolefonts/8*
