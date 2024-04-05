@@ -2,7 +2,7 @@ subarch: hppa1.1
 version_stamp: @TIMESTAMP@
 target: livecd-stage2
 rel_type: 23.0-default
-profile: default/linux/hppa/23.0
+profile: default/linux/hppa/23.0/hppa1.1
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/livecd-stage1-hppa1.1-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/23.0-default/installcd-stage2
