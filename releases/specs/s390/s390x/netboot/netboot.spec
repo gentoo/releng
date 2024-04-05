@@ -1,14 +1,14 @@
 # S390 Netboot spec file, based in HPPA Netboot spec file by Guy Martin
 version_stamp: @TIMESTAMP@
 snapshot_treeish: @TREEISH@
-source_subpath: default/stage3-s390x-openrc-@TIMESTAMP@
-pkgcache_path: /var/tmp/catalyst/packages/default/netboot-s390x
+source_subpath: 23.0-default/stage3-s390x-openrc-@TIMESTAMP@
+pkgcache_path: /var/tmp/catalyst/packages/23.0-default/netboot-s390x
 
 # these shouldn't change
 target:          netboot
 subarch:         s390x
-rel_type:        default
-profile:         default/linux/s390/17.0/s390x
+rel_type:        23.0-default
+profile:         default/linux/s390/23.0/s390x
 portage_confdir: @REPO_DIR@/releases/specs/s390/s390x/netboot/portage
 
 
@@ -41,102 +41,102 @@ netboot/packages:
 	sys-devel/bc
 
 netboot/packages/sys-apps/s390-tools/files:
-	/sbin/ts-shell
-	/sbin/ttyrun
-	/sbin/iucvtty
-	/sbin/iucvconn
-	/sbin/dasdinfo
-	/sbin/vmcp
-	/sbin/vmconvert
-	/sbin/znetconf
-	/sbin/cio_ignore
-	/sbin/chzcrypt
-	/sbin/lszcrypt
-	/sbin/chchp
-	/sbin/lschp
-	/sbin/lszfcp
-	/sbin/lsqeth
-	/sbin/chccwdev
-	/sbin/lscss
-	/sbin/lstape
-	/sbin/lsdasd
-	/sbin/scsi_logging_level
-	/sbin/zfcpdbf
-	/sbin/dbginfo.sh
-	/sbin/qethconf
-	/sbin/qetharp
-	/sbin/tape390_crypt
-	/sbin/tape390_display
-	/sbin/tunedasd
-	/sbin/dasdview
-	/sbin/dasdfmt
-	/sbin/fdasd
-	/sbin/zgetdump
-	/sbin/zipl
-	/usr/sbin/hyptop
-	/usr/sbin/chiucvallow
-	/usr/sbin/ziorep_traffic
-	/usr/sbin/ziorep_utilization
-	/usr/sbin/ziomon_zfcpdd
-	/usr/sbin/ziomon_mgr
-	/usr/sbin/ziomon_util
-	/usr/sbin/ziorep_config
-	/usr/sbin/ziomon_fcpconf
-	/usr/sbin/ziomon
-	/usr/sbin/lsshut
-	/usr/sbin/chshut
-	/usr/sbin/lsreipl
-	/usr/sbin/chreipl
-	/usr/sbin/cpuplugd
-	/usr/sbin/vmur
-	/usr/sbin/mon_procd
-	/usr/sbin/mon_fsstatd
-	/usr/sbin/lsluns
-	/usr/sbin/chmem
-	/usr/sbin/lsmem
-	/usr/sbin/xcec-bridge
-	/usr/sbin/ip_watcher.pl
-	/usr/sbin/start_hsnc.sh
+	/usr/bin/ts-shell
+	/usr/bin/ttyrun
+	/usr/bin/iucvtty
+	/usr/bin/iucvconn
+	/usr/bin/dasdinfo
+	/usr/bin/vmcp
+	/usr/bin/vmconvert
+	/usr/bin/znetconf
+	/usr/bin/cio_ignore
+	/usr/bin/chzcrypt
+	/usr/bin/lszcrypt
+	/usr/bin/chchp
+	/usr/bin/lschp
+	/usr/bin/lszfcp
+	/usr/bin/lsqeth
+	/usr/bin/chccwdev
+	/usr/bin/lscss
+	/usr/bin/lstape
+	/usr/bin/lsdasd
+	/usr/bin/scsi_logging_level
+	/usr/bin/zfcpdbf
+	/usr/bin/dbginfo.sh
+	/usr/bin/qethconf
+	/usr/bin/qetharp
+	/usr/bin/tape390_crypt
+	/usr/bin/tape390_display
+	/usr/bin/tunedasd
+	/usr/bin/dasdview
+	/usr/bin/dasdfmt
+	/usr/bin/fdasd
+	/usr/bin/zgetdump
+	/usr/bin/zipl
+	/usr/bin/hyptop
+	/usr/bin/chiucvallow
+	/usr/bin/ziorep_traffic
+	/usr/bin/ziorep_utilization
+	/usr/bin/ziomon_zfcpdd
+	/usr/bin/ziomon_mgr
+	/usr/bin/ziomon_util
+	/usr/bin/ziorep_config
+	/usr/bin/ziomon_fcpconf
+	/usr/bin/ziomon
+	/usr/bin/lsshut
+	/usr/bin/chshut
+	/usr/bin/lsreipl
+	/usr/bin/chreipl
+	/usr/bin/cpuplugd
+	/usr/bin/vmur
+	/usr/bin/mon_procd
+	/usr/bin/mon_fsstatd
+	/usr/bin/lsluns
+	/usr/bin/chmem
+	/usr/bin/lsmem
+	/usr/bin/xcec-bridge
+	/usr/bin/ip_watcher.pl
+	/usr/bin/start_hsnc.sh
 
 netboot/packages/sys-fs/e2fsprogs/files:
 	/usr/bin/chattr
 	/usr/bin/lsattr
 	/usr/bin/uuidgen
-	/usr/sbin/mklost+found
-	/sbin/e2fsck
-	/sbin/debugfs
-	/sbin/mke2fs
-	/sbin/badblocks
-	/sbin/tune2fs
-	/sbin/dumpe2fs
-	/sbin/blkid
-	/sbin/logsave
-	/sbin/e2image
-	/sbin/fsck
-	/sbin/e2undo
-	/usr/sbin/filefrag
-	/usr/sbin/uuidd
-	/sbin/resize2fs
-	/sbin/findfs
-	/sbin/e2label
-	/sbin/mkfs.ext4
-	/sbin/mkfs.ext3
-	/sbin/mkfs.ext2
-	/sbin/fsck.ext4
-	/sbin/fsck.ext3
-	/sbin/fsck.ext2
-	/lib64/libext2fs.so.*
-	/lib64/libcom_err.so.*
-	/lib64/libblkid.so.*
-	/lib64/libe2p.so.*
+	/usr/bin/mklost+found
+	/usr/bin/e2fsck
+	/usr/bin/debugfs
+	/usr/bin/mke2fs
+	/usr/bin/badblocks
+	/usr/bin/tune2fs
+	/usr/bin/dumpe2fs
+	/usr/bin/blkid
+	/usr/bin/logsave
+	/usr/bin/e2image
+	/usr/bin/fsck
+	/usr/bin/e2undo
+	/usr/bin/filefrag
+	/usr/bin/uuidd
+	/usr/bin/resize2fs
+	/usr/bin/findfs
+	/usr/bin/e2label
+	/usr/bin/mkfs.ext4
+	/usr/bin/mkfs.ext3
+	/usr/bin/mkfs.ext2
+	/usr/bin/fsck.ext4
+	/usr/bin/fsck.ext3
+	/usr/bin/fsck.ext2
+	/usr/lib64/libext2fs.so.*
+	/usr/lib64/libcom_err.so.*
+	/usr/lib64/libblkid.so.*
+	/usr/lib64/libe2p.so.*
 	/usr/lib64/e2initrd_helper
-	/lib64/libpthread*
+	/usr/lib64/libpthread*
 
 netboot/packages/sys-apps/util-linux/files:
-	/usr/sbin/partx
-	/usr/sbin/delpart
-	/usr/sbin/rtcwake
-	/usr/sbin/addpart
+	/usr/bin/partx
+	/usr/bin/delpart
+	/usr/bin/rtcwake
+	/usr/bin/addpart
 	/usr/bin/logger
 	/usr/bin/setarch
 	/usr/bin/linux64
@@ -163,37 +163,37 @@ netboot/packages/sys-apps/util-linux/files:
 	/usr/bin/s390x
 	/usr/bin/s390
 	/usr/bin/colrm
-	/sbin/raw
-	/sbin/mkfs.bfs
-	/sbin/sfdisk
-	/sbin/fsck.minix
-	/sbin/hwclock
-	/sbin/ctrlaltdel
-	/sbin/mkfs
-	/sbin/mkfs.minix
-	/sbin/blockdev
-	/sbin/losetup
-	/sbin/agetty
-	/sbin/mkswap
-	/sbin/pivot_root
-	/sbin/fdisk
-	/sbin/swapon
-	/bin/umount
-	/bin/dmesg
-	/bin/mount
-	/sbin/swapoff
-	/lib64/libblkid.so.*
-	/lib64/libmount.so.*
-	/lib64/libsmartcols.so.*
-	/lib64/libuuid.so.*
+	/usr/bin/raw
+	/usr/bin/mkfs.bfs
+	/usr/bin/sfdisk
+	/usr/bin/fsck.minix
+	/usr/bin/hwclock
+	/usr/bin/ctrlaltdel
+	/usr/bin/mkfs
+	/usr/bin/mkfs.minix
+	/usr/bin/blockdev
+	/usr/bin/losetup
+	/usr/bin/agetty
+	/usr/bin/mkswap
+	/usr/bin/pivot_root
+	/usr/bin/fdisk
+	/usr/bin/swapon
+	/usr/bin/umount
+	/usr/bin/dmesg
+	/usr/bin/mount
+	/usr/bin/swapoff
+	/usr/lib64/libblkid.so.*
+	/usr/lib64/libmount.so.*
+	/usr/lib64/libsmartcols.so.*
+	/usr/lib64/libuuid.so.*
 	/usr/lib64/libfdisk.so.*
 
 netboot/packages/app-editors/nano/files:
-	/bin/nano
+	/usr/bin/nano
 
 netboot/packages/sys-libs/ncurses/files:
-	/lib64/libncurses.so.*
-	/lib64/libncursesw.so.*
+	/usr/lib64/libncurses.so.*
+	/usr/lib64/libncursesw.so.*
 	/etc/terminfo
 	/usr/lib64/terminfo
 	/usr/share/tabset/std
@@ -218,8 +218,8 @@ netboot/packages/sys-libs/ncurses/files:
 
 netboot/packages/net-misc/wget/files:
 	/usr/bin/wget
-	/lib64/libss.so.*
-	/lib64/libz.so.*
+	/usr/lib64/libss.so.*
+	/usr/lib64/libz.so.*
 
 netboot/packages/dev-libs/openssl/files:
 	/usr/lib64/libssl.so*
@@ -237,22 +237,22 @@ netboot/packages/net-misc/dropbear/files:
 	/usr/bin/dropbearconvert
 	/usr/bin/dropbearkey
 	/usr/bin/dropbearmulti
-	/usr/sbin/dropbear
-	/lib64/libcrypt*
-	/lib64/libnss*
-	/lib64/libnsl*
-	/lib64/libresolv*
-	/lib64/libnss_dns*
-	/lib64/ld64.so.1
-	/lib64/ld-*
+	/usr/bin/dropbear
+	/usr/lib64/libcrypt*
+	/usr/lib64/libnss*
+	/usr/lib64/libnsl*
+	/usr/lib64/libresolv*
+	/usr/lib64/libnss_dns*
+	/usr/lib64/ld64.so.1
+	/usr/lib64/ld-*
 
 netboot/packages/dev-libs/libtommath/files:
 	/usr/lib64/libtommath.so*
 	/usr/lib64/libtommath.so
-	/lib64/libutil*
+	/usr/lib64/libutil*
 
 netboot/packages/app-misc/screen/files:
 	/usr/bin/screen
 	/etc/screenrc
-	/lib64/libdl*
+	/usr/lib64/libdl*
 
