@@ -1,10 +1,10 @@
 subarch: ppc64le
 version_stamp: @TIMESTAMP@
 target: livecd-stage1
-rel_type: default
-profile: default/linux/ppc64le/17.0
+rel_type: 23.0-default
+profile: default/linux/ppc64le/23.0
 snapshot_treeish: @TREEISH@
-source_subpath: default/stage3-ppc64le-openrc-@TIMESTAMP@
+source_subpath: 23.0-default/stage3-ppc64le-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
