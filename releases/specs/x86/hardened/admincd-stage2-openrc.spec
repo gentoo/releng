@@ -2,7 +2,7 @@ subarch: i686
 version_stamp: hardened-openrc-@TIMESTAMP@
 target: livecd-stage2
 rel_type: 23.0-hardened
-profile: default/linux/x86/23.0/hardened
+profile: default/linux/x86/23.0/i686/hardened
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-hardened/livecd-stage1-i686-hardened-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
