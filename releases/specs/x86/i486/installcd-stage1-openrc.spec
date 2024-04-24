@@ -70,6 +70,7 @@ livecd/packages:
 	sys-apps/netplug
 	sys-apps/pciutils
 	sys-apps/pcmciautils
+	sys-apps/pv
 	sys-apps/sdparm
 	sys-apps/usbutils
 	sys-auth/ssh-import-id

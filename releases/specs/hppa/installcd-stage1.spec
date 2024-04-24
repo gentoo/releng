@@ -41,6 +41,7 @@ livecd/packages:
 	sys-apps/hdparm
 	sys-apps/iproute2
 	sys-apps/pciutils
+	sys-apps/pv
 	sys-apps/sdparm
 	sys-apps/usbutils
 	sys-devel/bc

@@ -73,6 +73,7 @@ livecd/packages:
 	sys-apps/opal-utils
 	sys-apps/pciutils
 	sys-apps/ppc64-diag
+	sys-apps/pv
 	sys-apps/sdparm
 	sys-apps/usbutils
 	sys-auth/ssh-import-id

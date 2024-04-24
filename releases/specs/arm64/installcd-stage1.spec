@@ -72,6 +72,7 @@ livecd/packages:
 	#sys-apps/netplug # needs keywording
 	sys-apps/nvme-cli
 	sys-apps/pciutils
+	sys-apps/pv
 	#sys-apps/pcmciautils # needs keywording
 	#sys-apps/sdparm # needs keywording
 	sys-apps/usbutils
