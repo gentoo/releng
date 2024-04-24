@@ -57,6 +57,7 @@ livecd/packages:
 	sys-fs/lvm2
 	sys-fs/mdadm
 	sys-fs/reiserfsprogs
+	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
 	sys-libs/gpm

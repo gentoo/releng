@@ -96,6 +96,7 @@ livecd/packages:
 	sys-fs/reiserfsprogs
 	sys-fs/squashfs-tools
 	sys-fs/sysfsutils
+	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
 	sys-libs/gpm

@@ -191,6 +191,7 @@ livecd/packages:
 	sys-fs/ncdu
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
+	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
 	sys-libs/gpm

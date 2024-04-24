@@ -48,6 +48,7 @@ livecd/packages:
 	sys-fs/jfsutils
 	sys-fs/mdadm
 	sys-fs/reiserfsprogs
+	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-libs/gpm
 	sys-power/acpid
