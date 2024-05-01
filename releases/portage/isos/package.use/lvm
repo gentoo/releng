@@ -1,6 +1,2 @@
 */* lvm
 sys-fs/lvm2 thin
-# To allow rust to install as build-only dep during the x86 builds for
-# thin-provisioning-tools, we turn on sse2 for rust.  This should be harmless
-# since rust will get removed before isos are packed.
-dev-lang/rust-bin cpu_flags_x86_sse2
