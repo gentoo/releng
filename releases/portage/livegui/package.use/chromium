@@ -1,3 +1,4 @@
+virtual/rust profiler
 dev-lang/rust profiler
 net-libs/nodejs inspector
 media-video/ffmpeg chromium
