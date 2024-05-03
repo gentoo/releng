@@ -9,4 +9,4 @@
 #(dependency required by "kde-apps/kde-apps-meta-23.08.5::gentoo[network]" [ebuild])
 #(dependency required by "kde-apps/kde-apps-meta" [argument])
 
-media-libs/sdl2-ttf harfbuzz
+media-libs/freetype harfbuzz
