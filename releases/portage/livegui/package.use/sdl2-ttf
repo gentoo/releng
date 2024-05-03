@@ -1,0 +1,12 @@
+#emerge: there are no ebuilds built with USE flags to satisfy ">=media-libs/freetype-2.13.2[harfbuzz?,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?]".
+#!!! One of the following packages is required to complete your request:
+#- media-libs/freetype-2.13.2::gentoo (Change USE: +harfbuzz)
+#- media-libs/sdl2-ttf-2.22.0::gentoo (Change USE: -harfbuzz)
+#(dependency required by "media-libs/sdl2-ttf-2.22.0::gentoo" [ebuild])
+#(dependency required by "net-misc/freerdp-3.4.0-r11::gentoo[sdl]" [ebuild])
+#(dependency required by "kde-apps/krdc-23.08.5-r2::gentoo[rdp]" [ebuild])
+#(dependency required by "kde-apps/kdenetwork-meta-23.08.5::gentoo" [ebuild])
+#(dependency required by "kde-apps/kde-apps-meta-23.08.5::gentoo[network]" [ebuild])
+#(dependency required by "kde-apps/kde-apps-meta" [argument])
+
+media-libs/sdl2-ttf harfbuzz
