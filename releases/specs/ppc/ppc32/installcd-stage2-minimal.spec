@@ -8,7 +8,7 @@ source_subpath: 23.0-default/livecd-stage1-ppc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: scandelay=10
-livecd/fstype: squashfs 
+livecd/fstype: squashfs
 livecd/gk_mainargs: --makeopts=-j12
 livecd/iso: /var/tmp/catalyst/builds/23.0-default/install-powerpc-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
@@ -73,6 +73,7 @@ livecd/unmerge:
 	app-admin/perl-cleaner
 	app-admin/python-updater
 	app-arch/cpio
+	dev-build/libtool
 	dev-libs/gmp
 	dev-libs/libxml2
 	dev-libs/mpfr
@@ -102,7 +103,6 @@ livecd/unmerge:
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
-	sys-devel/libtool
 	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch

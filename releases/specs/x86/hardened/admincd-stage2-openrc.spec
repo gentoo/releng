@@ -27,6 +27,7 @@ livecd/unmerge:
 	app-admin/perl-cleaner
 	app-admin/python-updater
 	app-arch/cpio
+	dev-build/libtool
 	dev-lang/rust-bin
 	dev-libs/gmp
 	dev-libs/libxml2
@@ -56,7 +57,6 @@ livecd/unmerge:
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
-	sys-devel/libtool
 	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch

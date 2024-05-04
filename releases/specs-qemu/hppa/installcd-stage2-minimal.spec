@@ -74,6 +74,7 @@ livecd/unmerge:
 	app-text/opensp
 	app-text/po4a
 	app-text/sgml-common
+	dev-build/libtool
 	dev-libs/elfutils
 	dev-libs/eventlog
 	dev-libs/libassuan
@@ -117,7 +118,6 @@ livecd/unmerge:
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
-	sys-devel/libtool
 	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch
@@ -126,7 +126,7 @@ livecd/unmerge:
 	sys-libs/db
 	sys-libs/gdbm
 	sys-libs/cracklib
-	x11-misc/shared-mime-info	
+	x11-misc/shared-mime-info
 
 livecd/empty:
 	/boot
