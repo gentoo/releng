@@ -65,6 +65,7 @@ livecd/unmerge:
 	app-crypt/gnupg
 	app-crypt/pinentry
 	app-portage/portage-utils
+	dev-build/libtool
 	dev-libs/gmp
 	app-text/build-docbook-catalog
 	app-text/docbook-xml-dtd
@@ -116,7 +117,6 @@ livecd/unmerge:
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
-	sys-devel/libtool
 	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch

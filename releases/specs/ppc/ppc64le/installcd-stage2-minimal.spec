@@ -8,7 +8,7 @@ source_subpath: 23.0-default/livecd-stage1-ppc64le-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
-livecd/fstype: squashfs 
+livecd/fstype: squashfs
 livecd/gk_mainargs: --makeopts=-j12 --all-ramdisk-modules
 livecd/iso: install-ppc64le-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
@@ -36,6 +36,7 @@ livecd/unmerge:
 	app-admin/perl-cleaner
 	app-admin/python-updater
 	app-arch/cpio
+	dev-build/libtool
 	dev-libs/gmp
 	dev-libs/libxml2
 	dev-libs/mpfr
@@ -64,7 +65,6 @@ livecd/unmerge:
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
-	sys-devel/libtool
 	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch
