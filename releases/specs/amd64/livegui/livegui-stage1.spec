@@ -6,7 +6,7 @@ profile: default/linux/amd64/23.0/desktop/plasma
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage3-amd64-openrc-@TIMESTAMP@.tar.xz
 compression_mode: pixz
-portage_confdir: @REPODIR/releases/portage/livegui
+portage_confdir: @REPO_DIR@/releases/portage/livegui
 
 livecd/use:
 	-aac
