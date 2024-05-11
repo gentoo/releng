@@ -6,6 +6,9 @@ source /etc/profile
 env-update
 source /tmp/envscript
 
+# Create /mnt/gentoo
+mkdir /mnt/gentoo
+
 # No we don't want to run xdm...
 sed -e '/^DISPLAYMANAGER=/s/.*/DISPLAYMANAGER="sddm"/' -i /etc/conf.d/display-manager
 
