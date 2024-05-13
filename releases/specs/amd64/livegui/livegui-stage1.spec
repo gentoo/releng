@@ -249,8 +249,11 @@ livecd/packages:
 	sys-fs/multipath-tools
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
+	sys-fs/squashfs-tools
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
+	sys-kernel/dracut
+	sys-kernel/installkernel
 	sys-kernel/linux-firmware
 	sys-libs/gpm
 	sys-power/acpid
