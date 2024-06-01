@@ -28,7 +28,7 @@ SETS_O32_23="
 	mips2_o32_musl_23
 "
 
-SETS_O32="${SETS_O32_17} ${SETS_O32_23}"
+SETS_O32="${SETS_O32_23}"
 
 SETS_N32_17="
 	mipsel3_n32_openrc
@@ -42,7 +42,7 @@ SETS_N32_23="
 	mips3_n32_systemd_23
 "
 
-SETS_N32="${SETS_N32_17} ${SETS_N32_23}"
+SETS_N32="${SETS_N32_23}"
 
 SETS_N64_17="
 	mipsel3_n64_openrc
@@ -56,7 +56,7 @@ SETS_N64_23="
 	mips3_n64_systemd_23
 "
 
-SETS_N64="${SETS_N64_17} ${SETS_N64_23}"
+SETS_N64="${SETS_N64_23}"
 
 SETS_MULTI_17="
 	mipsel3_multilib_openrc
@@ -70,7 +70,7 @@ SETS_MULTI_23="
 	mips3_multilib_systemd_23
 "
 
-SETS_MULTI="${SETS_MULTI_17} ${SETS_MULTI_23}"
+SETS_MULTI="${SETS_MULTI_23}"
 
 
 # 17.0 O32
