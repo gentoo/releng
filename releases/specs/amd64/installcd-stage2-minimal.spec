@@ -11,14 +11,17 @@ livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: install-amd64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo amd64 @TIMESTAMP@
+livecd/volid: Gentoo-amd64-@TIMESTAMP@
 
-boot/kernel: gentoo
+boot/kernel: gentoo genkernel
 
-boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/amd64-6.6.21.config
+boot/kernel/gentoo/distkernel: yes
+boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
 
-boot/kernel/gentoo/packages: --usepkg n broadcom-sta
+boot/kernel/genkernel/sources: gentoo-sources
+boot/kernel/genkernel/config: @REPO_DIR@/releases/kconfig/amd64/amd64-6.6.21.config
+
+boot/kernel/genkernel/packages: --usepkg n broadcom-sta
 
 livecd/unmerge:
 	app-admin/eselect
