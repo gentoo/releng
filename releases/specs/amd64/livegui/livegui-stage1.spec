@@ -98,6 +98,7 @@ livecd/packages:
 	app-text/wgetpaste
 	app-text/xournalpp
 	app-vim/gentoo-syntax
+	dev-debug/strace
 	dev-lang/perl
 	dev-lang/python
 	dev-util/kdevelop

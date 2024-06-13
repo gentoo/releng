@@ -34,6 +34,7 @@ livecd/packages:
 	app-portage/cpuid2cpuflags
 	app-portage/mirrorselect
 	app-text/wgetpaste
+	dev-debug/strace
 	media-gfx/fbgrab
 	media-sound/alsa-utils
 	net-analyzer/traceroute
