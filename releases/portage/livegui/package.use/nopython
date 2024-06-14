@@ -1,0 +1,3 @@
+# Disable python flag as needed to keep deps down and (for today) work around missing
+# PYTHON_COMPAT
+www-client/falkon -python
