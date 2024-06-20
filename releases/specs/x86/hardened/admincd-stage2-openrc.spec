@@ -5,7 +5,7 @@ rel_type: 23.0-hardened
 profile: default/linux/x86/23.0/i686/hardened
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-hardened/livecd-stage1-i686-hardened-openrc-@TIMESTAMP@
-portage_confdir: @REPO_DIR@/releases/portage/isos
+portage_confdir: @REPO_DIR@/releases/portage/isos-x86
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs

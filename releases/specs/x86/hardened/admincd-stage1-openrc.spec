@@ -6,7 +6,7 @@ profile: default/linux/x86/23.0/i686/hardened
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-hardened/stage3-i686-hardened-openrc-@TIMESTAMP@
 compression_mode: pixz
-portage_confdir: @REPO_DIR@/releases/portage/isos
+portage_confdir: @REPO_DIR@/releases/portage/isos-x86
 
 livecd/use:
 	alsa

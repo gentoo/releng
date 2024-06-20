@@ -1,0 +1,5 @@
+# preemptively...
+# new glibc tends to lead to trouble with sandbox (and qemu),
+# especially for the unstable arches
+#
+>=sys-libs/glibc-2.40
