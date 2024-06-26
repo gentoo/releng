@@ -4,7 +4,7 @@ target: livecd-stage1
 rel_type: 23.0-default
 profile: default/linux/amd64/23.0/desktop/plasma
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-default/stage3-amd64-openrc-@TIMESTAMP@.tar.xz
+source_subpath: 23.0-default/stage3-amd64-desktop-openrc-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/livegui
 
