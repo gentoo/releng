@@ -194,6 +194,7 @@ livecd/packages:
 	sys-apps/ipmitool
 	sys-apps/iproute2
 	sys-apps/inxi
+	sys-apps/kexec-tools
 	sys-apps/less
 	sys-apps/man-db
 	sys-apps/man-pages

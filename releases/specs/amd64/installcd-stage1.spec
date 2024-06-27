@@ -66,6 +66,7 @@ livecd/packages:
 	sys-apps/gptfdisk
 	sys-apps/hdparm
 	sys-apps/iproute2
+	sys-apps/kexec-tools
 	sys-apps/memtester
 	sys-apps/memtest86+
 	sys-apps/netplug
