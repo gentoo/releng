@@ -483,7 +483,7 @@ run_catalyst_commands() {
 			fi
 
 			for i in ${!specs_var}; do
-				LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+				LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:g' -e 's:\.spec$::').log"
 				specpath=$(readlink -f "${i}")
 				run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${specpath}"
 				if [[ $? != 0 ]]; then
@@ -496,7 +496,7 @@ run_catalyst_commands() {
 			done
 
 			for i in ${!optional_specs_var}; do
-				LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:' -e 's:\.spec$::').log"
+				LOGFILE="${TMPDIR}/log/$(echo "${i}" | sed -e 's:/:_:g' -e 's:\.spec$::').log"
 				specpath=$(readlink -f "${i}")
 				run_cmd "${LOGFILE}" "${timeprefix[@]}" catalyst -a -c "${CATALYST_CONFIG}" -f "${specpath}"
 				if [[ $? != 0 ]]; then
