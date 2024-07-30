@@ -37,6 +37,7 @@ livecd/packages:
 	net-misc/rdate
 	net-misc/vconfig
 	net-proxy/dante
+	sys-apps/arch-chroot
 	sys-apps/ethtool
 	sys-apps/hdparm
 	sys-apps/iproute2
@@ -50,6 +51,7 @@ livecd/packages:
 	sys-fs/cryptsetup
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
+	sys-fs/genfstab
 	sys-fs/lsscsi
 	sys-fs/lvm2
 	sys-fs/mdadm

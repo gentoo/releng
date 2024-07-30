@@ -57,6 +57,7 @@ livecd/packages:
 	net-wireless/iwd
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
+	sys-apps/arch-chroot
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload
@@ -84,6 +85,7 @@ livecd/packages:
 	sys-fs/cryptsetup
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
+	sys-fs/genfstab
 	sys-fs/f2fs-tools
 	sys-fs/hfsplusutils
 	sys-fs/hfsutils
