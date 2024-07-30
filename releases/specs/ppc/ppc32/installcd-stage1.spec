@@ -45,6 +45,7 @@ livecd/packages:
 	net-misc/rsync
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
+	sys-apps/arch-chroot
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/fxload
