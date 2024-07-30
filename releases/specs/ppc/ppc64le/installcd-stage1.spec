@@ -85,6 +85,7 @@ livecd/packages:
 	sys-fs/cryptsetup
 	sys-fs/dosfstools
 	sys-fs/e2fsprogs
+	sys-fs/genfstab
 	sys-fs/f2fs-tools
 	sys-fs/hfsplusutils
 	sys-fs/hfsutils
