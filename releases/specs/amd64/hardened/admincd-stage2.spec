@@ -11,13 +11,13 @@ livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: admincd-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo amd64 AdminCD @TIMESTAMP@
+livecd/volid: Gentoo-amd64-AdminCD-@TIMESTAMP@
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/amd64-6.6.30.config
-
+boot/kernel/gentoo/distkernel: yes
+boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/DK/amd64/livecd-amd64.config
 boot/kernel/gentoo/packages: --usepkg n zfs zfs-kmod broadcom-sta
 
 livecd/unmerge:
@@ -71,6 +71,7 @@ livecd/empty:
 	/etc/cron.hourly
 	/etc/cron.monthly
 	/etc/cron.weekly
+	/etc/kernel/config.d
 	/etc/logrotate.d
 	/etc/modules.autoload.d
 	/etc/runlevels/single
