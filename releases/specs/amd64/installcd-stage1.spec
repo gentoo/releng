@@ -48,6 +48,7 @@ livecd/packages:
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/ndisc6
+	net-misc/networkmanager
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync
