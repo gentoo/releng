@@ -1,24 +1,22 @@
-subarch: i486
-version_stamp: openrc-@TIMESTAMP@
+subarch: i686
+version_stamp: hardened-openrc-@TIMESTAMP@
 target: livecd-stage2
-rel_type: 23.0-default
-profile: default/linux/x86/23.0/i486
+rel_type: 23.0-hardened
+profile: default/linux/x86/23.0/i686/hardened
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-default/livecd-stage1-i486-openrc-@TIMESTAMP@
+source_subpath: 23.0-hardened/livecd-stage1-i686-hardened-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos-x86
 
 livecd/bootargs: dokeymap
-#livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
-livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
+livecd/iso: admincd-x86-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo-x86-@TIMESTAMP@
+livecd/volid: Gentoo x86 AdminCD @TIMESTAMP@
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/distkernel: yes
-boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/dist-x86-livecd.config
+boot/kernel/gentoo/sources: gentoo-sources
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/x86-5.4.38.config
 
 boot/kernel/gentoo/packages: --usepkg n broadcom-sta
 
@@ -29,7 +27,6 @@ livecd/unmerge:
 	app-admin/perl-cleaner
 	app-admin/python-updater
 	app-arch/cpio
-	app-portage/gentoolkit
 	dev-build/libtool
 	dev-lang/rust-bin
 	dev-libs/gmp
@@ -37,10 +34,10 @@ livecd/unmerge:
 	dev-libs/mpfr
 	dev-python/pycrypto
 	dev-util/pkgconfig
+	dev-util/pkgconf
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
-	sys-apps/diffutils
 	sys-apps/groff
 	sys-apps/man-db
 	sys-apps/man-pages
@@ -65,8 +62,7 @@ livecd/unmerge:
 	sys-devel/patch
 	sys-libs/db
 	sys-libs/gdbm
-	sys-kernel/dracut
-	sys-kernel/gentoo-kernel
+	sys-kernel/genkernel
 	sys-kernel/linux-headers
 
 livecd/empty:
@@ -75,10 +71,8 @@ livecd/empty:
 	/etc/cron.hourly
 	/etc/cron.monthly
 	/etc/cron.weekly
-	/etc/kernel/config.d
 	/etc/logrotate.d
 	/etc/modules.autoload.d
-	/etc/rsync
 	/etc/runlevels/single
 	/etc/skel
 	/usr/lib/dev-state
@@ -107,8 +101,6 @@ livecd/empty:
 	/usr/share/consolefonts/partialfonts
 	/usr/share/consoletrans
 	/usr/share/dict
-	/usr/share/doc
-	/usr/share/emacs
 	/usr/share/et
 	/usr/share/gcc-data
 	/usr/share/genkernel

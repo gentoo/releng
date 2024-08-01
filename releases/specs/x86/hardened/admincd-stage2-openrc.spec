@@ -11,12 +11,13 @@ livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: admincd-x86-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo x86 AdminCD @TIMESTAMP@
+livecd/volid: Gentoo-x86-AdminCD-@TIMESTAMP@
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/x86-5.4.38.config
+boot/kernel/gentoo/distkernel: yes
+boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/dist-x86-livecd.config
 
 boot/kernel/gentoo/packages: --usepkg n broadcom-sta
 

@@ -12,13 +12,12 @@ livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo-x86-@TIMESTAMP@
+livecd/volid: Gentoo x86 @TIMESTAMP@
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/distkernel: yes
-boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/dist-x86-livecd.config
+boot/kernel/gentoo/sources: gentoo-sources
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/x86-5.4.38.config
 
 boot/kernel/gentoo/packages: --usepkg n broadcom-sta
 
@@ -29,7 +28,6 @@ livecd/unmerge:
 	app-admin/perl-cleaner
 	app-admin/python-updater
 	app-arch/cpio
-	app-portage/gentoolkit
 	dev-build/libtool
 	dev-lang/rust-bin
 	dev-libs/gmp
@@ -65,8 +63,7 @@ livecd/unmerge:
 	sys-devel/patch
 	sys-libs/db
 	sys-libs/gdbm
-	sys-kernel/dracut
-	sys-kernel/gentoo-kernel
+	sys-kernel/genkernel
 	sys-kernel/linux-headers
 
 livecd/empty:
@@ -75,7 +72,6 @@ livecd/empty:
 	/etc/cron.hourly
 	/etc/cron.monthly
 	/etc/cron.weekly
-	/etc/kernel/config.d
 	/etc/logrotate.d
 	/etc/modules.autoload.d
 	/etc/rsync
