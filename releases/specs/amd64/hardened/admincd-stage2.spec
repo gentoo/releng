@@ -11,7 +11,7 @@ livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: admincd-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo-amd64-AdminCD-@TIMESTAMP@
+livecd/volid: Gentoo-amd64-AdminCD-@DATESTAMP@
 
 boot/kernel: gentoo
 
