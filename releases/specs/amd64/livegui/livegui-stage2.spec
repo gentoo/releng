@@ -12,7 +12,7 @@ livecd/depclean: no
 livecd/fstype: squashfs
 livecd/iso: livegui-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-livecd
-livecd/volid: gentoo-amd64-livegui 
+livecd/volid: gentoo-amd64-livegui
 
 livecd/fsscript: @REPO_DIR@/releases/specs/amd64/livegui/files/fsscript-stage2.sh
 livecd/rcadd: udev|sysinit udev-mount|sysinit acpid|default dbus|default gpm|default NetworkManager|default elogind|boot
