@@ -19,7 +19,7 @@ boot/kernel/gentoo/distkernel: yes
 boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/x86/dist-x86-livecd.config
 
-boot/kernel/gentoo/packages: --usepkg n broadcom-sta
+boot/kernel/gentoo/packages: broadcom-sta
 
 livecd/unmerge:
 	app-admin/eselect
