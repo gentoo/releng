@@ -8,3 +8,6 @@ media-video/ffmpeg libass
 
 #for kde-misc/kweather
 dev-qt/qtpositioning geoclue
+
+#for kde-apps/akonadi
+dev-qt/qtbase mysql
