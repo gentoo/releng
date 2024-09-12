@@ -1,0 +1,4 @@
+# Set experimental flag to differentiate the livegui's kernel binpkgs from
+# installcd/admincd, as those use a custom config with CONFIG_DRM=n to allow
+# pruning lots of gpu-related firmwares.
+sys-kernel/gentoo-kernel experimental
