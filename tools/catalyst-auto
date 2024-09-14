@@ -440,6 +440,7 @@ run_catalyst_commands() {
 		# Expand vars that the spec expects us to.
 		sed -i \
 			-e "s:@TIMESTAMP@:${TIMESTAMP}:g" \
+			-e "s:@DATESTAMP@:${DATESTAMP}:g"
 			-e "s:@REPO_DIR@:${REPO_DIR}:g" \
 			-e "s:@TREEISH@:${TREEISH}:g" \
 			"${i}"
