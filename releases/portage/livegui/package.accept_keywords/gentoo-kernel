@@ -1,0 +1,3 @@
+# Temporarily allow specific unstable gentoo-kernel to get IUSE=experimental
+# that we need for the binpkg reuse workaround.
+=sys-kernel/gentoo-kernel-6.6*
