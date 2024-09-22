@@ -37,10 +37,12 @@ livecd/unmerge:
 	app-admin/python-updater
 	app-arch/cpio
         dev-build/libtool
+	dev-lang/rust-bin
 	dev-libs/gmp
 	dev-libs/libxml2
 	dev-libs/mpfr
 	dev-python/pycrypto
+	dev-util/bindgen
 	dev-util/pkgconfig
 	dev-util/pkgconf
 	perl-core/PodParser
@@ -60,11 +62,13 @@ livecd/unmerge:
 	sys-devel/binutils
 	sys-devel/binutils-config
 	sys-devel/bison
+	sys-devel/clang
 	sys-devel/flex
 	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
+	sys-devel/llvm
 	sys-devel/m4
 	sys-devel/make
 	sys-devel/patch
@@ -72,6 +76,7 @@ livecd/unmerge:
 	sys-libs/gdbm
 	sys-kernel/genkernel
 	sys-kernel/linux-headers
+	virtual/rust
 
 livecd/empty:
 	/boot
