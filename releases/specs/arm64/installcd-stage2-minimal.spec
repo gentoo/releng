@@ -12,9 +12,14 @@ livecd/fstype: squashfs
 livecd/gk_mainargs: --all-ramdisk-modules --firmware
 livecd/iso: install-arm64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo arm64 @TIMESTAMP@
+livecd/volid: Gentoo-arm64-@TIMESTAMP@
 
-boot/kernel: gentoo fallback
+boot/kernel: asahi gentoo fallback
+
+boot/kernel/asahi/distkernel: yes
+boot/kernel/asahi/sources: sys-kernel/asahi-kernel
+boot/kernel/asahi/dracut_args: --xz --no-hostonly -a dmsquash-live -o btrfs -o i18n -o usrmount -o lunmask -o multipath -i /lib/keymaps /lib/keymaps -I busybox
+boot/kernel/asahi/packages: --usepkg n zfs zfs-kmod
 
 boot/kernel/gentoo/distkernel: yes
 boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -o zfs -i /lib/keymaps /lib/keymaps -I busybox
