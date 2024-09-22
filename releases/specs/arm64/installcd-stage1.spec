@@ -20,13 +20,13 @@ livecd/use:
 
 livecd/packages:
 	app-accessibility/brltty
-	#app-accessibility/espeakup # needs keywording
+	app-accessibility/espeakup
 	app-admin/hddtemp
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip
 	app-crypt/gnupg
-	#app-editors/mg # needs keywording
+	app-editors/mg
 	app-editors/nano
 	app-misc/livecd-tools
 	app-misc/screen
@@ -56,9 +56,9 @@ livecd/packages:
 	net-misc/openssh
 	net-misc/rdate
 	net-misc/rsync
-	#net-misc/vconfig # needs stable
+	net-misc/vconfig
 	net-proxy/dante
-	#net-proxy/tsocks # needs stable
+	net-proxy/tsocks
 	net-wireless/b43-fwcutter
 	net-wireless/iw
 	net-wireless/wireless-tools
@@ -66,24 +66,24 @@ livecd/packages:
 	sys-apps/busybox
 	sys-apps/dmidecode
 	sys-apps/ethtool
-	#sys-apps/fxload # needs keywording
+	sys-apps/fxload
 	sys-apps/gptfdisk
 	sys-apps/hdparm
 	sys-apps/iproute2
-	#sys-apps/memtester # needs keywording
+	sys-apps/memtester
 	sys-apps/merge-usr
-	#sys-apps/netplug # needs keywording
+	sys-apps/netplug
 	sys-apps/nvme-cli
 	sys-apps/pciutils
 	sys-apps/pv
-	#sys-apps/pcmciautils # needs keywording
-	#sys-apps/sdparm # needs keywording
+	sys-apps/pcmciautils
+	sys-apps/sdparm
 	sys-apps/usbutils
 	sys-auth/ssh-import-id
 	sys-block/parted
-	#sys-block/partimage # needs keywording
-	#sys-firmware/ipw2100-firmware # needs keywording
-	#sys-firmware/ipw2200-firmware # needs keywording
+	sys-block/partimage
+	sys-firmware/ipw2100-firmware
+	sys-firmware/ipw2200-firmware
 	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
