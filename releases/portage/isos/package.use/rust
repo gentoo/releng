@@ -1,0 +1,2 @@
+# Needed for Asahi support on arm64
+dev-lang/rust-bin rustfmt rust-src
