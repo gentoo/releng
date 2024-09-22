@@ -38,6 +38,8 @@ livecd/packages:
 	app-shells/gentoo-bashcomp
 	app-text/wgetpaste
 	dev-embedded/u-boot-tools
+	dev-lang/rust-bin
+	dev-util/bindgen
 	media-gfx/fbgrab
 	media-sound/alsa-utils
 	net-analyzer/traceroute
@@ -103,3 +105,7 @@ livecd/packages:
 	sys-libs/gpm
 	sys-power/acpid
 	www-client/links
+	# Asahi packages for Apple Silcion support
+	sys-apps/asahi-configs
+	sys-apps/asahi-scripts
+	sys-firmware/asahi-firmware
