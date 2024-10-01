@@ -13,6 +13,8 @@ livecd/iso: admincd-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo-amd64-AdminCD-@DATESTAMP@
 
+livecd/rcadd: dbus|default NetworkManager|default
+
 boot/kernel: gentoo
 
 boot/kernel/gentoo/distkernel: yes
