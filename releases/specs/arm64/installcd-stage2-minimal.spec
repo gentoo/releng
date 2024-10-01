@@ -18,7 +18,7 @@ boot/kernel: gentoo
 
 boot/kernel/gentoo/sources: sys-kernel/gentoo-sources
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/arm64/arm64-5.15.12.config
-boot/kernel/gentoo/packages: --usepkg n zfs zfs-kmod
+boot/kernel/gentoo/packages: zfs zfs-kmod
 
 livecd/unmerge:
 	app-admin/eselect
