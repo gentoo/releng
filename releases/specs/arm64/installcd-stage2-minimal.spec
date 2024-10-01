@@ -7,12 +7,14 @@ snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/livecd-stage1-arm64-@TIMESTAMP@.tar.xz
 portage_confdir: @REPO_DIR@/releases/portage/isos
 
-livecd/bootargs: dokeymap
+livecd/bootargs: dokeymap nodhcp
 livecd/fstype: squashfs
 livecd/gk_mainargs: --all-ramdisk-modules --firmware
 livecd/iso: install-arm64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo arm64 @TIMESTAMP@
+
+livecd/rcadd: dbus|default NetworkManager|default
 
 boot/kernel: gentoo
 
