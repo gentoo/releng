@@ -12,7 +12,7 @@ livecd/depclean: no
 livecd/fstype: squashfs
 livecd/iso: livegui-amd64-@TIMESTAMP@.iso
 livecd/type: gentoo-release-livecd
-livecd/volid: gentoo-amd64-livegui 
+livecd/volid: gentoo-amd64-livegui
 
 livecd/fsscript: @REPO_DIR@/releases/specs/amd64/livegui/files/fsscript-stage2.sh
 livecd/rcadd: udev|sysinit udev-mount|sysinit acpid|default dbus|default gpm|default NetworkManager|default elogind|boot
@@ -26,4 +26,4 @@ boot/kernel: gentoo
 
 boot/kernel/gentoo/distkernel: yes
 boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
-boot/kernel/gentoo/packages: sys-fs/zfs
+boot/kernel/gentoo/packages: --usepkg n sys-fs/zfs broadcom-sta
