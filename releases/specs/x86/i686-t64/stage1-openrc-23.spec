@@ -1,4 +1,4 @@
-subarch: i686-t64
+subarch: i686
 target: stage1
 version_stamp: openrc-@TIMESTAMP@
 rel_type: 23.0-time64

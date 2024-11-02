@@ -1,4 +1,4 @@
-subarch: i686-t64
+subarch: i686
 target: stage3
 version_stamp: systemd-@TIMESTAMP@
 rel_type: 23.0-time64
