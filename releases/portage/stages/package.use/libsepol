@@ -1,0 +1,2 @@
+# dependency required by "sys-libs/libselinux-3.7-r1
+sys-libs/libsepol static-libs
