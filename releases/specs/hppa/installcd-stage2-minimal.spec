@@ -118,7 +118,7 @@ livecd/unmerge:
 	sys-devel/gettext
 	sys-devel/gnuconfig
 	sys-devel/m4
-	sys-devel/make
+	dev-build/make
 	sys-devel/patch
 	sys-kernel/genkernel
 	sys-kernel/linux-headers
