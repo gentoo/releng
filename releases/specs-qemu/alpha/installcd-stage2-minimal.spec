@@ -60,7 +60,6 @@ livecd/unmerge:
 	dev-libs/mpfr
 #	dev-libs/popt
 	dev-python/pycrypto
-	dev-util/pkgconfig
 	dev-util/pkgconf
 #	net-misc/rsync
 	perl-core/PodParser

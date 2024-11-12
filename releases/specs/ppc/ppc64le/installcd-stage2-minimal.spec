@@ -41,7 +41,6 @@ livecd/unmerge:
 	dev-libs/libxml2
 	dev-libs/mpfr
 	dev-python/pycrypto
-	dev-util/pkgconfig
 	dev-util/pkgconf
 	perl-core/PodParser
 	perl-core/Test-Harness

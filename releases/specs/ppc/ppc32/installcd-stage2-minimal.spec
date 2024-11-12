@@ -79,7 +79,6 @@ livecd/unmerge:
 	dev-libs/mpfr
 	dev-libs/popt
 	dev-python/pycrypto
-	dev-util/pkgconfig
 	dev-util/pkgconf
 	perl-core/PodParser
 	perl-core/Test-Harness
