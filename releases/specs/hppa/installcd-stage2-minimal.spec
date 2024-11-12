@@ -103,10 +103,10 @@ livecd/unmerge:
 	sys-apps/tcp-wrappers
 	sys-apps/texinfo
 	sys-apps/miscfiles
-	sys-devel/autoconf
-	sys-devel/autoconf-wrapper
-	sys-devel/automake
-	sys-devel/automake-wrapper
+	dev-build/autoconf
+	dev-build/autoconf-wrapper
+	dev-build/automake
+	dev-build/automake-wrapper
 	sys-devel/binutils
 	sys-devel/binutils-hppa64
 	sys-devel/binutils-config

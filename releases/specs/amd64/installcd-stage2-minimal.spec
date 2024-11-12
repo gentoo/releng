@@ -47,10 +47,10 @@ livecd/unmerge:
 	sys-apps/miscfiles
 	sys-apps/sandbox
 	sys-apps/texinfo
-	sys-devel/autoconf
-	sys-devel/autoconf-wrapper
-	sys-devel/automake
-	sys-devel/automake-wrapper
+	dev-build/autoconf
+	dev-build/autoconf-wrapper
+	dev-build/automake
+	dev-build/automake-wrapper
 	sys-devel/binutils
 	sys-devel/binutils-config
 	sys-devel/bison
