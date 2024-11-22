@@ -14,6 +14,8 @@ livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo-x86-@DATESTAMP@
 
+livecd/rcadd: dbus|default NetworkManager|default
+
 boot/kernel: gentoo
 
 boot/kernel/gentoo/distkernel: yes
