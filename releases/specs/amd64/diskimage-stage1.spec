@@ -17,6 +17,7 @@ diskimage/packages:
 	app-arch/unzip
 	app-crypt/gnupg
 	app-editors/nano
+	app-emulation/cloud-init
 	app-misc/screen
 	app-portage/cpuid2cpuflags
 	app-portage/gentoolkit
