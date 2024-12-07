@@ -12,13 +12,22 @@ livecd/fstype: squashfs
 livecd/gk_mainargs: --all-ramdisk-modules --firmware
 livecd/iso: install-arm64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo arm64 @TIMESTAMP@
+livecd/volid: Gentoo-arm64-@TIMESTAMP@
 
-boot/kernel: gentoo
+boot/kernel: asahi gentoo fallback
 
-boot/kernel/gentoo/sources: sys-kernel/gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/arm64/arm64-5.15.12.config
+boot/kernel/asahi/distkernel: yes
+boot/kernel/asahi/sources: sys-kernel/asahi-kernel
+boot/kernel/asahi/dracut_args: --xz --no-hostonly -a dmsquash-live -o btrfs -o i18n -o usrmount -o lunmask -o multipath -i /lib/keymaps /lib/keymaps -I busybox
+boot/kernel/asahi/packages: --usepkg n zfs zfs-kmod
+
+boot/kernel/gentoo/distkernel: yes
+boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -o zfs -i /lib/keymaps /lib/keymaps -I busybox
 boot/kernel/gentoo/packages: --usepkg n zfs zfs-kmod
+
+boot/kernel/fallback/sources: sys-kernel/gentoo-sources
+boot/kernel/fallback/config: @REPO_DIR@/releases/kconfig/arm64/arm64-5.15.12.config
+boot/kernel/fallback/packages: --usepkg n zfs zfs-kmod
 
 livecd/unmerge:
 	app-admin/eselect
@@ -28,6 +37,7 @@ livecd/unmerge:
 	app-admin/python-updater
 	app-arch/cpio
         dev-build/libtool
+	dev-lang/rust-bin
 	dev-libs/gmp
 	dev-libs/libxml2
 	dev-libs/mpfr
@@ -50,11 +60,13 @@ livecd/unmerge:
 	sys-devel/binutils
 	sys-devel/binutils-config
 	sys-devel/bison
+	sys-devel/clang
 	sys-devel/flex
 	sys-devel/gcc
 	sys-devel/gcc-config
 	sys-devel/gettext
 	sys-devel/gnuconfig
+	sys-devel/llvm
 	sys-devel/m4
 	dev-build/make
 	sys-devel/patch
@@ -62,6 +74,7 @@ livecd/unmerge:
 	sys-libs/gdbm
 	sys-kernel/genkernel
 	sys-kernel/linux-headers
+	virtual/rust
 
 livecd/empty:
 	/boot
