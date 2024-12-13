@@ -14,6 +14,7 @@ diskimage/use:
 
 diskimage/packages:
 	app-admin/pwgen
+	app-admin/sudo
 	app-arch/unzip
 	app-crypt/gnupg
 	app-editors/nano
