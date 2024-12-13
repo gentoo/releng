@@ -1,0 +1,2 @@
+# needs ~arch until gentoo/systemd support is stable
+app-emulation/cloud-init
