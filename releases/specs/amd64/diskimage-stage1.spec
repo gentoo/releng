@@ -6,7 +6,7 @@ profile: default/linux/amd64/23.0/no-multilib/systemd
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage3-amd64-nomultilib-systemd-@TIMESTAMP@
 compression_mode: pixz
-portage_confdir: @REPO_DIR@/releases/portage/isos
+portage_confdir: @REPO_DIR@/releases/portage/diskimage
 
 diskimage/use:
 	compile-locales
