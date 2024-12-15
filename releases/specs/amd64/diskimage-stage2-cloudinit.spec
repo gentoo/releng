@@ -4,7 +4,7 @@ target: diskimage-stage2
 rel_type: 23.0-default
 profile: default/linux/amd64/23.0/no-multilib/systemd
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-default/diskimage-stage1-amd64-@TIMESTAMP@
+source_subpath: 23.0-default/diskimage-stage1-amd64-cloudinit-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/diskimage
 
 diskimage/qcow2: di-amd64-cloudinit-@TIMESTAMP@.qcow2

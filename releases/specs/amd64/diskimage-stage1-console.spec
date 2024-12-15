@@ -1,5 +1,5 @@
 subarch: amd64
-version_stamp: @TIMESTAMP@
+version_stamp: console-@TIMESTAMP@
 target: diskimage-stage1
 rel_type: 23.0-default
 profile: default/linux/amd64/23.0/no-multilib/systemd
@@ -18,7 +18,6 @@ diskimage/packages:
 	app-arch/unzip
 	app-crypt/gnupg
 	app-editors/nano
-	app-emulation/cloud-init
 	app-misc/screen
 	app-portage/cpuid2cpuflags
 	app-portage/gentoolkit
