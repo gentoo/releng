@@ -42,6 +42,7 @@ EXTENSIONS=(
 
 OUT_STAGE3="latest-stage3.txt"
 OUT_ISO="latest-iso.txt"
+OUT_QCOW2="latest-qcow2.txt"
 
 # Nothing to edit beyond this point
 
@@ -144,17 +145,21 @@ process_arch() {
 	# %T@
 
 	iso_list="$(find 20* -name '*.iso' -printf '%h %f %h/%f\n' 2>/dev/null |grep -v hardened | sort -n)"
+	qcow2_list="$(find 20* -name '*.qcow2' -printf '%h %f %h/%f\n' 2>/dev/null |grep -v hardened | sort -n)"
 	stage3_list=$(find 20* -name "stage3*" -a "${EXTENSIONS[@]}" -printf '%h %f %h/%f\n' 2>/dev/null| grep -v hardened | sort -n)
 	latest_iso_date="$(echo -e "${iso_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
+	latest_qcow2_date="$(echo -e "${qcow2_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	latest_stage3_date="$(echo -e "${stage3_list}" |awk '{print $1}' |cut -d/ -f1 | tail -n1)"
 	header="$(echo -e "# Latest as of $(date -uR)\n# ts=$(date -u +%s)")"
 
 	# Do not remove this
 	[ -z "${latest_iso_date}" ] && latest_iso_date="NONE-FOUND"
+	[ -z "${latest_qcow2_date}" ] && latest_qcow2_date="NONE-FOUND"
 	[ -z "${latest_stage3_date}" ] && latest_stage3_date="NONE-FOUND"
 
 
 	OUT_ISO_tmp=""
+	OUT_QCOW2_tmp=""
 	OUT_STAGE3_tmp=""
 	if [ -n "${iso_list}" ]; then
 		OUT_ISO_tmp=$(mktemp -p . -t ".${OUT_ISO}.XXXXXX")
@@ -163,6 +168,14 @@ process_arch() {
 		# Some arches produce more than one type of iso.
 		# So let's not advertise a current one via a symlink in general.
 		rm -f current-iso
+	fi
+	if [ -n "${qcow2_list}" ]; then
+		OUT_QCOW2_tmp=$(mktemp -p . -t ".${OUT_QCOW2}.XXXXXX")
+		chmod 644 "${OUT_QCOW2_tmp}"
+		echo -e "${header}" >"${OUT_QCOW2_tmp}"
+		# Some arches produce more than one type of qcow2.
+		# So let's not advertise a current one via a symlink in general.
+		rm -f current-qcow2
 	fi
 	if [ -n "${stage3_list}" ]; then
 		OUT_STAGE3_tmp=$(mktemp -p . -t ".${OUT_STAGE3}.XXXXXX")
@@ -173,7 +186,7 @@ process_arch() {
 	fi
 
 	# New variant preserve code
-	find_variants=( '(' -iname '*.iso' -o -name 'netboot-*' -o "${EXTENSIONS[@]}" ')' )
+	find_variants=( '(' -iname '*.iso' -o -iname '*.qcow2' -o -name 'netboot-*' -o "${EXTENSIONS[@]}" ')' )
 	variants=$(find 20* "${find_variants[@]}" -printf '%f\n' 2>/dev/null | sed -e 's,-20[012][0-9]\{5\}.*,,g' -r | sort -u)
 	# This file specifies which variants are still in use.
 	keepfile="${tmpdir}/.keep.${ARCH}.txt"
@@ -199,6 +212,7 @@ process_arch() {
 		echo -e "${variant_path} ${size}" >>"${f_tmp}"
 		[[ ${variant_path} =~ tar.*$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_STAGE3_tmp}"
 		[[ ${variant_path} =~ iso$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_ISO_tmp}"
+		[[ ${variant_path} =~ qcow2$ ]] && echo -e "${variant_path} ${size}" >>"${OUT_QCOW2_tmp}"
 
 		# Previously, current-${v}/ was a symlink to the timestamp directory.
 		# This was apparently confusing to some users because it had way too many files.
@@ -263,6 +277,7 @@ process_arch() {
 
 	# Atomic move these files if created.
 	[[ -n "${OUT_ISO_tmp}" ]] && [[ -f "${OUT_ISO_tmp}" ]] && mv "${OUT_ISO_tmp}" "${OUT_ISO}"
+	[[ -n "${OUT_QCOW2_tmp}" ]] && [[ -f "${OUT_QCOW2_tmp}" ]] && mv "${OUT_QCOW2_tmp}" "${OUT_QCOW2}"
 	[[ -n "${OUT_STAGE3_tmp}" ]] && [[ -f "${OUT_STAGE3_tmp}" ]] && mv "${OUT_STAGE3_tmp}" "${OUT_STAGE3}"
 
 	# Refresh keepfile
@@ -277,7 +292,7 @@ process_arch() {
 		for i in $(find . -regextype posix-basic -mindepth 1 -maxdepth 1 -type d -regex '.*20[012][0-9]\{5\}.*' \
 				| sed -e 's:^.*-\(20[^.]\+\).*$:\1:' \
 				| sort -ur \
-				| grep -E -v -e "/${latest_iso_date}\$|/${latest_stage3_date}\$" \
+				| grep -E -v -e "/${latest_iso_date}\$|/${latest_qcow2_date}\$|/${latest_stage3_date}\$" \
 				| grep -E -v -f "${keepfile}" \
 				| tail -n +5); do
 
