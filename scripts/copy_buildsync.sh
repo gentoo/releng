@@ -15,7 +15,6 @@ ARCHES=(
 	arm
 	arm64
 	hppa
-	ia64
 	loong
 	mips
 	m68k
