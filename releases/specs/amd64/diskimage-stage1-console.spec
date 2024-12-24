@@ -32,7 +32,6 @@ diskimage/packages:
 	sys-apps/gptfdisk
 	sys-apps/iproute2
 	sys-apps/kbd
-	sys-apps/kexec-tools
 	sys-apps/nvme-cli
 	sys-apps/pciutils
 	sys-apps/pv
