@@ -1,0 +1,2 @@
+# Prevent asahi-meta build unneeded parts for the installcd
+sys-apps/asahi-meta -audio -mesa
