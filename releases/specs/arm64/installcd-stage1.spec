@@ -32,6 +32,7 @@ livecd/packages:
 	app-misc/screen
 	app-misc/tmux
 	app-portage/cpuid2cpuflags
+	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-shells/bash-completion
 	app-shells/gentoo-bashcomp
