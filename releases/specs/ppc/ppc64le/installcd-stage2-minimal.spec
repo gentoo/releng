@@ -9,25 +9,16 @@ portage_confdir: @REPO_DIR@/releases/portage/isos
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
-livecd/gk_mainargs: --makeopts=-j12 --all-ramdisk-modules
 livecd/iso: install-ppc64le-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo ppc64le @TIMESTAMP@
+livecd/volid: Gentoo-ppc64le-@TIMESTAMP@
 
-boot/kernel: 4K_PAGESZ 64K_PAGESZ
+boot/kernel: gentoo
 
-# OpenPower hardware primary, but kernel also supports pseries and qemu.
-# We need to ship both 4K and 64K page kernels, as some filesystems
-# can't be mounted on 4K if created on 64K kernels (btrfs is known to do that and some others)
-boot/kernel/4K_PAGESZ/sources: sys-kernel/gentoo-sources
-boot/kernel/4K_PAGESZ/config: @REPO_DIR@/releases/kconfig/powerpc/installcd-ppc64le-4K-5.10.config
-boot/kernel/4K_PAGESZ/extraversion: 4K_PAGESZ
-boot/kernel/4K_PAGESZ/packages: --usepkg n zfs zfs-kmod
-
-boot/kernel/64K_PAGESZ/sources: sys-kernel/gentoo-sources
-boot/kernel/64K_PAGESZ/config: @REPO_DIR@/releases/kconfig/powerpc/installcd-ppc64le-64K-5.10.config
-boot/kernel/64K_PAGESZ/extraversion: 64K_PAGESZ
-boot/kernel/64K_PAGESZ/packages: --usepkg n zfs zfs-kmod
+boot/kernel/gentoo/distkernel: yes
+boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/powerpc/dist-ppc64le-livecd.config
+boot/kernel/gentoo/packages: --usepkg n zfs zfs-kmod
 
 livecd/unmerge:
 	app-admin/eselect
@@ -36,6 +27,7 @@ livecd/unmerge:
 	app-admin/perl-cleaner
 	app-admin/python-updater
 	app-arch/cpio
+	app-portage/gentoolkit
 	dev-build/libtool
 	dev-libs/gmp
 	dev-libs/libxml2
@@ -79,6 +71,7 @@ livecd/empty:
 	/etc/cron.monthly
 	/etc/cron.weekly
 	/etc/logrotate.d
+	/etc/kernel/config.d
 	/etc/modules.autoload.d
 	/etc/rsync
 	/etc/runlevels/single
