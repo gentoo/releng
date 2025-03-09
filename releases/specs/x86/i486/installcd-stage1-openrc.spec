@@ -50,6 +50,7 @@ livecd/packages:
 	net-misc/iputils
 	net-misc/ndisc6
 	net-misc/openssh
+	net-misc/networkmanager
 	net-misc/rdate
 	net-misc/rsync
 	net-misc/vconfig
@@ -84,6 +85,8 @@ livecd/packages:
 	sys-firmware/b43-firmware
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
+	sys-fs/bcache-tools
+	sys-fs/bcachefs-tools
 	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
