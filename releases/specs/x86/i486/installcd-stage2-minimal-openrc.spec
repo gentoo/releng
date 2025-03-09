@@ -7,12 +7,14 @@ snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/livecd-stage1-i486-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/isos-x86
 
-livecd/bootargs: dokeymap
+livecd/bootargs: dokeymap nodhcp
 #livecd/cdtar: /usr/share/catalyst/livecd/cdtar/isolinux-elilo-memtest86+-cdtar.tar.bz2
 livecd/fstype: squashfs
 livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo-x86-@DATESTAMP@
+
+livecd/rcadd: dbus|default gpm|default NetworkManager|default
 
 boot/kernel: gentoo
 
