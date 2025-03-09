@@ -23,7 +23,7 @@ livecd/packages:
 	app-accessibility/espeakup
 	app-admin/hddtemp
 	app-admin/pwgen
-	app-admin/syslog-ng
+	app-admin/sysklogd
 	app-arch/unzip
 	app-crypt/gnupg
 	app-editors/mg
@@ -67,9 +67,11 @@ livecd/packages:
 	sys-apps/gptfdisk
 	sys-apps/hdparm
 	sys-apps/iproute2
+	sys-apps/kexec-tools
 	sys-apps/memtester
 	sys-apps/memtest86+
 	sys-apps/netplug
+	sys-apps/nvme-cli
 	sys-apps/pciutils
 	sys-apps/pcmciautils
 	sys-apps/pv
@@ -78,6 +80,7 @@ livecd/packages:
 	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-block/partimage
+	sys-boot/efibootmgr
 	sys-firmware/b43-firmware
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
@@ -100,6 +103,8 @@ livecd/packages:
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
+	#force rebuild for USE="(-multilib*)"
+	sys-libs/glibc
 	sys-libs/gpm
 	sys-power/acpid
 	www-client/links
