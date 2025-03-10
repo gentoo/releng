@@ -20,7 +20,7 @@ boot/kernel: gentoo
 boot/kernel/gentoo/distkernel: yes
 boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/dist-amd64-livecd.config
-boot/kernel/gentoo/packages: net-wireless/broadcom-sta sys-fs/zfs
+boot/kernel/gentoo/packages: --usepkg n net-wireless/broadcom-sta sys-fs/zfs
 
 livecd/unmerge:
 	app-admin/eselect-ctags
@@ -29,41 +29,17 @@ livecd/unmerge:
 	app-admin/python-updater
 	app-portage/gentoolkit
 	app-arch/cpio
-	dev-build/libtool
 	dev-lang/rust-bin
 	dev-libs/gmp
-	dev-libs/libxml2
-	dev-libs/mpfr
 	dev-python/pycrypto
 	dev-util/pkgconf
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
-	sys-apps/diffutils
-	sys-apps/groff
 	sys-apps/man-db
 	sys-apps/man-pages
 	sys-apps/memtest86+
 	sys-apps/miscfiles
-	sys-apps/sandbox
-	sys-apps/texinfo
-	dev-build/autoconf
-	dev-build/autoconf-wrapper
-	dev-build/automake
-	dev-build/automake-wrapper
-	sys-devel/binutils
-	sys-devel/binutils-config
-	sys-devel/bison
-	sys-devel/flex
-	sys-devel/gcc
-	sys-devel/gcc-config
-	sys-devel/gettext
-	sys-devel/gnuconfig
-	sys-devel/m4
-	dev-build/make
-	sys-devel/patch
-	sys-libs/db
-	sys-libs/gdbm
 	sys-kernel/dracut
 	sys-kernel/gentoo-kernel
 	sys-kernel/linux-headers
