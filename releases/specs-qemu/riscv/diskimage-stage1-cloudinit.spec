@@ -21,7 +21,7 @@ diskimage/packages:
 	app-editors/nano
 	app-emulation/cloud-init
 	app-misc/screen
-	app-portage/cpuid2cpuflags
+	#app-portage/cpuid2cpuflags #  needs keywording #951142
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-text/wgetpaste
@@ -38,7 +38,7 @@ diskimage/packages:
 	sys-apps/pciutils
 	sys-apps/pv
 	sys-apps/usbutils
-	sys-auth/ssh-import-id
+	# sys-auth/ssh-import-id # needs keywording #951141
 	sys-block/parted
 	sys-boot/grub
 	sys-fs/cryptsetup
