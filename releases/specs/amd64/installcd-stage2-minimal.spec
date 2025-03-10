@@ -29,41 +29,17 @@ livecd/unmerge:
 	app-admin/python-updater
 	app-portage/gentoolkit
 	app-arch/cpio
-	dev-build/libtool
 	dev-lang/rust-bin
 	dev-libs/gmp
-	dev-libs/libxml2
-	dev-libs/mpfr
 	dev-python/pycrypto
 	dev-util/pkgconf
 	perl-core/PodParser
 	perl-core/Test-Harness
 	sys-apps/debianutils
-	sys-apps/diffutils
-	sys-apps/groff
 	sys-apps/man-db
 	sys-apps/man-pages
 	sys-apps/memtest86+
 	sys-apps/miscfiles
-	sys-apps/sandbox
-	sys-apps/texinfo
-	dev-build/autoconf
-	dev-build/autoconf-wrapper
-	dev-build/automake
-	dev-build/automake-wrapper
-	sys-devel/binutils
-	sys-devel/binutils-config
-	sys-devel/bison
-	sys-devel/flex
-	sys-devel/gcc
-	sys-devel/gcc-config
-	sys-devel/gettext
-	sys-devel/gnuconfig
-	sys-devel/m4
-	dev-build/make
-	sys-devel/patch
-	sys-libs/db
-	sys-libs/gdbm
 	sys-kernel/dracut
 	sys-kernel/gentoo-kernel
 	sys-kernel/linux-headers
