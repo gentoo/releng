@@ -3,6 +3,7 @@ version_stamp: @TIMESTAMP@
 target: diskimage-stage2
 rel_type: 23.0-default
 profile: default/linux/riscv/23.0/rv64/lp64d/systemd
+interpreter: /usr/bin/qemu-riscv64
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/diskimage-stage1-rv64_lp64d-console-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/diskimage-qemu
