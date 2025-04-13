@@ -29,6 +29,7 @@ livecd/unmerge:
         app-admin/python-updater
         app-arch/cpio
 	app-portage/gentoolkit
+	dev-build/cmake
         dev-build/libtool
         dev-libs/gmp
         dev-libs/libxml2
