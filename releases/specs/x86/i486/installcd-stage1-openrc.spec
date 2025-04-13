@@ -35,6 +35,7 @@ livecd/packages:
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-text/wgetpaste
+	dev-build/cmake
 	dev-debug/strace
 	media-gfx/fbgrab
 	media-sound/alsa-utils

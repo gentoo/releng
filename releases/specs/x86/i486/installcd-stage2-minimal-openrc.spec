@@ -30,6 +30,7 @@ livecd/unmerge:
 	app-admin/python-updater
 	app-arch/cpio
 	app-portage/gentoolkit
+	dev-build/cmake
 	dev-build/libtool
 	dev-lang/rust-bin
 	dev-libs/gmp

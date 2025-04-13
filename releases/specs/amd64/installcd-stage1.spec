@@ -74,6 +74,7 @@ livecd/packages:
 	app-text/dos2unix
 	app-text/wgetpaste
 	app-vim/gentoo-syntax
+	dev-build/cmake
 	dev-debug/strace
 	dev-lang/perl
 	dev-lang/python
