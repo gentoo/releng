@@ -5,8 +5,9 @@ rel_type: 23.0-default
 profile: default/linux/sparc/23.0/64ul
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage3-sparc64-openrc-@TIMESTAMP@
+interpreter: /usr/bin/qemu-sparc64
 compression_mode: pixz
-portage_confdir: @REPO_DIR@/releases/portage/isos
+portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
 
 livecd/use:
 	compile-locales

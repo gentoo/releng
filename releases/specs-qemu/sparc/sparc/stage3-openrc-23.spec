@@ -5,7 +5,8 @@ rel_type: 23.0-default
 profile: default/linux/sparc/23.0
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-sparc-openrc-@TIMESTAMP@
+interpreter: /usr/bin/qemu-sparc
 compression_mode: pixz
-portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng
 binrepo_path: sparc/binpackages/23.0/32
