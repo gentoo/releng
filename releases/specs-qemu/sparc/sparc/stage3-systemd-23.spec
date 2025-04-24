@@ -5,7 +5,7 @@ rel_type: 23.0-default
 profile: default/linux/sparc/23.0/systemd
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-sparc-systemd-@TIMESTAMP@
-interpreter: /usr/bin/qemu-sparc
+interpreter: /usr/bin/qemu-sparc32plus
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng
