@@ -35,6 +35,7 @@ livecd/packages:
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-text/wgetpaste
+	dev-build/cmake
 	dev-debug/strace
 	media-gfx/fbgrab
 	media-sound/alsa-utils
@@ -86,7 +87,6 @@ livecd/packages:
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
 	sys-fs/bcache-tools
-	sys-fs/bcachefs-tools
 	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
