@@ -2,3 +2,4 @@
 # "The futex facility returned an unknown value"
 dev-lang/python releng/singleproc
 dev-python/lxml releng/singleproc
+dev-python/cython releng/singleproc
