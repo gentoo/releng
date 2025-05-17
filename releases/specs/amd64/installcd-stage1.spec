@@ -55,7 +55,6 @@ livecd/packages:
 	app-editors/vim
 	app-emacs/ebuild-mode
 	app-emulation/cloud-init
-	app-emulation/xen-tools
 	app-misc/colordiff
 	app-misc/livecd-tools
 	app-misc/mc
