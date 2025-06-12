@@ -1,10 +1,10 @@
-subarch: m68k
+subarch: m68k_a32
 version_stamp: t64-systemd-@TIMESTAMP@
 target: stage3
 rel_type: 23.0-time64
 profile: default/linux/m68k/23.0/time64/systemd
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-time64/stage1-m68k-t64-systemd-@TIMESTAMP@
+source_subpath: 23.0-time64/stage1-m68k_a32-t64-systemd-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng
