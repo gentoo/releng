@@ -5,3 +5,4 @@ sys-libs/pam -elogind
 
 # this is also needed for normal stage3
 net-misc/curl -http2 -http3 -quic -curl_quic_openssl
+dev-python/pillow -truetype
