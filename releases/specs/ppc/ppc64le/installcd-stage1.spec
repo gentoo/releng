@@ -36,6 +36,11 @@ livecd/packages:
 	app-shells/bash-completion
 	app-shells/gentoo-bashcomp
 	app-text/wgetpaste
+	dev-build/autoconf
+	dev-build/autoconf-archive
+	dev-build/automake
+	dev-build/automake-wrapper
+	dev-build/libtool
 	dev-embedded/u-boot-tools
 	dev-vcs/git
 	net-analyzer/tcptraceroute
@@ -77,10 +82,12 @@ livecd/packages:
 	sys-apps/ppc64-diag
 	sys-apps/pv
 	sys-apps/sdparm
+	sys-apps/texinfo
 	sys-apps/usbutils
 	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-boot/grub
+	sys-devel/m4
 	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
@@ -103,6 +110,7 @@ livecd/packages:
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
+	sys-kernel/linux-headers
 	sys-libs/gpm
 	sys-process/htop
 	sys-process/lsof
