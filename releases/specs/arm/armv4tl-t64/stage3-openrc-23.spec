@@ -1,0 +1,11 @@
+subarch: armv4tl
+version_stamp: t64-openrc-@TIMESTAMP@
+target: stage3
+rel_type: 23.0-time64
+profile: default/linux/arm/23.0/time64/armv4t
+snapshot_treeish: @TREEISH@
+source_subpath: 23.0-time64/stage1-armv4tl-t64-openrc-@TIMESTAMP@.tar.xz
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
+binrepo_path: arm/binpackages/23.0/armv4tl-t64
