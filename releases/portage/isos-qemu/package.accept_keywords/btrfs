@@ -1,3 +1,0 @@
-# Added to allow btrfs creation on SPARC
-# Intended as a quick fix until dist-kernel migration is complete. 
-sys-fs/btrfs-progs
