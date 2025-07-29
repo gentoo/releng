@@ -53,7 +53,7 @@ livecd/packages:
 #	net-proxy/dante
 # Not keyworded
 #	net-proxy/ntlmaps
-	net-proxy/tsocks
+#	net-proxy/tsocks
 #	net-wireless/iw
 #	net-wireless/wireless-tools
 #	net-wireless/wpa_supplicant
