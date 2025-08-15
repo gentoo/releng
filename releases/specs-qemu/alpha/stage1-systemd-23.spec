@@ -7,6 +7,7 @@ snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage3-alpha-systemd-latest
 update_seed: yes
 update_seed_command: -uDN @world
+portage_prefix: releng
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 interpreter: /usr/bin/qemu-alpha
 compression_mode: pixz

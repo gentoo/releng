@@ -5,6 +5,7 @@ rel_type: 23.0-default
 profile: default/linux/alpha/23.0/systemd
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-alpha-systemd-@TIMESTAMP@
+portage_prefix: releng
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 interpreter: /usr/bin/qemu-alpha
 compression_mode: pixz
