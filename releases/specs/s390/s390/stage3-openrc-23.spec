@@ -6,5 +6,6 @@ profile: default/linux/s390/23.0
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage1-s390-openrc-@TIMESTAMP@
 compression_mode: pixz
+portage_prefix: releng
 portage_confdir: @REPO_DIR@/releases/portage/stages
 binrepo_path: s390/binpackages/23.0/s390

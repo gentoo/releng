@@ -9,6 +9,7 @@ target:          netboot
 subarch:         s390x
 rel_type:        23.0-default
 profile:         default/linux/s390/23.0/s390x
+portage_prefix: releng
 portage_confdir: @REPO_DIR@/releases/specs/s390/s390x/netboot/portage
 
 
