@@ -9,6 +9,7 @@ target:          netboot
 subarch:         hppa1.1
 rel_type:        23.0-default
 profile:         default/linux/hppa/23.0/hppa1.1
+interpreter: /usr/bin/qemu-hppa
 
 # netboot stuff
 boot/kernel:                      hppa32

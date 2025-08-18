@@ -6,7 +6,8 @@ profile: default/linux/hppa/23.0/hppa1.1
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/livecd-stage1-hppa1.1-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/23.0-default/installcd-stage2
-portage_confdir: @REPO_DIR@/releases/portage/isos
+portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
+interpreter: /usr/bin/qemu-hppa
 
 livecd/volid: Gentoo hppa @TIMESTAMP@
 livecd/bootargs: dokeymap

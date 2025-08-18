@@ -6,7 +6,8 @@ profile: default/linux/hppa/23.0/hppa1.1
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage3-hppa1.1-openrc-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/23.0-default/installcd-stage1
-portage_confdir: @REPO_DIR@/releases/portage/isos
+portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
+interpreter: /usr/bin/qemu-hppa
 livecd/use:
 	compile-locales
 	fbcon

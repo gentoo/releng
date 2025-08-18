@@ -9,6 +9,7 @@ target:          netboot
 subarch:         hppa2.0
 rel_type:        23.0-default
 profile:         default/linux/hppa/23.0/hppa2.0
+interpreter: /usr/bin/qemu-hppa
 
 boot/kernel:                      hppa64
 boot/kernel/hppa64/sources:       sys-kernel/gentoo-sources
