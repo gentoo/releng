@@ -112,7 +112,8 @@ livecd/packages:
 	kde-misc/kdiff3
 	kde-plasma/plasma-meta
 	media-gfx/digikam
-	media-gfx/engauge
+#	Need new version stabilized
+#	media-gfx/engauge
 	media-gfx/fbgrab
 	media-gfx/gimp
 	media-gfx/graphviz
