@@ -3,6 +3,7 @@ version_stamp: @TIMESTAMP@
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/stage3-hppa2.0-openrc-@TIMESTAMP@
 pkgcache_path: /var/tmp/catalyst/packages/23.0-default/netboot-hppa64
+portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 
 # these shouldn't change
 target:          netboot
@@ -29,8 +30,8 @@ boot/kernel/hppa64/gk_kernargs:
 
 netboot/use:
  -*
- python_targets_python3_10
- python_single_target_python3_10
+ python_targets_python3_13
+ python_single_target_python3_13
  libtommath # dropbear requires libtomcrypt[libtommath]
  multicall
  shadow
