@@ -96,6 +96,7 @@ livecd/packages:
 	app-text/wgetpaste
 	app-text/xournalpp
 	app-vim/gentoo-syntax
+	dev-cpp/abseil-cpp
 	dev-debug/strace
 	dev-lang/perl
 	dev-lang/python
