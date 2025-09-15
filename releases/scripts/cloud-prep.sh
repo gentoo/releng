@@ -7,7 +7,7 @@ echo 'UTC' > /etc/timezone
 echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 echo 'en_US ISO-8859-1' >> /etc/locale.gen
 locale-gen -q
-eselect locale set en_US.utf8
+eselect locale set en_US.UTF-8
 
 # Some rootfs stuff
 grep -v rootfs /proc/mounts > /etc/mtab
