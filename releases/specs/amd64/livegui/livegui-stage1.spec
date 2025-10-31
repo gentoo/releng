@@ -159,7 +159,6 @@ livecd/packages:
 	net-misc/wget
 	net-misc/whois
 	net-proxy/dante
-	net-proxy/tsocks
 	net-vpn/networkmanager-openvpn
 	net-vpn/networkmanager-pptp
 	net-vpn/openfortivpn

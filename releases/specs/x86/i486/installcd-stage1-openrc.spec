@@ -56,7 +56,6 @@ livecd/packages:
 	net-misc/rsync
 	net-misc/vconfig
 	net-proxy/dante
-	net-proxy/tsocks
 	net-wireless/b43-fwcutter
 	net-wireless/iw
 	net-wireless/wireless-tools
