@@ -149,4 +149,10 @@ polkit.addRule(function(action, subject) {
     if (action.id == "org.freedesktop.udisks2.filesystem-mount-system") {
         return polkit.Result.YES;
     }
+});
+
+polkit.addRule(function(action, subject) {
+    if (action.id == "com.github.calamares.calamares.pkexec.run") {
+        return polkit.Result.YES;
+    }
 });' > /etc/polkit-1/rules.d/livegui-root-tools.rules
