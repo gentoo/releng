@@ -1,6 +1,7 @@
 # this makes only a difference for the "desktop" stages
 dev-db/sqlite -icu
 dev-lang/python -bluetooth
+media-libs/libwebp -tiff
 sys-libs/pam -elogind
 
 # this is also needed for normal stage3
