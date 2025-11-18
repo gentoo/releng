@@ -73,7 +73,12 @@ livecd/packages:
 	app-text/dos2unix
 	app-text/wgetpaste
 	app-vim/gentoo-syntax
+	dev-build/autoconf
+	dev-build/autoconf-archive
+	dev-build/automake
+	dev-build/automake-wrapper
 	dev-build/cmake
+	dev-build/libtool
 	dev-debug/strace
 	dev-lang/perl
 	dev-lang/python
@@ -153,11 +158,11 @@ livecd/packages:
 	sys-apps/pcmciautils
 	sys-apps/pv
 	sys-apps/sdparm
-	sys-apps/usbutils
 	sys-apps/sed
 	sys-apps/setserial
 	sys-apps/sg3_utils
 	sys-apps/smartmontools
+	sys-apps/texinfo
 	sys-apps/usbutils
 	sys-apps/which
 	sys-auth/ssh-import-id
@@ -170,6 +175,7 @@ livecd/packages:
 	sys-block/tw_cli
 	sys-boot/efibootmgr
 	sys-boot/grub
+	sys-devel/m4
 	sys-firmware/b43-firmware
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
@@ -198,6 +204,7 @@ livecd/packages:
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
+	sys-kernel/linux-headers
 	sys-libs/gpm
 	sys-libs/libsmbios
 	sys-power/acpid

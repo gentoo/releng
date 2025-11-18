@@ -37,6 +37,11 @@ livecd/packages:
 	app-shells/bash-completion
 	app-shells/gentoo-bashcomp
 	app-text/wgetpaste
+	dev-build/autoconf
+	dev-build/autoconf-archive
+	dev-build/automake
+	dev-build/automake-wrapper
+	dev-build/libtool
 	dev-embedded/u-boot-tools
 	media-gfx/fbgrab
 	media-sound/alsa-utils
@@ -76,10 +81,12 @@ livecd/packages:
 	sys-apps/pv
 	sys-apps/pcmciautils
 	sys-apps/sdparm
+	sys-apps/texinfo
 	sys-apps/usbutils
 	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-block/partimage
+	sys-devel/m4
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
 	sys-fs/bcache-tools
@@ -100,6 +107,7 @@ livecd/packages:
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
+	sys-kernel/linux-headers
 	sys-libs/gpm
 	sys-power/acpid
 	www-client/links
