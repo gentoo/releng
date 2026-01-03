@@ -247,7 +247,8 @@ livecd/packages:
 	sys-fs/lvm2
 	sys-fs/mac-fdisk
 	sys-fs/mdadm
-	sys-fs/multipath-tools
+#	hangs on boot?
+#	sys-fs/multipath-tools
 	sys-fs/ntfs3g
 	sys-fs/reiserfsprogs
 	sys-fs/squashfs-tools
