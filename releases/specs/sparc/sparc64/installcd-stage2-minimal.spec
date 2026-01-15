@@ -13,6 +13,7 @@ livecd/iso: install-sparc64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo sparc64 @TIMESTAMP@
 livecd/gk_mainargs: --firmware-files=ql2200_fw.bin --makeopts=-j256
+livecd/cdtar: /usr/share/catalyst/livecd/cdtar/grub-theme-gentoo_frosted.tar.bz2
 
 boot/kernel: gentoo
 
