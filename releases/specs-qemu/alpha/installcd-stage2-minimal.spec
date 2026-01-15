@@ -68,8 +68,6 @@ livecd/unmerge:
 	sys-apps/diffutils
 	sys-apps/file
 	sys-apps/groff
-	sys-apps/man-db
-	sys-apps/man-pages
 	sys-apps/miscfiles
 	sys-apps/sandbox
 	sys-apps/texinfo
@@ -111,7 +109,6 @@ livecd/empty:
 	/root/.ccache
 	/tmp
 	/usr/diet/include
-	/usr/diet/man
 	/usr/include
 	/usr/i386-gentoo-linux-uclibc
 	/usr/i386-pc-linux-gnu
@@ -158,7 +155,6 @@ livecd/empty:
 	/usr/share/lcms
 	/usr/share/libtool
 	/usr/share/locale
-	/usr/share/man
 	/usr/share/rfc
 	/usr/share/ss
 	/usr/share/state
@@ -193,7 +189,6 @@ livecd/rm:
 	/etc/make.conf*
 	/etc/make.globals
 	/etc/make.profile
-	/etc/man.conf
 	/etc/resolv.conf
 	/usr/lib*/*.a
 	/usr/lib*/*.la

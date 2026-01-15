@@ -42,8 +42,6 @@ livecd/unmerge:
 	sys-apps/debianutils
 	sys-apps/diffutils
 	sys-apps/groff
-	sys-apps/man-db
-	sys-apps/man-pages
 	sys-apps/memtest86+
 	sys-apps/miscfiles
 	sys-apps/sandbox
@@ -104,7 +102,6 @@ livecd/empty:
 	/usr/share/info
 	/usr/share/lcms
 	/usr/share/libtool
-	/usr/share/man
 	/usr/share/rfc
 	/usr/share/ss
 	/usr/share/state
@@ -128,7 +125,6 @@ livecd/rm:
 	/etc/etc-update.conf
 	/etc/hosts.bck
 	/etc/issue*
-	/etc/man.conf
 	/etc/resolv.conf
 	/root/.bash_history
 	/root/.viminfo
