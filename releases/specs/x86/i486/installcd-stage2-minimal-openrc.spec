@@ -13,6 +13,7 @@ livecd/fstype: squashfs
 livecd/iso: install-x86-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo-x86-@DATESTAMP@
+livecd/cdtar: /usr/share/catalyst/livecd/cdtar/grub-theme-gentoo_frosted.tar.bz2
 
 livecd/rcadd: dbus|default gpm|default NetworkManager|default
 

@@ -13,6 +13,7 @@ livecd/gk_mainargs: --all-ramdisk-modules --firmware
 livecd/iso: install-arm64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
 livecd/volid: Gentoo-arm64-@TIMESTAMP@
+livecd/cdtar: /usr/share/catalyst/livecd/cdtar/grub-theme-gentoo_frosted.tar.bz2
 
 boot/kernel: gentoo
 

@@ -12,6 +12,7 @@ livecd/fstype: squashfs
 livecd/gk_mainargs: --makeopts=-j12
 livecd/iso: /var/tmp/catalyst/builds/23.0-default/install-powerpc-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
+livecd/cdtar: /usr/share/catalyst/livecd/cdtar/grub-theme-gentoo_frosted.tar.bz2
 
 livecd/rcadd: pbbuttonsd|default
 
