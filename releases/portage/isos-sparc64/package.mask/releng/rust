@@ -1,0 +1,2 @@
+# force using rust-bin (this affects only "desktop stages")
+dev-lang/rust
