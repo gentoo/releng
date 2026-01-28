@@ -25,6 +25,7 @@ livecd/packages:
 	app-misc/livecd-tools
 	app-misc/screen
 	app-portage/cpuid2cpuflags
+	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-shells/bash-completion
 	app-shells/gentoo-bashcomp
