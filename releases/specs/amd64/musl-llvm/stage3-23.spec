@@ -1,10 +1,10 @@
 subarch: amd64
 target: stage3
-version_stamp: musl-llvm-@TIMESTAMP@
+version_stamp: musl-llvm-openrc-@TIMESTAMP@
 rel_type: 23.0-musl-llvm
 profile: default/linux/amd64/23.0/musl/llvm
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-musl-llvm/stage1-amd64-musl-llvm-@TIMESTAMP@
+source_subpath: 23.0-musl-llvm/stage1-amd64-musl-llvm-openrc-@TIMESTAMP@
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
 compression_mode: pixz
