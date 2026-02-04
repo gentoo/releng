@@ -306,11 +306,11 @@ post_build() {
 	pushd "${BUILD_SRCDIR_BASE}/builds/23.0-musl" >/dev/null
 	case ${spec} in
 	o32/stage3-mips2-o32-musl-23.spec)
-		upload stage3-mips2_musl-${TIMESTAMP}.tar.xz*
+		upload stage3-mips2_musl-openrc-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-musl/stage3-mips2_musl" mips/23.0/mips2_o32_musl
 		;;
 	o32/stage3-mipsel2-o32-musl-23.spec)
-		upload stage3-mipsel2_musl-${TIMESTAMP}.tar.xz*
+		upload stage3-mipsel2_musl-openrc-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-musl/stage3-mipsel2_musl" mips/23.0/mipsel2_o32_musl
 		;;
 	esac
