@@ -35,8 +35,13 @@ livecd/packages:
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-text/wgetpaste
+	dev-build/autoconf
+	dev-build/autoconf-archive
+	dev-build/automake
+	dev-build/automake-wrapper
 	dev-build/cmake
 	dev-debug/strace
+	dev-build/libtool
 	media-gfx/fbgrab
 	media-sound/alsa-utils
 	net-analyzer/traceroute
@@ -77,11 +82,13 @@ livecd/packages:
 	sys-apps/pcmciautils
 	sys-apps/pv
 	sys-apps/sdparm
+	sys-apps/texinfo
 	sys-apps/usbutils
 	sys-auth/ssh-import-id
 	sys-block/parted
 	sys-block/partimage
 	sys-boot/efibootmgr
+	sys-devel/m4
 	sys-firmware/b43-firmware
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
@@ -105,6 +112,7 @@ livecd/packages:
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
+	sys-kernel/linux-headers
 	#force rebuild for USE="(-multilib*)"
 	sys-libs/glibc
 	sys-libs/gpm
