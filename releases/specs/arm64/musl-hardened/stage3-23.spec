@@ -1,10 +1,10 @@
 subarch: arm64
 target: stage3
-version_stamp: musl-hardened-@TIMESTAMP@
+version_stamp: musl-hardened-openrc-@TIMESTAMP@
 rel_type: 23.0-musl-hardened
 profile: default/linux/arm64/23.0/musl/hardened
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-musl-hardened/stage1-arm64-musl-hardened-@TIMESTAMP@.tar.xz
+source_subpath: 23.0-musl-hardened/stage1-arm64-musl-hardened-openrc-@TIMESTAMP@.tar.xz
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages
 portage_prefix: releng
