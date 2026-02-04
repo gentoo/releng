@@ -1,0 +1,2 @@
+# Need newest genkernel for x86 busybox fixes
+=sys-kernel/genkernel-4.3.14

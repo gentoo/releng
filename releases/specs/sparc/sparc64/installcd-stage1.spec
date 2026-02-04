@@ -30,6 +30,7 @@ livecd/packages:
 	app-editors/nano
 	app-misc/livecd-tools
 	app-misc/screen
+	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-text/wgetpaste
 #	media-gfx/fbgrab

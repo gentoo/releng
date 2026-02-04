@@ -1,0 +1,2 @@
+# Reduce unneeded depends
+net-misc/networkmanager -gtk-doc
