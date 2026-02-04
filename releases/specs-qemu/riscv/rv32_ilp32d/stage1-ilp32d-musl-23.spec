@@ -1,11 +1,11 @@
 subarch: rv32_ilp32d_musl
 target: stage1
-version_stamp: @TIMESTAMP@
+version_stamp: openrc-@TIMESTAMP@
 interpreter: /usr/bin/qemu-riscv32
 rel_type: 23.0-musl
 profile: default/linux/riscv/23.0/rv32/ilp32d/musl
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-musl/stage3-rv32_ilp32d_musl-latest
+source_subpath: 23.0-musl/stage3-rv32_ilp32d_musl-openrc-latest
 compression_mode: pixz
 decompressor_search_order: xz bzip2
 update_seed: yes
