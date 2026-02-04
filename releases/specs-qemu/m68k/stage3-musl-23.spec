@@ -1,10 +1,10 @@
 subarch: m68k_musl
-version_stamp: @TIMESTAMP@
+version_stamp: openrc-@TIMESTAMP@
 target: stage3
 rel_type: 23.0-musl
 profile: default/linux/m68k/23.0/musl
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-musl/stage1-m68k_musl-@TIMESTAMP@
+source_subpath: 23.0-musl/stage1-m68k_musl-openrc-@TIMESTAMP@
 compression_mode: pixz
 portage_confdir: @REPO_DIR@/releases/portage/stages-qemu
 portage_prefix: releng
