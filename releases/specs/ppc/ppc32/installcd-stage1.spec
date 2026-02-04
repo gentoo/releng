@@ -17,6 +17,8 @@ livecd/use:
 	xml
 
 livecd/packages:
+	#app-accessibility/brltty # Needs keywording
+	app-accessibility/espeakup
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/unzip

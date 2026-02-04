@@ -20,6 +20,7 @@ livecd/use:
 
 livecd/packages:
 	app-accessibility/brltty
+	app-accessibility/espeakup
 	app-admin/pwgen
 	app-admin/syslog-ng
 	app-arch/lbzip2
