@@ -10,6 +10,7 @@ portage_confdir: @REPO_DIR@/releases/portage/livegui
 
 livecd/use:
 	-aac
+	accessibility
 	compile-locales
 	fbcon
 	jpeg2k

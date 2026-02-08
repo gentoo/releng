@@ -14,7 +14,7 @@ sed -e '/^DISPLAYMANAGER=/s/.*/DISPLAYMANAGER="sddm"/' -i /etc/conf.d/display-ma
 
 # Don't let NM change hostname (this breaks xauth)
 echo "[main]
-plugins=keyfile 
+plugins=keyfile
 hostname-mode=none" > /etc/NetworkManager/NetworkManager.conf
 
 # Autologin via sddm to plasma
@@ -126,6 +126,32 @@ triggerLidActionWhenExternalMonitorPresent=false
 idleTime=300000
 suspendThenHibernate=false
 suspendType=1" > .config/powermanagementprofilesrc
+
+## Setup accessibilty features
+# We use fsscript as this script causes issues with the
+# minimal cd when used with espeakup.
+
+echo "#! /bin/bash
+
+if grep -qw 'dospeakup' /proc/cmdline
+then
+echo \"[ScreenReader]
+Enabled=true\" > /home/gentoo/.config/kaccessrc
+
+systemsettings kcm_access
+orca --replace
+fi" > /usr/bin/mrpony
+
+chmod +x /usr/bin/mrpony
+
+echo "[Desktop Entry]
+Version=1.0
+Name=Mr Pony - Accessibilty
+Icon=preferences-system
+Type=Application
+SingleMainWindow=true
+Exec=/usr/bin/mrpony
+Terminal=false" > .config/autostart/mrpony.desktop
 
 popd
 # Clean up perms
