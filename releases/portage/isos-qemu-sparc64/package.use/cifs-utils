@@ -1,0 +1,4 @@
+net-fs/cifs-utils -acl -ads
+sys-libs/ntdb python
+sys-libs/tdb python
+sys-libs/tevent python
