@@ -31,6 +31,7 @@ livecd/packages:
 	app-misc/livecd-tools
 	app-misc/screen
 	app-portage/mirrorselect
+	app-portage/gentoolkit
 	app-text/wgetpaste
 #	media-gfx/fbgrab
 	net-analyzer/tcptraceroute
