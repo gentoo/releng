@@ -1,0 +1,5 @@
+# There is a circular dependency between sys-libs/libcap[pam] and
+# sys-libs/pam[filecaps]. Since the livecd is configured to automatically log
+# in as root, caps are not useful, so just disable USE=filecaps.
+
+*/* -filecaps
