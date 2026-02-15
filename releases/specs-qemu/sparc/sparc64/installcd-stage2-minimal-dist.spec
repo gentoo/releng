@@ -6,7 +6,7 @@ profile: default/linux/sparc/23.0/64ul
 snapshot_treeish: @TREEISH@
 source_subpath: 23.0-default/livecd-stage1-sparc64-@TIMESTAMP@
 interpreter: /usr/bin/qemu-sparc64
-portage_confdir: @REPO_DIR@/releases/portage/isos-qemu
+portage_confdir: @REPO_DIR@/releases/portage/isos-qemu-sparc64
 
 livecd/bootargs: dokeymap
 livecd/fstype: squashfs
