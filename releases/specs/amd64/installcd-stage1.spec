@@ -39,23 +39,15 @@ livecd/packages:
 	app-backup/borgbackup
 	app-backup/duplicity
 	app-backup/fsarchiver
-	app-benchmarks/bonnie
 	app-benchmarks/bonnie++
-	app-benchmarks/dbench
-	app-benchmarks/iozone
-	app-benchmarks/stress
-	app-benchmarks/tiobench
 	app-crypt/gnupg
 	app-crypt/pinentry
 	app-editors/emacs
 	app-editors/hexcurse
-	app-editors/hexedit
-	app-editors/mg
 	app-editors/nano
 	app-editors/vim
 	app-emacs/ebuild-mode
 	app-emulation/cloud-init
-	app-misc/colordiff
 	app-misc/livecd-tools
 	app-misc/mc
 	app-misc/pax-utils
@@ -75,8 +67,6 @@ livecd/packages:
 	app-vim/gentoo-syntax
 	dev-build/cmake
 	dev-debug/strace
-	dev-lang/perl
-	dev-lang/python
 	dev-vcs/git
 	media-gfx/fbgrab
 	media-sound/alsa-utils
