@@ -57,7 +57,6 @@ livecd/packages:
 	net-misc/rsync
 	net-misc/vconfig
 	net-proxy/dante
-	net-wireless/b43-fwcutter
 	net-wireless/iw
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
