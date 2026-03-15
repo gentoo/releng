@@ -1,0 +1,2 @@
+# Required for =>Chromium-146.0.7680.80
+dev-lang/rust-bin rustfmt
