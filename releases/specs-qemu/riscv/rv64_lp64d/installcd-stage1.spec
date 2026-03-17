@@ -90,13 +90,11 @@ livecd/packages:
 	sys-fs/e2fsprogs
 	sys-fs/f2fs-tools
 	sys-fs/genfstab
-	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
 	sys-fs/mdadm
 	sys-fs/multipath-tools
 	sys-fs/ntfs3g
-	sys-fs/reiserfsprogs
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
