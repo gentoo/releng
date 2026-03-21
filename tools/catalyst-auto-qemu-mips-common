@@ -11,12 +11,14 @@ SETS_O32_23="
 	mipsel2_softfloat_o32_systemd_23
 	mipsel2_o32_openrc_23
 	mipsel2_o32_systemd_23
-	mipsel2_o32_musl_23
+	mipsel2_o32_musl_openrc_23
+	mipsel2_o32_musl_systemd_23
 	mips2_softfloat_o32_openrc_23
 	mips2_softfloat_o32_systemd_23
 	mips2_o32_openrc_23
 	mips2_o32_systemd_23
-	mips2_o32_musl_23
+	mips2_o32_musl_openrc_23
+	mips2_o32_musl_systemd_23
 "
 
 SETS_O32_T64_23="
@@ -82,7 +84,8 @@ SET_mips2_o32_systemd_23_SPECS="o32/stage1-mips2-o32-systemd-23.spec o32/stage3-
 SET_mips2_softfloat_o32_openrc_23_SPECS="o32/stage1-mips2_softfloat-o32-openrc-23.spec o32/stage3-mips2_softfloat-o32-openrc-23.spec"
 SET_mips2_softfloat_o32_systemd_23_SPECS="o32/stage1-mips2_softfloat-o32-systemd-23.spec o32/stage3-mips2_softfloat-o32-systemd-23.spec"
 
-SET_mips2_o32_musl_23_SPECS="o32/stage1-mips2-o32-musl-23.spec o32/stage3-mips2-o32-musl-23.spec"
+SET_mips2_o32_musl_openrc_23_SPECS="o32/stage1-mips2-o32-musl-openrc-23.spec o32/stage3-mips2-o32-musl-openrc-23.spec"
+SET_mips2_o32_musl_systemd_23_SPECS="o32/stage1-mips2-o32-musl-systemd-23.spec o32/stage3-mips2-o32-musl-systemd-23.spec"
 
 SET_mipsel2_o32_openrc_23_SPECS="o32/stage1-mipsel2-o32-openrc-23.spec o32/stage3-mipsel2-o32-openrc-23.spec"
 SET_mipsel2_o32_systemd_23_SPECS="o32/stage1-mipsel2-o32-systemd-23.spec o32/stage3-mipsel2-o32-systemd-23.spec"
@@ -90,7 +93,8 @@ SET_mipsel2_o32_systemd_23_SPECS="o32/stage1-mipsel2-o32-systemd-23.spec o32/sta
 SET_mipsel2_softfloat_o32_openrc_23_SPECS="o32/stage1-mipsel2_softfloat-o32-openrc-23.spec o32/stage3-mipsel2_softfloat-o32-openrc-23.spec"
 SET_mipsel2_softfloat_o32_systemd_23_SPECS="o32/stage1-mipsel2_softfloat-o32-systemd-23.spec o32/stage3-mipsel2_softfloat-o32-systemd-23.spec"
 
-SET_mipsel2_o32_musl_23_SPECS="o32/stage1-mipsel2-o32-musl-23.spec o32/stage3-mipsel2-o32-musl-23.spec"
+SET_mipsel2_o32_musl_openrc_23_SPECS="o32/stage1-mipsel2-o32-musl-openrc-23.spec o32/stage3-mipsel2-o32-musl-openrc-23.spec"
+SET_mipsel2_o32_musl_systemd_23_SPECS="o32/stage1-mipsel2-o32-musl-systemd-23.spec o32/stage3-mipsel2-o32-musl-systemd-23.spec"
 
 # 23.0 O32 T64
 
@@ -305,12 +309,18 @@ post_build() {
 
 	pushd "${BUILD_SRCDIR_BASE}/builds/23.0-musl" >/dev/null
 	case ${spec} in
-	o32/stage3-mips2-o32-musl-23.spec)
+	o32/stage3-mips2-o32-musl-openrc-23.spec)
 		upload stage3-mips2_musl-openrc-${TIMESTAMP}.tar.xz*
+		;;
+	o32/stage3-mips2-o32-musl-systemd-23.spec)
+		upload stage3-mips2_musl-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-musl/stage3-mips2_musl" mips/23.0/mips2_o32_musl
 		;;
-	o32/stage3-mipsel2-o32-musl-23.spec)
+	o32/stage3-mipsel2-o32-musl-openrc-23.spec)
 		upload stage3-mipsel2_musl-openrc-${TIMESTAMP}.tar.xz*
+		;;
+	o32/stage3-mipsel2-o32-musl-systemd-23.spec)
+		upload stage3-mipsel2_musl-systemd-${TIMESTAMP}.tar.xz*
 		upsync_binpackages "${BUILD_SRCDIR_BASE}/packages/23.0-musl/stage3-mipsel2_musl" mips/23.0/mipsel2_o32_musl
 		;;
 	esac
