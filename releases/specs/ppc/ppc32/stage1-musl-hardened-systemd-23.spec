@@ -1,0 +1,12 @@
+subarch: ppc
+target: stage1
+version_stamp: musl-hardened-systemd-@TIMESTAMP@
+rel_type: 23.0-musl-hardened
+profile: default/linux/ppc/23.0/musl/hardened/systemd
+snapshot_treeish: @TREEISH@
+chost: powerpc-unknown-linux-musl
+source_subpath: 23.0-musl-hardened/stage3-ppc-musl-hardened-systemd-latest
+compression_mode: pixz
+update_seed: yes
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
