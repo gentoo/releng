@@ -1,0 +1,11 @@
+subarch: arm64
+target: stage3
+version_stamp: musl-systemd-@TIMESTAMP@
+rel_type: 23.0-musl
+profile: default/linux/arm64/23.0/musl/systemd
+snapshot_treeish: @TREEISH@
+source_subpath: 23.0-musl/stage1-arm64-musl-systemd-@TIMESTAMP@.tar.xz
+compression_mode: pixz
+portage_confdir: @REPO_DIR@/releases/portage/stages
+portage_prefix: releng
+binrepo_path: arm64/binpackages/23.0/arm64_musl

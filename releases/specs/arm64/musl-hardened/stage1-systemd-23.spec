@@ -1,11 +1,11 @@
 subarch: arm64
 chost: aarch64-unknown-linux-musl
 target: stage1
-version_stamp: musl-llvm-openrc-@TIMESTAMP@
-rel_type: 23.0-musl-llvm
-profile: default/linux/arm64/23.0/musl/llvm
+version_stamp: musl-hardened-systemd-@TIMESTAMP@
+rel_type: 23.0-musl-hardened
+profile: default/linux/arm64/23.0/musl/hardened/systemd
 snapshot_treeish: @TREEISH@
-source_subpath: 23.0-musl-llvm/stage3-arm64-musl-llvm-openrc-latest.tar.xz
+source_subpath: 23.0-musl-hardened/stage3-arm64-musl-hardened-systemd-latest.tar.xz
 compression_mode: pixz
 update_seed: yes
 update_seed_command: --update --deep --newuse @world
