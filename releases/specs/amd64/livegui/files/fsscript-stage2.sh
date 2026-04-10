@@ -32,6 +32,10 @@ echo "[Daemon]
 Autolock=false
 LockOnResume=false" > .config/kscreenlockerrc
 
+# Disable kwallet
+echo "[Wallet]
+Enabled=false" > .config/kwalletrc
+
 # Firefox as default browser
 echo \
 "[Added Associations]
