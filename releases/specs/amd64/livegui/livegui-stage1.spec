@@ -255,8 +255,6 @@ livecd/packages:
 	sys-fs/squashfs-tools
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
-	sys-kernel/dracut
-	sys-kernel/installkernel
 	sys-kernel/linux-firmware
 	sys-libs/gpm
 	sys-power/acpid
