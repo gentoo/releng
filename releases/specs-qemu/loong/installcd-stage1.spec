@@ -38,7 +38,6 @@ livecd/packages:
 	app-shells/bash-completion
 	app-shells/gentoo-bashcomp
 	app-text/wgetpaste
-	dev-embedded/u-boot-tools
 	media-gfx/fbgrab
 	media-sound/alsa-utils
 	net-analyzer/traceroute
