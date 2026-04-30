@@ -133,8 +133,6 @@ livecd/packages:
 	sys-apps/less
 	sys-apps/man-db
 	sys-apps/man-pages
-	sys-apps/man-pages-posix
-	sys-apps/memtester
 	sys-apps/memtest86+
 	sys-apps/mlocate
 	sys-apps/netplug
@@ -163,7 +161,6 @@ livecd/packages:
 	sys-firmware/b43-firmware
 	sys-firmware/ipw2100-firmware
 	sys-firmware/ipw2200-firmware
-	sys-firmware/sof-firmware
 	sys-fs/bcache-tools
 	sys-fs/bcachefs-tools
 	sys-fs/btrfs-progs
@@ -180,17 +177,13 @@ livecd/packages:
 	sys-fs/jfsutils
 	sys-fs/lsscsi
 	sys-fs/lvm2
-	sys-fs/mac-fdisk
 	sys-fs/mdadm
 	sys-fs/multipath-tools
-	sys-fs/ncdu
 	sys-fs/ntfs3g
-	sys-fs/reiserfsprogs
 	sys-fs/xfsdump
 	sys-fs/xfsprogs
 	sys-kernel/linux-firmware
 	sys-libs/gpm
-	sys-libs/libsmbios
 	sys-power/acpid
 	sys-process/btop
 	sys-process/htop
