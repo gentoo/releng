@@ -24,48 +24,48 @@ boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/amd64/dist-amd64-livecd.c
 boot/kernel/gentoo/packages: --usepkg n net-wireless/broadcom-sta sys-fs/zfs
 
 livecd/unmerge:
-        app-admin/eselect-ctags
-        app-admin/eselect-vi
-        app-admin/perl-cleaner
-        app-admin/python-updater
-        app-arch/cpio
+	app-admin/eselect-ctags
+	app-admin/eselect-vi
+	app-admin/perl-cleaner
+	app-admin/python-updater
+	app-arch/cpio
 	app-portage/gentoolkit
-        dev-build/libtool
-        dev-libs/gmp
-        dev-libs/libxml2
-        dev-libs/mpfr
-        dev-python/pycrypto
-        dev-util/pkgconf
-        perl-core/PodParser
-        perl-core/Test-Harness
-        sys-apps/debianutils
-        sys-apps/diffutils
-        sys-apps/file
-        sys-apps/groff
-        sys-apps/man-db
-        sys-apps/man-pages
-        sys-apps/miscfiles
-        sys-apps/sandbox
-        sys-apps/texinfo
-        dev-build/autoconf
-        dev-build/autoconf-wrapper
-        dev-build/automake
-        dev-build/automake-wrapper
-        sys-devel/binutils
-        sys-devel/binutils-config
-        sys-devel/bison
-        sys-devel/flex
-        sys-devel/gcc
-        sys-devel/gcc-config
-        sys-devel/gettext
-        sys-devel/gnuconfig
-        sys-devel/m4
-        dev-build/make
-        sys-devel/patch
-        sys-libs/db
-        sys-libs/gdbm
+	dev-build/libtool
+	dev-libs/gmp
+	dev-libs/libxml2
+	dev-libs/mpfr
+	dev-python/pycrypto
+	dev-util/pkgconf
+	perl-core/PodParser
+	perl-core/Test-Harness
+	sys-apps/debianutils
+	sys-apps/diffutils
+	sys-apps/file
+	sys-apps/groff
+	sys-apps/man-db
+	sys-apps/man-pages
+	sys-apps/miscfiles
+	sys-apps/sandbox
+	sys-apps/texinfo
+	dev-build/autoconf
+	dev-build/autoconf-wrapper
+	dev-build/automake
+	dev-build/automake-wrapper
+	sys-devel/binutils
+	sys-devel/binutils-config
+	sys-devel/bison
+	sys-devel/flex
+	sys-devel/gcc
+	sys-devel/gcc-config
+	sys-devel/gettext
+	sys-devel/gnuconfig
+	sys-devel/m4
+	dev-build/make
+	sys-devel/patch
+	sys-libs/db
+	sys-libs/gdbm
 	sys-kernel/dracut
-        sys-kernel/linux-headers
+	sys-kernel/linux-headers
 	sys-kernel/gentoo-kernel
 
 livecd/empty:
