@@ -13,10 +13,9 @@ portage_prefix: releng
 portage_confdir: @REPO_DIR@/releases/specs/s390/s390x/netboot/portage
 
 
-boot/kernel:                      netboot64
-boot/kernel/netboot64/sources:       sys-kernel/gentoo-sources
-boot/kernel/netboot64/config: ../../kconfig/netboot64.config
-boot/kernel/netboot64/gk_kernargs:   --all-ramdisk-modules
+boot/kernel:netboot64
+boot/kernel/netboot64/distkernel: yes
+boot/kernel/netboot64/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
 
 netboot/use:
  multicall
