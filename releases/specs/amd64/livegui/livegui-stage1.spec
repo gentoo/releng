@@ -146,7 +146,6 @@ livecd/packages:
 	net-irc/irssi
 	net-irc/weechat
 	net-misc/chrony
-	net-misc/chrony
 	net-misc/dhcpcd
 	net-misc/iputils
 	net-misc/ndisc6
