@@ -25,6 +25,7 @@ livecd/packages:
 	app-editors/vim
 	app-misc/livecd-tools
 	app-misc/screen
+	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	net-analyzer/traceroute
