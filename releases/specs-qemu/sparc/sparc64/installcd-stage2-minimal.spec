@@ -12,14 +12,13 @@ livecd/bootargs: dokeymap
 livecd/fstype: squashfs
 livecd/iso: install-sparc64-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo sparc64 @TIMESTAMP@
-livecd/gk_mainargs: --firmware-files=ql2200_fw.bin --makeopts=-j256
+livecd/volid: Gentoo-sparc64-@DATESTAMP@
 
 boot/kernel: gentoo
 
-boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/sparc/installcd-6.6.21.config
-boot/kernel/gentoo/console: ttyS0,9600 ttyS1,9600 ttyHV0,115200
+boot/kernel/gentoo/distkernel: yes
+boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a dmsquash-live-ntfs -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -o modsign -o net-lib -o bcache -o dmraid -o lvm -o resume -o virtiofs -o mdraid -o shutdown -o kernel-modules-extra -o shutdown  -o pcmcia -o hwdb -i /lib/keymaps /lib/keymaps -I busybox
+
 
 livecd/unmerge:
 	app-admin/eselect
@@ -61,7 +60,7 @@ livecd/unmerge:
 	sys-devel/patch
 	sys-libs/db
 	sys-libs/gdbm
-	sys-kernel/genkernel
+	sys-kernel/gentoo-kernel
 	sys-kernel/linux-headers
 
 livecd/empty:
