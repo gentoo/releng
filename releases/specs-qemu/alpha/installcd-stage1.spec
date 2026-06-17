@@ -39,6 +39,7 @@ livecd/packages:
 	net-misc/iputils
 	net-misc/rdate
 	net-proxy/dante
+	sys-apps/arch-chroot
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/hdparm
