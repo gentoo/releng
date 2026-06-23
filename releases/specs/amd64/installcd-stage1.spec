@@ -163,7 +163,6 @@ livecd/packages:
 	sys-firmware/ipw2200-firmware
 	sys-firmware/sof-firmware
 	sys-fs/bcache-tools
-	sys-fs/bcachefs-tools
 	sys-fs/btrfs-progs
 	sys-fs/cryptsetup
 	sys-fs/ddrescue
