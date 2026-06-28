@@ -25,6 +25,7 @@ livecd/packages:
 	app-editors/vim
 	app-misc/livecd-tools
 	app-misc/screen
+	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-text/wgetpaste
 	net-analyzer/traceroute
@@ -38,6 +39,7 @@ livecd/packages:
 	net-misc/iputils
 	net-misc/rdate
 	net-proxy/dante
+	sys-apps/arch-chroot
 	sys-apps/busybox
 	sys-apps/ethtool
 	sys-apps/hdparm

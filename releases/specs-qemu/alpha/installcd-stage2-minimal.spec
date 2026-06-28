@@ -14,38 +14,13 @@ livecd/fsscript: /root/releng/releases/scripts/livecd.sh
 livecd/fstype: squashfs
 livecd/iso: /var/tmp/catalyst/builds/23.0-default/install-alpha-minimal-@TIMESTAMP@.iso
 livecd/type: gentoo-release-minimal
-livecd/volid: Gentoo alpha @TIMESTAMP@
-livecd/gk_mainargs: --firmware-files=qlogic/1040.bin
+livecd/volid: Gentoo-alpha-@DATESTAMP@
 
-boot/kernel: gentoo gentoo_nolsa
+boot/kernel: gentoo
 
-boot/kernel/gentoo/sources: gentoo-sources
-boot/kernel/gentoo/config: ../../kconfig/alpha/installcd-4.14.83.config
-boot/kernel/gentoo/use:
-	atm
-	fbcon
-	livecd
-	png
-	socks5
-	truetype
-	unicode
-	usb
-
-boot/kernel/gentoo_nolsa/sources: gentoo-sources
-boot/kernel/gentoo_nolsa/config: ../../kconfig/alpha/installcd-4.14.83.nolsa.config
-boot/kernel/gentoo_nolsa/use:
-	atm
-	fbcon
-	livecd
-	png
-	socks5
-	truetype
-	unicode
-	usb
-
-# Not keyworded on alpha
-#boot/kernel/gentoo/packages:
-#	sys-fs/ntfs3g
+boot/kernel/gentoo/distkernel: yes
+boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a dmsquash-live-ntfs -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -o modsign -o net-lib -o bcache -o dmraid -o lvm -o resume -o virtiofs -o mdraid -o shutdown -o kernel-modules-extra -o shutdown  -o pcmcia -o hwdb -i /lib/keymaps /lib/keymaps -I busybox
+boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/alpha/dist-alpha-livecd.config
 
 livecd/unmerge:
 	app-admin/eselect
