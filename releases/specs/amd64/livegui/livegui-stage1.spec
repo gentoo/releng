@@ -261,7 +261,6 @@ livecd/packages:
 	sys-process/iotop
 	sys-process/procps
 	sys-process/psmisc
-	www-client/chromium
 	www-client/firefox
 	www-client/links
 	x11-misc/sddm
