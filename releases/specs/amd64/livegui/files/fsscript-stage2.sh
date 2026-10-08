@@ -62,6 +62,21 @@ wget "https://dev.gentoo.org/~bkohler/livegui/face.icon.png" -O .face.icon
 #	ln -sv /usr/share/applications/${i}.desktop Desktop/
 #done
 
+# gentoo calamares installer launcher icon
+echo "[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Install Gentoo (EXPERIMENTAL)
+GenericName=Gentoo Linux Calamares Installer
+Comment=EXPERIMENTAL - Calamares installation of Gentoo Linux. Expect bugs; do not use on a system with data you care about.
+Exec=pkexec /usr/bin/calamares
+Icon=/usr/share/icons/calamares-gentoo/64x64/gentoo.png
+Terminal=false
+Categories=System;Settings;
+StartupNotify=true" > Desktop/gentoo-installer.desktop
+
+chmod +x Desktop/gentoo-installer.desktop
+
 # Autostart keyboard layout module
 mkdir -p .config/autostart
 echo "[Desktop Entry]
@@ -182,7 +197,8 @@ polkit.addRule(function(action, subject) {
 });
 
 polkit.addRule(function(action, subject) {
-    if (action.id == "com.github.calamares.calamares.pkexec.run") {
+    if (action.id == "io.calamares.calamares.pkexec.run" &&
+        subject.user == "gentoo") {
         return polkit.Result.YES;
     }
 });' > /etc/polkit-1/rules.d/livegui-root-tools.rules
