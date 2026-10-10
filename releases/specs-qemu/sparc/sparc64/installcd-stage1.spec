@@ -57,6 +57,7 @@ livecd/packages:
 #	net-wireless/iw
 #	net-wireless/wireless-tools
 #	net-wireless/wpa_supplicant
+	sys-boot/grub
 	sys-apps/arch-chroot
 	sys-apps/busybox
 #	sys-apps/dmidecode
