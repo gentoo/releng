@@ -18,7 +18,7 @@ boot/kernel: gentoo
 boot/kernel/gentoo/distkernel: yes
 boot/kernel/gentoo/dracut_args: --xz --no-hostonly -a dmsquash-live -a mdraid -o btrfs -o crypt -o i18n -o usrmount -o lunmask -o qemu -o qemu-net -o nvdimm -o multipath -i /lib/keymaps /lib/keymaps -I busybox
 boot/kernel/gentoo/config: @REPO_DIR@/releases/kconfig/powerpc/dist-ppc64le-livecd.config
-boot/kernel/gentoo/packages: --usepkg n zfs zfs-kmod
+boot/kernel/gentoo/packages: --usepkg n zfs
 
 livecd/unmerge:
 	app-admin/eselect
