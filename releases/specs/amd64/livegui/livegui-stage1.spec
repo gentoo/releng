@@ -84,7 +84,6 @@ livecd/packages:
 	app-portage/gentoolkit
 	app-portage/mirrorselect
 	app-portage/portage-utils
-	app-portage/pram
 	app-portage/ufed
 	app-shells/bash-completion
 	app-shells/gentoo-bashcomp
@@ -105,6 +104,7 @@ livecd/packages:
 #	dev-util/kdevelop-python
 	dev-vcs/git
 	dev-vcs/kdesvn
+	dev-vcs/pram
 	dev-vcs/subversion
 	kde-apps/k3b
 	kde-apps/kde-apps-meta
