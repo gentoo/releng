@@ -142,10 +142,10 @@ livecd/packages:
 	net-ftp/ftp
 	net-ftp/ncftp
 	net-im/pidgin
-	net-irc/hexchat
 	net-irc/irssi
 	net-irc/quassel
 	net-irc/weechat
+	net-irc/zoitechat
 	net-misc/chrony
 	net-misc/dhcpcd
 	net-misc/iputils
