@@ -1,0 +1,6 @@
+>=app-admin/calamares-3.3 livecd
+
+# calamares deps
+>=dev-libs/libpwquality-1.4.5-r2 python
+>=dev-libs/boost-1.80.0 python
+>=sys-boot/grub-2.12-r11 mount

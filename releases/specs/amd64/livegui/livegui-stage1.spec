@@ -70,6 +70,7 @@ livecd/packages:
 	app-emulation/cloud-init
 	app-emulation/spice-vdagent
 	app-eselect/eselect-repository
+	app-misc/calamares-gentoo-livecd
 	app-misc/colordiff
 	app-misc/livecd-tools
 	app-misc/mc
